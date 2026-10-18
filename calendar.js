@@ -1,7 +1,7 @@
 /************************************************************
  * CONFIG — STATIC JSON ONLY
  ************************************************************/
-const PX_PER_MIN = 2; // vertical scale (2px per minute = 120px per hour)
+const PX_PER_MIN = 2;
 
 
 /************************************************************
@@ -43,18 +43,9 @@ function getMonday(dateStr) {
   return new Date(d.setDate(diff));
 }
 
-function getMonthRange(dateStr) {
-  const d = new Date(dateStr);
-  const year = d.getFullYear();
-  const month = d.getMonth();
-  const first = new Date(year, month, 1);
-  const last = new Date(year, month + 1, 0);
-  return { first, last };
-}
-
 
 /************************************************************
- * STATIC JSON FETCHERS
+ * STATIC JSON FETCHERS — MATCH WORKFLOW OUTPUT
  ************************************************************/
 async function fetchDayCalendar(dateStr) {
   const url = `/data/day/${dateStr}.json`;
@@ -64,27 +55,45 @@ async function fetchDayCalendar(dateStr) {
 }
 
 async function fetchWeekCalendar(dateStr) {
-  const monday = getMonday(dateStr);
-  const weekId = monday.toISOString().split("T")[0];
-  const url = `/data/week/${weekId}.json`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Missing week JSON: ${url}`);
-  return res.json();
+  const monday = getMonday(dateStr).toISOString().split("T")[0];
+
+  const res = await fetch(`/data/week/weeks.json`);
+  if (!res.ok) throw new Error("Missing weeks.json");
+
+  const weeks = await res.json();
+
+  if (!weeks[monday]) {
+    throw new Error(`Week data missing for ${monday}`);
+  }
+
+  return {
+    week_start: monday,
+    days: Object.values(weeks[monday])
+  };
 }
 
 async function fetchMonthCalendar(dateStr) {
   const d = new Date(dateStr);
-  const year = d.getFullYear();
-  const month = String(d.getMonth() + 1).padStart(2, "0");
-  const url = `/data/month/${year}-${month}.json`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Missing month JSON: ${url}`);
-  return res.json();
+  const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+
+  const res = await fetch(`/data/month/months.json`);
+  if (!res.ok) throw new Error("Missing months.json");
+
+  const months = await res.json();
+
+  if (!months[key]) {
+    throw new Error(`Month data missing for ${key}`);
+  }
+
+  return {
+    month_label: d.toLocaleDateString("en-US", { month: "long", year: "numeric" }),
+    days: Object.values(months[key])
+  };
 }
 
 async function fetchSeasonWindow() {
-  const res = await fetch(`/data/season_window.json`);
-  if (!res.ok) throw new Error("Missing season_window.json");
+  const res = await fetch(`/data/availability.json`);
+  if (!res.ok) throw new Error("Missing availability.json");
   return res.json();
 }
 
@@ -124,7 +133,7 @@ function buildTimeSlots(minStart, maxEnd, step = 30) {
 
 
 /************************************************************
- * RENDER — DAY VIEW (STATIC JSON)
+ * RENDER — DAY VIEW
  ************************************************************/
 function renderDay(data, container) {
   container.innerHTML = "";
@@ -153,7 +162,7 @@ function renderDay(data, container) {
   });
   grid.appendChild(timeCol);
 
-  // COMPLEX COLUMNS — STATIC JSON
+  // COMPLEX COLUMNS
   const complexes = Object.keys(data.complexes).sort();
 
   complexes.forEach(cx => {
@@ -207,7 +216,7 @@ function renderDay(data, container) {
 
 
 /************************************************************
- * RENDER — WEEK VIEW (STATIC JSON)
+ * RENDER — WEEK VIEW
  ************************************************************/
 async function renderWeek(dateStr, container) {
   container.innerHTML = "";
@@ -239,7 +248,7 @@ async function renderWeek(dateStr, container) {
 
 
 /************************************************************
- * RENDER — MONTH VIEW (STATIC JSON)
+ * RENDER — MONTH VIEW
  ************************************************************/
 async function renderMonth(dateStr, container) {
   container.innerHTML = "";
@@ -271,7 +280,7 @@ async function renderMonth(dateStr, container) {
 
 
 /************************************************************
- * SEARCH VIEW (STATIC JSON)
+ * SEARCH VIEW
  ************************************************************/
 async function renderSearch(filter, container) {
   container.innerHTML = "";
@@ -333,7 +342,7 @@ async function renderSearch(filter, container) {
 
 
 /************************************************************
- * PUBLIC API — CALL THESE FROM YOUR UI
+ * PUBLIC API
  ************************************************************/
 async function showDay(dateStr) {
   const container = document.getElementById("calendar");
@@ -355,7 +364,7 @@ async function searchSaturdaysAfter2() {
   const container = document.getElementById("calendar");
   await renderSearch(
     {
-      dayOfWeek: 6, // Saturday
+      dayOfWeek: 6,
       minStart: timeToMinutes("14:00")
     },
     container
@@ -366,7 +375,7 @@ async function searchWeekdaysAfter7() {
   const container = document.getElementById("calendar");
   await renderSearch(
     {
-      dayOfWeek: undefined, // any weekday
+      dayOfWeek: undefined,
       minStart: timeToMinutes("19:00")
     },
     container
