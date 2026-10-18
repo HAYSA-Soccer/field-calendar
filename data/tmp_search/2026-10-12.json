@@ -1,0 +1,16 @@
+{
+  "TURF": [],
+  "full": [
+    {
+      "type": "free",
+      "start": "19:00",
+      "end": "21:00",
+      "start_12": "7:00 PM",
+      "end_12": "9:00 PM",
+      "fields": [
+        "H-HST"
+      ]
+    }
+  ],
+  "half": []
+}
