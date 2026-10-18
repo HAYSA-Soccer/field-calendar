@@ -1,0 +1,195 @@
+name: Build Availability JSON
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      WEBAPP_URL: "https://script.google.com/macros/s/AKfycbz3dMJtYEYxPmoZmuacrM5dBGZ9Jbh5rW3OFtOQDXYyt2RRW41z41HQ4mui5EVzKJyQ/exec"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Fetch season window
+        id: season
+        run: |
+          echo "🔎 Fetching season window..."
+
+          for i in {1..5}; do
+            RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window") && break
+            echo "Retry $i..."
+            sleep $((i * 2))
+          done
+
+          # ⭐ Correct sed extraction (NO backticks)
+          CLEAN=$(echo "$RAW" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
+          if [ -z "$CLEAN" ]; then CLEAN="$RAW"; fi
+
+          echo "Season window raw: $RAW"
+          echo "Season window clean: $CLEAN"
+
+          if ! echo "$CLEAN" | jq empty >/dev/null 2>&1; then
+            echo "❌ Season window JSON invalid"
+            exit 1
+          fi
+
+          START=$(echo "$CLEAN" | jq -r '.season_start')
+          END=$(echo "$CLEAN" | jq -r '.season_end')
+
+          START=$(date -d "$START" +%Y-%m-%d)
+          END=$(date -d "$END" +%Y-%m-%d)
+
+          echo "📅 Season start: $START"
+          echo "📅 Season end:   $END"
+
+          echo "season_start=$START" >> $GITHUB_OUTPUT
+          echo "season_end=$END" >> $GITHUB_OUTPUT
+
+      - name: Build availability + search index
+        run: |
+          START="${{ steps.season.outputs.season_start }}"
+          END="${{ steps.season.outputs.season_end }}"
+
+          echo "📁 Creating temp directories..."
+          mkdir -p data/tmp_days data/tmp_search
+
+          echo "🔎 Fetching fields..."
+
+          for i in {1..5}; do
+            FIELDS_RAW=$(curl -sSL "$WEBAPP_URL?mode=fields") && break
+            echo "Retry $i..."
+            sleep $((i * 2))
+          done
+
+          # ⭐ Correct sed extraction (NO backticks)
+          FIELDS_CLEAN=$(echo "$FIELDS_RAW" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
+          if [ -z "$FIELDS_CLEAN" ]; then FIELDS_CLEAN="$FIELDS_RAW"; fi
+
+          echo "Fields raw: $FIELDS_RAW"
+          echo "Fields clean: $FIELDS_CLEAN"
+
+          if ! echo "$FIELDS_CLEAN" | jq empty >/dev/null 2>&1; then
+            echo "❌ Fields JSON invalid"
+            exit 1
+          fi
+
+          CURRENT="$START"
+
+          echo "🚀 Starting day-by-day build..."
+
+          while [ "$(date -d "$CURRENT" +%Y-%m-%d)" != "$(date -d "$END + 1 day" +%Y-%m-%d)" ]; do
+            echo "----------------------------------------"
+            echo "📅 Processing date: $CURRENT"
+
+            for i in {1..5}; do
+              RAW_DAY=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT") && break
+              echo "Retry $i..."
+              sleep $((i * 2))
+            done
+
+            # ⭐ Correct sed extraction (NO backticks)
+            CLEAN_DAY=$(echo "$RAW_DAY" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
+            if [ -z "$CLEAN_DAY" ]; then CLEAN_DAY="$RAW_DAY"; fi
+
+            echo "Day raw: $RAW_DAY"
+            echo "Day clean: $CLEAN_DAY"
+
+            if ! echo "$CLEAN_DAY" | jq empty >/dev/null 2>&1; then
+              echo "❌ Bad JSON for $CURRENT"
+              exit 1
+            fi
+
+            echo "$CLEAN_DAY" > "data/tmp_days/${CURRENT}.json"
+            echo "📝 Saved day JSON → data/tmp_days/${CURRENT}.json"
+
+            COMPLEXES=$(echo "$CLEAN_DAY" | jq -r '.complex_timeline | keys[]')
+            echo "🏟 Complexes found: $COMPLEXES"
+
+            DAY_SEARCH="{}"
+
+            for CX in $COMPLEXES; do
+              WINDOWS=$(echo "$CLEAN_DAY" | jq --arg cx "$CX" '.complex_timeline[$cx]')
+              DAY_SEARCH=$(echo "$DAY_SEARCH" | jq --arg cx "$CX" --argjson w "$WINDOWS" '.[$cx] = $w')
+            done
+
+            echo "$DAY_SEARCH" > "data/tmp_search/${CURRENT}.json"
+            echo "🔍 Saved search JSON → data/tmp_search/${CURRENT}.json"
+
+            CURRENT=$(date -d "$CURRENT + 1 day" +%Y-%m-%d)
+          done
+
+          echo "📦 Building days.json..."
+          DAYS_JSON=$(jq -s 'reduce .[] as $d ({}; .[$d.date] = $d)' data/tmp_days/*.json)
+
+          echo "📦 Building weeks.json..."
+          WEEKS_JSON=$(jq -s '
+            reduce .[] as $d ({}; 
+              .[(($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y")) 
+                + "-W" + 
+                ($d.date | strptime("%Y-%m-%d") | mktime | strftime("%U")))] 
+              |= (. // {}) | .[$d.date] = $d
+            )
+          ' data/tmp_days/*.json)
+
+          echo "📦 Building months.json..."
+          MONTHS_JSON=$(jq -s '
+            reduce .[] as $d ({}; 
+              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
+              |= (. // {}) | .[$d.date] = $d
+            )
+          ' data/tmp_days/*.json)
+
+          echo "📦 Building search_index.json..."
+          SEARCH_JSON="{}"
+          for f in data/tmp_search/*.json; do
+            d=$(basename "$f" .json)
+            s=$(cat "$f")
+            SEARCH_JSON=$(echo "$SEARCH_JSON" | jq --arg d "$d" --argjson v "$s" '.[$d] = $v')
+          done
+
+          echo "🧩 Assembling final availability.json..."
+          FINAL_JSON=$(jq -n \
+            --arg start "$START" \
+            --arg end "$END" \
+            --argjson fields "$FIELDS_CLEAN" \
+            --argjson days "$DAYS_JSON" \
+            --argjson weeks "$WEEKS_JSON" \
+            --argjson months "$MONTHS_JSON" \
+            '{
+              season_start: $start,
+              season_end: $end,
+              fields: $fields.fields,
+              complexes: $fields.complexes,
+              days: $days,
+              weeks: $weeks,
+              months: $months
+            }'
+          )
+
+          echo "$FINAL_JSON"  > data/availability.json
+          echo "$SEARCH_JSON" > data/search_index.json
+
+          echo "✅ Final JSON files written."
+
+      - name: Commit updated JSON
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          echo "📤 Committing changes..."
+          git add data
+          git commit -m "Updated availability + search index" || echo "ℹ️ No changes to commit"
+          git push
+          echo "🚀 Push complete."
