@@ -1,7 +1,6 @@
 /************************************************************
- * CONFIG
+ * CONFIG — STATIC JSON ONLY
  ************************************************************/
-const API_BASE = "https://script.google.com/macros/s/AKfycbz3dMJtYEYxPmoZmuacrM5dBGZ9Jbh5rW3OFtOQDXYyt2RRW41z41HQ4mui5EVzKJyQ/exec";
 const PX_PER_MIN = 2; // vertical scale (2px per minute = 120px per hour)
 
 
@@ -55,12 +54,37 @@ function getMonthRange(dateStr) {
 
 
 /************************************************************
- * API CALL
+ * STATIC JSON FETCHERS
  ************************************************************/
 async function fetchDayCalendar(dateStr) {
-  const url = `${API_BASE}?mode=day_calendar&date=${encodeURIComponent(dateStr)}&sched_mode=practice`;
+  const url = `/data/day/${dateStr}.json`;
   const res = await fetch(url);
-  if (!res.ok) throw new Error("Failed to fetch day_calendar");
+  if (!res.ok) throw new Error(`Missing day JSON: ${url}`);
+  return res.json();
+}
+
+async function fetchWeekCalendar(dateStr) {
+  const monday = getMonday(dateStr);
+  const weekId = monday.toISOString().split("T")[0];
+  const url = `/data/week/${weekId}.json`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Missing week JSON: ${url}`);
+  return res.json();
+}
+
+async function fetchMonthCalendar(dateStr) {
+  const d = new Date(dateStr);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const url = `/data/month/${year}-${month}.json`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Missing month JSON: ${url}`);
+  return res.json();
+}
+
+async function fetchSeasonWindow() {
+  const res = await fetch(`/data/season_window.json`);
+  if (!res.ok) throw new Error("Missing season_window.json");
   return res.json();
 }
 
@@ -83,15 +107,6 @@ function getTimeBounds(data) {
   });
 
   if (minStart === 24 * 60 || maxEnd === 0) {
-    (data.merged || []).forEach(b => {
-      const s = timeToMinutes(b.start);
-      const e = timeToMinutes(b.end);
-      if (s < minStart) minStart = s;
-      if (e > maxEnd) maxEnd = e;
-    });
-  }
-
-  if (minStart === 24 * 60 || maxEnd === 0) {
     minStart = timeToMinutes("08:00");
     maxEnd = timeToMinutes("20:00");
   }
@@ -109,39 +124,7 @@ function buildTimeSlots(minStart, maxEnd, step = 30) {
 
 
 /************************************************************
- * BLOCK ENRICHMENT (attach title/team/coach)
- ************************************************************/
-function enrichComplexBlocks(complexTimeline, merged) {
-  const mergedMap = {};
-  merged.forEach(ev => {
-    const key = `${ev.field}|${ev.start}|${ev.end}|${ev.type}`;
-    mergedMap[key] = ev;
-  });
-
-  Object.keys(complexTimeline).forEach(cx => {
-    complexTimeline[cx].forEach(block => {
-      if (block.type === "free") return;
-      for (const fid of block.fields || []) {
-        const keyPractice = `${fid}|${block.start}|${block.end}|practice`;
-        const keyGame = `${fid}|${block.start}|${block.end}|game`;
-        const ev = mergedMap[keyPractice] || mergedMap[keyGame];
-        if (ev) {
-          block.title = ev.title || "";
-          block.team = ev.team || "";
-          block.coach = ev.coach || "";
-          block.grade = ev.grade || "";
-          break;
-        }
-      }
-    });
-  });
-
-  return complexTimeline;
-}
-
-
-/************************************************************
- * RENDER — SINGLE DAY
+ * RENDER — DAY VIEW (STATIC JSON)
  ************************************************************/
 function renderDay(data, container) {
   container.innerHTML = "";
@@ -170,10 +153,8 @@ function renderDay(data, container) {
   });
   grid.appendChild(timeCol);
 
-  // FIX: USE BACKEND COMPLEXES ONLY
+  // COMPLEX COLUMNS — STATIC JSON
   const complexes = Object.keys(data.complexes).sort();
-
-  let ct = enrichComplexBlocks(data.complex_timeline, data.merged);
 
   complexes.forEach(cx => {
     const col = document.createElement("div");
@@ -188,7 +169,7 @@ function renderDay(data, container) {
     body.className = "cal-col-body";
     col.appendChild(body);
 
-    const blocks = ct[cx] || [];
+    const blocks = data.complex_timeline[cx] || [];
 
     blocks.forEach(block => {
       const el = document.createElement("div");
@@ -225,85 +206,72 @@ function renderDay(data, container) {
 }
 
 
-
 /************************************************************
- * RENDER — WEEK VIEW
+ * RENDER — WEEK VIEW (STATIC JSON)
  ************************************************************/
 async function renderWeek(dateStr, container) {
   container.innerHTML = "";
 
-  const monday = getMonday(dateStr);
-  const days = [];
-  for (let i = 0; i < 7; i++) {
-    const d = new Date(monday);
-    d.setDate(monday.getDate() + i);
-    days.push(d.toISOString().split("T")[0]);
-  }
+  const weekData = await fetchWeekCalendar(dateStr);
 
   const header = document.createElement("div");
   header.className = "cal-header";
-  header.textContent = `Week View — Week of ${formatDateLabel(days[0])}`;
+  header.textContent = `Week View — Week of ${formatDateLabel(weekData.week_start)}`;
   container.appendChild(header);
 
   const weekGrid = document.createElement("div");
   weekGrid.className = "week-grid";
   container.appendChild(weekGrid);
 
-  for (const d of days) {
-    const data = await fetchDayCalendar(d);
+  weekData.days.forEach(dayObj => {
     const dayCol = document.createElement("div");
     dayCol.className = "week-day-col";
-    dayCol.innerHTML = `<div class="week-day-header">${formatDateLabel(d)}</div>`;
+    dayCol.innerHTML = `<div class="week-day-header">${formatDateLabel(dayObj.date)}</div>`;
 
     const inner = document.createElement("div");
     inner.className = "week-day-inner";
-    renderDay(data, inner);
+    renderDay(dayObj, inner);
 
     dayCol.appendChild(inner);
     weekGrid.appendChild(dayCol);
-  }
+  });
 }
 
 
 /************************************************************
- * RENDER — MONTH VIEW
+ * RENDER — MONTH VIEW (STATIC JSON)
  ************************************************************/
 async function renderMonth(dateStr, container) {
   container.innerHTML = "";
 
-  const { first, last } = getMonthRange(dateStr);
-  const days = [];
-  for (let d = new Date(first); d <= last; d.setDate(d.getDate() + 1)) {
-    days.push(d.toISOString().split("T")[0]);
-  }
+  const monthData = await fetchMonthCalendar(dateStr);
 
   const header = document.createElement("div");
   header.className = "cal-header";
-  header.textContent = `Month View — ${first.toLocaleDateString("en-US", { month: "long", year: "numeric" })}`;
+  header.textContent = `Month View — ${monthData.month_label}`;
   container.appendChild(header);
 
   const monthGrid = document.createElement("div");
   monthGrid.className = "month-grid";
   container.appendChild(monthGrid);
 
-  for (const d of days) {
-    const data = await fetchDayCalendar(d);
+  monthData.days.forEach(dayObj => {
     const cell = document.createElement("div");
     cell.className = "month-cell";
-    cell.innerHTML = `<div class="month-cell-header">${formatDateLabel(d)}</div>`;
+    cell.innerHTML = `<div class="month-cell-header">${formatDateLabel(dayObj.date)}</div>`;
 
     const inner = document.createElement("div");
     inner.className = "month-cell-inner";
-    renderDay(data, inner);
+    renderDay(dayObj, inner);
 
     cell.appendChild(inner);
     monthGrid.appendChild(cell);
-  }
+  });
 }
 
 
 /************************************************************
- * SEARCH VIEW (Saturdays after 2 PM, Weekdays after 7 PM, etc.)
+ * SEARCH VIEW (STATIC JSON)
  ************************************************************/
 async function renderSearch(filter, container) {
   container.innerHTML = "";
@@ -317,7 +285,7 @@ async function renderSearch(filter, container) {
   results.className = "search-results";
   container.appendChild(results);
 
-  const season = await fetch(`${API_BASE}?mode=season_window`).then(r => r.json());
+  const season = await fetchSeasonWindow();
   const start = new Date(season.season_start);
   const end = new Date(season.season_end);
 
