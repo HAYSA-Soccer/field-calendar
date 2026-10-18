@@ -1,7 +1,7 @@
 /************************************************************
  * CONFIG
  ************************************************************/
-const API_BASE = "YOUR_APPS_SCRIPT_WEB_APP_URL"; // <-- replace with your deployed URL
+const API_BASE = "https://script.google.com/macros/s/AKfycbz3dMJtYEYxPmoZmuacrM5dBGZ9Jbh5rW3OFtOQDXYyt2RRW41z41HQ4mui5EVzKJyQ/exec";
 const PX_PER_MIN = 2; // vertical scale (2px per minute = 120px per hour)
 
 
@@ -251,7 +251,6 @@ async function renderWeek(dateStr, container) {
     dayCol.className = "week-day-col";
     dayCol.innerHTML = `<div class="week-day-header">${formatDateLabel(d)}</div>`;
 
-    // Reuse day renderer inside each column
     const inner = document.createElement("div");
     inner.className = "week-day-inner";
     renderDay(data, inner);
