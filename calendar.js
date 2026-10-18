@@ -1,4 +1,4 @@
-console.log("CALENDAR JS — REAL COMPLEXES + MERGED BLOCKS");
+console.log("CALENDAR JS — FINAL VERSION");
 
 /* -------------------------------------------------------
    GLOBAL DATA
@@ -12,13 +12,11 @@ let SEARCH = null;
 async function loadAvailability() {
   const res = await fetch("data/availability.json?v=1");
   AVAIL = await res.json();
-  console.log("Availability loaded:", AVAIL);
 }
 
 async function loadSearchIndex() {
   const res = await fetch("data/search_index.json?v=1");
   SEARCH = await res.json();
-  console.log("Search index loaded:", SEARCH);
 }
 
 /* -------------------------------------------------------
@@ -45,13 +43,10 @@ function formatTime(t) {
 
 /* -------------------------------------------------------
    REAL COMPLEX NAMES
-   (based on field ID prefixes)
 ------------------------------------------------------- */
 function getRealComplexName(fieldId) {
-  if (fieldId.startsWith("H-HST")) {
-    return "Holbrook HS Turf";
-  }
-  // All Sumner / Sean Joyce fields
+  if (fieldId.startsWith("H-HST")) return "Holbrook HS Turf";
+
   if (
     fieldId.startsWith("H-Su1") ||
     fieldId.startsWith("H-Su2") ||
@@ -60,26 +55,26 @@ function getRealComplexName(fieldId) {
   ) {
     return "Sumner / Sean Joyce Fields";
   }
+
   return "Other";
 }
 
 /* -------------------------------------------------------
-   COMPLEX LIST FOR A DAY (REAL NAMES)
+   COMPLEX LIST FOR A DAY
 ------------------------------------------------------- */
 function getComplexListForDay(dayData) {
   const complexes = new Set();
   const merged = dayData.merged || [];
 
   for (const b of merged) {
-    const cx = getRealComplexName(b.field);
-    complexes.add(cx);
+    complexes.add(getRealComplexName(b.field));
   }
 
   return Array.from(complexes);
 }
 
 /* -------------------------------------------------------
-   FIELDS PER REAL COMPLEX
+   FIELDS PER COMPLEX
 ------------------------------------------------------- */
 function getFieldsForComplex(complexName) {
   return AVAIL.fields.filter(f => getRealComplexName(f.id) === complexName);
@@ -89,12 +84,11 @@ function getFieldsForComplex(complexName) {
    MERGED BLOCKS PER FIELD
 ------------------------------------------------------- */
 function getMergedBlocksForField(dayData, fieldId) {
-  const merged = dayData.merged || [];
-  return merged.filter(b => b.field === fieldId);
+  return (dayData.merged || []).filter(b => b.field === fieldId);
 }
 
 /* -------------------------------------------------------
-   TIME GRID (HOUR MARKERS + LINES)
+   TIME GRID
 ------------------------------------------------------- */
 function renderTimeGrid(container) {
   const grid = document.createElement("div");
@@ -125,7 +119,7 @@ function renderTimeGrid(container) {
 }
 
 /* -------------------------------------------------------
-   RENDER A SINGLE BLOCK
+   RENDER BLOCK
 ------------------------------------------------------- */
 function renderBlockElement(b) {
   const pos = blockPosition(b.start, b.end);
@@ -152,11 +146,9 @@ function renderBlockElement(b) {
 }
 
 /* -------------------------------------------------------
-   WEEK VIEW — DAYS → REAL COMPLEXES → FIELDS → MERGED BLOCKS
+   WEEK VIEW
 ------------------------------------------------------- */
 function renderWeekView() {
-  console.log("RENDER WEEK VIEW");
-
   const container = document.getElementById("view-container");
   container.innerHTML = "";
 
@@ -184,7 +176,7 @@ function renderWeekView() {
 
     for (const complexName of complexes) {
       const complexCol = document.createElement("div");
-      complexCol.className = "week-complex-column";
+      complexCol.className = "complex-column";
 
       const complexHeader = document.createElement("div");
       complexHeader.className = "complex-header";
@@ -208,8 +200,7 @@ function renderWeekView() {
         const blocks = getMergedBlocksForField(dayData, field.id);
 
         for (const b of blocks) {
-          const el = renderBlockElement(b);
-          fieldCol.appendChild(el);
+          fieldCol.appendChild(renderBlockElement(b));
         }
 
         fieldsRow.appendChild(fieldCol);
@@ -227,11 +218,9 @@ function renderWeekView() {
 }
 
 /* -------------------------------------------------------
-   DAY VIEW — SINGLE DAY, REAL COMPLEXES SIDE BY SIDE
+   DAY VIEW
 ------------------------------------------------------- */
 function renderDayView() {
-  console.log("RENDER DAY VIEW");
-
   const container = document.getElementById("view-container");
   container.innerHTML = "";
 
@@ -272,8 +261,7 @@ function renderDayView() {
       const blocks = getMergedBlocksForField(dayData, field.id);
 
       for (const b of blocks) {
-        const el = renderBlockElement(b);
-        fieldCol.appendChild(el);
+        fieldCol.appendChild(renderBlockElement(b));
       }
 
       fieldsRow.appendChild(fieldCol);
@@ -291,7 +279,6 @@ function renderDayView() {
    INIT
 ------------------------------------------------------- */
 async function initCalendar() {
-  console.log("INIT CALENDAR");
   await loadAvailability();
   await loadSearchIndex();
   renderWeekView();
@@ -306,12 +293,7 @@ document.querySelectorAll(".nav button").forEach(btn => {
   btn.addEventListener("click", () => {
     const view = btn.dataset.view;
 
-    if (view === "week") {
-      renderWeekView();
-    }
-
-    if (view === "day") {
-      renderDayView();
-    }
+    if (view === "week") renderWeekView();
+    if (view === "day") renderDayView();
   });
 });
