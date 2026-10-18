@@ -1,4 +1,4 @@
-console.log("CALENDAR JS — CLEAN REWRITE LOADED");
+console.log("CALENDAR JS — REAL COMPLEXES + MERGED BLOCKS");
 
 /* -------------------------------------------------------
    GLOBAL DATA
@@ -7,7 +7,7 @@ let AVAIL = null;
 let SEARCH = null;
 
 /* -------------------------------------------------------
-   LOAD JSON FILES
+   LOAD JSON
 ------------------------------------------------------- */
 async function loadAvailability() {
   const res = await fetch("data/availability.json?v=1");
@@ -19,6 +19,78 @@ async function loadSearchIndex() {
   const res = await fetch("data/search_index.json?v=1");
   SEARCH = await res.json();
   console.log("Search index loaded:", SEARCH);
+}
+
+/* -------------------------------------------------------
+   UTILITIES
+------------------------------------------------------- */
+function toMinutes(t) {
+  const [h, m] = t.split(":").map(Number);
+  return h * 60 + m;
+}
+
+function blockPosition(start, end) {
+  return {
+    top: toMinutes(start),
+    height: toMinutes(end) - toMinutes(start)
+  };
+}
+
+function formatTime(t) {
+  let [h, m] = t.split(":").map(Number);
+  const suffix = h >= 12 ? "PM" : "AM";
+  h = (h % 12) || 12;
+  return `${h}:${m.toString().padStart(2, "0")} ${suffix}`;
+}
+
+/* -------------------------------------------------------
+   REAL COMPLEX NAMES
+   (based on field ID prefixes)
+------------------------------------------------------- */
+function getRealComplexName(fieldId) {
+  if (fieldId.startsWith("H-HST")) {
+    return "Holbrook HS Turf";
+  }
+  // All Sumner / Sean Joyce fields
+  if (
+    fieldId.startsWith("H-Su1") ||
+    fieldId.startsWith("H-Su2") ||
+    fieldId.startsWith("H-SJ3") ||
+    fieldId.startsWith("H-SJ4")
+  ) {
+    return "Sumner / Sean Joyce Fields";
+  }
+  return "Other";
+}
+
+/* -------------------------------------------------------
+   COMPLEX LIST FOR A DAY (REAL NAMES)
+------------------------------------------------------- */
+function getComplexListForDay(dayData) {
+  const complexes = new Set();
+  const merged = dayData.merged || [];
+
+  for (const b of merged) {
+    const cx = getRealComplexName(b.field);
+    complexes.add(cx);
+  }
+
+  return Array.from(complexes);
+}
+
+/* -------------------------------------------------------
+   FIELDS PER REAL COMPLEX
+------------------------------------------------------- */
+function getFieldsForComplex(complexName) {
+  return AVAIL.fields.filter(f => getRealComplexName(f.id) === complexName);
+}
+
+/* -------------------------------------------------------
+   MERGED BLOCKS PER FIELD
+------------------------------------------------------- */
+function getMergedBlocksForField(dayData, fieldId) {
+  const merged = dayData.merged || [];
+  return merged.filter(b => b.field === fieldId);
 }
 
 /* -------------------------------------------------------
@@ -53,58 +125,34 @@ function renderTimeGrid(container) {
 }
 
 /* -------------------------------------------------------
-   UTILITIES
+   RENDER A SINGLE BLOCK
 ------------------------------------------------------- */
-function toMinutes(t) {
-  const [h, m] = t.split(":").map(Number);
-  return h * 60 + m;
-}
+function renderBlockElement(b) {
+  const pos = blockPosition(b.start, b.end);
+  const el = document.createElement("div");
 
-function blockPosition(start, end) {
-  return {
-    top: toMinutes(start),
-    height: toMinutes(end) - toMinutes(start)
-  };
-}
+  const typeClass = b.type ? `timeline-${b.type}` : "timeline-free";
+  el.className = `timeline-block ${typeClass}`;
+  el.style.top = `${pos.top}px`;
+  el.style.height = `${pos.height}px`;
 
-function formatTime(t) {
-  let [h, m] = t.split(":").map(Number);
-  const suffix = h >= 12 ? "PM" : "AM";
-  h = (h % 12) || 12;
-  return `${h}:${m.toString().padStart(2, "0")} ${suffix}`;
+  const startLabel = b.start_12 || formatTime(b.start);
+  const endLabel = b.end_12 || formatTime(b.end);
+
+  el.innerHTML = `
+    <div class="block-time">${startLabel}–${endLabel}</div>
+    <div class="block-title">${b.title || ""}</div>
+    <div class="block-team">${b.team || ""}</div>
+    <div class="block-coach">${b.coach || ""}</div>
+    <div class="block-grade">${b.grade || ""}</div>
+    <div class="block-field">${b.field || ""}</div>
+  `;
+
+  return el;
 }
 
 /* -------------------------------------------------------
-   COMPLEX GROUP LIST
-------------------------------------------------------- */
-function getComplexList(dayData) {
-  return dayData?.complex_timeline
-    ? Object.keys(dayData.complex_timeline)
-    : [];
-}
-
-/* -------------------------------------------------------
-   BUILD BLOCKS FROM complex_timeline
-------------------------------------------------------- */
-function buildBlocks(complexName, dayData) {
-  const blocks = dayData.complex_timeline?.[complexName] || [];
-
-  return blocks.map(b => {
-    const pos = blockPosition(b.start, b.end);
-    return {
-      start: b.start,
-      end: b.end,
-      type: b.type,
-      label: b.title || "",
-      top: pos.top,
-      height: pos.height,
-      fields: b.fields || []
-    };
-  });
-}
-
-/* -------------------------------------------------------
-   WEEK VIEW
+   WEEK VIEW — DAYS → REAL COMPLEXES → FIELDS → MERGED BLOCKS
 ------------------------------------------------------- */
 function renderWeekView() {
   console.log("RENDER WEEK VIEW");
@@ -119,7 +167,7 @@ function renderWeekView() {
 
   for (const date of Object.keys(days)) {
     const dayData = days[date];
-    const complexes = getComplexList(dayData);
+    const complexes = getComplexListForDay(dayData);
 
     const dayCol = document.createElement("div");
     dayCol.className = "week-day-column";
@@ -132,35 +180,42 @@ function renderWeekView() {
     const timelineRow = document.createElement("div");
     timelineRow.className = "week-day-timeline";
 
-    // Add hour grid
     renderTimeGrid(timelineRow);
 
-    // Add complex columns
     for (const complexName of complexes) {
       const complexCol = document.createElement("div");
       complexCol.className = "week-complex-column";
-      complexCol.dataset.loc = complexName;
 
-      const title = document.createElement("div");
-      title.textContent = complexName;
-      complexCol.appendChild(title);
+      const complexHeader = document.createElement("div");
+      complexHeader.className = "complex-header";
+      complexHeader.textContent = complexName;
+      complexCol.appendChild(complexHeader);
 
-      const blocks = buildBlocks(complexName, dayData);
+      const fields = getFieldsForComplex(complexName);
 
-      for (const b of blocks) {
-        const el = document.createElement("div");
-        el.className = `timeline-block timeline-${b.type}`;
-        el.style.top = `${b.top}px`;
-        el.style.height = `${b.height}px`;
+      const fieldsRow = document.createElement("div");
+      fieldsRow.className = "fields-row";
 
-        el.innerHTML = `
-          <div class="block-time">${formatTime(b.start)}–${formatTime(b.end)}</div>
-          <div class="block-main">${b.label}</div>
-        `;
+      for (const field of fields) {
+        const fieldCol = document.createElement("div");
+        fieldCol.className = "field-column";
 
-        complexCol.appendChild(el);
+        const fieldHeader = document.createElement("div");
+        fieldHeader.className = "field-header";
+        fieldHeader.textContent = field.surface || field.id;
+        fieldCol.appendChild(fieldHeader);
+
+        const blocks = getMergedBlocksForField(dayData, field.id);
+
+        for (const b of blocks) {
+          const el = renderBlockElement(b);
+          fieldCol.appendChild(el);
+        }
+
+        fieldsRow.appendChild(fieldCol);
       }
 
+      complexCol.appendChild(fieldsRow);
       timelineRow.appendChild(complexCol);
     }
 
@@ -172,7 +227,7 @@ function renderWeekView() {
 }
 
 /* -------------------------------------------------------
-   DAY VIEW
+   DAY VIEW — SINGLE DAY, REAL COMPLEXES SIDE BY SIDE
 ------------------------------------------------------- */
 function renderDayView() {
   console.log("RENDER DAY VIEW");
@@ -182,7 +237,7 @@ function renderDayView() {
 
   const today = Object.keys(AVAIL.days)[0];
   const dayData = AVAIL.days[today];
-  const complexes = getComplexList(dayData);
+  const complexes = getComplexListForDay(dayData);
 
   const wrapper = document.createElement("div");
   wrapper.id = "dayTimeline";
@@ -190,34 +245,42 @@ function renderDayView() {
   const complexRow = document.createElement("div");
   complexRow.className = "day-complexes";
 
-  // Add hour grid
   renderTimeGrid(complexRow);
 
   for (const complexName of complexes) {
-    const col = document.createElement("div");
-    col.className = "complex-column";
+    const complexCol = document.createElement("div");
+    complexCol.className = "complex-column";
 
-    const title = document.createElement("h3");
-    title.textContent = complexName;
-    col.appendChild(title);
+    const complexHeader = document.createElement("h3");
+    complexHeader.textContent = complexName;
+    complexCol.appendChild(complexHeader);
 
-    const blocks = buildBlocks(complexName, dayData);
+    const fields = getFieldsForComplex(complexName);
 
-    for (const b of blocks) {
-      const el = document.createElement("div");
-      el.className = `timeline-block timeline-${b.type}`;
-      el.style.top = `${b.top}px`;
-      el.style.height = `${b.height}px`;
+    const fieldsRow = document.createElement("div");
+    fieldsRow.className = "fields-row";
 
-      el.innerHTML = `
-        <div class="block-time">${formatTime(b.start)}–${formatTime(b.end)}</div>
-        <div class="block-main">${b.label}</div>
-      `;
+    for (const field of fields) {
+      const fieldCol = document.createElement("div");
+      fieldCol.className = "field-column";
 
-      col.appendChild(el);
+      const fieldHeader = document.createElement("div");
+      fieldHeader.className = "field-header";
+      fieldHeader.textContent = field.surface || field.id;
+      fieldCol.appendChild(fieldHeader);
+
+      const blocks = getMergedBlocksForField(dayData, field.id);
+
+      for (const b of blocks) {
+        const el = renderBlockElement(b);
+        fieldCol.appendChild(el);
+      }
+
+      fieldsRow.appendChild(fieldCol);
     }
 
-    complexRow.appendChild(col);
+    complexCol.appendChild(fieldsRow);
+    complexRow.appendChild(complexCol);
   }
 
   wrapper.appendChild(complexRow);
@@ -228,7 +291,7 @@ function renderDayView() {
    INIT
 ------------------------------------------------------- */
 async function initCalendar() {
-  console.log("INIT");
+  console.log("INIT CALENDAR");
   await loadAvailability();
   await loadSearchIndex();
   renderWeekView();
