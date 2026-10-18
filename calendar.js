@@ -48,11 +48,12 @@ function getMonday(dateStr) {
  * STATIC JSON FETCHERS — MATCH WORKFLOW OUTPUT
  ************************************************************/
 async function fetchDayCalendar(dateStr) {
-  const url = `/data/day/${dateStr}.json`;
+  const url = `/field-calendar/data/day/${dateStr}.json`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Missing day JSON: ${url}`);
   return res.json();
 }
+
 
 async function fetchWeekCalendar(dateStr) {
   const monday = getMonday(dateStr).toISOString().split("T")[0];
