@@ -170,9 +170,10 @@ function renderDay(data, container) {
   });
   grid.appendChild(timeCol);
 
-  // COMPLEX COLUMNS
+  // FIX: USE BACKEND COMPLEXES ONLY
+  const complexes = Object.keys(data.complexes).sort();
+
   let ct = enrichComplexBlocks(data.complex_timeline, data.merged);
-  const complexes = Object.keys(ct).sort();
 
   complexes.forEach(cx => {
     const col = document.createElement("div");
@@ -187,7 +188,9 @@ function renderDay(data, container) {
     body.className = "cal-col-body";
     col.appendChild(body);
 
-    ct[cx].forEach(block => {
+    const blocks = ct[cx] || [];
+
+    blocks.forEach(block => {
       const el = document.createElement("div");
       el.className = `cal-block cal-block-${block.type}`;
 
@@ -220,6 +223,7 @@ function renderDay(data, container) {
     grid.appendChild(col);
   });
 }
+
 
 
 /************************************************************
