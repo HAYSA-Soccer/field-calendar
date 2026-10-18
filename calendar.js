@@ -1,12 +1,14 @@
-console.log("CALENDAR JS LOADED");
+console.log("UPDATED CALENDAR JS LOADED");
 
+/* -------------------------------------------------------
+   GLOBAL DATA
+------------------------------------------------------- */
 let AVAIL = null;
 let SEARCH = null;
 
-/* -----------------------------
+/* -------------------------------------------------------
    LOAD JSON
------------------------------ */
-
+------------------------------------------------------- */
 async function loadAvailability() {
   const res = await fetch("data/availability.json?v=1");
   AVAIL = await res.json();
@@ -19,10 +21,9 @@ async function loadSearchIndex() {
   console.log("Search index loaded:", SEARCH);
 }
 
-/* -----------------------------
+/* -------------------------------------------------------
    UTILITIES
------------------------------ */
-
+------------------------------------------------------- */
 function toMinutes(t) {
   const [h, m] = t.split(":").map(Number);
   return h * 60 + m;
@@ -41,84 +42,37 @@ function formatTime(t) {
   return `${h}:${m.toString().padStart(2, "0")} ${suffix}`;
 }
 
-/* -----------------------------
-   COMPLEX LIST FROM FIELDS
------------------------------ */
-
-function getComplexList() {
-  const complexes = {};
-
-  for (const f of AVAIL.fields) {
-    if (f.complex && !complexes[f.complex]) {
-      complexes[f.complex] = true;
-    }
-  }
-
-  return Object.keys(complexes);
+/* -------------------------------------------------------
+   COMPLEX LIST (NEW)
+------------------------------------------------------- */
+function getComplexList(dayData) {
+  if (!dayData || !dayData.complex_timeline) return [];
+  return Object.keys(dayData.complex_timeline);
 }
 
-/* -----------------------------
-   SYNTHESIZE TIMELINE FROM DAY DATA
------------------------------ */
-
-function synthesizeTimeline(dayData) {
-  const timeline = [];
-
-  for (const key of Object.keys(dayData)) {
-    const entries = dayData[key];
-    if (!Array.isArray(entries)) continue;
-
-    for (const item of entries) {
-      if (!item.start || !item.end) continue;
-
-      timeline.push({
-        start: item.start,
-        end: item.end,
-        location: item.location || item.field || key,
-        type: item.type || "practice",
-        label: item.label || item.team || ""
-      });
-    }
-  }
-
-  return timeline;
-}
-
-/* -----------------------------
-   BUILD BLOCKS FOR A COMPLEX
------------------------------ */
-
+/* -------------------------------------------------------
+   BUILD BLOCKS FROM complex_timeline (NEW)
+------------------------------------------------------- */
 function buildBlocks(complexName, dayData) {
-  const blocks = [];
-  if (!dayData) return blocks;
+  const blocks = dayData.complex_timeline?.[complexName] || [];
 
-  const timeline = synthesizeTimeline(dayData);
-
-  for (const item of timeline) {
-    const fieldObj = AVAIL.fields.find(f => f.field === item.location);
-    const complex = fieldObj ? fieldObj.complex : item.location;
-
-    if (complex !== complexName) continue;
-
-    const pos = blockPosition(item.start, item.end);
-
-    blocks.push({
-      start: item.start,
-      end: item.end,
-      type: item.type,
-      label: item.label,
+  return blocks.map(b => {
+    const pos = blockPosition(b.start, b.end);
+    return {
+      start: b.start,
+      end: b.end,
+      type: b.type,
+      label: b.title || "",
       top: pos.top,
-      height: pos.height
-    });
-  }
-
-  return blocks;
+      height: pos.height,
+      fields: b.fields || []
+    };
+  });
 }
 
-/* -----------------------------
-   WEEK VIEW
------------------------------ */
-
+/* -------------------------------------------------------
+   WEEK VIEW (UPDATED)
+------------------------------------------------------- */
 function renderWeekView() {
   console.log("RENDER WEEK VIEW START");
 
@@ -129,9 +83,11 @@ function renderWeekView() {
   wrapper.className = "week-days-container";
 
   const days = AVAIL.days;
-  const complexes = getComplexList();
 
   for (const date of Object.keys(days)) {
+    const dayData = days[date];
+    const complexes = getComplexList(dayData);
+
     const dayCol = document.createElement("div");
     dayCol.className = "week-day-column";
 
@@ -152,7 +108,7 @@ function renderWeekView() {
       title.textContent = complexName;
       complexCol.appendChild(title);
 
-      const blocks = buildBlocks(complexName, days[date]);
+      const blocks = buildBlocks(complexName, dayData);
 
       for (const b of blocks) {
         const el = document.createElement("div");
@@ -178,10 +134,9 @@ function renderWeekView() {
   container.appendChild(wrapper);
 }
 
-/* -----------------------------
-   DAY VIEW
------------------------------ */
-
+/* -------------------------------------------------------
+   DAY VIEW (UPDATED)
+------------------------------------------------------- */
 function renderDayView() {
   console.log("RENDER DAY VIEW START");
 
@@ -190,7 +145,7 @@ function renderDayView() {
 
   const today = Object.keys(AVAIL.days)[0];
   const dayData = AVAIL.days[today];
-  const complexes = getComplexList();
+  const complexes = getComplexList(dayData);
 
   const wrapper = document.createElement("div");
   wrapper.id = "dayTimeline";
@@ -229,10 +184,9 @@ function renderDayView() {
   container.appendChild(wrapper);
 }
 
-/* -----------------------------
+/* -------------------------------------------------------
    INIT
------------------------------ */
-
+------------------------------------------------------- */
 async function initCalendar() {
   console.log("INIT START");
   await loadAvailability();
@@ -243,10 +197,9 @@ async function initCalendar() {
 
 initCalendar();
 
-/* -----------------------------
+/* -------------------------------------------------------
    NAV BUTTONS
------------------------------ */
-
+------------------------------------------------------- */
 document.querySelectorAll(".nav button").forEach(btn => {
   btn.addEventListener("click", () => {
     const view = btn.dataset.view;
