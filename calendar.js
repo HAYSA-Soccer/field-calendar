@@ -1,4 +1,4 @@
-console.log("UPDATED CALENDAR JS LOADED");
+console.log("CALENDAR JS — CLEAN REWRITE LOADED");
 
 /* -------------------------------------------------------
    GLOBAL DATA
@@ -7,7 +7,7 @@ let AVAIL = null;
 let SEARCH = null;
 
 /* -------------------------------------------------------
-   LOAD JSON
+   LOAD JSON FILES
 ------------------------------------------------------- */
 async function loadAvailability() {
   const res = await fetch("data/availability.json?v=1");
@@ -22,6 +22,37 @@ async function loadSearchIndex() {
 }
 
 /* -------------------------------------------------------
+   TIME GRID (HOUR MARKERS + LINES)
+------------------------------------------------------- */
+function renderTimeGrid(container) {
+  const grid = document.createElement("div");
+  grid.className = "time-grid";
+
+  const hours = [
+    "08:00","09:00","10:00","11:00","12:00",
+    "13:00","14:00","15:00","16:00","17:00",
+    "18:00","19:00","20:00","21:00"
+  ];
+
+  for (const h of hours) {
+    const mins = toMinutes(h);
+
+    const label = document.createElement("div");
+    label.className = "time-grid-hour";
+    label.style.top = `${mins}px`;
+    label.textContent = formatTime(h);
+    grid.appendChild(label);
+
+    const line = document.createElement("div");
+    line.className = "time-grid-line";
+    line.style.top = `${mins}px`;
+    container.appendChild(line);
+  }
+
+  container.appendChild(grid);
+}
+
+/* -------------------------------------------------------
    UTILITIES
 ------------------------------------------------------- */
 function toMinutes(t) {
@@ -30,9 +61,10 @@ function toMinutes(t) {
 }
 
 function blockPosition(start, end) {
-  const top = toMinutes(start);
-  const height = toMinutes(end) - toMinutes(start);
-  return { top, height };
+  return {
+    top: toMinutes(start),
+    height: toMinutes(end) - toMinutes(start)
+  };
 }
 
 function formatTime(t) {
@@ -43,15 +75,16 @@ function formatTime(t) {
 }
 
 /* -------------------------------------------------------
-   COMPLEX LIST (NEW)
+   COMPLEX GROUP LIST
 ------------------------------------------------------- */
 function getComplexList(dayData) {
-  if (!dayData || !dayData.complex_timeline) return [];
-  return Object.keys(dayData.complex_timeline);
+  return dayData?.complex_timeline
+    ? Object.keys(dayData.complex_timeline)
+    : [];
 }
 
 /* -------------------------------------------------------
-   BUILD BLOCKS FROM complex_timeline (NEW)
+   BUILD BLOCKS FROM complex_timeline
 ------------------------------------------------------- */
 function buildBlocks(complexName, dayData) {
   const blocks = dayData.complex_timeline?.[complexName] || [];
@@ -71,10 +104,10 @@ function buildBlocks(complexName, dayData) {
 }
 
 /* -------------------------------------------------------
-   WEEK VIEW (UPDATED)
+   WEEK VIEW
 ------------------------------------------------------- */
 function renderWeekView() {
-  console.log("RENDER WEEK VIEW START");
+  console.log("RENDER WEEK VIEW");
 
   const container = document.getElementById("view-container");
   container.innerHTML = "";
@@ -99,6 +132,10 @@ function renderWeekView() {
     const timelineRow = document.createElement("div");
     timelineRow.className = "week-day-timeline";
 
+    // Add hour grid
+    renderTimeGrid(timelineRow);
+
+    // Add complex columns
     for (const complexName of complexes) {
       const complexCol = document.createElement("div");
       complexCol.className = "week-complex-column";
@@ -135,10 +172,10 @@ function renderWeekView() {
 }
 
 /* -------------------------------------------------------
-   DAY VIEW (UPDATED)
+   DAY VIEW
 ------------------------------------------------------- */
 function renderDayView() {
-  console.log("RENDER DAY VIEW START");
+  console.log("RENDER DAY VIEW");
 
   const container = document.getElementById("view-container");
   container.innerHTML = "";
@@ -152,6 +189,9 @@ function renderDayView() {
 
   const complexRow = document.createElement("div");
   complexRow.className = "day-complexes";
+
+  // Add hour grid
+  renderTimeGrid(complexRow);
 
   for (const complexName of complexes) {
     const col = document.createElement("div");
@@ -188,10 +228,9 @@ function renderDayView() {
    INIT
 ------------------------------------------------------- */
 async function initCalendar() {
-  console.log("INIT START");
+  console.log("INIT");
   await loadAvailability();
   await loadSearchIndex();
-  console.log("CALLING WEEK VIEW");
   renderWeekView();
 }
 
@@ -205,12 +244,10 @@ document.querySelectorAll(".nav button").forEach(btn => {
     const view = btn.dataset.view;
 
     if (view === "week") {
-      console.log("NAV → WEEK");
       renderWeekView();
     }
 
     if (view === "day") {
-      console.log("NAV → DAY");
       renderDayView();
     }
   });
