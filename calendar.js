@@ -54,7 +54,6 @@ async function fetchDayCalendar(dateStr) {
   return res.json();
 }
 
-
 async function fetchWeekCalendar(dateStr) {
   const res = await fetch(`/field-calendar/data/week/weeks.json`);
   if (!res.ok) throw new Error("Missing weeks.json");
@@ -62,18 +61,21 @@ async function fetchWeekCalendar(dateStr) {
   const weeks = await res.json();
   const monday = getMonday(dateStr).toISOString().split("T")[0];
 
+  if (!weeks[monday]) {
+    throw new Error(`Week data missing for ${monday}`);
+  }
+
   return {
     week_start: monday,
     days: Object.values(weeks[monday])
   };
 }
 
-
 async function fetchMonthCalendar(dateStr) {
   const d = new Date(dateStr);
   const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
 
-  const res = await fetch(`/data/month/months.json`);
+  const res = await fetch(`/field-calendar/data/month/months.json`);
   if (!res.ok) throw new Error("Missing months.json");
 
   const months = await res.json();
@@ -89,7 +91,7 @@ async function fetchMonthCalendar(dateStr) {
 }
 
 async function fetchSeasonWindow() {
-  const res = await fetch(`/data/availability.json`);
+  const res = await fetch(`/field-calendar/data/availability.json`);
   if (!res.ok) throw new Error("Missing availability.json");
   return res.json();
 }
