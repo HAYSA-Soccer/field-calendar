@@ -33,6 +33,7 @@ jobs:
             sleep $((i * 2))
           done
 
+          # ⭐ FIXED — no backticks
           CLEAN=$(echo "$RAW" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
           if [ -z "$CLEAN" ]; then CLEAN="$RAW"; fi
 
@@ -65,6 +66,7 @@ jobs:
             sleep $((i * 2))
           done
 
+          # ⭐ FIXED — no backticks
           FIELDS_CLEAN=$(echo "$FIELDS_RAW" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
           if [ -z "$FIELDS_CLEAN" ]; then FIELDS_CLEAN="$FIELDS_RAW"; fi
 
@@ -81,6 +83,7 @@ jobs:
               sleep $((i * 2))
             done
 
+            # ⭐ FIXED — no backticks
             CLEAN_DAY=$(echo "$RAW_DAY" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
             if [ -z "$CLEAN_DAY" ]; then CLEAN_DAY="$RAW_DAY"; fi
 
