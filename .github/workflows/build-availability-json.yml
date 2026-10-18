@@ -33,7 +33,7 @@ jobs:
             sleep $((i * 2))
           done
 
-          CLEAN=$(echo "$RAW" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
+          CLEAN=$(echo "$RAW" | sed -n 's/.*<pre>\(.*\)<\/pre>.*/\1/p')
           if [ -z "$CLEAN" ]; then CLEAN="$RAW"; fi
 
           echo "Season window raw: $RAW"
@@ -69,7 +69,7 @@ jobs:
             sleep $((i * 2))
           done
 
-          FIELDS_CLEAN=$(echo "$FIELDS_RAW" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
+          FIELDS_CLEAN=$(echo "$FIELDS_RAW" | sed -n 's/.*<pre>\(.*\)<\/pre>.*/\1/p')
           if [ -z "$FIELDS_CLEAN" ]; then FIELDS_CLEAN="$FIELDS_RAW"; fi
 
           echo "Fields raw: $FIELDS_RAW"
@@ -94,7 +94,7 @@ jobs:
               sleep $((i * 2))
             done
 
-            CLEAN_DAY=$(echo "$RAW_DAY" | sed -n 's/.*<pre>`\(.*\)`<\/pre>.*/\1/p')
+            CLEAN_DAY=$(echo "$RAW_DAY" | sed -n 's/.*<pre>\(.*\)<\/pre>.*/\1/p')
             if [ -z "$CLEAN_DAY" ]; then CLEAN_DAY="$RAW_DAY"; fi
 
             echo "Day raw: $RAW_DAY"
