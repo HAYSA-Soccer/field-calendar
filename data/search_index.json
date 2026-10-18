@@ -1,92 +1,4 @@
 {
-  "2026-10-12": {
-    "TURF": [],
-    "full": [
-      {
-        "type": "free",
-        "start": "19:00",
-        "end": "21:00",
-        "start_12": "7:00 PM",
-        "end_12": "9:00 PM",
-        "fields": [
-          "H-HST"
-        ]
-      }
-    ],
-    "half": []
-  },
-  "2026-10-13": {
-    "SUMNER/SEAN": null,
-    "JOYCE": null,
-    "TURF": [],
-    "full": [
-      {
-        "type": "free",
-        "start": "19:00",
-        "end": "21:00",
-        "start_12": "7:00 PM",
-        "end_12": "9:00 PM",
-        "fields": [
-          "H-HST"
-        ]
-      }
-    ],
-    "half": []
-  },
-  "2026-10-14": {
-    "SUMNER/SEAN": null,
-    "JOYCE": null,
-    "TURF": [],
-    "full": [
-      {
-        "type": "free",
-        "start": "18:00",
-        "end": "21:00",
-        "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
-        "fields": [
-          "H-HST"
-        ]
-      }
-    ],
-    "half": []
-  },
-  "2026-10-15": {
-    "SUMNER/SEAN": null,
-    "JOYCE": null,
-    "TURF": [],
-    "full": [
-      {
-        "type": "free",
-        "start": "18:00",
-        "end": "21:00",
-        "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
-        "fields": [
-          "H-HST"
-        ]
-      }
-    ],
-    "half": []
-  },
-  "2026-10-16": {
-    "full": [
-      {
-        "type": "free",
-        "start": "16:00",
-        "end": "19:00",
-        "start_12": "4:00 PM",
-        "end_12": "7:00 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su2",
-          "H-SJ3",
-          "H-SJ4"
-        ]
-      }
-    ],
-    "half": []
-  },
   "2026-10-17": {
     "SUMNER/SEAN": null,
     "JOYCE": null,
@@ -103,10 +15,6 @@
         ]
       }
     ],
-    "half": []
-  },
-  "2026-10-18": {
-    "full": [],
     "half": []
   }
 }
