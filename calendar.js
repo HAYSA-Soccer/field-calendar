@@ -56,22 +56,18 @@ async function fetchDayCalendar(dateStr) {
 
 
 async function fetchWeekCalendar(dateStr) {
-  const monday = getMonday(dateStr).toISOString().split("T")[0];
-
-  const res = await fetch(`/data/week/weeks.json`);
+  const res = await fetch(`/field-calendar/data/week/weeks.json`);
   if (!res.ok) throw new Error("Missing weeks.json");
 
   const weeks = await res.json();
-
-  if (!weeks[monday]) {
-    throw new Error(`Week data missing for ${monday}`);
-  }
+  const monday = getMonday(dateStr).toISOString().split("T")[0];
 
   return {
     week_start: monday,
     days: Object.values(weeks[monday])
   };
 }
+
 
 async function fetchMonthCalendar(dateStr) {
   const d = new Date(dateStr);
