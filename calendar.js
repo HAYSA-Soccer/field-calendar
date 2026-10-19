@@ -70,7 +70,7 @@ function toMinutes(hhmm) {
 }
 
 // -------------------------------
-// FIELD MAP + FRIENDLY NAMES
+// FIELD MAP + PARENT/CHILD
 // -------------------------------
 function buildFieldIndex(fields) {
   const map = {};
@@ -171,7 +171,48 @@ function expandBusy(slotBusy, parentChild) {
 }
 
 // -------------------------------
-// FRIENDLY NAME GROUPING
+// COLLAPSE FREE FIELDS (THE FIX)
+// -------------------------------
+function collapseFreeFields(freeFields, parentChild, busySet, fieldsById) {
+  const { parentToChildren, childToParent } = parentChild;
+
+  const collapsed = new Set();
+
+  freeFields.forEach(f => {
+    const id = f.id;
+    const parent = childToParent[id];
+    const children = parentToChildren[id] || [];
+
+    if (children.length === 0 && !parent) {
+      // No children → Full field
+      collapsed.add(id);
+      return;
+    }
+
+    if (children.length > 0) {
+      // Parent field
+      const allFree = children.every(k => !busySet.has(k));
+      if (allFree) {
+        collapsed.add(id); // Parent only
+      }
+      return;
+    }
+
+    if (parent) {
+      // Child field
+      const siblings = parentToChildren[parent];
+      const allFree = siblings.every(k => !busySet.has(k));
+      if (!allFree) {
+        collapsed.add(id); // Only show child if not all free
+      }
+    }
+  });
+
+  return Array.from(collapsed).map(id => fieldsById[id]);
+}
+
+// -------------------------------
+// FRIENDLY NAME
 // -------------------------------
 function friendlyName(field, parentToChildren, busySet, fieldsById) {
   const id = field.id;
@@ -247,113 +288,4 @@ function showDay(dateObj) {
 
   const header = document.createElement("h2");
   header.textContent = `Day View — ${displayDate(dateObj)}`;
-  calendar.appendChild(header);
-
-  if (!day) {
-    calendar.innerHTML += "<p>No data for this date.</p>";
-    return;
-  }
-
-  const fieldsById = buildFieldIndex(day.fields);
-  const parentChild = buildParentChildMap(day.fields);
-  const slots = buildSlots();
-  const busyMap = buildBusyMap(day.complex_timeline, slots);
-
-  const complexes = Object.keys(day.complexes);
-
-  const rows = slots.map((slot, idx) => {
-    const rowBlocks = {};
-
-    complexes.forEach(complex => {
-      const complexFields = day.complexes[complex];
-      const slotBusy = busyMap[complex]?.[idx] || { game: [], practice: [], admin: [] };
-      const busySet = expandBusy(slotBusy, parentChild);
-
-      const freeFields = complexFields
-        .filter(fid => !busySet.has(fid))
-        .map(fid => fieldsById[fid])
-        .filter(Boolean);
-
-      const friendlyAvail = [];
-
-      freeFields.forEach(f => {
-        const name = friendlyName(f, parentChild.parentToChildren, busySet, fieldsById);
-        if (name) friendlyAvail.push(name);
-      });
-
-      friendlyAvail.sort();
-
-      const blocks = [];
-
-      if (slotBusy.admin.length > 0) {
-        blocks.push({
-          type: "admin",
-          label: "Admin",
-          fields: slotBusy.admin.map(fid => fieldsById[fid].name)
-        });
-      }
-      if (slotBusy.game.length > 0) {
-        blocks.push({
-          type: "game",
-          label: "Game",
-          fields: slotBusy.game.map(fid => fieldsById[fid].name)
-        });
-      }
-      if (slotBusy.practice.length > 0) {
-        blocks.push({
-          type: "practice",
-          label: "Practice",
-          fields: slotBusy.practice.map(fid => fieldsById[fid].name)
-        });
-      }
-      if (friendlyAvail.length > 0) {
-        blocks.push({
-          type: "available",
-          label: "Available",
-          fields: friendlyAvail
-        });
-      }
-
-      rowBlocks[complex] = blocks;
-    });
-
-    return {
-      start: slot.start,
-      end: slot.end,
-      blocks: rowBlocks
-    };
-  });
-
-  const merged = mergeBlocks(rows);
-
-  merged.forEach(r => {
-    const row = document.createElement("div");
-    row.className = "lane-row";
-
-    const timeCol = document.createElement("div");
-    timeCol.className = "lane-time";
-    timeCol.textContent = timeRangeLabel(r.start, r.end);
-    row.appendChild(timeCol);
-
-    complexes.forEach(complex => {
-      const col = document.createElement("div");
-      col.className = "lane-complex";
-
-      const title = document.createElement("div");
-      title.className = "complex-title";
-      title.textContent = complex;
-      col.appendChild(title);
-
-      r.blocks[complex].forEach(b => {
-        const block = document.createElement("div");
-        block.className = `block block-${b.type}`;
-        block.textContent = `${b.label}: ${b.fields.join(", ")}`;
-        col.appendChild(block);
-      });
-
-      row.appendChild(col);
-    });
-
-    calendar.appendChild(row);
-  });
-}
+  calendar.appendChild(header
