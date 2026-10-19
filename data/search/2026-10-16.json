@@ -1,0 +1,18 @@
+{
+  "full": [
+    {
+      "type": "free",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "fields": [
+        "H-Su1",
+        "H-Su2",
+        "H-SJ3",
+        "H-SJ4"
+      ]
+    }
+  ],
+  "half": []
+}
