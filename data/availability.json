@@ -234,6 +234,33 @@
         "full": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "18:00",
+            "start_12": "4:00 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST",
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
             "start": "19:00",
             "end": "21:00",
             "start_12": "7:00 PM",
@@ -366,6 +393,29 @@
         "full": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "18:00",
+            "start_12": "4:00 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST",
+              "H-Su1",
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "free",
             "start": "19:00",
             "end": "21:00",
             "start_12": "7:00 PM",
@@ -380,12 +430,59 @@
         "SUMNER/SEAN JOYCE": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "17:00",
+            "start_12": "4:00 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-Su2",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
             "start": "17:00",
             "end": "17:30",
             "start_12": "5:00 PM",
             "end_12": "5:30 PM",
             "fields": [
               "H-Su2"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-SJ4",
+              "H-Su1A",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su2",
+              "H-SJ4",
+              "H-Su1A",
+              "H-SJ4A",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "18:30",
+            "start_12": "6:00 PM",
+            "end_12": "6:30 PM",
+            "fields": [
+              "H-SJ4"
             ]
           },
           {
@@ -544,6 +641,100 @@
         ],
         "TURF": [],
         "SUMNER/SEAN JOYCE": [
+          {
+            "type": "free",
+            "start": "16:00",
+            "end": "16:30",
+            "start_12": "4:00 PM",
+            "end_12": "4:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "16:30",
+            "end": "17:00",
+            "start_12": "4:30 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "16:30",
+            "end": "17:00",
+            "start_12": "4:30 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-SJ3",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ4",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "18:30",
+            "start_12": "6:00 PM",
+            "end_12": "6:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3"
+            ]
+          },
           {
             "type": "practice",
             "start": "18:00",
@@ -1439,6 +1630,33 @@
         "full": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "18:00",
+            "start_12": "4:00 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST",
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
             "start": "19:00",
             "end": "21:00",
             "start_12": "7:00 PM",
@@ -1571,6 +1789,29 @@
         "full": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "18:00",
+            "start_12": "4:00 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST",
+              "H-Su1",
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "free",
             "start": "19:00",
             "end": "21:00",
             "start_12": "7:00 PM",
@@ -1585,12 +1826,59 @@
         "SUMNER/SEAN JOYCE": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "17:00",
+            "start_12": "4:00 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-Su2",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
             "start": "17:00",
             "end": "17:30",
             "start_12": "5:00 PM",
             "end_12": "5:30 PM",
             "fields": [
               "H-Su2"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-SJ4",
+              "H-Su1A",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su2",
+              "H-SJ4",
+              "H-Su1A",
+              "H-SJ4A",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "18:30",
+            "start_12": "6:00 PM",
+            "end_12": "6:30 PM",
+            "fields": [
+              "H-SJ4"
             ]
           },
           {
@@ -1749,6 +2037,100 @@
         ],
         "TURF": [],
         "SUMNER/SEAN JOYCE": [
+          {
+            "type": "free",
+            "start": "16:00",
+            "end": "16:30",
+            "start_12": "4:00 PM",
+            "end_12": "4:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "16:30",
+            "end": "17:00",
+            "start_12": "4:30 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "16:30",
+            "end": "17:00",
+            "start_12": "4:30 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-SJ3",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ4",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "18:30",
+            "start_12": "6:00 PM",
+            "end_12": "6:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3"
+            ]
+          },
           {
             "type": "practice",
             "start": "18:00",
@@ -2645,6 +3027,33 @@
         "full": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "18:00",
+            "start_12": "4:00 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST",
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
             "start": "19:00",
             "end": "21:00",
             "start_12": "7:00 PM",
@@ -2777,6 +3186,29 @@
         "full": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "18:00",
+            "start_12": "4:00 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST",
+              "H-Su1",
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "free",
             "start": "19:00",
             "end": "21:00",
             "start_12": "7:00 PM",
@@ -2791,12 +3223,59 @@
         "SUMNER/SEAN JOYCE": [
           {
             "type": "free",
+            "start": "16:00",
+            "end": "17:00",
+            "start_12": "4:00 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-Su2",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
             "start": "17:00",
             "end": "17:30",
             "start_12": "5:00 PM",
             "end_12": "5:30 PM",
             "fields": [
               "H-Su2"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-SJ4",
+              "H-Su1A",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su2",
+              "H-SJ4",
+              "H-Su1A",
+              "H-SJ4A",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "18:30",
+            "start_12": "6:00 PM",
+            "end_12": "6:30 PM",
+            "fields": [
+              "H-SJ4"
             ]
           },
           {
@@ -2955,6 +3434,100 @@
         ],
         "TURF": [],
         "SUMNER/SEAN JOYCE": [
+          {
+            "type": "free",
+            "start": "16:00",
+            "end": "16:30",
+            "start_12": "4:00 PM",
+            "end_12": "4:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "16:30",
+            "end": "17:00",
+            "start_12": "4:30 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "16:30",
+            "end": "17:00",
+            "start_12": "4:30 PM",
+            "end_12": "5:00 PM",
+            "fields": [
+              "H-SJ3",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-SJ4"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:00",
+            "end": "17:30",
+            "start_12": "5:00 PM",
+            "end_12": "5:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-SJ3"
+            ]
+          },
+          {
+            "type": "practice",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ4",
+              "SUMNER/SEAN JOYCE"
+            ]
+          },
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "18:30",
+            "start_12": "6:00 PM",
+            "end_12": "6:30 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su2",
+              "H-SJ3"
+            ]
+          },
           {
             "type": "practice",
             "start": "18:00",
