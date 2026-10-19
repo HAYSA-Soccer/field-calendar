@@ -1,1 +1,132 @@
-{"date":"2026-10-12","fields":[{"id":"H-HST","name":"H-HST","complex":"full","surface":"Holbrook High School Turf (Full)"},{"id":"H-HST1","name":"H-HST","complex":"half","surface":"Holbrook High School Turf 1"},{"id":"H-HST2","name":"H-HST","complex":"half","surface":"Holbrook High School Turf 2"},{"id":"H-Su1","name":"H-Su1","complex":"full","surface":"Sumner Field 1 (Full)"},{"id":"H-Su1A","name":"H-Su1","complex":"half","surface":"Sumner Field 1A"},{"id":"H-Su1B","name":"H-Su1","complex":"half","surface":"Sumner Field 1B"},{"id":"H-Su2","name":"H-Su2","complex":"full","surface":"Sumner Field 2 (Full)"},{"id":"H-Su2A","name":"H-Su2","complex":"half","surface":"Sumner Field 2A"},{"id":"H-Su2B","name":"H-Su2","complex":"half","surface":"Sumner Field 2B"},{"id":"H-SJ3","name":"H-SJ3","complex":"full","surface":"Sumner Field 3 (Full)"},{"id":"H-SJ3A","name":"H-SJ3","complex":"half","surface":"Sumner Field 3A"},{"id":"H-SJ3B","name":"H-SJ3","complex":"half","surface":"Sumner Field 3B"},{"id":"H-SJ4","name":"H-SJ4","complex":"full","surface":"Sumner Field 4 (Full)"},{"id":"H-SJ4A","name":"H-SJ4","complex":"half","surface":"Sumner Field 4A"},{"id":"H-SJ4B","name":"H-SJ4","complex":"half","surface":"Sumner Field 4B"}],"complexes":{"full":["H-HST","H-Su1","H-Su2","H-SJ3","H-SJ4"],"half":["H-HST1","H-HST2","H-Su1A","H-Su1B","H-Su2A","H-Su2B","H-SJ3A","H-SJ3B","H-SJ4A","H-SJ4B"]},"availability":{"H-HST":[{"start":"18:00","end":"21:00"}],"H-HST1":[],"H-HST2":[],"H-Su1":[{"start":"16:00","end":"19:00"}],"H-Su1A":[],"H-Su1B":[],"H-Su2":[{"start":"16:00","end":"19:00"}],"H-Su2A":[],"H-Su2B":[],"H-SJ3":[{"start":"16:00","end":"19:00"}],"H-SJ3A":[],"H-SJ3B":[],"H-SJ4":[{"start":"16:00","end":"19:00"}],"H-SJ4A":[],"H-SJ4B":[]},"events":{"H-HST1":[{"event_id":"6d7914c32fb3dcad6df72e92a9a68912","date":"2026-10-12","start":"17:30","end":"19:00","field":"H-HST1","field_group":"TURF","type":"practice","title":"3/4 Boys Travel (Ball) Practice","team":"3/4 Boys Travel","coach":"Ball","grade":"3/4","source":"ICS"}]},"blocks":{},"merged":[{"field":"H-Su1","start":"16:00","end":"19:00","start_12":"4:00 PM","end_12":"7:00 PM","type":"free","title":""},{"field":"H-Su2","start":"16:00","end":"19:00","start_12":"4:00 PM","end_12":"7:00 PM","type":"free","title":""},{"field":"H-SJ3","start":"16:00","end":"19:00","start_12":"4:00 PM","end_12":"7:00 PM","type":"free","title":""},{"field":"H-SJ4","start":"16:00","end":"19:00","start_12":"4:00 PM","end_12":"7:00 PM","type":"free","title":""},{"field":"H-HST1","start":"17:30","end":"19:00","start_12":"5:30 PM","end_12":"7:00 PM","type":"practice","title":"3/4 Boys Travel (Ball) Practice","team":"3/4 Boys Travel","coach":"Ball","grade":"3/4","source":"ICS"},{"field":"H-HST","start":"18:00","end":"21:00","start_12":"6:00 PM","end_12":"9:00 PM","type":"free","title":""}],"complex_timeline":{"full":[{"type":"free","start":"19:00","end":"21:00","start_12":"7:00 PM","end_12":"9:00 PM","fields":["H-HST"]}],"TURF":[],"half":[]}}
+{
+  "date": "2026-10-12",
+  "complexes": {
+    "full": [
+      "H-HST",
+      "H-Su1",
+      "H-Su2",
+      "H-SJ3",
+      "H-SJ4"
+    ],
+    "half": [
+      "H-HST1",
+      "H-HST2",
+      "H-Su1A",
+      "H-Su1B",
+      "H-Su2A",
+      "H-Su2B",
+      "H-SJ3A",
+      "H-SJ3B",
+      "H-SJ4A",
+      "H-SJ4B"
+    ]
+  },
+  "fields": [
+    {
+      "id": "H-HST",
+      "name": "H-HST",
+      "complex": "full",
+      "surface": "Holbrook High School Turf (Full)"
+    },
+    {
+      "id": "H-HST1",
+      "name": "H-HST",
+      "complex": "half",
+      "surface": "Holbrook High School Turf 1"
+    },
+    {
+      "id": "H-HST2",
+      "name": "H-HST",
+      "complex": "half",
+      "surface": "Holbrook High School Turf 2"
+    },
+    {
+      "id": "H-Su1",
+      "name": "H-Su1",
+      "complex": "full",
+      "surface": "Sumner Field 1 (Full)"
+    },
+    {
+      "id": "H-Su1A",
+      "name": "H-Su1",
+      "complex": "half",
+      "surface": "Sumner Field 1A"
+    },
+    {
+      "id": "H-Su1B",
+      "name": "H-Su1",
+      "complex": "half",
+      "surface": "Sumner Field 1B"
+    },
+    {
+      "id": "H-Su2",
+      "name": "H-Su2",
+      "complex": "full",
+      "surface": "Sumner Field 2 (Full)"
+    },
+    {
+      "id": "H-Su2A",
+      "name": "H-Su2",
+      "complex": "half",
+      "surface": "Sumner Field 2A"
+    },
+    {
+      "id": "H-Su2B",
+      "name": "H-Su2",
+      "complex": "half",
+      "surface": "Sumner Field 2B"
+    },
+    {
+      "id": "H-SJ3",
+      "name": "H-SJ3",
+      "complex": "full",
+      "surface": "Sumner Field 3 (Full)"
+    },
+    {
+      "id": "H-SJ3A",
+      "name": "H-SJ3",
+      "complex": "half",
+      "surface": "Sumner Field 3A"
+    },
+    {
+      "id": "H-SJ3B",
+      "name": "H-SJ3",
+      "complex": "half",
+      "surface": "Sumner Field 3B"
+    },
+    {
+      "id": "H-SJ4",
+      "name": "H-SJ4",
+      "complex": "full",
+      "surface": "Sumner Field 4 (Full)"
+    },
+    {
+      "id": "H-SJ4A",
+      "name": "H-SJ4",
+      "complex": "half",
+      "surface": "Sumner Field 4A"
+    },
+    {
+      "id": "H-SJ4B",
+      "name": "H-SJ4",
+      "complex": "half",
+      "surface": "Sumner Field 4B"
+    }
+  ],
+  "complex_timeline": {
+    "full": [
+      {
+        "type": "free",
+        "start": "19:00",
+        "end": "21:00",
+        "start_12": "7:00 PM",
+        "end_12": "9:00 PM",
+        "fields": [
+          "H-HST"
+        ]
+      }
+    ],
+    "TURF": [],
+    "half": []
+  }
+}

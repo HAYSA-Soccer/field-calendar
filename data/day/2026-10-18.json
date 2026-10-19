@@ -1,1 +1,120 @@
-{"date":"2026-10-18","fields":[{"id":"H-HST","name":"H-HST","complex":"full","surface":"Holbrook High School Turf (Full)"},{"id":"H-HST1","name":"H-HST","complex":"half","surface":"Holbrook High School Turf 1"},{"id":"H-HST2","name":"H-HST","complex":"half","surface":"Holbrook High School Turf 2"},{"id":"H-Su1","name":"H-Su1","complex":"full","surface":"Sumner Field 1 (Full)"},{"id":"H-Su1A","name":"H-Su1","complex":"half","surface":"Sumner Field 1A"},{"id":"H-Su1B","name":"H-Su1","complex":"half","surface":"Sumner Field 1B"},{"id":"H-Su2","name":"H-Su2","complex":"full","surface":"Sumner Field 2 (Full)"},{"id":"H-Su2A","name":"H-Su2","complex":"half","surface":"Sumner Field 2A"},{"id":"H-Su2B","name":"H-Su2","complex":"half","surface":"Sumner Field 2B"},{"id":"H-SJ3","name":"H-SJ3","complex":"full","surface":"Sumner Field 3 (Full)"},{"id":"H-SJ3A","name":"H-SJ3","complex":"half","surface":"Sumner Field 3A"},{"id":"H-SJ3B","name":"H-SJ3","complex":"half","surface":"Sumner Field 3B"},{"id":"H-SJ4","name":"H-SJ4","complex":"full","surface":"Sumner Field 4 (Full)"},{"id":"H-SJ4A","name":"H-SJ4","complex":"half","surface":"Sumner Field 4A"},{"id":"H-SJ4B","name":"H-SJ4","complex":"half","surface":"Sumner Field 4B"}],"complexes":{"full":["H-HST","H-Su1","H-Su2","H-SJ3","H-SJ4"],"half":["H-HST1","H-HST2","H-Su1A","H-Su1B","H-Su2A","H-Su2B","H-SJ3A","H-SJ3B","H-SJ4A","H-SJ4B"]},"availability":{"H-HST":[],"H-HST1":[],"H-HST2":[],"H-Su1":[],"H-Su1A":[],"H-Su1B":[],"H-Su2":[],"H-Su2A":[],"H-Su2B":[],"H-SJ3":[],"H-SJ3A":[],"H-SJ3B":[],"H-SJ4":[],"H-SJ4A":[],"H-SJ4B":[]},"events":{},"blocks":{},"merged":[],"complex_timeline":{"full":[],"half":[]}}
+{
+  "date": "2026-10-18",
+  "complexes": {
+    "full": [
+      "H-HST",
+      "H-Su1",
+      "H-Su2",
+      "H-SJ3",
+      "H-SJ4"
+    ],
+    "half": [
+      "H-HST1",
+      "H-HST2",
+      "H-Su1A",
+      "H-Su1B",
+      "H-Su2A",
+      "H-Su2B",
+      "H-SJ3A",
+      "H-SJ3B",
+      "H-SJ4A",
+      "H-SJ4B"
+    ]
+  },
+  "fields": [
+    {
+      "id": "H-HST",
+      "name": "H-HST",
+      "complex": "full",
+      "surface": "Holbrook High School Turf (Full)"
+    },
+    {
+      "id": "H-HST1",
+      "name": "H-HST",
+      "complex": "half",
+      "surface": "Holbrook High School Turf 1"
+    },
+    {
+      "id": "H-HST2",
+      "name": "H-HST",
+      "complex": "half",
+      "surface": "Holbrook High School Turf 2"
+    },
+    {
+      "id": "H-Su1",
+      "name": "H-Su1",
+      "complex": "full",
+      "surface": "Sumner Field 1 (Full)"
+    },
+    {
+      "id": "H-Su1A",
+      "name": "H-Su1",
+      "complex": "half",
+      "surface": "Sumner Field 1A"
+    },
+    {
+      "id": "H-Su1B",
+      "name": "H-Su1",
+      "complex": "half",
+      "surface": "Sumner Field 1B"
+    },
+    {
+      "id": "H-Su2",
+      "name": "H-Su2",
+      "complex": "full",
+      "surface": "Sumner Field 2 (Full)"
+    },
+    {
+      "id": "H-Su2A",
+      "name": "H-Su2",
+      "complex": "half",
+      "surface": "Sumner Field 2A"
+    },
+    {
+      "id": "H-Su2B",
+      "name": "H-Su2",
+      "complex": "half",
+      "surface": "Sumner Field 2B"
+    },
+    {
+      "id": "H-SJ3",
+      "name": "H-SJ3",
+      "complex": "full",
+      "surface": "Sumner Field 3 (Full)"
+    },
+    {
+      "id": "H-SJ3A",
+      "name": "H-SJ3",
+      "complex": "half",
+      "surface": "Sumner Field 3A"
+    },
+    {
+      "id": "H-SJ3B",
+      "name": "H-SJ3",
+      "complex": "half",
+      "surface": "Sumner Field 3B"
+    },
+    {
+      "id": "H-SJ4",
+      "name": "H-SJ4",
+      "complex": "full",
+      "surface": "Sumner Field 4 (Full)"
+    },
+    {
+      "id": "H-SJ4A",
+      "name": "H-SJ4",
+      "complex": "half",
+      "surface": "Sumner Field 4A"
+    },
+    {
+      "id": "H-SJ4B",
+      "name": "H-SJ4",
+      "complex": "half",
+      "surface": "Sumner Field 4B"
+    }
+  ],
+  "complex_timeline": {
+    "full": [],
+    "half": []
+  }
+}
