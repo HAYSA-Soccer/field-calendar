@@ -1,11 +1,11 @@
 /************************************************************
  * CONFIG
  ************************************************************/
-const PX_PER_MIN = 2;
-let currentDate = null;
+const PX_PER_MIN = 1.5;
+const DAY_START = "08:00"; // 8am
+const DAY_END = "21:00";   // 9pm
 
-const FIXED_START = "08:00";
-const FIXED_END = "21:00"; // 9pm
+let currentDate = null;
 
 
 /************************************************************
@@ -45,13 +45,6 @@ function formatDateLabel(dateStr) {
   });
 }
 
-function getMonday(dateStr) {
-  const d = makeLocalDate(dateStr);
-  const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
-  return new Date(d.setDate(diff));
-}
-
 
 /************************************************************
  * FETCHERS
@@ -61,42 +54,6 @@ async function fetchDayCalendar(dateStr) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Missing day JSON: ${url}`);
   return res.json();
-}
-
-async function fetchWeekCalendar(dateStr) {
-  const res = await fetch(`/field-calendar/data/week/weeks.json`);
-  if (!res.ok) throw new Error("Missing weeks.json");
-
-  const weeks = await res.json();
-  const monday = getMonday(dateStr).toISOString().split("T")[0];
-
-  if (!weeks[monday]) {
-    throw new Error(`Week data missing for ${monday}`);
-  }
-
-  return {
-    week_start: monday,
-    days: Object.values(weeks[monday])
-  };
-}
-
-async function fetchMonthCalendar(dateStr) {
-  const d = makeLocalDate(dateStr);
-  const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
-
-  const res = await fetch(`/field-calendar/data/month/months.json`);
-  if (!res.ok) throw new Error("Missing months.json");
-
-  const months = await res.json();
-
-  if (!months[key]) {
-    throw new Error(`Month data missing for ${key}`);
-  }
-
-  return {
-    month_label: d.toLocaleDateString("en-US", { month: "long", year: "numeric" }),
-    days: Object.values(months[key])
-  };
 }
 
 async function fetchSeasonWindow() {
@@ -109,15 +66,11 @@ async function fetchSeasonWindow() {
 /************************************************************
  * TIME GRID
  ************************************************************/
-function getTimeBoundsFixed() {
-  const minStart = timeToMinutes(FIXED_START);
-  const maxEnd = timeToMinutes(FIXED_END);
-  return { minStart, maxEnd };
-}
-
-function buildTimeSlots(minStart, maxEnd, step = 30) {
+function buildTimeSlots() {
+  const startMin = timeToMinutes(DAY_START);
+  const endMin = timeToMinutes(DAY_END);
   const slots = [];
-  for (let m = minStart; m <= maxEnd; m += step) {
+  for (let m = startMin; m <= endMin; m += 30) {
     slots.push(minutesToTime(m));
   }
   return slots;
@@ -129,6 +82,7 @@ function buildTimeSlots(minStart, maxEnd, step = 30) {
  ************************************************************/
 function renderLegend() {
   const legend = document.getElementById("calendar-legend");
+  if (!legend) return;
 
   legend.innerHTML = `
     <div class="cal-legend">
@@ -143,78 +97,129 @@ function renderLegend() {
 
 
 /************************************************************
- * BLOCK MAPPING
+ * AVAILABILITY DERIVATION
  ************************************************************/
-function mapComplexBlocks(data, minStart) {
-  const result = {};
-  const ct = data.complex_timeline || {};
+/**
+ * Given complex_timeline[complexName] and complexes[complexName],
+ * derive explicit FREE blocks between DAY_START and DAY_END.
+ */
+function buildBlocksForComplex(dayData, complexName) {
+  const rawBlocks = (dayData.complex_timeline[complexName] || []).map(b => {
+    const startMin = timeToMinutes(b.start);
+    const endMin = timeToMinutes(b.end);
 
-  Object.entries(ct).forEach(([complexName, blocks]) => {
-    result[complexName] = blocks.map(b => {
-      const startMin = timeToMinutes(b.start);
-      const endMin = timeToMinutes(b.end);
+    let type = "free";
+    if (b.admin_fields && b.admin_fields.length) type = "admin";
+    else if (b.game_fields && b.game_fields.length) type = "game";
+    else if (b.practice_fields && b.practice_fields.length) type = "practice";
 
-      return {
-        start: b.start,
-        end: b.end,
-        startMin,
-        endMin,
-        game_fields: b.game_fields || [],
-        practice_fields: b.practice_fields || [],
-        admin_fields: b.admin_fields || [],
-        free_fields: b.free_fields || [],
-        type: (() => {
-          if (b.admin_fields?.length) return "admin";
-          if (b.game_fields?.length) return "game";
-          if (b.practice_fields?.length) return "practice";
-          if (b.free_fields?.length) return "free";
-          return "free";
-        })()
-      };
-    });
+    return {
+      start: b.start,
+      end: b.end,
+      startMin,
+      endMin,
+      type,
+      game_fields: b.game_fields || [],
+      practice_fields: b.practice_fields || [],
+      admin_fields: b.admin_fields || [],
+      free_fields: b.free_fields || []
+    };
   });
 
-  return result;
+  const dayStartMin = timeToMinutes(DAY_START);
+  const dayEndMin = timeToMinutes(DAY_END);
+
+  // Sort scheduled blocks
+  rawBlocks.sort((a, b) => a.startMin - b.startMin);
+
+  const blocks = [...rawBlocks];
+  const allFieldsInComplex = dayData.complexes[complexName] || [];
+
+  // Build free intervals between scheduled blocks
+  let cursor = dayStartMin;
+
+  rawBlocks.forEach(b => {
+    if (b.startMin > cursor) {
+      blocks.push({
+        start: minutesToTime(cursor),
+        end: minutesToTime(b.startMin),
+        startMin: cursor,
+        endMin: b.startMin,
+        type: "free",
+        game_fields: [],
+        practice_fields: [],
+        admin_fields: [],
+        free_fields: allFieldsInComplex
+      });
+    }
+    cursor = Math.max(cursor, b.endMin);
+  });
+
+  // Tail free block
+  if (cursor < dayEndMin) {
+    blocks.push({
+      start: minutesToTime(cursor),
+      end: minutesToTime(dayEndMin),
+      startMin: cursor,
+      endMin: dayEndMin,
+      type: "free",
+      game_fields: [],
+      practice_fields: [],
+      admin_fields: [],
+      free_fields: allFieldsInComplex
+    });
+  }
+
+  // Sort again including free blocks
+  blocks.sort((a, b) => a.startMin - b.startMin);
+
+  return blocks;
 }
 
 
 /************************************************************
  * RENDER — DAY VIEW
  ************************************************************/
-function renderDay(data, container) {
+function renderDay(dayData, container) {
   container.innerHTML = "";
 
   renderLegend();
 
-  const { minStart, maxEnd } = getTimeBoundsFixed();
-  const timeSlots = buildTimeSlots(minStart, maxEnd);
-
   const header = document.createElement("div");
   header.className = "cal-header";
-  header.textContent = `Day View — ${formatDateLabel(data.date)}`;
+  header.textContent = `Day View — ${formatDateLabel(dayData.date)}`;
   container.appendChild(header);
 
   const grid = document.createElement("div");
   grid.className = "cal-grid";
   container.appendChild(grid);
 
+  // TIME COLUMN
   const timeCol = document.createElement("div");
-  timeCol.className = "cal-col cal-time-col";
+  timeCol.className = "cal-time-col";
   timeCol.innerHTML = `<div class="cal-col-header">Time</div>`;
+
+  const timeSlots = buildTimeSlots();
   timeSlots.forEach(t => {
     const cell = document.createElement("div");
     cell.className = "cal-time-cell";
     cell.textContent = formatTime12(t);
     timeCol.appendChild(cell);
   });
+
   grid.appendChild(timeCol);
 
-  const complexes = Object.keys(data.complexes || {}).sort();
-  const complexBlocks = mapComplexBlocks(data, minStart);
+  // COMPLEX COLUMNS
+  const complexNames = Object.keys(dayData.complexes || {}).sort();
 
-  complexes.forEach(cx => {
+  const dayStartMin = timeToMinutes(DAY_START);
+  const dayEndMin = timeToMinutes(DAY_END);
+  const totalMinutes = dayEndMin - dayStartMin;
+  const colHeight = totalMinutes * PX_PER_MIN;
+
+  complexNames.forEach(cx => {
     const col = document.createElement("div");
-    col.className = "cal-col cal-complex-col";
+    col.className = "cal-complex-col";
 
     const header = document.createElement("div");
     header.className = "cal-col-header";
@@ -223,109 +228,44 @@ function renderDay(data, container) {
 
     const body = document.createElement("div");
     body.className = "cal-col-body";
+    body.style.height = `${colHeight}px`;
     col.appendChild(body);
 
-    const blocks = complexBlocks[cx] || [];
+    const blocks = buildBlocksForComplex(dayData, cx);
 
     blocks.forEach(block => {
       const el = document.createElement("div");
-      el.className = "cal-block";
+      el.className = "cal-block cal-block-" + block.type;
 
-      el.classList.add(`cal-block-${block.type}`);
-
-      const offset = block.startMin - minStart;
+      const offset = block.startMin - dayStartMin;
       const duration = block.endMin - block.startMin;
 
       el.style.top = `${offset * PX_PER_MIN}px`;
       el.style.height = `${duration * PX_PER_MIN}px`;
 
       const lines = [];
+      lines.push(
+        `<div class="cal-block-time">${formatTime12(block.start)} – ${formatTime12(block.end)}</div>`
+      );
 
-      lines.push(`<div class="cal-block-time">${formatTime12(block.start)} – ${formatTime12(block.end)}</div>`);
-
-      if (block.admin_fields.length)
-        lines.push(`<div class="cal-usage-admin">Admin: ${block.admin_fields.join(", ")}</div>`);
-
-      if (block.game_fields.length)
-        lines.push(`<div class="cal-usage-game">Game: ${block.game_fields.join(", ")}</div>`);
-
-      if (block.practice_fields.length)
-        lines.push(`<div class="cal-usage-practice">Practice: ${block.practice_fields.join(", ")}</div>`);
-
-      if (block.free_fields.length)
-        lines.push(`<div class="cal-usage-free">Available: ${block.free_fields.join(", ")}</div>`);
+      if (block.type === "admin" && block.admin_fields.length) {
+        lines.push(`<div class="cal-block-line">Admin: ${block.admin_fields.join(", ")}</div>`);
+      } else if (block.type === "game" && block.game_fields.length) {
+        lines.push(`<div class="cal-block-line">Game: ${block.game_fields.join(", ")}</div>`);
+      } else if (block.type === "practice" && block.practice_fields.length) {
+        lines.push(`<div class="cal-block-line">Practice: ${block.practice_fields.join(", ")}</div>`);
+      } else if (block.type === "free") {
+        const fieldsLabel = block.free_fields.length
+          ? block.free_fields.join(", ")
+          : "Available";
+        lines.push(`<div class="cal-block-line">Available: ${fieldsLabel}</div>`);
+      }
 
       el.innerHTML = lines.join("");
       body.appendChild(el);
     });
 
     grid.appendChild(col);
-  });
-}
-
-
-/************************************************************
- * WEEK VIEW
- ************************************************************/
-async function renderWeek(dateStr, container) {
-  container.innerHTML = "";
-  renderLegend();
-
-  const weekData = await fetchWeekCalendar(dateStr);
-
-  const header = document.createElement("div");
-  header.className = "cal-header";
-  header.textContent = `Week View — Week of ${formatDateLabel(weekData.week_start)}`;
-  container.appendChild(header);
-
-  const weekGrid = document.createElement("div");
-  weekGrid.className = "week-grid";
-  container.appendChild(weekGrid);
-
-  weekData.days.forEach(dayObj => {
-    const dayCol = document.createElement("div");
-    dayCol.className = "week-day-col";
-    dayCol.innerHTML = `<div class="week-day-header">${formatDateLabel(dayObj.date)}</div>`;
-
-    const inner = document.createElement("div");
-    inner.className = "week-day-inner";
-    renderDay(dayObj, inner);
-
-    dayCol.appendChild(inner);
-    weekGrid.appendChild(dayCol);
-  });
-}
-
-
-/************************************************************
- * MONTH VIEW
- ************************************************************/
-async function renderMonth(dateStr, container) {
-  container.innerHTML = "";
-  renderLegend();
-
-  const monthData = await fetchMonthCalendar(dateStr);
-
-  const header = document.createElement("div");
-  header.className = "cal-header";
-  header.textContent = `Month View — ${monthData.month_label}`;
-  container.appendChild(header);
-
-  const monthGrid = document.createElement("div");
-  monthGrid.className = "month-grid";
-  container.appendChild(monthGrid);
-
-  monthData.days.forEach(dayObj => {
-    const cell = document.createElement("div");
-    cell.className = "month-cell";
-    cell.innerHTML = `<div class="month-cell-header">${formatDateLabel(dayObj.date)}</div>`;
-
-    const inner = document.createElement("div");
-    inner.className = "month-cell-inner";
-    renderDay(dayObj, inner);
-
-    cell.appendChild(inner);
-    monthGrid.appendChild(cell);
   });
 }
 
@@ -352,14 +292,15 @@ async function showDay(dateStr) {
   renderDay(data, container);
 }
 
+// Week / Month placeholders for now (until we wire them to real data)
 async function showWeek(dateStr) {
   const container = document.getElementById("calendar");
-  await renderWeek(dateStr, container);
+  container.innerHTML = "<div class='cal-header'>Week View coming soon (day view is authoritative).</div>";
 }
 
 async function showMonth(dateStr) {
   const container = document.getElementById("calendar");
-  await renderMonth(dateStr, container);
+  container.innerHTML = "<div class='cal-header'>Month View coming soon (day view is authoritative).</div>";
 }
 
 async function initCalendar() {
