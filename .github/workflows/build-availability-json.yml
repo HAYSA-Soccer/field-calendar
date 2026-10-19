@@ -50,15 +50,15 @@ jobs:
           echo "season_start=$START" >> $GITHUB_OUTPUT
           echo "season_end=$END" >> $GITHUB_OUTPUT
 
-      - name: Build availability + search index
+      - name: Build availability + day/week/month JSON
         run: |
           START="${{ steps.season.outputs.season_start }}"
           END="${{ steps.season.outputs.season_end }}"
 
           echo "📁 Creating production directories..."
-          mkdir -p data/day data/week data/month data/search
+          mkdir -p data/day data/week data/month
 
-          echo "🔎 Fetching fields..."
+          echo "🔎 Fetching fields + complexes..."
 
           for i in {1..5}; do
             FIELDS_RAW=$(curl -sSL "$WEBAPP_URL?mode=fields") && break
@@ -96,24 +96,25 @@ jobs:
               exit 1
             fi
 
-            echo "$CLEAN_DAY" > "data/day/${CURRENT}.json"
-            echo "📝 Saved day JSON → data/day/${CURRENT}.json"
+            # Normalize per-day JSON to what calendar.js expects
+            DAY_WITH_META=$(jq -n \
+              --argjson day "$CLEAN_DAY" \
+              --argjson fields "$FIELDS_CLEAN" \
+              '{
+                date: $day.date,
+                complexes: $fields.complexes,
+                fields: $fields.fields,
+                complex_timeline: $day.complex_timeline
+              }'
+            )
 
-            COMPLEXES=$(echo "$CLEAN_DAY" | jq -r '.complex_timeline | keys[]')
-
-            DAY_SEARCH="{}"
-            for CX in $COMPLEXES; do
-              WINDOWS=$(echo "$CLEAN_DAY" | jq --arg cx "$CX" '.complex_timeline[$cx]')
-              DAY_SEARCH=$(echo "$DAY_SEARCH" | jq --arg cx "$CX" --argjson w "$WINDOWS" '.[$cx] = $w')
-            done
-
-            echo "$DAY_SEARCH" > "data/search/${CURRENT}.json"
-            echo "🔍 Saved search JSON → data/search/${CURRENT}.json"
+            echo "$DAY_WITH_META" > "data/day/${CURRENT}.json"
+            echo "📝 Saved normalized day JSON → data/day/${CURRENT}.json"
 
             CURRENT=$(date -d "$CURRENT + 1 day" +%Y-%m-%d)
           done
 
-          echo "📦 Building week JSON..."
+          echo "📦 Building weeks.json..."
           WEEKS_JSON=$(jq -s '
             reduce .[] as $d ({}; 
               .[(($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m-%d")))] 
@@ -123,7 +124,7 @@ jobs:
 
           echo "$WEEKS_JSON" > data/week/weeks.json
 
-          echo "📦 Building month JSON..."
+          echo "📦 Building months.json..."
           MONTHS_JSON=$(jq -s '
             reduce .[] as $d ({}; 
               .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
@@ -132,16 +133,6 @@ jobs:
           ' data/day/*.json)
 
           echo "$MONTHS_JSON" > data/month/months.json
-
-          echo "📦 Building search_index.json..."
-          SEARCH_JSON="{}"
-          for f in data/search/*.json; do
-            d=$(basename "$f" .json)
-            s=$(cat "$f")
-            SEARCH_JSON=$(echo "$SEARCH_JSON" | jq --arg d "$d" --argjson v "$s" '.[$d] = $v')
-          done
-
-          echo "$SEARCH_JSON" > data/search_index.json
 
           echo "🧩 Assembling final availability.json..."
           FINAL_JSON=$(jq -n \
@@ -163,12 +154,15 @@ jobs:
           )
 
           echo "$FINAL_JSON" > data/availability.json
+          echo "✅ Final JSON files written."
 
       - name: Commit updated JSON
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
+          echo "📤 Committing changes..."
           git add data
-          git commit -m "Updated availability + search index" || echo "No changes"
+          git commit -m "Updated availability JSON" || echo "No changes"
           git push
+          echo "🚀 Push complete."
