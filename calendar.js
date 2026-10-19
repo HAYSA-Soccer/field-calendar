@@ -2,6 +2,7 @@
  * CONFIG — STATIC JSON ONLY
  ************************************************************/
 const PX_PER_MIN = 2;
+let currentDate = null; // for prev/next day navigation
 
 
 /************************************************************
@@ -162,7 +163,7 @@ function renderDay(data, container) {
   grid.appendChild(timeCol);
 
   // COMPLEX COLUMNS
-  const complexes = Object.keys(data.complexes).sort();
+  const complexes = Object.keys(data.complexes || {}).sort();
 
   complexes.forEach(cx => {
     const col = document.createElement("div");
@@ -177,7 +178,7 @@ function renderDay(data, container) {
     body.className = "cal-col-body";
     col.appendChild(body);
 
-    const blocks = data.complex_timeline[cx] || [];
+    const blocks = (data.complex_timeline && data.complex_timeline[cx]) || [];
 
     blocks.forEach(block => {
       const el = document.createElement("div");
@@ -215,7 +216,7 @@ function renderDay(data, container) {
 
 
 /************************************************************
- * RENDER — WEEK VIEW
+ * RENDER — WEEK VIEW (will use Day View once Day is solid)
  ************************************************************/
 async function renderWeek(dateStr, container) {
   container.innerHTML = "";
@@ -247,7 +248,7 @@ async function renderWeek(dateStr, container) {
 
 
 /************************************************************
- * RENDER — MONTH VIEW
+ * RENDER — MONTH VIEW (also uses Day View)
  ************************************************************/
 async function renderMonth(dateStr, container) {
   container.innerHTML = "";
@@ -279,9 +280,23 @@ async function renderMonth(dateStr, container) {
 
 
 /************************************************************
- * PUBLIC API — CLEANED (NO DEMO SEARCH BUTTONS)
+ * DAY NAVIGATION
+ ************************************************************/
+function changeDay(offset) {
+  if (!currentDate) return;
+  const d = new Date(currentDate);
+  d.setDate(d.getDate() + offset);
+  const next = d.toISOString().split("T")[0];
+  currentDate = next;
+  showDay(currentDate);
+}
+
+
+/************************************************************
+ * PUBLIC API
  ************************************************************/
 async function showDay(dateStr) {
+  currentDate = dateStr;
   const container = document.getElementById("calendar");
   const data = await fetchDayCalendar(dateStr);
   renderDay(data, container);
@@ -295,4 +310,11 @@ async function showWeek(dateStr) {
 async function showMonth(dateStr) {
   const container = document.getElementById("calendar");
   await renderMonth(dateStr, container);
+}
+
+async function initCalendar() {
+  const season = await fetchSeasonWindow();
+  // Start on season_start; you can manually navigate to 2026-10-17
+  currentDate = season.season_start;
+  await showDay(currentDate);
 }
