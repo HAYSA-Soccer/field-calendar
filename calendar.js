@@ -1,310 +1,374 @@
-/************************************************************
- * CONFIG
- ************************************************************/
-const PX_PER_MIN = 1.5;
-const DAY_START = "08:00"; // 8am
-const DAY_END = "21:00";   // 9pm
+// calendar.js v3 — JSON-driven per-field availability
 
+let availabilityData = null;
 let currentDate = null;
 
+const DAY_START_MINUTES = 8 * 60;   // 8:00
+const DAY_END_MINUTES = 21 * 60;    // 21:00 (9pm)
+const SLOT_MINUTES = 30;            // 30-minute slots
 
-/************************************************************
- * UTILITIES
- ************************************************************/
-function makeLocalDate(dateStr) {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  return new Date(y, m - 1, d);
-}
-
-function timeToMinutes(t) {
-  const [h, m] = t.split(":").map(Number);
-  return h * 60 + m;
-}
-
-function minutesToTime(m) {
-  const h = Math.floor(m / 60);
-  const min = m % 60;
-  return `${String(h).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
-}
-
-function formatTime12(hhmm) {
-  const [hStr, mStr] = hhmm.split(":");
-  let h = parseInt(hStr, 10);
-  const suffix = h >= 12 ? "PM" : "AM";
-  h = h % 12;
-  if (h === 0) h = 12;
-  return `${h}:${mStr} ${suffix}`;
-}
-
-function formatDateLabel(dateStr) {
-  const d = makeLocalDate(dateStr);
-  return d.toLocaleDateString("en-US", {
-    weekday: "short",
-    month: "numeric",
-    day: "numeric"
-  });
-}
-
-
-/************************************************************
- * FETCHERS
- ************************************************************/
-async function fetchDayCalendar(dateStr) {
-  const url = `/field-calendar/data/day/${dateStr}.json`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Missing day JSON: ${url}`);
-  return res.json();
-}
-
-async function fetchSeasonWindow() {
-  const res = await fetch(`/field-calendar/data/availability.json`);
-  if (!res.ok) throw new Error("Missing availability.json");
-  return res.json();
-}
-
-
-/************************************************************
- * TIME GRID
- ************************************************************/
-function buildTimeSlots() {
-  const startMin = timeToMinutes(DAY_START);
-  const endMin = timeToMinutes(DAY_END);
-  const slots = [];
-  for (let m = startMin; m <= endMin; m += 30) {
-    slots.push(minutesToTime(m));
-  }
-  return slots;
-}
-
-
-/************************************************************
- * LEGEND
- ************************************************************/
-function renderLegend() {
-  const legend = document.getElementById("calendar-legend");
-  if (!legend) return;
-
-  legend.innerHTML = `
-    <div class="cal-legend">
-      <div class="cal-legend-item"><span class="lg lg-game"></span> Game</div>
-      <div class="cal-legend-item"><span class="lg lg-practice"></span> Practice</div>
-      <div class="cal-legend-item"><span class="lg lg-admin"></span> Admin Block</div>
-      <div class="cal-legend-item"><span class="lg lg-free"></span> Available</div>
-      <div class="cal-legend-item"><span class="lg lg-closure"></span> Closure</div>
-    </div>
-  `;
-}
-
-
-/************************************************************
- * AVAILABILITY DERIVATION
- ************************************************************/
-/**
- * Given complex_timeline[complexName] and complexes[complexName],
- * derive explicit FREE blocks between DAY_START and DAY_END.
- */
-function buildBlocksForComplex(dayData, complexName) {
-  const rawBlocks = (dayData.complex_timeline[complexName] || []).map(b => {
-    const startMin = timeToMinutes(b.start);
-    const endMin = timeToMinutes(b.end);
-
-    let type = "free";
-    if (b.admin_fields && b.admin_fields.length) type = "admin";
-    else if (b.game_fields && b.game_fields.length) type = "game";
-    else if (b.practice_fields && b.practice_fields.length) type = "practice";
-
-    return {
-      start: b.start,
-      end: b.end,
-      startMin,
-      endMin,
-      type,
-      game_fields: b.game_fields || [],
-      practice_fields: b.practice_fields || [],
-      admin_fields: b.admin_fields || [],
-      free_fields: b.free_fields || []
-    };
-  });
-
-  const dayStartMin = timeToMinutes(DAY_START);
-  const dayEndMin = timeToMinutes(DAY_END);
-
-  // Sort scheduled blocks
-  rawBlocks.sort((a, b) => a.startMin - b.startMin);
-
-  const blocks = [...rawBlocks];
-  const allFieldsInComplex = dayData.complexes[complexName] || [];
-
-  // Build free intervals between scheduled blocks
-  let cursor = dayStartMin;
-
-  rawBlocks.forEach(b => {
-    if (b.startMin > cursor) {
-      blocks.push({
-        start: minutesToTime(cursor),
-        end: minutesToTime(b.startMin),
-        startMin: cursor,
-        endMin: b.startMin,
-        type: "free",
-        game_fields: [],
-        practice_fields: [],
-        admin_fields: [],
-        free_fields: allFieldsInComplex
-      });
-    }
-    cursor = Math.max(cursor, b.endMin);
-  });
-
-  // Tail free block
-  if (cursor < dayEndMin) {
-    blocks.push({
-      start: minutesToTime(cursor),
-      end: minutesToTime(dayEndMin),
-      startMin: cursor,
-      endMin: dayEndMin,
-      type: "free",
-      game_fields: [],
-      practice_fields: [],
-      admin_fields: [],
-      free_fields: allFieldsInComplex
+function initCalendar() {
+  fetch('data/availability.json')
+    .then(res => res.json())
+    .then(data => {
+      availabilityData = data;
+      currentDate = new Date(data.season_start + 'T00:00:00');
+      showDay(currentDate);
+      updateLastUpdated();
+    })
+    .catch(err => {
+      console.error('Error loading availability.json', err);
+      const calendar = document.getElementById('calendar');
+      calendar.innerHTML = '<p class="error">Unable to load availability data.</p>';
     });
-  }
-
-  // Sort again including free blocks
-  blocks.sort((a, b) => a.startMin - b.startMin);
-
-  return blocks;
 }
 
+function updateLastUpdated() {
+  const el = document.getElementById('lastUpdated');
+  if (!el || !availabilityData) return;
+  el.textContent = `Season window: ${availabilityData.season_start} to ${availabilityData.season_end}`;
+}
 
-/************************************************************
- * RENDER — DAY VIEW
- ************************************************************/
-function renderDay(dayData, container) {
-  container.innerHTML = "";
+function changeDay(offset) {
+  if (!currentDate) return;
+  currentDate = new Date(currentDate.getTime() + offset * 24 * 60 * 60 * 1000);
+  showDay(currentDate);
+}
 
-  renderLegend();
+function showDay(dateObj) {
+  if (!availabilityData) return;
 
-  const header = document.createElement("div");
-  header.className = "cal-header";
-  header.textContent = `Day View — ${formatDateLabel(dayData.date)}`;
-  container.appendChild(header);
+  const dateStr = formatDateKey(dateObj);
+  const dayData = availabilityData.days[dateStr];
 
-  const grid = document.createElement("div");
-  grid.className = "cal-grid";
-  container.appendChild(grid);
+  const calendar = document.getElementById('calendar');
+  calendar.innerHTML = '';
 
-  // TIME COLUMN
-  const timeCol = document.createElement("div");
-  timeCol.className = "cal-time-col";
-  timeCol.innerHTML = `<div class="cal-col-header">Time</div>`;
+  const header = document.createElement('div');
+  header.className = 'day-header';
+  header.textContent = `Day View — ${formatDisplayDate(dateObj)}`;
+  calendar.appendChild(header);
 
-  const timeSlots = buildTimeSlots();
-  timeSlots.forEach(t => {
-    const cell = document.createElement("div");
-    cell.className = "cal-time-cell";
-    cell.textContent = formatTime12(t);
-    timeCol.appendChild(cell);
+  const legend = buildLegend();
+  calendar.appendChild(legend);
+
+  if (!dayData) {
+    const msg = document.createElement('p');
+    msg.className = 'no-data';
+    msg.textContent = 'No data for this date.';
+    calendar.appendChild(msg);
+    return;
+  }
+
+  const fieldsById = buildFieldIndex(dayData.fields);
+  const parentChild = buildParentChildMap(dayData.fields);
+  const complexes = Object.keys(dayData.complexes || {});
+  const complexFields = dayData.complexes;
+
+  const slots = buildTimeSlots();
+  const busyMap = buildBusyMap(dayData.complex_timeline, slots);
+
+  const grid = document.createElement('div');
+  grid.className = 'day-grid';
+
+  // Time column
+  const timeCol = document.createElement('div');
+  timeCol.className = 'time-column';
+
+  slots.forEach(slot => {
+    const timeCell = document.createElement('div');
+    timeCell.className = 'time-cell';
+    timeCell.textContent = slot.label;
+    timeCol.appendChild(timeCell);
   });
 
   grid.appendChild(timeCol);
 
-  // COMPLEX COLUMNS
-  const complexNames = Object.keys(dayData.complexes || {}).sort();
+  // Complex columns
+  complexes.forEach(complexId => {
+    const complexCol = document.createElement('div');
+    complexCol.className = 'complex-column';
 
-  const dayStartMin = timeToMinutes(DAY_START);
-  const dayEndMin = timeToMinutes(DAY_END);
-  const totalMinutes = dayEndMin - dayStartMin;
-  const colHeight = totalMinutes * PX_PER_MIN;
+    const complexHeader = document.createElement('div');
+    complexHeader.className = 'complex-header';
+    complexHeader.textContent = complexId;
+    complexCol.appendChild(complexHeader);
 
-  complexNames.forEach(cx => {
-    const col = document.createElement("div");
-    col.className = "cal-complex-col";
+    const fieldsInComplex = complexFields[complexId] || [];
 
-    const header = document.createElement("div");
-    header.className = "cal-col-header";
-    header.textContent = cx;
-    col.appendChild(header);
+    slots.forEach((slot, idx) => {
+      const cell = document.createElement('div');
+      cell.className = 'complex-cell';
 
-    const body = document.createElement("div");
-    body.className = "cal-col-body";
-    body.style.height = `${colHeight}px`;
-    col.appendChild(body);
+      const slotBusy = busyMap[complexId] && busyMap[complexId][idx]
+        ? busyMap[complexId][idx]
+        : { game_fields: [], practice_fields: [], admin_fields: [] };
 
-    const blocks = buildBlocksForComplex(dayData, cx);
+      // Expand busy fields with parent/child relationships
+      const expandedBusy = expandBusyFields(slotBusy, parentChild);
 
-    blocks.forEach(block => {
-      const el = document.createElement("div");
-      el.className = "cal-block cal-block-" + block.type;
+      const busySet = new Set([
+        ...expandedBusy.game_fields,
+        ...expandedBusy.practice_fields,
+        ...expandedBusy.admin_fields
+      ]);
 
-      const offset = block.startMin - dayStartMin;
-      const duration = block.endMin - block.startMin;
+      const freeFields = fieldsInComplex.filter(fid => !busySet.has(fid));
 
-      el.style.top = `${offset * PX_PER_MIN}px`;
-      el.style.height = `${duration * PX_PER_MIN}px`;
-
-      const lines = [];
-      lines.push(
-        `<div class="cal-block-time">${formatTime12(block.start)} – ${formatTime12(block.end)}</div>`
-      );
-
-      if (block.type === "admin" && block.admin_fields.length) {
-        lines.push(`<div class="cal-block-line">Admin: ${block.admin_fields.join(", ")}</div>`);
-      } else if (block.type === "game" && block.game_fields.length) {
-        lines.push(`<div class="cal-block-line">Game: ${block.game_fields.join(", ")}</div>`);
-      } else if (block.type === "practice" && block.practice_fields.length) {
-        lines.push(`<div class="cal-block-line">Practice: ${block.practice_fields.join(", ")}</div>`);
-      } else if (block.type === "free") {
-        const fieldsLabel = block.free_fields.length
-          ? block.free_fields.join(", ")
-          : "Available";
-        lines.push(`<div class="cal-block-line">Available: ${fieldsLabel}</div>`);
+      // Admin block
+      if (expandedBusy.admin_fields.length > 0) {
+        const block = document.createElement('div');
+        block.className = 'block block-admin';
+        block.textContent = 'Admin: ' + expandedBusy.admin_fields
+          .map(fid => fieldsById[fid]?.name || fid)
+          .join(', ');
+        cell.appendChild(block);
       }
 
-      el.innerHTML = lines.join("");
-      body.appendChild(el);
+      // Game block
+      if (expandedBusy.game_fields.length > 0) {
+        const block = document.createElement('div');
+        block.className = 'block block-game';
+        block.textContent = 'Game: ' + expandedBusy.game_fields
+          .map(fid => fieldsById[fid]?.name || fid)
+          .join(', ');
+        cell.appendChild(block);
+      }
+
+      // Practice block
+      if (expandedBusy.practice_fields.length > 0) {
+        const block = document.createElement('div');
+        block.className = 'block block-practice';
+        block.textContent = 'Practice: ' + expandedBusy.practice_fields
+          .map(fid => fieldsById[fid]?.name || fid)
+          .join(', ');
+        cell.appendChild(block);
+      }
+
+      // Availability block
+      if (freeFields.length > 0) {
+        const block = document.createElement('div');
+        block.className = 'block block-available';
+        block.textContent = 'Available: ' + freeFields
+          .map(fid => fieldsById[fid]?.name || fid)
+          .join(', ');
+        cell.appendChild(block);
+      }
+
+      complexCol.appendChild(cell);
     });
 
-    grid.appendChild(col);
+    grid.appendChild(complexCol);
+  });
+
+  calendar.appendChild(grid);
+}
+
+// ---------- Helpers ----------
+
+function formatDateKey(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function formatDisplayDate(d) {
+  return d.toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'numeric',
+    day: 'numeric'
   });
 }
 
+function buildLegend() {
+  const legend = document.createElement('div');
+  legend.className = 'legend';
 
-/************************************************************
- * NAVIGATION
- ************************************************************/
-function changeDay(offset) {
-  if (!currentDate) return;
-  const d = new Date(currentDate);
-  d.setDate(d.getDate() + offset);
-  currentDate = d.toISOString().split("T")[0];
-  showDay(currentDate);
+  const items = [
+    { cls: 'block-game', label: 'Game' },
+    { cls: 'block-practice', label: 'Practice' },
+    { cls: 'block-admin', label: 'Admin Block' },
+    { cls: 'block-available', label: 'Available' }
+  ];
+
+  items.forEach(item => {
+    const entry = document.createElement('div');
+    entry.className = 'legend-item';
+
+    const swatch = document.createElement('span');
+    swatch.className = 'legend-swatch ' + item.cls;
+
+    const text = document.createElement('span');
+    text.className = 'legend-label';
+    text.textContent = item.label;
+
+    entry.appendChild(swatch);
+    entry.appendChild(text);
+    legend.appendChild(entry);
+  });
+
+  return legend;
 }
 
-
-/************************************************************
- * PUBLIC API
- ************************************************************/
-async function showDay(dateStr) {
-  currentDate = dateStr;
-  const container = document.getElementById("calendar");
-  const data = await fetchDayCalendar(dateStr);
-  renderDay(data, container);
+function buildFieldIndex(fields) {
+  const map = {};
+  fields.forEach(f => {
+    map[f.id] = f;
+  });
+  return map;
 }
 
-// Week / Month placeholders for now (until we wire them to real data)
-async function showWeek(dateStr) {
-  const container = document.getElementById("calendar");
-  container.innerHTML = "<div class='cal-header'>Week View coming soon (day view is authoritative).</div>";
+function buildParentChildMap(fields) {
+  const ids = fields.map(f => f.id);
+  const parentToChildren = {};
+  const childToParent = {};
+
+  ids.forEach(id => {
+    const parent = inferParentId(id, ids);
+    if (parent) {
+      childToParent[id] = parent;
+      if (!parentToChildren[parent]) parentToChildren[parent] = [];
+      parentToChildren[parent].push(id);
+    }
+  });
+
+  return { parentToChildren, childToParent };
 }
 
-async function showMonth(dateStr) {
-  const container = document.getElementById("calendar");
-  container.innerHTML = "<div class='cal-header'>Month View coming soon (day view is authoritative).</div>";
+function inferParentId(id, allIds) {
+  // Case 1: ends with A/B → parent is base without last char
+  if (id.endsWith('A') || id.endsWith('B')) {
+    const base = id.slice(0, -1);
+    if (allIds.includes(base)) return base;
+  }
+
+  // Case 2: ends with digits → parent is base without trailing digits
+  const m = id.match(/^(.*?)(\d+)$/);
+  if (m) {
+    const base = m[1];
+    if (allIds.includes(base)) return base;
+  }
+
+  return null;
 }
 
-async function initCalendar() {
-  const season = await fetchSeasonWindow();
-  currentDate = season.season_start;
-  await showDay(currentDate);
+function buildTimeSlots() {
+  const slots = [];
+  for (let t = DAY_START_MINUTES; t < DAY_END_MINUTES; t += SLOT_MINUTES) {
+    const start = t;
+    const end = t + SLOT_MINUTES;
+    slots.push({
+      start,
+      end,
+      label: formatTimeLabel(start)
+    });
+  }
+  return slots;
+}
+
+function formatTimeLabel(minutes) {
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const displayHour = ((h + 11) % 12) + 1; // 0→12, 13→1, etc.
+  const displayMin = String(m).padStart(2, '0');
+  return `${displayHour}:${displayMin} ${ampm}`;
+}
+
+function timeToMinutes(hhmm) {
+  const [h, m] = hhmm.split(':').map(Number);
+  return h * 60 + m;
+}
+
+function buildBusyMap(complexTimeline, slots) {
+  const map = {};
+
+  if (!complexTimeline) return map;
+
+  Object.keys(complexTimeline).forEach(complexId => {
+    const intervals = complexTimeline[complexId] || [];
+    map[complexId] = {};
+
+    intervals.forEach(interval => {
+      const startMin = timeToMinutes(interval.start);
+      const endMin = timeToMinutes(interval.end);
+
+      slots.forEach((slot, idx) => {
+        const slotStart = slot.start;
+        const slotEnd = slot.end;
+
+        // Overlap?
+        if (slotStart < endMin && slotEnd > startMin) {
+          if (!map[complexId][idx]) {
+            map[complexId][idx] = {
+              game_fields: [],
+              practice_fields: [],
+              admin_fields: []
+            };
+          }
+
+          const entry = map[complexId][idx];
+
+          (interval.game_fields || []).forEach(fid => {
+            if (!entry.game_fields.includes(fid)) entry.game_fields.push(fid);
+          });
+          (interval.practice_fields || []).forEach(fid => {
+            if (!entry.practice_fields.includes(fid)) entry.practice_fields.push(fid);
+          });
+          (interval.admin_fields || []).forEach(fid => {
+            if (!entry.admin_fields.includes(fid)) entry.admin_fields.push(fid);
+          });
+        }
+      });
+    });
+  });
+
+  return map;
+}
+
+function expandBusyFields(slotBusy, parentChild) {
+  const { parentToChildren, childToParent } = parentChild;
+
+  const game = new Set(slotBusy.game_fields || []);
+  const practice = new Set(slotBusy.practice_fields || []);
+  const admin = new Set(slotBusy.admin_fields || []);
+
+  const allBusy = new Set([...game, ...practice, ...admin]);
+
+  // If parent busy → children busy
+  allBusy.forEach(fid => {
+    const children = parentToChildren[fid];
+    if (children && children.length) {
+      children.forEach(ch => allBusy.add(ch));
+    }
+  });
+
+  // If child busy → parent busy
+  allBusy.forEach(fid => {
+    const parent = childToParent[fid];
+    if (parent) {
+      allBusy.add(parent);
+    }
+  });
+
+  // Rebuild per-type arrays respecting expanded busy set
+  const expandedGame = [...allBusy].filter(fid => game.has(fid));
+  const expandedPractice = [...allBusy].filter(fid => practice.has(fid));
+  const expandedAdmin = [...allBusy].filter(fid => admin.has(fid));
+
+  return {
+    game_fields: expandedGame,
+    practice_fields: expandedPractice,
+    admin_fields: expandedAdmin
+  };
+}
+
+// Week / Month stubs (to be implemented later)
+function showWeek(dateObj) {
+  alert('Week view not implemented yet. Focus is on perfect Day view.');
+}
+
+function showMonth(dateObj) {
+  alert('Month view not implemented yet. Focus is on perfect Day view.');
 }
