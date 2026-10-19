@@ -279,69 +279,7 @@ async function renderMonth(dateStr, container) {
 
 
 /************************************************************
- * SEARCH VIEW
- ************************************************************/
-async function renderSearch(filter, container) {
-  container.innerHTML = "";
-
-  const header = document.createElement("div");
-  header.className = "cal-header";
-  header.textContent = `Search Results`;
-  container.appendChild(header);
-
-  const results = document.createElement("div");
-  results.className = "search-results";
-  container.appendChild(results);
-
-  const season = await fetchSeasonWindow();
-  const start = new Date(season.season_start);
-  const end = new Date(season.season_end);
-
-  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-    const dateStr = d.toISOString().split("T")[0];
-    const data = await fetchDayCalendar(dateStr);
-
-    const blocks = data.merged || [];
-
-    const matches = blocks.filter(b => {
-      const startMin = timeToMinutes(b.start);
-
-      if (filter.dayOfWeek !== undefined && d.getDay() !== filter.dayOfWeek)
-        return false;
-
-      if (filter.minStart !== undefined && startMin < filter.minStart)
-        return false;
-
-      return true;
-    });
-
-    if (matches.length > 0) {
-      const dayDiv = document.createElement("div");
-      dayDiv.className = "search-day";
-      dayDiv.innerHTML = `<div class="search-day-header">${formatDateLabel(dateStr)}</div>`;
-
-      matches.forEach(m => {
-        const el = document.createElement("div");
-        el.className = "search-block";
-        el.innerHTML = `
-          <div>${formatTime12(m.start)} – ${formatTime12(m.end)}</div>
-          <div>${m.title || ""}</div>
-          <div>${m.team || ""}</div>
-          <div>${m.coach || ""}</div>
-          <div>${m.grade || ""}</div>
-          <div>${m.field}</div>
-        `;
-        dayDiv.appendChild(el);
-      });
-
-      results.appendChild(dayDiv);
-    }
-  }
-}
-
-
-/************************************************************
- * PUBLIC API
+ * PUBLIC API — CLEANED (NO DEMO SEARCH BUTTONS)
  ************************************************************/
 async function showDay(dateStr) {
   const container = document.getElementById("calendar");
@@ -357,26 +295,4 @@ async function showWeek(dateStr) {
 async function showMonth(dateStr) {
   const container = document.getElementById("calendar");
   await renderMonth(dateStr, container);
-}
-
-async function searchSaturdaysAfter2() {
-  const container = document.getElementById("calendar");
-  await renderSearch(
-    {
-      dayOfWeek: 6,
-      minStart: timeToMinutes("14:00")
-    },
-    container
-  );
-}
-
-async function searchWeekdaysAfter7() {
-  const container = document.getElementById("calendar");
-  await renderSearch(
-    {
-      dayOfWeek: undefined,
-      minStart: timeToMinutes("19:00")
-    },
-    container
-  );
 }
