@@ -118,16 +118,6 @@
     "complex_timeline": {
       "TURF": [
         {
-          "type": "free",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "fields": [
-            "H-HST2"
-          ]
-        },
-        {
           "type": "practice",
           "start": "18:00",
           "end": "19:00",
@@ -135,7 +125,8 @@
           "end_12": "7:00 PM",
           "fields": [
             "H-HST",
-            "H-HST1"
+            "H-HST1",
+            "H-HST2"
           ]
         },
         {
@@ -306,16 +297,6 @@
           ]
         },
         {
-          "type": "free",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST2"
-          ]
-        },
-        {
           "type": "practice",
           "start": "19:30",
           "end": "21:00",
@@ -323,7 +304,8 @@
           "end_12": "9:00 PM",
           "fields": [
             "H-HST",
-            "H-HST1"
+            "H-HST1",
+            "H-HST2"
           ]
         }
       ],
@@ -581,31 +563,10 @@
     "complex_timeline": {
       "TURF": [
         {
-          "type": "free",
-          "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "fields": [
-            "H-HST2"
-          ]
-        },
-        {
           "type": "practice",
           "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "fields": [
-            "H-HST",
-            "H-HST1"
-          ]
-        },
-        {
-          "type": "practice",
-          "start": "19:30",
           "end": "21:00",
-          "start_12": "7:30 PM",
+          "start_12": "6:00 PM",
           "end_12": "9:00 PM",
           "fields": [
             "H-HST",
@@ -900,34 +861,13 @@
         {
           "type": "practice",
           "start": "18:00",
-          "end": "19:30",
+          "end": "21:00",
           "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
+          "end_12": "9:00 PM",
           "fields": [
             "H-HST",
             "H-HST1",
             "H-HST2"
-          ]
-        },
-        {
-          "type": "free",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST2"
-          ]
-        },
-        {
-          "type": "practice",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST",
-            "H-HST1"
           ]
         }
       ],
@@ -1505,16 +1445,6 @@
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B"
-          ]
-        },
-        {
-          "type": "practice",
-          "start": "08:30",
-          "end": "12:30",
-          "start_12": "8:30 AM",
-          "end_12": "12:30 PM",
-          "fields": [
-            "H-SuSS"
           ]
         },
         {

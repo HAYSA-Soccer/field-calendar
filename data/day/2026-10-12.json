@@ -116,16 +116,6 @@
   "complex_timeline": {
     "TURF": [
       {
-        "type": "free",
-        "start": "18:00",
-        "end": "19:00",
-        "start_12": "6:00 PM",
-        "end_12": "7:00 PM",
-        "fields": [
-          "H-HST2"
-        ]
-      },
-      {
         "type": "practice",
         "start": "18:00",
         "end": "19:00",
@@ -133,7 +123,8 @@
         "end_12": "7:00 PM",
         "fields": [
           "H-HST",
-          "H-HST1"
+          "H-HST1",
+          "H-HST2"
         ]
       },
       {

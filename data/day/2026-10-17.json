@@ -276,16 +276,6 @@
         ]
       },
       {
-        "type": "practice",
-        "start": "08:30",
-        "end": "12:30",
-        "start_12": "8:30 AM",
-        "end_12": "12:30 PM",
-        "fields": [
-          "H-SuSS"
-        ]
-      },
-      {
         "type": "free",
         "start": "12:30",
         "end": "13:30",
