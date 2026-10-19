@@ -1,8 +1,8 @@
 /************************************************************
- * CONFIG — STATIC JSON ONLY
+ * CONFIG
  ************************************************************/
 const PX_PER_MIN = 2;
-let currentDate = null; // for prev/next day navigation
+let currentDate = null;
 
 
 /************************************************************
@@ -51,7 +51,7 @@ function getMonday(dateStr) {
 
 
 /************************************************************
- * STATIC JSON FETCHERS — MATCH WORKFLOW OUTPUT
+ * FETCHERS
  ************************************************************/
 async function fetchDayCalendar(dateStr) {
   const url = `/field-calendar/data/day/${dateStr}.json`;
@@ -138,7 +138,7 @@ function buildTimeSlots(minStart, maxEnd, step = 30) {
 
 
 /************************************************************
- * RENDER — DAY VIEW (Option B: game/practice/admin/free fields)
+ * RENDER — DAY VIEW (FULL AVAILABILITY)
  ************************************************************/
 function renderDay(data, container) {
   container.innerHTML = "";
@@ -155,7 +155,7 @@ function renderDay(data, container) {
   grid.className = "cal-grid";
   container.appendChild(grid);
 
-  // TIME COLUMN
+  /******** TIME COLUMN ********/
   const timeCol = document.createElement("div");
   timeCol.className = "cal-col cal-time-col";
   timeCol.innerHTML = `<div class="cal-col-header">Time</div>`;
@@ -167,7 +167,7 @@ function renderDay(data, container) {
   });
   grid.appendChild(timeCol);
 
-  // COMPLEX COLUMNS
+  /******** COMPLEX COLUMNS ********/
   const complexes = Object.keys(data.complexes || {}).sort();
 
   complexes.forEach(cx => {
@@ -200,32 +200,24 @@ function renderDay(data, container) {
       const lines = [];
       lines.push(`<div class="cal-block-time">${formatTime12(block.start)} – ${formatTime12(block.end)}</div>`);
 
-      // Game fields
-      if (block.game_fields && block.game_fields.length > 0) {
-        lines.push(
-          `<div class="cal-usage-game">Game: ${block.game_fields.join(", ")}</div>`
-        );
+      // Game
+      if (block.game_fields?.length) {
+        lines.push(`<div class="cal-usage-game">Game: ${block.game_fields.join(", ")}</div>`);
       }
 
-      // Practice fields
-      if (block.practice_fields && block.practice_fields.length > 0) {
-        lines.push(
-          `<div class="cal-usage-practice">Practice: ${block.practice_fields.join(", ")}</div>`
-        );
+      // Practice
+      if (block.practice_fields?.length) {
+        lines.push(`<div class="cal-usage-practice">Practice: ${block.practice_fields.join(", ")}</div>`);
       }
 
-      // Admin fields
-      if (block.admin_fields && block.admin_fields.length > 0) {
-        lines.push(
-          `<div class="cal-usage-admin">Admin: ${block.admin_fields.join(", ")}</div>`
-        );
+      // Admin
+      if (block.admin_fields?.length) {
+        lines.push(`<div class="cal-usage-admin">Admin: ${block.admin_fields.join(", ")}</div>`);
       }
 
-      // Free fields
-      if (block.free_fields && block.free_fields.length > 0) {
-        lines.push(
-          `<div class="cal-usage-free">Available: ${block.free_fields.join(", ")}</div>`
-        );
+      // Free
+      if (block.free_fields?.length) {
+        lines.push(`<div class="cal-usage-free">Available: ${block.free_fields.join(", ")}</div>`);
       }
 
       el.innerHTML = lines.join("");
@@ -238,7 +230,7 @@ function renderDay(data, container) {
 
 
 /************************************************************
- * RENDER — WEEK VIEW (uses Day View)
+ * WEEK VIEW
  ************************************************************/
 async function renderWeek(dateStr, container) {
   container.innerHTML = "";
@@ -270,7 +262,7 @@ async function renderWeek(dateStr, container) {
 
 
 /************************************************************
- * RENDER — MONTH VIEW (uses Day View)
+ * MONTH VIEW
  ************************************************************/
 async function renderMonth(dateStr, container) {
   container.innerHTML = "";
@@ -302,7 +294,7 @@ async function renderMonth(dateStr, container) {
 
 
 /************************************************************
- * DAY NAVIGATION
+ * NAVIGATION
  ************************************************************/
 function changeDay(offset) {
   if (!currentDate) return;
