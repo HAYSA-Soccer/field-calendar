@@ -8,6 +8,11 @@ let currentDate = null; // for prev/next day navigation
 /************************************************************
  * UTILITIES
  ************************************************************/
+function makeLocalDate(dateStr) {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  return new Date(y, m - 1, d);
+}
+
 function timeToMinutes(t) {
   const [h, m] = t.split(":").map(Number);
   return h * 60 + m;
@@ -29,7 +34,7 @@ function formatTime12(hhmm) {
 }
 
 function formatDateLabel(dateStr) {
-  const d = new Date(dateStr);
+  const d = makeLocalDate(dateStr);
   return d.toLocaleDateString("en-US", {
     weekday: "short",
     month: "numeric",
@@ -38,7 +43,7 @@ function formatDateLabel(dateStr) {
 }
 
 function getMonday(dateStr) {
-  const d = new Date(dateStr);
+  const d = makeLocalDate(dateStr);
   const day = d.getDay();
   const diff = d.getDate() - day + (day === 0 ? -6 : 1);
   return new Date(d.setDate(diff));
@@ -73,7 +78,7 @@ async function fetchWeekCalendar(dateStr) {
 }
 
 async function fetchMonthCalendar(dateStr) {
-  const d = new Date(dateStr);
+  const d = makeLocalDate(dateStr);
   const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
 
   const res = await fetch(`/field-calendar/data/month/months.json`);
