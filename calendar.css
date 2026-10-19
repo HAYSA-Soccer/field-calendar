@@ -7,17 +7,96 @@ body {
   background: #f5f5f5;
 }
 
-#calendar {
+#calendar-wrapper {
   padding: 20px;
+}
+
+#calendar {
+  margin-top: 10px;
 }
 
 /* -------------------------------------------------------
    HEADER
 ------------------------------------------------------- */
+.app-header {
+  background: #1e88e5;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.app-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-title {
+  margin: 0;
+}
+
+.nav button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  color: #1e88e5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.nav button:hover {
+  background: #e3f2fd;
+}
+
 .cal-header {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+/* -------------------------------------------------------
+   LEGEND
+------------------------------------------------------- */
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cal-legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.lg {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+
+/* Legend colors */
+.lg-game {
+  background: #e91e63;
+}
+
+.lg-practice {
+  background: #2196f3;
+}
+
+.lg-admin {
+  background: #757575;
+}
+
+.lg-free {
+  background: #4caf50;
+}
+
+.lg-closure {
+  background: #b71c1c;
 }
 
 /* -------------------------------------------------------
@@ -35,22 +114,22 @@ body {
   background: #fff;
   border-radius: 8px;
   border: 1px solid #ddd;
-  padding: 10px 6px;
-  box-sizing: border-box;
+  padding: 10px;
 }
 
-/* FORCE 8AM–9PM ALWAYS */
+.cal-col-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
 .cal-time-cell {
   font-size: 12px;
   color: #555;
-  height: 60px; /* 30 minutes × PX_PER_MIN (2px) */
-  display: flex;
-  align-items: flex-start;
+  padding: 4px 0;
 }
 
-/* -------------------------------------------------------
-   COMPLEX COLUMN
-------------------------------------------------------- */
+/* COMPLEX COLUMN */
 .cal-complex-col {
   flex: 1;
   background: #fff;
@@ -58,14 +137,6 @@ body {
   border: 1px solid #ddd;
   padding: 10px;
   position: relative;
-  min-height: calc(13 * 120px); /* 8am–9pm = 13 hours × 120px */
-  box-sizing: border-box;
-}
-
-.cal-col-header {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 16px;
 }
 
 .cal-col-body {
@@ -73,145 +144,57 @@ body {
 }
 
 /* -------------------------------------------------------
-   BLOCKS — FULL AVAILABILITY
+   BLOCKS
 ------------------------------------------------------- */
 .cal-block {
   position: absolute;
   left: 0;
   right: 0;
-  background: #ffffff;
-  border-left: 6px solid #ccc;
   border-radius: 6px;
-  padding: 8px 10px;
-  font-size: 12px;
-  box-sizing: border-box;
+  padding: 6px;
+  font-size: 11px;
+  color: #fff;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-sizing: border-box;
 }
 
-/* Time label */
+/* Block colors */
+.cal-block-game {
+  background: #e91e63;
+}
+
+.cal-block-practice {
+  background: #2196f3;
+}
+
+.cal-block-admin {
+  background: #757575;
+}
+
+.cal-block-free {
+  background: #4caf50;
+}
+
+.cal-block-closure {
+  background: #b71c1c;
+}
+
 .cal-block-time {
   font-weight: bold;
-  margin-bottom: 6px;
-  color: #333;
-}
-
-/* Usage lines */
-.cal-usage-game {
-  color: #b71c1c;
-  font-weight: bold;
   margin-bottom: 2px;
 }
 
-.cal-usage-practice {
-  color: #0d47a1;
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-
-.cal-usage-admin {
-  color: #424242;
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-
-.cal-usage-free {
-  color: #1b5e20;
-  font-weight: bold;
-  margin-bottom: 2px;
+.cal-block-line {
+  margin-bottom: 1px;
 }
 
 /* -------------------------------------------------------
-   WEEK VIEW
+   SCROLLBARS (if needed)
 ------------------------------------------------------- */
-.week-grid {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 20px;
-}
-
-.week-day-col {
-  background: white;
-  border-radius: 8px;
-  padding: 10px;
-  min-width: 260px;
-  border: 1px solid #ddd;
-}
-
-.week-day-header {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.week-day-inner {
-  position: relative;
-}
-
-/* -------------------------------------------------------
-   MONTH VIEW
-------------------------------------------------------- */
-.month-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 12px;
-}
-
-.month-cell {
-  background: white;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  min-height: 200px;
-}
-
-.month-cell-header {
-  font-weight: bold;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-/* -------------------------------------------------------
-   SEARCH VIEW
-------------------------------------------------------- */
-.search-results {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.search-day {
-  background: white;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-.search-day-header {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.search-block {
-  background: #2196f3;
-  color: white;
-  padding: 6px;
-  border-radius: 6px;
-  margin-bottom: 6px;
-  font-size: 12px;
-}
-
-/* -------------------------------------------------------
-   SCROLLBARS
-------------------------------------------------------- */
-.week-grid::-webkit-scrollbar,
 .cal-grid::-webkit-scrollbar {
   height: 8px;
 }
 
-.week-grid::-webkit-scrollbar-thumb,
 .cal-grid::-webkit-scrollbar-thumb {
   background: #bbb;
   border-radius: 4px;
