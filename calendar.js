@@ -138,7 +138,7 @@ function buildTimeSlots(minStart, maxEnd, step = 30) {
 
 
 /************************************************************
- * RENDER — DAY VIEW
+ * RENDER — DAY VIEW (Option B: game/practice/admin/free fields)
  ************************************************************/
 function renderDay(data, container) {
   container.innerHTML = "";
@@ -187,7 +187,7 @@ function renderDay(data, container) {
 
     blocks.forEach(block => {
       const el = document.createElement("div");
-      el.className = `cal-block cal-block-${block.type}`;
+      el.className = "cal-block";
 
       const startMin = timeToMinutes(block.start);
       const endMin = timeToMinutes(block.end);
@@ -198,20 +198,37 @@ function renderDay(data, container) {
       el.style.height = `${duration * PX_PER_MIN}px`;
 
       const lines = [];
-      lines.push(`${formatTime12(block.start)} – ${formatTime12(block.end)}`);
+      lines.push(`<div class="cal-block-time">${formatTime12(block.start)} – ${formatTime12(block.end)}</div>`);
 
-      if (block.type === "free") {
-        lines.push("Available");
-      } else {
-        if (block.title) lines.push(block.title);
-        if (block.team) lines.push(block.team);
-        if (block.coach) lines.push(`Coach: ${block.coach}`);
-        if (block.grade) lines.push(`Grade: ${block.grade}`);
+      // Game fields
+      if (block.game_fields && block.game_fields.length > 0) {
+        lines.push(
+          `<div class="cal-usage-game">Game: ${block.game_fields.join(", ")}</div>`
+        );
       }
 
-      lines.push((block.fields || []).join(", "));
-      el.innerHTML = lines.map(l => `<div>${l}</div>`).join("");
+      // Practice fields
+      if (block.practice_fields && block.practice_fields.length > 0) {
+        lines.push(
+          `<div class="cal-usage-practice">Practice: ${block.practice_fields.join(", ")}</div>`
+        );
+      }
 
+      // Admin fields
+      if (block.admin_fields && block.admin_fields.length > 0) {
+        lines.push(
+          `<div class="cal-usage-admin">Admin: ${block.admin_fields.join(", ")}</div>`
+        );
+      }
+
+      // Free fields
+      if (block.free_fields && block.free_fields.length > 0) {
+        lines.push(
+          `<div class="cal-usage-free">Available: ${block.free_fields.join(", ")}</div>`
+        );
+      }
+
+      el.innerHTML = lines.join("");
       body.appendChild(el);
     });
 
@@ -221,7 +238,7 @@ function renderDay(data, container) {
 
 
 /************************************************************
- * RENDER — WEEK VIEW (will use Day View once Day is solid)
+ * RENDER — WEEK VIEW (uses Day View)
  ************************************************************/
 async function renderWeek(dateStr, container) {
   container.innerHTML = "";
@@ -253,7 +270,7 @@ async function renderWeek(dateStr, container) {
 
 
 /************************************************************
- * RENDER — MONTH VIEW (also uses Day View)
+ * RENDER — MONTH VIEW (uses Day View)
  ************************************************************/
 async function renderMonth(dateStr, container) {
   container.innerHTML = "";
@@ -319,7 +336,6 @@ async function showMonth(dateStr) {
 
 async function initCalendar() {
   const season = await fetchSeasonWindow();
-  // Start on season_start; you can manually navigate to 2026-10-17
   currentDate = season.season_start;
   await showDay(currentDate);
 }
