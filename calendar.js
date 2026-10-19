@@ -2,7 +2,10 @@
  * CONFIG
  ************************************************************/
 const PX_PER_MIN = 2;
-let currentDate = null;
+let currentDate = null; // for prev/next day navigation
+
+const FIXED_START = "08:00";
+const FIXED_END = "21:00"; // 9pm
 
 
 /************************************************************
@@ -51,7 +54,7 @@ function getMonday(dateStr) {
 
 
 /************************************************************
- * FETCHERS
+ * STATIC JSON FETCHERS
  ************************************************************/
 async function fetchDayCalendar(dateStr) {
   const url = `/field-calendar/data/day/${dateStr}.json`;
@@ -106,25 +109,9 @@ async function fetchSeasonWindow() {
 /************************************************************
  * TIME GRID
  ************************************************************/
-function getTimeBounds(data) {
-  let minStart = 24 * 60;
-  let maxEnd = 0;
-
-  const ct = data.complex_timeline || {};
-  Object.values(ct).forEach(blocks => {
-    blocks.forEach(b => {
-      const s = timeToMinutes(b.start);
-      const e = timeToMinutes(b.end);
-      if (s < minStart) minStart = s;
-      if (e > maxEnd) maxEnd = e;
-    });
-  });
-
-  if (minStart === 24 * 60 || maxEnd === 0) {
-    minStart = timeToMinutes("08:00");
-    maxEnd = timeToMinutes("20:00");
-  }
-
+function getTimeBoundsFixed() {
+  const minStart = timeToMinutes(FIXED_START);
+  const maxEnd = timeToMinutes(FIXED_END);
   return { minStart, maxEnd };
 }
 
@@ -138,24 +125,85 @@ function buildTimeSlots(minStart, maxEnd, step = 30) {
 
 
 /************************************************************
- * RENDER — DAY VIEW (FULL AVAILABILITY)
+ * LEGEND
+ ************************************************************/
+function renderLegend(container) {
+  const legend = document.createElement("div");
+  legend.className = "cal-legend";
+
+  legend.innerHTML = `
+    <div class="cal-legend-item"><span class="lg lg-game"></span> Game</div>
+    <div class="cal-legend-item"><span class="lg lg-practice"></span> Practice</div>
+    <div class="cal-legend-item"><span class="lg lg-admin"></span> Admin Block</div>
+    <div class="cal-legend-item"><span class="lg lg-free"></span> Available</div>
+    <div class="cal-legend-item"><span class="lg lg-closure"></span> Closure</div>
+  `;
+
+  container.appendChild(legend);
+}
+
+
+/************************************************************
+ * BLOCK MAPPING FROM complex_timeline
+ ************************************************************/
+function mapComplexBlocks(data, minStart, maxEnd) {
+  const result = {};
+  const ct = data.complex_timeline || {};
+
+  Object.entries(ct).forEach(([complexName, blocks]) => {
+    result[complexName] = blocks.map(b => {
+      const startMin = timeToMinutes(b.start);
+      const endMin = timeToMinutes(b.end);
+
+      return {
+        start: b.start,
+        end: b.end,
+        startMin,
+        endMin,
+        game_fields: b.game_fields || [],
+        practice_fields: b.practice_fields || [],
+        admin_fields: b.admin_fields || [],
+        free_fields: b.free_fields || [],
+        // derived type for coloring (priority: admin > game > practice > free)
+        type: (() => {
+          if (b.admin_fields && b.admin_fields.length) return "admin";
+          if (b.game_fields && b.game_fields.length) return "game";
+          if (b.practice_fields && b.practice_fields.length) return "practice";
+          if (b.free_fields && b.free_fields.length) return "free";
+          return "free"; // default to free if nothing else
+        })()
+      };
+    });
+  });
+
+  return result;
+}
+
+
+/************************************************************
+ * RENDER — DAY VIEW
  ************************************************************/
 function renderDay(data, container) {
   container.innerHTML = "";
 
-  const { minStart, maxEnd } = getTimeBounds(data);
+  const { minStart, maxEnd } = getTimeBoundsFixed();
   const timeSlots = buildTimeSlots(minStart, maxEnd);
 
+  // HEADER
   const header = document.createElement("div");
   header.className = "cal-header";
   header.textContent = `Day View — ${formatDateLabel(data.date)}`;
   container.appendChild(header);
 
+  // LEGEND
+  renderLegend(container);
+
+  // GRID
   const grid = document.createElement("div");
   grid.className = "cal-grid";
   container.appendChild(grid);
 
-  /******** TIME COLUMN ********/
+  // TIME COLUMN
   const timeCol = document.createElement("div");
   timeCol.className = "cal-col cal-time-col";
   timeCol.innerHTML = `<div class="cal-col-header">Time</div>`;
@@ -167,8 +215,9 @@ function renderDay(data, container) {
   });
   grid.appendChild(timeCol);
 
-  /******** COMPLEX COLUMNS ********/
+  // COMPLEX COLUMNS
   const complexes = Object.keys(data.complexes || {}).sort();
+  const complexBlocks = mapComplexBlocks(data, minStart, maxEnd);
 
   complexes.forEach(cx => {
     const col = document.createElement("div");
@@ -183,41 +232,51 @@ function renderDay(data, container) {
     body.className = "cal-col-body";
     col.appendChild(body);
 
-    const blocks = (data.complex_timeline && data.complex_timeline[cx]) || [];
+    const blocks = complexBlocks[cx] || [];
 
     blocks.forEach(block => {
       const el = document.createElement("div");
       el.className = "cal-block";
 
-      const startMin = timeToMinutes(block.start);
-      const endMin = timeToMinutes(block.end);
-      const offset = startMin - minStart;
-      const duration = endMin - startMin;
+      // type classes for coloring
+      if (block.type === "game") el.classList.add("cal-block-game");
+      if (block.type === "practice") el.classList.add("cal-block-practice");
+      if (block.type === "admin") el.classList.add("cal-block-admin");
+      if (block.type === "free") el.classList.add("cal-block-free");
+
+      const offset = block.startMin - minStart;
+      const duration = block.endMin - block.startMin;
 
       el.style.top = `${offset * PX_PER_MIN}px`;
       el.style.height = `${duration * PX_PER_MIN}px`;
 
       const lines = [];
+
+      // time line
       lines.push(`<div class="cal-block-time">${formatTime12(block.start)} – ${formatTime12(block.end)}</div>`);
 
-      // Game
-      if (block.game_fields?.length) {
-        lines.push(`<div class="cal-usage-game">Game: ${block.game_fields.join(", ")}</div>`);
-      }
-
-      // Practice
-      if (block.practice_fields?.length) {
-        lines.push(`<div class="cal-usage-practice">Practice: ${block.practice_fields.join(", ")}</div>`);
-      }
-
-      // Admin
-      if (block.admin_fields?.length) {
+      // usage lines
+      if (block.admin_fields.length) {
         lines.push(`<div class="cal-usage-admin">Admin: ${block.admin_fields.join(", ")}</div>`);
       }
-
-      // Free
-      if (block.free_fields?.length) {
+      if (block.game_fields.length) {
+        lines.push(`<div class="cal-usage-game">Game: ${block.game_fields.join(", ")}</div>`);
+      }
+      if (block.practice_fields.length) {
+        lines.push(`<div class="cal-usage-practice">Practice: ${block.practice_fields.join(", ")}</div>`);
+      }
+      if (block.free_fields.length) {
         lines.push(`<div class="cal-usage-free">Available: ${block.free_fields.join(", ")}</div>`);
+      }
+
+      // if absolutely nothing, still show "Available (complex)"
+      if (
+        !block.admin_fields.length &&
+        !block.game_fields.length &&
+        !block.practice_fields.length &&
+        !block.free_fields.length
+      ) {
+        lines.push(`<div class="cal-usage-free">Available</div>`);
       }
 
       el.innerHTML = lines.join("");
@@ -230,7 +289,7 @@ function renderDay(data, container) {
 
 
 /************************************************************
- * WEEK VIEW
+ * RENDER — WEEK VIEW
  ************************************************************/
 async function renderWeek(dateStr, container) {
   container.innerHTML = "";
@@ -262,7 +321,7 @@ async function renderWeek(dateStr, container) {
 
 
 /************************************************************
- * MONTH VIEW
+ * RENDER — MONTH VIEW
  ************************************************************/
 async function renderMonth(dateStr, container) {
   container.innerHTML = "";
@@ -294,7 +353,7 @@ async function renderMonth(dateStr, container) {
 
 
 /************************************************************
- * NAVIGATION
+ * DAY NAVIGATION
  ************************************************************/
 function changeDay(offset) {
   if (!currentDate) return;
