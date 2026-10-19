@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HAYSA Calendar</title>
-  <link rel="stylesheet" href="calendar.css?v=2">
+  <link rel="stylesheet" href="calendar.css?v=3">
 </head>
+
 <body onload="initCalendar()">
 
   <header class="app-header">
@@ -16,8 +17,8 @@
         <button onclick="showWeek(currentDate)">Week</button>
         <button onclick="showMonth(currentDate)">Month</button>
 
-        <!-- NEW: Day navigation -->
         <button onclick="changeDay(-1)">← Previous</button>
+        <button onclick="initCalendar()">Today</button>
         <button onclick="changeDay(1)">Next →</button>
       </nav>
     </div>
@@ -25,10 +26,12 @@
     <div id="lastUpdated" class="last-updated"></div>
   </header>
 
-  <!-- Calendar container -->
-  <main id="calendar"></main>
+  <!-- LEGEND + CALENDAR -->
+  <main id="calendar-wrapper">
+    <div id="calendar-legend"></div>
+    <div id="calendar"></div>
+  </main>
 
-  <!-- Load updated JS -->
-  <script src="calendar.js?v=2"></script>
+  <script src="calendar.js?v=3"></script>
 </body>
 </html>
