@@ -44,7 +44,9 @@ body {
   padding: 4px 0;
 }
 
-/* COMPLEX COLUMN */
+/* -------------------------------------------------------
+   COMPLEX COLUMN
+------------------------------------------------------- */
 .cal-complex-col {
   flex: 1;
   background: #fff;
@@ -66,35 +68,51 @@ body {
 }
 
 /* -------------------------------------------------------
-   BLOCKS
+   BLOCKS (Option B)
 ------------------------------------------------------- */
 .cal-block {
   position: absolute;
   left: 0;
   right: 0;
   border-radius: 6px;
-  padding: 6px;
+  padding: 8px 10px;
   font-size: 12px;
-  color: white;
-  overflow: hidden;
+  background: #fafafa;
+  border-left: 4px solid #ccc;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* Colors */
-.cal-block-free {
-  background: #4caf50;
+/* Time label inside block */
+.cal-block-time {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
 }
 
-.cal-block-practice {
-  background: #2196f3;
+/* Usage lines */
+.cal-usage-game {
+  color: #c62828;
+  font-weight: bold;
+  margin-bottom: 2px;
 }
 
-.cal-block-game {
-  background: #e91e63;
+.cal-usage-practice {
+  color: #1565c0;
+  font-weight: bold;
+  margin-bottom: 2px;
 }
 
-.cal-block-admin {
-  background: #757575;
+.cal-usage-admin {
+  color: #6d6d6d;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.cal-usage-free {
+  color: #2e7d32;
+  font-weight: bold;
+  margin-bottom: 2px;
 }
 
 /* -------------------------------------------------------
