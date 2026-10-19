@@ -116,269 +116,43 @@
   "complex_timeline": {
     "TURF": [
       {
-        "type": "practice",
         "start": "18:00",
-        "end": "18:30",
-        "start_12": "6:00 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-HST",
-          "H-HST1",
-          "H-HST2"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "game",
-        "start": "18:30",
         "end": "19:30",
-        "start_12": "6:30 PM",
-        "end_12": "7:30 PM",
-        "fields": [
-          "H-HST",
-          "H-HST1",
-          "H-HST2"
+        "game_fields": [
+          "H-HST"
         ],
-        "title": "5/6 Girls Travel (Casavant) vs. Stoughton",
-        "team": "5/6 Girls Travel  vs. Stoughton",
-        "coach": "Casavant",
-        "grade": "5/6",
-        "reason": null
+        "practice_fields": [
+          "H-HST"
+        ],
+        "admin_fields": [],
+        "free_fields": []
       },
       {
-        "type": "practice",
         "start": "19:30",
         "end": "21:00",
-        "start_12": "7:30 PM",
-        "end_12": "9:00 PM",
-        "fields": [
+        "game_fields": [],
+        "practice_fields": [
           "H-HST",
-          "H-HST1",
-          "H-HST2"
+          "H-HST"
         ],
-        "title": "7/8 Girls Travel (Caldwell) Practice",
-        "team": "7/8 Girls Travel",
-        "coach": "Caldwell",
-        "grade": "7/8",
-        "reason": null
+        "admin_fields": [],
+        "free_fields": []
       }
     ],
     "SUMNER/SEAN JOYCE": [
       {
-        "type": "free",
-        "start": "16:00",
-        "end": "16:30",
-        "start_12": "4:00 PM",
-        "end_12": "4:30 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
         "start": "16:30",
-        "end": "17:00",
-        "start_12": "4:30 PM",
-        "end_12": "5:00 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "16:30",
-        "end": "17:00",
-        "start_12": "4:30 PM",
-        "end_12": "5:00 PM",
-        "fields": [
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "17:00",
-        "end": "17:30",
-        "start_12": "5:00 PM",
-        "end_12": "5:30 PM",
-        "fields": [
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "17:00",
-        "end": "17:30",
-        "start_12": "5:00 PM",
-        "end_12": "5:30 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "17:30",
-        "end": "18:00",
-        "start_12": "5:30 PM",
-        "end_12": "6:00 PM",
-        "fields": [
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "17:30",
-        "end": "18:00",
-        "start_12": "5:30 PM",
-        "end_12": "6:00 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "18:00",
         "end": "18:30",
-        "start_12": "6:00 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
+        "game_fields": [],
+        "practice_fields": [
           "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "18:00",
-        "end": "18:30",
-        "start_12": "6:00 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "18:30",
-        "end": "19:00",
-        "start_12": "6:30 PM",
-        "end_12": "7:00 PM",
-        "fields": [
           "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
+          "H-Su1",
           "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
+          "H-SJ4"
         ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
+        "admin_fields": [],
+        "free_fields": []
       }
     ]
   }
