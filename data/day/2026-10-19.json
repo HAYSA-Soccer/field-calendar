@@ -125,7 +125,12 @@
           "H-HST",
           "H-HST1",
           "H-HST2"
-        ]
+        ],
+        "title": "5/6 Boys Travel (Walsh) vs. Stoughton",
+        "team": "5/6 Boys Travel  vs. Stoughton",
+        "coach": "Walsh",
+        "grade": "5/6",
+        "reason": null
       },
       {
         "type": "free",
@@ -137,7 +142,12 @@
           "H-HST",
           "H-HST1",
           "H-HST2"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       }
     ],
     "SUMNER/SEAN JOYCE": [
@@ -160,7 +170,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -175,7 +190,12 @@
           "H-Su2",
           "H-Su2A",
           "H-Su2B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -190,7 +210,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -211,7 +236,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -226,7 +256,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -241,7 +276,12 @@
           "H-Su2",
           "H-Su2A",
           "H-Su2B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -259,7 +299,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -271,7 +316,12 @@
           "H-Su1",
           "H-Su1A",
           "H-Su1B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       }
     ]
   }

@@ -125,7 +125,12 @@
           "H-HST",
           "H-HST1",
           "H-HST2"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -137,7 +142,12 @@
           "H-HST",
           "H-HST1",
           "H-HST2"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       }
     ],
     "SUMNER/SEAN JOYCE": [
@@ -160,7 +170,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       }
     ]
   }

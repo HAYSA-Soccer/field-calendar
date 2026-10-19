@@ -135,7 +135,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -150,7 +155,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -165,7 +175,12 @@
           "H-Su2",
           "H-Su2A",
           "H-Su2B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -177,7 +192,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -195,7 +215,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -216,7 +241,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -231,7 +261,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "practice",
@@ -246,7 +281,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -267,7 +307,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       }
     ]
   }

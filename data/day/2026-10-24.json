@@ -132,7 +132,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -144,7 +149,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "game",
@@ -162,7 +172,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
+        "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
+        "coach": "Red",
+        "grade": "3/4",
+        "reason": null
       },
       {
         "type": "free",
@@ -180,7 +195,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -192,7 +212,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "game",
@@ -207,7 +232,12 @@
           "H-Su2",
           "H-Su2A",
           "H-Su2B"
-        ]
+        ],
+        "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+        "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+        "coach": null,
+        "grade": "5/6",
+        "reason": null
       },
       {
         "type": "free",
@@ -225,7 +255,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -237,7 +272,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "game",
@@ -255,7 +295,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": "Wm. Perry Trucking (Orange) vs. Troupe Waste & Recycling (Green)",
+        "team": "Wm. Perry Trucking  vs. Troupe Waste & Recycling (Green)",
+        "coach": "Orange",
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -273,7 +318,12 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       },
       {
         "type": "free",
@@ -294,7 +344,12 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ]
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
       }
     ]
   }
