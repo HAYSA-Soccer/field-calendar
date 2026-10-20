@@ -121,6 +121,7 @@ jobs:
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
           DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
+            map(select(.date | type == "string")) |
             reduce .[] as $d ({}; .[$d.date] = $d)
           ')
 
