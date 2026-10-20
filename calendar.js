@@ -179,11 +179,11 @@ function renderBlocks(day, fieldsById) {
     const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
 
     const div = document.createElement("div");
-    div.className = `block block-${block.type || "practice"}`;
+    div.className = `block block-${block.type || "free"}`;
     div.style.top = `${top}px`;
     div.style.height = `${height}px`;
 
-    const title = block.title || block.team || block.reason || block.type || "";
+    const title = block.title || block.team || block.reason || "";
     const timeLabel = `${block.start_12 || block.start} – ${block.end_12 || block.end}`;
 
     div.innerHTML = `
@@ -194,6 +194,7 @@ function renderBlocks(day, fieldsById) {
     col.appendChild(div);
   });
 }
+
 
 
 // -------------------------------
