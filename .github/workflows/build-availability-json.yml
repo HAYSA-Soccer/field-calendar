@@ -111,8 +111,8 @@ jobs:
               continue
             fi
 
-            if ! echo "$CLEAN_DAY" | jq -e 'has("date") and has("complex_timeline")' >/dev/null 2>&1; then
-              echo "❌ Missing date/complex_timeline for $CURRENT"
+            if ! echo "$CLEAN_DAY" | jq -e 'has("date") and has("merged")' >/dev/null 2>&1; then
+              echo "❌ Missing date/merged for $CURRENT"
               exit 1
             fi
 
@@ -123,7 +123,10 @@ jobs:
                 date: $day.date,
                 complexes: $fields.complexes,
                 fields: $fields.fields,
-                complex_timeline: $day.complex_timeline
+                availability: $day.availability,
+                events: $day.events,
+                blocks: $day.blocks,
+                merged: $day.merged
               }'
             )
 
