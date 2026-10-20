@@ -1,6 +1,6 @@
 /* ===============================
-   CLEAN FINAL CALENDAR CSS
-   Horizontal Lanes + Friendly Names
+   NEW CALENDAR CSS
+   Pixel-per-minute vertical grid, times left, complexes/fields across
    =============================== */
 
 #calendar {
@@ -12,38 +12,83 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* Lane rows */
-.lane-row {
+/* Grid wrapper */
+#calendar-grid {
   display: flex;
-  border-bottom: 1px solid #ddd;
-  padding: 8px 0;
+  position: relative;
 }
 
 /* Time column */
-.lane-time {
-  width: 140px;
-  font-weight: 600;
-  color: #333;
+.time-column {
+  width: 80px;
+  position: relative;
+  border-right: 1px solid #ddd;
 }
 
-/* Complex columns */
-.lane-complex {
+/* Time labels */
+.time-label {
+  position: absolute;
+  left: 4px;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* Fields container */
+.fields-container {
   flex: 1;
-  padding-left: 12px;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding-left: 8px;
+}
+
+/* Complex grouping */
+.complex-group {
+  flex: 1;
+  position: relative;
+  border-left: 1px solid #eee;
+  padding-left: 4px;
 }
 
 .complex-title {
   font-weight: 600;
   margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+/* Field columns */
+.field-column {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.field-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 2px;
 }
 
 /* Blocks */
 .block {
-  padding: 4px 6px;
+  position: absolute;
+  left: 0;
+  right: 0;
   border-radius: 4px;
-  margin-bottom: 4px;
+  padding: 4px 6px;
   color: white;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.block-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.block-time {
+  font-size: 0.7rem;
+  opacity: 0.9;
 }
 
 .block-game {
