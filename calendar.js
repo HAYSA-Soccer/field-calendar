@@ -156,10 +156,25 @@ function buildFieldColumns(container, fieldsById, complexes) {
 // BLOCK RENDERING (events + blocks)
 // -------------------------------
 function renderBlocks(day, fieldsById) {
-  const blocks = [
-    ...(day.blocks || []),
-    ...(day.events || [])
-  ];
+  // FIX: flatten block object into an array
+  const blockArray = [];
+
+  if (day.blocks) {
+    Object.keys(day.blocks).forEach(type => {
+      const arr = day.blocks[type];
+      if (Array.isArray(arr)) {
+        arr.forEach(b => {
+          b.type = type;   // tag block with its type
+          blockArray.push(b);
+        });
+      }
+    });
+  }
+
+  // events are already an array
+  const eventsArray = Array.isArray(day.events) ? day.events : [];
+
+  const blocks = [...blockArray, ...eventsArray];
 
   blocks.forEach(block => {
     if (!block.start || !block.end || !block.fields) return;
