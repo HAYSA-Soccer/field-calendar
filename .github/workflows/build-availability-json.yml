@@ -90,7 +90,9 @@ jobs:
       - name: Build week + month JSON
         shell: bash
         run: |
+          echo "Building weeks.json..."
           find data/day -name '*.json' -print0 | xargs -0 jq -s '
+            map(select(.date | type == "string")) |
             reduce .[] as $d ({}; 
               ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
               | ($ts | strftime("%w") | tonumber) as $w
@@ -100,7 +102,9 @@ jobs:
             )
           ' > data/week/weeks.json
 
+          echo "Building months.json..."
           find data/day -name '*.json' -print0 | xargs -0 jq -s '
+            map(select(.date | type == "string")) |
             reduce .[] as $d ({}; 
               .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
               |= (. // {}) | .[$d.date] = $d
