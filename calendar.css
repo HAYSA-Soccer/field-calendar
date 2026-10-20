@@ -113,3 +113,8 @@ h2 {
   border: 1px solid #2e7d32; /* darker green border */
   color: white;
 }
+
+.block.free {
+  background-color: #e6ffe6; /* light green */
+  border-left: 4px solid #33cc33;
+}
