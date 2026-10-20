@@ -176,40 +176,44 @@ function expandBusy(slotBusy, parentChild) {
 function collapseFreeFields(freeFields, parentChild, busySet, fieldsById) {
   const { parentToChildren, childToParent } = parentChild;
 
-  const collapsed = new Set();
+  const collapsed = [];
 
   freeFields.forEach(f => {
     const id = f.id;
     const parent = childToParent[id];
     const children = parentToChildren[id] || [];
 
-    if (children.length === 0 && !parent) {
-      // No children → Full field
-      collapsed.add(id);
+    // CASE 1: Parent with NO children → Full field
+    if (!parent && children.length === 0) {
+      collapsed.push(f);
       return;
     }
 
+    // CASE 2: Parent with children
     if (children.length > 0) {
-      // Parent field
       const allFree = children.every(k => !busySet.has(k));
       if (allFree) {
-        collapsed.add(id); // Parent only
+        // Parent only (A & B or 1 & 2)
+        collapsed.push(f);
       }
       return;
     }
 
+    // CASE 3: Child field
     if (parent) {
-      // Child field
       const siblings = parentToChildren[parent];
       const allFree = siblings.every(k => !busySet.has(k));
+
       if (!allFree) {
-        collapsed.add(id); // Only show child if not all free
+        // Only show child if NOT all siblings free
+        collapsed.push(f);
       }
     }
   });
 
-  return Array.from(collapsed).map(id => fieldsById[id]);
+  return collapsed;
 }
+
 
 // -------------------------------
 // FRIENDLY NAME
@@ -220,13 +224,16 @@ function friendlyName(field, parentToChildren, busySet, fieldsById) {
 
   const children = parentToChildren[id] || [];
 
+  // CASE 1: Parent with NO children → Full field
   if (children.length === 0) {
     return `${name} (Full)`;
   }
 
+  // CASE 2: Parent with children
   const freeKids = children.filter(k => !busySet.has(k));
 
   if (freeKids.length === children.length) {
+    // All children free → grouped parent
     const suffix = children[0].endsWith("A") || children[0].endsWith("B")
       ? "(A & B)"
       : "(1 & 2)";
@@ -234,11 +241,14 @@ function friendlyName(field, parentToChildren, busySet, fieldsById) {
   }
 
   if (freeKids.length === 1) {
+    // Only one child free → show child name
     return fieldsById[freeKids[0]].name;
   }
 
+  // No children free → parent not free
   return null;
 }
+
 
 // -------------------------------
 // MERGE BLOCKS
