@@ -22,47 +22,30 @@ jobs:
       - name: Install jq
         run: sudo apt-get install -y jq
 
+      - name: Clear old JSON
+        run: |
+          echo "🧹 Clearing old JSON files..."
+          rm -f data/availability.json
+          rm -f data/day/*.json
+          rm -f data/week/*.json
+          rm -f data/month/*.json
+
       - name: Fetch season window
         id: season
         run: |
           echo "🔎 Fetching season window..."
 
-          for i in {1..5}; do
-            RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window") && break
-            echo "Retry $i..."
-            sleep $((i * 2))
-          done
+          RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
 
-          CLEAN="$RAW"
-
-          echo "Season window raw: $RAW"
-          echo "Season window clean: $CLEAN"
-
-          # If HTML returned, retry once
-          if ! echo "$CLEAN" | jq empty >/dev/null 2>&1; then
-            echo "⚠️ Season window returned HTML — retrying..."
-            sleep 5
-            RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
-            CLEAN="$RAW"
-          fi
-
-          # If still invalid, fail
-          if ! echo "$CLEAN" | jq empty >/dev/null 2>&1; then
-            echo "❌ Season window JSON invalid"
+          # Fail if HTML or invalid JSON
+          if ! echo "$RAW" | jq empty >/dev/null 2>&1; then
+            echo "❌ Season window returned invalid JSON or HTML"
+            echo "$RAW"
             exit 1
           fi
 
-          # If Apps Script returned an error object
-          if echo "$CLEAN" | jq -e 'has("error")' >/dev/null 2>&1; then
-            echo "❌ Season window error: $(echo "$CLEAN" | jq -r '.detail')"
-            exit 1
-          fi
-
-          START=$(echo "$CLEAN" | jq -r '.season_start')
-          END=$(echo "$CLEAN" | jq -r '.season_end')
-
-          START=$(date -d "$START" +%Y-%m-%d)
-          END=$(date -d "$END" +%Y-%m-%d)
+          START=$(echo "$RAW" | jq -r '.season_start')
+          END=$(echo "$RAW" | jq -r '.season_end')
 
           echo "📅 Season start: $START"
           echo "📅 Season end:   $END"
@@ -70,73 +53,48 @@ jobs:
           echo "season_start=$START" >> $GITHUB_OUTPUT
           echo "season_end=$END" >> $GITHUB_OUTPUT
 
-      - name: Build availability + day/week/month JSON
+      - name: Fetch fields + complexes
+        id: fields
+        run: |
+          echo "🔎 Fetching fields + complexes..."
+
+          RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
+
+          if ! echo "$RAW" | jq empty >/dev/null 2>&1; then
+            echo "❌ Fields JSON invalid"
+            echo "$RAW"
+            exit 1
+          fi
+
+          echo "$RAW" > fields.json
+          echo "fields_json=$(cat fields.json)" >> $GITHUB_OUTPUT
+
+      - name: Build day JSON files
         run: |
           START="${{ steps.season.outputs.season_start }}"
           END="${{ steps.season.outputs.season_end }}"
+          FIELDS_JSON="${{ steps.fields.outputs.fields_json }}"
 
-          echo "📁 Creating production directories..."
           mkdir -p data/day data/week data/month
-
-          echo "🧹 Clearing old day JSON files..."
-          rm -f data/day/*.json
-
-          echo "🔎 Fetching fields + complexes..."
-          for i in {1..5}; do
-            FIELDS_RAW=$(curl -sSL "$WEBAPP_URL?mode=fields") && break
-            echo "Retry $i..."
-            sleep $((i * 2))
-          done
-
-          FIELDS_CLEAN="$FIELDS_RAW"
-
-          echo "Fields raw: $FIELDS_RAW"
-          echo "Fields clean: $FIELDS_CLEAN"
-
-          if ! echo "$FIELDS_CLEAN" | jq empty >/dev/null 2>&1; then
-            echo "❌ Fields JSON invalid"
-            exit 1
-          fi
 
           CURRENT="$START"
           END_PLUS_ONE=$(date -d "$END next day" +%Y-%m-%d)
 
-          echo "🚀 Starting day-by-day build..."
-
           while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
-            echo "----------------------------------------"
-            echo "📅 Processing date: $CURRENT"
+            echo "📅 Building $CURRENT..."
 
-            for i in {1..5}; do
-              RAW_DAY=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT") && break
-              echo "Retry $i for $CURRENT..."
-              sleep $((i * 2))
-            done
+            RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
 
-            CLEAN_DAY="$RAW_DAY"
-
-            echo "Day raw ($CURRENT): $RAW_DAY"
-            echo "Day clean ($CURRENT): $CLEAN_DAY"
-
-            if ! echo "$CLEAN_DAY" | jq empty >/dev/null 2>&1; then
-              echo "❌ Bad JSON for $CURRENT"
+            if ! echo "$RAW" | jq empty >/dev/null 2>&1; then
+              echo "❌ Invalid JSON for $CURRENT"
+              echo "$RAW"
               exit 1
             fi
 
-            if echo "$CLEAN_DAY" | jq -e 'has("error")' >/dev/null 2>&1; then
-              echo "⚠️ Skipping $CURRENT due to backend error: $(echo "$CLEAN_DAY" | jq -r '.error')"
-              CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
-              continue
-            fi
-
-            if ! echo "$CLEAN_DAY" | jq -e 'has("date") and has("merged")' >/dev/null 2>&1; then
-              echo "❌ Missing date/merged for $CURRENT"
-              exit 1
-            fi
-
-            DAY_WITH_META=$(jq -n \
-              --argjson day "$CLEAN_DAY" \
-              --argjson fields "$FIELDS_CLEAN" \
+            # Merge fields + day
+            jq -n \
+              --argjson day "$RAW" \
+              --argjson fields "$FIELDS_JSON" \
               '{
                 date: $day.date,
                 complexes: $fields.complexes,
@@ -145,18 +103,15 @@ jobs:
                 events: $day.events,
                 blocks: $day.blocks,
                 merged: $day.merged
-              }'
-            )
+              }' > "data/day/${CURRENT}.json"
 
-            echo "$DAY_WITH_META" > "data/day/${CURRENT}.json"
-            echo "📝 Saved normalized day JSON → data/day/${CURRENT}.json"
-
-            sleep 1
             CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
           done
 
+      - name: Build week + month JSON
+        run: |
           echo "📦 Building weeks.json..."
-          WEEKS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
+          find data/day -name '*.json' -print0 | xargs -0 jq -s '
             reduce .[] as $d ({}; 
               ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
               | ($ts | strftime("%w") | tonumber) as $w
@@ -164,30 +119,33 @@ jobs:
               | ($mon_ts | strftime("%Y-%m-%d")) as $monday
               | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
             )
-          ')
-          echo "$WEEKS_JSON" > data/week/weeks.json
+          ' > data/week/weeks.json
 
           echo "📦 Building months.json..."
-          MONTHS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
+          find data/day -name '*.json' -print0 | xargs -0 jq -s '
             reduce .[] as $d ({}; 
               .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
               |= (. // {}) | .[$d.date] = $d
             )
-          ')
-          echo "$MONTHS_JSON" > data/month/months.json
+          ' > data/month/months.json
 
-          echo "🧩 Assembling final availability.json..."
+      - name: Build final availability.json
+        run: |
+          START="${{ steps.season.outputs.season_start }}"
+          END="${{ steps.season.outputs.season_end }}"
+          FIELDS_JSON="${{ steps.fields.outputs.fields_json }}"
+
           DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
             reduce .[] as $d ({}; .[$d.date] = $d)
           ')
 
-          FINAL_JSON=$(jq -n \
+          jq -n \
             --arg start "$START" \
             --arg end "$END" \
-            --argjson fields "$FIELDS_CLEAN" \
+            --argjson fields "$FIELDS_JSON" \
             --argjson days "$DAYS_JSON" \
-            --argjson weeks "$WEEKS_JSON" \
-            --argjson months "$MONTHS_JSON" \
+            --argjson weeks "$(cat data/week/weeks.json)" \
+            --argjson months "$(cat data/month/months.json)" \
             '{
               season_start: $start,
               season_end: $end,
@@ -196,20 +154,15 @@ jobs:
               days: $days,
               weeks: $weeks,
               months: $months
-            }'
-          )
+            }' > data/availability.json
 
-          echo "$FINAL_JSON" > data/availability.json
-          echo "✅ Final JSON files written."
+          echo "✅ Final availability.json built."
 
       - name: Commit updated JSON
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-          echo "📤 Committing changes..."
           git add -A
-          git commit -m "Force update availability JSON" || true
+          git commit -m "Updated availability JSON" || true
           git push
-
-          echo "🚀 Push complete."
