@@ -1,22 +1,26 @@
-// --- Helpers ---
+/*************************
+ * TIME HELPERS
+ *************************/
 function parseTime(t) {
   const [h, m] = t.split(":").map(Number);
   return h * 60 + m;
 }
 
-function formatTime(t) {
-  const h = Math.floor(t / 60);
-  const m = t % 60;
-  const hh = String(h).padStart(2, "0");
-  const mm = String(m).padStart(2, "0");
-  return `${hh}:${mm}`;
+function formatTime12(mins) {
+  let h = Math.floor(mins / 60);
+  let m = mins % 60;
+  const suffix = h >= 12 ? "PM" : "AM";
+  h = (h % 12) || 12;
+  return `${h}:${m.toString().padStart(2, "0")} ${suffix}`;
 }
 
 function overlapsRange(startA, endA, startB, endB) {
   return startA < endB && startB < endA;
 }
 
-// --- Load JSON ---
+/*************************
+ * LOAD JSON
+ *************************/
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
   const container = document.getElementById("calendar");
@@ -32,74 +36,113 @@ async function loadDay(dateStr) {
   }
 }
 
-// --- Build 30-minute slots ---
-function buildSlots(day) {
-  let min = Infinity;
-  let max = -Infinity;
-
-  (day.merged || []).forEach(b => {
-    const s = parseTime(b.start);
-    const e = parseTime(b.end);
-    if (s < min) min = s;
-    if (e > max) max = e;
-  });
-
-  // If no merged, fall back to availability
-  if (!isFinite(min) || !isFinite(max)) {
-    Object.values(day.availability || {}).forEach(arr => {
-      arr.forEach(a => {
-        const s = parseTime(a.start);
-        const e = parseTime(a.end);
-        if (s < min) min = s;
-        if (e > max) max = e;
-      });
-    });
-  }
-
-  if (!isFinite(min) || !isFinite(max)) {
-    min = parseTime("08:00");
-    max = parseTime("21:00");
-  }
-
+/*************************
+ * FIXED 30-MINUTE SLOTS
+ *************************/
+function buildSlots() {
   const slots = [];
-  for (let t = min; t < max; t += 30) {
+  let start = 8 * 60;   // 8:00 AM
+  let end   = 21 * 60;  // 9:00 PM
+
+  for (let t = start; t < end; t += 30) {
     slots.push({ start: t, end: t + 30 });
   }
   return slots;
 }
 
-// --- Availability check ---
-function isFieldFreeInSlot(day, fieldId, slot) {
-  const ranges = day.availability[fieldId] || [];
+/*************************
+ * FIELD STATE PER SLOT
+ *************************/
+function getFieldState(day, fieldId, slot) {
   const slotStart = slot.start;
-  const slotEnd = slot.end;
+  const slotEnd   = slot.end;
 
-  return ranges.some(r => {
-    const rs = parseTime(r.start);
-    const re = parseTime(r.end);
-    return overlapsRange(rs, re, slotStart, slotEnd);
-  });
-}
-
-// --- Find merged blocks for field in slot ---
-function getMergedBlocksForFieldInSlot(day, fieldId, slot) {
-  const slotStart = slot.start;
-  const slotEnd = slot.end;
-
-  return (day.merged || []).filter(b => {
+  // 1. Check merged blocks
+  const merged = (day.merged || []).filter(b => {
     if (b.field !== fieldId) return false;
     const bs = parseTime(b.start);
     const be = parseTime(b.end);
     return overlapsRange(bs, be, slotStart, slotEnd);
   });
+
+  if (merged.length > 0) {
+    const b = merged[0];
+    return {
+      field: fieldId,
+      type: b.type || "free",
+      title: b.title || (b.type === "free" ? "Available" : "Booked"),
+      start: slotStart,
+      end: slotEnd
+    };
+  }
+
+  // 2. Check availability
+  const avail = (day.availability[fieldId] || []).some(a => {
+    const as = parseTime(a.start);
+    const ae = parseTime(a.end);
+    return overlapsRange(as, ae, slotStart, slotEnd);
+  });
+
+  if (avail) {
+    return {
+      field: fieldId,
+      type: "free",
+      title: "Available",
+      start: slotStart,
+      end: slotEnd
+    };
+  }
+
+  return null;
 }
 
-// --- Render whole day ---
+/*************************
+ * MERGE BLOCKS PER SLOT
+ *************************/
+function mergeBlocksForSlot(fieldStates) {
+  const merged = [];
+
+  fieldStates.forEach(fs => {
+    if (!fs) return;
+
+    let key;
+
+    if (fs.type === "free") {
+      // Availability merges by timeframe only
+      key = `free|${fs.start}|${fs.end}`;
+    } else {
+      // Events merge by type + title + timeframe
+      key = `${fs.type}|${fs.title}|${fs.start}|${fs.end}`;
+    }
+
+    let group = merged.find(m => m.key === key);
+
+    if (!group) {
+      group = {
+        key,
+        type: fs.type,
+        title: fs.title,
+        start: fs.start,
+        end: fs.end,
+        fields: []
+      };
+      merged.push(group);
+    }
+
+    group.fields.push(fs.field);
+  });
+
+  return merged;
+}
+
+/*************************
+ * RENDER DAY
+ *************************/
 function renderDayCalendar(day) {
   const container = document.getElementById("calendar");
   container.innerHTML = "";
 
-  const slots = buildSlots(day);
+  const slots = buildSlots();
   const complexes = day.complexes || {};
 
   Object.keys(complexes).forEach(complexName => {
@@ -109,7 +152,9 @@ function renderDayCalendar(day) {
   });
 }
 
-// --- Render one complex ---
+/*************************
+ * RENDER COMPLEX
+ *************************/
 function renderComplex(day, complexName, fields, slots) {
   const complexDiv = document.createElement("div");
   complexDiv.className = "complex";
@@ -128,69 +173,59 @@ function renderComplex(day, complexName, fields, slots) {
 
     const timeCell = document.createElement("div");
     timeCell.className = "time-cell";
-    timeCell.textContent = `${formatTime(slot.start)} – ${formatTime(slot.end)}`;
+    timeCell.textContent = `${formatTime12(slot.start)} – ${formatTime12(slot.end)}`;
     row.appendChild(timeCell);
 
     const blocksRow = document.createElement("div");
     blocksRow.className = "blocks-row";
 
-    // Special TURF full-turf logic
+    /*************************
+     * FULL TURF OVERRIDE
+     *************************/
     const isTurf = complexName === "TURF";
-    let fullTurfBlock = null;
+    let fullTurfState = null;
+
     if (isTurf) {
-      const fullBlocks = getMergedBlocksForFieldInSlot(day, "H-HST", slot);
-      if (fullBlocks.length > 0) {
-        fullTurfBlock = fullBlocks[0];
-      }
+      fullTurfState = getFieldState(day, "H-HST", slot);
     }
 
-    if (fullTurfBlock) {
-      // One big block spanning all lanes, no availability
-      const blockDiv = document.createElement("div");
-      blockDiv.className = "block full-span";
-      blockDiv.classList.add(fullTurfBlock.type || "game");
+    if (fullTurfState) {
+      const div = document.createElement("div");
+      div.className = "block full-span";
+      div.classList.add(fullTurfState.type);
 
-      const title = fullTurfBlock.title || "Full Turf Booked";
-      blockDiv.innerHTML = `
-        <div class="block-title">${title}</div>
+      div.innerHTML = `
+        <div class="block-title">${fullTurfState.title}</div>
         <div class="block-fields">H-HST (Full Turf)</div>
       `;
-      blocksRow.appendChild(blockDiv);
-    } else {
-      // Normal per-field lanes
-      fields.forEach(fieldId => {
-        const cell = document.createElement("div");
-        cell.className = "block";
 
-        const mergedBlocks = getMergedBlocksForFieldInSlot(day, fieldId, slot);
-
-        if (mergedBlocks.length > 0) {
-          // If multiple, mark conflict
-          const b = mergedBlocks[0];
-          cell.classList.add(b.type || "game");
-          if (mergedBlocks.length > 1) {
-            cell.classList.add("conflict");
-          }
-
-          const title = b.title || "Booked";
-          cell.innerHTML = `
-            <div class="block-title">${title}</div>
-            <div class="block-fields">${fieldId}</div>
-          `;
-        } else if (isFieldFreeInSlot(day, fieldId, slot)) {
-          cell.classList.add("free");
-          cell.innerHTML = `
-            <div class="block-title">Available</div>
-            <div class="block-fields">${fieldId}</div>
-          `;
-        } else {
-          // No block for this field in this slot
-          cell.style.visibility = "hidden";
-        }
-
-        blocksRow.appendChild(cell);
-      });
+      blocksRow.appendChild(div);
+      row.appendChild(blocksRow);
+      timeline.appendChild(row);
+      return;
     }
+
+    /*************************
+     * NORMAL MERGING LOGIC
+     *************************/
+    const fieldStates = fields.map(fieldId => getFieldState(day, fieldId, slot));
+    const mergedBlocks = mergeBlocksForSlot(fieldStates);
+
+    mergedBlocks.forEach(block => {
+      const div = document.createElement("div");
+      div.className = "block";
+      div.classList.add(block.type);
+
+      // Span lanes based on number of fields merged
+      div.style.flex = block.fields.length;
+
+      div.innerHTML = `
+        <div class="block-title">${block.title}</div>
+        <div class="block-fields">${block.fields.join(", ")}</div>
+      `;
+
+      blocksRow.appendChild(div);
+    });
 
     row.appendChild(blocksRow);
     timeline.appendChild(row);
