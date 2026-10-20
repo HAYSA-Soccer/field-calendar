@@ -155,11 +155,12 @@ function buildFieldColumns(container, fieldsById, complexes) {
 
 // ===============================
 // BLOCK RENDERING
-//  - merged (field-specific events/practices/admin)
-//  - merged_availability (complex-wide free windows)
 // ===============================
 function renderBlocks(day, fieldsById) {
+
+  // ======================================================
   // 1. FIELD-SPECIFIC BLOCKS (events, practices, admin)
+  // ======================================================
   const merged = day.merged || [];
 
   merged.forEach(block => {
@@ -173,7 +174,7 @@ function renderBlocks(day, fieldsById) {
     const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
 
     const div = document.createElement("div");
-    div.className = `block block-${block.type || "free"}`;
+    div.className = `block block-${block.type || "free"} grouped-block`;
     div.style.top = `${top}px`;
     div.style.height = `${height}px`;
 
@@ -188,7 +189,9 @@ function renderBlocks(day, fieldsById) {
     col.appendChild(div);
   });
 
-  // 2. COMPLEX-WIDE AVAILABILITY BLOCKS
+  // ======================================================
+  // 2. COMPLEX-WIDE AVAILABILITY BLOCKS (grouped visually)
+  // ======================================================
   const mergedAvail = day.merged_availability || {};
 
   Object.keys(mergedAvail).forEach(complexName => {
@@ -207,7 +210,7 @@ function renderBlocks(day, fieldsById) {
         if (!col) return;
 
         const div = document.createElement("div");
-        div.className = `block block-free availability-block`;
+        div.className = `block block-free availability-block grouped-block`;
         div.style.top = `${top}px`;
         div.style.height = `${height}px`;
 
