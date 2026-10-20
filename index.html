@@ -10,26 +10,45 @@
 
   <h1>HAYSA Calendar</h1>
 
-  <!-- Date Picker -->
   <div id="date-picker">
     <label for="calendar-date">Select Date:</label>
     <input type="date" id="calendar-date">
     <button id="load-date">Go</button>
   </div>
 
-  <!-- Calendar Container -->
+  <div id="nav-buttons">
+    <button id="prev-day">← Previous Day</button>
+    <button id="next-day">Next Day →</button>
+  </div>
+
   <div id="calendar"></div>
 
   <script src="calendar.js"></script>
-
   <script>
+    const dateInput = document.getElementById("calendar-date");
     const today = new Date().toISOString().split("T")[0];
-    document.getElementById("calendar-date").value = today;
+    dateInput.value = today;
     loadDay(today);
 
     document.getElementById("load-date").addEventListener("click", () => {
-      const date = document.getElementById("calendar-date").value;
-      if (date) loadDay(date);
+      const d = dateInput.value;
+      if (d) loadDay(d);
+    });
+
+    document.getElementById("prev-day").addEventListener("click", () => {
+      const d = new Date(dateInput.value);
+      d.setDate(d.getDate() - 1);
+      const newDate = d.toISOString().split("T")[0];
+      dateInput.value = newDate;
+      loadDay(newDate);
+    });
+
+    document.getElementById("next-day").addEventListener("click", () => {
+      const d = new Date(dateInput.value);
+      d.setDate(d.getDate() + 1);
+      const newDate = d.toISOString().split("T")[0];
+      dateInput.value = newDate;
+      loadDay(newDate);
     });
   </script>
 
