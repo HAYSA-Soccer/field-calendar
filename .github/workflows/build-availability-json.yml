@@ -38,8 +38,23 @@ jobs:
           echo "Season window raw: $RAW"
           echo "Season window clean: $CLEAN"
 
+          # If HTML returned, retry once
+          if ! echo "$CLEAN" | jq empty >/dev/null 2>&1; then
+            echo "⚠️ Season window returned HTML — retrying..."
+            sleep 5
+            RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
+            CLEAN="$RAW"
+          fi
+
+          # If still invalid, fail
           if ! echo "$CLEAN" | jq empty >/dev/null 2>&1; then
             echo "❌ Season window JSON invalid"
+            exit 1
+          fi
+
+          # If Apps Script returned an error object
+          if echo "$CLEAN" | jq -e 'has("error")' >/dev/null 2>&1; then
+            echo "❌ Season window error: $(echo "$CLEAN" | jq -r '.detail')"
             exit 1
           fi
 
@@ -62,6 +77,9 @@ jobs:
 
           echo "📁 Creating production directories..."
           mkdir -p data/day data/week data/month
+
+          echo "🧹 Clearing old day JSON files..."
+          rm -f data/day/*.json
 
           echo "🔎 Fetching fields + complexes..."
           for i in {1..5}; do
@@ -138,7 +156,7 @@ jobs:
           done
 
           echo "📦 Building weeks.json..."
-          WEEKS_JSON=$(jq -s '
+          WEEKS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
             reduce .[] as $d ({}; 
               ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
               | ($ts | strftime("%w") | tonumber) as $w
@@ -146,24 +164,22 @@ jobs:
               | ($mon_ts | strftime("%Y-%m-%d")) as $monday
               | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
             )
-          ' data/day/*.json)
-
+          ')
           echo "$WEEKS_JSON" > data/week/weeks.json
 
           echo "📦 Building months.json..."
-          MONTHS_JSON=$(jq -s '
+          MONTHS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
             reduce .[] as $d ({}; 
               .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
               |= (. // {}) | .[$d.date] = $d
             )
-          ' data/day/*.json)
-
+          ')
           echo "$MONTHS_JSON" > data/month/months.json
 
           echo "🧩 Assembling final availability.json..."
-          DAYS_JSON=$(jq -s '
+          DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
             reduce .[] as $d ({}; .[$d.date] = $d)
-          ' data/day/*.json)
+          ')
 
           FINAL_JSON=$(jq -n \
             --arg start "$START" \
