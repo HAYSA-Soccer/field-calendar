@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>HAYSA Calendar</title>
-  <link rel="stylesheet" href="calendar.css?v=5">
+  <link rel="stylesheet" href="calendar.css">
 </head>
 
-<body onload="initCalendar()">
+<body>
 
-  <header class="app-header">
-    <div class="app-header-inner">
-      <h1 class="app-title">HAYSA Calendar</h1>
+  <h1>HAYSA Calendar</h1>
 
-      <nav class="nav">
-        <button onclick="showDay(currentDate)">Day</button>
-        <button onclick="showWeek(currentDate)">Week</button>
-        <button onclick="showMonth(currentDate)">Month</button>
+  <!-- Date Picker -->
+  <div id="date-picker">
+    <label for="calendar-date">Select Date:</label>
+    <input type="date" id="calendar-date">
+    <button id="load-date">Go</button>
+  </div>
 
-        <button onclick="changeDay(-1)">← Previous</button>
-        <button onclick="initCalendar()">Today</button>
-        <button onclick="changeDay(1)">Next →</button>
-      </nav>
-    </div>
-  </header>
+  <!-- Calendar Container -->
+  <div id="calendar"></div>
 
-  <main id="calendar-wrapper">
-    <div id="calendar-legend"></div>
-    <div id="calendar"></div>
-  </main>
+  <script src="calendar.js"></script>
 
-  <script src="calendar.js?v=5"></script>
+  <script>
+    // Load today's date on page load
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("calendar-date").value = today;
+    loadDay(today);
+
+    // Date picker button
+    document.getElementById("load-date").addEventListener("click", () => {
+      const date = document.getElementById("calendar-date").value;
+      if (date) loadDay(date);
+    });
+  </script>
+
 </body>
 </html>
