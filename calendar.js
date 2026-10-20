@@ -1,3 +1,22 @@
+// ===============================
+// INIT CALENDAR
+// ===============================
+function initCalendar() {
+  fetch("data/availability.json?v=" + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      availabilityData = data;
+
+      // Start at season_start
+      currentDate = new Date(data.season_start + "T00:00:00");
+
+      // Render the first day
+      showDay(currentDate);
+    })
+    .catch(err => console.error("Failed to load availability.json", err));
+}
+
+
 // -------------------------------
 // BLOCK RENDERING (merged blocks + merged availability)
 // -------------------------------
