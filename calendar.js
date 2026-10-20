@@ -1,4 +1,16 @@
 // ===============================
+//  HAYSA CALENDAR ENGINE
+//  Pixel-per-minute day view
+// ===============================
+
+let availabilityData = null;
+let currentDate = null;
+
+const DAY_START = 8 * 60;   // 8:00 AM
+const DAY_END   = 21 * 60;  // 9:00 PM
+const PIXELS_PER_MINUTE = 1;
+
+// ===============================
 // INIT CALENDAR
 // ===============================
 function initCalendar() {
@@ -6,47 +18,165 @@ function initCalendar() {
     .then(r => r.json())
     .then(data => {
       availabilityData = data;
-
-      // Start at season_start
       currentDate = new Date(data.season_start + "T00:00:00");
-
-      // Render the first day
       showDay(currentDate);
     })
     .catch(err => console.error("Failed to load availability.json", err));
 }
 
+// ===============================
+// DATE HELPERS
+// ===============================
+function dateKey(d) {
+  return d.toISOString().split("T")[0];
+}
 
-// -------------------------------
-// BLOCK RENDERING (merged blocks + merged availability)
-// -------------------------------
+function displayDate(d) {
+  return d.toLocaleDateString("en-US", {
+    weekday: "short",
+    month: "numeric",
+    day: "numeric"
+  });
+}
+
+function changeDay(offset) {
+  currentDate = new Date(currentDate.getTime() + offset * 86400000);
+  showDay(currentDate);
+}
+
+// ===============================
+// TIME / FIELD HELPERS
+// ===============================
+function toMinutes(hhmm) {
+  const [h, m] = hhmm.split(":").map(Number);
+  return h * 60 + m;
+}
+
+function buildFieldIndex(fields) {
+  const map = {};
+  fields.forEach(f => map[f.id] = f);
+  return map;
+}
+
+// ===============================
+// RENDER DAY VIEW
+// ===============================
+function showDay(dateObj) {
+  const key = dateKey(dateObj);
+  const day = availabilityData.days[key];
+
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "";
+
+  const header = document.createElement("h2");
+  header.textContent = `Day View — ${displayDate(dateObj)}`;
+  calendar.appendChild(header);
+
+  if (!day) {
+    calendar.innerHTML += "<p>No data for this date.</p>";
+    return;
+  }
+
+  const fieldsById = buildFieldIndex(day.fields);
+  const complexes = day.complexes;
+
+  const grid = document.createElement("div");
+  grid.id = "calendar-grid";
+
+  const timeCol = document.createElement("div");
+  timeCol.className = "time-column";
+  timeCol.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
+  grid.appendChild(timeCol);
+
+  const fieldsContainer = document.createElement("div");
+  fieldsContainer.className = "fields-container";
+  fieldsContainer.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
+  grid.appendChild(fieldsContainer);
+
+  calendar.appendChild(grid);
+
+  renderTimeLabels(timeCol);
+  buildFieldColumns(fieldsContainer, fieldsById, complexes);
+  renderBlocks(day, fieldsById);
+}
+
+// ===============================
+// TIME LABELS
+// ===============================
+function renderTimeLabels(col) {
+  for (let h = 8; h <= 21; h++) {
+    const top = (h * 60 - DAY_START) * PIXELS_PER_MINUTE;
+    const label = document.createElement("div");
+    label.className = "time-label";
+    label.style.top = `${top}px`;
+
+    const hh = ((h + 11) % 12) + 1;
+    const ampm = h >= 12 ? "PM" : "AM";
+
+    label.textContent = `${hh}:00 ${ampm}`;
+    col.appendChild(label);
+  }
+}
+
+// ===============================
+// FIELD COLUMNS (BY COMPLEX)
+// ===============================
+function buildFieldColumns(container, fieldsById, complexes) {
+  container.innerHTML = "";
+
+  Object.keys(complexes).forEach(complex => {
+    const group = document.createElement("div");
+    group.className = "complex-group";
+
+    const title = document.createElement("div");
+    title.className = "complex-title";
+    title.textContent = complex;
+    group.appendChild(title);
+
+    complexes[complex].forEach(fid => {
+      const field = fieldsById[fid];
+      if (!field) return;
+
+      const col = document.createElement("div");
+      col.className = "field-column";
+      col.dataset.field = fid;
+
+      const label = document.createElement("div");
+      label.className = "field-label";
+      label.textContent = field.name;
+      col.appendChild(label);
+
+      group.appendChild(col);
+    });
+
+    container.appendChild(group);
+  });
+}
+
+// ===============================
+// BLOCK RENDERING
+//  - merged (field-specific events/practices/admin)
+//  - merged_availability (complex-wide free windows)
+// ===============================
 function renderBlocks(day, fieldsById) {
-
-  // ======================================================
   // 1. FIELD-SPECIFIC BLOCKS (events, practices, admin)
-  // ======================================================
   const merged = day.merged || [];
 
   merged.forEach(block => {
-
-    // Each block has a single field ID
     const fid = block.field;
     const col = document.querySelector(`.field-column[data-field="${fid}"]`);
     if (!col) return;
 
-    // Compute pixel position
     const startMin = toMinutes(block.start);
     const endMin   = toMinutes(block.end);
     const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
     const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
 
-    // Build block div
     const div = document.createElement("div");
     div.className = `block block-${block.type || "free"}`;
     div.style.top = `${top}px`;
     div.style.height = `${height}px`;
 
-    // Title priority: title > team > reason
     const title = block.title || block.team || block.reason || "";
     const timeLabel = `${block.start_12 || block.start} – ${block.end_12 || block.end}`;
 
@@ -58,28 +188,21 @@ function renderBlocks(day, fieldsById) {
     col.appendChild(div);
   });
 
-  // ======================================================
-  // 2. COMPLEX-WIDE AVAILABILITY BLOCKS (merged availability)
-  // ======================================================
+  // 2. COMPLEX-WIDE AVAILABILITY BLOCKS
   const mergedAvail = day.merged_availability || {};
 
   Object.keys(mergedAvail).forEach(complexName => {
-
     const blocks = mergedAvail[complexName];
 
     blocks.forEach(block => {
-
-      // Compute pixel position
       const startMin = toMinutes(block.start);
       const endMin   = toMinutes(block.end);
       const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
       const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
 
-      // All fields in this complex get the same availability block
       const fieldIds = day.complexes[complexName];
 
       fieldIds.forEach(fid => {
-
         const col = document.querySelector(`.field-column[data-field="${fid}"]`);
         if (!col) return;
 
@@ -100,4 +223,17 @@ function renderBlocks(day, fieldsById) {
       });
     });
   });
+}
+
+// ===============================
+// WEEK / MONTH STUBS
+// ===============================
+function showWeek(dateObj) {
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "<p>Week view will render 7 day views side by side (not implemented yet).</p>";
+}
+
+function showMonth(dateObj) {
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "<p>Month view will render weeks grid (not implemented yet).</p>";
 }
