@@ -111,7 +111,7 @@ function mergeBlocksForSlot(fieldStates) {
       // Availability merges by timeframe only
       key = `free|${fs.start}|${fs.end}`;
     } else {
-      // Events merge by type + title + timeframe
+      // Non-availability merges by type + title + timeframe
       key = `${fs.type}|${fs.title}|${fs.start}|${fs.end}`;
     }
 
@@ -179,6 +179,12 @@ function renderComplex(day, complexName, fields, slots) {
     const blocksRow = document.createElement("div");
     blocksRow.className = "blocks-row";
 
+    const eventsRow = document.createElement("div");
+    eventsRow.className = "events-row";
+
+    const availRow = document.createElement("div");
+    availRow.className = "avail-row";
+
     /*************************
      * FULL TURF OVERRIDE
      *************************/
@@ -189,7 +195,7 @@ function renderComplex(day, complexName, fields, slots) {
       fullTurfState = getFieldState(day, "H-HST", slot);
     }
 
-    if (fullTurfState) {
+    if (fullTurfState && fullTurfState.type !== "free") {
       const div = document.createElement("div");
       div.className = "block full-span";
       div.classList.add(fullTurfState.type);
@@ -199,33 +205,39 @@ function renderComplex(day, complexName, fields, slots) {
         <div class="block-fields">H-HST (Full Turf)</div>
       `;
 
-      blocksRow.appendChild(div);
-      row.appendChild(blocksRow);
-      timeline.appendChild(row);
-      return;
+      eventsRow.appendChild(div);
+    } else {
+      /*************************
+       * NORMAL MERGING LOGIC
+       *************************/
+      const fieldStates = fields.map(fieldId => getFieldState(day, fieldId, slot));
+      const mergedBlocks = mergeBlocksForSlot(fieldStates);
+
+      mergedBlocks.forEach(block => {
+        const div = document.createElement("div");
+        div.className = "block";
+        div.classList.add(block.type);
+
+        // Span lanes based on number of fields merged
+        div.style.flex = block.fields.length;
+
+        const fieldsLabel = block.fields.join(", ");
+
+        div.innerHTML = `
+          <div class="block-title">${block.title}</div>
+          <div class="block-fields">${fieldsLabel}</div>
+        `;
+
+        if (block.type === "free") {
+          availRow.appendChild(div);
+        } else {
+          eventsRow.appendChild(div);
+        }
+      });
     }
 
-    /*************************
-     * NORMAL MERGING LOGIC
-     *************************/
-    const fieldStates = fields.map(fieldId => getFieldState(day, fieldId, slot));
-    const mergedBlocks = mergeBlocksForSlot(fieldStates);
-
-    mergedBlocks.forEach(block => {
-      const div = document.createElement("div");
-      div.className = "block";
-      div.classList.add(block.type);
-
-      // Span lanes based on number of fields merged
-      div.style.flex = block.fields.length;
-
-      div.innerHTML = `
-        <div class="block-title">${block.title}</div>
-        <div class="block-fields">${block.fields.join(", ")}</div>
-      `;
-
-      blocksRow.appendChild(div);
-    });
+    blocksRow.appendChild(eventsRow);
+    blocksRow.appendChild(availRow);
 
     row.appendChild(blocksRow);
     timeline.appendChild(row);
