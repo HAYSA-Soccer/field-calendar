@@ -77,17 +77,21 @@ function showDay(dateObj) {
     return;
   }
 
+  // Build lookup table for field names
   const fieldsById = buildFieldIndex(day.fields);
   const complexes = day.complexes;
 
+  // Main grid wrapper
   const grid = document.createElement("div");
   grid.id = "calendar-grid";
 
+  // Time column (left side)
   const timeCol = document.createElement("div");
   timeCol.className = "time-column";
   timeCol.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
   grid.appendChild(timeCol);
 
+  // Field columns (right side)
   const fieldsContainer = document.createElement("div");
   fieldsContainer.className = "fields-container";
   fieldsContainer.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
@@ -95,11 +99,16 @@ function showDay(dateObj) {
 
   calendar.appendChild(grid);
 
+  // Render time labels down the left
   renderTimeLabels(timeCol);
+
+  // Render complexes + fields across the top
   buildFieldColumns(fieldsContainer, fieldsById, complexes);
+
+  // Render merged blocks (free + events + practices + games)
   renderBlocks(day, fieldsById);
-  renderAvailability(day, fieldsById);
 }
+
 
 // -------------------------------
 // TIME LABELS
@@ -156,55 +165,35 @@ function buildFieldColumns(container, fieldsById, complexes) {
 // BLOCK RENDERING (events + blocks)
 // -------------------------------
 function renderBlocks(day, fieldsById) {
-  // FIX: flatten block object into an array
-  const blockArray = [];
+  const merged = day.merged || [];
 
-  if (day.blocks) {
-    Object.keys(day.blocks).forEach(type => {
-      const arr = day.blocks[type];
-      if (Array.isArray(arr)) {
-        arr.forEach(b => {
-          b.type = type;   // tag block with its type
-          blockArray.push(b);
-        });
-      }
-    });
-  }
-
-  // events are already an array
-  const eventsArray = Array.isArray(day.events) ? day.events : [];
-
-  const blocks = [...blockArray, ...eventsArray];
-
-  blocks.forEach(block => {
-    if (!block.start || !block.end || !block.fields) return;
+  merged.forEach(block => {
+    const fid = block.field;
+    const col = document.querySelector(`.field-column[data-field="${fid}"]`);
+    if (!col) return;
 
     const startMin = toMinutes(block.start);
     const endMin   = toMinutes(block.end);
     const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
     const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
 
-    block.fields.forEach(fid => {
-      const col = document.querySelector(`.field-column[data-field="${fid}"]`);
-      if (!col) return;
+    const div = document.createElement("div");
+    div.className = `block block-${block.type || "practice"}`;
+    div.style.top = `${top}px`;
+    div.style.height = `${height}px`;
 
-      const div = document.createElement("div");
-      div.className = `block block-${block.type || "practice"}`;
-      div.style.top = `${top}px`;
-      div.style.height = `${height}px`;
+    const title = block.title || block.team || block.reason || block.type || "";
+    const timeLabel = `${block.start_12 || block.start} – ${block.end_12 || block.end}`;
 
-      const title = block.title || block.team || block.reason || block.type || "Block";
-      const timeLabel = `${block.start_12 || block.start} – ${block.end_12 || block.end}`;
+    div.innerHTML = `
+      <div class="block-title">${title}</div>
+      <div class="block-time">${timeLabel}</div>
+    `;
 
-      div.innerHTML = `
-        <div class="block-title">${title}</div>
-        <div class="block-time">${timeLabel}</div>
-      `;
-
-      col.appendChild(div);
-    });
+    col.appendChild(div);
   });
 }
+
 
 // -------------------------------
 // AVAILABILITY RENDERING
