@@ -1,6 +1,6 @@
 // ===============================
-//  CLEAN FINAL CALENDAR ENGINE
-//  Horizontal Lanes + Friendly Names
+//  NEW CALENDAR ENGINE (PIXEL-PER-MINUTE)
+//  Times left, complexes/fields across, blocks interwoven
 // ===============================
 
 let availabilityData = null;
@@ -8,7 +8,7 @@ let currentDate = null;
 
 const DAY_START = 8 * 60;   // 8:00 AM
 const DAY_END   = 21 * 60;  // 9:00 PM
-const SLOT      = 30;       // 30-minute increments
+const PIXELS_PER_MINUTE = 1;
 
 // -------------------------------
 // INIT
@@ -45,263 +45,21 @@ function changeDay(offset) {
 }
 
 // -------------------------------
-// TIME SLOTS
+// TIME / FIELD HELPERS
 // -------------------------------
-function buildSlots() {
-  const slots = [];
-  for (let t = DAY_START; t < DAY_END; t += SLOT) {
-    const h = Math.floor(t / 60);
-    const m = t % 60;
-    const ampm = h >= 12 ? "PM" : "AM";
-    const hh = ((h + 11) % 12) + 1;
-    const mm = String(m).padStart(2, "0");
-    slots.push({
-      start: t,
-      end: t + SLOT,
-      label: `${hh}:${mm} ${ampm}`
-    });
-  }
-  return slots;
-}
-
 function toMinutes(hhmm) {
   const [h, m] = hhmm.split(":").map(Number);
   return h * 60 + m;
 }
 
-// -------------------------------
-// FIELD MAP + PARENT/CHILD
-// -------------------------------
 function buildFieldIndex(fields) {
   const map = {};
   fields.forEach(f => map[f.id] = f);
   return map;
 }
 
-function inferParent(id, allIds) {
-  // SUMNER: A/B → parent is base without last char
-  if (id.endsWith("A") || id.endsWith("B")) {
-    const base = id.slice(0, -1);
-    if (allIds.includes(base)) return base;
-  }
-  // TURF: numeric suffix → parent is base without digits
-  const m = id.match(/^(.*?)(\d+)$/);
-  if (m) {
-    const base = m[1];
-    if (allIds.includes(base)) return base;
-  }
-  return null;
-}
-
-function buildParentChildMap(fields) {
-  const ids = fields.map(f => f.id);
-  const parentToChildren = {};
-  const childToParent = {};
-
-  ids.forEach(id => {
-    const parent = inferParent(id, ids);
-    if (parent) {
-      childToParent[id] = parent;
-      if (!parentToChildren[parent]) parentToChildren[parent] = [];
-      parentToChildren[parent].push(id);
-    }
-  });
-
-  return { parentToChildren, childToParent };
-}
-
 // -------------------------------
-// BUSY MAP
-// -------------------------------
-function buildBusyMap(complexTimeline, slots) {
-  const map = {};
-
-  Object.keys(complexTimeline).forEach(complex => {
-    map[complex] = {};
-
-    complexTimeline[complex].forEach(interval => {
-      const start = toMinutes(interval.start);
-      const end   = toMinutes(interval.end);
-
-      slots.forEach((slot, idx) => {
-        if (slot.start < end && slot.end > start) {
-          if (!map[complex][idx]) {
-            map[complex][idx] = {
-              game: [],
-              practice: [],
-              admin: []
-            };
-          }
-          interval.game_fields?.forEach(f => map[complex][idx].game.push(f));
-          interval.practice_fields?.forEach(f => map[complex][idx].practice.push(f));
-          interval.admin_fields?.forEach(f => map[complex][idx].admin.push(f));
-        }
-      });
-    });
-  });
-
-  return map;
-}
-
-// -------------------------------
-// EXPAND BUSY (parent/child logic)
-// -------------------------------
-function expandBusy(slotBusy, parentChild) {
-  const { parentToChildren, childToParent } = parentChild;
-
-  const busy = new Set([
-    ...slotBusy.game,
-    ...slotBusy.practice,
-    ...slotBusy.admin
-  ]);
-
-  // Parent busy → children busy
-  busy.forEach(id => {
-    const kids = parentToChildren[id];
-    if (kids) kids.forEach(k => busy.add(k));
-  });
-
-  // Child busy → parent busy
-  busy.forEach(id => {
-    const parent = childToParent[id];
-    if (parent) busy.add(parent);
-  });
-
-  return busy;
-}
-
-// -------------------------------
-// COLLAPSE FREE FIELDS (THE FIX)
-// -------------------------------
-function collapseFreeFields(freeFields, parentChild, busySet, fieldsById) {
-  const { parentToChildren, childToParent } = parentChild;
-
-  const collapsed = [];
-
-  freeFields.forEach(f => {
-    const id = f.id;
-    const parent = childToParent[id];
-    const children = parentToChildren[id] || [];
-
-    // CASE 1: Parent with NO children → Full field
-    if (!parent && children.length === 0) {
-      collapsed.push(f);
-      return;
-    }
-
-    // CASE 2: Parent with children
-    if (children.length > 0) {
-      const allFree = children.every(k => !busySet.has(k));
-      if (allFree) {
-        // Parent only (A & B or 1 & 2)
-        collapsed.push(f);
-      }
-      return;
-    }
-
-    // CASE 3: Child field
-    if (parent) {
-      const siblings = parentToChildren[parent];
-      const allFree = siblings.every(k => !busySet.has(k));
-
-      if (!allFree) {
-        // Only show child if NOT all siblings free
-        collapsed.push(f);
-      }
-    }
-  });
-
-  return collapsed;
-}
-
-
-// -------------------------------
-// FRIENDLY NAME
-// -------------------------------
-function friendlyName(field, parentToChildren, busySet, fieldsById) {
-  const id = field.id;
-  const name = field.name;
-
-  const children = parentToChildren[id] || [];
-
-  // CASE 1: Parent with NO children → Full field
-  if (children.length === 0) {
-    return `${name} (Full)`;
-  }
-
-  // CASE 2: Parent with children
-  const freeKids = children.filter(k => !busySet.has(k));
-
-  if (freeKids.length === children.length) {
-    // All children free → grouped parent
-    const suffix = children[0].endsWith("A") || children[0].endsWith("B")
-      ? "(A & B)"
-      : "(1 & 2)";
-    return `${name} ${suffix}`;
-  }
-
-  if (freeKids.length === 1) {
-    // Only one child free → show child name
-    return fieldsById[freeKids[0]].name;
-  }
-
-  // No children free → parent not free
-  return null;
-}
-
-
-// -------------------------------
-// MERGE BLOCKS
-// -------------------------------
-function mergeBlocks(rows) {
-  const merged = [];
-  let current = null;
-
-  // Build a signature based ONLY on collapsed free-field IDs per complex
-  const availabilitySignature = (row) => {
-    const sig = {};
-    Object.keys(row.blocks).forEach(complex => {
-      const availBlock = row.blocks[complex].find(b => b.type === "available");
-      // Use raw IDs instead of friendly names to avoid false differences
-      sig[complex] = availBlock ? availBlock.fields.join("|") : "NONE";
-    });
-    return JSON.stringify(sig);
-  };
-
-  rows.forEach(r => {
-    const sig = availabilitySignature(r);
-
-    if (!current) {
-      current = { start: r.start, end: r.end, blocks: r.blocks, sig };
-    } else if (current.sig === sig) {
-      // Availability unchanged → extend block
-      current.end = r.end;
-    } else {
-      // Availability changed → push block and start new one
-      merged.push(current);
-      current = { start: r.start, end: r.end, blocks: r.blocks, sig };
-    }
-  });
-
-  if (current) merged.push(current);
-  return merged;
-}
-
-
-function timeRangeLabel(start, end) {
-  const fmt = t => {
-    const h = Math.floor(t / 60);
-    const m = t % 60;
-    const ampm = h >= 12 ? "PM" : "AM";
-    const hh = ((h + 11) % 12) + 1;
-    const mm = String(m).padStart(2, "0");
-    return `${hh}:${mm} ${ampm}`;
-  };
-  return `${fmt(start)} – ${fmt(end)}`;
-}
-
-// -------------------------------
-// RENDER DAY
+// RENDER DAY VIEW
 // -------------------------------
 function showDay(dateObj) {
   const key = dateKey(dateObj);
@@ -320,102 +78,146 @@ function showDay(dateObj) {
   }
 
   const fieldsById = buildFieldIndex(day.fields);
-  const parentChild = buildParentChildMap(day.fields);
-  const slots = buildSlots();
-  const busyMap = buildBusyMap(day.complex_timeline, slots);
+  const complexes = day.complexes;
 
-  const complexes = Object.keys(day.complexes);
+  const grid = document.createElement("div");
+  grid.id = "calendar-grid";
 
-  const rows = slots.map((slot, idx) => {
-    const rowBlocks = {};
+  const timeCol = document.createElement("div");
+  timeCol.className = "time-column";
+  timeCol.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
+  grid.appendChild(timeCol);
 
-    complexes.forEach(complex => {
-      const complexFields = day.complexes[complex];
-      const slotBusy = busyMap[complex]?.[idx] || { game: [], practice: [], admin: [] };
-      const busySet = expandBusy(slotBusy, parentChild);
+  const fieldsContainer = document.createElement("div");
+  fieldsContainer.className = "fields-container";
+  fieldsContainer.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
+  grid.appendChild(fieldsContainer);
 
-      const rawFreeFields = complexFields
-        .filter(fid => !busySet.has(fid))
-        .map(fid => fieldsById[fid]);
+  calendar.appendChild(grid);
 
-      const collapsedFree = collapseFreeFields(rawFreeFields, parentChild, busySet, fieldsById);
+  renderTimeLabels(timeCol);
+  buildFieldColumns(fieldsContainer, fieldsById, complexes);
+  renderMergedBlocks(day.merged || [], fieldsById);
+  if (day.availability) renderAvailability(day.availability, fieldsById);
+}
 
-      const friendlyAvail = collapsedFree
-        .map(f => friendlyName(f, parentChild.parentToChildren, busySet, fieldsById))
-        .filter(Boolean)
-        .sort();
+// -------------------------------
+// TIME LABELS
+// -------------------------------
+function renderTimeLabels(col) {
+  for (let h = 8; h <= 21; h++) {
+    const top = (h * 60 - DAY_START) * PIXELS_PER_MINUTE;
+    const label = document.createElement("div");
+    label.className = "time-label";
+    label.style.top = `${top}px`;
+    const hh = ((h + 11) % 12) + 1;
+    const ampm = h >= 12 ? "PM" : "AM";
+    label.textContent = `${hh}:00 ${ampm}`;
+    col.appendChild(label);
+  }
+}
 
-      const blocks = [];
+// -------------------------------
+// FIELD COLUMNS (BY COMPLEX)
+// -------------------------------
+function buildFieldColumns(container, fieldsById, complexes) {
+  container.innerHTML = "";
 
-      if (slotBusy.admin.length > 0) {
-        blocks.push({
-          type: "admin",
-          label: "Admin",
-          fields: slotBusy.admin.map(fid => fieldsById[fid].name)
-        });
-      }
-      if (slotBusy.game.length > 0) {
-        blocks.push({
-          type: "game",
-          label: "Game",
-          fields: slotBusy.game.map(fid => fieldsById[fid].name)
-        });
-      }
-      if (slotBusy.practice.length > 0) {
-        blocks.push({
-          type: "practice",
-          label: "Practice",
-          fields: slotBusy.practice.map(fid => fieldsById[fid].name)
-        });
-      }
-      if (friendlyAvail.length > 0) {
-        blocks.push({
-          type: "available",
-          label: "Available",
-          fields: friendlyAvail
-        });
-      }
+  Object.keys(complexes).forEach(complex => {
+    const group = document.createElement("div");
+    group.className = "complex-group";
 
-      rowBlocks[complex] = blocks;
-    });
+    const title = document.createElement("div");
+    title.className = "complex-title";
+    title.textContent = complex;
+    group.appendChild(title);
 
-    return {
-      start: slot.start,
-      end: slot.end,
-      blocks: rowBlocks
-    };
-  });
+    complexes[complex].forEach(fid => {
+      const field = fieldsById[fid];
+      if (!field) return;
 
-  const merged = mergeBlocks(rows);
-
-  merged.forEach(r => {
-    const row = document.createElement("div");
-    row.className = "lane-row";
-
-    const timeCol = document.createElement("div");
-    timeCol.className = "lane-time";
-    timeCol.textContent = timeRangeLabel(r.start, r.end);
-    row.appendChild(timeCol);
-
-    complexes.forEach(complex => {
       const col = document.createElement("div");
-      col.className = "lane-complex";
+      col.className = "field-column";
+      col.dataset.field = fid;
 
-      const title = document.createElement("div");
-      title.className = "complex-title";
-      title.textContent = complex;
-      col.appendChild(title);
+      const label = document.createElement("div");
+      label.className = "field-label";
+      label.textContent = field.name;
+      col.appendChild(label);
 
-      r.blocks[complex].forEach(b => {
-        const block = document.createElement("div");
-        block.className = `block block-${b.type}`;
-        block.textContent = `${b.label}: ${b.fields.join(", ")}`;
-        col.appendChild(block);
-      });
-
-      row.appendChild(col);
+      group.appendChild(col);
     });
 
-    calendar.appendChild(row);
+    container.appendChild(group);
   });
+}
+
+// -------------------------------
+// BLOCK RENDERING
+// -------------------------------
+function renderMergedBlocks(merged, fieldsById) {
+  merged.forEach(block => {
+    const startMin = toMinutes(block.start);
+    const endMin   = toMinutes(block.end);
+    const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
+    const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
+
+    block.fields.forEach(fid => {
+      const col = document.querySelector(`.field-column[data-field="${fid}"]`);
+      if (!col) return;
+
+      const div = document.createElement("div");
+      div.className = `block block-${block.type || "practice"}`;
+      div.style.top = `${top}px`;
+      div.style.height = `${height}px`;
+
+      const title = block.title || block.team || block.reason || block.type || "Block";
+      const timeLabel = `${block.start_12 || block.start} – ${block.end_12 || block.end}`;
+
+      div.innerHTML = `
+        <div class="block-title">${title}</div>
+        <div class="block-time">${timeLabel}</div>
+      `;
+
+      col.appendChild(div);
+    });
+  });
+}
+
+// -------------------------------
+// AVAILABILITY RENDERING
+// -------------------------------
+function renderAvailability(avail, fieldsById) {
+  avail.forEach(a => {
+    const startMin = toMinutes(a.start);
+    const endMin   = toMinutes(a.end);
+    const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
+    const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
+
+    a.fields.forEach(fid => {
+      const col = document.querySelector(`.field-column[data-field="${fid}"]`);
+      if (!col) return;
+
+      const div = document.createElement("div");
+      div.className = "block block-available";
+      div.style.top = `${top}px`;
+      div.style.height = `${height}px`;
+      div.textContent = "Available";
+
+      col.appendChild(div);
+    });
+  });
+}
+
+// -------------------------------
+// WEEK / MONTH STUBS (for now)
+// -------------------------------
+function showWeek(dateObj) {
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "<p>Week view will render 7 day views side by side (not implemented yet).</p>";
+}
+
+function showMonth(dateObj) {
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = "<p>Month view will render weeks grid (not implemented yet).</p>";
 }
