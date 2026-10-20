@@ -61,3 +61,14 @@
   font-size: 0.85em;
   color: #555;
 }
+
+/* Date picker */
+#date-picker {
+  margin-top: 10px;
+}
+#date-picker label {
+  margin-right: 8px;
+}
+#date-picker input[type="date"] {
+  margin-right: 8px;
+}
