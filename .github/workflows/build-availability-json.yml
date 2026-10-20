@@ -37,8 +37,9 @@ jobs:
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
           if ! echo "$RAW" | jq empty >/dev/null 2>&1; then exit 1; fi
-          echo "season_start=$(echo "$RAW" | jq -r '.season_start')" >> $GITHUB_OUTPUT
-          echo "season_end=$(echo "$RAW" | jq -r '.season_end')" >> $GITHUB_OUTPUT
+
+          echo "$RAW" > season.json
+          echo "season_file=season.json" >> $GITHUB_OUTPUT
 
       - name: Fetch fields + complexes
         id: fields
@@ -46,14 +47,18 @@ jobs:
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
           if ! echo "$RAW" | jq empty >/dev/null 2>&1; then exit 1; fi
-          echo "fields_json=$RAW" >> $GITHUB_OUTPUT
+
+          echo "$RAW" > fields.json
+          echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
       - name: Build day JSON files
         shell: bash
         run: |
-          START="${{ steps.season.outputs.season_start }}"
-          END="${{ steps.season.outputs.season_end }}"
-          FIELDS_JSON="${{ steps.fields.outputs.fields_json }}"
+          SEASON_FILE="${{ steps.season.outputs.season_file }}"
+          FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
+
+          START=$(jq -r '.season_start' "$SEASON_FILE")
+          END=$(jq -r '.season_end' "$SEASON_FILE")
 
           mkdir -p data/day data/week data/month
 
@@ -64,9 +69,11 @@ jobs:
             RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
             if ! echo "$RAW" | jq empty >/dev/null 2>&1; then exit 1; fi
 
+            echo "$RAW" > day.json
+
             jq -n \
-              --argjson day "$RAW" \
-              --argjson fields "$FIELDS_JSON" \
+              --argjson day "$(cat day.json)" \
+              --argjson fields "$(cat $FIELDS_FILE)" \
               '{
                 date: $day.date,
                 complexes: $fields.complexes,
@@ -103,9 +110,11 @@ jobs:
       - name: Build final availability.json
         shell: bash
         run: |
-          START="${{ steps.season.outputs.season_start }}"
-          END="${{ steps.season.outputs.season_end }}"
-          FIELDS_JSON="${{ steps.fields.outputs.fields_json }}"
+          SEASON_FILE="${{ steps.season.outputs.season_file }}"
+          FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
+
+          START=$(jq -r '.season_start' "$SEASON_FILE")
+          END=$(jq -r '.season_end' "$SEASON_FILE")
 
           DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
             reduce .[] as $d ({}; .[$d.date] = $d)
@@ -114,7 +123,7 @@ jobs:
           jq -n \
             --arg start "$START" \
             --arg end "$END" \
-            --argjson fields "$FIELDS_JSON" \
+            --argjson fields "$(cat $FIELDS_FILE)" \
             --argjson days "$DAYS_JSON" \
             --argjson weeks "$(cat data/week/weeks.json)" \
             --argjson months "$(cat data/month/months.json)" \
