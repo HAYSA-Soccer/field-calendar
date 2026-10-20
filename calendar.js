@@ -1,6 +1,6 @@
 // ===============================
-//  NEW CALENDAR ENGINE (PIXEL-PER-MINUTE)
-//  Times left, complexes/fields across, blocks interwoven
+//  CALENDAR ENGINE (PIXEL-PER-MINUTE)
+//  Times left, complexes/fields across, blocks + availability
 // ===============================
 
 let availabilityData = null;
@@ -14,7 +14,7 @@ const PIXELS_PER_MINUTE = 1;
 // INIT
 // -------------------------------
 function initCalendar() {
-  fetch("data/availability.json")
+  fetch("data/availability.json") // correct path under /field-calendar/
     .then(r => r.json())
     .then(data => {
       availabilityData = data;
@@ -97,8 +97,8 @@ function showDay(dateObj) {
 
   renderTimeLabels(timeCol);
   buildFieldColumns(fieldsContainer, fieldsById, complexes);
-  renderMergedBlocks(day.merged || [], fieldsById);
-  if (day.availability) renderAvailability(day.availability, fieldsById);
+  renderBlocks(day, fieldsById);
+  renderAvailability(day, fieldsById);
 }
 
 // -------------------------------
@@ -153,10 +153,17 @@ function buildFieldColumns(container, fieldsById, complexes) {
 }
 
 // -------------------------------
-// BLOCK RENDERING
+// BLOCK RENDERING (events + blocks)
 // -------------------------------
-function renderMergedBlocks(merged, fieldsById) {
-  merged.forEach(block => {
+function renderBlocks(day, fieldsById) {
+  const blocks = [
+    ...(day.blocks || []),
+    ...(day.events || [])
+  ];
+
+  blocks.forEach(block => {
+    if (!block.start || !block.end || !block.fields) return;
+
     const startMin = toMinutes(block.start);
     const endMin   = toMinutes(block.end);
     const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
@@ -187,8 +194,12 @@ function renderMergedBlocks(merged, fieldsById) {
 // -------------------------------
 // AVAILABILITY RENDERING
 // -------------------------------
-function renderAvailability(avail, fieldsById) {
-  avail.forEach(a => {
+function renderAvailability(day, fieldsById) {
+  const availBlocks = (day.availability && day.availability.blocks) || [];
+
+  availBlocks.forEach(a => {
+    if (!a.start || !a.end || !a.fields) return;
+
     const startMin = toMinutes(a.start);
     const endMin   = toMinutes(a.end);
     const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
