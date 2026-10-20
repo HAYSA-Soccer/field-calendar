@@ -1,5 +1,5 @@
 {
-  "date": null,
+  "date": "2026-10-20",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -113,8 +113,424 @@
       "surface": ""
     }
   ],
-  "availability": null,
-  "events": null,
-  "blocks": null,
-  "merged": null
+  "availability": {
+    "H-HST": [
+      {
+        "start": "18:00",
+        "end": "19:30"
+      }
+    ],
+    "H-HST1": [
+      {
+        "start": "18:00",
+        "end": "21:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-HST2": [
+      {
+        "start": "18:00",
+        "end": "21:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-Su1": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
+      }
+    ],
+    "H-Su1A": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-Su1B": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-Su2": [
+      {
+        "start": "16:00",
+        "end": "17:30"
+      },
+      {
+        "start": "18:30",
+        "end": "19:00"
+      }
+    ],
+    "H-Su2A": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-Su2B": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ3": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "both"
+      }
+    ],
+    "H-SJ3A": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ3B": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ4": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:30",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ4A": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ4B": [
+      {
+        "start": "16:00",
+        "end": "19:00",
+        "mode": "practice_only"
+      }
+    ]
+  },
+  "events": {
+    "H-HST": [
+      {
+        "event_id": "3521a5bc13f408496dabdc4280fb32ec",
+        "date": "2026-10-20",
+        "start": "19:30",
+        "end": "21:00",
+        "field": "H-HST",
+        "type": "practice",
+        "title": "7/8 Boys Travel (Collins) Practice",
+        "team": "7/8 Boys Travel",
+        "coach": "Collins",
+        "grade": "7/8",
+        "source": "ICS"
+      }
+    ],
+    "H-Su1": [
+      {
+        "event_id": "3f494342f05a59d7f212d6a780b21ed6",
+        "date": "2026-10-20",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-Su1",
+        "type": "practice",
+        "title": "3/4 Girls Travel (Lamb-Williams) Practice",
+        "team": "3/4 Girls Travel",
+        "coach": "Lamb-Williams",
+        "grade": "3/4",
+        "source": "ICS"
+      }
+    ],
+    "H-SJ4": [
+      {
+        "event_id": "c42ffd64ec17d4e0792ba5ea4adfecd0",
+        "date": "2026-10-20",
+        "start": "17:30",
+        "end": "18:30",
+        "field": "H-SJ4",
+        "type": "practice",
+        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+        "coach": "",
+        "grade": "5/6",
+        "source": "ICS"
+      },
+      {
+        "event_id": "4e62322068ff371d8df3d4d12c954dea",
+        "date": "2026-10-20",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-SJ4",
+        "type": "practice",
+        "title": "The Sean Joyce Foundation (Red) Practice",
+        "team": "The Sean Joyce Foundation",
+        "coach": "Red",
+        "grade": "",
+        "source": "ICS"
+      }
+    ],
+    "H-Su2": [
+      {
+        "event_id": "f736794ac8f0a2555b5ec9da560c9167",
+        "date": "2026-10-20",
+        "start": "17:30",
+        "end": "18:30",
+        "field": "H-Su2",
+        "type": "practice",
+        "title": "Wm. Perry Trucking (Orange) Practice",
+        "team": "Wm. Perry Trucking",
+        "coach": "Orange",
+        "grade": "",
+        "source": "ICS"
+      }
+    ]
+  },
+  "blocks": {},
+  "merged": [
+    {
+      "field": "H-Su1",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1A",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1B",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "16:00",
+      "end": "17:30",
+      "start_12": "4:00 PM",
+      "end_12": "5:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2B",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3B",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4B",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "3/4 Girls Travel (Lamb-Williams) Practice",
+      "team": "3/4 Girls Travel",
+      "coach": "Lamb-Williams",
+      "grade": "3/4",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SJ4",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "The Sean Joyce Foundation (Red) Practice",
+      "team": "The Sean Joyce Foundation",
+      "coach": "Red",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SJ4",
+      "start": "17:30",
+      "end": "18:30",
+      "start_12": "5:30 PM",
+      "end_12": "6:30 PM",
+      "type": "practice",
+      "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+      "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+      "coach": "",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su2",
+      "start": "17:30",
+      "end": "18:30",
+      "start_12": "5:30 PM",
+      "end_12": "6:30 PM",
+      "type": "practice",
+      "title": "Wm. Perry Trucking (Orange) Practice",
+      "team": "Wm. Perry Trucking",
+      "coach": "Orange",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "18:00",
+      "end": "19:30",
+      "start_12": "6:00 PM",
+      "end_12": "7:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST1",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST2",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "18:30",
+      "end": "19:00",
+      "start_12": "6:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4",
+      "start": "18:30",
+      "end": "19:00",
+      "start_12": "6:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "practice",
+      "title": "7/8 Boys Travel (Collins) Practice",
+      "team": "7/8 Boys Travel",
+      "coach": "Collins",
+      "grade": "7/8",
+      "source": "ICS"
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "date": null,
+  "date": "2026-10-18",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -113,8 +113,24 @@
       "surface": ""
     }
   ],
-  "availability": null,
-  "events": null,
-  "blocks": null,
-  "merged": null
+  "availability": {
+    "H-HST": [],
+    "H-HST1": [],
+    "H-HST2": [],
+    "H-Su1": [],
+    "H-Su1A": [],
+    "H-Su1B": [],
+    "H-Su2": [],
+    "H-Su2A": [],
+    "H-Su2B": [],
+    "H-SJ3": [],
+    "H-SJ3A": [],
+    "H-SJ3B": [],
+    "H-SJ4": [],
+    "H-SJ4A": [],
+    "H-SJ4B": []
+  },
+  "events": {},
+  "blocks": {},
+  "merged": []
 }
