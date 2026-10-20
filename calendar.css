@@ -26,25 +26,25 @@
   border-radius: 6px;
 }
 
-/* Colors (per your spec) */
+/* Colors */
 .timeline-block.game {
-  background: #d0e4ff;      /* light blue */
-  border-color: #4a90e2;    /* blue */
+  background: #d0e4ff;
+  border-color: #4a90e2;
 }
 
 .timeline-block.free {
-  background: #d9ffd9;      /* light green */
-  border-color: #4caf50;    /* green */
+  background: #d9ffd9;
+  border-color: #4caf50;
 }
 
 .timeline-block.practice {
-  background: #e0e0e0;      /* gray */
-  border-color: #9e9e9e;    /* darker gray */
+  background: #e0e0e0;
+  border-color: #9e9e9e;
 }
 
 .timeline-block.admin {
-  background: #ffe0e0;      /* light red */
-  border-color: #ff5252;    /* bright red */
+  background: #ffe0e0;
+  border-color: #ff5252;
 }
 
 /* Text */
