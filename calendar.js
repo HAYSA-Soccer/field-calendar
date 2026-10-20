@@ -1,6 +1,6 @@
 // Fetch a day from backend
 async function loadDay(dateStr) {
-  const url = `https://script.google.com/macros/s/YOUR_WEBAPP_ID/exec?mode=day_calendar&date=${dateStr}`;
+  const url = `https://script.google.com/macros/s/AKfycbz3dMJtYEYxPmoZmuacrM5dBGZ9Jbh5rW3OFtOQDXYyt2RRW41z41HQ4mui5EVzKJyQ/exec?mode=day_calendar&date=${dateStr}`;
   const res = await fetch(url);
   const day = await res.json();
 
@@ -13,6 +13,11 @@ async function loadDay(dateStr) {
 function renderDayCalendar(day) {
   const container = document.getElementById("calendar");
   container.innerHTML = "";
+
+  if (!day || !day.complex_timeline) {
+    container.textContent = "No data for this date.";
+    return;
+  }
 
   Object.keys(day.complex_timeline).forEach(complexName => {
     const timeline = day.complex_timeline[complexName];
@@ -66,9 +71,9 @@ function renderTimelineBlock(block, day) {
  * DETERMINE BLOCK TYPE
  ****************************/
 function getBlockType(block) {
-  if (block.admin_fields?.length) return "admin";
-  if (block.game_fields?.length) return "game";
-  if (block.practice_fields?.length) return "practice";
+  if (block.admin_fields && block.admin_fields.length) return "admin";
+  if (block.game_fields && block.game_fields.length) return "game";
+  if (block.practice_fields && block.practice_fields.length) return "practice";
   return "free";
 }
 
@@ -77,24 +82,24 @@ function getBlockType(block) {
  ****************************/
 function getBlockTitle(block, day) {
   // Game blocks
-  if (block.game_fields?.length) {
+  if (block.game_fields && block.game_fields.length) {
     for (const fid of block.game_fields) {
-      const evs = day.events[fid] || [];
+      const evs = day.events && day.events[fid] ? day.events[fid] : [];
       const match = evs.find(ev => ev.start === block.start && ev.end === block.end);
       if (match) return match.title;
     }
   }
 
   // Admin blocks
-  if (block.admin_fields?.length) {
+  if (block.admin_fields && block.admin_fields.length) {
     for (const fid of block.admin_fields) {
-      const blks = day.blocks[fid] || [];
+      const blks = day.blocks && day.blocks[fid] ? day.blocks[fid] : [];
       const match = blks.find(b => b.start === block.start && b.end === block.end);
       if (match) return match.reason;
     }
   }
 
-  // Free blocks
+  // Free / practice blocks
   return "Available";
 }
 
@@ -102,8 +107,8 @@ function getBlockTitle(block, day) {
  * GET FIELDS IN BLOCK
  ****************************/
 function getBlockFields(block) {
-  if (block.game_fields?.length) return block.game_fields;
-  if (block.practice_fields?.length) return block.practice_fields;
-  if (block.admin_fields?.length) return block.admin_fields;
+  if (block.game_fields && block.game_fields.length) return block.game_fields;
+  if (block.practice_fields && block.practice_fields.length) return block.practice_fields;
+  if (block.admin_fields && block.admin_fields.length) return block.admin_fields;
   return block.free_fields || [];
 }
