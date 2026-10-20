@@ -257,22 +257,36 @@ function mergeBlocks(rows) {
   const merged = [];
   let current = null;
 
+  // Build a signature based ONLY on collapsed free-field IDs per complex
+  const availabilitySignature = (row) => {
+    const sig = {};
+    Object.keys(row.blocks).forEach(complex => {
+      const availBlock = row.blocks[complex].find(b => b.type === "available");
+      // Use raw IDs instead of friendly names to avoid false differences
+      sig[complex] = availBlock ? availBlock.fields.join("|") : "NONE";
+    });
+    return JSON.stringify(sig);
+  };
+
   rows.forEach(r => {
-    const key = JSON.stringify(r.blocks);
+    const sig = availabilitySignature(r);
 
     if (!current) {
-      current = { start: r.start, end: r.end, blocks: r.blocks };
-    } else if (JSON.stringify(current.blocks) === key) {
+      current = { start: r.start, end: r.end, blocks: r.blocks, sig };
+    } else if (current.sig === sig) {
+      // Availability unchanged → extend block
       current.end = r.end;
     } else {
+      // Availability changed → push block and start new one
       merged.push(current);
-      current = { start: r.start, end: r.end, blocks: r.blocks };
+      current = { start: r.start, end: r.end, blocks: r.blocks, sig };
     }
   });
 
   if (current) merged.push(current);
   return merged;
 }
+
 
 function timeRangeLabel(start, end) {
   const fmt = t => {
