@@ -77,21 +77,17 @@ function showDay(dateObj) {
     return;
   }
 
-  // Build lookup table for field names
   const fieldsById = buildFieldIndex(day.fields);
   const complexes = day.complexes;
 
-  // Main grid wrapper
   const grid = document.createElement("div");
   grid.id = "calendar-grid";
 
-  // Time column (left side)
   const timeCol = document.createElement("div");
   timeCol.className = "time-column";
   timeCol.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
   grid.appendChild(timeCol);
 
-  // Field columns (right side)
   const fieldsContainer = document.createElement("div");
   fieldsContainer.className = "fields-container";
   fieldsContainer.style.height = `${(DAY_END - DAY_START) * PIXELS_PER_MINUTE}px`;
@@ -99,15 +95,11 @@ function showDay(dateObj) {
 
   calendar.appendChild(grid);
 
-  // Render time labels down the left
   renderTimeLabels(timeCol);
-
-  // Render complexes + fields across the top
   buildFieldColumns(fieldsContainer, fieldsById, complexes);
-
-  // Render merged blocks (free + events + practices + games)
-  renderBlocks(day, fieldsById);
+  renderBlocks(day, fieldsById);   // ONLY merged blocks
 }
+
 
 
 
