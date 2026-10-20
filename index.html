@@ -23,12 +23,10 @@
   <script src="calendar.js"></script>
 
   <script>
-    // Load today's date on page load
     const today = new Date().toISOString().split("T")[0];
     document.getElementById("calendar-date").value = today;
     loadDay(today);
 
-    // Date picker button
     document.getElementById("load-date").addEventListener("click", () => {
       const date = document.getElementById("calendar-date").value;
       if (date) loadDay(date);
