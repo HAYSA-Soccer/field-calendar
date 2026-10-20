@@ -14,7 +14,8 @@ const PIXELS_PER_MINUTE = 1;
 // INIT
 // -------------------------------
 function initCalendar() {
-  fetch("data/availability.json")
+  // Cache‑buster ensures GitHub Pages never serves stale JSON
+  fetch("data/availability.json?v=" + Date.now())
     .then(r => r.json())
     .then(data => {
       availabilityData = data;
