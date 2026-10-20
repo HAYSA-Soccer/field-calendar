@@ -1,6 +1,6 @@
 // ===============================
 //  CALENDAR ENGINE (PIXEL-PER-MINUTE)
-//  Times left, complexes/fields across, blocks + availability
+//  Times left, complexes/fields across, merged blocks
 // ===============================
 
 let availabilityData = null;
@@ -14,7 +14,7 @@ const PIXELS_PER_MINUTE = 1;
 // INIT
 // -------------------------------
 function initCalendar() {
-  fetch("data/availability.json") // correct path under /field-calendar/
+  fetch("data/availability.json")
     .then(r => r.json())
     .then(data => {
       availabilityData = data;
@@ -100,9 +100,6 @@ function showDay(dateObj) {
   renderBlocks(day, fieldsById);   // ONLY merged blocks
 }
 
-
-
-
 // -------------------------------
 // TIME LABELS
 // -------------------------------
@@ -155,7 +152,7 @@ function buildFieldColumns(container, fieldsById, complexes) {
 }
 
 // -------------------------------
-// BLOCK RENDERING (events + blocks)
+// BLOCK RENDERING (merged blocks)
 // -------------------------------
 function renderBlocks(day, fieldsById) {
   const merged = day.merged || [];
@@ -187,39 +184,8 @@ function renderBlocks(day, fieldsById) {
   });
 }
 
-
-
 // -------------------------------
-// AVAILABILITY RENDERING
-// -------------------------------
-function renderAvailability(day, fieldsById) {
-  const availBlocks = (day.availability && day.availability.blocks) || [];
-
-  availBlocks.forEach(a => {
-    if (!a.start || !a.end || !a.fields) return;
-
-    const startMin = toMinutes(a.start);
-    const endMin   = toMinutes(a.end);
-    const top      = (startMin - DAY_START) * PIXELS_PER_MINUTE;
-    const height   = (endMin - startMin) * PIXELS_PER_MINUTE;
-
-    a.fields.forEach(fid => {
-      const col = document.querySelector(`.field-column[data-field="${fid}"]`);
-      if (!col) return;
-
-      const div = document.createElement("div");
-      div.className = "block block-available";
-      div.style.top = `${top}px`;
-      div.style.height = `${height}px`;
-      div.textContent = "Available";
-
-      col.appendChild(div);
-    });
-  });
-}
-
-// -------------------------------
-// WEEK / MONTH STUBS (for now)
+// WEEK / MONTH STUBS
 // -------------------------------
 function showWeek(dateObj) {
   const calendar = document.getElementById("calendar");
