@@ -106,3 +106,10 @@ h2 {
 .block-available {
   background: #388e3c;
 }
+
+/* ⭐ NEW — FREE / AVAILABILITY BLOCKS */
+.block-free {
+  background: #4caf50;       /* bright green */
+  border: 1px solid #2e7d32; /* darker green border */
+  color: white;
+}
