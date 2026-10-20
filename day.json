@@ -1,1 +1,1 @@
-{"error":"ReferenceError: buildMergedAvailability is not defined"}
+{"error":"TypeError: Cannot read properties of undefined (reading 'H-HST')"}
