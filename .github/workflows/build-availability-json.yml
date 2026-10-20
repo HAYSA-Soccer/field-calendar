@@ -23,6 +23,7 @@ jobs:
         run: sudo apt-get install -y jq
 
       - name: Clear old JSON
+        shell: bash
         run: |
           echo "🧹 Clearing old JSON files..."
           rm -f data/availability.json
@@ -32,12 +33,11 @@ jobs:
 
       - name: Fetch season window
         id: season
+        shell: bash
         run: |
           echo "🔎 Fetching season window..."
-
           RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
 
-          # Fail if HTML or invalid JSON
           if ! echo "$RAW" | jq empty >/dev/null 2>&1; then
             echo "❌ Season window returned invalid JSON or HTML"
             echo "$RAW"
@@ -55,9 +55,9 @@ jobs:
 
       - name: Fetch fields + complexes
         id: fields
+        shell: bash
         run: |
           echo "🔎 Fetching fields + complexes..."
-
           RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
 
           if ! echo "$RAW" | jq empty >/dev/null 2>&1; then
@@ -70,6 +70,7 @@ jobs:
           echo "fields_json=$(cat fields.json)" >> $GITHUB_OUTPUT
 
       - name: Build day JSON files
+        shell: bash
         run: |
           START="${{ steps.season.outputs.season_start }}"
           END="${{ steps.season.outputs.season_end }}"
@@ -91,7 +92,6 @@ jobs:
               exit 1
             fi
 
-            # Merge fields + day
             jq -n \
               --argjson day "$RAW" \
               --argjson fields "$FIELDS_JSON" \
@@ -109,6 +109,7 @@ jobs:
           done
 
       - name: Build week + month JSON
+        shell: bash
         run: |
           echo "📦 Building weeks.json..."
           find data/day -name '*.json' -print0 | xargs -0 jq -s '
@@ -130,6 +131,7 @@ jobs:
           ' > data/month/months.json
 
       - name: Build final availability.json
+        shell: bash
         run: |
           START="${{ steps.season.outputs.season_start }}"
           END="${{ steps.season.outputs.season_end }}"
@@ -159,6 +161,7 @@ jobs:
           echo "✅ Final availability.json built."
 
       - name: Commit updated JSON
+        shell: bash
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
