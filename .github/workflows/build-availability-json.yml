@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # ⭐ REQUIRED for rebase to work
+          fetch-depth: 0   # REQUIRED for rebase to work
 
       # ---------------------------------------------------------
       # 2. Install jq
@@ -125,41 +125,37 @@ jobs:
           done
 
       # ---------------------------------------------------------
-      # 7. Build week + month JSON (streaming, no arg-list overflow)
+      # 7. Build week + month JSON (no arg-list overflow)
       # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
         run: |
           echo "Building weeks.json..."
-
-          jq -n '
-            def week_of(ts):
-              (ts | strftime("%w") | tonumber) as $w
-              | if $w == 0 then ts - 6*24*60*60 else ts - ($w - 1)*24*60*60 end;
-
-            reduce (inputs | select(.date | type == "string")) as $d ({}; 
+          find data/day -name '*.json' -print0 | xargs -0 cat | jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; 
               ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
-              | week_of($ts) as $mon_ts
+              | ($ts | strftime("%w") | tonumber) as $w
+              | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
               | ($mon_ts | strftime("%Y-%m-%d")) as $monday
-              | .[$monday] |= (. // {}) 
-              | .[$monday][$d.date] = $d
+              | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
             )
-          ' data/day/*.json > data/week/weeks.json
+          ' > data/week/weeks.json
 
           echo "Building months.json..."
-
-          jq -n '
-            reduce (inputs | select(.date | type == "string")) as $d ({}; 
-              ($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m")) as $month
-              | .[$month] |= (. // {})
-              | .[$month][$d.date] = $d
+          find data/day -name '*.json' -print0 | xargs -0 cat | jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; 
+              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
+              |= (. // {}) | .[$d.date] = $d
             )
-          ' data/day/*.json > data/month/months.json
+          ' > data/month/months.json
 
       # ---------------------------------------------------------
-      # 8. Build final availability.json
+      # 8. Build final availability.json (no arg-list overflow)
       # ---------------------------------------------------------
       - name: Build final availability.json
+        shell: bash
         run: |
           SEASON_FILE="${{ steps.season.outputs.season_file }}"
           FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
@@ -167,9 +163,10 @@ jobs:
           START=$(jq -r '.season_start' "$SEASON_FILE")
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
-          DAYS_JSON=$(jq -n '
-            reduce (inputs | select(.date | type == "string")) as $d ({}; .[$d.date] = $d)
-          ' data/day/*.json)
+          DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 cat | jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; .[$d.date] = $d)
+          ')
 
           jq -n \
             --arg start "$START" \
@@ -189,7 +186,7 @@ jobs:
             }' > data/availability.json
 
       # ---------------------------------------------------------
-      # 9. Commit + safe rebase + push (never fails)
+      # 9. Commit + safe rebase + push
       # ---------------------------------------------------------
       - name: Commit updated JSON
         run: |
@@ -199,8 +196,5 @@ jobs:
           git add -A
           git commit -m "Updated availability JSON" || true
 
-          # ⭐ SAFELY pull remote changes
           git pull --rebase origin main || true
-
-          # ⭐ Push updated JSON + JS
           git push origin main
