@@ -61,8 +61,8 @@ function buildBlocks(day, fieldMap) {
 
   (day.merged || []).forEach(b => {
 
-    // ⭐ FIX: use field_display when available (correct half-field / real field)
-    let fieldId = b.field_display || b.field;
+    // ⭐ FIX: use display_field when available
+    let fieldId = b.display_field || b.field;
 
     let f = fieldMap[fieldId];
 
@@ -90,6 +90,7 @@ function buildBlocks(day, fieldMap) {
 
   return blocks;
 }
+
 
 
 function buildAvailability(day, fieldMap, blocks) {
