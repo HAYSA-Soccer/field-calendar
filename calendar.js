@@ -12,6 +12,7 @@ function fmt(mins) {
   let m = mins % 60;
   const suffix = h >= 12 ? "PM" : "AM";
   h = (h % 12) || 12;
+  h = (h % 12) || 12;
   return `${h}:${m.toString().padStart(2, "0")} ${suffix}`;
 }
 
@@ -92,66 +93,81 @@ function suppressSubfields(blocks, fieldMap) {
   return out;
 }
 
+// UPDATED: dynamic availability based on changing free-field set
 function buildAvailability(day, fieldMap, blocks) {
-  const byComplex = {};
-  blocks.forEach(b => {
-    if (!byComplex[b.complex]) byComplex[b.complex] = [];
-    byComplex[b.complex].push(b);
-  });
-
   const avail = [];
 
-  Object.keys(byComplex).forEach(complex => {
+  Object.keys(day.complexes).forEach(complex => {
     const fields = day.complexes[complex];
-    const events = byComplex[complex].filter(b => b.type !== "free");
 
-    const ranges = [];
+    // minute-by-minute snapshot of free fields
+    const timeline = [];
+    for (let t = DAY_START; t < DAY_END; t += 1) {
+      const bookedFields = new Set();
+      const freeFields   = new Set();
 
-    fields.forEach(fid => {
-      const arr = day.availability[fid] || [];
-      arr.forEach(r => {
-        ranges.push({
-          fieldId: fid,
-          fieldName: fieldMap[fid].name,
-          start: parseTime(r.start),
-          end: parseTime(r.end)
-        });
+      // events (non-free merged blocks)
+      blocks.forEach(b => {
+        if (b.complex !== complex) return;
+        if (b.type === "free") return;
+        if (t >= b.start && t < b.end) {
+          bookedFields.add(b.fieldName);
+        }
       });
-    });
 
-    ranges.sort((a, b) => a.start - b.start);
+      // availability per field
+      fields.forEach(fid => {
+        const f = fieldMap[fid];
+        const ranges = day.availability[fid] || [];
 
-    let curStart = null;
-    let curEnd = null;
-    let curFields = new Set();
-
-    ranges.forEach(r => {
-      if (curStart === null) {
-        curStart = r.start;
-        curEnd = r.end;
-        curFields.add(r.fieldName);
-      } else if (r.start <= curEnd) {
-        curEnd = Math.max(curEnd, r.end);
-        curFields.add(r.fieldName);
-      } else {
-        avail.push({
-          complex,
-          start: curStart,
-          end: curEnd,
-          fields: Array.from(curFields)
+        const isFree = ranges.some(r => {
+          const rs = parseTime(r.start);
+          const re = parseTime(r.end);
+          return t >= rs && t < re;
         });
-        curStart = r.start;
-        curEnd = r.end;
-        curFields = new Set([r.fieldName]);
+
+        if (isFree && !bookedFields.has(f.name)) {
+          freeFields.add(f.name);
+        }
+      });
+
+      timeline.push({
+        minute: t,
+        free: Array.from(freeFields).sort()
+      });
+    }
+
+    // merge contiguous minutes where free-field set is identical
+    let curStart = null;
+    let curFields = null;
+
+    timeline.forEach((slot, idx) => {
+      const same = JSON.stringify(slot.free) === JSON.stringify(curFields);
+
+      if (curStart === null) {
+        curStart = slot.minute;
+        curFields = slot.free;
+      } else if (!same) {
+        if (curFields && curFields.length > 0) {
+          avail.push({
+            complex,
+            start: curStart,
+            end: timeline[idx - 1].minute + 1,
+            fields: curFields
+          });
+        }
+        curStart = slot.minute;
+        curFields = slot.free;
       }
     });
 
-    if (curStart !== null) {
+    // final block
+    if (curStart !== null && curFields && curFields.length > 0) {
       avail.push({
         complex,
         start: curStart,
-        end: curEnd,
-        fields: Array.from(curFields)
+        end: DAY_END,
+        fields: curFields
       });
     }
   });
@@ -215,7 +231,13 @@ function renderDayCalendar(day) {
   const events = buildEventLanes(blocks);
 
   Object.keys(day.complexes).forEach(complex => {
-    container.appendChild(renderComplexTimeline(complex, events[complex] || [], availability.filter(a => a.complex === complex)));
+    container.appendChild(
+      renderComplexTimeline(
+        complex,
+        events[complex] || [],
+        availability.filter(a => a.complex === complex)
+      )
+    );
   });
 }
 
