@@ -1,9 +1,7 @@
-// === Core timeline constants ===
-const DAY_START = 8 * 60;   // 8:00 AM
-const DAY_END   = 21 * 60;  // 9:00 PM
-const PX_PER_MIN = 1;       // 60px/hour
+const DAY_START = 8 * 60;
+const DAY_END   = 21 * 60;
+const PX_PER_MIN = 1; // 60px/hour
 
-// === Time helpers ===
 function parseTime(t) {
   const [h, m] = t.split(":").map(Number);
   return h * 60 + m;
@@ -21,42 +19,6 @@ function overlaps(aStart, aEnd, bStart, bEnd) {
   return aStart < bEnd && bStart < aEnd;
 }
 
-// === Field helpers ===
-function buildFieldMap(day) {
-  const map = {};
-  (day.fields || []).forEach(f => {
-    map[f.id] = f;
-  });
-  return map;
-}
-
-function isFullField(fieldObj) {
-  if (!fieldObj || !fieldObj.name) return false;
-  return fieldObj.name.includes("(Full)");
-}
-
-function isSameFieldOrParent(f1, f2) {
-  if (!f1 || !f2) return false;
-  if (f1 === f2) return true;
-  const p1 = f1.replace(/[A-B]$/, "");
-  const p2 = f2.replace(/[A-B]$/, "");
-  return p1 === p2;
-}
-
-// === Day label ===
-function updateDayLabel(dateStr) {
-  const d = new Date(dateStr + "T00:00:00");
-  const dayName = d.toLocaleDateString("en-US", { weekday: "long" });
-  const pretty = d.toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric"
-  });
-  const el = document.getElementById("day-label");
-  if (el) el.textContent = `${dayName}, ${pretty}`;
-}
-
-// === Load day JSON and render ===
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
   const container = document.getElementById("calendar");
@@ -67,38 +29,48 @@ async function loadDay(dateStr) {
     const day = await res.json();
     renderDayCalendar(day);
   } catch (e) {
-    if (container) {
-      container.innerHTML = "";
-      container.textContent = `Unable to load data for ${dateStr}: ${e.message}`;
-    }
+    container.innerHTML = "";
+    container.textContent = `Unable to load data for ${dateStr}: ${e.message}`;
   }
 }
 
-// === Build event blocks from merged data ===
+function buildFieldMap(day) {
+  const map = {};
+  day.fields.forEach(f => map[f.id] = f);
+  return map;
+}
+
+function isFullField(fieldObj) {
+  return fieldObj.name.includes("(Full)");
+}
+
+/**
+ * Build blocks from merged data, correcting subfield IDs so we
+ * don't collapse everything into "(Full)".
+ */
 function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
     let f = fieldMap[b.field];
 
-    // Try surface-based correction if needed
+    // If merged block uses parent full-field, try to match by surface name
     if (!f && b.surface) {
-      const corrected = (day.fields || []).find(x => x.surface === b.surface);
-      if (corrected) f = corrected;
+      const corrected = day.fields.find(x => x.surface === b.surface);
+      if (corrected) {
+        f = corrected;
+      }
     }
 
     if (!f) return;
-
-    const start = parseTime(b.start);
-    const end   = parseTime(b.end);
 
     blocks.push({
       complex: f.complex,
       fieldId: f.id,
       fieldName: f.name,
-      start,
-      end,
-      type: b.type, // "practice", "game", "free", etc.
+      start: parseTime(b.start),
+      end: parseTime(b.end),
+      type: b.type,
       title: b.title || (b.type === "free" ? "Available" : "Booked")
     });
   });
@@ -106,11 +78,13 @@ function buildBlocks(day, fieldMap) {
   return blocks;
 }
 
-// === Suppress subfields when full-field overlaps ===
+/**
+ * Suppress subfields when a full-field block overlaps them (A1 rule).
+ */
 function suppressSubfields(blocks, fieldMap) {
   const out = [];
-  const byComplex = {};
 
+  const byComplex = {};
   blocks.forEach(b => {
     if (!byComplex[b.complex]) byComplex[b.complex] = [];
     byComplex[b.complex].push(b);
@@ -121,7 +95,6 @@ function suppressSubfields(blocks, fieldMap) {
     const fullBlocks = list.filter(b => isFullField(fieldMap[b.fieldId]));
     const subBlocks  = list.filter(b => !isFullField(fieldMap[b.fieldId]));
 
-    // keep sub-blocks only when not overlapped by full-field
     subBlocks.forEach(sb => {
       const suppressed = fullBlocks.some(fb =>
         overlaps(fb.start, fb.end, sb.start, sb.end)
@@ -129,61 +102,51 @@ function suppressSubfields(blocks, fieldMap) {
       if (!suppressed) out.push(sb);
     });
 
-    // always keep full-field blocks
     fullBlocks.forEach(fb => out.push(fb));
   });
 
   return out;
 }
 
-// === Build availability: minute-by-minute per complex ===
+/**
+ * Dynamic availability: minute-by-minute free-field set per complex,
+ * merged into blocks whenever the free-field set stays identical.
+ */
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
-  const complexes = day.complexes || {};
-  Object.keys(complexes).forEach(complex => {
-    const fieldIds = complexes[complex] || [];
+  Object.keys(day.complexes).forEach(complex => {
+    const fields = day.complexes[complex];
 
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t += 1) {
-      const freeFields = new Set();
+      const bookedFields = new Set();
+      const freeFields   = new Set();
 
-      // If ANY full-field non-free block overlaps this minute, no fields are free
-      const fullFieldBooked = blocks.some(b =>
-        b.complex === complex &&
-        isFullField(fieldMap[b.fieldId]) &&
-        b.type !== "free" &&
-        t >= b.start && t < b.end
-      );
+      // events (non-free)
+      blocks.forEach(b => {
+        if (b.complex !== complex) return;
+        if (b.type === "free") return;
+        if (t >= b.start && t < b.end) {
+          bookedFields.add(b.fieldName);
+        }
+      });
 
-      if (!fullFieldBooked) {
-        const bookedFields = new Set();
+      // availability per field
+      fields.forEach(fid => {
+        const f = fieldMap[fid];
+        const ranges = day.availability[fid] || [];
 
-        // events (non-free) on specific fields
-        blocks.forEach(b => {
-          if (b.complex !== complex) return;
-          if (b.type === "free") return;
-          if (t >= b.start && t < b.end) {
-            bookedFields.add(b.fieldName);
-          }
+        const isFree = ranges.some(r => {
+          const rs = parseTime(r.start);
+          const re = parseTime(r.end);
+          return t >= rs && t < re;
         });
 
-        // availability per field
-        fieldIds.forEach(fid => {
-          const f = fieldMap[fid];
-          const ranges = (day.availability && day.availability[fid]) || [];
-
-          const isFree = ranges.some(r => {
-            const rs = parseTime(r.start);
-            const re = parseTime(r.end);
-            return t >= rs && t < re;
-          });
-
-          if (isFree && !bookedFields.has(f.name)) {
-            freeFields.add(f.name);
-          }
-        });
-      }
+        if (isFree && !bookedFields.has(f.name)) {
+          freeFields.add(f.name);
+        }
+      });
 
       timeline.push({
         minute: t,
@@ -228,11 +191,13 @@ function buildAvailability(day, fieldMap, blocks) {
   return avail;
 }
 
-// === Build lanes based on overlapping events (NOT per field) ===
+/**
+ * Build lanes so overlapping events sit side-by-side.
+ */
 function buildEventLanes(blocks) {
   const byComplex = {};
   blocks.forEach(b => {
-    if (b.type === "free") return; // availability is separate
+    if (b.type === "free") return;
     if (!byComplex[b.complex]) byComplex[b.complex] = [];
     byComplex[b.complex].push(b);
   });
@@ -273,10 +238,8 @@ function buildEventLanes(blocks) {
   return lanesByComplex;
 }
 
-// === Main render for the whole day ===
 function renderDayCalendar(day) {
   const container = document.getElementById("calendar");
-  if (!container) return;
   container.innerHTML = "";
 
   const fieldMap = buildFieldMap(day);
@@ -284,31 +247,19 @@ function renderDayCalendar(day) {
   blocks = suppressSubfields(blocks, fieldMap);
 
   const availability = buildAvailability(day, fieldMap, blocks);
-  const eventsByComplex = buildEventLanes(blocks);
+  const events = buildEventLanes(blocks);
 
-  const showPractice   = document.getElementById("filter-practice")?.checked ?? true;
-  const showGame       = document.getElementById("filter-game")?.checked ?? true;
-  const showAvailable  = document.getElementById("filter-available")?.checked ?? true;
-
-  const complexes = day.complexes || {};
-  Object.keys(complexes).forEach(complex => {
-    const events = (eventsByComplex[complex] || []).filter(e => {
-      if (e.type === "practice") return showPractice;
-      if (e.type === "game") return showGame;
-      return true;
-    });
-
-    const avail = availability
-      .filter(a => a.complex === complex)
-      .filter(() => showAvailable);
-
+  Object.keys(day.complexes).forEach(complex => {
     container.appendChild(
-      renderComplexTimeline(complex, events, avail)
+      renderComplexTimeline(
+        complex,
+        events[complex] || [],
+        availability.filter(a => a.complex === complex)
+      )
     );
   });
 }
 
-// === Render a single complex timeline ===
 function renderComplexTimeline(complex, events, availability) {
   const div = document.createElement("div");
   div.className = "complex";
@@ -332,48 +283,24 @@ function renderComplexTimeline(complex, events, availability) {
     hours.appendChild(h);
   }
 
-  const tracks = document.createElement("div");
-  tracks.className = "tracks";
-
   const eventsTrack = document.createElement("div");
   eventsTrack.className = "events-track";
   eventsTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  const availTrack = document.createElement("div");
-  availTrack.className = "avail-track";
-  availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
-
-  // Determine lane count based on overlapping events
   const maxLane = events.reduce((m, e) => Math.max(m, e.lane), 0);
-  const laneCount = maxLane >= 0 ? (maxLane + 1) : 0;
-  const laneWidth = laneCount > 0 ? (100 / laneCount) : 100;
-
-  // Mark conflicts
-  events.forEach(e => {
-    e.conflict = events.some(other =>
-      other !== e &&
-      overlaps(e.start, e.end, other.start, other.end) &&
-      isSameFieldOrParent(e.fieldName, other.fieldName)
-    );
-  });
+  const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
+  const laneWidth = 100 / laneCount;
 
   // Render events
   events.forEach(e => {
     const block = document.createElement("div");
     block.className = "block event-block";
     block.classList.add(e.type);
-    if (e.conflict) block.classList.add("conflict");
 
     block.style.top = ((e.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((e.end - e.start) * PX_PER_MIN) + "px";
-
-    if (laneCount > 0) {
-      block.style.left = (e.lane * laneWidth) + "%";
-      block.style.width = laneWidth + "%";
-    } else {
-      block.style.left = "0%";
-      block.style.width = "100%";
-    }
+    block.style.left = (e.lane * laneWidth) + "%";
+    block.style.width = laneWidth + "%";
 
     block.innerHTML = `
       <div class="block-title">${e.title}</div>
@@ -384,13 +311,18 @@ function renderComplexTimeline(complex, events, availability) {
     eventsTrack.appendChild(block);
   });
 
-  // Render availability: full width if no lanes, to the right if lanes exist
+  const availTrack = document.createElement("div");
+  availTrack.className = "avail-track";
+  availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
+
+  // ⭐ Correct availability placement: next to event lanes
   availability.forEach(a => {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    const leftPct  = laneCount > 0 ? (laneCount * laneWidth) : 0;
-    const widthPct = laneCount > 0 ? (100 - leftPct) : 100;
+    // Dynamic left offset and width based on event lanes
+    const leftPct = laneCount * laneWidth;
+    const widthPct = 100 - leftPct;
 
     block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
@@ -406,6 +338,8 @@ function renderComplexTimeline(complex, events, availability) {
     availTrack.appendChild(block);
   });
 
+  const tracks = document.createElement("div");
+  tracks.className = "tracks";
   tracks.appendChild(availTrack);
   tracks.appendChild(eventsTrack);
 
