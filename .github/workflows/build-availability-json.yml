@@ -36,8 +36,13 @@ jobs:
         shell: bash
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
-          if [ -z "$RAW" ] || [ "$RAW" = "null" ]; then RAW="{}"; fi
-          echo "$RAW" | jq empty || RAW="{}"
+
+          # SAFE JSON VALIDATION
+          if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
+            echo "WARNING: Invalid JSON for season_window, replacing with {}"
+            RAW="{}"
+          fi
+
           echo "$RAW" > season.json
           echo "season_file=season.json" >> $GITHUB_OUTPUT
 
@@ -46,8 +51,12 @@ jobs:
         shell: bash
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
-          if [ -z "$RAW" ] || [ "$RAW" = "null" ]; then RAW="{}"; fi
-          echo "$RAW" | jq empty || RAW="{}"
+
+          if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
+            echo "WARNING: Invalid JSON for fields, replacing with {}"
+            RAW="{}"
+          fi
+
           echo "$RAW" > fields.json
           echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
@@ -68,8 +77,10 @@ jobs:
           while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
             RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
 
-            if [ -z "$RAW" ] || [ "$RAW" = "null" ]; then RAW="{}"; fi
-            echo "$RAW" | jq empty || RAW="{}"
+            if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
+              echo "WARNING: Invalid JSON for day_calendar ($CURRENT), replacing with {}"
+              RAW="{}"
+            fi
 
             echo "$RAW" > day.json
 
@@ -132,4 +143,23 @@ jobs:
             --arg end "$END" \
             --argjson fields "$(cat $FIELDS_FILE)" \
             --argjson days "$DAYS_JSON" \
-            --argjson weeks "$(cat data/week
+            --argjson weeks "$(cat data/week/weeks.json)" \
+            --argjson months "$(cat data/month/months.json)" \
+            '{
+              season_start: $start,
+              season_end: $end,
+              fields: $fields.fields,
+              complexes: $fields.complexes,
+              days: $days,
+              weeks: $weeks,
+              months: $months
+            }' > data/availability.json
+
+      - name: Commit updated JSON
+        shell: bash
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Updated availability JSON" || true
+          git push
