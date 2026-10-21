@@ -2,6 +2,19 @@ const DAY_START = 8 * 60;
 const DAY_END   = 21 * 60;
 const PX_PER_MIN = 1; // 60px/hour
 
+function updateDayLabel(dateStr) {
+  const d = new Date(dateStr + "T00:00:00");
+  const dayName = d.toLocaleDateString("en-US", { weekday: "long" });
+  const pretty = d.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+  const el = document.getElementById("day-label");
+  if (el) el.textContent = `${dayName}, ${pretty}`;
+}
+
+
 function parseTime(t) {
   const [h, m] = t.split(":").map(Number);
   return h * 60 + m;
