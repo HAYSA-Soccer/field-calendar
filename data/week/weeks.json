@@ -1,1208 +1,5 @@
 {
   "2026-10-19": {
-    "2026-10-23": {
-      "date": "2026-10-23",
-      "complexes": {
-        "TURF": [
-          "H-HST",
-          "H-HST1",
-          "H-HST2"
-        ],
-        "SUMNER/SEAN JOYCE": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ]
-      },
-      "fields": [
-        {
-          "id": "H-HST",
-          "name": "Holbrook High School Turf (Full)",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-HST1",
-          "name": "Holbrook High School Turf 1",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-HST2",
-          "name": "Holbrook High School Turf 2",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1",
-          "name": "Sumner Field 1 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1A",
-          "name": "Sumner Field 1A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1B",
-          "name": "Sumner Field 1B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2",
-          "name": "Sumner Field 2 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2A",
-          "name": "Sumner Field 2A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2B",
-          "name": "Sumner Field 2B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3",
-          "name": "Sumner Field 3 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3A",
-          "name": "Sumner Field 3A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3B",
-          "name": "Sumner Field 3B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4",
-          "name": "Sumner Field 4 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4A",
-          "name": "Sumner Field 4A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4B",
-          "name": "Sumner Field 4B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        }
-      ],
-      "availability": {
-        "H-HST": [],
-        "H-HST1": [],
-        "H-HST2": [],
-        "H-Su1": [
-          {
-            "start": "16:00",
-            "end": "16:30"
-          },
-          {
-            "start": "18:00",
-            "end": "19:00"
-          }
-        ],
-        "H-Su1A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-Su1B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-Su2": [
-          {
-            "start": "16:00",
-            "end": "16:30"
-          },
-          {
-            "start": "18:30",
-            "end": "19:00"
-          }
-        ],
-        "H-Su2A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-Su2B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ3": [
-          {
-            "start": "16:00",
-            "end": "17:30"
-          },
-          {
-            "start": "18:30",
-            "end": "19:00"
-          }
-        ],
-        "H-SJ3A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ3B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ4": [
-          {
-            "start": "16:00",
-            "end": "17:00"
-          },
-          {
-            "start": "18:00",
-            "end": "19:00"
-          }
-        ],
-        "H-SJ4A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ4B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ]
-      },
-      "events": {
-        "H-Su2": [
-          {
-            "event_id": "9565e2c86a93f7cb384efde4964d15eb",
-            "date": "2026-10-23",
-            "start": "17:00",
-            "end": "18:30",
-            "field": "H-Su2",
-            "type": "practice",
-            "title": "3/4 Boys Travel (Osward) Practice",
-            "team": "3/4 Boys Travel",
-            "coach": "Osward",
-            "grade": "3/4",
-            "source": "ICS"
-          },
-          {
-            "event_id": "3a18c78202482f4b59f4d9e1ecd35f12",
-            "date": "2026-10-23",
-            "start": "16:30",
-            "end": "17:30",
-            "field": "H-Su2",
-            "type": "practice",
-            "title": "Holbrook Community Center (Green) Practice",
-            "team": "Holbrook Community Center",
-            "coach": "Green",
-            "grade": "",
-            "source": "ICS"
-          }
-        ],
-        "H-Su1": [
-          {
-            "event_id": "cd39fa4318d3baad05437d75beca12c2",
-            "date": "2026-10-23",
-            "start": "16:30",
-            "end": "18:00",
-            "field": "H-Su1",
-            "type": "practice",
-            "title": "3/4 Girls Travel (Casavant) Practice",
-            "team": "3/4 Girls Travel",
-            "coach": "Casavant",
-            "grade": "3/4",
-            "source": "ICS"
-          }
-        ],
-        "H-SJ4": [
-          {
-            "event_id": "23f0a479840408cf313e744f5fc814e5",
-            "date": "2026-10-23",
-            "start": "17:00",
-            "end": "18:00",
-            "field": "H-SJ4",
-            "type": "practice",
-            "title": "Nielsen Eye Center (Orange) Practice",
-            "team": "Nielsen Eye Center",
-            "coach": "Orange",
-            "grade": "",
-            "source": "ICS"
-          }
-        ],
-        "H-SJ3": [
-          {
-            "event_id": "9a3f41de092c419ab3235c7c84048123",
-            "date": "2026-10-23",
-            "start": "17:30",
-            "end": "18:30",
-            "field": "H-SJ3",
-            "type": "practice",
-            "title": "Brockton Rox (Blue) Practice",
-            "team": "Brockton Rox",
-            "coach": "Blue",
-            "grade": "",
-            "source": "ICS"
-          }
-        ]
-      },
-      "blocks": {},
-      "merged": [
-        {
-          "field": "H-Su1",
-          "start": "16:00",
-          "end": "16:30",
-          "start_12": "4:00 PM",
-          "end_12": "4:30 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su1A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su1B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2",
-          "start": "16:00",
-          "end": "16:30",
-          "start_12": "4:00 PM",
-          "end_12": "4:30 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3",
-          "start": "16:00",
-          "end": "17:30",
-          "start_12": "4:00 PM",
-          "end_12": "5:30 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4",
-          "start": "16:00",
-          "end": "17:00",
-          "start_12": "4:00 PM",
-          "end_12": "5:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2",
-          "start": "16:30",
-          "end": "17:30",
-          "start_12": "4:30 PM",
-          "end_12": "5:30 PM",
-          "type": "practice",
-          "title": "Holbrook Community Center (Green) Practice",
-          "team": "Holbrook Community Center",
-          "coach": "Green",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su1",
-          "start": "16:30",
-          "end": "18:00",
-          "start_12": "4:30 PM",
-          "end_12": "6:00 PM",
-          "type": "practice",
-          "title": "3/4 Girls Travel (Casavant) Practice",
-          "team": "3/4 Girls Travel",
-          "coach": "Casavant",
-          "grade": "3/4",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su2",
-          "start": "17:00",
-          "end": "18:30",
-          "start_12": "5:00 PM",
-          "end_12": "6:30 PM",
-          "type": "practice",
-          "title": "3/4 Boys Travel (Osward) Practice",
-          "team": "3/4 Boys Travel",
-          "coach": "Osward",
-          "grade": "3/4",
-          "source": "ICS"
-        },
-        {
-          "field": "H-SJ4",
-          "start": "17:00",
-          "end": "18:00",
-          "start_12": "5:00 PM",
-          "end_12": "6:00 PM",
-          "type": "practice",
-          "title": "Nielsen Eye Center (Orange) Practice",
-          "team": "Nielsen Eye Center",
-          "coach": "Orange",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-SJ3",
-          "start": "17:30",
-          "end": "18:30",
-          "start_12": "5:30 PM",
-          "end_12": "6:30 PM",
-          "type": "practice",
-          "title": "Brockton Rox (Blue) Practice",
-          "team": "Brockton Rox",
-          "coach": "Blue",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su1",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2",
-          "start": "18:30",
-          "end": "19:00",
-          "start_12": "6:30 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3",
-          "start": "18:30",
-          "end": "19:00",
-          "start_12": "6:30 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        }
-      ]
-    },
-    "2026-10-25": {
-      "date": "2026-10-25",
-      "complexes": {
-        "TURF": [
-          "H-HST",
-          "H-HST1",
-          "H-HST2"
-        ],
-        "SUMNER/SEAN JOYCE": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ]
-      },
-      "fields": [
-        {
-          "id": "H-HST",
-          "name": "Holbrook High School Turf (Full)",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-HST1",
-          "name": "Holbrook High School Turf 1",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-HST2",
-          "name": "Holbrook High School Turf 2",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1",
-          "name": "Sumner Field 1 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1A",
-          "name": "Sumner Field 1A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1B",
-          "name": "Sumner Field 1B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2",
-          "name": "Sumner Field 2 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2A",
-          "name": "Sumner Field 2A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2B",
-          "name": "Sumner Field 2B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3",
-          "name": "Sumner Field 3 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3A",
-          "name": "Sumner Field 3A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3B",
-          "name": "Sumner Field 3B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4",
-          "name": "Sumner Field 4 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4A",
-          "name": "Sumner Field 4A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4B",
-          "name": "Sumner Field 4B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        }
-      ],
-      "availability": {
-        "H-HST": [],
-        "H-HST1": [],
-        "H-HST2": [],
-        "H-Su1": [],
-        "H-Su1A": [],
-        "H-Su1B": [],
-        "H-Su2": [],
-        "H-Su2A": [],
-        "H-Su2B": [],
-        "H-SJ3": [],
-        "H-SJ3A": [],
-        "H-SJ3B": [],
-        "H-SJ4": [],
-        "H-SJ4A": [],
-        "H-SJ4B": []
-      },
-      "events": {},
-      "blocks": {},
-      "merged": []
-    },
-    "2026-10-19": {
-      "date": "2026-10-19",
-      "complexes": {
-        "TURF": [
-          "H-HST",
-          "H-HST1",
-          "H-HST2"
-        ],
-        "SUMNER/SEAN JOYCE": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ]
-      },
-      "fields": [
-        {
-          "id": "H-HST",
-          "name": "Holbrook High School Turf (Full)",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-HST1",
-          "name": "Holbrook High School Turf 1",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-HST2",
-          "name": "Holbrook High School Turf 2",
-          "complex": "TURF",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1",
-          "name": "Sumner Field 1 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1A",
-          "name": "Sumner Field 1A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su1B",
-          "name": "Sumner Field 1B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2",
-          "name": "Sumner Field 2 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2A",
-          "name": "Sumner Field 2A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-Su2B",
-          "name": "Sumner Field 2B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3",
-          "name": "Sumner Field 3 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3A",
-          "name": "Sumner Field 3A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ3B",
-          "name": "Sumner Field 3B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4",
-          "name": "Sumner Field 4 (Full)",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4A",
-          "name": "Sumner Field 4A",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        },
-        {
-          "id": "H-SJ4B",
-          "name": "Sumner Field 4B",
-          "complex": "SUMNER/SEAN JOYCE",
-          "surface": ""
-        }
-      ],
-      "availability": {
-        "H-HST": [
-          {
-            "start": "19:00",
-            "end": "21:00"
-          }
-        ],
-        "H-HST1": [
-          {
-            "start": "18:00",
-            "end": "21:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-HST2": [
-          {
-            "start": "18:00",
-            "end": "21:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-Su1": [
-          {
-            "start": "16:00",
-            "end": "17:30"
-          }
-        ],
-        "H-Su1A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-Su1B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-Su2": [
-          {
-            "start": "16:00",
-            "end": "17:30"
-          },
-          {
-            "start": "18:30",
-            "end": "19:00"
-          }
-        ],
-        "H-Su2A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-Su2B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ3": [
-          {
-            "start": "16:00",
-            "end": "17:00"
-          },
-          {
-            "start": "18:00",
-            "end": "19:00"
-          }
-        ],
-        "H-SJ3A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ3B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ4": [
-          {
-            "start": "16:00",
-            "end": "17:00"
-          },
-          {
-            "start": "18:00",
-            "end": "19:00"
-          }
-        ],
-        "H-SJ4A": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ],
-        "H-SJ4B": [
-          {
-            "start": "16:00",
-            "end": "19:00",
-            "mode": "practice_only"
-          }
-        ]
-      },
-      "events": {
-        "H-Su1": [
-          {
-            "event_id": "f8245e2b3089096f1c02c344bdc866e2",
-            "date": "2026-10-19",
-            "start": "17:30",
-            "end": "19:00",
-            "field": "H-Su1",
-            "type": "practice",
-            "title": "3/4 Boys Travel (Ball) Practice",
-            "team": "3/4 Boys Travel",
-            "coach": "Ball",
-            "grade": "3/4",
-            "source": "ICS"
-          }
-        ],
-        "H-SJ3": [
-          {
-            "event_id": "25c769ac5ab0ea215c14cc1e73de91ce",
-            "date": "2026-10-19",
-            "start": "17:00",
-            "end": "18:00",
-            "field": "H-SJ3",
-            "type": "practice",
-            "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
-            "team": "3/4 Girls Team 1 - Edwards Built Pavements",
-            "coach": "",
-            "grade": "3/4",
-            "source": "ICS"
-          },
-          {
-            "event_id": "eb365e9b0c9709fbbfcbf31e58f96db1",
-            "date": "2026-10-19",
-            "start": "17:00",
-            "end": "18:00",
-            "field": "H-SJ3",
-            "type": "practice",
-            "title": "5/6/7 Girls Team 1 - Best Collision Practice",
-            "team": "5/6/7 Girls Team 1 - Best Collision",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS"
-          }
-        ],
-        "H-Su2": [
-          {
-            "event_id": "079270c5facb77ae949bf00e1e019742",
-            "date": "2026-10-19",
-            "start": "17:30",
-            "end": "18:30",
-            "field": "H-Su2",
-            "type": "practice",
-            "title": "Undercover Undercoaters Bridgewater (Orange) Practice",
-            "team": "Undercover Undercoaters Bridgewater",
-            "coach": "Orange",
-            "grade": "",
-            "source": "ICS"
-          }
-        ],
-        "H-SJ4": [
-          {
-            "event_id": "dcb60434c69e8ca1386ce3e522a63a2d",
-            "date": "2026-10-19",
-            "start": "17:00",
-            "end": "18:00",
-            "field": "H-SJ4",
-            "type": "practice",
-            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS"
-          }
-        ],
-        "H-HST": [
-          {
-            "event_id": "541d7b84d623181abd560fbcaa94e233",
-            "date": "2026-10-19",
-            "start": "18:00",
-            "end": "19:00",
-            "field": "H-HST",
-            "type": "game",
-            "title": "5/6 Boys Travel (Walsh) vs. Stoughton",
-            "team": "5/6 Boys Travel  vs. Stoughton",
-            "coach": "Walsh",
-            "grade": "5/6",
-            "source": "ICS"
-          }
-        ]
-      },
-      "blocks": {},
-      "merged": [
-        {
-          "field": "H-Su1",
-          "start": "16:00",
-          "end": "17:30",
-          "start_12": "4:00 PM",
-          "end_12": "5:30 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su1A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su1B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2",
-          "start": "16:00",
-          "end": "17:30",
-          "start_12": "4:00 PM",
-          "end_12": "5:30 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3",
-          "start": "16:00",
-          "end": "17:00",
-          "start_12": "4:00 PM",
-          "end_12": "5:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4",
-          "start": "16:00",
-          "end": "17:00",
-          "start_12": "4:00 PM",
-          "end_12": "5:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4A",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4B",
-          "start": "16:00",
-          "end": "19:00",
-          "start_12": "4:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3",
-          "start": "17:00",
-          "end": "18:00",
-          "start_12": "5:00 PM",
-          "end_12": "6:00 PM",
-          "type": "practice",
-          "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
-          "team": "3/4 Girls Team 1 - Edwards Built Pavements",
-          "coach": "",
-          "grade": "3/4",
-          "source": "ICS"
-        },
-        {
-          "field": "H-SJ3",
-          "start": "17:00",
-          "end": "18:00",
-          "start_12": "5:00 PM",
-          "end_12": "6:00 PM",
-          "type": "practice",
-          "title": "5/6/7 Girls Team 1 - Best Collision Practice",
-          "team": "5/6/7 Girls Team 1 - Best Collision",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS"
-        },
-        {
-          "field": "H-SJ4",
-          "start": "17:00",
-          "end": "18:00",
-          "start_12": "5:00 PM",
-          "end_12": "6:00 PM",
-          "type": "practice",
-          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su1",
-          "start": "17:30",
-          "end": "19:00",
-          "start_12": "5:30 PM",
-          "end_12": "7:00 PM",
-          "type": "practice",
-          "title": "3/4 Boys Travel (Ball) Practice",
-          "team": "3/4 Boys Travel",
-          "coach": "Ball",
-          "grade": "3/4",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su2",
-          "start": "17:30",
-          "end": "18:30",
-          "start_12": "5:30 PM",
-          "end_12": "6:30 PM",
-          "type": "practice",
-          "title": "Undercover Undercoaters Bridgewater (Orange) Practice",
-          "team": "Undercover Undercoaters Bridgewater",
-          "coach": "Orange",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-HST1",
-          "start": "18:00",
-          "end": "21:00",
-          "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-HST2",
-          "start": "18:00",
-          "end": "21:00",
-          "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ3",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-HST",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "type": "game",
-          "title": "5/6 Boys Travel (Walsh) vs. Stoughton",
-          "team": "5/6 Boys Travel  vs. Stoughton",
-          "coach": "Walsh",
-          "grade": "5/6",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su2",
-          "start": "18:30",
-          "end": "19:00",
-          "start_12": "6:30 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-HST",
-          "start": "19:00",
-          "end": "21:00",
-          "start_12": "7:00 PM",
-          "end_12": "9:00 PM",
-          "type": "free",
-          "title": ""
-        }
-      ]
-    },
     "2026-10-20": {
       "date": "2026-10-20",
       "complexes": {
@@ -2869,7 +1666,18 @@
           }
         ]
       },
-      "blocks": {},
+      "blocks": {
+        "H-HST": [
+          {
+            "date": "2026-10-22",
+            "start": "18:00",
+            "end": "20:00",
+            "field": "H-HST",
+            "reason": "Turf Unavailable - Football Game",
+            "type": "admin"
+          }
+        ]
+      },
       "merged": [
         {
           "field": "H-Su1",
@@ -3133,6 +1941,15 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST",
+          "start": "18:00",
+          "end": "20:00",
+          "start_12": "6:00 PM",
+          "end_12": "8:00 PM",
+          "type": "admin",
+          "title": "Turf Unavailable - Football Game"
+        },
+        {
           "field": "H-Su1",
           "start": "18:30",
           "end": "19:00",
@@ -3162,6 +1979,569 @@
           "coach": "Mills",
           "grade": "7/8",
           "source": "ICS"
+        }
+      ]
+    },
+    "2026-10-19": {
+      "date": "2026-10-19",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "19:00",
+            "end": "21:00"
+          }
+        ],
+        "H-HST1": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-HST2": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1": [
+          {
+            "start": "16:00",
+            "end": "17:30"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "16:00",
+            "end": "17:30"
+          },
+          {
+            "start": "18:30",
+            "end": "19:00"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "16:00",
+            "end": "17:00"
+          },
+          {
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "16:00",
+            "end": "17:00"
+          },
+          {
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ]
+      },
+      "events": {
+        "H-Su1": [
+          {
+            "event_id": "f8245e2b3089096f1c02c344bdc866e2",
+            "date": "2026-10-19",
+            "start": "17:30",
+            "end": "19:00",
+            "field": "H-Su1",
+            "type": "practice",
+            "title": "3/4 Boys Travel (Ball) Practice",
+            "team": "3/4 Boys Travel",
+            "coach": "Ball",
+            "grade": "3/4",
+            "source": "ICS"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "event_id": "25c769ac5ab0ea215c14cc1e73de91ce",
+            "date": "2026-10-19",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ3",
+            "type": "practice",
+            "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
+            "team": "3/4 Girls Team 1 - Edwards Built Pavements",
+            "coach": "",
+            "grade": "3/4",
+            "source": "ICS"
+          },
+          {
+            "event_id": "eb365e9b0c9709fbbfcbf31e58f96db1",
+            "date": "2026-10-19",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ3",
+            "type": "practice",
+            "title": "5/6/7 Girls Team 1 - Best Collision Practice",
+            "team": "5/6/7 Girls Team 1 - Best Collision",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS"
+          }
+        ],
+        "H-Su2": [
+          {
+            "event_id": "079270c5facb77ae949bf00e1e019742",
+            "date": "2026-10-19",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-Su2",
+            "type": "practice",
+            "title": "Undercover Undercoaters Bridgewater (Orange) Practice",
+            "team": "Undercover Undercoaters Bridgewater",
+            "coach": "Orange",
+            "grade": "",
+            "source": "ICS"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "event_id": "dcb60434c69e8ca1386ce3e522a63a2d",
+            "date": "2026-10-19",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ4",
+            "type": "practice",
+            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS"
+          }
+        ],
+        "H-HST": [
+          {
+            "event_id": "541d7b84d623181abd560fbcaa94e233",
+            "date": "2026-10-19",
+            "start": "18:00",
+            "end": "19:00",
+            "field": "H-HST",
+            "type": "game",
+            "title": "5/6 Boys Travel (Walsh) vs. Stoughton",
+            "team": "5/6 Boys Travel  vs. Stoughton",
+            "coach": "Walsh",
+            "grade": "5/6",
+            "source": "ICS"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su1",
+          "start": "16:00",
+          "end": "17:30",
+          "start_12": "4:00 PM",
+          "end_12": "5:30 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "16:00",
+          "end": "17:30",
+          "start_12": "4:00 PM",
+          "end_12": "5:30 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "16:00",
+          "end": "17:00",
+          "start_12": "4:00 PM",
+          "end_12": "5:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "16:00",
+          "end": "17:00",
+          "start_12": "4:00 PM",
+          "end_12": "5:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
+          "team": "3/4 Girls Team 1 - Edwards Built Pavements",
+          "coach": "",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ3",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "5/6/7 Girls Team 1 - Best Collision Practice",
+          "team": "5/6/7 Girls Team 1 - Best Collision",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ4",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "17:30",
+          "end": "19:00",
+          "start_12": "5:30 PM",
+          "end_12": "7:00 PM",
+          "type": "practice",
+          "title": "3/4 Boys Travel (Ball) Practice",
+          "team": "3/4 Boys Travel",
+          "coach": "Ball",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Undercover Undercoaters Bridgewater (Orange) Practice",
+          "team": "Undercover Undercoaters Bridgewater",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST1",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "game",
+          "title": "5/6 Boys Travel (Walsh) vs. Stoughton",
+          "team": "5/6 Boys Travel  vs. Stoughton",
+          "coach": "Walsh",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2",
+          "start": "18:30",
+          "end": "19:00",
+          "start_12": "6:30 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "19:00",
+          "end": "21:00",
+          "start_12": "7:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
         }
       ]
     },
@@ -3792,11 +3172,513 @@
           "source": "ICS"
         }
       ]
-    }
-  },
-  "2026-10-12": {
-    "2026-10-18": {
-      "date": "2026-10-18",
+    },
+    "2026-10-23": {
+      "date": "2026-10-23",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [
+          {
+            "start": "16:00",
+            "end": "16:30"
+          },
+          {
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "16:00",
+            "end": "16:30"
+          },
+          {
+            "start": "18:30",
+            "end": "19:00"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "16:00",
+            "end": "17:30"
+          },
+          {
+            "start": "18:30",
+            "end": "19:00"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "16:00",
+            "end": "17:00"
+          },
+          {
+            "start": "18:00",
+            "end": "19:00"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "16:00",
+            "end": "19:00",
+            "mode": "practice_only"
+          }
+        ]
+      },
+      "events": {
+        "H-Su2": [
+          {
+            "event_id": "9565e2c86a93f7cb384efde4964d15eb",
+            "date": "2026-10-23",
+            "start": "17:00",
+            "end": "18:30",
+            "field": "H-Su2",
+            "type": "practice",
+            "title": "3/4 Boys Travel (Osward) Practice",
+            "team": "3/4 Boys Travel",
+            "coach": "Osward",
+            "grade": "3/4",
+            "source": "ICS"
+          },
+          {
+            "event_id": "3a18c78202482f4b59f4d9e1ecd35f12",
+            "date": "2026-10-23",
+            "start": "16:30",
+            "end": "17:30",
+            "field": "H-Su2",
+            "type": "practice",
+            "title": "Holbrook Community Center (Green) Practice",
+            "team": "Holbrook Community Center",
+            "coach": "Green",
+            "grade": "",
+            "source": "ICS"
+          }
+        ],
+        "H-Su1": [
+          {
+            "event_id": "cd39fa4318d3baad05437d75beca12c2",
+            "date": "2026-10-23",
+            "start": "16:30",
+            "end": "18:00",
+            "field": "H-Su1",
+            "type": "practice",
+            "title": "3/4 Girls Travel (Casavant) Practice",
+            "team": "3/4 Girls Travel",
+            "coach": "Casavant",
+            "grade": "3/4",
+            "source": "ICS"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "event_id": "23f0a479840408cf313e744f5fc814e5",
+            "date": "2026-10-23",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ4",
+            "type": "practice",
+            "title": "Nielsen Eye Center (Orange) Practice",
+            "team": "Nielsen Eye Center",
+            "coach": "Orange",
+            "grade": "",
+            "source": "ICS"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "event_id": "9a3f41de092c419ab3235c7c84048123",
+            "date": "2026-10-23",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-SJ3",
+            "type": "practice",
+            "title": "Brockton Rox (Blue) Practice",
+            "team": "Brockton Rox",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su1",
+          "start": "16:00",
+          "end": "16:30",
+          "start_12": "4:00 PM",
+          "end_12": "4:30 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "16:00",
+          "end": "16:30",
+          "start_12": "4:00 PM",
+          "end_12": "4:30 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "16:00",
+          "end": "17:30",
+          "start_12": "4:00 PM",
+          "end_12": "5:30 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "16:00",
+          "end": "17:00",
+          "start_12": "4:00 PM",
+          "end_12": "5:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "16:30",
+          "end": "17:30",
+          "start_12": "4:30 PM",
+          "end_12": "5:30 PM",
+          "type": "practice",
+          "title": "Holbrook Community Center (Green) Practice",
+          "team": "Holbrook Community Center",
+          "coach": "Green",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "16:30",
+          "end": "18:00",
+          "start_12": "4:30 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "3/4 Girls Travel (Casavant) Practice",
+          "team": "3/4 Girls Travel",
+          "coach": "Casavant",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2",
+          "start": "17:00",
+          "end": "18:30",
+          "start_12": "5:00 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "3/4 Boys Travel (Osward) Practice",
+          "team": "3/4 Boys Travel",
+          "coach": "Osward",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ4",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "Nielsen Eye Center (Orange) Practice",
+          "team": "Nielsen Eye Center",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ3",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Brockton Rox (Blue) Practice",
+          "team": "Brockton Rox",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "18:30",
+          "end": "19:00",
+          "start_12": "6:30 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "18:30",
+          "end": "19:00",
+          "start_12": "6:30 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        }
+      ]
+    },
+    "2026-10-25": {
+      "date": "2026-10-25",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3930,7 +3812,9 @@
       "events": {},
       "blocks": {},
       "merged": []
-    },
+    }
+  },
+  "2026-10-12": {
     "2026-10-17": {
       "date": "2026-10-17",
       "complexes": {
@@ -4853,6 +4737,142 @@
           "title": ""
         }
       ]
+    },
+    "2026-10-18": {
+      "date": "2026-10-18",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [],
+        "H-Su1A": [],
+        "H-Su1B": [],
+        "H-Su2": [],
+        "H-Su2A": [],
+        "H-Su2B": [],
+        "H-SJ3": [],
+        "H-SJ3A": [],
+        "H-SJ3B": [],
+        "H-SJ4": [],
+        "H-SJ4A": [],
+        "H-SJ4B": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": []
     }
   }
 }
