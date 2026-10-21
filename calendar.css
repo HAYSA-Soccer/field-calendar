@@ -11,13 +11,14 @@
 /* Fluid but sane width */
 .complex {
   flex: 0 0 auto;
-  min-width: 420px;
-  max-width: 600px;
+  min-width: 480px;      /* ← THIS is the key */
+  max-width: 640px;      /* ← prevents “crazy” fluid expansion */
   background: #fafafa;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 12px;
 }
+
 
 /* Mobile: stack vertically */
 @media (max-width: 768px) {
