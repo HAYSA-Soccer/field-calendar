@@ -10,7 +10,7 @@
 
   <h1>HAYSA Calendar</h1>
 
-  <!-- Legend (simple, non-intrusive) -->
+  <!-- Legend -->
   <div id="legend">
     <div class="legend-item">
       <span class="legend-color practice"></span> Practice
@@ -21,14 +21,29 @@
     <div class="legend-item">
       <span class="legend-color available"></span> Available
     </div>
+    <div class="legend-item">
+      <span class="legend-color conflict"></span> Conflict
+    </div>
   </div>
 
+  <!-- Filters -->
+  <div id="filters">
+    <label><input type="checkbox" id="filter-practice" checked> Practice</label>
+    <label><input type="checkbox" id="filter-game" checked> Game</label>
+    <label><input type="checkbox" id="filter-available" checked> Available</label>
+  </div>
+
+  <!-- Date label -->
+  <div id="day-label"></div>
+
+  <!-- Date Picker -->
   <div id="date-picker">
     <label for="calendar-date">Select Date:</label>
     <input type="date" id="calendar-date">
     <button id="load-date" class="nav-btn">Go</button>
   </div>
 
+  <!-- Navigation Buttons -->
   <div id="nav-buttons">
     <button id="prev-day" class="nav-btn">← Previous Day</button>
     <button id="today" class="nav-btn">Today</button>
@@ -42,11 +57,15 @@
     const dateInput = document.getElementById("calendar-date");
     const todayStr = new Date().toISOString().split("T")[0];
     dateInput.value = todayStr;
+    updateDayLabel(todayStr);
     loadDay(todayStr);
 
     document.getElementById("load-date").addEventListener("click", () => {
       const d = dateInput.value;
-      if (d) loadDay(d);
+      if (d) {
+        updateDayLabel(d);
+        loadDay(d);
+      }
     });
 
     document.getElementById("prev-day").addEventListener("click", () => {
@@ -54,6 +73,7 @@
       d.setDate(d.getDate() - 1);
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
+      updateDayLabel(newDate);
       loadDay(newDate);
     });
 
@@ -62,13 +82,26 @@
       d.setDate(d.getDate() + 1);
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
+      updateDayLabel(newDate);
       loadDay(newDate);
     });
 
     document.getElementById("today").addEventListener("click", () => {
       const today = new Date().toISOString().split("T")[0];
       dateInput.value = today;
+      updateDayLabel(today);
       loadDay(today);
+    });
+
+    // Re-render when filters change
+    ["filter-practice", "filter-game", "filter-available"].forEach(id => {
+      document.getElementById(id).addEventListener("change", () => {
+        const d = dateInput.value;
+        if (d) {
+          updateDayLabel(d);
+          loadDay(d);
+        }
+      });
     });
   </script>
 
