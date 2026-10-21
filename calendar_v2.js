@@ -60,19 +60,27 @@ function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
-    let f = fieldMap[b.field];
 
+    // ⭐ FIX: use field_display when available (correct half-field / real field)
+    let fieldId = b.field_display || b.field;
+
+    let f = fieldMap[fieldId];
+
+    // fallback: try surface match
     if (!f && b.surface) {
       const corrected = day.fields.find(x => x.surface === b.surface);
       if (corrected) f = corrected;
     }
+
+    // fallback: try original field
+    if (!f) f = fieldMap[b.field];
 
     if (!f) return;
 
     blocks.push({
       complex: f.complex,
       fieldId: f.id,
-      fieldName: f.name,
+      fieldName: f.name,   // ⭐ now correct (A/B, 1/2, etc.)
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
@@ -82,6 +90,7 @@ function buildBlocks(day, fieldMap) {
 
   return blocks;
 }
+
 
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
