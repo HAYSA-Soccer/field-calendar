@@ -291,6 +291,7 @@ function renderComplexTimeline(complex, events, availability) {
   const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
   const laneWidth = 100 / laneCount;
 
+  // Render events
   events.forEach(e => {
     const block = document.createElement("div");
     block.className = "block event-block";
@@ -314,14 +315,19 @@ function renderComplexTimeline(complex, events, availability) {
   availTrack.className = "avail-track";
   availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
+  // ⭐ Correct availability placement: next to event lanes
   availability.forEach(a => {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
+    // Dynamic left offset and width based on event lanes
+    const leftPct = laneCount * laneWidth;
+    const widthPct = 100 - leftPct;
+
     block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
-    block.style.left = "0";
-    block.style.width = "100%";
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
 
     block.innerHTML = `
       <div class="block-title">Available</div>
