@@ -155,3 +155,17 @@
 .legend-color.practice { background: #e0e0e0; }
 .legend-color.game     { background: #d0e4ff; }
 .legend-color.available{ background: #d9ffd9; }
+
+/* FIX: allow availability to overlay events without being pushed right */
+.tracks {
+  position: absolute;
+  left: 80px;
+  right: 0;
+  height: 100%;
+  display: block;       /* NEW */
+}
+
+.avail-track {
+  left: 0 !important;   /* NEW */
+  width: 100% !important; /* NEW */
+}
