@@ -1,19 +1,13 @@
-.complex {
-  flex: 1;
-  background: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-}
-
+/* Timeline container */
 .timeline {
   position: relative;
-  height: calc((21 - 8) * 60px);
+  height: calc((21 - 8) * 60px); /* 8am–9pm at 60px/hour */
+  display: flex;
 }
 
+/* Hour labels */
 .hours {
-  position: absolute;
-  left: 0;
+  position: relative;
   width: 80px;
 }
 
@@ -23,39 +17,45 @@
   color: #555;
 }
 
-.events-track,
-.avail-track {
-  position: absolute;
-  left: 80px;
-  right: 0;
+/* Event + availability layers */
+.tracks {
+  position: relative;
+  flex: 1;
 }
 
+/* Events sit on top */
 .events-track {
+  position: absolute;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 
+/* Availability sits behind */
 .avail-track {
+  position: absolute;
+  left: 0;
+  right: 0;
   z-index: 1;
-  opacity: 0.6;
 }
 
+/* Blocks */
 .block {
   position: absolute;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 4px;
   font-size: 11px;
+  background: #fff;
 }
 
-.event-block.practice {
-  background: #e0e0e0;
-}
+/* Event types */
+.event-block.practice { background: #e0e0e0; }
+.event-block.game     { background: #d0e4ff; }
 
-.event-block.game {
-  background: #d0e4ff;
-}
-
-.avail-block.free {
+/* Availability */
+.avail-block {
   background: #d9ffd9;
   border-color: #4caf50;
+  opacity: 0.85;
 }
