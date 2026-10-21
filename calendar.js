@@ -19,6 +19,24 @@ function overlaps(aStart, aEnd, bStart, bEnd) {
   return aStart < bEnd && bStart < aEnd;
 }
 
+function isSameFieldOrParent(f1, f2) {
+  if (f1 === f2) return true;
+  const p1 = f1.replace(/[A-B]$/, "");
+  const p2 = f2.replace(/[A-B]$/, "");
+  return p1 === p2;
+}
+
+function updateDayLabel(dateStr) {
+  const d = new Date(dateStr + "T00:00:00");
+  const dayName = d.toLocaleDateString("en-US", { weekday: "long" });
+  const pretty = d.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+  document.getElementById("day-label").textContent = `${dayName}, ${pretty}`;
+}
+
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
   const container = document.getElementById("calendar");
@@ -54,7 +72,6 @@ function buildBlocks(day, fieldMap) {
   (day.merged || []).forEach(b => {
     let f = fieldMap[b.field];
 
-    // If merged block uses parent full-field, try to match by surface name
     if (!f && b.surface) {
       const corrected = day.fields.find(x => x.surface === b.surface);
       if (corrected) {
@@ -111,6 +128,7 @@ function suppressSubfields(blocks, fieldMap) {
 /**
  * Dynamic availability: minute-by-minute free-field set per complex,
  * merged into blocks whenever the free-field set stays identical.
+ * Full-field events suppress all availability.
  */
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
@@ -122,6 +140,19 @@ function buildAvailability(day, fieldMap, blocks) {
     for (let t = DAY_START; t < DAY_END; t += 1) {
       const bookedFields = new Set();
       const freeFields   = new Set();
+
+      // If ANY full-field block overlaps this minute, no fields are free
+      const fullFieldBooked = blocks.some(b =>
+        b.complex === complex &&
+        isFullField(fieldMap[b.fieldId]) &&
+        t >= b.start && t < b.end &&
+        b.type !== "free"
+      );
+
+      if (fullFieldBooked) {
+        timeline.push({ minute: t, free: [] });
+        continue;
+      }
 
       // events (non-free)
       blocks.forEach(b => {
@@ -247,15 +278,25 @@ function renderDayCalendar(day) {
   blocks = suppressSubfields(blocks, fieldMap);
 
   const availability = buildAvailability(day, fieldMap, blocks);
-  const events = buildEventLanes(blocks);
+  const eventsByComplex = buildEventLanes(blocks);
+
+  const showPractice   = document.getElementById("filter-practice").checked;
+  const showGame       = document.getElementById("filter-game").checked;
+  const showAvailable  = document.getElementById("filter-available").checked;
 
   Object.keys(day.complexes).forEach(complex => {
+    const events = (eventsByComplex[complex] || []).filter(e => {
+      if (e.type === "practice") return showPractice;
+      if (e.type === "game") return showGame;
+      return true;
+    });
+
+    const avail = availability
+      .filter(a => a.complex === complex)
+      .filter(a => showAvailable);
+
     container.appendChild(
-      renderComplexTimeline(
-        complex,
-        events[complex] || [],
-        availability.filter(a => a.complex === complex)
-      )
+      renderComplexTimeline(complex, events, avail)
     );
   });
 }
@@ -291,11 +332,21 @@ function renderComplexTimeline(complex, events, availability) {
   const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
   const laneWidth = 100 / laneCount;
 
+  // Mark conflicts
+  events.forEach(e => {
+    e.conflict = events.some(other =>
+      other !== e &&
+      overlaps(e.start, e.end, other.start, other.end) &&
+      isSameFieldOrParent(e.fieldId, other.fieldId)
+    );
+  });
+
   // Render events
   events.forEach(e => {
     const block = document.createElement("div");
     block.className = "block event-block";
     block.classList.add(e.type);
+    if (e.conflict) block.classList.add("conflict");
 
     block.style.top = ((e.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((e.end - e.start) * PX_PER_MIN) + "px";
@@ -315,12 +366,11 @@ function renderComplexTimeline(complex, events, availability) {
   availTrack.className = "avail-track";
   availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  // ⭐ Correct availability placement: next to event lanes
+  // Availability next to event lanes
   availability.forEach(a => {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    // Dynamic left offset and width based on event lanes
     const leftPct = laneCount * laneWidth;
     const widthPct = 100 - leftPct;
 
