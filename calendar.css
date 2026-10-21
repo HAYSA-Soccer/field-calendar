@@ -1,8 +1,25 @@
+/* Complexes side-by-side */
+#calendar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Each complex column */
+.complex {
+  flex: 1;
+  min-width: 420px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
 /* Timeline container */
 .timeline {
   position: relative;
   height: calc((21 - 8) * 60px); /* 8am–9pm at 60px/hour */
-  display: flex;
 }
 
 /* Hour labels */
@@ -23,7 +40,7 @@
 /* Track container (events + availability) */
 .tracks {
   position: absolute;
-  left: 80px;   /* next to hour column */
+  left: 80px; /* next to hour column */
   right: 0;
   height: 100%;
 }
@@ -47,7 +64,7 @@
   height: 100%;
   z-index: 1;
   opacity: 0.85;
-  pointer-events: none; /* important: availability never blocks events */
+  pointer-events: none; /* important */
 }
 
 /* Blocks */
