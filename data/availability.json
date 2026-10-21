@@ -3679,7 +3679,12 @@
         }
       ],
       "availability": {
-        "H-HST": [],
+        "H-HST": [
+          {
+            "start": "18:00",
+            "end": "18:30"
+          }
+        ],
         "H-HST1": [
           {
             "start": "18:00",
@@ -3793,19 +3798,6 @@
       },
       "events": {
         "H-HST": [
-          {
-            "event_id": "8499a7edbf4ebd9def3ce1da78de0e5d",
-            "date": "2026-10-21",
-            "start": "18:00",
-            "end": "19:30",
-            "field": "H-HST",
-            "type": "practice",
-            "title": "5/6 Boys Travel (Walsh) Practice",
-            "team": "5/6 Boys Travel",
-            "coach": "Walsh",
-            "grade": "5/6",
-            "source": "ICS"
-          },
           {
             "event_id": "b2fac72f3e7997f172ed48021ddb6f91",
             "date": "2026-10-21",
@@ -4105,6 +4097,15 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST",
+          "start": "18:00",
+          "end": "18:30",
+          "start_12": "6:00 PM",
+          "end_12": "6:30 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-HST1",
           "start": "18:00",
           "end": "21:00",
@@ -4139,19 +4140,6 @@
           "end_12": "7:00 PM",
           "type": "free",
           "title": ""
-        },
-        {
-          "field": "H-HST",
-          "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "type": "practice",
-          "title": "5/6 Boys Travel (Walsh) Practice",
-          "team": "5/6 Boys Travel",
-          "coach": "Walsh",
-          "grade": "5/6",
-          "source": "ICS"
         },
         {
           "field": "H-SJ4",
@@ -7623,7 +7611,12 @@
           }
         ],
         "availability": {
-          "H-HST": [],
+          "H-HST": [
+            {
+              "start": "18:00",
+              "end": "18:30"
+            }
+          ],
           "H-HST1": [
             {
               "start": "18:00",
@@ -7737,19 +7730,6 @@
         },
         "events": {
           "H-HST": [
-            {
-              "event_id": "8499a7edbf4ebd9def3ce1da78de0e5d",
-              "date": "2026-10-21",
-              "start": "18:00",
-              "end": "19:30",
-              "field": "H-HST",
-              "type": "practice",
-              "title": "5/6 Boys Travel (Walsh) Practice",
-              "team": "5/6 Boys Travel",
-              "coach": "Walsh",
-              "grade": "5/6",
-              "source": "ICS"
-            },
             {
               "event_id": "b2fac72f3e7997f172ed48021ddb6f91",
               "date": "2026-10-21",
@@ -8049,6 +8029,15 @@
             "source": "ICS"
           },
           {
+            "field": "H-HST",
+            "start": "18:00",
+            "end": "18:30",
+            "start_12": "6:00 PM",
+            "end_12": "6:30 PM",
+            "type": "free",
+            "title": ""
+          },
+          {
             "field": "H-HST1",
             "start": "18:00",
             "end": "21:00",
@@ -8083,19 +8072,6 @@
             "end_12": "7:00 PM",
             "type": "free",
             "title": ""
-          },
-          {
-            "field": "H-HST",
-            "start": "18:00",
-            "end": "19:30",
-            "start_12": "6:00 PM",
-            "end_12": "7:30 PM",
-            "type": "practice",
-            "title": "5/6 Boys Travel (Walsh) Practice",
-            "team": "5/6 Boys Travel",
-            "coach": "Walsh",
-            "grade": "5/6",
-            "source": "ICS"
           },
           {
             "field": "H-SJ4",
@@ -13416,7 +13392,12 @@
         }
       ],
       "availability": {
-        "H-HST": [],
+        "H-HST": [
+          {
+            "start": "18:00",
+            "end": "18:30"
+          }
+        ],
         "H-HST1": [
           {
             "start": "18:00",
@@ -13530,19 +13511,6 @@
       },
       "events": {
         "H-HST": [
-          {
-            "event_id": "8499a7edbf4ebd9def3ce1da78de0e5d",
-            "date": "2026-10-21",
-            "start": "18:00",
-            "end": "19:30",
-            "field": "H-HST",
-            "type": "practice",
-            "title": "5/6 Boys Travel (Walsh) Practice",
-            "team": "5/6 Boys Travel",
-            "coach": "Walsh",
-            "grade": "5/6",
-            "source": "ICS"
-          },
           {
             "event_id": "b2fac72f3e7997f172ed48021ddb6f91",
             "date": "2026-10-21",
@@ -13842,6 +13810,15 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST",
+          "start": "18:00",
+          "end": "18:30",
+          "start_12": "6:00 PM",
+          "end_12": "6:30 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-HST1",
           "start": "18:00",
           "end": "21:00",
@@ -13876,19 +13853,6 @@
           "end_12": "7:00 PM",
           "type": "free",
           "title": ""
-        },
-        {
-          "field": "H-HST",
-          "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "type": "practice",
-          "title": "5/6 Boys Travel (Walsh) Practice",
-          "team": "5/6 Boys Travel",
-          "coach": "Walsh",
-          "grade": "5/6",
-          "source": "ICS"
         },
         {
           "field": "H-SJ4",
