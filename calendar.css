@@ -107,3 +107,51 @@
   font-size: 10px;
   color: #555;
 }
+
+
+#nav-buttons {
+  margin: 15px 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #005bbb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #004999;
+}
+
+#legend {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.legend-color {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+.legend-color.practice { background: #e0e0e0; }
+.legend-color.game     { background: #d0e4ff; }
+.legend-color.available{ background: #d9ffd9; }
