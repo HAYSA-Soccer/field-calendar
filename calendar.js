@@ -1,6 +1,6 @@
 const DAY_START = 8 * 60;
 const DAY_END   = 21 * 60;
-const SLOT_SIZE = 30;
+const PX_PER_MIN = 1; // 60px/hour
 
 function parseTime(t) {
   const [h, m] = t.split(":").map(Number);
@@ -13,10 +13,6 @@ function fmt(mins) {
   const suffix = h >= 12 ? "PM" : "AM";
   h = (h % 12) || 12;
   return `${h}:${m.toString().padStart(2, "0")} ${suffix}`;
-}
-
-function fmtRange(start, end) {
-  return `${fmt(start)} – ${fmt(end)}`;
 }
 
 function overlaps(aStart, aEnd, bStart, bEnd) {
@@ -44,65 +40,167 @@ function buildFieldMap(day) {
   return map;
 }
 
-function buildSlots() {
-  const slots = [];
-  for (let t = DAY_START; t < DAY_END; t += SLOT_SIZE) {
-    slots.push({ start: t, end: t + SLOT_SIZE });
-  }
-  return slots;
+function isFullField(fieldObj) {
+  return fieldObj.name.includes("(Full)");
 }
 
-function getSlotState(day, fieldMap, complexName, slot) {
-  const fieldIds = day.complexes[complexName];
-  const slotStart = slot.start;
-  const slotEnd   = slot.end;
+function buildBlocks(day, fieldMap) {
+  const blocks = [];
 
-  const booked = [];
-  const free   = [];
-
-  // EVENTS (from merged)
   (day.merged || []).forEach(b => {
     const f = fieldMap[b.field];
-    if (!f || f.complex !== complexName) return;
+    if (!f) return;
 
-    const bs = parseTime(b.start);
-    const be = parseTime(b.end);
-    if (!overlaps(bs, be, slotStart, slotEnd)) return;
-
-    if (b.type !== "free") {
-      booked.push({
-        fieldId: b.field,
-        fieldName: f.name,
-        title: b.title,
-        type: b.type,
-        start: bs,
-        end: be
-      });
-    }
+    blocks.push({
+      complex: f.complex,
+      fieldId: b.field,
+      fieldName: f.name,
+      start: parseTime(b.start),
+      end: parseTime(b.end),
+      type: b.type,
+      title: b.title || (b.type === "free" ? "Available" : "Booked")
+    });
   });
 
-  // AVAILABILITY
-  fieldIds.forEach(fid => {
-    const f = fieldMap[fid];
-    const ranges = day.availability[fid] || [];
+  return blocks;
+}
 
-    const isFree = ranges.some(r => {
-      const rs = parseTime(r.start);
-      const re = parseTime(r.end);
-      return overlaps(rs, re, slotStart, slotEnd);
+function suppressSubfields(blocks, fieldMap) {
+  const out = [];
+
+  const byComplex = {};
+  blocks.forEach(b => {
+    if (!byComplex[b.complex]) byComplex[b.complex] = [];
+    byComplex[b.complex].push(b);
+  });
+
+  Object.keys(byComplex).forEach(complex => {
+    const list = byComplex[complex];
+    const fullBlocks = list.filter(b => isFullField(fieldMap[b.fieldId]));
+    const subBlocks  = list.filter(b => !isFullField(fieldMap[b.fieldId]));
+
+    subBlocks.forEach(sb => {
+      const suppressed = fullBlocks.some(fb =>
+        overlaps(fb.start, fb.end, sb.start, sb.end)
+      );
+      if (!suppressed) out.push(sb);
     });
 
-    const isBooked = booked.some(b => b.fieldId === fid);
+    fullBlocks.forEach(fb => out.push(fb));
+  });
 
-    if (isFree && !isBooked) {
-      free.push({
-        fieldId: fid,
-        fieldName: f.name
+  return out;
+}
+
+function buildAvailability(day, fieldMap, blocks) {
+  const byComplex = {};
+  blocks.forEach(b => {
+    if (!byComplex[b.complex]) byComplex[b.complex] = [];
+    byComplex[b.complex].push(b);
+  });
+
+  const avail = [];
+
+  Object.keys(byComplex).forEach(complex => {
+    const fields = day.complexes[complex];
+    const events = byComplex[complex].filter(b => b.type !== "free");
+
+    const ranges = [];
+
+    fields.forEach(fid => {
+      const arr = day.availability[fid] || [];
+      arr.forEach(r => {
+        ranges.push({
+          fieldId: fid,
+          fieldName: fieldMap[fid].name,
+          start: parseTime(r.start),
+          end: parseTime(r.end)
+        });
+      });
+    });
+
+    ranges.sort((a, b) => a.start - b.start);
+
+    let curStart = null;
+    let curEnd = null;
+    let curFields = new Set();
+
+    ranges.forEach(r => {
+      if (curStart === null) {
+        curStart = r.start;
+        curEnd = r.end;
+        curFields.add(r.fieldName);
+      } else if (r.start <= curEnd) {
+        curEnd = Math.max(curEnd, r.end);
+        curFields.add(r.fieldName);
+      } else {
+        avail.push({
+          complex,
+          start: curStart,
+          end: curEnd,
+          fields: Array.from(curFields)
+        });
+        curStart = r.start;
+        curEnd = r.end;
+        curFields = new Set([r.fieldName]);
+      }
+    });
+
+    if (curStart !== null) {
+      avail.push({
+        complex,
+        start: curStart,
+        end: curEnd,
+        fields: Array.from(curFields)
       });
     }
   });
 
-  return { booked, free };
+  return avail;
+}
+
+function buildEventLanes(blocks) {
+  const byComplex = {};
+  blocks.forEach(b => {
+    if (b.type === "free") return;
+    if (!byComplex[b.complex]) byComplex[b.complex] = [];
+    byComplex[b.complex].push(b);
+  });
+
+  const lanesByComplex = {};
+
+  Object.keys(byComplex).forEach(complex => {
+    const list = byComplex[complex].sort((a, b) => a.start - b.start);
+    const lanes = [];
+
+    list.forEach(b => {
+      let laneIndex = 0;
+      while (true) {
+        const lane = lanes[laneIndex] || [];
+        const conflict = lane.some(e => overlaps(e.start, e.end, b.start, b.end));
+        if (!conflict) {
+          lane.push(b);
+          lanes[laneIndex] = lane;
+          break;
+        }
+        laneIndex++;
+      }
+    });
+
+    const out = [];
+    lanes.forEach((lane, idx) => {
+      lane.forEach(b => {
+        out.push({
+          ...b,
+          lane: idx
+        });
+      });
+    });
+
+    lanesByComplex[complex] = out;
+  });
+
+  return lanesByComplex;
 }
 
 function renderDayCalendar(day) {
@@ -110,78 +208,89 @@ function renderDayCalendar(day) {
   container.innerHTML = "";
 
   const fieldMap = buildFieldMap(day);
-  const slots = buildSlots();
+  let blocks = buildBlocks(day, fieldMap);
+  blocks = suppressSubfields(blocks, fieldMap);
 
-  Object.keys(day.complexes).forEach(complexName => {
-    container.appendChild(renderComplex(day, fieldMap, complexName, slots));
+  const availability = buildAvailability(day, fieldMap, blocks);
+  const events = buildEventLanes(blocks);
+
+  Object.keys(day.complexes).forEach(complex => {
+    container.appendChild(renderComplexTimeline(complex, events[complex] || [], availability.filter(a => a.complex === complex)));
   });
 }
 
-function renderComplex(day, fieldMap, complexName, slots) {
+function renderComplexTimeline(complex, events, availability) {
   const div = document.createElement("div");
   div.className = "complex";
 
   const header = document.createElement("div");
   header.className = "complex-header";
-  header.textContent = complexName;
+  header.textContent = complex;
   div.appendChild(header);
 
   const timeline = document.createElement("div");
   timeline.className = "timeline";
 
-  slots.forEach(slot => {
-    const row = document.createElement("div");
-    row.className = "time-row";
+  const hours = document.createElement("div");
+  hours.className = "hours";
 
-    const timeCell = document.createElement("div");
-    timeCell.className = "time-cell";
-    timeCell.textContent = fmtRange(slot.start, slot.end);
-    row.appendChild(timeCell);
+  for (let t = DAY_START; t <= DAY_END; t += 60) {
+    const h = document.createElement("div");
+    h.className = "hour";
+    h.style.top = ((t - DAY_START) * PX_PER_MIN) + "px";
+    h.textContent = fmt(t);
+    hours.appendChild(h);
+  }
 
-    const blocksRow = document.createElement("div");
-    blocksRow.className = "blocks-row";
+  const eventsTrack = document.createElement("div");
+  eventsTrack.className = "events-track";
+  eventsTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-    const { booked, free } = getSlotState(day, fieldMap, complexName, slot);
+  const maxLane = events.reduce((m, e) => Math.max(m, e.lane), 0);
+  const laneWidth = maxLane >= 0 ? (100 / (maxLane + 1)) : 100;
 
-    // EVENTS LEFT
-    const eventsCell = document.createElement("div");
-    eventsCell.className = "events-cell";
+  events.forEach(e => {
+    const block = document.createElement("div");
+    block.className = "block event-block";
+    block.classList.add(e.type);
 
-    booked.forEach(b => {
-      const div = document.createElement("div");
-      div.className = "block event-block";
-      div.classList.add(b.type);
+    block.style.top = ((e.start - DAY_START) * PX_PER_MIN) + "px";
+    block.style.height = ((e.end - e.start) * PX_PER_MIN) + "px";
+    block.style.left = (e.lane * laneWidth) + "%";
+    block.style.width = laneWidth + "%";
 
-      div.innerHTML = `
-        <div class="block-title">${b.title}</div>
-        <div class="block-fields">${b.fieldName}</div>
-      `;
+    block.innerHTML = `
+      <div class="block-title">${e.title}</div>
+      <div class="block-fields">${e.fieldName}</div>
+      <div class="block-time">${fmt(e.start)} – ${fmt(e.end)}</div>
+    `;
 
-      eventsCell.appendChild(div);
-    });
-
-    // AVAILABILITY RIGHT
-    const availCell = document.createElement("div");
-    availCell.className = "avail-cell";
-
-    if (free.length > 0) {
-      const div = document.createElement("div");
-      div.className = "block avail-block free";
-
-      div.innerHTML = `
-        <div class="block-title">Available</div>
-        <div class="block-fields">${free.map(f => f.fieldName).join(", ")}</div>
-      `;
-
-      availCell.appendChild(div);
-    }
-
-    blocksRow.appendChild(eventsCell);
-    blocksRow.appendChild(availCell);
-
-    row.appendChild(blocksRow);
-    timeline.appendChild(row);
+    eventsTrack.appendChild(block);
   });
+
+  const availTrack = document.createElement("div");
+  availTrack.className = "avail-track";
+  availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
+
+  availability.forEach(a => {
+    const block = document.createElement("div");
+    block.className = "block avail-block free";
+
+    block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
+    block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
+
+    block.innerHTML = `
+      <div class="block-title">Available</div>
+      <div class="block-fields">${a.fields.join(", ")}</div>
+      <div class="block-time">${fmt(a.start)} – ${fmt(a.end)}</div>
+    `;
+
+    availTrack.appendChild(block);
+  });
+
+  timeline.appendChild(hours);
+  timeline.appendChild(eventsTrack);
+  timeline.appendChild(availTrack);
 
   div.appendChild(timeline);
   return div;
