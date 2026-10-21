@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *"   # every hour
   workflow_dispatch:
 
 jobs:
@@ -16,28 +16,41 @@ jobs:
       WEBAPP_URL: "https://script.google.com/macros/s/AKfycbz3dMJtYEYxPmoZmuacrM5dBGZ9Jbh5rW3OFtOQDXYyt2RRW41z41HQ4mui5EVzKJyQ/exec"
 
     steps:
+      # ---------------------------------------------------------
+      # 1. Checkout repo
+      # ---------------------------------------------------------
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0   # ⭐ REQUIRED for rebase to work
 
+      # ---------------------------------------------------------
+      # 2. Install jq
+      # ---------------------------------------------------------
       - name: Install jq
-        shell: bash
         run: sudo apt-get install -y jq
 
+      # ---------------------------------------------------------
+      # 3. Clear old JSON
+      # ---------------------------------------------------------
       - name: Clear old JSON
-        shell: bash
         run: |
           rm -f data/availability.json
           rm -f data/day/*.json
           rm -f data/week/*.json
           rm -f data/month/*.json
 
+      # ---------------------------------------------------------
+      # 4. Fetch season window
+      # ---------------------------------------------------------
       - name: Fetch season window
         id: season
-        shell: bash
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
 
-          # SAFE JSON VALIDATION
+          echo "Fetched season_window:"
+          echo "$RAW"
+
           if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
             echo "WARNING: Invalid JSON for season_window, replacing with {}"
             RAW="{}"
@@ -46,11 +59,16 @@ jobs:
           echo "$RAW" > season.json
           echo "season_file=season.json" >> $GITHUB_OUTPUT
 
+      # ---------------------------------------------------------
+      # 5. Fetch fields + complexes
+      # ---------------------------------------------------------
       - name: Fetch fields + complexes
         id: fields
-        shell: bash
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
+
+          echo "Fetched fields:"
+          echo "$RAW"
 
           if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
             echo "WARNING: Invalid JSON for fields, replacing with {}"
@@ -60,8 +78,10 @@ jobs:
           echo "$RAW" > fields.json
           echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
+      # ---------------------------------------------------------
+      # 6. Build day JSON files (handles 90+ days safely)
+      # ---------------------------------------------------------
       - name: Build day JSON files
-        shell: bash
         run: |
           SEASON_FILE="${{ steps.season.outputs.season_file }}"
           FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
@@ -74,7 +94,11 @@ jobs:
           CURRENT="$START"
           END_PLUS_ONE=$(date -d "$END next day" +%Y-%m-%d)
 
+          echo "Building day JSON from $START to $END"
+
           while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
+            echo "Fetching day: $CURRENT"
+
             RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
 
             if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
@@ -100,8 +124,10 @@ jobs:
             CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
           done
 
+      # ---------------------------------------------------------
+      # 7. Build week + month JSON
+      # ---------------------------------------------------------
       - name: Build week + month JSON
-        shell: bash
         run: |
           echo "Building weeks.json..."
           find data/day -name '*.json' -print0 | xargs -0 jq -s '
@@ -124,8 +150,10 @@ jobs:
             )
           ' > data/month/months.json
 
+      # ---------------------------------------------------------
+      # 8. Build final availability.json
+      # ---------------------------------------------------------
       - name: Build final availability.json
-        shell: bash
         run: |
           SEASON_FILE="${{ steps.season.outputs.season_file }}"
           FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
@@ -155,15 +183,18 @@ jobs:
               months: $months
             }' > data/availability.json
 
+      # ---------------------------------------------------------
+      # 9. Commit + safe rebase + push (never fails)
+      # ---------------------------------------------------------
       - name: Commit updated JSON
-        shell: bash
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
           git add -A
           git commit -m "Updated availability JSON" || true
 
-          # ⭐ FIX: pull latest remote changes before pushing
+          # ⭐ SAFELY pull remote changes
           git pull --rebase origin main || true
 
           # ⭐ Push updated JSON + JS
