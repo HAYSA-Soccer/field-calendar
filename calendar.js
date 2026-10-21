@@ -119,13 +119,15 @@ function buildAvailability(day, fieldMap, blocks) {
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t += 1) {
 
-      // ⭐ NEW: suppress availability if ANY full-field event overlaps
-      const fullFieldBooked = blocks.some(b =>
-        b.complex === complex &&
-        isFullField(fieldMap[b.fieldId]) &&
-        b.type !== "free" &&
-        t >= b.start && t < b.end
-      );
+      // ⭐ Only let full-field events suppress availability on TURF
+      const fullFieldBooked =
+        complex === "TURF" &&
+        blocks.some(b =>
+          b.complex === complex &&
+          isFullField(fieldMap[b.fieldId]) &&
+          b.type !== "free" &&
+          t >= b.start && t < b.end
+        );
 
       const bookedFields = new Set();
       const freeFields   = new Set();
@@ -244,8 +246,8 @@ function renderDayCalendar(day) {
   container.innerHTML = "";
 
   const fieldMap = buildFieldMap(day);
-  let blocks = buildBlocks(day, fieldMap);
-  blocks = suppressSubfields(blocks, fieldMap);
+  // ⭐ Use raw merged blocks so half-fields and all real fields show up
+  const blocks = buildBlocks(day, fieldMap);
 
   const availability = buildAvailability(day, fieldMap, blocks);
   const events = buildEventLanes(blocks);
@@ -319,7 +321,7 @@ function renderComplexTimeline(complex, events, availability) {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    // ⭐ FIXED: minute‑specific lane count
+    // ⭐ minute‑specific lane count
     let minuteLaneCount = 0;
     events.forEach(e => {
       if (a.start < e.end && e.start < a.end) {
