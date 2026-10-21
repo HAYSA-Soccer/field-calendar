@@ -30,10 +30,10 @@
   <div id="filters">
     <label><input type="checkbox" id="filter-practice" checked> Practice</label>
     <label><input type="checkbox" id="filter-game" checked> Game</label>
-    <label><input type="checkbox" id="filter-available" checked> Available</label>
+    <label><input type="checkbox" id="filter-available" checked> Availability</label>
   </div>
 
-  <!-- Date label -->
+  <!-- Day label -->
   <div id="day-label"></div>
 
   <!-- Date Picker -->
@@ -62,10 +62,8 @@
 
     document.getElementById("load-date").addEventListener("click", () => {
       const d = dateInput.value;
-      if (d) {
-        updateDayLabel(d);
-        loadDay(d);
-      }
+      updateDayLabel(d);
+      loadDay(d);
     });
 
     document.getElementById("prev-day").addEventListener("click", () => {
@@ -93,14 +91,11 @@
       loadDay(today);
     });
 
-    // Re-render when filters change
     ["filter-practice", "filter-game", "filter-available"].forEach(id => {
       document.getElementById(id).addEventListener("change", () => {
         const d = dateInput.value;
-        if (d) {
-          updateDayLabel(d);
-          loadDay(d);
-        }
+        updateDayLabel(d);
+        loadDay(d);
       });
     });
   </script>
