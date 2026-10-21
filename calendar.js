@@ -14,7 +14,6 @@ function updateDayLabel(dateStr) {
   if (el) el.textContent = `${dayName}, ${pretty}`;
 }
 
-
 function parseTime(t) {
   const [h, m] = t.split(":").map(Number);
   return h * 60 + m;
@@ -57,17 +56,12 @@ function isFullField(fieldObj) {
   return fieldObj.name.includes("(Full)");
 }
 
-/**
- * Build blocks from merged data, correcting subfield IDs so we
- * don't collapse everything into "(Full)".
- */
 function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
     let f = fieldMap[b.field];
 
-    // If merged block uses parent full-field, try to match by surface name
     if (!f && b.surface) {
       const corrected = day.fields.find(x => x.surface === b.surface);
       if (corrected) {
@@ -91,9 +85,6 @@ function buildBlocks(day, fieldMap) {
   return blocks;
 }
 
-/**
- * Suppress subfields when a full-field block overlaps them (A1 rule).
- */
 function suppressSubfields(blocks, fieldMap) {
   const out = [];
 
@@ -121,10 +112,6 @@ function suppressSubfields(blocks, fieldMap) {
   return out;
 }
 
-/**
- * Dynamic availability: minute-by-minute free-field set per complex,
- * merged into blocks whenever the free-field set stays identical.
- */
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
@@ -136,7 +123,6 @@ function buildAvailability(day, fieldMap, blocks) {
       const bookedFields = new Set();
       const freeFields   = new Set();
 
-      // events (non-free)
       blocks.forEach(b => {
         if (b.complex !== complex) return;
         if (b.type === "free") return;
@@ -145,7 +131,6 @@ function buildAvailability(day, fieldMap, blocks) {
         }
       });
 
-      // availability per field
       fields.forEach(fid => {
         const f = fieldMap[fid];
         const ranges = day.availability[fid] || [];
@@ -167,7 +152,6 @@ function buildAvailability(day, fieldMap, blocks) {
       });
     }
 
-    // merge contiguous minutes where free-field set is identical
     let curStart = null;
     let curFields = null;
 
@@ -204,9 +188,6 @@ function buildAvailability(day, fieldMap, blocks) {
   return avail;
 }
 
-/**
- * Build lanes so overlapping events sit side-by-side.
- */
 function buildEventLanes(blocks) {
   const byComplex = {};
   blocks.forEach(b => {
@@ -304,7 +285,6 @@ function renderComplexTimeline(complex, events, availability) {
   const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
   const laneWidth = 100 / laneCount;
 
-  // Render events
   events.forEach(e => {
     const block = document.createElement("div");
     block.className = "block event-block";
@@ -328,19 +308,32 @@ function renderComplexTimeline(complex, events, availability) {
   availTrack.className = "avail-track";
   availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  // ⭐ Correct availability placement: next to event lanes
+  // ⭐ FIXED AVAILABILITY PLACEMENT (minute‑specific lane count)
   availability.forEach(a => {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    // Dynamic left offset and width based on event lanes
-    const leftPct = laneCount * laneWidth;
-    const widthPct = 100 - leftPct;
+    // Compute laneCount only for minutes overlapping this availability block
+    let minuteLaneCount = 0;
+    events.forEach(e => {
+      if (a.start < e.end && e.start < a.end) {
+        minuteLaneCount = Math.max(minuteLaneCount, e.lane + 1);
+      }
+    });
+
+    if (minuteLaneCount === 0) {
+      block.style.left = "0%";
+      block.style.width = "100%";
+    } else {
+      const minuteLaneWidth = 100 / minuteLaneCount;
+      const leftPct = minuteLaneCount * minuteLaneWidth;
+      const widthPct = 100 - leftPct;
+      block.style.left = leftPct + "%";
+      block.style.width = widthPct + "%";
+    }
 
     block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
-    block.style.left = leftPct + "%";
-    block.style.width = widthPct + "%";
 
     block.innerHTML = `
       <div class="block-title">Available</div>
