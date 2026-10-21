@@ -1,56 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HAYSA Calendar</title>
-  <link rel="stylesheet" href="calendar.css">
-</head>
+<h1>HAYSA Calendar</h1>
 
-<body>
-
-  <h1>HAYSA Calendar</h1>
-
-  <div id="date-picker">
-    <label for="calendar-date">Select Date:</label>
-    <input type="date" id="calendar-date">
-    <button id="load-date">Go</button>
+<!-- Legend -->
+<div id="legend">
+  <div class="legend-item">
+    <span class="legend-color practice"></span> Practice
   </div>
-
-  <div id="nav-buttons">
-    <button id="prev-day">← Previous Day</button>
-    <button id="next-day">Next Day →</button>
+  <div class="legend-item">
+    <span class="legend-color game"></span> Game
   </div>
+  <div class="legend-item">
+    <span class="legend-color available"></span> Available
+  </div>
+</div>
 
-  <div id="calendar"></div>
+<!-- Date Picker -->
+<div id="date-picker">
+  <label for="calendar-date">Select Date:</label>
+  <input type="date" id="calendar-date">
+  <button id="load-date" class="nav-btn">Go</button>
+</div>
 
-  <script src="calendar.js"></script>
-  <script>
-    const dateInput = document.getElementById("calendar-date");
-    const today = new Date().toISOString().split("T")[0];
-    dateInput.value = today;
-    loadDay(today);
+<!-- Navigation Buttons -->
+<div id="nav-buttons">
+  <button id="prev-day" class="nav-btn">← Previous Day</button>
+  <button id="today" class="nav-btn">Today</button>
+  <button id="next-day" class="nav-btn">Next Day →</button>
+</div>
 
-    document.getElementById("load-date").addEventListener("click", () => {
-      const d = dateInput.value;
-      if (d) loadDay(d);
-    });
-
-    document.getElementById("prev-day").addEventListener("click", () => {
-      const d = new Date(dateInput.value);
-      d.setDate(d.getDate() - 1);
-      const newDate = d.toISOString().split("T")[0];
-      dateInput.value = newDate;
-      loadDay(newDate);
-    });
-
-    document.getElementById("next-day").addEventListener("click", () => {
-      const d = new Date(dateInput.value);
-      d.setDate(d.getDate() + 1);
-      const newDate = d.toISOString().split("T")[0];
-      dateInput.value = newDate;
-      loadDay(newDate);
-    });
-  </script>
-
-</body>
-</html>
+<div id="calendar"></div>
