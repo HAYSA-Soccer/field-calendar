@@ -36,10 +36,8 @@ jobs:
         shell: bash
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
-          # SAFE: if empty or null, replace with {}
           if [ -z "$RAW" ] || [ "$RAW" = "null" ]; then RAW="{}"; fi
           echo "$RAW" | jq empty || RAW="{}"
-
           echo "$RAW" > season.json
           echo "season_file=season.json" >> $GITHUB_OUTPUT
 
@@ -50,7 +48,6 @@ jobs:
           RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
           if [ -z "$RAW" ] || [ "$RAW" = "null" ]; then RAW="{}"; fi
           echo "$RAW" | jq empty || RAW="{}"
-
           echo "$RAW" > fields.json
           echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
@@ -71,7 +68,6 @@ jobs:
           while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
             RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
 
-            # SAFE: normalize empty/null to {}
             if [ -z "$RAW" ] || [ "$RAW" = "null" ]; then RAW="{}"; fi
             echo "$RAW" | jq empty || RAW="{}"
 
@@ -136,175 +132,4 @@ jobs:
             --arg end "$END" \
             --argjson fields "$(cat $FIELDS_FILE)" \
             --argjson days "$DAYS_JSON" \
-            --argjson weeks "$(cat data/week/weeks.json)" \
-            --argjson months "$(cat data/month/months.json)" \
-            '{
-              season_start: $start,
-              season_end: $end,
-              fields: $fields.fields,
-              complexes: $fields.complexes,
-              days: $days,
-              weeks: $weeks,
-              months: $months
-            }' > data/availability.json
-
-      - name: Commit updated JSON
-        shell: bash
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "Updated availability JSON" || true
-          git push
-name: Build Availability JSON
-
-permissions:
-  contents: write
-
-on:
-  schedule:
-    - cron: "0 * * * *"
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    env:
-      WEBAPP_URL: "https://script.google.com/macros/s/AKfycbz3dMJtYEYxPmoZmuacrM5dBGZ9Jbh5rW3OFtOQDXYyt2RRW41z41HQ4mui5EVzKJyQ/exec"
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Install jq
-        shell: bash
-        run: sudo apt-get install -y jq
-
-      - name: Clear old JSON
-        shell: bash
-        run: |
-          rm -f data/availability.json
-          rm -f data/day/*.json
-          rm -f data/week/*.json
-          rm -f data/month/*.json
-
-      - name: Fetch season window
-        id: season
-        shell: bash
-        run: |
-          RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
-          if ! echo "$RAW" | jq empty >/dev/null 2>&1; then exit 1; fi
-
-          echo "$RAW" > season.json
-          echo "season_file=season.json" >> $GITHUB_OUTPUT
-
-      - name: Fetch fields + complexes
-        id: fields
-        shell: bash
-        run: |
-          RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
-          if ! echo "$RAW" | jq empty >/dev/null 2>&1; then exit 1; fi
-
-          echo "$RAW" > fields.json
-          echo "fields_file=fields.json" >> $GITHUB_OUTPUT
-
-      - name: Build day JSON files
-        shell: bash
-        run: |
-          SEASON_FILE="${{ steps.season.outputs.season_file }}"
-          FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
-
-          START=$(jq -r '.season_start' "$SEASON_FILE")
-          END=$(jq -r '.season_end' "$SEASON_FILE")
-
-          mkdir -p data/day data/week data/month
-
-          CURRENT="$START"
-          END_PLUS_ONE=$(date -d "$END next day" +%Y-%m-%d)
-
-          while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
-            RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
-            if ! echo "$RAW" | jq empty >/dev/null 2>&1; then exit 1; fi
-
-            echo "$RAW" > day.json
-
-            jq -n \
-              --argjson day "$(cat day.json)" \
-              --argjson fields "$(cat $FIELDS_FILE)" \
-              '{
-                date: $day.date,
-                complexes: $fields.complexes,
-                fields: $fields.fields,
-                availability: $day.availability,
-                events: $day.events,
-                blocks: $day.blocks,
-                merged: $day.merged
-              }' > "data/day/${CURRENT}.json"
-
-            CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
-          done
-
-      - name: Build week + month JSON
-        shell: bash
-        run: |
-          echo "Building weeks.json..."
-          find data/day -name '*.json' -print0 | xargs -0 jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
-              ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
-              | ($ts | strftime("%w") | tonumber) as $w
-              | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
-              | ($mon_ts | strftime("%Y-%m-%d")) as $monday
-              | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
-            )
-          ' > data/week/weeks.json
-
-          echo "Building months.json..."
-          find data/day -name '*.json' -print0 | xargs -0 jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
-              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
-              |= (. // {}) | .[$d.date] = $d
-            )
-          ' > data/month/months.json
-
-      - name: Build final availability.json
-        shell: bash
-        run: |
-          SEASON_FILE="${{ steps.season.outputs.season_file }}"
-          FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
-
-          START=$(jq -r '.season_start' "$SEASON_FILE")
-          END=$(jq -r '.season_end' "$SEASON_FILE")
-
-          DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; .[$d.date] = $d)
-          ')
-
-          jq -n \
-            --arg start "$START" \
-            --arg end "$END" \
-            --argjson fields "$(cat $FIELDS_FILE)" \
-            --argjson days "$DAYS_JSON" \
-            --argjson weeks "$(cat data/week/weeks.json)" \
-            --argjson months "$(cat data/month/months.json)" \
-            '{
-              season_start: $start,
-              season_end: $end,
-              fields: $fields.fields,
-              complexes: $fields.complexes,
-              days: $days,
-              weeks: $weeks,
-              months: $months
-            }' > data/availability.json
-
-      - name: Commit updated JSON
-        shell: bash
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "Updated availability JSON" || true
-          git push
+            --argjson weeks "$(cat data/week
