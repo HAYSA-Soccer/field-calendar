@@ -16,6 +16,11 @@
   padding: 10px;
 }
 
+.complex-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
 /* Timeline container */
 .timeline {
   position: relative;
@@ -40,12 +45,12 @@
 /* Track container (events + availability) */
 .tracks {
   position: absolute;
-  left: 80px; /* next to hour column */
+  left: 80px;   /* next to hour column */
   right: 0;
   height: 100%;
 }
 
-/* Events sit on top */
+/* Events sit on top, use lanes */
 .events-track {
   position: absolute;
   top: 0;
@@ -55,7 +60,7 @@
   z-index: 2;
 }
 
-/* Availability sits behind */
+/* Availability sits behind, fills remaining vertical space */
 .avail-track {
   position: absolute;
   top: 0;
@@ -64,7 +69,7 @@
   height: 100%;
   z-index: 1;
   opacity: 0.85;
-  pointer-events: none; /* important */
+  pointer-events: none;
 }
 
 /* Blocks */
@@ -75,6 +80,7 @@
   padding: 4px;
   font-size: 11px;
   background: #fff;
+  box-sizing: border-box;
 }
 
 /* Event types */
@@ -85,4 +91,19 @@
 .avail-block {
   background: #d9ffd9;
   border-color: #4caf50;
+}
+
+.block-title {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.block-fields {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.block-time {
+  font-size: 10px;
+  color: #555;
 }
