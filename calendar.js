@@ -1,6 +1,6 @@
 const DAY_START = 8 * 60;
 const DAY_END   = 21 * 60;
-const PX_PER_MIN = 1; // 60px/hour
+const PX_PER_MIN = 1;
 
 function updateDayLabel(dateStr) {
   const d = new Date(dateStr + "T00:00:00");
@@ -64,9 +64,7 @@ function buildBlocks(day, fieldMap) {
 
     if (!f && b.surface) {
       const corrected = day.fields.find(x => x.surface === b.surface);
-      if (corrected) {
-        f = corrected;
-      }
+      if (corrected) f = corrected;
     }
 
     if (!f) return;
@@ -120,6 +118,15 @@ function buildAvailability(day, fieldMap, blocks) {
 
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t += 1) {
+
+      // ⭐ NEW: suppress availability if ANY full-field event overlaps
+      const fullFieldBooked = blocks.some(b =>
+        b.complex === complex &&
+        isFullField(fieldMap[b.fieldId]) &&
+        b.type !== "free" &&
+        t >= b.start && t < b.end
+      );
+
       const bookedFields = new Set();
       const freeFields   = new Set();
 
@@ -141,7 +148,7 @@ function buildAvailability(day, fieldMap, blocks) {
           return t >= rs && t < re;
         });
 
-        if (isFree && !bookedFields.has(f.name)) {
+        if (!fullFieldBooked && isFree && !bookedFields.has(f.name)) {
           freeFields.add(f.name);
         }
       });
@@ -308,12 +315,11 @@ function renderComplexTimeline(complex, events, availability) {
   availTrack.className = "avail-track";
   availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  // ⭐ FIXED AVAILABILITY PLACEMENT (minute‑specific lane count)
   availability.forEach(a => {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    // Compute laneCount only for minutes overlapping this availability block
+    // ⭐ FIXED: minute‑specific lane count
     let minuteLaneCount = 0;
     events.forEach(e => {
       if (a.start < e.end && e.start < a.end) {
