@@ -12,7 +12,6 @@ function fmt(mins) {
   let m = mins % 60;
   const suffix = h >= 12 ? "PM" : "AM";
   h = (h % 12) || 12;
-  h = (h % 12) || 12;
   return `${h}:${m.toString().padStart(2, "0")} ${suffix}`;
 }
 
@@ -45,28 +44,30 @@ function isFullField(fieldObj) {
   return fieldObj.name.includes("(Full)");
 }
 
+/**
+ * Build blocks from merged data, correcting subfield IDs so we
+ * don't collapse everything into "(Full)".
+ */
 function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
     let f = fieldMap[b.field];
 
-    // If merged block incorrectly uses the parent full-field,
-    // try to match the correct subfield using the surface name.
-    if (!f) {
+    // If merged block uses parent full-field, try to match by surface name
+    if (!f && b.surface) {
       const corrected = day.fields.find(x => x.surface === b.surface);
       if (corrected) {
         f = corrected;
       }
     }
 
-    // If still not found, skip the block
     if (!f) return;
 
     blocks.push({
       complex: f.complex,
-      fieldId: f.id,          // FIXED: use correct subfield ID
-      fieldName: f.name,      // FIXED: friendly name (no more "Full" unless true)
+      fieldId: f.id,
+      fieldName: f.name,
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
@@ -77,7 +78,9 @@ function buildBlocks(day, fieldMap) {
   return blocks;
 }
 
-
+/**
+ * Suppress subfields when a full-field block overlaps them (A1 rule).
+ */
 function suppressSubfields(blocks, fieldMap) {
   const out = [];
 
@@ -105,20 +108,22 @@ function suppressSubfields(blocks, fieldMap) {
   return out;
 }
 
-// UPDATED: dynamic availability based on changing free-field set
+/**
+ * Dynamic availability: minute-by-minute free-field set per complex,
+ * merged into blocks whenever the free-field set stays identical.
+ */
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
   Object.keys(day.complexes).forEach(complex => {
     const fields = day.complexes[complex];
 
-    // minute-by-minute snapshot of free fields
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t += 1) {
       const bookedFields = new Set();
       const freeFields   = new Set();
 
-      // events (non-free merged blocks)
+      // events (non-free)
       blocks.forEach(b => {
         if (b.complex !== complex) return;
         if (b.type === "free") return;
@@ -173,7 +178,6 @@ function buildAvailability(day, fieldMap, blocks) {
       }
     });
 
-    // final block
     if (curStart !== null && curFields && curFields.length > 0) {
       avail.push({
         complex,
@@ -187,6 +191,9 @@ function buildAvailability(day, fieldMap, blocks) {
   return avail;
 }
 
+/**
+ * Build lanes so overlapping events sit side-by-side.
+ */
 function buildEventLanes(blocks) {
   const byComplex = {};
   blocks.forEach(b => {
@@ -281,7 +288,8 @@ function renderComplexTimeline(complex, events, availability) {
   eventsTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
   const maxLane = events.reduce((m, e) => Math.max(m, e.lane), 0);
-  const laneWidth = maxLane >= 0 ? (100 / (maxLane + 1)) : 100;
+  const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
+  const laneWidth = 100 / laneCount;
 
   events.forEach(e => {
     const block = document.createElement("div");
@@ -308,10 +316,12 @@ function renderComplexTimeline(complex, events, availability) {
 
   availability.forEach(a => {
     const block = document.createElement("div");
-    block.className = "block avail-block free";
+    block.className = "block avail-block";
 
     block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
+    block.style.left = "0";
+    block.style.width = "100%";
 
     block.innerHTML = `
       <div class="block-title">Available</div>
@@ -322,9 +332,13 @@ function renderComplexTimeline(complex, events, availability) {
     availTrack.appendChild(block);
   });
 
+  const tracks = document.createElement("div");
+  tracks.className = "tracks";
+  tracks.appendChild(availTrack);
+  tracks.appendChild(eventsTrack);
+
   timeline.appendChild(hours);
-  timeline.appendChild(eventsTrack);
-  timeline.appendChild(availTrack);
+  timeline.appendChild(tracks);
 
   div.appendChild(timeline);
   return div;
