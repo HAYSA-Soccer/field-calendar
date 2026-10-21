@@ -1,45 +1,54 @@
-/* Complexes side-by-side */
+/* === COMPLEX COLUMN LAYOUT === */
 #calendar {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 24px;
   align-items: flex-start;
   overflow-x: auto;
+  padding-bottom: 20px;
 }
 
-/* Each complex column */
+/* Fluid but sane width */
 .complex {
-  flex: 1;
+  flex: 0 0 auto;
   min-width: 420px;
+  max-width: 600px;
   background: #fafafa;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px;
+  padding: 12px;
 }
 
-/* Mobile: allow narrower complexes */
+/* Mobile: stack vertically */
 @media (max-width: 768px) {
+  #calendar {
+    flex-direction: column;
+  }
   .complex {
-    min-width: 320px;
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
   }
 }
 
+/* === COMPLEX HEADER === */
 .complex-header {
   font-weight: bold;
-  margin-bottom: 8px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* Timeline container */
+/* === TIMELINE === */
 .timeline {
   position: relative;
-  height: calc((21 - 8) * 60px); /* 8am–9pm at 60px/hour */
+  height: calc((21 - 8) * 60px); /* 8am–9pm */
 }
 
-/* Hour labels */
+/* === HOURS COLUMN === */
 .hours {
   position: absolute;
   left: 0;
-  width: 80px;
+  width: 70px;
   height: 100%;
 }
 
@@ -50,15 +59,15 @@
   color: #555;
 }
 
-/* Track container (events + availability) */
+/* === TRACKS (EVENTS + AVAILABILITY) === */
 .tracks {
   position: absolute;
-  left: 80px;   /* next to hour column */
+  left: 70px;
   right: 0;
   height: 100%;
 }
 
-/* Events sit on top, use lanes */
+/* Events sit on top */
 .events-track {
   position: absolute;
   top: 0;
@@ -66,7 +75,7 @@
   z-index: 2;
 }
 
-/* Availability sits behind, does NOT force full width */
+/* Availability sits behind */
 .avail-track {
   position: absolute;
   top: 0;
@@ -76,7 +85,7 @@
   pointer-events: none;
 }
 
-/* Blocks */
+/* === BLOCKS === */
 .block {
   position: absolute;
   border: 1px solid #ccc;
@@ -95,8 +104,6 @@
 .avail-block {
   background: #d9ffd9;
   border-color: #4caf50;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* Conflict highlight */
@@ -121,29 +128,7 @@
   color: #555;
 }
 
-/* Navigation Buttons */
-#nav-buttons {
-  margin: 15px 0;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.nav-btn {
-  padding: 12px 20px;
-  font-size: 16px;
-  background: #005bbb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.nav-btn:hover {
-  background: #004999;
-}
-
-/* Legend */
+/* === LEGEND === */
 #legend {
   display: flex;
   gap: 20px;
@@ -171,7 +156,7 @@
 .legend-color.available{ background: #d9ffd9; }
 .legend-color.conflict { background: #ffcccc; }
 
-/* Filters */
+/* === FILTERS === */
 #filters {
   margin-bottom: 10px;
   display: flex;
@@ -180,9 +165,31 @@
   font-size: 14px;
 }
 
-/* Day label */
+/* === DAY LABEL === */
 #day-label {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0;
+}
+
+/* === NAV BUTTONS === */
+#nav-buttons {
+  margin: 15px 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #005bbb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #004999;
 }
