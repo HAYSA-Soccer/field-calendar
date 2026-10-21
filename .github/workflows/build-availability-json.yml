@@ -82,6 +82,7 @@ jobs:
       # 6. Build day JSON files (handles 90+ days safely)
       # ---------------------------------------------------------
       - name: Build day JSON files
+        shell: bash
         run: |
           SEASON_FILE="${{ steps.season.outputs.season_file }}"
           FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
@@ -99,30 +100,60 @@ jobs:
           while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
             echo "Fetching day: $CURRENT"
 
-            RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
+            # ⭐ Try up to 3 times
+            ATTEMPTS=0
+            VALID=false
 
-            if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
-              echo "WARNING: Invalid JSON for day_calendar ($CURRENT), replacing with {}"
-              RAW="{}"
+            while [ $ATTEMPTS -lt 3 ]; do
+              RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
+
+              if jq -e . <<<"$RAW" >/dev/null 2>&1; then
+                VALID=true
+                break
+              fi
+
+              echo "Attempt $((ATTEMPTS+1)) failed for $CURRENT"
+              ATTEMPTS=$((ATTEMPTS+1))
+              sleep 1
+            done
+
+            if [ "$VALID" = false ]; then
+              echo "❌ Apps Script returned invalid JSON for $CURRENT — using fallback day"
+
+              # ⭐ Build a safe fallback day JSON
+              jq -n \
+                --arg date "$CURRENT" \
+                --argjson fields "$(cat $FIELDS_FILE)" \
+                '{
+                  date: $date,
+                  complexes: $fields.complexes,
+                  fields: $fields.fields,
+                  availability: {},
+                  events: {},
+                  blocks: {},
+                  merged: []
+                }' > "data/day/${CURRENT}.json"
+
+            else
+              echo "$RAW" > day.json
+
+              jq -n \
+                --argjson day "$(cat day.json)" \
+                --argjson fields "$(cat $FIELDS_FILE)" \
+                '{
+                  date: $day.date,
+                  complexes: $fields.complexes,
+                  fields: $fields.fields,
+                  availability: ($day.availability // {}),
+                  events: ($day.events // {}),
+                  blocks: ($day.blocks // {}),
+                  merged: ($day.merged // [])
+                }' > "data/day/${CURRENT}.json"
             fi
-
-            echo "$RAW" > day.json
-
-            jq -n \
-              --argjson day "$(cat day.json)" \
-              --argjson fields "$(cat $FIELDS_FILE)" \
-              '{
-                date: $day.date,
-                complexes: $fields.complexes,
-                fields: $fields.fields,
-                availability: ($day.availability // {}),
-                events: ($day.events // {}),
-                blocks: ($day.blocks // {}),
-                merged: ($day.merged // [])
-              }' > "data/day/${CURRENT}.json"
 
             CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
           done
+
 
       # ---------------------------------------------------------
       # 7. Build week + month JSON (no arg-list overflow)
