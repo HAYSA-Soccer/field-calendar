@@ -49,13 +49,24 @@ function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
-    const f = fieldMap[b.field];
+    let f = fieldMap[b.field];
+
+    // If merged block incorrectly uses the parent full-field,
+    // try to match the correct subfield using the surface name.
+    if (!f) {
+      const corrected = day.fields.find(x => x.surface === b.surface);
+      if (corrected) {
+        f = corrected;
+      }
+    }
+
+    // If still not found, skip the block
     if (!f) return;
 
     blocks.push({
       complex: f.complex,
-      fieldId: b.field,
-      fieldName: f.name,
+      fieldId: f.id,          // FIXED: use correct subfield ID
+      fieldName: f.name,      // FIXED: friendly name (no more "Full" unless true)
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
@@ -65,6 +76,7 @@ function buildBlocks(day, fieldMap) {
 
   return blocks;
 }
+
 
 function suppressSubfields(blocks, fieldMap) {
   const out = [];
