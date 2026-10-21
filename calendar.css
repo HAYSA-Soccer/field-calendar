@@ -1,55 +1,37 @@
-/* === COMPLEX COLUMN LAYOUT === */
+/* Complexes side-by-side */
 #calendar {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 20px;
   align-items: flex-start;
-  overflow-x: auto;
-  padding-bottom: 20px;
 }
 
-/* Fluid but sane width */
+/* Each complex column */
 .complex {
-  flex: 0 0 auto;
-  min-width: 480px;      /* ← THIS is the key */
-  max-width: 640px;      /* ← prevents “crazy” fluid expansion */
+  flex: 1;
+  min-width: 420px;
   background: #fafafa;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 12px;
+  padding: 10px;
 }
 
-
-/* Mobile: stack vertically */
-@media (max-width: 768px) {
-  #calendar {
-    flex-direction: column;
-  }
-  .complex {
-    width: 100%;
-    min-width: unset;
-    max-width: unset;
-  }
-}
-
-/* === COMPLEX HEADER === */
 .complex-header {
   font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* === TIMELINE === */
+/* Timeline container */
 .timeline {
   position: relative;
-  height: calc((21 - 8) * 60px); /* 8am–9pm */
+  height: calc((21 - 8) * 60px); /* 8am–9pm at 60px/hour */
 }
 
-/* === HOURS COLUMN === */
+/* Hour labels */
 .hours {
   position: absolute;
   left: 0;
-  width: 70px;
+  width: 80px;
   height: 100%;
 }
 
@@ -60,33 +42,37 @@
   color: #555;
 }
 
-/* === TRACKS (EVENTS + AVAILABILITY) === */
+/* Track container (events + availability) */
 .tracks {
   position: absolute;
-  left: 70px;
+  left: 80px;   /* next to hour column */
   right: 0;
   height: 100%;
 }
 
-/* Events sit on top */
+/* Events sit on top, use lanes */
 .events-track {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   height: 100%;
   z-index: 2;
 }
 
-/* Availability sits behind */
+/* Availability sits behind, fills remaining vertical space */
 .avail-track {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   height: 100%;
   z-index: 1;
   opacity: 0.85;
   pointer-events: none;
 }
 
-/* === BLOCKS === */
+/* Blocks */
 .block {
   position: absolute;
   border: 1px solid #ccc;
@@ -107,13 +93,6 @@
   border-color: #4caf50;
 }
 
-/* Conflict highlight */
-.conflict {
-  border-color: #ff0000;
-  box-shadow: 0 0 6px rgba(255,0,0,0.7);
-}
-
-/* Block text */
 .block-title {
   font-weight: bold;
   margin-bottom: 2px;
@@ -129,11 +108,32 @@
   color: #555;
 }
 
-/* === LEGEND === */
+
+#nav-buttons {
+  margin: 15px 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #005bbb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #004999;
+}
+
 #legend {
   display: flex;
   gap: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   flex-wrap: wrap;
 }
 
@@ -155,42 +155,3 @@
 .legend-color.practice { background: #e0e0e0; }
 .legend-color.game     { background: #d0e4ff; }
 .legend-color.available{ background: #d9ffd9; }
-.legend-color.conflict { background: #ffcccc; }
-
-/* === FILTERS === */
-#filters {
-  margin-bottom: 10px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-size: 14px;
-}
-
-/* === DAY LABEL === */
-#day-label {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-/* === NAV BUTTONS === */
-#nav-buttons {
-  margin: 15px 0;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.nav-btn {
-  padding: 12px 20px;
-  font-size: 16px;
-  background: #005bbb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.nav-btn:hover {
-  background: #004999;
-}
