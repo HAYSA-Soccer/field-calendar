@@ -116,6 +116,10 @@
   "availability": {
     "H-HST": [
       {
+        "start": "09:00",
+        "end": "16:00"
+      },
+      {
         "start": "18:00",
         "end": "18:30"
       },
@@ -476,18 +480,7 @@
       }
     ]
   },
-  "blocks": {
-    "H-HST": [
-      {
-        "date": "2026-10-17",
-        "start": "08:00",
-        "end": "16:00",
-        "field": "H-HST",
-        "reason": "Turf Rented Out",
-        "type": "admin"
-      }
-    ]
-  },
+  "blocks": {},
   "merged": [
     {
       "field": "H-Su1",
@@ -589,15 +582,6 @@
       "title": ""
     },
     {
-      "field": "H-HST",
-      "start": "08:00",
-      "end": "16:00",
-      "start_12": "8:00 AM",
-      "end_12": "4:00 PM",
-      "type": "admin",
-      "title": "Turf Rented Out"
-    },
-    {
       "field": "H-Su1",
       "start": "08:30",
       "end": "09:30",
@@ -635,6 +619,15 @@
       "coach": "",
       "grade": "3/4",
       "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "09:00",
+      "end": "16:00",
+      "start_12": "9:00 AM",
+      "end_12": "4:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-Su1",
