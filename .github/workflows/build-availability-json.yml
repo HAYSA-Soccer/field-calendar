@@ -125,30 +125,36 @@ jobs:
           done
 
       # ---------------------------------------------------------
-      # 7. Build week + month JSON
+      # 7. Build week + month JSON (streaming, no arg-list overflow)
       # ---------------------------------------------------------
       - name: Build week + month JSON
+        shell: bash
         run: |
           echo "Building weeks.json..."
-          find data/day -name '*.json' -print0 | xargs -0 jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
+
+          jq -n '
+            def week_of(ts):
+              (ts | strftime("%w") | tonumber) as $w
+              | if $w == 0 then ts - 6*24*60*60 else ts - ($w - 1)*24*60*60 end;
+
+            reduce (inputs | select(.date | type == "string")) as $d ({}; 
               ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
-              | ($ts | strftime("%w") | tonumber) as $w
-              | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
+              | week_of($ts) as $mon_ts
               | ($mon_ts | strftime("%Y-%m-%d")) as $monday
-              | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
+              | .[$monday] |= (. // {}) 
+              | .[$monday][$d.date] = $d
             )
-          ' > data/week/weeks.json
+          ' data/day/*.json > data/week/weeks.json
 
           echo "Building months.json..."
-          find data/day -name '*.json' -print0 | xargs -0 jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
-              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
-              |= (. // {}) | .[$d.date] = $d
+
+          jq -n '
+            reduce (inputs | select(.date | type == "string")) as $d ({}; 
+              ($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m")) as $month
+              | .[$month] |= (. // {})
+              | .[$month][$d.date] = $d
             )
-          ' > data/month/months.json
+          ' data/day/*.json > data/month/months.json
 
       # ---------------------------------------------------------
       # 8. Build final availability.json
@@ -161,10 +167,9 @@ jobs:
           START=$(jq -r '.season_start' "$SEASON_FILE")
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
-          DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; .[$d.date] = $d)
-          ')
+          DAYS_JSON=$(jq -n '
+            reduce (inputs | select(.date | type == "string")) as $d ({}; .[$d.date] = $d)
+          ' data/day/*.json)
 
           jq -n \
             --arg start "$START" \
