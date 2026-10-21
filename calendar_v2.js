@@ -31,6 +31,28 @@ function overlaps(aStart, aEnd, bStart, bEnd) {
   return aStart < bEnd && bStart < aEnd;
 }
 
+// ⭐ NEW: full-availability fallback day
+function buildFallbackDay(dateStr) {
+  // assumes availability.json has been loaded into window.availabilityData
+  const fields = window.availabilityData.fields;
+  const complexes = window.availabilityData.complexes;
+
+  const fullAvail = {};
+  fields.forEach(f => {
+    fullAvail[f.id] = [{ start: "08:00", end: "21:00" }];
+  });
+
+  return {
+    date: dateStr,
+    complexes,
+    fields,
+    availability: fullAvail,
+    events: {},
+    blocks: {},
+    merged: []
+  };
+}
+
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
   const container = document.getElementById("calendar");
@@ -41,8 +63,9 @@ async function loadDay(dateStr) {
     const day = await res.json();
     renderDayCalendar(day);
   } catch (e) {
-    container.innerHTML = "";
-    container.textContent = `Unable to load data for ${dateStr}: ${e.message}`;
+    console.warn(`Day ${dateStr} missing or failed (${e.message}) — using full-availability fallback`);
+    const fallback = buildFallbackDay(dateStr);
+    renderDayCalendar(fallback);
   }
 }
 
@@ -60,27 +83,21 @@ function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
-
-    // ⭐ FIX: use display_field when available
     let fieldId = b.display_field || b.field;
-
     let f = fieldMap[fieldId];
 
-    // fallback: try surface match
     if (!f && b.surface) {
       const corrected = day.fields.find(x => x.surface === b.surface);
       if (corrected) f = corrected;
     }
 
-    // fallback: try original field
     if (!f) f = fieldMap[b.field];
-
     if (!f) return;
 
     blocks.push({
       complex: f.complex,
       fieldId: f.id,
-      fieldName: f.name,   // ⭐ now correct (A/B, 1/2, etc.)
+      fieldName: f.name,
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
@@ -90,8 +107,6 @@ function buildBlocks(day, fieldMap) {
 
   return blocks;
 }
-
-
 
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
@@ -302,7 +317,6 @@ function renderComplexTimeline(complex, events, availability) {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    // ⭐ FIX: availability should ALWAYS span full width
     block.style.left = "0%";
     block.style.width = "100%";
 
