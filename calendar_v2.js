@@ -83,33 +83,6 @@ function buildBlocks(day, fieldMap) {
   return blocks;
 }
 
-function suppressSubfields(blocks, fieldMap) {
-  const out = [];
-
-  const byComplex = {};
-  blocks.forEach(b => {
-    if (!byComplex[b.complex]) byComplex[b.complex] = [];
-    byComplex[b.complex].push(b);
-  });
-
-  Object.keys(byComplex).forEach(complex => {
-    const list = byComplex[complex];
-    const fullBlocks = list.filter(b => isFullField(fieldMap[b.fieldId]));
-    const subBlocks  = list.filter(b => !isFullField(fieldMap[b.fieldId]));
-
-    subBlocks.forEach(sb => {
-      const suppressed = fullBlocks.some(fb =>
-        overlaps(fb.start, fb.end, sb.start, sb.end)
-      );
-      if (!suppressed) out.push(sb);
-    });
-
-    fullBlocks.forEach(fb => out.push(fb));
-  });
-
-  return out;
-}
-
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
@@ -119,7 +92,6 @@ function buildAvailability(day, fieldMap, blocks) {
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t += 1) {
 
-      // ⭐ Only let full-field events suppress availability on TURF
       const fullFieldBooked =
         complex === "TURF" &&
         blocks.some(b =>
@@ -246,7 +218,6 @@ function renderDayCalendar(day) {
   container.innerHTML = "";
 
   const fieldMap = buildFieldMap(day);
-  // ⭐ Use raw merged blocks so half-fields and all real fields show up
   const blocks = buildBlocks(day, fieldMap);
 
   const availability = buildAvailability(day, fieldMap, blocks);
@@ -321,24 +292,9 @@ function renderComplexTimeline(complex, events, availability) {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    // ⭐ minute‑specific lane count
-    let minuteLaneCount = 0;
-    events.forEach(e => {
-      if (a.start < e.end && e.start < a.end) {
-        minuteLaneCount = Math.max(minuteLaneCount, e.lane + 1);
-      }
-    });
-
-    if (minuteLaneCount === 0) {
-      block.style.left = "0%";
-      block.style.width = "100%";
-    } else {
-      const minuteLaneWidth = 100 / minuteLaneCount;
-      const leftPct = minuteLaneCount * minuteLaneWidth;
-      const widthPct = 100 - leftPct;
-      block.style.left = leftPct + "%";
-      block.style.width = widthPct + "%";
-    }
+    // ⭐ FIX: availability should ALWAYS span full width
+    block.style.left = "0%";
+    block.style.width = "100%";
 
     block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
