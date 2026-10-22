@@ -355,15 +355,24 @@ function renderComplexTimeline(complex, events, availability) {
   blocks.sort((a, b) => a.start - b.start || a.end - b.end);
 
   blocks.forEach(b => {
-    // find all blocks that overlap this one in time
+    // Overlap rule:
+    // - Must overlap in TIME
+    // - Must overlap in FIELD SPACE
+    //   (events only conflict with same-field events)
+    //   (availability conflicts with everything in its time window)
     const overlapping = blocks.filter(x =>
-      overlaps(x.start, x.end, b.start, b.end)
+      overlaps(x.start, x.end, b.start, b.end) &&
+      (
+        b.kind === "avail" ||
+        x.kind === "avail" ||
+        x.fieldId === b.fieldId
+      )
     );
 
-    // within this overlapping group, events first, availability last
+    // events first, availability last
     const ordered = overlapping.slice().sort((x, y) => {
       if (x.kind === y.kind) return x.start - y.start || x.end - y.end;
-      return x.kind === "event" ? -1 : 1; // events before avail
+      return x.kind === "event" ? -1 : 1;
     });
 
     const laneCount = ordered.length || 1;
@@ -420,6 +429,7 @@ function renderComplexTimeline(complex, events, availability) {
   div.appendChild(timeline);
   return div;
 }
+
 
 
 /********************************************************************
