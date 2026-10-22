@@ -1,7 +1,7 @@
 {
   "date": "2026-10-23",
   "updated": true,
-  "last_successful_update": "October 22, 2026 at 2:16 PM",
+  "last_successful_update": "October 22, 2026 at 2:52 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -140,114 +140,18 @@
     "H-HST": [],
     "H-HST1": [],
     "H-HST2": [],
-    "H-Su1": [
-      {
-        "start": "16:00",
-        "end": "16:30"
-      },
-      {
-        "start": "18:00",
-        "end": "19:00"
-      }
-    ],
-    "H-Su1A": [
-      {
-        "start": "16:00",
-        "end": "16:30"
-      },
-      {
-        "start": "18:00",
-        "end": "19:00"
-      }
-    ],
-    "H-Su1B": [
-      {
-        "start": "16:00",
-        "end": "16:30"
-      },
-      {
-        "start": "18:00",
-        "end": "19:00"
-      }
-    ],
-    "H-Su2": [
-      {
-        "start": "16:00",
-        "end": "17:00"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
-      }
-    ],
-    "H-Su2A": [
-      {
-        "start": "16:00",
-        "end": "16:30"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
-      }
-    ],
-    "H-Su2B": [
-      {
-        "start": "16:00",
-        "end": "17:00"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
-      }
-    ],
-    "H-SJ3": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
-      }
-    ],
-    "H-SJ3A": [
-      {
-        "start": "16:00",
-        "end": "17:30"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
-      }
-    ],
-    "H-SJ3B": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-SJ4": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
-      }
-    ],
-    "H-SJ4A": [
-      {
-        "start": "16:00",
-        "end": "17:00"
-      },
-      {
-        "start": "18:00",
-        "end": "19:00"
-      }
-    ],
-    "H-SJ4B": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
+    "H-Su1": [],
+    "H-Su1A": [],
+    "H-Su1B": [],
+    "H-Su2": [],
+    "H-Su2A": [],
+    "H-Su2B": [],
+    "H-SJ3": [],
+    "H-SJ3A": [],
+    "H-SJ3B": [],
+    "H-SJ4": [],
+    "H-SJ4A": [],
+    "H-SJ4B": [],
     "H-SuSS": [],
     "H-SuSS1": [],
     "H-SuSS2": []
@@ -338,114 +242,6 @@
   "merged": [
     {
       "field": "H-Su1",
-      "start": "16:00",
-      "end": "16:30",
-      "start_12": "4:00 PM",
-      "end_12": "4:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1A",
-      "start": "16:00",
-      "end": "16:30",
-      "start_12": "4:00 PM",
-      "end_12": "4:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1B",
-      "start": "16:00",
-      "end": "16:30",
-      "start_12": "4:00 PM",
-      "end_12": "4:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2",
-      "start": "16:00",
-      "end": "17:00",
-      "start_12": "4:00 PM",
-      "end_12": "5:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2A",
-      "start": "16:00",
-      "end": "16:30",
-      "start_12": "4:00 PM",
-      "end_12": "4:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2B",
-      "start": "16:00",
-      "end": "17:00",
-      "start_12": "4:00 PM",
-      "end_12": "5:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3A",
-      "start": "16:00",
-      "end": "17:30",
-      "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3B",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4A",
-      "start": "16:00",
-      "end": "17:00",
-      "start_12": "4:00 PM",
-      "end_12": "5:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4B",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1",
       "start": "16:30",
       "end": "18:00",
       "start_12": "4:30 PM",
@@ -508,137 +304,10 @@
       "coach": "Blue",
       "grade": "",
       "source": "ICS"
-    },
-    {
-      "field": "H-Su1",
-      "start": "18:00",
-      "end": "19:00",
-      "start_12": "6:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1A",
-      "start": "18:00",
-      "end": "19:00",
-      "start_12": "6:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1B",
-      "start": "18:00",
-      "end": "19:00",
-      "start_12": "6:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4A",
-      "start": "18:00",
-      "end": "19:00",
-      "start_12": "6:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2A",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2B",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3A",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
     }
   ],
   "merged_availability": {
     "TURF": [],
-    "SUMNER/SEAN JOYCE": [
-      {
-        "type": "practice",
-        "start": "16:30",
-        "end": "17:00",
-        "start_12": "4:30 PM",
-        "end_12": "5:00 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "17:00",
-        "end": "18:00",
-        "start_12": "5:00 PM",
-        "end_12": "6:00 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su2",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2A",
-          "H-Su2B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "18:00",
-        "end": "18:30",
-        "start_12": "6:00 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      }
-    ]
+    "SUMNER/SEAN JOYCE": []
   }
 }
