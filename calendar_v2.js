@@ -365,7 +365,7 @@ function renderComplexTimeline(complex, events, availability) {
   track.className = "events-track";
   track.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  // combine events + availability into one lane system
+  // Combine events + availability into one block list
   const blocks = [];
 
   events.forEach(e => {
@@ -390,10 +390,9 @@ function renderComplexTimeline(complex, events, availability) {
     });
   });
 
-  // lane assignment: events first, availability last
+  // Lane assignment: events first
   const lanes = [];
 
-  // assign events to lanes
   blocks
     .filter(b => b.kind === "event")
     .sort((a, b) => a.start - b.start)
@@ -414,11 +413,11 @@ function renderComplexTimeline(complex, events, availability) {
 
   const eventLaneCount = lanes.length;
 
-  // assign availability to last lane (after events)
+  // Availability always goes in the last lane (L‑After)
   blocks
     .filter(b => b.kind === "avail")
     .forEach(b => {
-      const laneIndex = eventLaneCount; // last lane
+      const laneIndex = eventLaneCount;
       if (!lanes[laneIndex]) lanes[laneIndex] = [];
       lanes[laneIndex].push(b);
       b.lane = laneIndex;
@@ -427,6 +426,7 @@ function renderComplexTimeline(complex, events, availability) {
   const laneCount = lanes.length || 1;
   const laneWidth = 100 / laneCount;
 
+  // Render all blocks in the same track
   blocks.forEach(b => {
     const block = document.createElement("div");
     block.className = "block";
@@ -478,6 +478,7 @@ function renderComplexTimeline(complex, events, availability) {
   div.appendChild(timeline);
   return div;
 }
+
 
 
 /********************************************************************
