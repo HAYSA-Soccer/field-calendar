@@ -206,3 +206,11 @@
 .legend-color.practice { background: #e0e0e0; }
 .legend-color.game     { background: #d0e4ff; }
 .legend-color.available{ background: #d9ffd9; }
+
+/* ---------------------------------------------------------
+   CONFLICT INDICATOR
+--------------------------------------------------------- */
+.block.conflict {
+  border: 2px solid red !important;
+  box-shadow: 0 0 4px red;
+}
