@@ -361,85 +361,124 @@ function renderComplexTimeline(complex, events, availability) {
     hours.appendChild(h);
   }
 
-  const eventsTrack = document.createElement("div");
-  eventsTrack.className = "events-track";
-  eventsTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
+  const track = document.createElement("div");
+  track.className = "events-track";
+  track.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  const maxLane = events.reduce((m, e) => Math.max(m, e.lane), 0);
-  const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
-  const laneWidth = 100 / laneCount;
+  // combine events + availability into one lane system
+  const blocks = [];
 
   events.forEach(e => {
-    const block = document.createElement("div");
-    block.className = "block event-block";
-    block.classList.add(e.type);
-
-    if (e.conflict) {
-      block.classList.add("conflict");
-    }
-
-    block.style.top = ((e.start - DAY_START) * PX_PER_MIN) + "px";
-    block.style.height = ((e.end - e.start) * PX_PER_MIN) + "px";
-    block.style.left = (e.lane * laneWidth) + "%";
-    block.style.width = laneWidth + "%";
-
-    block.innerHTML = `
-      <div class="block-main">
-        <div class="block-title">${e.title}</div>
-        <div class="block-fields">${e.fieldId}</div>
-        <div class="block-time">${fmt(e.start)} – ${fmt(e.end)}</div>
-      </div>
-      <div class="block-tooltip">
-        <div><strong>Field:</strong> ${e.fieldId}</div>
-        <div><strong>Time:</strong> ${fmt(e.start)} – ${fmt(e.end)}</div>
-        <div><strong>Type:</strong> ${e.type}</div>
-      </div>
-    `;
-
-    eventsTrack.appendChild(block);
+    blocks.push({
+      kind: "event",
+      title: e.title,
+      fieldId: e.fieldId,
+      type: e.type,
+      conflict: e.conflict,
+      start: e.start,
+      end: e.end
+    });
   });
-
-  const availTrack = document.createElement("div");
-  availTrack.className = "avail-track";
-  availTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
   availability.forEach(a => {
-    const block = document.createElement("div");
-    block.className = "block avail-block";
-
-    block.style.left = "0%";
-    block.style.width = "100%";
-
-    block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
-    block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
-
-    block.innerHTML = `
-      <div class="block-main">
-        <div class="block-title">Available</div>
-        <div class="block-fields">${a.fields.join(", ")}</div>
-        <div class="block-time">${fmt(a.start)} – ${fmt(a.end)}</div>
-      </div>
-      <div class="block-tooltip">
-        <div><strong>Fields:</strong> ${a.fields.join(", ")}</div>
-        <div><strong>Time:</strong> ${fmt(a.start)} – ${fmt(a.end)}</div>
-        <div><strong>Complex:</strong> ${complex}</div>
-      </div>
-    `;
-
-    availTrack.appendChild(block);
+    blocks.push({
+      kind: "avail",
+      title: "Available",
+      fields: a.fields,
+      start: a.start,
+      end: a.end
+    });
   });
 
-  const tracks = document.createElement("div");
-  tracks.className = "tracks";
-  tracks.appendChild(availTrack);
-  tracks.appendChild(eventsTrack);
+  // lane assignment: events first, availability last
+  const lanes = [];
+
+  // assign events to lanes
+  blocks
+    .filter(b => b.kind === "event")
+    .sort((a, b) => a.start - b.start)
+    .forEach(b => {
+      let laneIndex = 0;
+      while (true) {
+        const lane = lanes[laneIndex] || [];
+        const conflict = lane.some(x => overlaps(x.start, x.end, b.start, b.end));
+        if (!conflict) {
+          lane.push(b);
+          lanes[laneIndex] = lane;
+          b.lane = laneIndex;
+          break;
+        }
+        laneIndex++;
+      }
+    });
+
+  const eventLaneCount = lanes.length;
+
+  // assign availability to last lane (after events)
+  blocks
+    .filter(b => b.kind === "avail")
+    .forEach(b => {
+      const laneIndex = eventLaneCount; // last lane
+      if (!lanes[laneIndex]) lanes[laneIndex] = [];
+      lanes[laneIndex].push(b);
+      b.lane = laneIndex;
+    });
+
+  const laneCount = lanes.length || 1;
+  const laneWidth = 100 / laneCount;
+
+  blocks.forEach(b => {
+    const block = document.createElement("div");
+    block.className = "block";
+
+    if (b.kind === "event") {
+      block.classList.add("event-block");
+      block.classList.add(b.type);
+      if (b.conflict) block.classList.add("conflict");
+
+      block.innerHTML = `
+        <div class="block-main">
+          <div class="block-title">${b.title}</div>
+          <div class="block-fields">${b.fieldId}</div>
+          <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
+        </div>
+        <div class="block-tooltip">
+          <div><strong>Field:</strong> ${b.fieldId}</div>
+          <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
+          <div><strong>Type:</strong> ${b.type}</div>
+        </div>
+      `;
+    } else {
+      block.classList.add("avail-block");
+
+      block.innerHTML = `
+        <div class="block-main">
+          <div class="block-title">Available</div>
+          <div class="block-fields">${b.fields.join(", ")}</div>
+          <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
+        </div>
+        <div class="block-tooltip">
+          <div><strong>Fields:</strong> ${b.fields.join(", ")}</div>
+          <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
+          <div><strong>Complex:</strong> ${complex}</div>
+        </div>
+      `;
+    }
+
+    block.style.top = ((b.start - DAY_START) * PX_PER_MIN) + "px";
+    block.style.height = ((b.end - b.start) * PX_PER_MIN) + "px";
+    block.style.left = (b.lane * laneWidth) + "%";
+    block.style.width = laneWidth + "%";
+
+    track.appendChild(block);
+  });
 
   timeline.appendChild(hours);
-  timeline.appendChild(tracks);
-
+  timeline.appendChild(track);
   div.appendChild(timeline);
   return div;
 }
+
 
 /********************************************************************
  * INITIALIZE
