@@ -175,8 +175,15 @@ function detectConflicts(blocks) {
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
-  Object.keys(day.complexes).forEach(complex => {
-    const fields = day.complexes[complex];
+  // Build real field lists per complex from day.fields
+  const fieldsByComplex = {};
+  day.fields.forEach(f => {
+    if (!fieldsByComplex[f.complex]) fieldsByComplex[f.complex] = [];
+    fieldsByComplex[f.complex].push(f.id);   // REAL FIELD IDs
+  });
+
+  Object.keys(fieldsByComplex).forEach(complex => {
+    const fields = fieldsByComplex[complex];
 
     // all admin (full-complex) blocks for this complex
     const adminBlocks = blocks.filter(
@@ -185,7 +192,8 @@ function buildAvailability(day, fieldMap, blocks) {
 
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t++) {
-      // if any admin block is active at this minute, no availability
+
+      // full-complex admin → no availability
       const hasAdmin = adminBlocks.some(
         b => t >= b.start && t < b.end
       );
@@ -195,8 +203,8 @@ function buildAvailability(day, fieldMap, blocks) {
         continue;
       }
 
+      // find booked fields at this minute
       const bookedFields = new Set();
-
       blocks.forEach(b => {
         if (b.complex !== complex) return;
         if (b.type === "free") return;
@@ -205,6 +213,7 @@ function buildAvailability(day, fieldMap, blocks) {
         }
       });
 
+      // compute free fields using REAL availability JSON
       const freeFields = [];
 
       fields.forEach(fid => {
@@ -226,6 +235,7 @@ function buildAvailability(day, fieldMap, blocks) {
       });
     }
 
+    // merge contiguous windows
     let curStart = null;
     let curFields = null;
 
@@ -261,6 +271,7 @@ function buildAvailability(day, fieldMap, blocks) {
 
   return avail;
 }
+
 
 
 /********************************************************************
