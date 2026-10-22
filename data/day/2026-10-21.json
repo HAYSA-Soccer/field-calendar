@@ -1,7 +1,7 @@
 {
   "date": "2026-10-21",
   "updated": true,
-  "last_successful_update": "October 21, 2026 at 11:37 PM",
+  "last_successful_update": "October 22, 2026 at 7:16 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -137,42 +137,70 @@
     }
   ],
   "availability": {
-    "H-HST": [],
+    "H-HST": [
+      {
+        "start": "18:00",
+        "end": "18:30"
+      },
+      {
+        "start": "19:30",
+        "end": "21:00"
+      }
+    ],
     "H-HST1": [
       {
         "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
+        "end": "19:30"
       }
     ],
     "H-HST2": [
       {
         "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
+        "end": "19:30"
       }
     ],
-    "H-Su1": [],
-    "H-Su1A": [
+    "H-Su1": [
       {
         "start": "16:00",
         "end": "19:00",
-        "mode": "practice_only"
+        "mode": "both"
+      }
+    ],
+    "H-Su1A": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su1B": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
-    "H-Su2": [],
-    "H-Su2A": [
+    "H-Su2": [
       {
         "start": "16:00",
         "end": "19:00",
-        "mode": "practice_only"
+        "mode": "both"
+      }
+    ],
+    "H-Su2A": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su2B": [
@@ -182,12 +210,21 @@
         "mode": "practice_only"
       }
     ],
-    "H-SJ3": [],
-    "H-SJ3A": [
+    "H-SJ3": [
       {
         "start": "16:00",
         "end": "19:00",
-        "mode": "practice_only"
+        "mode": "both"
+      }
+    ],
+    "H-SJ3A": [
+      {
+        "start": "16:00",
+        "end": "16:30"
+      },
+      {
+        "start": "17:30",
+        "end": "19:00"
       }
     ],
     "H-SJ3B": [
@@ -197,12 +234,21 @@
         "mode": "practice_only"
       }
     ],
-    "H-SJ4": [],
-    "H-SJ4A": [
+    "H-SJ4": [
       {
         "start": "16:00",
         "end": "19:00",
-        "mode": "practice_only"
+        "mode": "both"
+      }
+    ],
+    "H-SJ4A": [
+      {
+        "start": "16:00",
+        "end": "17:30"
+      },
+      {
+        "start": "18:30",
+        "end": "19:00"
       }
     ],
     "H-SJ4B": [
@@ -216,11 +262,140 @@
     "H-SuSS1": [],
     "H-SuSS2": []
   },
-  "events": {},
+  "events": {
+    "H-HST2": [
+      {
+        "event_id": "b2fac72f3e7997f172ed48021ddb6f91",
+        "date": "2026-10-21",
+        "start": "19:30",
+        "end": "21:00",
+        "field": "H-HST2",
+        "type": "practice",
+        "title": "7/8 Girls Travel (Caldwell) Practice",
+        "team": "7/8 Girls Travel",
+        "coach": "Caldwell",
+        "grade": "7/8",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
+      }
+    ],
+    "H-HST1": [
+      {
+        "event_id": "708c3cf01456198716e4791e75b32c9a",
+        "date": "2026-10-21",
+        "start": "19:30",
+        "end": "21:00",
+        "field": "H-HST1",
+        "type": "practice",
+        "title": "5/6 Girls Travel (Casavant) Practice",
+        "team": "5/6 Girls Travel",
+        "coach": "Casavant",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST1, Holbrook High School"
+      }
+    ],
+    "H-SJ3A": [
+      {
+        "event_id": "26dd75fe3cee412a2018f456a9e69a70",
+        "date": "2026-10-21",
+        "start": "16:30",
+        "end": "17:30",
+        "field": "H-SJ3A",
+        "type": "practice",
+        "title": "Summit's Place (Green) Practice",
+        "team": "Summit's Place",
+        "coach": "Green",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SJ3A, Holbrook Sean Joyce Field"
+      }
+    ],
+    "H-Su2A": [
+      {
+        "event_id": "8a31945c5be3a8182cbf8bae37ca4a47",
+        "date": "2026-10-21",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-Su2A",
+        "type": "practice",
+        "title": "www.slamyourday.com (Green) Practice",
+        "team": "www.slamyourday.com",
+        "coach": "Green",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-Su2A, Holbrook Sumner Field"
+      }
+    ],
+    "H-Su1A": [
+      {
+        "event_id": "d89350ac5ecbd827476f78eef3bb7d99",
+        "date": "2026-10-21",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-Su1A",
+        "type": "practice",
+        "title": "Troupe Waste & Recycling (Green) Practice",
+        "team": "Troupe Waste & Recycling",
+        "coach": "Green",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-Su1A, Holbrook Sumner Field"
+      }
+    ],
+    "H-Su1B": [
+      {
+        "event_id": "f6c3331a2492b12b59ee45ad700e0f92",
+        "date": "2026-10-21",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-Su1B",
+        "type": "practice",
+        "title": "Edwards Built Pavements (Blue) Practice",
+        "team": "Edwards Built Pavements",
+        "coach": "Blue",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-Su1B, Holbrook Sumner Field"
+      }
+    ],
+    "H-SJ4A": [
+      {
+        "event_id": "01eb6bfd38a22bbaf9546e98c93a1614",
+        "date": "2026-10-21",
+        "start": "17:30",
+        "end": "18:30",
+        "field": "H-SJ4A",
+        "type": "practice",
+        "title": "Wm. Perry Auto Repair (Orange) Practice",
+        "team": "Wm. Perry Auto Repair",
+        "coach": "Orange",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
+      }
+    ],
+    "H-HST": [
+      {
+        "event_id": "8b600d9a33875a01fe81a9a126148af1",
+        "date": "2026-10-21",
+        "start": "18:30",
+        "end": "19:30",
+        "field": "H-HST",
+        "type": "game",
+        "title": "5/6 Girls Travel (Casavant) vs. Stoughton",
+        "team": "5/6 Girls Travel  vs. Stoughton",
+        "coach": "Casavant",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST, Holbrook High School"
+      }
+    ]
+  },
   "blocks": {},
   "merged": [
     {
-      "field": "H-Su1A",
+      "field": "H-Su1",
       "start": "16:00",
       "end": "19:00",
       "start_12": "4:00 PM",
@@ -229,7 +404,25 @@
       "title": ""
     },
     {
+      "field": "H-Su1A",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-Su1B",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
       "start": "16:00",
       "end": "19:00",
       "start_12": "4:00 PM",
@@ -240,9 +433,9 @@
     {
       "field": "H-Su2A",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:00",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:00 PM",
       "type": "free",
       "title": ""
     },
@@ -256,11 +449,20 @@
       "title": ""
     },
     {
-      "field": "H-SJ3A",
+      "field": "H-SJ3",
       "start": "16:00",
       "end": "19:00",
       "start_12": "4:00 PM",
       "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "16:00",
+      "end": "16:30",
+      "start_12": "4:00 PM",
+      "end_12": "4:30 PM",
       "type": "free",
       "title": ""
     },
@@ -274,11 +476,20 @@
       "title": ""
     },
     {
-      "field": "H-SJ4A",
+      "field": "H-SJ4",
       "start": "16:00",
       "end": "19:00",
       "start_12": "4:00 PM",
       "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "16:00",
+      "end": "17:30",
+      "start_12": "4:00 PM",
+      "end_12": "5:30 PM",
       "type": "free",
       "title": ""
     },
@@ -292,22 +503,189 @@
       "title": ""
     },
     {
+      "field": "H-SJ3A",
+      "start": "16:30",
+      "end": "17:30",
+      "start_12": "4:30 PM",
+      "end_12": "5:30 PM",
+      "type": "practice",
+      "title": "Summit's Place (Green) Practice",
+      "team": "Summit's Place",
+      "coach": "Green",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su2A",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "www.slamyourday.com (Green) Practice",
+      "team": "www.slamyourday.com",
+      "coach": "Green",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su1A",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "Troupe Waste & Recycling (Green) Practice",
+      "team": "Troupe Waste & Recycling",
+      "coach": "Green",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su1B",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "Edwards Built Pavements (Blue) Practice",
+      "team": "Edwards Built Pavements",
+      "coach": "Blue",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "17:30",
+      "end": "19:00",
+      "start_12": "5:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "17:30",
+      "end": "18:30",
+      "start_12": "5:30 PM",
+      "end_12": "6:30 PM",
+      "type": "practice",
+      "title": "Wm. Perry Auto Repair (Orange) Practice",
+      "team": "Wm. Perry Auto Repair",
+      "coach": "Orange",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "18:00",
+      "end": "18:30",
+      "start_12": "6:00 PM",
+      "end_12": "6:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-HST1",
       "start": "18:00",
-      "end": "21:00",
+      "end": "19:30",
       "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
+      "end_12": "7:30 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-HST2",
       "start": "18:00",
-      "end": "21:00",
+      "end": "19:30",
       "start_12": "6:00 PM",
+      "end_12": "7:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1A",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1B",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "18:30",
+      "end": "19:00",
+      "start_12": "6:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST",
+      "start": "18:30",
+      "end": "19:30",
+      "start_12": "6:30 PM",
+      "end_12": "7:30 PM",
+      "type": "game",
+      "title": "5/6 Girls Travel (Casavant) vs. Stoughton",
+      "team": "5/6 Girls Travel  vs. Stoughton",
+      "coach": "Casavant",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
       "end_12": "9:00 PM",
       "type": "free",
       "title": ""
+    },
+    {
+      "field": "H-HST2",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "practice",
+      "title": "7/8 Girls Travel (Caldwell) Practice",
+      "team": "7/8 Girls Travel",
+      "coach": "Caldwell",
+      "grade": "7/8",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST1",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "practice",
+      "title": "5/6 Girls Travel (Casavant) Practice",
+      "team": "5/6 Girls Travel",
+      "coach": "Casavant",
+      "grade": "5/6",
+      "source": "ICS"
     }
   ]
 }
