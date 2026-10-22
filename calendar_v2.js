@@ -267,31 +267,37 @@ function buildEventLanes(blocks) {
    RENDER DAY CALENDAR (WITH PER-DAY NOTE)
 --------------------------------------------------------- */
 function renderDayCalendar(day) {
+  const dayNote = document.getElementById("day-note");
   const container = document.getElementById("calendar");
+
+  // Clear previous content
+  dayNote.innerHTML = "";
   container.innerHTML = "";
 
-  // Per-day note only if not updated
+  // ⭐ Per-day note (only when the day did NOT update)
   if (!day.updated) {
-    const note = document.createElement("div");
-    note.className = "update-note";
-
     const ts =
       day.last_successful_update ||
       (window.lastUpdatedData && window.lastUpdatedData.last_successful_update) ||
-      "Never";
+      "No prior update available.";
 
-    note.textContent =
-      `Note: This day's data was last updated on: ${ts}.`;
-
-    container.appendChild(note);
+    dayNote.innerHTML =
+      `<div class="update-note">Note: This day's data was last updated on: ${ts}.</div>`;
   }
 
+  // Build field map
   const fieldMap = buildFieldMap(day);
+
+  // Build event + free blocks
   const blocks = buildBlocks(day, fieldMap);
 
+  // Build availability windows
   const availability = buildAvailability(day, fieldMap, blocks);
+
+  // Build event lanes
   const events = buildEventLanes(blocks);
 
+  // Render each complex column
   Object.keys(day.complexes).forEach(complex => {
     container.appendChild(
       renderComplexTimeline(
@@ -302,6 +308,7 @@ function renderDayCalendar(day) {
     );
   });
 }
+
 
 /* ---------------------------------------------------------
    RENDER COMPLEX TIMELINE
