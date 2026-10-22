@@ -247,7 +247,7 @@ function buildAvailability(day, fieldMap, blocks) {
 }
 
 /********************************************************************
- * EVENT LANES — PER COMPLEX
+ * EVENT LANES — ORIGINAL LOGIC
  ********************************************************************/
 function buildEventLanes(blocks) {
   const byComplex = {};
@@ -336,7 +336,7 @@ function renderDayCalendar(day) {
 }
 
 /********************************************************************
- * RENDER COMPLEX TIMELINE
+ * RENDER COMPLEX TIMELINE — ORIGINAL LAYOUT + TOOLTIP + TRUNCATION
  ********************************************************************/
 function renderComplexTimeline(complex, events, availability) {
   const div = document.createElement("div");
@@ -365,11 +365,9 @@ function renderComplexTimeline(complex, events, availability) {
   eventsTrack.className = "events-track";
   eventsTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  const hasAvail = availability.length > 0;
-  const maxLaneEvents = events.reduce((m, e) => Math.max(m, e.lane), -1);
-  const eventLaneCount = maxLaneEvents >= 0 ? (maxLaneEvents + 1) : 0;
-  const laneCount = eventLaneCount + (hasAvail ? 1 : 0);
-  const laneWidth = laneCount > 0 ? (100 / laneCount) : 100;
+  const maxLane = events.reduce((m, e) => Math.max(m, e.lane), 0);
+  const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
+  const laneWidth = 100 / laneCount;
 
   events.forEach(e => {
     const block = document.createElement("div");
@@ -409,9 +407,8 @@ function renderComplexTimeline(complex, events, availability) {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    const availLaneIndex = eventLaneCount; // events first, availability last
-    block.style.left = (availLaneIndex * laneWidth) + "%";
-    block.style.width = laneWidth + "%";
+    block.style.left = "0%";
+    block.style.width = "100%";
 
     block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
