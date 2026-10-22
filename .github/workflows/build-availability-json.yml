@@ -167,12 +167,10 @@ jobs:
           START=$(jq -r '.season_start' "$SEASON_FILE")
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
-          DAYS_JSON=$(find data/day -type f -name '*.json' -print0 \
-            | xargs -0 cat \
-            | jq -s '
-              map(select(.date | type == "string")) |
-              reduce .[] as $d ({}; .[$d.date] = $d)
-            ')
+          DAYS_JSON=$(jq -n '
+            reduce (inputs | select(.date | type == "string")) as $d ({}; .[$d.date] = $d)
+          ' data/day/*.json)
+
 
           jq -n \
             --arg start "$START" \
