@@ -247,53 +247,6 @@ function buildAvailability(day, fieldMap, blocks) {
 }
 
 /********************************************************************
- * EVENT LANES — ORIGINAL LOGIC
- ********************************************************************/
-function buildEventLanes(blocks) {
-  const byComplex = {};
-  blocks.forEach(b => {
-    if (b.type === "free") return;
-    if (!byComplex[b.complex]) byComplex[b.complex] = [];
-    byComplex[b.complex].push(b);
-  });
-
-  const lanesByComplex = {};
-
-  Object.keys(byComplex).forEach(complex => {
-    const list = byComplex[complex].sort((a, b) => a.start - b.start);
-    const lanes = [];
-
-    list.forEach(b => {
-      let laneIndex = 0;
-      while (true) {
-        const lane = lanes[laneIndex] || [];
-        const conflict = lane.some(e => overlaps(e.start, e.end, b.start, b.end));
-        if (!conflict) {
-          lane.push(b);
-          lanes[laneIndex] = lane;
-          break;
-        }
-        laneIndex++;
-      }
-    });
-
-    const out = [];
-    lanes.forEach((lane, idx) => {
-      lane.forEach(b => {
-        out.push({
-          ...b,
-          lane: idx
-        });
-      });
-    });
-
-    lanesByComplex[complex] = out;
-  });
-
-  return lanesByComplex;
-}
-
-/********************************************************************
  * RENDER DAY CALENDAR
  ********************************************************************/
 function renderDayCalendar(day) {
@@ -322,13 +275,19 @@ function renderDayCalendar(day) {
   detectConflicts(blocks);
 
   const availability = buildAvailability(day, fieldMap, blocks);
-  const events = buildEventLanes(blocks);
+
+  const eventsByComplex = {};
+  blocks.forEach(b => {
+    if (b.type === "free") return;
+    if (!eventsByComplex[b.complex]) eventsByComplex[b.complex] = [];
+    eventsByComplex[b.complex].push(b);
+  });
 
   Object.keys(day.complexes).forEach(complex => {
     container.appendChild(
       renderComplexTimeline(
         complex,
-        events[complex] || [],
+        eventsByComplex[complex] || [],
         availability.filter(a => a.complex === complex)
       )
     );
@@ -336,7 +295,7 @@ function renderDayCalendar(day) {
 }
 
 /********************************************************************
- * RENDER COMPLEX TIMELINE — ORIGINAL LAYOUT + TOOLTIP + TRUNCATION
+ * UNIFIED LANE SYSTEM — EVENTS + AVAILABILITY
  ********************************************************************/
 function renderComplexTimeline(complex, events, availability) {
   const div = document.createElement("div");
@@ -365,7 +324,6 @@ function renderComplexTimeline(complex, events, availability) {
   track.className = "events-track";
   track.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  // Combine events + availability into one block list
   const blocks = [];
 
   events.forEach(e => {
@@ -390,7 +348,6 @@ function renderComplexTimeline(complex, events, availability) {
     });
   });
 
-  // Lane assignment: events first
   const lanes = [];
 
   blocks
@@ -413,7 +370,6 @@ function renderComplexTimeline(complex, events, availability) {
 
   const eventLaneCount = lanes.length;
 
-  // Availability always goes in the last lane (L‑After)
   blocks
     .filter(b => b.kind === "avail")
     .forEach(b => {
@@ -426,7 +382,6 @@ function renderComplexTimeline(complex, events, availability) {
   const laneCount = lanes.length || 1;
   const laneWidth = 100 / laneCount;
 
-  // Render all blocks in the same track
   blocks.forEach(b => {
     const block = document.createElement("div");
     block.className = "block";
@@ -478,8 +433,6 @@ function renderComplexTimeline(complex, events, availability) {
   div.appendChild(timeline);
   return div;
 }
-
-
 
 /********************************************************************
  * INITIALIZE
