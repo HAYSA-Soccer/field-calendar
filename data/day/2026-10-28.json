@@ -1,7 +1,7 @@
 {
   "date": "2026-10-28",
   "updated": true,
-  "last_successful_update": "October 22, 2026 at 1:15 PM",
+  "last_successful_update": "October 22, 2026 at 1:32 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -659,5 +659,9 @@
       "grade": "7/8",
       "source": "ICS"
     }
-  ]
+  ],
+  "merged_availability": {
+    "TURF": [],
+    "SUMNER/SEAN JOYCE": []
+  }
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-10-24",
   "updated": true,
-  "last_successful_update": "October 22, 2026 at 1:13 PM",
+  "last_successful_update": "October 22, 2026 at 1:31 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -962,5 +962,105 @@
       "type": "free",
       "title": ""
     }
-  ]
+  ],
+  "merged_availability": {
+    "TURF": [
+      {
+        "type": "admin",
+        "start": "12:00",
+        "end": "14:00",
+        "start_12": "12:00 PM",
+        "end_12": "2:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "game",
+        "start": "14:00",
+        "end": "15:00",
+        "start_12": "2:00 PM",
+        "end_12": "3:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "title": "7/8 Girls Travel (Caldwell) vs. Rockland",
+        "team": "7/8 Girls Travel  vs. Rockland",
+        "coach": "Caldwell",
+        "grade": "7/8",
+        "reason": null
+      }
+    ],
+    "SUMNER/SEAN JOYCE": [
+      {
+        "type": "game",
+        "start": "08:30",
+        "end": "09:30",
+        "start_12": "8:30 AM",
+        "end_12": "9:30 AM",
+        "fields": [
+          "H-Su1",
+          "H-Su2",
+          "H-SJ4",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
+        "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
+        "coach": "Red",
+        "grade": "3/4",
+        "reason": null
+      },
+      {
+        "type": "game",
+        "start": "09:45",
+        "end": "10:45",
+        "start_12": "9:45 AM",
+        "end_12": "10:45 AM",
+        "fields": [
+          "H-Su1",
+          "H-Su2",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2A",
+          "H-Su2B"
+        ],
+        "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+        "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+        "coach": null,
+        "grade": "5/6",
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "08:30",
+        "end": "12:30",
+        "start_12": "8:30 AM",
+        "end_12": "12:30 PM",
+        "fields": [
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      }
+    ]
+  }
 }
