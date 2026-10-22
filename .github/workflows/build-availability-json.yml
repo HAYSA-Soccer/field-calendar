@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # REQUIRED for rebase to work
+          fetch-depth: 0
 
       # ---------------------------------------------------------
       # 2. Install jq
@@ -31,14 +31,11 @@ jobs:
         run: sudo apt-get install -y jq
 
       # ---------------------------------------------------------
-      # 3. Clear old JSON
+      # 3. Ensure data directories exist (no blind wipe)
       # ---------------------------------------------------------
-      - name: Clear old JSON
+      - name: Ensure data directories
         run: |
-          rm -f data/availability.json
-          rm -f data/day/*.json
-          rm -f data/week/*.json
-          rm -f data/month/*.json
+          mkdir -p data/day data/week data/month
 
       # ---------------------------------------------------------
       # 4. Fetch season window
@@ -79,7 +76,10 @@ jobs:
           echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
       # ---------------------------------------------------------
-      # 6. Build day JSON files (with full-availability fallback)
+      # 6. Build day JSON files (ALWAYS update days first)
+      #    - per-day retries
+      #    - full-availability fallback
+      #    - per-day updated flag + timestamp
       # ---------------------------------------------------------
       - name: Build day JSON files
         shell: bash
@@ -90,19 +90,23 @@ jobs:
           START=$(jq -r '.season_start' "$SEASON_FILE")
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
-          mkdir -p data/day data/week data/month
-
           CURRENT="$START"
           END_PLUS_ONE=$(date -d "$END next day" +%Y-%m-%d)
 
           echo "Building day JSON from $START to $END"
 
+          # Precompute full-day availability ranges for fallback
+          FULL_AVAIL=$(jq -n --argjson fields "$(cat "$FIELDS_FILE")" '
+            def fullRange: [{start:"08:00", end:"21:00"}];
+            reduce $fields.fields[] as $f ({}; .[$f.id] = fullRange)
+          ')
+
           while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
             echo "Fetching day: $CURRENT"
 
-            # ⭐ Try up to 3 times
             ATTEMPTS=0
             VALID=false
+            RAW=""
 
             while [ $ATTEMPTS -lt 3 ]; do
               RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
@@ -117,21 +121,20 @@ jobs:
               sleep 1
             done
 
+            TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
+
             if [ "$VALID" = false ]; then
               echo "❌ Apps Script returned invalid JSON for $CURRENT — using full-availability fallback day"
 
-              # ⭐ Build full-day availability for every field
-              FULL_AVAIL=$(jq -n '
-                def fullRange: [{start:"08:00", end:"21:00"}];
-                reduce (inputs.fields[]) as $f ({}; .[$f.id] = fullRange)
-              ' "$FIELDS_FILE")
-
               jq -n \
                 --arg date "$CURRENT" \
-                --argjson fields "$(cat $FIELDS_FILE)" \
+                --argjson fields "$(cat "$FIELDS_FILE")" \
                 --argjson fullAvail "$FULL_AVAIL" \
+                --arg ts "$TS_HUMAN" \
                 '{
                   date: $date,
+                  updated: false,
+                  last_successful_update: null,
                   complexes: $fields.complexes,
                   fields: $fields.fields,
                   availability: $fullAvail,
@@ -141,13 +144,16 @@ jobs:
                 }' > "data/day/${CURRENT}.json"
 
             else
-              echo "$RAW" > day.json
+              echo "$RAW" > day_raw.json
 
               jq -n \
-                --argjson day "$(cat day.json)" \
-                --argjson fields "$(cat $FIELDS_FILE)" \
+                --argjson day "$(cat day_raw.json)" \
+                --argjson fields "$(cat "$FIELDS_FILE")" \
+                --arg ts "$TS_HUMAN" \
                 '{
                   date: $day.date,
+                  updated: true,
+                  last_successful_update: $ts,
                   complexes: $fields.complexes,
                   fields: $fields.fields,
                   availability: ($day.availability // {}),
@@ -161,34 +167,38 @@ jobs:
           done
 
       # ---------------------------------------------------------
-      # 7. Build week + month JSON (no arg-list overflow)
+      # 7. Build week + month JSON (safe streaming, no arg-list overflow)
       # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
         run: |
           echo "Building weeks.json..."
-          find data/day -name '*.json' -print0 | xargs -0 cat | jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
-              ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
-              | ($ts | strftime("%w") | tonumber) as $w
-              | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
-              | ($mon_ts | strftime("%Y-%m-%d")) as $monday
-              | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
-            )
-          ' > data/week/weeks.json
+          find data/day -type f -name '*.json' -print0 \
+            | xargs -0 cat \
+            | jq -s '
+              map(select(.date | type == "string")) |
+              reduce .[] as $d ({}; 
+                ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
+                | ($ts | strftime("%w") | tonumber) as $w
+                | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
+                | ($mon_ts | strftime("%Y-%m-%d")) as $monday
+                | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
+              )
+            ' > data/week/weeks.json
 
           echo "Building months.json..."
-          find data/day -name '*.json' -print0 | xargs -0 cat | jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
-              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
-              |= (. // {}) | .[$d.date] = $d
-            )
-          ' > data/month/months.json
+          find data/day -type f -name '*.json' -print0 \
+            | xargs -0 cat \
+            | jq -s '
+              map(select(.date | type == "string")) |
+              reduce .[] as $d ({}; 
+                .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
+                |= (. // {}) | .[$d.date] = $d
+              )
+            ' > data/month/months.json
 
       # ---------------------------------------------------------
-      # 8. Build final availability.json (no arg-list overflow)
+      # 8. Build final availability.json (safe streaming)
       # ---------------------------------------------------------
       - name: Build final availability.json
         shell: bash
@@ -199,15 +209,17 @@ jobs:
           START=$(jq -r '.season_start' "$SEASON_FILE")
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
-          DAYS_JSON=$(find data/day -name '*.json' -print0 | xargs -0 cat | jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; .[$d.date] = $d)
-          ')
+          DAYS_JSON=$(find data/day -type f -name '*.json' -print0 \
+            | xargs -0 cat \
+            | jq -s '
+              map(select(.date | type == "string")) |
+              reduce .[] as $d ({}; .[$d.date] = $d)
+            ')
 
           jq -n \
             --arg start "$START" \
             --arg end "$END" \
-            --argjson fields "$(cat $FIELDS_FILE)" \
+            --argjson fields "$(cat "$FIELDS_FILE")" \
             --argjson days "$DAYS_JSON" \
             --argjson weeks "$(cat data/week/weeks.json)" \
             --argjson months "$(cat data/month/months.json)" \
@@ -222,7 +234,20 @@ jobs:
             }' > data/availability.json
 
       # ---------------------------------------------------------
-      # 9. Commit + safe rebase + push
+      # 9. Write global last_updated.json (for top-of-page banner)
+      # ---------------------------------------------------------
+      - name: Write last_updated.json
+        shell: bash
+        run: |
+          TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
+
+          jq -n \
+            --arg ts "$TS_HUMAN" \
+            '{ last_successful_update: $ts }' \
+            > data/last_updated.json
+
+      # ---------------------------------------------------------
+      # 10. Commit + safe rebase + push
       # ---------------------------------------------------------
       - name: Commit updated JSON
         run: |
