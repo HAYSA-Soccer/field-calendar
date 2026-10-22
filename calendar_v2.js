@@ -351,34 +351,43 @@ function renderComplexTimeline(complex, events, availability) {
     });
   });
 
-  // sort by start time for consistent ordering
-  blocks.sort((a, b) => a.start - b.start || a.end - b.end);
+  // lanes: events first
+  const lanes = [];
 
-  blocks.forEach(b => {
-    // Overlap rule:
-    // - Must overlap in TIME
-    // - Must overlap in FIELD SPACE
-    //   (events only conflict with same-field events)
-    //   (availability conflicts with everything in its time window)
-    const overlapping = blocks.filter(x =>
-      overlaps(x.start, x.end, b.start, b.end) &&
-      (
-        b.kind === "avail" ||
-        x.kind === "avail" ||
-        x.fieldId === b.fieldId
-      )
-    );
-
-    // events first, availability last
-    const ordered = overlapping.slice().sort((x, y) => {
-      if (x.kind === y.kind) return x.start - y.start || x.end - y.end;
-      return x.kind === "event" ? -1 : 1;
+  blocks
+    .filter(b => b.kind === "event")
+    .sort((a, b) => a.start - b.start)
+    .forEach(b => {
+      let laneIndex = 0;
+      while (true) {
+        const lane = lanes[laneIndex] || [];
+        const conflict = lane.some(x => overlaps(x.start, x.end, b.start, b.end));
+        if (!conflict) {
+          lane.push(b);
+          lanes[laneIndex] = lane;
+          b.lane = laneIndex;
+          break;
+        }
+        laneIndex++;
+      }
     });
 
-    const laneCount = ordered.length || 1;
-    const laneWidth = 100 / laneCount;
-    const laneIndex = ordered.indexOf(b);
+  const eventLaneCount = lanes.length;
 
+  // availability in last lane
+  blocks
+    .filter(b => b.kind === "avail")
+    .forEach(b => {
+      const laneIndex = eventLaneCount;
+      if (!lanes[laneIndex]) lanes[laneIndex] = [];
+      lanes[laneIndex].push(b);
+      b.lane = laneIndex;
+    });
+
+  const laneCount = lanes.length || 1;
+  const laneWidth = 100 / laneCount;
+
+  blocks.forEach(b => {
     const block = document.createElement("div");
     block.className = "block";
 
@@ -418,7 +427,7 @@ function renderComplexTimeline(complex, events, availability) {
 
     block.style.top = ((b.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((b.end - b.start) * PX_PER_MIN) + "px";
-    block.style.left = (laneIndex * laneWidth) + "%";
+    block.style.left = (b.lane * laneWidth) + "%";
     block.style.width = laneWidth + "%";
 
     track.appendChild(block);
@@ -429,6 +438,7 @@ function renderComplexTimeline(complex, events, availability) {
   div.appendChild(timeline);
   return div;
 }
+
 
 
 
