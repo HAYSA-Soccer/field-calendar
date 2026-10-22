@@ -124,9 +124,6 @@ jobs:
             CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
           done
 
-      # ---------------------------------------------------------
-      # Build week + month JSON (FIXED — no xargs)
-      # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
         continue-on-error: true
@@ -142,7 +139,7 @@ jobs:
               | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
             )
           ' data/day/*.json > data/week/weeks.json || echo "{}" > data/week/weeks.json
-
+      
           echo "Building months.json..."
           jq -s '
             map(select(.date | type == "string")) |
