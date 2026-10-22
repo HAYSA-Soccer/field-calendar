@@ -94,7 +94,11 @@
   font-size: 11px;
   background: #fff;
   box-sizing: border-box;
-  white-space: normal;
+
+  /* ⭐ NEW: prevent text from breaking layout */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* ---------------------------------------------------------
@@ -110,7 +114,11 @@
   background: #d9ffd9;
   border-color: #4caf50;
   padding: 8px 10px;
-  white-space: normal;
+
+  /* ⭐ NEW: prevent long field lists from breaking layout */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* ---------------------------------------------------------
