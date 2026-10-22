@@ -10,7 +10,12 @@
 
   <h1>HAYSA Calendar</h1>
 
-  <!-- Legend (simple, non-intrusive) -->
+  <!-- ⭐ GLOBAL REFRESH BANNER (always visible, never undefined) -->
+  <div id="global-refresh-banner" class="global-refresh-banner">
+    <!-- JS will populate this -->
+  </div>
+
+  <!-- Legend -->
   <div id="legend">
     <div class="legend-item">
       <span class="legend-color practice"></span> Practice
@@ -23,30 +28,46 @@
     </div>
   </div>
 
+  <!-- Date Picker -->
   <div id="date-picker">
     <label for="calendar-date">Select Date:</label>
     <input type="date" id="calendar-date">
     <button id="load-date" class="nav-btn">Go</button>
   </div>
 
+  <!-- Navigation Buttons -->
   <div id="nav-buttons">
     <button id="prev-day" class="nav-btn">← Previous Day</button>
     <button id="today" class="nav-btn">Today</button>
     <button id="next-day" class="nav-btn">Next Day →</button>
   </div>
 
+  <!-- ⭐ DAY LABEL (e.g., Tuesday, October 21, 2026) -->
+  <div id="day-label" style="font-size:18px; font-weight:600; margin-bottom:10px;"></div>
+
+  <!-- ⭐ CALENDAR RENDER TARGET -->
   <div id="calendar"></div>
 
+  <!-- JS -->
   <script src="calendar_v2.js?v=20261021"></script>
   <script>
+    // Load global refresh banner
+    loadGlobalRefreshBanner();
+
+    // Initialize date picker
     const dateInput = document.getElementById("calendar-date");
     const todayStr = new Date().toISOString().split("T")[0];
     dateInput.value = todayStr;
+
+    updateDayLabel(todayStr);
     loadDay(todayStr);
 
     document.getElementById("load-date").addEventListener("click", () => {
       const d = dateInput.value;
-      if (d) loadDay(d);
+      if (d) {
+        updateDayLabel(d);
+        loadDay(d);
+      }
     });
 
     document.getElementById("prev-day").addEventListener("click", () => {
@@ -54,6 +75,7 @@
       d.setDate(d.getDate() - 1);
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
+      updateDayLabel(newDate);
       loadDay(newDate);
     });
 
@@ -62,12 +84,14 @@
       d.setDate(d.getDate() + 1);
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
+      updateDayLabel(newDate);
       loadDay(newDate);
     });
 
     document.getElementById("today").addEventListener("click", () => {
       const today = new Date().toISOString().split("T")[0];
       dateInput.value = today;
+      updateDayLabel(today);
       loadDay(today);
     });
   </script>
