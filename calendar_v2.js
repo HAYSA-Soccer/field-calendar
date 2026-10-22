@@ -5,12 +5,26 @@ const PX_PER_MIN = 1;
 /* ---------------------------------------------------------
    GLOBAL REFRESH BANNER
 --------------------------------------------------------- */
-function showGlobalRefreshBanner() {
+async function loadGlobalRefreshBanner() {
   const banner = document.getElementById("global-refresh-banner");
-  if (!banner || !window.lastUpdatedData) return;
+  if (!banner) return;
 
-  banner.textContent =
-    `Last refreshed: ${window.lastUpdatedData.last_successful_update} (unless otherwise noted)`;
+  try {
+    const res = await fetch("data/last_updated.json");
+    if (!res.ok) throw new Error("Missing last_updated.json");
+
+    const data = await res.json();
+    const ts = data.last_successful_update || "Never";
+
+    banner.textContent =
+      `Note: Unless otherwise noted, the information below was last updated on: ${ts}.`;
+
+    window.lastUpdatedData = data;
+  } catch (e) {
+    banner.textContent =
+      "Note: Unless otherwise noted, the information below was last updated on: Never.";
+    window.lastUpdatedData = { last_successful_update: "Never" };
+  }
 }
 
 /* ---------------------------------------------------------
@@ -49,7 +63,7 @@ function overlaps(aStart, aEnd, bStart, bEnd) {
 }
 
 /* ---------------------------------------------------------
-   LOAD DAY — NOW WITH “NOT UPDATED” SUPPORT
+   LOAD DAY (NO FAKE FALLBACK)
 --------------------------------------------------------- */
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
@@ -59,11 +73,10 @@ async function loadDay(dateStr) {
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const day = await res.json();
 
+    const day = await res.json();
     renderDayCalendar(day);
   } catch (e) {
-    console.error(`Failed to load ${dateStr}: ${e.message}`);
     container.innerHTML =
       `<div class="update-note">No stored data exists for this date.</div>`;
   }
@@ -251,18 +264,25 @@ function buildEventLanes(blocks) {
 }
 
 /* ---------------------------------------------------------
-   RENDER DAY CALENDAR — NOW WITH “NOT UPDATED” BANNER
+   RENDER DAY CALENDAR (WITH PER-DAY NOTE)
 --------------------------------------------------------- */
 function renderDayCalendar(day) {
   const container = document.getElementById("calendar");
   container.innerHTML = "";
 
-  /* ⭐ If this day failed to update, show banner */
+  // Per-day note only if not updated
   if (!day.updated) {
     const note = document.createElement("div");
     note.className = "update-note";
+
+    const ts =
+      day.last_successful_update ||
+      (window.lastUpdatedData && window.lastUpdatedData.last_successful_update) ||
+      "Never";
+
     note.textContent =
-      `Note: This day's data was last updated: ${day.last_successful_update}.`;
+      `Note: This day's data was last updated on: ${ts}.`;
+
     container.appendChild(note);
   }
 
@@ -370,3 +390,10 @@ function renderComplexTimeline(complex, events, availability) {
   div.appendChild(timeline);
   return div;
 }
+
+/* ---------------------------------------------------------
+   INITIALIZE GLOBAL BANNER ON PAGE LOAD
+--------------------------------------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  loadGlobalRefreshBanner();
+});
