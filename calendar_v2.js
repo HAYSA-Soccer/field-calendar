@@ -14,7 +14,7 @@ async function loadGlobalRefreshBanner() {
     if (!res.ok) throw new Error("Missing last_updated.json");
 
     const data = await res.json();
-    const ts = data.last_successful_update || "Never";
+    const ts = data.last_successful_update || "No prior update available.";
 
     banner.textContent =
       `Note: Unless otherwise noted, the information below was last updated on: ${ts}.`;
@@ -22,10 +22,11 @@ async function loadGlobalRefreshBanner() {
     window.lastUpdatedData = data;
   } catch (e) {
     banner.textContent =
-      "Note: Unless otherwise noted, the information below was last updated on: Never.";
-    window.lastUpdatedData = { last_successful_update: "Never" };
+      "Note: Unless otherwise noted, the information below was last updated on: No prior update available.";
+    window.lastUpdatedData = { last_successful_update: "No prior update available." };
   }
 }
+
 
 /* ---------------------------------------------------------
    DAY LABEL
