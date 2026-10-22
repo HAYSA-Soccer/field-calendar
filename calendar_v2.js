@@ -96,7 +96,7 @@ function buildFieldMap(day) {
 }
 
 /********************************************************************
- * BUILD BLOCKS — NOW USING REAL FIELD IDs
+ * BUILD BLOCKS — USING REAL FIELD IDs
  ********************************************************************/
 function buildBlocks(day, fieldMap) {
   const blocks = [];
@@ -108,8 +108,8 @@ function buildBlocks(day, fieldMap) {
 
     blocks.push({
       complex: f.complex,
-      fieldId: f.id,        // REAL FIELD ID
-      fieldName: f.id,      // SHOW REAL FIELD ID
+      fieldId: f.id,
+      fieldName: f.id,
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
@@ -121,7 +121,7 @@ function buildBlocks(day, fieldMap) {
 }
 
 /********************************************************************
- * CONFLICT DETECTION — CORRECT WITH REAL FIELD IDs
+ * CONFLICT DETECTION — REAL FIELD IDs
  ********************************************************************/
 function detectConflicts(blocks) {
   const byField = {};
@@ -169,7 +169,7 @@ function detectConflicts(blocks) {
 }
 
 /********************************************************************
- * BUILD AVAILABILITY — TRUST BACKEND JSON COMPLETELY
+ * BUILD AVAILABILITY — TRUST BACKEND JSON
  ********************************************************************/
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
@@ -179,7 +179,6 @@ function buildAvailability(day, fieldMap, blocks) {
 
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t++) {
-
       const bookedFields = new Set();
 
       blocks.forEach(b => {
@@ -248,7 +247,7 @@ function buildAvailability(day, fieldMap, blocks) {
 }
 
 /********************************************************************
- * EVENT LANES — NO CHANGES NEEDED
+ * EVENT LANES — PER COMPLEX
  ********************************************************************/
 function buildEventLanes(blocks) {
   const byComplex = {};
@@ -366,9 +365,11 @@ function renderComplexTimeline(complex, events, availability) {
   eventsTrack.className = "events-track";
   eventsTrack.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
 
-  const maxLane = events.reduce((m, e) => Math.max(m, e.lane), 0);
-  const laneCount = maxLane >= 0 ? (maxLane + 1) : 1;
-  const laneWidth = 100 / laneCount;
+  const hasAvail = availability.length > 0;
+  const maxLaneEvents = events.reduce((m, e) => Math.max(m, e.lane), -1);
+  const eventLaneCount = maxLaneEvents >= 0 ? (maxLaneEvents + 1) : 0;
+  const laneCount = eventLaneCount + (hasAvail ? 1 : 0);
+  const laneWidth = laneCount > 0 ? (100 / laneCount) : 100;
 
   events.forEach(e => {
     const block = document.createElement("div");
@@ -385,9 +386,16 @@ function renderComplexTimeline(complex, events, availability) {
     block.style.width = laneWidth + "%";
 
     block.innerHTML = `
-      <div class="block-title">${e.title}</div>
-      <div class="block-fields">${e.fieldId}</div>
-      <div class="block-time">${fmt(e.start)} – ${fmt(e.end)}</div>
+      <div class="block-main">
+        <div class="block-title">${e.title}</div>
+        <div class="block-fields">${e.fieldId}</div>
+        <div class="block-time">${fmt(e.start)} – ${fmt(e.end)}</div>
+      </div>
+      <div class="block-tooltip">
+        <div><strong>Field:</strong> ${e.fieldId}</div>
+        <div><strong>Time:</strong> ${fmt(e.start)} – ${fmt(e.end)}</div>
+        <div><strong>Type:</strong> ${e.type}</div>
+      </div>
     `;
 
     eventsTrack.appendChild(block);
@@ -401,16 +409,24 @@ function renderComplexTimeline(complex, events, availability) {
     const block = document.createElement("div");
     block.className = "block avail-block";
 
-    block.style.left = "0%";
-    block.style.width = "100%";
+    const availLaneIndex = eventLaneCount; // events first, availability last
+    block.style.left = (availLaneIndex * laneWidth) + "%";
+    block.style.width = laneWidth + "%";
 
     block.style.top = ((a.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((a.end - a.start) * PX_PER_MIN) + "px";
 
     block.innerHTML = `
-      <div class="block-title">Available</div>
-      <div class="block-fields">${a.fields.join(", ")}</div>
-      <div class="block-time">${fmt(a.start)} – ${fmt(a.end)}</div>
+      <div class="block-main">
+        <div class="block-title">Available</div>
+        <div class="block-fields">${a.fields.join(", ")}</div>
+        <div class="block-time">${fmt(a.start)} – ${fmt(a.end)}</div>
+      </div>
+      <div class="block-tooltip">
+        <div><strong>Fields:</strong> ${a.fields.join(", ")}</div>
+        <div><strong>Time:</strong> ${fmt(a.start)} – ${fmt(a.end)}</div>
+        <div><strong>Complex:</strong> ${complex}</div>
+      </div>
     `;
 
     availTrack.appendChild(block);
