@@ -14,18 +14,20 @@ async function loadGlobalRefreshBanner() {
     if (!res.ok) throw new Error("Missing last_updated.json");
 
     const data = await res.json();
-    const ts = data.last_successful_update || "No prior update available.";
+    const ts = data.last_successful_update;
 
-    banner.textContent =
-      `Note: Unless otherwise noted, the information below was last updated on: ${ts}.`;
+    banner.textContent = ts
+      ? `Note: Unless otherwise noted, the information below was last updated on: ${ts}.`
+      : `Note: Unless otherwise noted, the information below has no prior updated details.`;
 
     window.lastUpdatedData = data;
   } catch (e) {
     banner.textContent =
-      "Note: Unless otherwise noted, the information below was last updated on: No prior update available.";
-    window.lastUpdatedData = { last_successful_update: "No prior update available." };
+      "Note: Unless otherwise noted, the information below has no prior updated details.";
+    window.lastUpdatedData = { last_successful_update: null };
   }
 }
+
 
 
 /* ---------------------------------------------------------
@@ -271,34 +273,27 @@ function renderDayCalendar(day) {
   const dayNote = document.getElementById("day-note");
   const container = document.getElementById("calendar");
 
-  // Clear previous content
   dayNote.innerHTML = "";
   container.innerHTML = "";
 
-  // ⭐ Per-day note (only when the day did NOT update)
   if (!day.updated) {
     const ts =
       day.last_successful_update ||
-      (window.lastUpdatedData && window.lastUpdatedData.last_successful_update) ||
-      "No prior update available.";
+      (window.lastUpdatedData && window.lastUpdatedData.last_successful_update);
 
     dayNote.innerHTML =
-      `<div class="update-note">Note: This day's data was last updated on: ${ts}.</div>`;
+      `<div class="update-note">${
+        ts
+          ? `Note: This day's data was last updated on: ${ts}.`
+          : `Note: This day's data has never been updated.`
+      }</div>`;
   }
 
-  // Build field map
   const fieldMap = buildFieldMap(day);
-
-  // Build event + free blocks
   const blocks = buildBlocks(day, fieldMap);
-
-  // Build availability windows
   const availability = buildAvailability(day, fieldMap, blocks);
-
-  // Build event lanes
   const events = buildEventLanes(blocks);
 
-  // Render each complex column
   Object.keys(day.complexes).forEach(complex => {
     container.appendChild(
       renderComplexTimeline(
@@ -309,6 +304,7 @@ function renderDayCalendar(day) {
     );
   });
 }
+
 
 
 /* ---------------------------------------------------------
