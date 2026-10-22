@@ -102,14 +102,14 @@ function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
-    const fieldId = b.field;
+    const fieldId = b.field;   // <-- USE REAL FIELD FROM BACKEND
     const f = fieldMap[fieldId];
     if (!f) return;
 
     blocks.push({
       complex: f.complex,
-      fieldId: f.id,
-      fieldName: f.id,
+      fieldId: fieldId,        // <-- DO NOT USE f.id (parent field)
+      fieldName: fieldId,
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
@@ -119,6 +119,7 @@ function buildBlocks(day, fieldMap) {
 
   return blocks;
 }
+
 
 /********************************************************************
  * CONFLICT DETECTION — REAL FIELD IDs
