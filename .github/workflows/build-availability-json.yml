@@ -103,10 +103,11 @@ jobs:
                 --arg date "$CURRENT" \
                 --argjson fields "$(cat "$FIELDS_FILE")" \
                 --argjson fullAvail "$FULL_AVAIL" \
+                --arg ts "$TS_HUMAN" \
                 '{
                   date: $date,
                   updated: false,
-                  last_successful_update: null,
+                  last_successful_update: $ts,
                   complexes: $fields.complexes,
                   fields: $fields.fields,
                   availability: $fullAvail,
