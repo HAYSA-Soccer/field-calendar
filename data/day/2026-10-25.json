@@ -1,7 +1,7 @@
 {
   "date": "2026-10-25",
   "updated": true,
-  "last_successful_update": "October 21, 2026 at 11:14 PM",
+  "last_successful_update": "October 22, 2026 at 11:12 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -20,7 +20,10 @@
       "H-SJ3B",
       "H-SJ4",
       "H-SJ4A",
-      "H-SJ4B"
+      "H-SJ4B",
+      "H-SuSS",
+      "H-SuSS1",
+      "H-SuSS2"
     ]
   },
   "fields": [
@@ -113,6 +116,24 @@
       "name": "Sumner Field 4B",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
+    },
+    {
+      "id": "H-SuSS",
+      "name": "Sumner Snack Shack Area",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SuSS1",
+      "name": "Sumner Snack Shack Area 1",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SuSS2",
+      "name": "Sumner Snack Shack Area 2",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
     }
   ],
   "availability": {
@@ -130,7 +151,10 @@
     "H-SJ3B": [],
     "H-SJ4": [],
     "H-SJ4A": [],
-    "H-SJ4B": []
+    "H-SJ4B": [],
+    "H-SuSS": [],
+    "H-SuSS1": [],
+    "H-SuSS2": []
   },
   "events": {},
   "blocks": {},
