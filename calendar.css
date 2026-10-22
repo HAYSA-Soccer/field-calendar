@@ -116,18 +116,18 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 
-  /* FIXED: readable spacing */
+  /* SAFE: readable spacing */
   padding: 6px 8px;
 
-  /* FIXED: consistent line height */
-  line-height: 1.3;
+  /* SAFE: readable line height */
+  line-height: 1.25;
 
   font-size: 11px;
   background: #fff;
   box-sizing: border-box;
 
-  /* FIXED: remove flex — this was causing cramming */
-  display: block;
+  /* SAFE: allow multi-line text */
+  white-space: normal;
 }
 
 /* ---------------------------------------------------------
@@ -143,8 +143,11 @@
   background: #d9ffd9;
   border-color: #4caf50;
 
-  /* FIXED: more breathing room for long field lists */
+  /* SAFE: more breathing room */
   padding: 8px 10px;
+
+  /* SAFE: allow wrapping long field lists */
+  white-space: normal;
 }
 
 /* ---------------------------------------------------------
@@ -163,16 +166,6 @@
 .block-time {
   font-size: 10px;
   color: #555;
-}
-
-/* ---------------------------------------------------------
-   TRUNCATION
---------------------------------------------------------- */
-.block-title,
-.block-fields {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* ---------------------------------------------------------
