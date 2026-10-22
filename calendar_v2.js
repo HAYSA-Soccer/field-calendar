@@ -1,6 +1,3 @@
-console.log("RUNNING NEW CALENDAR FILE");
-
-
 /********************************************************************
  * CONSTANTS
  ********************************************************************/
@@ -172,7 +169,7 @@ function detectConflicts(blocks) {
 }
 
 /********************************************************************
- * BUILD AVAILABILITY — TRUST BACKEND JSON
+ * BUILD AVAILABILITY — TRUST BACKEND JSON + SUPPRESS ON ADMIN BLOCKS
  ********************************************************************/
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
@@ -180,8 +177,23 @@ function buildAvailability(day, fieldMap, blocks) {
   Object.keys(day.complexes).forEach(complex => {
     const fields = day.complexes[complex];
 
+    // all admin (full-complex) blocks for this complex
+    const adminBlocks = blocks.filter(
+      b => b.complex === complex && b.type === "admin"
+    );
+
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t++) {
+      // if any admin block is active at this minute, no availability
+      const hasAdmin = adminBlocks.some(
+        b => t >= b.start && t < b.end
+      );
+
+      if (hasAdmin) {
+        timeline.push({ minute: t, free: [] });
+        continue;
+      }
+
       const bookedFields = new Set();
 
       blocks.forEach(b => {
@@ -248,6 +260,7 @@ function buildAvailability(day, fieldMap, blocks) {
 
   return avail;
 }
+
 
 /********************************************************************
  * RENDER DAY CALENDAR
