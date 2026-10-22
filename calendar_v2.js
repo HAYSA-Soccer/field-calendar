@@ -1,10 +1,13 @@
+/********************************************************************
+ * CONSTANTS
+ ********************************************************************/
 const DAY_START = 8 * 60;
 const DAY_END   = 21 * 60;
 const PX_PER_MIN = 1;
 
-/* ---------------------------------------------------------
-   GLOBAL REFRESH BANNER
---------------------------------------------------------- */
+/********************************************************************
+ * GLOBAL REFRESH BANNER
+ ********************************************************************/
 async function loadGlobalRefreshBanner() {
   const banner = document.getElementById("global-refresh-banner");
   if (!banner) return;
@@ -28,9 +31,9 @@ async function loadGlobalRefreshBanner() {
   }
 }
 
-/* ---------------------------------------------------------
-   DAY LABEL
---------------------------------------------------------- */
+/********************************************************************
+ * DAY LABEL
+ ********************************************************************/
 function updateDayLabel(dateStr) {
   const d = new Date(dateStr + "T00:00:00");
   const dayName = d.toLocaleDateString("en-US", { weekday: "long" });
@@ -43,9 +46,9 @@ function updateDayLabel(dateStr) {
   if (el) el.textContent = `${dayName}, ${pretty}`;
 }
 
-/* ---------------------------------------------------------
-   TIME HELPERS
---------------------------------------------------------- */
+/********************************************************************
+ * TIME HELPERS
+ ********************************************************************/
 function parseTime(t) {
   const [h, m] = t.split(":").map(Number);
   return h * 60 + m;
@@ -63,9 +66,9 @@ function overlaps(aStart, aEnd, bStart, bEnd) {
   return aStart < bEnd && bStart < aEnd;
 }
 
-/* ---------------------------------------------------------
-   LOAD DAY (NO FAKE FALLBACK)
---------------------------------------------------------- */
+/********************************************************************
+ * LOAD DAY
+ ********************************************************************/
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
   const container = document.getElementById("calendar");
@@ -83,41 +86,30 @@ async function loadDay(dateStr) {
   }
 }
 
-/* ---------------------------------------------------------
-   FIELD MAP
---------------------------------------------------------- */
+/********************************************************************
+ * FIELD MAP
+ ********************************************************************/
 function buildFieldMap(day) {
   const map = {};
   day.fields.forEach(f => map[f.id] = f);
   return map;
 }
 
-function isFullField(fieldObj) {
-  return fieldObj.name.includes("(Full)");
-}
-
-/* ---------------------------------------------------------
-   BUILD BLOCKS
---------------------------------------------------------- */
+/********************************************************************
+ * BUILD BLOCKS — NOW USING REAL FIELD IDs
+ ********************************************************************/
 function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
-    let fieldId = b.display_field || b.field;
-    let f = fieldMap[fieldId];
-
-    if (!f && b.surface) {
-      const corrected = day.fields.find(x => x.surface === b.surface);
-      if (corrected) f = corrected;
-    }
-
-    if (!f) f = fieldMap[b.field];
+    const fieldId = b.field;
+    const f = fieldMap[fieldId];
     if (!f) return;
 
     blocks.push({
       complex: f.complex,
-      fieldId: f.id,
-      fieldName: f.name,
+      fieldId: f.id,        // REAL FIELD ID
+      fieldName: f.id,      // SHOW REAL FIELD ID
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
@@ -128,9 +120,9 @@ function buildBlocks(day, fieldMap) {
   return blocks;
 }
 
-/* ---------------------------------------------------------
-   ⭐ NEW: CONFLICT DETECTION
---------------------------------------------------------- */
+/********************************************************************
+ * CONFLICT DETECTION — CORRECT WITH REAL FIELD IDs
+ ********************************************************************/
 function detectConflicts(blocks) {
   const byField = {};
 
@@ -147,7 +139,7 @@ function detectConflicts(blocks) {
         const A = list[i];
         const B = list[j];
 
-        if (B.start >= A.end) break; // no overlap possible
+        if (B.start >= A.end) break;
 
         const overlap = A.end > B.start;
         if (!overlap) continue;
@@ -176,9 +168,9 @@ function detectConflicts(blocks) {
   return blocks;
 }
 
-/* ---------------------------------------------------------
-   BUILD AVAILABILITY
---------------------------------------------------------- */
+/********************************************************************
+ * BUILD AVAILABILITY — TRUST BACKEND JSON COMPLETELY
+ ********************************************************************/
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
@@ -186,46 +178,36 @@ function buildAvailability(day, fieldMap, blocks) {
     const fields = day.complexes[complex];
 
     const timeline = [];
-    for (let t = DAY_START; t < DAY_END; t += 1) {
-
-      const fullFieldBooked =
-        complex === "TURF" &&
-        blocks.some(b =>
-          b.complex === complex &&
-          isFullField(fieldMap[b.fieldId]) &&
-          b.type !== "free" &&
-          t >= b.start && t < b.end
-        );
+    for (let t = DAY_START; t < DAY_END; t++) {
 
       const bookedFields = new Set();
-      const freeFields   = new Set();
 
       blocks.forEach(b => {
         if (b.complex !== complex) return;
         if (b.type === "free") return;
         if (t >= b.start && t < b.end) {
-          bookedFields.add(b.fieldName);
+          bookedFields.add(b.fieldId);
         }
       });
 
-      fields.forEach(fid => {
-        const f = fieldMap[fid];
-        const ranges = day.availability[fid] || [];
+      const freeFields = [];
 
+      fields.forEach(fid => {
+        const ranges = day.availability[fid] || [];
         const isFree = ranges.some(r => {
           const rs = parseTime(r.start);
           const re = parseTime(r.end);
           return t >= rs && t < re;
         });
 
-        if (!fullFieldBooked && isFree && !bookedFields.has(f.name)) {
-          freeFields.add(f.name);
+        if (isFree && !bookedFields.has(fid)) {
+          freeFields.push(fid);
         }
       });
 
       timeline.push({
         minute: t,
-        free: Array.from(freeFields).sort()
+        free: freeFields.sort()
       });
     }
 
@@ -265,10 +247,9 @@ function buildAvailability(day, fieldMap, blocks) {
   return avail;
 }
 
-
-/* ---------------------------------------------------------
-   EVENT LANES
---------------------------------------------------------- */
+/********************************************************************
+ * EVENT LANES — NO CHANGES NEEDED
+ ********************************************************************/
 function buildEventLanes(blocks) {
   const byComplex = {};
   blocks.forEach(b => {
@@ -313,9 +294,9 @@ function buildEventLanes(blocks) {
   return lanesByComplex;
 }
 
-/* ---------------------------------------------------------
-   RENDER DAY CALENDAR (WITH PER-DAY NOTE)
---------------------------------------------------------- */
+/********************************************************************
+ * RENDER DAY CALENDAR
+ ********************************************************************/
 function renderDayCalendar(day) {
   const dayNote = document.getElementById("day-note");
   const container = document.getElementById("calendar");
@@ -339,7 +320,6 @@ function renderDayCalendar(day) {
   const fieldMap = buildFieldMap(day);
   const blocks = buildBlocks(day, fieldMap);
 
-  /* ⭐ NEW: detect conflicts before availability + lane building */
   detectConflicts(blocks);
 
   const availability = buildAvailability(day, fieldMap, blocks);
@@ -356,9 +336,9 @@ function renderDayCalendar(day) {
   });
 }
 
-/* ---------------------------------------------------------
-   RENDER COMPLEX TIMELINE
---------------------------------------------------------- */
+/********************************************************************
+ * RENDER COMPLEX TIMELINE
+ ********************************************************************/
 function renderComplexTimeline(complex, events, availability) {
   const div = document.createElement("div");
   div.className = "complex";
@@ -395,7 +375,6 @@ function renderComplexTimeline(complex, events, availability) {
     block.className = "block event-block";
     block.classList.add(e.type);
 
-    /* ⭐ NEW: apply conflict highlight */
     if (e.conflict) {
       block.classList.add("conflict");
     }
@@ -407,7 +386,7 @@ function renderComplexTimeline(complex, events, availability) {
 
     block.innerHTML = `
       <div class="block-title">${e.title}</div>
-      <div class="block-fields">${e.fieldName}</div>
+      <div class="block-fields">${e.fieldId}</div>
       <div class="block-time">${fmt(e.start)} – ${fmt(e.end)}</div>
     `;
 
@@ -449,9 +428,9 @@ function renderComplexTimeline(complex, events, availability) {
   return div;
 }
 
-/* ---------------------------------------------------------
-   INITIALIZE GLOBAL BANNER ON PAGE LOAD
---------------------------------------------------------- */
+/********************************************************************
+ * INITIALIZE
+ ********************************************************************/
 document.addEventListener("DOMContentLoaded", () => {
   loadGlobalRefreshBanner();
 });
