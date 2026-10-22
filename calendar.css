@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   GLOBAL REFRESH BANNER (top of page)
+   GLOBAL REFRESH BANNER
 --------------------------------------------------------- */
 .global-refresh-banner {
   font-size: 15px;
@@ -51,7 +51,7 @@
 --------------------------------------------------------- */
 .timeline {
   position: relative;
-  height: calc((21 - 8) * 60px); /* 8am–9pm at 60px/hour */
+  height: calc((21 - 8) * 60px);
 }
 
 /* ---------------------------------------------------------
@@ -72,18 +72,18 @@
 }
 
 /* ---------------------------------------------------------
-   TRACKS (EVENTS + AVAILABILITY)
+   TRACKS
 --------------------------------------------------------- */
 .tracks {
   position: absolute;
-  left: 80px;   /* next to hour column */
+  left: 80px;
   right: 0;
   height: 100%;
   display: block;
 }
 
 /* ---------------------------------------------------------
-   EVENTS TRACK (TOP LAYER)
+   EVENTS TRACK
 --------------------------------------------------------- */
 .events-track {
   position: absolute;
@@ -95,7 +95,7 @@
 }
 
 /* ---------------------------------------------------------
-   AVAILABILITY TRACK (BEHIND EVENTS)
+   AVAILABILITY TRACK
 --------------------------------------------------------- */
 .avail-track {
   position: absolute;
@@ -109,7 +109,7 @@
 }
 
 /* ---------------------------------------------------------
-   BLOCKS (EVENTS + AVAILABILITY)
+   BLOCKS
 --------------------------------------------------------- */
 .block {
   position: absolute;
@@ -154,7 +154,7 @@
 }
 
 /* ---------------------------------------------------------
-   TRUNCATION FOR LONG TEXT
+   TRUNCATION
 --------------------------------------------------------- */
 .block-title,
 .block-fields {
@@ -164,7 +164,7 @@
 }
 
 /* ---------------------------------------------------------
-   TOOLTIP STYLING
+   TOOLTIP
 --------------------------------------------------------- */
 .block-main {
   pointer-events: auto;
@@ -193,30 +193,6 @@
 }
 
 /* ---------------------------------------------------------
-   NAV BUTTONS
---------------------------------------------------------- */
-#nav-buttons {
-  margin: 15px 0;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.nav-btn {
-  padding: 12px 20px;
-  font-size: 16px;
-  background: #005bbb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.nav-btn:hover {
-  background: #004999;
-}
-
-/* ---------------------------------------------------------
    LEGEND
 --------------------------------------------------------- */
 #legend {
@@ -230,47 +206,3 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 14px;
-}
-
-.legend-color {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  display: inline-block;
-  border: 1px solid #ccc;
-}
-
-.legend-color.practice { background: #e0e0e0; }
-.legend-color.game     { background: #d0e4ff; }
-.legend-color.available{ background: #d9ffd9; }
-
-/* ---------------------------------------------------------
-   CONFLICT INDICATOR
---------------------------------------------------------- */
-.block.conflict {
-  border: 2px solid red !important;
-  box-shadow: 0 0 4px red;
-}
-
-/* ---------------------------------------------------------
-   MOBILE LAYOUT
---------------------------------------------------------- */
-@media (max-width: 768px) {
-  #calendar {
-    flex-direction: column;
-  }
-
-  .complex {
-    min-width: auto;
-    width: 100%;
-  }
-
-  .hours {
-    width: 60px;
-  }
-
-  .tracks {
-    left: 60px;
-  }
-}
