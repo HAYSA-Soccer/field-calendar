@@ -77,6 +77,8 @@ jobs:
             echo "Fetching day: $CURRENT"
 
             RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
+
+            export TZ="America/New_York"
             TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
 
             if jq -e . <<<"$RAW" >/dev/null 2>&1; then
@@ -194,7 +196,10 @@ jobs:
       # ---------------------------------------------------------
       - name: Write last_updated.json
         run: |
+
+          export TZ="America/New_York"
           TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
+
           jq -n --arg ts "$TS_HUMAN" '{ last_successful_update: $ts }' \
             > data/last_updated.json
 
