@@ -10,10 +10,8 @@
 
   <h1>HAYSA Calendar</h1>
 
-  <!-- ⭐ GLOBAL REFRESH BANNER (always visible, never undefined) -->
-  <div id="global-refresh-banner" class="global-refresh-banner">
-    <!-- JS will populate this -->
-  </div>
+  <!-- ⭐ GLOBAL REFRESH BANNER -->
+  <div id="global-refresh-banner" class="global-refresh-banner"></div>
 
   <!-- Legend -->
   <div id="legend">
@@ -42,19 +40,20 @@
     <button id="next-day" class="nav-btn">Next Day →</button>
   </div>
 
-  <!-- ⭐ DAY LABEL (e.g., Tuesday, October 21, 2026) -->
+  <!-- Day Label -->
   <div id="day-label" style="font-size:18px; font-weight:600; margin-bottom:10px;"></div>
 
-  <!-- ⭐ CALENDAR RENDER TARGET -->
+  <!-- ⭐ PER-DAY NOTE (NOT inside #calendar!) -->
+  <div id="day-note"></div>
+
+  <!-- Calendar -->
   <div id="calendar"></div>
 
   <!-- JS -->
   <script src="calendar_v2.js?v=20261021"></script>
   <script>
-    // Load global refresh banner
     loadGlobalRefreshBanner();
 
-    // Initialize date picker
     const dateInput = document.getElementById("calendar-date");
     const todayStr = new Date().toISOString().split("T")[0];
     dateInput.value = todayStr;
