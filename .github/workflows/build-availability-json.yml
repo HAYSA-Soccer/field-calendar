@@ -25,7 +25,7 @@ jobs:
         run: sudo apt-get install -y jq
 
       # ---------------------------------------------------------
-      # NEVER DELETE EXISTING JSON — only overwrite day files
+      # Ensure directories exist
       # ---------------------------------------------------------
       - name: Ensure directories exist
         run: |
@@ -54,7 +54,7 @@ jobs:
           echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
       # ---------------------------------------------------------
-      # DAILY FILES ALWAYS UPDATE — independent of everything else
+      # Build day JSON files
       # ---------------------------------------------------------
       - name: Build day JSON files
         shell: bash
@@ -97,7 +97,8 @@ jobs:
                   availability: ($day.availability // {}),
                   events: ($day.events // {}),
                   blocks: ($day.blocks // {}),
-                  merged: ($day.merged // [])
+                  merged: ($day.merged // []),
+                  merged_availability: ($day.merged_availability // {})
                 }' > "data/day/${CURRENT}.json"
 
             else
@@ -115,7 +116,8 @@ jobs:
                   availability: $fullAvail,
                   events: {},
                   blocks: {},
-                  merged: []
+                  merged: [],
+                  merged_availability: {}
                 }' > "data/day/${CURRENT}.json"
             fi
 
@@ -123,7 +125,7 @@ jobs:
           done
 
       # ---------------------------------------------------------
-      # SAFE WEEK + MONTH BUILD — NEVER FAILS
+      # Build week + month JSON
       # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
@@ -155,7 +157,7 @@ jobs:
             ' > data/month/months.json || echo "{}" > data/month/months.json
 
       # ---------------------------------------------------------
-      # SAFE availability.json build
+      # Build final availability.json
       # ---------------------------------------------------------
       - name: Build final availability.json
         shell: bash
@@ -170,7 +172,6 @@ jobs:
           DAYS_JSON=$(jq -n '
             reduce (inputs | select(.date | type == "string")) as $d ({}; .[$d.date] = $d)
           ' data/day/*.json)
-
 
           jq -n \
             --arg start "$START" \
@@ -194,15 +195,13 @@ jobs:
       # ---------------------------------------------------------
       - name: Write last_updated.json
         run: |
-
           export TZ="America/New_York"
           TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
-
           jq -n --arg ts "$TS_HUMAN" '{ last_successful_update: $ts }' \
             > data/last_updated.json
 
       # ---------------------------------------------------------
-      # Commit + push
+      # Commit updated JSON
       # ---------------------------------------------------------
       - name: Commit updated JSON
         run: |
