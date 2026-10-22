@@ -28,8 +28,6 @@ async function loadGlobalRefreshBanner() {
   }
 }
 
-
-
 /* ---------------------------------------------------------
    DAY LABEL
 --------------------------------------------------------- */
@@ -131,6 +129,54 @@ function buildBlocks(day, fieldMap) {
 }
 
 /* ---------------------------------------------------------
+   ⭐ NEW: CONFLICT DETECTION
+--------------------------------------------------------- */
+function detectConflicts(blocks) {
+  const byField = {};
+
+  blocks.forEach(b => {
+    if (!byField[b.fieldId]) byField[b.fieldId] = [];
+    byField[b.fieldId].push(b);
+  });
+
+  Object.values(byField).forEach(list => {
+    list.sort((a, b) => a.start - b.start);
+
+    for (let i = 0; i < list.length; i++) {
+      for (let j = i + 1; j < list.length; j++) {
+        const A = list[i];
+        const B = list[j];
+
+        if (B.start >= A.end) break; // no overlap possible
+
+        const overlap = A.end > B.start;
+        if (!overlap) continue;
+
+        const A_isAdmin = A.type === "admin";
+        const B_isAdmin = B.type === "admin";
+
+        if (A_isAdmin && B_isAdmin) continue;
+
+        if (A_isAdmin && !B_isAdmin) {
+          B.conflict = true;
+          continue;
+        }
+
+        if (!A_isAdmin && B_isAdmin) {
+          A.conflict = true;
+          continue;
+        }
+
+        A.conflict = true;
+        B.conflict = true;
+      }
+    }
+  });
+
+  return blocks;
+}
+
+/* ---------------------------------------------------------
    BUILD AVAILABILITY
 --------------------------------------------------------- */
 function buildAvailability(day, fieldMap, blocks) {
@@ -219,6 +265,7 @@ function buildAvailability(day, fieldMap, blocks) {
   return avail;
 }
 
+
 /* ---------------------------------------------------------
    EVENT LANES
 --------------------------------------------------------- */
@@ -291,6 +338,10 @@ function renderDayCalendar(day) {
 
   const fieldMap = buildFieldMap(day);
   const blocks = buildBlocks(day, fieldMap);
+
+  /* ⭐ NEW: detect conflicts before availability + lane building */
+  detectConflicts(blocks);
+
   const availability = buildAvailability(day, fieldMap, blocks);
   const events = buildEventLanes(blocks);
 
@@ -304,8 +355,6 @@ function renderDayCalendar(day) {
     );
   });
 }
-
-
 
 /* ---------------------------------------------------------
    RENDER COMPLEX TIMELINE
@@ -345,6 +394,11 @@ function renderComplexTimeline(complex, events, availability) {
     const block = document.createElement("div");
     block.className = "block event-block";
     block.classList.add(e.type);
+
+    /* ⭐ NEW: apply conflict highlight */
+    if (e.conflict) {
+      block.classList.add("conflict");
+    }
 
     block.style.top = ((e.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((e.end - e.start) * PX_PER_MIN) + "px";
