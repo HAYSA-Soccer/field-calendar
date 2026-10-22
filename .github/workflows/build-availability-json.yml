@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 * * * *"   # every hour
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -16,70 +16,45 @@ jobs:
       WEBAPP_URL: "https://script.google.com/macros/s/AKfycbz3dMJtYEYxPmoZmuacrM5dBGZ9Jbh5rW3OFtOQDXYyt2RRW41z41HQ4mui5EVzKJyQ/exec"
 
     steps:
-      # ---------------------------------------------------------
-      # 1. Checkout repo
-      # ---------------------------------------------------------
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      # ---------------------------------------------------------
-      # 2. Install jq
-      # ---------------------------------------------------------
       - name: Install jq
         run: sudo apt-get install -y jq
 
       # ---------------------------------------------------------
-      # 3. Ensure data directories exist (no blind wipe)
+      # NEVER DELETE EXISTING JSON — only overwrite day files
       # ---------------------------------------------------------
-      - name: Ensure data directories
+      - name: Ensure directories exist
         run: |
           mkdir -p data/day data/week data/month
 
       # ---------------------------------------------------------
-      # 4. Fetch season window
+      # Fetch season window
       # ---------------------------------------------------------
       - name: Fetch season window
         id: season
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=season_window")
-
-          echo "Fetched season_window:"
-          echo "$RAW"
-
-          if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
-            echo "WARNING: Invalid JSON for season_window, replacing with {}"
-            RAW="{}"
-          fi
-
+          if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then RAW="{}"; fi
           echo "$RAW" > season.json
           echo "season_file=season.json" >> $GITHUB_OUTPUT
 
       # ---------------------------------------------------------
-      # 5. Fetch fields + complexes
+      # Fetch fields + complexes
       # ---------------------------------------------------------
       - name: Fetch fields + complexes
         id: fields
         run: |
           RAW=$(curl -sSL "$WEBAPP_URL?mode=fields")
-
-          echo "Fetched fields:"
-          echo "$RAW"
-
-          if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then
-            echo "WARNING: Invalid JSON for fields, replacing with {}"
-            RAW="{}"
-          fi
-
+          if ! jq -e . <<<"$RAW" >/dev/null 2>&1; then RAW="{}"; fi
           echo "$RAW" > fields.json
           echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
       # ---------------------------------------------------------
-      # 6. Build day JSON files (ALWAYS update days first)
-      #    - per-day retries
-      #    - full-availability fallback
-      #    - per-day updated flag + timestamp
+      # DAILY FILES ALWAYS UPDATE — independent of everything else
       # ---------------------------------------------------------
       - name: Build day JSON files
         shell: bash
@@ -93,9 +68,6 @@ jobs:
           CURRENT="$START"
           END_PLUS_ONE=$(date -d "$END next day" +%Y-%m-%d)
 
-          echo "Building day JSON from $START to $END"
-
-          # Precompute full-day availability ranges for fallback
           FULL_AVAIL=$(jq -n --argjson fields "$(cat "$FIELDS_FILE")" '
             def fullRange: [{start:"08:00", end:"21:00"}];
             reduce $fields.fields[] as $f ({}; .[$f.id] = fullRange)
@@ -104,46 +76,10 @@ jobs:
           while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
             echo "Fetching day: $CURRENT"
 
-            ATTEMPTS=0
-            VALID=false
-            RAW=""
-
-            while [ $ATTEMPTS -lt 3 ]; do
-              RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
-
-              if jq -e . <<<"$RAW" >/dev/null 2>&1; then
-                VALID=true
-                break
-              fi
-
-              echo "Attempt $((ATTEMPTS+1)) failed for $CURRENT"
-              ATTEMPTS=$((ATTEMPTS+1))
-              sleep 1
-            done
-
+            RAW=$(curl -sSL "$WEBAPP_URL?mode=day_calendar&date=$CURRENT")
             TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
 
-            if [ "$VALID" = false ]; then
-              echo "❌ Apps Script returned invalid JSON for $CURRENT — using full-availability fallback day"
-
-              jq -n \
-                --arg date "$CURRENT" \
-                --argjson fields "$(cat "$FIELDS_FILE")" \
-                --argjson fullAvail "$FULL_AVAIL" \
-                --arg ts "$TS_HUMAN" \
-                '{
-                  date: $date,
-                  updated: false,
-                  last_successful_update: null,
-                  complexes: $fields.complexes,
-                  fields: $fields.fields,
-                  availability: $fullAvail,
-                  events: {},
-                  blocks: {},
-                  merged: []
-                }' > "data/day/${CURRENT}.json"
-
-            else
+            if jq -e . <<<"$RAW" >/dev/null 2>&1; then
               echo "$RAW" > day_raw.json
 
               jq -n \
@@ -161,16 +97,34 @@ jobs:
                   blocks: ($day.blocks // {}),
                   merged: ($day.merged // [])
                 }' > "data/day/${CURRENT}.json"
+
+            else
+              jq -n \
+                --arg date "$CURRENT" \
+                --argjson fields "$(cat "$FIELDS_FILE")" \
+                --argjson fullAvail "$FULL_AVAIL" \
+                '{
+                  date: $date,
+                  updated: false,
+                  last_successful_update: null,
+                  complexes: $fields.complexes,
+                  fields: $fields.fields,
+                  availability: $fullAvail,
+                  events: {},
+                  blocks: {},
+                  merged: []
+                }' > "data/day/${CURRENT}.json"
             fi
 
             CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
           done
 
       # ---------------------------------------------------------
-      # 7. Build week + month JSON (safe streaming, no arg-list overflow)
+      # SAFE WEEK + MONTH BUILD — NEVER FAILS
       # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
+        continue-on-error: true
         run: |
           echo "Building weeks.json..."
           find data/day -type f -name '*.json' -print0 \
@@ -184,7 +138,7 @@ jobs:
                 | ($mon_ts | strftime("%Y-%m-%d")) as $monday
                 | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
               )
-            ' > data/week/weeks.json
+            ' > data/week/weeks.json || echo "{}" > data/week/weeks.json
 
           echo "Building months.json..."
           find data/day -type f -name '*.json' -print0 \
@@ -195,13 +149,14 @@ jobs:
                 .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
                 |= (. // {}) | .[$d.date] = $d
               )
-            ' > data/month/months.json
+            ' > data/month/months.json || echo "{}" > data/month/months.json
 
       # ---------------------------------------------------------
-      # 8. Build final availability.json (safe streaming)
+      # SAFE availability.json build
       # ---------------------------------------------------------
       - name: Build final availability.json
         shell: bash
+        continue-on-error: true
         run: |
           SEASON_FILE="${{ steps.season.outputs.season_file }}"
           FIELDS_FILE="${{ steps.fields.outputs.fields_file }}"
@@ -234,28 +189,22 @@ jobs:
             }' > data/availability.json
 
       # ---------------------------------------------------------
-      # 9. Write global last_updated.json (for top-of-page banner)
+      # Write global last_updated.json
       # ---------------------------------------------------------
       - name: Write last_updated.json
-        shell: bash
         run: |
           TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
-
-          jq -n \
-            --arg ts "$TS_HUMAN" \
-            '{ last_successful_update: $ts }' \
+          jq -n --arg ts "$TS_HUMAN" '{ last_successful_update: $ts }' \
             > data/last_updated.json
 
       # ---------------------------------------------------------
-      # 10. Commit + safe rebase + push
+      # Commit + push
       # ---------------------------------------------------------
       - name: Commit updated JSON
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-
           git add -A
           git commit -m "Updated availability JSON" || true
-
           git pull --rebase origin main || true
           git push origin main
