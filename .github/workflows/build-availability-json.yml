@@ -125,36 +125,32 @@ jobs:
           done
 
       # ---------------------------------------------------------
-      # Build week + month JSON
+      # Build week + month JSON (FIXED — no xargs)
       # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
         continue-on-error: true
         run: |
           echo "Building weeks.json..."
-          find data/day -type f -name '*.json' -print0 \
-            | xargs -0 cat \
-            | jq -s '
-              map(select(.date | type == "string")) |
-              reduce .[] as $d ({}; 
-                ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
-                | ($ts | strftime("%w") | tonumber) as $w
-                | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
-                | ($mon_ts | strftime("%Y-%m-%d")) as $monday
-                | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
-              )
-            ' > data/week/weeks.json || echo "{}" > data/week/weeks.json
+          jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; 
+              ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
+              | ($ts | strftime("%w") | tonumber) as $w
+              | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
+              | ($mon_ts | strftime("%Y-%m-%d")) as $monday
+              | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
+            )
+          ' data/day/*.json > data/week/weeks.json || echo "{}" > data/week/weeks.json
 
           echo "Building months.json..."
-          find data/day -type f -name '*.json' -print0 \
-            | xargs -0 cat \
-            | jq -s '
-              map(select(.date | type == "string")) |
-              reduce .[] as $d ({}; 
-                .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
-                |= (. // {}) | .[$d.date] = $d
-              )
-            ' > data/month/months.json || echo "{}" > data/month/months.json
+          jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; 
+              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
+              |= (. // {}) | .[$d.date] = $d
+            )
+          ' data/day/*.json > data/month/months.json || echo "{}" > data/month/months.json
 
       # ---------------------------------------------------------
       # Build final availability.json
