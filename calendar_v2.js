@@ -365,7 +365,7 @@ function renderComplexTimeline(complex, events, availability) {
     });
   });
 
-  // lanes: events first
+  // EVENT LANE ASSIGNMENT
   const lanes = [];
 
   blocks
@@ -387,19 +387,7 @@ function renderComplexTimeline(complex, events, availability) {
     });
 
   const eventLaneCount = lanes.length;
-
-  // availability in last lane
-  blocks
-    .filter(b => b.kind === "avail")
-    .forEach(b => {
-      const laneIndex = eventLaneCount;
-      if (!lanes[laneIndex]) lanes[laneIndex] = [];
-      lanes[laneIndex].push(b);
-      b.lane = laneIndex;
-    });
-
-  const laneCount = lanes.length || 1;
-  const laneWidth = 100 / laneCount;
+  const totalLaneCount = eventLaneCount + 1; // availability lane
 
   blocks.forEach(b => {
     const block = document.createElement("div");
@@ -416,13 +404,14 @@ function renderComplexTimeline(complex, events, availability) {
           <div class="block-fields">${b.fieldId}</div>
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
         </div>
-        <div class="block-tooltip">
-          <div><strong>Field:</strong> ${b.fieldId}</div>
-          <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
-          <div><strong>Type:</strong> ${b.type}</div>
-        </div>
       `;
+
+      const laneWidth = 100 / totalLaneCount;
+      block.style.left = (b.lane * laneWidth) + "%";
+      block.style.width = laneWidth + "%";
+
     } else {
+      // AVAILABILITY EXPANDS ACROSS ALL LANES NOT OCCUPIED BY EVENTS
       block.classList.add("avail-block");
 
       block.innerHTML = `
@@ -431,18 +420,31 @@ function renderComplexTimeline(complex, events, availability) {
           <div class="block-fields">${b.fields.join(", ")}</div>
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
         </div>
-        <div class="block-tooltip">
-          <div><strong>Fields:</strong> ${b.fields.join(", ")}</div>
-          <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
-          <div><strong>Complex:</strong> ${complex}</div>
-        </div>
       `;
+
+      // find event lanes overlapping this availability window
+      const overlappingEventLanes = new Set();
+
+      blocks
+        .filter(x => x.kind === "event")
+        .forEach(x => {
+          if (overlaps(x.start, x.end, b.start, b.end)) {
+            overlappingEventLanes.add(x.lane);
+          }
+        });
+
+      const laneWidth = 100 / totalLaneCount;
+
+      // availability spans ALL lanes not occupied by overlapping events
+      const spanStart = Math.min(...[...Array(totalLaneCount).keys()].filter(i => !overlappingEventLanes.has(i)));
+      const spanEnd = Math.max(...[...Array(totalLaneCount).keys()].filter(i => !overlappingEventLanes.has(i)));
+
+      block.style.left = (spanStart * laneWidth) + "%";
+      block.style.width = ((spanEnd - spanStart + 1) * laneWidth) + "%";
     }
 
     block.style.top = ((b.start - DAY_START) * PX_PER_MIN) + "px";
     block.style.height = ((b.end - b.start) * PX_PER_MIN) + "px";
-    block.style.left = (b.lane * laneWidth) + "%";
-    block.style.width = laneWidth + "%";
 
     track.appendChild(block);
   });
