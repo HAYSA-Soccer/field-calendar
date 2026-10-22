@@ -79,7 +79,7 @@
   left: 80px;   /* next to hour column */
   right: 0;
   height: 100%;
-  display: block; /* ensures proper overlay */
+  display: block;
 }
 
 /* ---------------------------------------------------------
@@ -89,7 +89,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;   /* full width */
+  width: 100%;
   height: 100%;
   z-index: 2;
 }
@@ -100,8 +100,8 @@
 .avail-track {
   position: absolute;
   top: 0;
-  left: 0 !important;   /* force full-width alignment */
-  width: 100% !important;
+  left: 0;
+  width: 100%;
   height: 100%;
   z-index: 1;
   opacity: 0.85;
@@ -133,7 +133,6 @@
 .avail-block {
   background: #d9ffd9;
   border-color: #4caf50;
-  left: 0 !important; /* prevent lane logic from shifting */
 }
 
 /* ---------------------------------------------------------
@@ -152,6 +151,45 @@
 .block-time {
   font-size: 10px;
   color: #555;
+}
+
+/* ---------------------------------------------------------
+   TRUNCATION FOR LONG TEXT
+--------------------------------------------------------- */
+.block-title,
+.block-fields {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------------------------------------------------------
+   TOOLTIP STYLING
+--------------------------------------------------------- */
+.block-main {
+  pointer-events: auto;
+}
+
+.block-tooltip {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 2px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 11px;
+  color: #333;
+  z-index: 10;
+  max-width: 260px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  white-space: normal;
+}
+
+.block:hover .block-tooltip {
+  display: block;
 }
 
 /* ---------------------------------------------------------
@@ -213,4 +251,26 @@
 .block.conflict {
   border: 2px solid red !important;
   box-shadow: 0 0 4px red;
+}
+
+/* ---------------------------------------------------------
+   MOBILE LAYOUT
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+  #calendar {
+    flex-direction: column;
+  }
+
+  .complex {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .hours {
+    width: 60px;
+  }
+
+  .tracks {
+    left: 60px;
+  }
 }
