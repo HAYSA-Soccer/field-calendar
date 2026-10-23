@@ -24,16 +24,10 @@ jobs:
       - name: Install jq
         run: sudo apt-get install -y jq
 
-      # ---------------------------------------------------------
-      # Ensure directories exist
-      # ---------------------------------------------------------
       - name: Ensure directories exist
         run: |
           mkdir -p data/day data/week data/month
 
-      # ---------------------------------------------------------
-      # Fetch season window
-      # ---------------------------------------------------------
       - name: Fetch season window
         id: season
         run: |
@@ -42,9 +36,6 @@ jobs:
           echo "$RAW" > season.json
           echo "season_file=season.json" >> $GITHUB_OUTPUT
 
-      # ---------------------------------------------------------
-      # Fetch fields + complexes
-      # ---------------------------------------------------------
       - name: Fetch fields + complexes
         id: fields
         run: |
@@ -53,9 +44,6 @@ jobs:
           echo "$RAW" > fields.json
           echo "fields_file=fields.json" >> $GITHUB_OUTPUT
 
-      # ---------------------------------------------------------
-      # Build day JSON files
-      # ---------------------------------------------------------
       - name: Build day JSON files
         shell: bash
         run: |
@@ -124,45 +112,31 @@ jobs:
             CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
           done
 
-      # ---------------------------------------------------------
-      # Build week + month JSON (streaming, no huge arg list)
-      # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
         continue-on-error: true
         run: |
           echo "Building weeks.json..."
-          if find data/day -name '*.json' | grep -q .; then
-            find data/day -name '*.json' -exec cat {} \; | jq -s '
-              map(select(.date | type == "string")) |
-              reduce .[] as $d ({}; 
-                ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
-                | ($ts | strftime("%w") | tonumber) as $w
-                | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
-                | ($mon_ts | strftime("%Y-%m-%d")) as $monday
-                | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
-              )
-            ' > data/week/weeks.json || echo "{}" > data/week/weeks.json
-          else
-            echo "{}" > data/week/weeks.json
-          fi
+          find data/day -name '*.json' -exec cat {} \; | jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; 
+              ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
+              | ($ts | strftime("%w") | tonumber) as $w
+              | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
+              | ($mon_ts | strftime("%Y-%m-%d")) as $monday
+              | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
+            )
+          ' > data/week/weeks.json || echo "{}" > data/week/weeks.json
 
           echo "Building months.json..."
-          if find data/day -name '*.json' | grep -q .; then
-            find data/day -name '*.json' -exec cat {} \; | jq -s '
-              map(select(.date | type == "string")) |
-              reduce .[] as $d ({}; 
-                .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
-                |= (. // {}) | .[$d.date] = $d
-              )
-            ' > data/month/months.json || echo "{}" > data/month/months.json
-          else
-            echo "{}" > data/month/months.json
-          fi
+          find data/day -name '*.json' -exec cat {} \; | jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; 
+              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
+              |= (. // {}) | .[$d.date] = $d
+            )
+          ' > data/month/months.json || echo "{}" > data/month/months.json
 
-      # ---------------------------------------------------------
-      # Build final availability.json (streaming days)
-      # ---------------------------------------------------------
       - name: Build final availability.json
         shell: bash
         continue-on-error: true
@@ -173,14 +147,10 @@ jobs:
           START=$(jq -r '.season_start' "$SEASON_FILE")
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
-          if find data/day -name '*.json' | grep -q .; then
-            DAYS_JSON=$(find data/day -name '*.json' -exec cat {} \; | jq -s '
-              map(select(.date | type == "string")) |
-              reduce .[] as $d ({}; .[$d.date] = $d)
-            ')
-          else
-            DAYS_JSON="{}"
-          fi
+          DAYS_JSON=$(find data/day -name '*.json' -exec cat {} \; | jq -s '
+            map(select(.date | type == "string")) |
+            reduce .[] as $d ({}; .[$d.date] = $d)
+          ')
 
           jq -n \
             --arg start "$START" \
@@ -199,9 +169,6 @@ jobs:
               months: $months
             }' > data/availability.json
 
-      # ---------------------------------------------------------
-      # Write global last_updated.json
-      # ---------------------------------------------------------
       - name: Write last_updated.json
         run: |
           export TZ="America/New_York"
@@ -209,9 +176,6 @@ jobs:
           jq -n --arg ts "$TS_HUMAN" '{ last_successful_update: $ts }' \
             > data/last_updated.json
 
-      # ---------------------------------------------------------
-      # Commit updated JSON
-      # ---------------------------------------------------------
       - name: Commit updated JSON
         run: |
           git config user.name "GitHub Actions"
