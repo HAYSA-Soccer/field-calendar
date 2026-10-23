@@ -83,6 +83,17 @@
 }
 
 /* ---------------------------------------------------------
+   BLOCK CONTAINER (NEW)
+   Ensures blocks share width evenly
+--------------------------------------------------------- */
+.block-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------------------------------------------
    BLOCKS
 --------------------------------------------------------- */
 .block {
@@ -90,15 +101,23 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 6px 8px;
-  line-height: 1.25;
-  font-size: 11px;
-  background: #fff;
   box-sizing: border-box;
 
-  /* ⭐ NEW: prevent text from breaking layout */
+  /* ⭐ Adaptive text sizing */
+  font-size: clamp(10px, 1.2vw, 14px);
+  line-height: 1.25;
+
+  /* ⭐ Allow wrapping, but prevent overflow */
+  white-space: normal;
+  overflow-wrap: break-word;
+
+  /* ⭐ Multi-line clamp for readability */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+
+  background: #fff;
 }
 
 /* ---------------------------------------------------------
@@ -115,10 +134,14 @@
   border-color: #4caf50;
   padding: 8px 10px;
 
-  /* ⭐ NEW: prevent long field lists from breaking layout */
+  /* ⭐ Adaptive text sizing */
+  font-size: clamp(10px, 1.2vw, 14px);
+
+  /* ⭐ Multi-line clamp */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 /* ---------------------------------------------------------
@@ -203,7 +226,17 @@
 --------------------------------------------------------- */
 .block.conflict {
   border: 2px solid red !important;
-  box-shadow: 0 0 4px red;
+  box-shadow: 0 0 6px red;
+  position: relative;
+}
+
+.block.conflict::after {
+  content: "⚠";
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 14px;
+  color: red;
 }
 
 /* ---------------------------------------------------------
