@@ -2120,7 +2120,7 @@
   "2026-10-23": {
     "date": "2026-10-23",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:42 AM",
+    "last_successful_update": "October 23, 2026 at 8:23 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -2493,7 +2493,7 @@
   "2026-10-24": {
     "date": "2026-10-24",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:42 AM",
+    "last_successful_update": "October 23, 2026 at 8:24 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -3151,7 +3151,7 @@
   "2026-10-25": {
     "date": "2026-10-25",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:42 AM",
+    "last_successful_update": "October 23, 2026 at 8:24 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -3317,7 +3317,7 @@
   "2026-10-26": {
     "date": "2026-10-26",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:43 AM",
+    "last_successful_update": "October 23, 2026 at 8:25 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -3720,7 +3720,7 @@
   "2026-10-27": {
     "date": "2026-10-27",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:43 AM",
+    "last_successful_update": "October 23, 2026 at 8:25 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -4138,7 +4138,7 @@
   "2026-10-28": {
     "date": "2026-10-28",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:44 AM",
+    "last_successful_update": "October 23, 2026 at 8:26 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -4656,7 +4656,7 @@
   "2026-10-29": {
     "date": "2026-10-29",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:44 AM",
+    "last_successful_update": "October 23, 2026 at 8:26 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -5202,7 +5202,7 @@
   "2026-10-30": {
     "date": "2026-10-30",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:44 AM",
+    "last_successful_update": "October 23, 2026 at 8:27 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -5575,7 +5575,7 @@
   "2026-10-31": {
     "date": "2026-10-31",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:45 AM",
+    "last_successful_update": "October 23, 2026 at 8:27 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -6311,7 +6311,7 @@
   "2026-11-01": {
     "date": "2026-11-01",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:45 AM",
+    "last_successful_update": "October 23, 2026 at 8:28 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -6477,7 +6477,7 @@
   "2026-11-02": {
     "date": "2026-11-02",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:45 AM",
+    "last_successful_update": "October 23, 2026 at 8:28 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -6879,8 +6879,8 @@
   },
   "2026-11-03": {
     "date": "2026-11-03",
-    "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:46 AM",
+    "updated": false,
+    "last_successful_update": "October 23, 2026 at 8:30 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -7018,287 +7018,122 @@
     "availability": {
       "H-HST": [
         {
-          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
-      "H-HST1": [],
-      "H-HST2": [
-        {
-          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
-        }
-      ],
-      "H-Su1": [],
-      "H-Su1A": [],
-      "H-Su1B": [],
-      "H-Su2": [
-        {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
-        }
-      ],
-      "H-Su2A": [],
-      "H-Su2B": [
-        {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
-        }
-      ],
-      "H-SJ3": [
-        {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
-        }
-      ],
-      "H-SJ3A": [
-        {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
-        }
-      ],
-      "H-SJ3B": [
-        {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
-        }
-      ],
-      "H-SJ4": [],
-      "H-SJ4A": [],
-      "H-SJ4B": [],
-      "H-SuSS": [],
-      "H-SuSS1": [],
-      "H-SuSS2": []
-    },
-    "events": {
       "H-HST1": [
         {
-          "event_id": "867fed8ef3d08eeefe4730b5be57781e",
-          "date": "2026-11-03",
-          "start": "19:30",
-          "end": "21:00",
-          "field": "H-HST1",
-          "type": "practice",
-          "title": "7/8 Boys Travel (Collins) Practice",
-          "team": "7/8 Boys Travel",
-          "coach": "Collins",
-          "grade": "7/8",
-          "source": "ICS",
-          "field_display": "H-HST1, Holbrook High School"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
-      "H-SJ4A": [
+      "H-HST2": [
         {
-          "event_id": "a4115cbe3d863f264bb01fb36604c9be",
-          "date": "2026-11-03",
-          "start": "17:00",
-          "end": "18:00",
-          "field": "H-SJ4A",
-          "type": "practice",
-          "title": "The Sean Joyce Foundation (Red) Practice",
-          "team": "The Sean Joyce Foundation",
-          "coach": "Red",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
-        }
-      ],
-      "H-Su2A": [
-        {
-          "event_id": "1723f1d97d6c8e65dbd66abdbbc49b46",
-          "date": "2026-11-03",
-          "start": "17:30",
-          "end": "18:30",
-          "field": "H-Su2A",
-          "type": "practice",
-          "title": "Wm. Perry Trucking (Orange) Practice",
-          "team": "Wm. Perry Trucking",
-          "coach": "Orange",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-Su2A, Holbrook Sumner Field"
-        }
-      ],
-      "H-SJ4": [
-        {
-          "event_id": "a5cffec9acf6543b2fb68cfa1306f1e4",
-          "date": "2026-11-03",
-          "start": "17:30",
-          "end": "18:30",
-          "field": "H-SJ4",
-          "type": "practice",
-          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS",
-          "field_display": "H-SJ4, Holbrook Sean Joyce Field"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-Su1": [
         {
-          "event_id": "d2397990df95b905d4b33e55b2f0a83c",
-          "date": "2026-11-03",
-          "start": "17:00",
-          "end": "18:00",
-          "field": "H-Su1",
-          "type": "practice",
-          "title": "3/4 Girls Travel (Lamb-Williams) Practice",
-          "team": "3/4 Girls Travel",
-          "coach": "Lamb-Williams",
-          "grade": "3/4",
-          "source": "ICS",
-          "field_display": "H-Su1, Holbrook Sumner Field"
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-Su1A": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-Su1B": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-Su2": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-Su2A": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-Su2B": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SJ3": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SJ3A": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SJ3B": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SJ4": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SJ4A": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SJ4B": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SuSS": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SuSS1": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SuSS2": [
+        {
+          "start": "08:00",
+          "end": "21:00"
         }
       ]
     },
+    "events": {},
     "blocks": {},
-    "merged": [
-      {
-        "field": "H-SJ4A",
-        "start": "17:00",
-        "end": "18:00",
-        "start_12": "5:00 PM",
-        "end_12": "6:00 PM",
-        "type": "practice",
-        "title": "The Sean Joyce Foundation (Red) Practice",
-        "team": "The Sean Joyce Foundation",
-        "coach": "Red",
-        "grade": "",
-        "source": "ICS"
-      },
-      {
-        "field": "H-Su1",
-        "start": "17:00",
-        "end": "18:00",
-        "start_12": "5:00 PM",
-        "end_12": "6:00 PM",
-        "type": "practice",
-        "title": "3/4 Girls Travel (Lamb-Williams) Practice",
-        "team": "3/4 Girls Travel",
-        "coach": "Lamb-Williams",
-        "grade": "3/4",
-        "source": "ICS"
-      },
-      {
-        "field": "H-Su2A",
-        "start": "17:30",
-        "end": "18:30",
-        "start_12": "5:30 PM",
-        "end_12": "6:30 PM",
-        "type": "practice",
-        "title": "Wm. Perry Trucking (Orange) Practice",
-        "team": "Wm. Perry Trucking",
-        "coach": "Orange",
-        "grade": "",
-        "source": "ICS"
-      },
-      {
-        "field": "H-SJ4",
-        "start": "17:30",
-        "end": "18:30",
-        "start_12": "5:30 PM",
-        "end_12": "6:30 PM",
-        "type": "practice",
-        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-        "coach": "",
-        "grade": "5/6",
-        "source": "ICS"
-      },
-      {
-        "field": "H-HST1",
-        "start": "19:30",
-        "end": "21:00",
-        "start_12": "7:30 PM",
-        "end_12": "9:00 PM",
-        "type": "practice",
-        "title": "7/8 Boys Travel (Collins) Practice",
-        "team": "7/8 Boys Travel",
-        "coach": "Collins",
-        "grade": "7/8",
-        "source": "ICS"
-      },
-      {
-        "field": "H-Su2",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-Su2B",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ3",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ3A",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ3B",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-HST",
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-HST2",
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      }
-    ],
-    "merged_availability": {
-      "TURF": [],
-      "SUMNER/SEAN JOYCE": []
-    }
+    "merged": [],
+    "merged_availability": {}
   },
   "2026-11-04": {
     "date": "2026-11-04",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:46 AM",
+    "last_successful_update": "October 23, 2026 at 8:31 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -7789,7 +7624,7 @@
   "2026-11-05": {
     "date": "2026-11-05",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:47 AM",
+    "last_successful_update": "October 23, 2026 at 8:32 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -8308,7 +8143,7 @@
   "2026-11-06": {
     "date": "2026-11-06",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:47 AM",
+    "last_successful_update": "October 23, 2026 at 8:33 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -8698,7 +8533,7 @@
   "2026-11-07": {
     "date": "2026-11-07",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:48 AM",
+    "last_successful_update": "October 23, 2026 at 8:33 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9334,7 +9169,7 @@
   "2026-11-08": {
     "date": "2026-11-08",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:48 AM",
+    "last_successful_update": "October 23, 2026 at 8:34 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9499,8 +9334,8 @@
   },
   "2026-11-09": {
     "date": "2026-11-09",
-    "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:48 AM",
+    "updated": false,
+    "last_successful_update": "October 23, 2026 at 8:34 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9638,261 +9473,122 @@
     "availability": {
       "H-HST": [
         {
-          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-HST1": [
         {
-          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-HST2": [
         {
-          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-Su1": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-Su1A": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-Su1B": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-Su2": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-Su2A": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-Su2B": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-SJ3": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-SJ3A": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-SJ3B": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-SJ4": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "both"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-SJ4A": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
       "H-SJ4B": [
         {
-          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-          "mode": "practice_only"
+          "start": "08:00",
+          "end": "21:00"
         }
       ],
-      "H-SuSS": [],
-      "H-SuSS1": [],
-      "H-SuSS2": []
+      "H-SuSS": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SuSS1": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ],
+      "H-SuSS2": [
+        {
+          "start": "08:00",
+          "end": "21:00"
+        }
+      ]
     },
     "events": {},
     "blocks": {},
-    "merged": [
-      {
-        "field": "H-Su1",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-Su1A",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-Su1B",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-Su2",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-Su2A",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-Su2B",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ3",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ3A",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ3B",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4A",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4B",
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-HST",
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-HST1",
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-HST2",
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-        "type": "free",
-        "title": ""
-      }
-    ],
-    "merged_availability": {
-      "TURF": [],
-      "SUMNER/SEAN JOYCE": []
-    }
+    "merged": [],
+    "merged_availability": {}
   },
   "2026-11-10": {
     "date": "2026-11-10",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:49 AM",
+    "last_successful_update": "October 23, 2026 at 8:35 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -10284,7 +9980,7 @@
   "2026-11-11": {
     "date": "2026-11-11",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:49 AM",
+    "last_successful_update": "October 23, 2026 at 8:38 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -10676,7 +10372,7 @@
   "2026-11-12": {
     "date": "2026-11-12",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:50 AM",
+    "last_successful_update": "October 23, 2026 at 8:38 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -11068,7 +10764,7 @@
   "2026-11-13": {
     "date": "2026-11-13",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:50 AM",
+    "last_successful_update": "October 23, 2026 at 8:39 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -11415,7 +11111,7 @@
   "2026-11-14": {
     "date": "2026-11-14",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 7:50 AM",
+    "last_successful_update": "October 23, 2026 at 8:39 AM",
     "complexes": {
       "TURF": [
         "H-HST",
