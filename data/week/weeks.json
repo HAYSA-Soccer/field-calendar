@@ -3,7 +3,7 @@
     "2026-10-23": {
       "date": "2026-10-23",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 3:30 PM",
+      "last_successful_update": "October 23, 2026 at 3:47 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -1920,7 +1920,7 @@
     "2026-10-24": {
       "date": "2026-10-24",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 3:31 PM",
+      "last_successful_update": "October 23, 2026 at 3:47 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -2079,6 +2079,10 @@
           },
           {
             "start": "10:45",
+            "end": "11:00"
+          },
+          {
+            "start": "12:00",
             "end": "19:00"
           }
         ],
@@ -2113,6 +2117,10 @@
           },
           {
             "start": "10:45",
+            "end": "11:00"
+          },
+          {
+            "start": "12:00",
             "end": "19:00"
           }
         ],
@@ -2665,18 +2673,18 @@
         {
           "field": "H-Su1",
           "start": "10:45",
-          "end": "19:00",
+          "end": "11:00",
           "start_12": "10:45 AM",
-          "end_12": "7:00 PM",
+          "end_12": "11:00 AM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-Su2",
           "start": "10:45",
-          "end": "19:00",
+          "end": "11:00",
           "start_12": "10:45 AM",
-          "end_12": "7:00 PM",
+          "end_12": "11:00 AM",
           "type": "free",
           "title": ""
         },
@@ -2772,6 +2780,15 @@
           "source": "ICS"
         },
         {
+          "field": "H-Su1",
+          "start": "12:00",
+          "end": "19:00",
+          "start_12": "12:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-Su1A",
           "start": "12:00",
           "end": "19:00",
@@ -2782,6 +2799,15 @@
         },
         {
           "field": "H-Su1B",
+          "start": "12:00",
+          "end": "19:00",
+          "start_12": "12:00 PM",
+          "end_12": "7:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
           "start": "12:00",
           "end": "19:00",
           "start_12": "12:00 PM",
