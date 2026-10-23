@@ -102,13 +102,13 @@ function buildBlocks(day, fieldMap) {
   const blocks = [];
 
   (day.merged || []).forEach(b => {
-    const fieldId = b.field;   // <-- USE REAL FIELD FROM BACKEND
+    const fieldId = b.field;
     const f = fieldMap[fieldId];
     if (!f) return;
 
     blocks.push({
       complex: f.complex,
-      fieldId: fieldId,        // <-- DO NOT USE f.id (parent field)
+      fieldId: fieldId,
       fieldName: fieldId,
       start: parseTime(b.start),
       end: parseTime(b.end),
@@ -119,7 +119,6 @@ function buildBlocks(day, fieldMap) {
 
   return blocks;
 }
-
 
 /********************************************************************
  * CONFLICT DETECTION — REAL FIELD IDs
@@ -170,22 +169,20 @@ function detectConflicts(blocks) {
 }
 
 /********************************************************************
- * BUILD AVAILABILITY — TRUST BACKEND JSON + SUPPRESS ON ADMIN BLOCKS
+ * BUILD AVAILABILITY — NOW PRESERVES MODE
  ********************************************************************/
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
-  // Build real field lists per complex from day.fields
   const fieldsByComplex = {};
   day.fields.forEach(f => {
     if (!fieldsByComplex[f.complex]) fieldsByComplex[f.complex] = [];
-    fieldsByComplex[f.complex].push(f.id);   // REAL FIELD IDs
+    fieldsByComplex[f.complex].push(f.id);
   });
 
   Object.keys(fieldsByComplex).forEach(complex => {
     const fields = fieldsByComplex[complex];
 
-    // all admin (full-complex) blocks for this complex
     const adminBlocks = blocks.filter(
       b => b.complex === complex && b.type === "admin"
     );
@@ -193,7 +190,6 @@ function buildAvailability(day, fieldMap, blocks) {
     const timeline = [];
     for (let t = DAY_START; t < DAY_END; t++) {
 
-      // full-complex admin → no availability
       const hasAdmin = adminBlocks.some(
         b => t >= b.start && t < b.end
       );
@@ -203,7 +199,6 @@ function buildAvailability(day, fieldMap, blocks) {
         continue;
       }
 
-      // find booked fields at this minute
       const bookedFields = new Set();
       blocks.forEach(b => {
         if (b.complex !== complex) return;
@@ -213,29 +208,34 @@ function buildAvailability(day, fieldMap, blocks) {
         }
       });
 
-      // compute free fields using REAL availability JSON
       const freeFields = [];
 
       fields.forEach(fid => {
         const ranges = day.availability[fid] || [];
-        const isFree = ranges.some(r => {
+
+        let matchedRange = null;
+        ranges.forEach(r => {
           const rs = parseTime(r.start);
           const re = parseTime(r.end);
-          return t >= rs && t < re;
+          if (t >= rs && t < re) {
+            matchedRange = r;
+          }
         });
 
-        if (isFree && !bookedFields.has(fid)) {
-          freeFields.push(fid);
+        if (matchedRange && !bookedFields.has(fid)) {
+          freeFields.push({
+            field: fid,
+            mode: matchedRange.mode || "both"
+          });
         }
       });
 
       timeline.push({
         minute: t,
-        free: freeFields.sort()
+        free: freeFields
       });
     }
 
-    // merge contiguous windows
     let curStart = null;
     let curFields = null;
 
@@ -251,7 +251,8 @@ function buildAvailability(day, fieldMap, blocks) {
             complex,
             start: curStart,
             end: timeline[idx - 1].minute + 1,
-            fields: curFields
+            fields: curFields.map(f => f.field),
+            modes: curFields.map(f => f.mode)
           });
         }
         curStart = slot.minute;
@@ -264,15 +265,14 @@ function buildAvailability(day, fieldMap, blocks) {
         complex,
         start: curStart,
         end: DAY_END,
-        fields: curFields
+        fields: curFields.map(f => f.field),
+        modes: curFields.map(f => f.mode)
       });
     }
   });
 
   return avail;
 }
-
-
 
 /********************************************************************
  * RENDER DAY CALENDAR
@@ -371,12 +371,12 @@ function renderComplexTimeline(complex, events, availability) {
       kind: "avail",
       title: "Available",
       fields: a.fields,
+      modes: a.modes,
       start: a.start,
       end: a.end
     });
   });
 
-  // EVENT LANE ASSIGNMENT
   const lanes = [];
 
   blocks
@@ -398,7 +398,7 @@ function renderComplexTimeline(complex, events, availability) {
     });
 
   const eventLaneCount = lanes.length;
-  const totalLaneCount = eventLaneCount + 1; // availability lane
+  const totalLaneCount = eventLaneCount + 1;
 
   blocks.forEach(b => {
     const block = document.createElement("div");
@@ -422,18 +422,33 @@ function renderComplexTimeline(complex, events, availability) {
       block.style.width = laneWidth + "%";
 
     } else {
-      // AVAILABILITY EXPANDS ACROSS ALL LANES NOT OCCUPIED BY EVENTS
       block.classList.add("avail-block");
+
+      // ⭐ Mode styling
+      if (b.modes && b.modes.length > 0) {
+        if (b.modes.every(m => m === "game_only")) {
+          block.classList.add("game-only");
+        }
+        if (b.modes.every(m => m === "practice_only")) {
+          block.classList.add("practice-only");
+        }
+      }
+
+      const label =
+        b.modes && b.modes.every(m => m === "game_only")
+          ? "Available (Game Only)"
+          : b.modes && b.modes.every(m => m === "practice_only")
+          ? "Available (Practice Only)"
+          : "Available";
 
       block.innerHTML = `
         <div class="block-main">
-          <div class="block-title">Available</div>
+          <div class="block-title">${label}</div>
           <div class="block-fields">${b.fields.join(", ")}</div>
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
         </div>
       `;
 
-      // find event lanes overlapping this availability window
       const overlappingEventLanes = new Set();
 
       blocks
@@ -446,7 +461,6 @@ function renderComplexTimeline(complex, events, availability) {
 
       const laneWidth = 100 / totalLaneCount;
 
-      // availability spans ALL lanes not occupied by overlapping events
       const spanStart = Math.min(...[...Array(totalLaneCount).keys()].filter(i => !overlappingEventLanes.has(i)));
       const spanEnd = Math.max(...[...Array(totalLaneCount).keys()].filter(i => !overlappingEventLanes.has(i)));
 
@@ -465,9 +479,6 @@ function renderComplexTimeline(complex, events, availability) {
   div.appendChild(timeline);
   return div;
 }
-
-
-
 
 /********************************************************************
  * INITIALIZE
