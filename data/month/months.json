@@ -3,7 +3,7 @@
   "2026-10-23": {
     "date": "2026-10-23",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:01 PM",
+    "last_successful_update": "October 23, 2026 at 4:32 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -644,7 +644,6 @@
           "start_12": "4:30 PM",
           "end_12": "5:00 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -668,7 +667,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2A"
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -685,8 +686,7 @@
           "fields": [
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -707,22 +707,8 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ4A"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "17:30",
-          "end": "18:00",
-          "start_12": "5:30 PM",
-          "end_12": "6:00 PM",
-          "fields": [
-            "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
             "H-SJ4B"
           ],
           "title": null,
@@ -744,8 +730,12 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
+            "H-SJ3",
             "H-SJ3A",
-            "H-SJ4A"
+            "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -763,7 +753,6 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -784,7 +773,9 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ3A"
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -825,7 +816,7 @@
   "2026-11-03": {
     "date": "2026-11-03",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:05 PM",
+    "last_successful_update": "October 23, 2026 at 4:37 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -1469,28 +1460,15 @@
           "reason": null
         },
         {
-          "type": "free",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST2"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
           "type": "practice",
           "start": "19:30",
           "end": "21:00",
           "start_12": "7:30 PM",
           "end_12": "9:00 PM",
           "fields": [
-            "H-HST1"
+            "H-HST",
+            "H-HST1",
+            "H-HST2"
           ],
           "title": "7/8 Boys Travel (Collins) Practice",
           "team": "7/8 Boys Travel",
@@ -1538,8 +1516,7 @@
             "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -1557,7 +1534,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-SJ4A"
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -1572,7 +1551,6 @@
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B"
@@ -1593,7 +1571,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
+            "H-Su2B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -1614,7 +1594,6 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B"
@@ -1632,7 +1611,9 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
+            "H-Su2",
             "H-Su2A",
+            "H-Su2B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -1675,7 +1656,7 @@
   "2026-10-28": {
     "date": "2026-10-28",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:03 PM",
+    "last_successful_update": "October 23, 2026 at 4:34 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -2370,49 +2351,20 @@
     "merged_availability": {
       "TURF": [
         {
-          "type": "free",
+          "type": "practice",
           "start": "18:00",
-          "end": "19:30",
+          "end": "21:00",
           "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
+          "end_12": "9:00 PM",
           "fields": [
+            "H-HST",
+            "H-HST1",
             "H-HST2"
           ],
           "title": null,
           "team": null,
           "coach": null,
           "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "fields": [
-            "H-HST1"
-          ],
-          "title": "5/6 Boys Travel (Walsh) Practice",
-          "team": "5/6 Boys Travel",
-          "coach": "Walsh",
-          "grade": "5/6",
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST1",
-            "H-HST2"
-          ],
-          "title": "5/6 Girls Travel (Casavant) Practice",
-          "team": "5/6 Girls Travel",
-          "coach": "Casavant",
-          "grade": "5/6",
           "reason": null
         }
       ],
@@ -2456,7 +2408,6 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -2474,7 +2425,9 @@
           "start_12": "4:30 PM",
           "end_12": "5:00 PM",
           "fields": [
-            "H-SJ3A"
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -2489,8 +2442,6 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
-            "H-Su2B",
-            "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -2508,10 +2459,15 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
-            "H-SJ3A"
+            "H-Su2B",
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -2526,11 +2482,9 @@
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -2545,10 +2499,15 @@
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
-            "H-SJ4A"
+            "H-Su2B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -2571,8 +2530,7 @@
             "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -2587,7 +2545,9 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
-            "H-SJ4A"
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -2627,7 +2587,7 @@
   "2026-11-07": {
     "date": "2026-11-07",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:08 PM",
+    "last_successful_update": "October 23, 2026 at 4:38 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -3013,7 +2973,7 @@
           "field_display": "H-HST, Holbrook High School"
         },
         {
-          "event_id": "8325613b7df72444c06df8c97568b574",
+          "event_id": "856fee0c220631ec33531206bf37b336",
           "date": "2026-11-07",
           "start": "14:00",
           "end": "15:00",
@@ -3582,7 +3542,7 @@
   "2026-11-02": {
     "date": "2026-11-02",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:05 PM",
+    "last_successful_update": "October 23, 2026 at 4:36 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -4279,26 +4239,12 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
+            "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "17:30",
-          "end": "18:00",
-          "start_12": "5:30 PM",
-          "end_12": "6:00 PM",
-          "fields": [
-            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -4316,7 +4262,10 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
+            "H-Su2B",
+            "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
             "H-SJ4",
@@ -4336,7 +4285,6 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -4360,7 +4308,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2A"
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -4414,7 +4364,7 @@
   "2026-11-13": {
     "date": "2026-11-13",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:11 PM",
+    "last_successful_update": "October 23, 2026 at 4:41 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -4788,7 +4738,7 @@
   "2026-11-10": {
     "date": "2026-11-10",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:09 PM",
+    "last_successful_update": "October 23, 2026 at 4:39 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -5225,7 +5175,7 @@
   "2026-11-09": {
     "date": "2026-11-09",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:08 PM",
+    "last_successful_update": "October 23, 2026 at 4:39 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -5662,7 +5612,7 @@
   "2026-10-25": {
     "date": "2026-10-25",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:01 PM",
+    "last_successful_update": "October 23, 2026 at 4:33 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -5828,7 +5778,7 @@
   "2026-10-31": {
     "date": "2026-10-31",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:04 PM",
+    "last_successful_update": "October 23, 2026 at 4:36 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -7137,10 +7087,13 @@
           "start_12": "11:00 AM",
           "end_12": "12:00 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
             "H-Su2B",
+            "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
           ],
@@ -7331,7 +7284,7 @@
   "2026-11-05": {
     "date": "2026-11-05",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:07 PM",
+    "last_successful_update": "October 23, 2026 at 4:38 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -8095,63 +8048,20 @@
     "merged_availability": {
       "TURF": [
         {
-          "type": "free",
-          "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "fields": [
-            "H-HST1"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
           "type": "practice",
           "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "fields": [
-            "H-HST2"
-          ],
-          "title": "5/6 Boys Travel (Ayers) Practice",
-          "team": "5/6 Boys Travel",
-          "coach": "Ayers",
-          "grade": "5/6",
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "19:30",
           "end": "21:00",
-          "start_12": "7:30 PM",
+          "start_12": "6:00 PM",
           "end_12": "9:00 PM",
           "fields": [
+            "H-HST",
+            "H-HST1",
             "H-HST2"
           ],
           "title": null,
           "team": null,
           "coach": null,
           "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST1"
-          ],
-          "title": "7/8 Boys Travel (Mills) Practice",
-          "team": "7/8 Boys Travel",
-          "coach": "Mills",
-          "grade": "7/8",
           "reason": null
         }
       ],
@@ -8192,7 +8102,6 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -8213,7 +8122,9 @@
           "start_12": "4:30 PM",
           "end_12": "5:00 PM",
           "fields": [
-            "H-Su2A"
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -8228,7 +8139,6 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
-            "H-Su1B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -8246,9 +8156,13 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
+            "H-Su1B",
+            "H-Su2",
             "H-Su2A",
             "H-Su2B",
+            "H-SJ3",
             "H-SJ3A",
             "H-SJ3B"
           ],
@@ -8259,56 +8173,44 @@
           "reason": null
         },
         {
-          "type": "free",
-          "start": "17:30",
-          "end": "18:00",
-          "start_12": "5:30 PM",
-          "end_12": "6:00 PM",
-          "fields": [
-            "H-Su2A",
-            "H-SJ4B"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
           "type": "practice",
           "start": "17:30",
           "end": "18:00",
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
-            "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4A"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "18:00",
-          "end": "18:30",
-          "start_12": "6:00 PM",
-          "end_12": "6:30 PM",
-          "fields": [
-            "H-Su1A",
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
             "H-SJ4B"
+          ],
+          "title": null,
+          "team": null,
+          "coach": null,
+          "grade": null,
+          "reason": null
+        },
+        {
+          "type": "free",
+          "start": "18:00",
+          "end": "18:30",
+          "start_12": "6:00 PM",
+          "end_12": "6:30 PM",
+          "fields": [
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B",
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -8323,8 +8225,12 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
+            "H-Su1",
+            "H-Su1A",
             "H-Su1B",
-            "H-SJ4A"
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -8677,7 +8583,7 @@
   "2026-11-04": {
     "date": "2026-11-04",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:06 PM",
+    "last_successful_update": "October 23, 2026 at 4:37 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9359,63 +9265,20 @@
     "merged_availability": {
       "TURF": [
         {
-          "type": "free",
+          "type": "practice",
           "start": "18:00",
-          "end": "19:30",
+          "end": "21:00",
           "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
+          "end_12": "9:00 PM",
           "fields": [
+            "H-HST",
+            "H-HST1",
             "H-HST2"
           ],
           "title": null,
           "team": null,
           "coach": null,
           "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "fields": [
-            "H-HST1"
-          ],
-          "title": "5/6 Boys Travel (Walsh) Practice",
-          "team": "5/6 Boys Travel",
-          "coach": "Walsh",
-          "grade": "5/6",
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST1"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST2"
-          ],
-          "title": "7/8 Girls Travel (Caldwell) Practice",
-          "team": "7/8 Girls Travel",
-          "coach": "Caldwell",
-          "grade": "7/8",
           "reason": null
         }
       ],
@@ -9459,7 +9322,6 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -9477,7 +9339,9 @@
           "start_12": "4:30 PM",
           "end_12": "5:00 PM",
           "fields": [
-            "H-SJ3A"
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -9492,8 +9356,6 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
-            "H-Su2B",
-            "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -9511,10 +9373,15 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
-            "H-SJ3A"
+            "H-Su2B",
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -9529,11 +9396,9 @@
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -9548,10 +9413,15 @@
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
-            "H-SJ4A"
+            "H-Su2B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -9574,8 +9444,7 @@
             "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -9590,7 +9459,9 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
-            "H-SJ4A"
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -9630,7 +9501,7 @@
   "2026-11-11": {
     "date": "2026-11-11",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:10 PM",
+    "last_successful_update": "October 23, 2026 at 4:40 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -10067,7 +9938,7 @@
   "2026-11-08": {
     "date": "2026-11-08",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:08 PM",
+    "last_successful_update": "October 23, 2026 at 4:39 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -10850,7 +10721,7 @@
   "2026-10-27": {
     "date": "2026-10-27",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:02 PM",
+    "last_successful_update": "October 23, 2026 at 4:34 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -11494,28 +11365,15 @@
           "reason": null
         },
         {
-          "type": "free",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST2"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
           "type": "practice",
           "start": "19:30",
           "end": "21:00",
           "start_12": "7:30 PM",
           "end_12": "9:00 PM",
           "fields": [
-            "H-HST1"
+            "H-HST",
+            "H-HST1",
+            "H-HST2"
           ],
           "title": "7/8 Boys Travel (Collins) Practice",
           "team": "7/8 Boys Travel",
@@ -11563,8 +11421,7 @@
             "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -11582,7 +11439,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-SJ4A"
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -11597,7 +11456,6 @@
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B"
@@ -11618,7 +11476,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
+            "H-Su2B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -11639,7 +11499,6 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B"
@@ -11657,7 +11516,9 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
+            "H-Su2",
             "H-Su2A",
+            "H-Su2B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -11700,7 +11561,7 @@
   "2026-11-14": {
     "date": "2026-11-14",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:11 PM",
+    "last_successful_update": "October 23, 2026 at 4:41 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -12149,7 +12010,7 @@
   "2026-11-06": {
     "date": "2026-11-06",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:07 PM",
+    "last_successful_update": "October 23, 2026 at 4:38 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -12687,7 +12548,6 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -12708,7 +12568,9 @@
           "start_12": "4:30 PM",
           "end_12": "5:00 PM",
           "fields": [
-            "H-Su2A"
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -12726,11 +12588,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -12745,8 +12605,12 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
+            "H-Su2",
             "H-Su2A",
-            "H-SJ4A"
+            "H-Su2B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -12766,9 +12630,7 @@
             "H-Su1B",
             "H-Su2",
             "H-Su2A",
-            "H-Su2B",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -12783,8 +12645,12 @@
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
+            "H-SJ3",
             "H-SJ3A",
-            "H-SJ4A"
+            "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -12805,7 +12671,6 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -12823,7 +12688,9 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
-            "H-SJ3A"
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -12863,7 +12730,7 @@
   "2026-11-01": {
     "date": "2026-11-01",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:04 PM",
+    "last_successful_update": "October 23, 2026 at 4:36 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -13029,7 +12896,7 @@
   "2026-10-24": {
     "date": "2026-10-24",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:01 PM",
+    "last_successful_update": "October 23, 2026 at 4:33 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -14191,10 +14058,13 @@
           "start_12": "11:00 AM",
           "end_12": "12:00 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
             "H-Su2B",
+            "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
           ],
@@ -14253,7 +14123,7 @@
   "2026-10-26": {
     "date": "2026-10-26",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:02 PM",
+    "last_successful_update": "October 23, 2026 at 4:33 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -14950,26 +14820,12 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
+            "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "17:30",
-          "end": "18:00",
-          "start_12": "5:30 PM",
-          "end_12": "6:00 PM",
-          "fields": [
-            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -14987,7 +14843,10 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
+            "H-Su2",
             "H-Su2A",
+            "H-Su2B",
+            "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
             "H-SJ4",
@@ -15007,7 +14866,6 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -15031,7 +14889,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2A"
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -15085,7 +14945,7 @@
   "2026-10-29": {
     "date": "2026-10-29",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:03 PM",
+    "last_successful_update": "October 23, 2026 at 4:35 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -15864,47 +15724,18 @@
         {
           "type": "practice",
           "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "fields": [
-            "H-HST1",
-            "H-HST2"
-          ],
-          "title": "5/6 Girls Travel (Baird-Miller) Practice",
-          "team": "5/6 Girls Travel",
-          "coach": "Baird-Miller",
-          "grade": "5/6",
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "19:30",
           "end": "21:00",
-          "start_12": "7:30 PM",
+          "start_12": "6:00 PM",
           "end_12": "9:00 PM",
           "fields": [
+            "H-HST",
+            "H-HST1",
             "H-HST2"
           ],
           "title": null,
           "team": null,
           "coach": null,
           "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "fields": [
-            "H-HST1"
-          ],
-          "title": "7/8 Boys Travel (Mills) Practice",
-          "team": "7/8 Boys Travel",
-          "coach": "Mills",
-          "grade": "7/8",
           "reason": null
         }
       ],
@@ -15945,7 +15776,6 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -15966,7 +15796,9 @@
           "start_12": "4:30 PM",
           "end_12": "5:00 PM",
           "fields": [
-            "H-Su2A"
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -15981,7 +15813,6 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
-            "H-Su1B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -15999,9 +15830,13 @@
           "start_12": "5:00 PM",
           "end_12": "5:30 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
+            "H-Su1B",
+            "H-Su2",
             "H-Su2A",
             "H-Su2B",
+            "H-SJ3",
             "H-SJ3A",
             "H-SJ3B"
           ],
@@ -16012,56 +15847,44 @@
           "reason": null
         },
         {
-          "type": "free",
-          "start": "17:30",
-          "end": "18:00",
-          "start_12": "5:30 PM",
-          "end_12": "6:00 PM",
-          "fields": [
-            "H-Su2A",
-            "H-SJ4B"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
           "type": "practice",
           "start": "17:30",
           "end": "18:00",
           "start_12": "5:30 PM",
           "end_12": "6:00 PM",
           "fields": [
+            "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B",
-            "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4A"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "18:00",
-          "end": "18:30",
-          "start_12": "6:00 PM",
-          "end_12": "6:30 PM",
-          "fields": [
-            "H-Su1A",
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
             "H-SJ4B"
+          ],
+          "title": null,
+          "team": null,
+          "coach": null,
+          "grade": null,
+          "reason": null
+        },
+        {
+          "type": "free",
+          "start": "18:00",
+          "end": "18:30",
+          "start_12": "6:00 PM",
+          "end_12": "6:30 PM",
+          "fields": [
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B",
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -16076,8 +15899,12 @@
           "start_12": "6:00 PM",
           "end_12": "6:30 PM",
           "fields": [
+            "H-Su1",
+            "H-Su1A",
             "H-Su1B",
-            "H-SJ4A"
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -17304,7 +17131,7 @@
   "2026-11-12": {
     "date": "2026-11-12",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:10 PM",
+    "last_successful_update": "October 23, 2026 at 4:40 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -17741,7 +17568,7 @@
   "2026-10-30": {
     "date": "2026-10-30",
     "updated": true,
-    "last_successful_update": "October 23, 2026 at 4:04 PM",
+    "last_successful_update": "October 23, 2026 at 4:35 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -18382,7 +18209,6 @@
           "start_12": "4:30 PM",
           "end_12": "5:00 PM",
           "fields": [
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -18406,7 +18232,9 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2A"
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": null,
           "team": null,
@@ -18423,8 +18251,7 @@
           "fields": [
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -18445,22 +18272,8 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ4A"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "17:30",
-          "end": "18:00",
-          "start_12": "5:30 PM",
-          "end_12": "6:00 PM",
-          "fields": [
-            "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
             "H-SJ4B"
           ],
           "title": null,
@@ -18482,8 +18295,12 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
+            "H-SJ3",
             "H-SJ3A",
-            "H-SJ4A"
+            "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -18501,7 +18318,6 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-SJ3B",
             "H-SJ4",
             "H-SJ4A",
             "H-SJ4B"
@@ -18522,7 +18338,9 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ3A"
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,

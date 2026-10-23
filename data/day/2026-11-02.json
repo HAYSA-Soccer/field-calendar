@@ -1,7 +1,7 @@
 {
   "date": "2026-11-02",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 4:05 PM",
+  "last_successful_update": "October 23, 2026 at 4:36 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -698,26 +698,12 @@
         "start_12": "5:00 PM",
         "end_12": "5:30 PM",
         "fields": [
+          "H-SJ3",
           "H-SJ3A",
           "H-SJ3B",
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "17:30",
-        "end": "18:00",
-        "start_12": "5:30 PM",
-        "end_12": "6:00 PM",
-        "fields": [
-          "H-Su2B"
         ],
         "title": null,
         "team": null,
@@ -735,7 +721,10 @@
           "H-Su1",
           "H-Su1A",
           "H-Su1B",
+          "H-Su2",
           "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
           "H-SJ3A",
           "H-SJ3B",
           "H-SJ4",
@@ -755,7 +744,6 @@
         "start_12": "6:00 PM",
         "end_12": "6:30 PM",
         "fields": [
-          "H-Su2B",
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B",
@@ -779,7 +767,9 @@
           "H-Su1",
           "H-Su1A",
           "H-Su1B",
-          "H-Su2A"
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B"
         ],
         "title": null,
         "team": null,

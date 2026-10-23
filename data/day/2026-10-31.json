@@ -1,7 +1,7 @@
 {
   "date": "2026-10-31",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 4:04 PM",
+  "last_successful_update": "October 23, 2026 at 4:36 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -1310,10 +1310,13 @@
         "start_12": "11:00 AM",
         "end_12": "12:00 PM",
         "fields": [
+          "H-Su1",
           "H-Su1A",
           "H-Su1B",
+          "H-Su2",
           "H-Su2A",
           "H-Su2B",
+          "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
         ],

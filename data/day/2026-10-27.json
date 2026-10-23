@@ -1,7 +1,7 @@
 {
   "date": "2026-10-27",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 4:02 PM",
+  "last_successful_update": "October 23, 2026 at 4:34 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -645,28 +645,15 @@
         "reason": null
       },
       {
-        "type": "free",
-        "start": "19:30",
-        "end": "21:00",
-        "start_12": "7:30 PM",
-        "end_12": "9:00 PM",
-        "fields": [
-          "H-HST2"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
         "type": "practice",
         "start": "19:30",
         "end": "21:00",
         "start_12": "7:30 PM",
         "end_12": "9:00 PM",
         "fields": [
-          "H-HST1"
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
         ],
         "title": "7/8 Boys Travel (Collins) Practice",
         "team": "7/8 Boys Travel",
@@ -714,8 +701,7 @@
           "H-Su2B",
           "H-SJ3",
           "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4B"
+          "H-SJ3B"
         ],
         "title": null,
         "team": null,
@@ -733,7 +719,9 @@
           "H-Su1",
           "H-Su1A",
           "H-Su1B",
-          "H-SJ4A"
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
         ],
         "title": null,
         "team": null,
@@ -748,7 +736,6 @@
         "start_12": "5:30 PM",
         "end_12": "6:00 PM",
         "fields": [
-          "H-Su2B",
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
@@ -769,7 +756,9 @@
           "H-Su1",
           "H-Su1A",
           "H-Su1B",
+          "H-Su2",
           "H-Su2A",
+          "H-Su2B",
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
@@ -790,7 +779,6 @@
           "H-Su1",
           "H-Su1A",
           "H-Su1B",
-          "H-Su2B",
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B"
@@ -808,7 +796,9 @@
         "start_12": "6:00 PM",
         "end_12": "6:30 PM",
         "fields": [
+          "H-Su2",
           "H-Su2A",
+          "H-Su2B",
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
