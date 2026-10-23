@@ -124,33 +124,44 @@ jobs:
             CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
           done
 
+      # ---------------------------------------------------------
+      # Build week + month JSON (streaming, no huge arg list)
+      # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
         continue-on-error: true
         run: |
           echo "Building weeks.json..."
-          jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
-              ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
-              | ($ts | strftime("%w") | tonumber) as $w
-              | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
-              | ($mon_ts | strftime("%Y-%m-%d")) as $monday
-              | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
-            )
-          ' data/day/*.json > data/week/weeks.json || echo "{}" > data/week/weeks.json
-      
+          if find data/day -name '*.json' | grep -q .; then
+            find data/day -name '*.json' -exec cat {} \; | jq -s '
+              map(select(.date | type == "string")) |
+              reduce .[] as $d ({}; 
+                ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
+                | ($ts | strftime("%w") | tonumber) as $w
+                | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
+                | ($mon_ts | strftime("%Y-%m-%d")) as $monday
+                | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
+              )
+            ' > data/week/weeks.json || echo "{}" > data/week/weeks.json
+          else
+            echo "{}" > data/week/weeks.json
+          fi
+
           echo "Building months.json..."
-          jq -s '
-            map(select(.date | type == "string")) |
-            reduce .[] as $d ({}; 
-              .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
-              |= (. // {}) | .[$d.date] = $d
-            )
-          ' data/day/*.json > data/month/months.json || echo "{}" > data/month/months.json
+          if find data/day -name '*.json' | grep -q .; then
+            find data/day -name '*.json' -exec cat {} \; | jq -s '
+              map(select(.date | type == "string")) |
+              reduce .[] as $d ({}; 
+                .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
+                |= (. // {}) | .[$d.date] = $d
+              )
+            ' > data/month/months.json || echo "{}" > data/month/months.json
+          else
+            echo "{}" > data/month/months.json
+          fi
 
       # ---------------------------------------------------------
-      # Build final availability.json
+      # Build final availability.json (streaming days)
       # ---------------------------------------------------------
       - name: Build final availability.json
         shell: bash
@@ -162,9 +173,14 @@ jobs:
           START=$(jq -r '.season_start' "$SEASON_FILE")
           END=$(jq -r '.season_end' "$SEASON_FILE")
 
-          DAYS_JSON=$(jq -n '
-            reduce (inputs | select(.date | type == "string")) as $d ({}; .[$d.date] = $d)
-          ' data/day/*.json)
+          if find data/day -name '*.json' | grep -q .; then
+            DAYS_JSON=$(find data/day -name '*.json' -exec cat {} \; | jq -s '
+              map(select(.date | type == "string")) |
+              reduce .[] as $d ({}; .[$d.date] = $d)
+            ')
+          else
+            DAYS_JSON="{}"
+          fi
 
           jq -n \
             --arg start "$START" \
