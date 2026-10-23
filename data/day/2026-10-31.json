@@ -1,7 +1,7 @@
 {
   "date": "2026-10-31",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 8:27 AM",
+  "last_successful_update": "October 23, 2026 at 10:17 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -137,33 +137,144 @@
     }
   ],
   "availability": {
-    "H-HST": [],
+    "H-HST": [
+      {
+        "start": "09:00",
+        "end": "14:00"
+      },
+      {
+        "start": "15:00",
+        "end": "15:30"
+      },
+      {
+        "start": "16:30",
+        "end": "21:00"
+      }
+    ],
     "H-HST1": [],
     "H-HST2": [],
-    "H-Su1": [],
-    "H-Su1A": [],
-    "H-Su1B": [],
-    "H-Su2": [],
-    "H-Su2A": [],
-    "H-Su2B": [],
-    "H-SJ3": [],
+    "H-Su1": [
+      {
+        "start": "08:00",
+        "end": "08:30"
+      },
+      {
+        "start": "09:30",
+        "end": "09:45"
+      },
+      {
+        "start": "10:45",
+        "end": "19:00"
+      }
+    ],
+    "H-Su1A": [
+      {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      {
+        "start": "12:00",
+        "end": "19:00"
+      }
+    ],
+    "H-Su1B": [
+      {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      {
+        "start": "12:00",
+        "end": "19:00"
+      }
+    ],
+    "H-Su2": [
+      {
+        "start": "08:00",
+        "end": "08:30"
+      },
+      {
+        "start": "09:30",
+        "end": "09:45"
+      },
+      {
+        "start": "10:45",
+        "end": "19:00"
+      }
+    ],
+    "H-Su2A": [
+      {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      {
+        "start": "12:00",
+        "end": "19:00"
+      }
+    ],
+    "H-Su2B": [
+      {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      {
+        "start": "12:00",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ3": [
+      {
+        "start": "08:00",
+        "end": "12:30"
+      },
+      {
+        "start": "13:30",
+        "end": "13:45"
+      },
+      {
+        "start": "14:45",
+        "end": "19:00"
+      }
+    ],
     "H-SJ3A": [
       {
-        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "08:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-SJ3B": [
       {
-        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "08:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
-    "H-SJ4": [],
-    "H-SJ4A": [],
-    "H-SJ4B": [],
+    "H-SJ4": [
+      {
+        "start": "16:00",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ4A": [
+      {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      {
+        "start": "12:00",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ4B": [
+      {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      {
+        "start": "12:00",
+        "end": "19:00"
+      }
+    ],
     "H-SuSS": [],
     "H-SuSS1": [],
     "H-SuSS2": []
@@ -463,6 +574,105 @@
   "blocks": {},
   "merged": [
     {
+      "field": "H-Su1",
+      "start": "08:00",
+      "end": "08:30",
+      "start_12": "8:00 AM",
+      "end_12": "8:30 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1A",
+      "start": "08:00",
+      "end": "11:00",
+      "start_12": "8:00 AM",
+      "end_12": "11:00 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1B",
+      "start": "08:00",
+      "end": "11:00",
+      "start_12": "8:00 AM",
+      "end_12": "11:00 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "08:00",
+      "end": "08:30",
+      "start_12": "8:00 AM",
+      "end_12": "8:30 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "08:00",
+      "end": "11:00",
+      "start_12": "8:00 AM",
+      "end_12": "11:00 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2B",
+      "start": "08:00",
+      "end": "11:00",
+      "start_12": "8:00 AM",
+      "end_12": "11:00 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3",
+      "start": "08:00",
+      "end": "12:30",
+      "start_12": "8:00 AM",
+      "end_12": "12:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "08:00",
+      "end": "19:00",
+      "start_12": "8:00 AM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3B",
+      "start": "08:00",
+      "end": "19:00",
+      "start_12": "8:00 AM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "08:00",
+      "end": "11:00",
+      "start_12": "8:00 AM",
+      "end_12": "11:00 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4B",
+      "start": "08:00",
+      "end": "11:00",
+      "start_12": "8:00 AM",
+      "end_12": "11:00 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-SuSS",
       "start": "08:30",
       "end": "09:30",
@@ -515,6 +725,33 @@
       "source": "ICS"
     },
     {
+      "field": "H-HST",
+      "start": "09:00",
+      "end": "14:00",
+      "start_12": "9:00 AM",
+      "end_12": "2:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1",
+      "start": "09:30",
+      "end": "09:45",
+      "start_12": "9:30 AM",
+      "end_12": "9:45 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "09:30",
+      "end": "09:45",
+      "start_12": "9:30 AM",
+      "end_12": "9:45 AM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-SuSS",
       "start": "09:30",
       "end": "10:30",
@@ -565,6 +802,24 @@
       "coach": "",
       "grade": "",
       "source": "ICS"
+    },
+    {
+      "field": "H-Su1",
+      "start": "10:45",
+      "end": "19:00",
+      "start_12": "10:45 AM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "10:45",
+      "end": "19:00",
+      "start_12": "10:45 AM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-Su1B",
@@ -658,6 +913,60 @@
       "source": "ICS"
     },
     {
+      "field": "H-Su1A",
+      "start": "12:00",
+      "end": "19:00",
+      "start_12": "12:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1B",
+      "start": "12:00",
+      "end": "19:00",
+      "start_12": "12:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "12:00",
+      "end": "19:00",
+      "start_12": "12:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2B",
+      "start": "12:00",
+      "end": "19:00",
+      "start_12": "12:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "12:00",
+      "end": "19:00",
+      "start_12": "12:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4B",
+      "start": "12:00",
+      "end": "19:00",
+      "start_12": "12:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-SJ3",
       "start": "12:30",
       "end": "13:30",
@@ -669,6 +978,15 @@
       "coach": "Osward",
       "grade": "3/4",
       "source": "ICS"
+    },
+    {
+      "field": "H-SJ3",
+      "start": "13:30",
+      "end": "13:45",
+      "start_12": "1:30 PM",
+      "end_12": "1:45 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-SJ3",
@@ -697,6 +1015,24 @@
       "source": "ICS"
     },
     {
+      "field": "H-SJ3",
+      "start": "14:45",
+      "end": "19:00",
+      "start_12": "2:45 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST",
+      "start": "15:00",
+      "end": "15:30",
+      "start_12": "3:00 PM",
+      "end_12": "3:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-HST",
       "start": "15:30",
       "end": "16:30",
@@ -710,26 +1046,156 @@
       "source": "ICS"
     },
     {
-      "field": "H-SJ3A",
-      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "field": "H-SJ4",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
-      "field": "H-SJ3B",
-      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "field": "H-HST",
+      "start": "16:30",
+      "end": "21:00",
+      "start_12": "4:30 PM",
+      "end_12": "9:00 PM",
       "type": "free",
       "title": ""
     }
   ],
   "merged_availability": {
-    "TURF": [],
-    "SUMNER/SEAN JOYCE": []
+    "TURF": [
+      {
+        "type": "game",
+        "start": "14:00",
+        "end": "15:00",
+        "start_12": "2:00 PM",
+        "end_12": "3:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "title": "7/8 Boys Travel (Mills) vs. Quincy",
+        "team": "7/8 Boys Travel  vs. Quincy",
+        "coach": "Mills",
+        "grade": "7/8",
+        "reason": null
+      },
+      {
+        "type": "game",
+        "start": "15:30",
+        "end": "16:30",
+        "start_12": "3:30 PM",
+        "end_12": "4:30 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "title": "5/6 Boys Travel (Walsh) vs. Raynham",
+        "team": "5/6 Boys Travel  vs. Raynham",
+        "coach": "Walsh",
+        "grade": "5/6",
+        "reason": null
+      }
+    ],
+    "SUMNER/SEAN JOYCE": [
+      {
+        "type": "game",
+        "start": "08:30",
+        "end": "09:30",
+        "start_12": "8:30 AM",
+        "end_12": "9:30 AM",
+        "fields": [
+          "H-Su1",
+          "H-Su2",
+          "H-SJ4",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": "Wm. Perry Auto Repair (Orange) vs. Hope and Future Home Care Services (Blue)",
+        "team": "Wm. Perry Auto Repair  vs. Hope and Future Home Care Services (Blue)",
+        "coach": "Orange",
+        "grade": "3/4",
+        "reason": null
+      },
+      {
+        "type": "game",
+        "start": "09:45",
+        "end": "10:45",
+        "start_12": "9:45 AM",
+        "end_12": "10:45 AM",
+        "fields": [
+          "H-Su1",
+          "H-Su2",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2A",
+          "H-Su2B"
+        ],
+        "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+        "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+        "coach": null,
+        "grade": "5/6",
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "08:30",
+        "end": "12:30",
+        "start_12": "8:30 AM",
+        "end_12": "12:30 PM",
+        "fields": [
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "game",
+        "start": "12:30",
+        "end": "13:30",
+        "start_12": "12:30 PM",
+        "end_12": "1:30 PM",
+        "fields": [
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B"
+        ],
+        "title": "3/4 Boys Travel (Osward) vs. Raynham",
+        "team": "3/4 Boys Travel  vs. Raynham",
+        "coach": "Osward",
+        "grade": "3/4",
+        "reason": null
+      },
+      {
+        "type": "game",
+        "start": "13:45",
+        "end": "14:45",
+        "start_12": "1:45 PM",
+        "end_12": "2:45 PM",
+        "fields": [
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B"
+        ],
+        "title": "3/4 Girls Travel (Casavant) vs. Raynham",
+        "team": "3/4 Girls Travel  vs. Raynham",
+        "coach": "Casavant",
+        "grade": "3/4",
+        "reason": null
+      }
+    ]
   }
 }

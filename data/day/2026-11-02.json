@@ -1,7 +1,7 @@
 {
   "date": "2026-11-02",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 8:28 AM",
+  "last_successful_update": "October 23, 2026 at 10:17 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -139,55 +139,124 @@
   "availability": {
     "H-HST": [
       {
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "18:00",
+        "end": "21:00",
         "mode": "both"
       }
     ],
     "H-HST1": [
       {
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "18:00",
+        "end": "21:00",
         "mode": "practice_only"
       }
     ],
     "H-HST2": [
       {
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "18:00",
+        "end": "21:00",
         "mode": "practice_only"
       }
     ],
-    "H-Su1": [],
-    "H-Su1A": [],
-    "H-Su1B": [],
+    "H-Su1": [
+      {
+        "start": "16:00",
+        "end": "17:30"
+      }
+    ],
+    "H-Su1A": [
+      {
+        "start": "16:00",
+        "end": "17:30"
+      }
+    ],
+    "H-Su1B": [
+      {
+        "start": "16:00",
+        "end": "17:30"
+      }
+    ],
     "H-Su2": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "both"
       }
     ],
-    "H-Su2A": [],
+    "H-Su2A": [
+      {
+        "start": "16:00",
+        "end": "17:30"
+      },
+      {
+        "start": "18:30",
+        "end": "19:00"
+      }
+    ],
     "H-Su2B": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-SJ3": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "both"
       }
     ],
-    "H-SJ3A": [],
-    "H-SJ3B": [],
-    "H-SJ4": [],
-    "H-SJ4A": [],
-    "H-SJ4B": [],
+    "H-SJ3A": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ3B": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ4": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ4A": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
+      }
+    ],
+    "H-SJ4B": [
+      {
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
+      }
+    ],
     "H-SuSS": [],
     "H-SuSS1": [],
     "H-SuSS2": []
@@ -277,6 +346,114 @@
   "blocks": {},
   "merged": [
     {
+      "field": "H-Su1",
+      "start": "16:00",
+      "end": "17:30",
+      "start_12": "4:00 PM",
+      "end_12": "5:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1A",
+      "start": "16:00",
+      "end": "17:30",
+      "start_12": "4:00 PM",
+      "end_12": "5:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1B",
+      "start": "16:00",
+      "end": "17:30",
+      "start_12": "4:00 PM",
+      "end_12": "5:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "16:00",
+      "end": "17:30",
+      "start_12": "4:00 PM",
+      "end_12": "5:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2B",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3B",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4B",
+      "start": "16:00",
+      "end": "17:00",
+      "start_12": "4:00 PM",
+      "end_12": "5:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-SJ3A",
       "start": "17:00",
       "end": "18:00",
@@ -342,62 +519,144 @@
       "source": "ICS"
     },
     {
-      "field": "H-Su2",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2B",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-HST",
-      "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-HST1",
-      "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-HST2",
-      "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3B",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4B",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "18:30",
+      "end": "19:00",
+      "start_12": "6:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     }
   ],
   "merged_availability": {
     "TURF": [],
-    "SUMNER/SEAN JOYCE": []
+    "SUMNER/SEAN JOYCE": [
+      {
+        "type": "practice",
+        "start": "17:00",
+        "end": "17:30",
+        "start_12": "5:00 PM",
+        "end_12": "5:30 PM",
+        "fields": [
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "17:30",
+        "end": "18:00",
+        "start_12": "5:30 PM",
+        "end_12": "6:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-SJ4",
+          "H-Su1A",
+          "H-Su1B",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      }
+    ]
   }
 }

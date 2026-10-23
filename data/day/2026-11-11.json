@@ -1,7 +1,7 @@
 {
   "date": "2026-11-11",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 8:38 AM",
+  "last_successful_update": "October 23, 2026 at 10:22 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -139,106 +139,106 @@
   "availability": {
     "H-HST": [
       {
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "18:00",
+        "end": "21:00",
         "mode": "both"
       }
     ],
     "H-HST1": [
       {
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "18:00",
+        "end": "21:00",
         "mode": "practice_only"
       }
     ],
     "H-HST2": [
       {
-        "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "18:00",
+        "end": "21:00",
         "mode": "practice_only"
       }
     ],
     "H-Su1": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "both"
       }
     ],
     "H-Su1A": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-Su1B": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-Su2": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "both"
       }
     ],
     "H-Su2A": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-Su2B": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-SJ3": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "both"
       }
     ],
     "H-SJ3A": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-SJ3B": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-SJ4": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "both"
       }
     ],
     "H-SJ4A": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
     "H-SJ4B": [
       {
-        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "start": "16:00",
+        "end": "19:00",
         "mode": "practice_only"
       }
     ],
@@ -251,136 +251,136 @@
   "merged": [
     {
       "field": "H-Su1",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1A",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1B",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2A",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2B",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ3",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ3A",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ3B",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ4",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ4A",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ4B",
-      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "16:00",
+      "end": "19:00",
+      "start_12": "4:00 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-HST",
-      "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-HST1",
-      "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-HST2",
-      "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
-      "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
-      "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
       "type": "free",
       "title": ""
     }
