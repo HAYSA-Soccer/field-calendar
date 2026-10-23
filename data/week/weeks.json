@@ -1624,7 +1624,7 @@
     "2026-10-22": {
       "date": "2026-10-22",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:04 PM",
+      "last_successful_update": "October 22, 2026 at 9:11 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -2120,7 +2120,7 @@
     "2026-10-23": {
       "date": "2026-10-23",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:04 PM",
+      "last_successful_update": "October 22, 2026 at 9:11 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -2493,7 +2493,7 @@
     "2026-10-24": {
       "date": "2026-10-24",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:05 PM",
+      "last_successful_update": "October 22, 2026 at 9:12 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -2817,22 +2817,6 @@
             "field_display": "H-Su1, Holbrook Sumner Field"
           }
         ],
-        "H-HST": [
-          {
-            "event_id": "d960ba0d0fb9ec7ec95a9e9ef270a76d",
-            "date": "2026-10-24",
-            "start": "14:00",
-            "end": "15:00",
-            "field": "H-HST",
-            "type": "game",
-            "title": "7/8 Girls Travel (Caldwell) vs. Rockland",
-            "team": "7/8 Girls Travel  vs. Rockland",
-            "coach": "Caldwell",
-            "grade": "7/8",
-            "source": "ICS",
-            "field_display": "H-HST, Holbrook High School"
-          }
-        ],
         "H-Su2B": [
           {
             "event_id": "1781a39f4408d87542be0aec8bbd8c58",
@@ -3132,19 +3116,6 @@
           "title": "Turf Rented Out"
         },
         {
-          "field": "H-HST",
-          "start": "14:00",
-          "end": "15:00",
-          "start_12": "2:00 PM",
-          "end_12": "3:00 PM",
-          "type": "game",
-          "title": "7/8 Girls Travel (Caldwell) vs. Rockland",
-          "team": "7/8 Girls Travel  vs. Rockland",
-          "coach": "Caldwell",
-          "grade": "7/8",
-          "source": "ICS"
-        },
-        {
           "field": "H-SJ3",
           "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
           "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
@@ -3180,7 +3151,7 @@
     "2026-10-25": {
       "date": "2026-10-25",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:05 PM",
+      "last_successful_update": "October 22, 2026 at 9:12 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3348,7 +3319,7 @@
     "2026-10-26": {
       "date": "2026-10-26",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:05 PM",
+      "last_successful_update": "October 22, 2026 at 9:13 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3751,7 +3722,7 @@
     "2026-10-27": {
       "date": "2026-10-27",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:06 PM",
+      "last_successful_update": "October 22, 2026 at 9:13 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -4169,7 +4140,7 @@
     "2026-10-28": {
       "date": "2026-10-28",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:06 PM",
+      "last_successful_update": "October 22, 2026 at 9:14 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -4687,7 +4658,7 @@
     "2026-10-29": {
       "date": "2026-10-29",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:07 PM",
+      "last_successful_update": "October 22, 2026 at 9:14 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5233,7 +5204,7 @@
     "2026-10-30": {
       "date": "2026-10-30",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:07 PM",
+      "last_successful_update": "October 22, 2026 at 9:15 PM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5606,7 +5577,7 @@
     "2026-10-31": {
       "date": "2026-10-31",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 6:08 PM",
+      "last_successful_update": "October 22, 2026 at 9:15 PM",
       "complexes": {
         "TURF": [
           "H-HST",
