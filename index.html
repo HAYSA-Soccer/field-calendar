@@ -48,7 +48,9 @@
 
   <div id="calendar"></div>
 
-  <script src="calendar_v2.js?v=20261021"></script>
+  <!-- IMPORTANT: bump version to force reload -->
+  <script src="calendar_v2.js?v=20261024"></script>
+
   <script>
     loadGlobalRefreshBanner();
 
@@ -88,3 +90,10 @@
     document.getElementById("today").addEventListener("click", () => {
       const today = new Date().toISOString().split("T")[0];
       dateInput.value = today;
+      updateDayLabel(today);
+      loadDay(today);
+    });
+  </script>
+
+</body>
+</html>
