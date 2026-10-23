@@ -1,7 +1,7 @@
 {
   "date": "2026-11-07",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 11:47 AM",
+  "last_successful_update": "October 23, 2026 at 4:08 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -859,6 +859,55 @@
         "reason": null
       },
       {
+        "type": "free",
+        "start": "08:00",
+        "end": "13:00",
+        "start_12": "8:00 AM",
+        "end_12": "1:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "13:00",
+        "end": "14:00",
+        "start_12": "1:00 PM",
+        "end_12": "2:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
         "type": "game",
         "start": "13:00",
         "end": "14:00",
@@ -873,6 +922,32 @@
         "team": "3/4 Girls Travel  vs. Sharon",
         "coach": "Lamb-Williams",
         "grade": "3/4",
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "14:00",
+        "end": "19:00",
+        "start_12": "2:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
         "reason": null
       }
     ]
