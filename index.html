@@ -10,10 +10,8 @@
 
   <h1>HAYSA Calendar</h1>
 
-  <!-- ⭐ GLOBAL REFRESH BANNER -->
   <div id="global-refresh-banner" class="global-refresh-banner"></div>
 
-  <!-- Legend -->
   <div id="legend">
     <div class="legend-item">
       <span class="legend-color practice"></span> Practice
@@ -24,32 +22,32 @@
     <div class="legend-item">
       <span class="legend-color available"></span> Available
     </div>
+    <div class="legend-item">
+      <span class="legend-color game-only"></span> Available (Game Only)
+    </div>
+    <div class="legend-item">
+      <span class="legend-color practice-only"></span> Available (Practice Only)
+    </div>
   </div>
 
-  <!-- Date Picker -->
   <div id="date-picker">
     <label for="calendar-date">Select Date:</label>
     <input type="date" id="calendar-date">
     <button id="load-date" class="nav-btn">Go</button>
   </div>
 
-  <!-- Navigation Buttons -->
   <div id="nav-buttons">
     <button id="prev-day" class="nav-btn">← Previous Day</button>
     <button id="today" class="nav-btn">Today</button>
     <button id="next-day" class="nav-btn">Next Day →</button>
   </div>
 
-  <!-- Day Label -->
   <div id="day-label" style="font-size:18px; font-weight:600; margin-bottom:10px;"></div>
 
-  <!-- ⭐ PER-DAY NOTE (NOT inside #calendar!) -->
   <div id="day-note"></div>
 
-  <!-- Calendar -->
   <div id="calendar"></div>
 
-  <!-- JS -->
   <script src="calendar_v2.js?v=20261021"></script>
   <script>
     loadGlobalRefreshBanner();
@@ -90,10 +88,3 @@
     document.getElementById("today").addEventListener("click", () => {
       const today = new Date().toISOString().split("T")[0];
       dateInput.value = today;
-      updateDayLabel(today);
-      loadDay(today);
-    });
-  </script>
-
-</body>
-</html>
