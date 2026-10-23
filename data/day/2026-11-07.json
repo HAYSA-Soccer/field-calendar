@@ -1,0 +1,636 @@
+{
+  "date": "2026-11-07",
+  "updated": true,
+  "last_successful_update": "October 23, 2026 at 7:48 AM",
+  "complexes": {
+    "TURF": [
+      "H-HST",
+      "H-HST1",
+      "H-HST2"
+    ],
+    "SUMNER/SEAN JOYCE": [
+      "H-Su1",
+      "H-Su1A",
+      "H-Su1B",
+      "H-Su2",
+      "H-Su2A",
+      "H-Su2B",
+      "H-SJ3",
+      "H-SJ3A",
+      "H-SJ3B",
+      "H-SJ4",
+      "H-SJ4A",
+      "H-SJ4B",
+      "H-SuSS",
+      "H-SuSS1",
+      "H-SuSS2"
+    ]
+  },
+  "fields": [
+    {
+      "id": "H-HST",
+      "name": "Holbrook High School Turf (Full)",
+      "complex": "TURF",
+      "surface": ""
+    },
+    {
+      "id": "H-HST1",
+      "name": "Holbrook High School Turf 1",
+      "complex": "TURF",
+      "surface": ""
+    },
+    {
+      "id": "H-HST2",
+      "name": "Holbrook High School Turf 2",
+      "complex": "TURF",
+      "surface": ""
+    },
+    {
+      "id": "H-Su1",
+      "name": "Sumner Field 1 (Full)",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-Su1A",
+      "name": "Sumner Field 1A",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-Su1B",
+      "name": "Sumner Field 1B",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-Su2",
+      "name": "Sumner Field 2 (Full)",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-Su2A",
+      "name": "Sumner Field 2A",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-Su2B",
+      "name": "Sumner Field 2B",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SJ3",
+      "name": "Sumner Field 3 (Full)",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SJ3A",
+      "name": "Sumner Field 3A",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SJ3B",
+      "name": "Sumner Field 3B",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SJ4",
+      "name": "Sumner Field 4 (Full)",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SJ4A",
+      "name": "Sumner Field 4A",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SJ4B",
+      "name": "Sumner Field 4B",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SuSS",
+      "name": "Sumner Snack Shack Area",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SuSS1",
+      "name": "Sumner Snack Shack Area 1",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    },
+    {
+      "id": "H-SuSS2",
+      "name": "Sumner Snack Shack Area 2",
+      "complex": "SUMNER/SEAN JOYCE",
+      "surface": ""
+    }
+  ],
+  "availability": {
+    "H-HST": [],
+    "H-HST1": [],
+    "H-HST2": [],
+    "H-Su1": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "both"
+      }
+    ],
+    "H-Su1A": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-Su1B": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-Su2": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "both"
+      }
+    ],
+    "H-Su2A": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-Su2B": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ3": [],
+    "H-SJ3A": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ3B": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ4": [
+      {
+        "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "both"
+      }
+    ],
+    "H-SJ4A": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SJ4B": [
+      {
+        "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+        "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "mode": "practice_only"
+      }
+    ],
+    "H-SuSS": [],
+    "H-SuSS1": [],
+    "H-SuSS2": []
+  },
+  "events": {
+    "H-SuSS": [
+      {
+        "event_id": "b0b93d57fa31460833cb1dcd63969f4e",
+        "date": "2026-11-07",
+        "start": "09:30",
+        "end": "10:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 9:30 AM Session Practice",
+        "team": "Mini Kickers 9:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      },
+      {
+        "event_id": "cbdf06b419872fa481398049cf9738a9",
+        "date": "2026-11-07",
+        "start": "08:30",
+        "end": "09:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 8:30 AM Session Practice",
+        "team": "Mini Kickers 8:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      },
+      {
+        "event_id": "daed38e43d62ce76a89055581cab6b5e",
+        "date": "2026-11-07",
+        "start": "11:30",
+        "end": "12:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 11:30 AM Session Practice",
+        "team": "Mini Kickers 11:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      },
+      {
+        "event_id": "f7aa4e48170b546ea17ecaf5c5aae71a",
+        "date": "2026-11-07",
+        "start": "10:30",
+        "end": "11:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 10:30 AM Session Practice",
+        "team": "Mini Kickers 10:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      }
+    ],
+    "H-HST": [
+      {
+        "event_id": "17de999a85d5605b6c0c80f2c9b321b2",
+        "date": "2026-11-07",
+        "start": "15:30",
+        "end": "16:30",
+        "field": "H-HST",
+        "type": "game",
+        "title": "7/8 Boys Travel (Mills) vs. Easton",
+        "team": "7/8 Boys Travel  vs. Easton",
+        "coach": "Mills",
+        "grade": "7/8",
+        "source": "ICS",
+        "field_display": "H-HST, Holbrook High School"
+      },
+      {
+        "event_id": "652ee5b1ddc7f45e5d9a4b408098034f",
+        "date": "2026-11-07",
+        "start": "12:30",
+        "end": "13:30",
+        "field": "H-HST",
+        "type": "game",
+        "title": "7/8 Boys Travel (Collins) vs. Weymouth",
+        "team": "7/8 Boys Travel  vs. Weymouth",
+        "coach": "Collins",
+        "grade": "7/8",
+        "source": "ICS",
+        "field_display": "H-HST, Holbrook High School"
+      },
+      {
+        "event_id": "5ce41e55fb4ed8909f55677a2a28ce27",
+        "date": "2026-11-07",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-HST",
+        "type": "game",
+        "title": "5/6 Boys Travel (Ayers) vs. Stoughton",
+        "team": "5/6 Boys Travel  vs. Stoughton",
+        "coach": "Ayers",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST, Holbrook High School"
+      },
+      {
+        "event_id": "26317b9b7e757a08a8e9dd3bfe04411c",
+        "date": "2026-11-07",
+        "start": "10:30",
+        "end": "11:30",
+        "field": "H-HST",
+        "type": "game",
+        "title": "5/6 Girls Travel (Baird-Miller) vs. Rockland",
+        "team": "5/6 Girls Travel  vs. Rockland",
+        "coach": "Baird-Miller",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST, Holbrook High School"
+      },
+      {
+        "event_id": "728f070edcaa9af6c49b995e5bb52f04",
+        "date": "2026-11-07",
+        "start": "09:00",
+        "end": "10:00",
+        "field": "H-HST",
+        "type": "game",
+        "title": "5/6 Girls Travel (Casavant) vs. Quincy",
+        "team": "5/6 Girls Travel  vs. Quincy",
+        "coach": "Casavant",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST, Holbrook High School"
+      },
+      {
+        "event_id": "8325613b7df72444c06df8c97568b574",
+        "date": "2026-11-07",
+        "start": "14:00",
+        "end": "15:00",
+        "field": "H-HST",
+        "type": "game",
+        "title": "7/8 Girls Travel (Caldwell) vs. Easton",
+        "team": "7/8 Girls Travel  vs. Easton",
+        "coach": "Caldwell",
+        "grade": "7/8",
+        "source": "ICS",
+        "field_display": "H-HST, Holbrook High School"
+      }
+    ],
+    "H-SJ3": [
+      {
+        "event_id": "2ae8e398a68c71d865cd7bac7035b128",
+        "date": "2026-11-07",
+        "start": "13:00",
+        "end": "14:00",
+        "field": "H-SJ3",
+        "type": "game",
+        "title": "3/4 Girls Travel (Lamb-Williams) vs. Sharon",
+        "team": "3/4 Girls Travel  vs. Sharon",
+        "coach": "Lamb-Williams",
+        "grade": "3/4",
+        "source": "ICS",
+        "field_display": "H-SJ3, Holbrook Sean Joyce Field"
+      }
+    ]
+  },
+  "blocks": {},
+  "merged": [
+    {
+      "field": "H-SuSS",
+      "start": "08:30",
+      "end": "09:30",
+      "start_12": "8:30 AM",
+      "end_12": "9:30 AM",
+      "type": "practice",
+      "title": "Mini Kickers 8:30 AM Session Practice",
+      "team": "Mini Kickers 8:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "09:00",
+      "end": "10:00",
+      "start_12": "9:00 AM",
+      "end_12": "10:00 AM",
+      "type": "game",
+      "title": "5/6 Girls Travel (Casavant) vs. Quincy",
+      "team": "5/6 Girls Travel  vs. Quincy",
+      "coach": "Casavant",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SuSS",
+      "start": "09:30",
+      "end": "10:30",
+      "start_12": "9:30 AM",
+      "end_12": "10:30 AM",
+      "type": "practice",
+      "title": "Mini Kickers 9:30 AM Session Practice",
+      "team": "Mini Kickers 9:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SuSS",
+      "start": "10:30",
+      "end": "11:30",
+      "start_12": "10:30 AM",
+      "end_12": "11:30 AM",
+      "type": "practice",
+      "title": "Mini Kickers 10:30 AM Session Practice",
+      "team": "Mini Kickers 10:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "10:30",
+      "end": "11:30",
+      "start_12": "10:30 AM",
+      "end_12": "11:30 AM",
+      "type": "game",
+      "title": "5/6 Girls Travel (Baird-Miller) vs. Rockland",
+      "team": "5/6 Girls Travel  vs. Rockland",
+      "coach": "Baird-Miller",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SuSS",
+      "start": "11:30",
+      "end": "12:30",
+      "start_12": "11:30 AM",
+      "end_12": "12:30 PM",
+      "type": "practice",
+      "title": "Mini Kickers 11:30 AM Session Practice",
+      "team": "Mini Kickers 11:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "12:30",
+      "end": "13:30",
+      "start_12": "12:30 PM",
+      "end_12": "1:30 PM",
+      "type": "game",
+      "title": "7/8 Boys Travel (Collins) vs. Weymouth",
+      "team": "7/8 Boys Travel  vs. Weymouth",
+      "coach": "Collins",
+      "grade": "7/8",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SJ3",
+      "start": "13:00",
+      "end": "14:00",
+      "start_12": "1:00 PM",
+      "end_12": "2:00 PM",
+      "type": "game",
+      "title": "3/4 Girls Travel (Lamb-Williams) vs. Sharon",
+      "team": "3/4 Girls Travel  vs. Sharon",
+      "coach": "Lamb-Williams",
+      "grade": "3/4",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "14:00",
+      "end": "15:00",
+      "start_12": "2:00 PM",
+      "end_12": "3:00 PM",
+      "type": "game",
+      "title": "7/8 Girls Travel (Caldwell) vs. Easton",
+      "team": "7/8 Girls Travel  vs. Easton",
+      "coach": "Caldwell",
+      "grade": "7/8",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "15:30",
+      "end": "16:30",
+      "start_12": "3:30 PM",
+      "end_12": "4:30 PM",
+      "type": "game",
+      "title": "7/8 Boys Travel (Mills) vs. Easton",
+      "team": "7/8 Boys Travel  vs. Easton",
+      "coach": "Mills",
+      "grade": "7/8",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "game",
+      "title": "5/6 Boys Travel (Ayers) vs. Stoughton",
+      "team": "5/6 Boys Travel  vs. Stoughton",
+      "coach": "Ayers",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su1",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1A",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1B",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2B",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3B",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4B",
+      "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4",
+      "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+      "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+      "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+      "type": "free",
+      "title": ""
+    }
+  ],
+  "merged_availability": {
+    "TURF": [],
+    "SUMNER/SEAN JOYCE": []
+  }
+}

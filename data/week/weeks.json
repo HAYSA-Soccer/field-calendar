@@ -2120,7 +2120,7 @@
     "2026-10-23": {
       "date": "2026-10-23",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:54 AM",
+      "last_successful_update": "October 23, 2026 at 7:42 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -2493,7 +2493,7 @@
     "2026-10-24": {
       "date": "2026-10-24",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:55 AM",
+      "last_successful_update": "October 23, 2026 at 7:42 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3151,7 +3151,7 @@
     "2026-10-25": {
       "date": "2026-10-25",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:55 AM",
+      "last_successful_update": "October 23, 2026 at 7:42 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3319,7 +3319,7 @@
     "2026-10-26": {
       "date": "2026-10-26",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:56 AM",
+      "last_successful_update": "October 23, 2026 at 7:43 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3722,7 +3722,7 @@
     "2026-10-27": {
       "date": "2026-10-27",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:56 AM",
+      "last_successful_update": "October 23, 2026 at 7:43 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -4140,7 +4140,7 @@
     "2026-10-28": {
       "date": "2026-10-28",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:56 AM",
+      "last_successful_update": "October 23, 2026 at 7:44 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -4658,7 +4658,7 @@
     "2026-10-29": {
       "date": "2026-10-29",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:57 AM",
+      "last_successful_update": "October 23, 2026 at 7:44 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5204,7 +5204,7 @@
     "2026-10-30": {
       "date": "2026-10-30",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:57 AM",
+      "last_successful_update": "October 23, 2026 at 7:44 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5577,7 +5577,7 @@
     "2026-10-31": {
       "date": "2026-10-31",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:58 AM",
+      "last_successful_update": "October 23, 2026 at 7:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6312,7 +6312,7 @@
     "2026-11-01": {
       "date": "2026-11-01",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:58 AM",
+      "last_successful_update": "October 23, 2026 at 7:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6480,7 +6480,7 @@
     "2026-11-02": {
       "date": "2026-11-02",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:59 AM",
+      "last_successful_update": "October 23, 2026 at 7:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6883,7 +6883,7 @@
     "2026-11-03": {
       "date": "2026-11-03",
       "updated": true,
-      "last_successful_update": "October 23, 2026 at 2:59 AM",
+      "last_successful_update": "October 23, 2026 at 7:46 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -7289,6 +7289,4502 @@
           "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
           "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
           "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-04": {
+      "date": "2026-11-04",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:46 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [],
+        "H-Su1B": [],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {
+        "H-HST2": [
+          {
+            "event_id": "6b8e49146ad28e106de6af3f8671e89c",
+            "date": "2026-11-04",
+            "start": "19:30",
+            "end": "21:00",
+            "field": "H-HST2",
+            "type": "practice",
+            "title": "7/8 Girls Travel (Caldwell) Practice",
+            "team": "7/8 Girls Travel",
+            "coach": "Caldwell",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          }
+        ],
+        "H-HST1": [
+          {
+            "event_id": "dbbfef82c64552a9c593167608c6efc4",
+            "date": "2026-11-04",
+            "start": "18:00",
+            "end": "19:30",
+            "field": "H-HST1",
+            "type": "practice",
+            "title": "5/6 Boys Travel (Walsh) Practice",
+            "team": "5/6 Boys Travel",
+            "coach": "Walsh",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "event_id": "deb3279554343a6e0834ae0e47055966",
+            "date": "2026-11-04",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-Su1A",
+            "type": "practice",
+            "title": "Troupe Waste & Recycling (Green) Practice",
+            "team": "Troupe Waste & Recycling",
+            "coach": "Green",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su1A, Holbrook Sumner Field"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "event_id": "7210f42493682ccf4ec5de3e98dc754f",
+            "date": "2026-11-04",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-Su1B",
+            "type": "practice",
+            "title": "Edwards Built Pavements (Blue) Practice",
+            "team": "Edwards Built Pavements",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su1B, Holbrook Sumner Field"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "event_id": "924c965c1533d8ee16cd90e28cddaf5e",
+            "date": "2026-11-04",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-SJ4A",
+            "type": "practice",
+            "title": "Wm. Perry Auto Repair (Orange) Practice",
+            "team": "Wm. Perry Auto Repair",
+            "coach": "Orange",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "event_id": "6ac602ef05561fb0206ef786cf416e29",
+            "date": "2026-11-04",
+            "start": "16:30",
+            "end": "17:30",
+            "field": "H-SJ3A",
+            "type": "practice",
+            "title": "Summit's Place (Green) Practice",
+            "team": "Summit's Place",
+            "coach": "Green",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SJ3A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "event_id": "6cd20ffec73630b5eb7bc47ba16a71aa",
+            "date": "2026-11-04",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-Su2A",
+            "type": "practice",
+            "title": "www.slamyourday.com (Green) Practice",
+            "team": "www.slamyourday.com",
+            "coach": "Green",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su2A, Holbrook Sumner Field"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-SJ3A",
+          "start": "16:30",
+          "end": "17:30",
+          "start_12": "4:30 PM",
+          "end_12": "5:30 PM",
+          "type": "practice",
+          "title": "Summit's Place (Green) Practice",
+          "team": "Summit's Place",
+          "coach": "Green",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1A",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "Troupe Waste & Recycling (Green) Practice",
+          "team": "Troupe Waste & Recycling",
+          "coach": "Green",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1B",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "Edwards Built Pavements (Blue) Practice",
+          "team": "Edwards Built Pavements",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2A",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "www.slamyourday.com (Green) Practice",
+          "team": "www.slamyourday.com",
+          "coach": "Green",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Wm. Perry Auto Repair (Orange) Practice",
+          "team": "Wm. Perry Auto Repair",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST1",
+          "start": "18:00",
+          "end": "19:30",
+          "start_12": "6:00 PM",
+          "end_12": "7:30 PM",
+          "type": "practice",
+          "title": "5/6 Boys Travel (Walsh) Practice",
+          "team": "5/6 Boys Travel",
+          "coach": "Walsh",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST2",
+          "start": "19:30",
+          "end": "21:00",
+          "start_12": "7:30 PM",
+          "end_12": "9:00 PM",
+          "type": "practice",
+          "title": "7/8 Girls Travel (Caldwell) Practice",
+          "team": "7/8 Girls Travel",
+          "coach": "Caldwell",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-05": {
+      "date": "2026-11-05",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:47 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [],
+        "H-Su1B": [],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [],
+        "H-Su2B": [],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [],
+        "H-SJ3B": [],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {
+        "H-HST2": [
+          {
+            "event_id": "ddb198b33194ae92a519014a021a4b7b",
+            "date": "2026-11-05",
+            "start": "18:00",
+            "end": "19:30",
+            "field": "H-HST2",
+            "type": "practice",
+            "title": "5/6 Boys Travel (Ayers) Practice",
+            "team": "5/6 Boys Travel",
+            "coach": "Ayers",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          }
+        ],
+        "H-HST1": [
+          {
+            "event_id": "5f3910d09f889407072141680e7f2197",
+            "date": "2026-11-05",
+            "start": "19:30",
+            "end": "21:00",
+            "field": "H-HST1",
+            "type": "practice",
+            "title": "7/8 Boys Travel (Mills) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Mills",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "event_id": "b1c0c6f7930582246754c1358c4f26ae",
+            "date": "2026-11-05",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-SJ4A",
+            "type": "practice",
+            "title": "Hornets Nest Solutions LLC (Red) Practice",
+            "team": "Hornets Nest Solutions LLC",
+            "coach": "Red",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "event_id": "214904f07d022e14646ffdba45e8adc2",
+            "date": "2026-11-05",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ3A",
+            "type": "practice",
+            "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
+            "team": "3/4 Girls Team 1 - Edwards Built Pavements",
+            "coach": "",
+            "grade": "3/4",
+            "source": "ICS",
+            "field_display": "H-SJ3A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "event_id": "04abb7a8b23d17fe86b01a7fe20494b0",
+            "date": "2026-11-05",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-Su1A",
+            "type": "practice",
+            "title": "The Red House Academy (Red) Practice",
+            "team": "The Red House Academy",
+            "coach": "Red",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su1A, Holbrook Sumner Field"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "event_id": "46d0e085e5e0dc13cc6b47e8b6daa49f",
+            "date": "2026-11-05",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-Su2B",
+            "type": "practice",
+            "title": "Hope and Future Home Care Services (Blue) Practice",
+            "team": "Hope and Future Home Care Services",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su2B, Holbrook Sumner Field"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "event_id": "0f9fe66e972e2c96aa4504231f9a14e2",
+            "date": "2026-11-05",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ3B",
+            "type": "practice",
+            "title": "5/6/7 Girls Team 1 - Best Collision Practice",
+            "team": "5/6/7 Girls Team 1 - Best Collision",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-SJ3B, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "event_id": "1200fa422127e5accc5e399d179d63b4",
+            "date": "2026-11-05",
+            "start": "16:30",
+            "end": "17:30",
+            "field": "H-Su2A",
+            "type": "practice",
+            "title": "Abington Bank (Red) Practice",
+            "team": "Abington Bank",
+            "coach": "Red",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su2A, Holbrook Sumner Field"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "event_id": "1a2e8aee1062dc89a7bb66be6a981082",
+            "date": "2026-11-05",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-Su1B",
+            "type": "practice",
+            "title": "Avon Septic and Pumping (Blue) Practice",
+            "team": "Avon Septic and Pumping",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su1B, Holbrook Sumner Field"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su2A",
+          "start": "16:30",
+          "end": "17:30",
+          "start_12": "4:30 PM",
+          "end_12": "5:30 PM",
+          "type": "practice",
+          "title": "Abington Bank (Red) Practice",
+          "team": "Abington Bank",
+          "coach": "Red",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
+          "team": "3/4 Girls Team 1 - Edwards Built Pavements",
+          "coach": "",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1A",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "The Red House Academy (Red) Practice",
+          "team": "The Red House Academy",
+          "coach": "Red",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2B",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "Hope and Future Home Care Services (Blue) Practice",
+          "team": "Hope and Future Home Care Services",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "5/6/7 Girls Team 1 - Best Collision Practice",
+          "team": "5/6/7 Girls Team 1 - Best Collision",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Hornets Nest Solutions LLC (Red) Practice",
+          "team": "Hornets Nest Solutions LLC",
+          "coach": "Red",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1B",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Avon Septic and Pumping (Blue) Practice",
+          "team": "Avon Septic and Pumping",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST2",
+          "start": "18:00",
+          "end": "19:30",
+          "start_12": "6:00 PM",
+          "end_12": "7:30 PM",
+          "type": "practice",
+          "title": "5/6 Boys Travel (Ayers) Practice",
+          "team": "5/6 Boys Travel",
+          "coach": "Ayers",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST1",
+          "start": "19:30",
+          "end": "21:00",
+          "start_12": "7:30 PM",
+          "end_12": "9:00 PM",
+          "type": "practice",
+          "title": "7/8 Boys Travel (Mills) Practice",
+          "team": "7/8 Boys Travel",
+          "coach": "Mills",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-06": {
+      "date": "2026-11-06",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:47 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {
+        "H-SJ4A": [
+          {
+            "event_id": "99e085ea50ed9da88a408e0a60801c80",
+            "date": "2026-11-06",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ4A",
+            "type": "practice",
+            "title": "Nielsen Eye Center (Orange) Practice",
+            "team": "Nielsen Eye Center",
+            "coach": "Orange",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "event_id": "63ae41aeb9a48393317978623083e5fd",
+            "date": "2026-11-06",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-SJ3A",
+            "type": "practice",
+            "title": "Brockton Rox (Blue) Practice",
+            "team": "Brockton Rox",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SJ3A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "event_id": "b2ac65cc6a98d0be614aa009740b93c6",
+            "date": "2026-11-06",
+            "start": "16:30",
+            "end": "17:30",
+            "field": "H-Su2A",
+            "type": "practice",
+            "title": "Holbrook Community Center (Green) Practice",
+            "team": "Holbrook Community Center",
+            "coach": "Green",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su2A, Holbrook Sumner Field"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su2A",
+          "start": "16:30",
+          "end": "17:30",
+          "start_12": "4:30 PM",
+          "end_12": "5:30 PM",
+          "type": "practice",
+          "title": "Holbrook Community Center (Green) Practice",
+          "team": "Holbrook Community Center",
+          "coach": "Green",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "Nielsen Eye Center (Orange) Practice",
+          "team": "Nielsen Eye Center",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Brockton Rox (Blue) Practice",
+          "team": "Brockton Rox",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-07": {
+      "date": "2026-11-07",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:48 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {
+        "H-SuSS": [
+          {
+            "event_id": "b0b93d57fa31460833cb1dcd63969f4e",
+            "date": "2026-11-07",
+            "start": "09:30",
+            "end": "10:30",
+            "field": "H-SuSS",
+            "type": "practice",
+            "title": "Mini Kickers 9:30 AM Session Practice",
+            "team": "Mini Kickers 9:30 AM Session",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SuSS, Holbrook Sumner Field"
+          },
+          {
+            "event_id": "cbdf06b419872fa481398049cf9738a9",
+            "date": "2026-11-07",
+            "start": "08:30",
+            "end": "09:30",
+            "field": "H-SuSS",
+            "type": "practice",
+            "title": "Mini Kickers 8:30 AM Session Practice",
+            "team": "Mini Kickers 8:30 AM Session",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SuSS, Holbrook Sumner Field"
+          },
+          {
+            "event_id": "daed38e43d62ce76a89055581cab6b5e",
+            "date": "2026-11-07",
+            "start": "11:30",
+            "end": "12:30",
+            "field": "H-SuSS",
+            "type": "practice",
+            "title": "Mini Kickers 11:30 AM Session Practice",
+            "team": "Mini Kickers 11:30 AM Session",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SuSS, Holbrook Sumner Field"
+          },
+          {
+            "event_id": "f7aa4e48170b546ea17ecaf5c5aae71a",
+            "date": "2026-11-07",
+            "start": "10:30",
+            "end": "11:30",
+            "field": "H-SuSS",
+            "type": "practice",
+            "title": "Mini Kickers 10:30 AM Session Practice",
+            "team": "Mini Kickers 10:30 AM Session",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SuSS, Holbrook Sumner Field"
+          }
+        ],
+        "H-HST": [
+          {
+            "event_id": "17de999a85d5605b6c0c80f2c9b321b2",
+            "date": "2026-11-07",
+            "start": "15:30",
+            "end": "16:30",
+            "field": "H-HST",
+            "type": "game",
+            "title": "7/8 Boys Travel (Mills) vs. Easton",
+            "team": "7/8 Boys Travel  vs. Easton",
+            "coach": "Mills",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST, Holbrook High School"
+          },
+          {
+            "event_id": "652ee5b1ddc7f45e5d9a4b408098034f",
+            "date": "2026-11-07",
+            "start": "12:30",
+            "end": "13:30",
+            "field": "H-HST",
+            "type": "game",
+            "title": "7/8 Boys Travel (Collins) vs. Weymouth",
+            "team": "7/8 Boys Travel  vs. Weymouth",
+            "coach": "Collins",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST, Holbrook High School"
+          },
+          {
+            "event_id": "5ce41e55fb4ed8909f55677a2a28ce27",
+            "date": "2026-11-07",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-HST",
+            "type": "game",
+            "title": "5/6 Boys Travel (Ayers) vs. Stoughton",
+            "team": "5/6 Boys Travel  vs. Stoughton",
+            "coach": "Ayers",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST, Holbrook High School"
+          },
+          {
+            "event_id": "26317b9b7e757a08a8e9dd3bfe04411c",
+            "date": "2026-11-07",
+            "start": "10:30",
+            "end": "11:30",
+            "field": "H-HST",
+            "type": "game",
+            "title": "5/6 Girls Travel (Baird-Miller) vs. Rockland",
+            "team": "5/6 Girls Travel  vs. Rockland",
+            "coach": "Baird-Miller",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST, Holbrook High School"
+          },
+          {
+            "event_id": "728f070edcaa9af6c49b995e5bb52f04",
+            "date": "2026-11-07",
+            "start": "09:00",
+            "end": "10:00",
+            "field": "H-HST",
+            "type": "game",
+            "title": "5/6 Girls Travel (Casavant) vs. Quincy",
+            "team": "5/6 Girls Travel  vs. Quincy",
+            "coach": "Casavant",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST, Holbrook High School"
+          },
+          {
+            "event_id": "8325613b7df72444c06df8c97568b574",
+            "date": "2026-11-07",
+            "start": "14:00",
+            "end": "15:00",
+            "field": "H-HST",
+            "type": "game",
+            "title": "7/8 Girls Travel (Caldwell) vs. Easton",
+            "team": "7/8 Girls Travel  vs. Easton",
+            "coach": "Caldwell",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST, Holbrook High School"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "event_id": "2ae8e398a68c71d865cd7bac7035b128",
+            "date": "2026-11-07",
+            "start": "13:00",
+            "end": "14:00",
+            "field": "H-SJ3",
+            "type": "game",
+            "title": "3/4 Girls Travel (Lamb-Williams) vs. Sharon",
+            "team": "3/4 Girls Travel  vs. Sharon",
+            "coach": "Lamb-Williams",
+            "grade": "3/4",
+            "source": "ICS",
+            "field_display": "H-SJ3, Holbrook Sean Joyce Field"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-SuSS",
+          "start": "08:30",
+          "end": "09:30",
+          "start_12": "8:30 AM",
+          "end_12": "9:30 AM",
+          "type": "practice",
+          "title": "Mini Kickers 8:30 AM Session Practice",
+          "team": "Mini Kickers 8:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST",
+          "start": "09:00",
+          "end": "10:00",
+          "start_12": "9:00 AM",
+          "end_12": "10:00 AM",
+          "type": "game",
+          "title": "5/6 Girls Travel (Casavant) vs. Quincy",
+          "team": "5/6 Girls Travel  vs. Quincy",
+          "coach": "Casavant",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SuSS",
+          "start": "09:30",
+          "end": "10:30",
+          "start_12": "9:30 AM",
+          "end_12": "10:30 AM",
+          "type": "practice",
+          "title": "Mini Kickers 9:30 AM Session Practice",
+          "team": "Mini Kickers 9:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SuSS",
+          "start": "10:30",
+          "end": "11:30",
+          "start_12": "10:30 AM",
+          "end_12": "11:30 AM",
+          "type": "practice",
+          "title": "Mini Kickers 10:30 AM Session Practice",
+          "team": "Mini Kickers 10:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST",
+          "start": "10:30",
+          "end": "11:30",
+          "start_12": "10:30 AM",
+          "end_12": "11:30 AM",
+          "type": "game",
+          "title": "5/6 Girls Travel (Baird-Miller) vs. Rockland",
+          "team": "5/6 Girls Travel  vs. Rockland",
+          "coach": "Baird-Miller",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SuSS",
+          "start": "11:30",
+          "end": "12:30",
+          "start_12": "11:30 AM",
+          "end_12": "12:30 PM",
+          "type": "practice",
+          "title": "Mini Kickers 11:30 AM Session Practice",
+          "team": "Mini Kickers 11:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST",
+          "start": "12:30",
+          "end": "13:30",
+          "start_12": "12:30 PM",
+          "end_12": "1:30 PM",
+          "type": "game",
+          "title": "7/8 Boys Travel (Collins) vs. Weymouth",
+          "team": "7/8 Boys Travel  vs. Weymouth",
+          "coach": "Collins",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ3",
+          "start": "13:00",
+          "end": "14:00",
+          "start_12": "1:00 PM",
+          "end_12": "2:00 PM",
+          "type": "game",
+          "title": "3/4 Girls Travel (Lamb-Williams) vs. Sharon",
+          "team": "3/4 Girls Travel  vs. Sharon",
+          "coach": "Lamb-Williams",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST",
+          "start": "14:00",
+          "end": "15:00",
+          "start_12": "2:00 PM",
+          "end_12": "3:00 PM",
+          "type": "game",
+          "title": "7/8 Girls Travel (Caldwell) vs. Easton",
+          "team": "7/8 Girls Travel  vs. Easton",
+          "coach": "Caldwell",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST",
+          "start": "15:30",
+          "end": "16:30",
+          "start_12": "3:30 PM",
+          "end_12": "4:30 PM",
+          "type": "game",
+          "title": "7/8 Boys Travel (Mills) vs. Easton",
+          "team": "7/8 Boys Travel  vs. Easton",
+          "coach": "Mills",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "game",
+          "title": "5/6 Boys Travel (Ayers) vs. Stoughton",
+          "team": "5/6 Boys Travel  vs. Stoughton",
+          "coach": "Ayers",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-08": {
+      "date": "2026-11-08",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:48 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [],
+        "H-Su1A": [],
+        "H-Su1B": [],
+        "H-Su2": [],
+        "H-Su2A": [],
+        "H-Su2B": [],
+        "H-SJ3": [],
+        "H-SJ3A": [],
+        "H-SJ3B": [],
+        "H-SJ4": [],
+        "H-SJ4A": [],
+        "H-SJ4B": [],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": [],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    }
+  },
+  "2026-11-09": {
+    "2026-11-09": {
+      "date": "2026-11-09",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:48 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-HST2": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST1",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-10": {
+      "date": "2026-11-10",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:49 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-HST2": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST1",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-11": {
+      "date": "2026-11-11",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:49 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-HST2": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST1",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-12": {
+      "date": "2026-11-12",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:50 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-HST2": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST1",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-13": {
+      "date": "2026-11-13",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:50 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-14": {
+      "date": "2026-11-14",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 7:50 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su1A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4B": [
+          {
+            "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {
+        "H-HST": [
+          {
+            "event_id": "85bff9d432474daaa0c1e82bda5083f6",
+            "date": "2026-11-14",
+            "start": "12:00",
+            "end": "13:00",
+            "field": "H-HST",
+            "type": "game",
+            "title": "7/8 Boys Travel (Mills) vs. Randolph",
+            "team": "7/8 Boys Travel  vs. Randolph",
+            "coach": "Mills",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST, Holbrook High School"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-HST",
+          "start": "12:00",
+          "end": "13:00",
+          "start_12": "12:00 PM",
+          "end_12": "1:00 PM",
+          "type": "game",
+          "title": "7/8 Boys Travel (Mills) vs. Randolph",
+          "team": "7/8 Boys Travel  vs. Randolph",
+          "coach": "Mills",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su1B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4A",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4B",
+          "start": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ4",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
           "type": "free",
           "title": ""
         }
