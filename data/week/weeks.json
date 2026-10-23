@@ -2120,7 +2120,7 @@
     "2026-10-23": {
       "date": "2026-10-23",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:11 PM",
+      "last_successful_update": "October 23, 2026 at 2:54 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -2493,7 +2493,7 @@
     "2026-10-24": {
       "date": "2026-10-24",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:12 PM",
+      "last_successful_update": "October 23, 2026 at 2:55 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3151,7 +3151,7 @@
     "2026-10-25": {
       "date": "2026-10-25",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:12 PM",
+      "last_successful_update": "October 23, 2026 at 2:55 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3319,7 +3319,7 @@
     "2026-10-26": {
       "date": "2026-10-26",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:13 PM",
+      "last_successful_update": "October 23, 2026 at 2:56 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -3722,7 +3722,7 @@
     "2026-10-27": {
       "date": "2026-10-27",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:13 PM",
+      "last_successful_update": "October 23, 2026 at 2:56 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -4140,7 +4140,7 @@
     "2026-10-28": {
       "date": "2026-10-28",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:14 PM",
+      "last_successful_update": "October 23, 2026 at 2:56 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -4658,7 +4658,7 @@
     "2026-10-29": {
       "date": "2026-10-29",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:14 PM",
+      "last_successful_update": "October 23, 2026 at 2:57 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5204,7 +5204,7 @@
     "2026-10-30": {
       "date": "2026-10-30",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:15 PM",
+      "last_successful_update": "October 23, 2026 at 2:57 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5577,7 +5577,7 @@
     "2026-10-31": {
       "date": "2026-10-31",
       "updated": true,
-      "last_successful_update": "October 22, 2026 at 9:15 PM",
+      "last_successful_update": "October 23, 2026 at 2:58 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6300,6 +6300,995 @@
           "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
           "start_12": "Sat Dec 30 1899 08:00:00 GMT-0500 (Eastern Standard Time)",
           "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-01": {
+      "date": "2026-11-01",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 2:58 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [],
+        "H-HST1": [],
+        "H-HST2": [],
+        "H-Su1": [],
+        "H-Su1A": [],
+        "H-Su1B": [],
+        "H-Su2": [],
+        "H-Su2A": [],
+        "H-Su2B": [],
+        "H-SJ3": [],
+        "H-SJ3A": [],
+        "H-SJ3B": [],
+        "H-SJ4": [],
+        "H-SJ4A": [],
+        "H-SJ4B": [],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {},
+      "blocks": {},
+      "merged": [],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    }
+  },
+  "2026-11-02": {
+    "2026-11-02": {
+      "date": "2026-11-02",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 2:59 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-HST2": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1": [],
+        "H-Su1A": [],
+        "H-Su1B": [],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [],
+        "H-SJ3B": [],
+        "H-SJ4": [],
+        "H-SJ4A": [],
+        "H-SJ4B": [],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {
+        "H-Su1": [
+          {
+            "event_id": "59c6ad9f14e19321ed8dfa625b03b54d",
+            "date": "2026-11-02",
+            "start": "17:30",
+            "end": "19:00",
+            "field": "H-Su1",
+            "type": "practice",
+            "title": "3/4 Boys Travel (Ball) Practice",
+            "team": "3/4 Boys Travel",
+            "coach": "Ball",
+            "grade": "3/4",
+            "source": "ICS",
+            "field_display": "H-Su1, Holbrook Sumner Field"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "event_id": "b5575b8467146f824aa08aa10a26ed17",
+            "date": "2026-11-02",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ3A",
+            "type": "practice",
+            "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
+            "team": "3/4 Girls Team 1 - Edwards Built Pavements",
+            "coach": "",
+            "grade": "3/4",
+            "source": "ICS",
+            "field_display": "H-SJ3A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "event_id": "2c5d6d7c6802384b8779b7fdf4277ec9",
+            "date": "2026-11-02",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ3B",
+            "type": "practice",
+            "title": "5/6/7 Girls Team 1 - Best Collision Practice",
+            "team": "5/6/7 Girls Team 1 - Best Collision",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-SJ3B, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "event_id": "3c10ad46fbf725c0b77ee45f6c93f17c",
+            "date": "2026-11-02",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-Su2A",
+            "type": "practice",
+            "title": "Undercover Undercoaters Bridgewater (Orange) Practice",
+            "team": "Undercover Undercoaters Bridgewater",
+            "coach": "Orange",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su2A, Holbrook Sumner Field"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "event_id": "235652b7d3a15dfc6285d467c44c7612",
+            "date": "2026-11-02",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ4",
+            "type": "practice",
+            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-SJ4, Holbrook Sean Joyce Field"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-SJ3A",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "3/4 Girls Team 1 - Edwards Built Pavements Practice",
+          "team": "3/4 Girls Team 1 - Edwards Built Pavements",
+          "coach": "",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "5/6/7 Girls Team 1 - Best Collision Practice",
+          "team": "5/6/7 Girls Team 1 - Best Collision",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ4",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "17:30",
+          "end": "19:00",
+          "start_12": "5:30 PM",
+          "end_12": "7:00 PM",
+          "type": "practice",
+          "title": "3/4 Boys Travel (Ball) Practice",
+          "team": "3/4 Boys Travel",
+          "coach": "Ball",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2A",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Undercover Undercoaters Bridgewater (Orange) Practice",
+          "team": "Undercover Undercoaters Bridgewater",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST1",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        }
+      ],
+      "merged_availability": {
+        "TURF": [],
+        "SUMNER/SEAN JOYCE": []
+      }
+    },
+    "2026-11-03": {
+      "date": "2026-11-03",
+      "updated": true,
+      "last_successful_update": "October 23, 2026 at 2:59 AM",
+      "complexes": {
+        "TURF": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "SUMNER/SEAN JOYCE": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B",
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ]
+      },
+      "fields": [
+        {
+          "id": "H-HST",
+          "name": "Holbrook High School Turf (Full)",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST1",
+          "name": "Holbrook High School Turf 1",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST2",
+          "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1",
+          "name": "Sumner Field 1 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1A",
+          "name": "Sumner Field 1A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su1B",
+          "name": "Sumner Field 1B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2",
+          "name": "Sumner Field 2 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2A",
+          "name": "Sumner Field 2A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-Su2B",
+          "name": "Sumner Field 2B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3",
+          "name": "Sumner Field 3 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3A",
+          "name": "Sumner Field 3A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ3B",
+          "name": "Sumner Field 3B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4",
+          "name": "Sumner Field 4 (Full)",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4A",
+          "name": "Sumner Field 4A",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SJ4B",
+          "name": "Sumner Field 4B",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS",
+          "name": "Sumner Snack Shack Area",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS1",
+          "name": "Sumner Snack Shack Area 1",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        },
+        {
+          "id": "H-SuSS2",
+          "name": "Sumner Snack Shack Area 2",
+          "complex": "SUMNER/SEAN JOYCE",
+          "surface": ""
+        }
+      ],
+      "availability": {
+        "H-HST": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-HST1": [],
+        "H-HST2": [
+          {
+            "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-Su1": [],
+        "H-Su1A": [],
+        "H-Su1B": [],
+        "H-Su2": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-Su2A": [],
+        "H-Su2B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "both"
+          }
+        ],
+        "H-SJ3A": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ3B": [
+          {
+            "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+            "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+            "mode": "practice_only"
+          }
+        ],
+        "H-SJ4": [],
+        "H-SJ4A": [],
+        "H-SJ4B": [],
+        "H-SuSS": [],
+        "H-SuSS1": [],
+        "H-SuSS2": []
+      },
+      "events": {
+        "H-HST1": [
+          {
+            "event_id": "867fed8ef3d08eeefe4730b5be57781e",
+            "date": "2026-11-03",
+            "start": "19:30",
+            "end": "21:00",
+            "field": "H-HST1",
+            "type": "practice",
+            "title": "7/8 Boys Travel (Collins) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Collins",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
+          }
+        ],
+        "H-SJ4A": [
+          {
+            "event_id": "a4115cbe3d863f264bb01fb36604c9be",
+            "date": "2026-11-03",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-SJ4A",
+            "type": "practice",
+            "title": "The Sean Joyce Foundation (Red) Practice",
+            "team": "The Sean Joyce Foundation",
+            "coach": "Red",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-Su2A": [
+          {
+            "event_id": "1723f1d97d6c8e65dbd66abdbbc49b46",
+            "date": "2026-11-03",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-Su2A",
+            "type": "practice",
+            "title": "Wm. Perry Trucking (Orange) Practice",
+            "team": "Wm. Perry Trucking",
+            "coach": "Orange",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-Su2A, Holbrook Sumner Field"
+          }
+        ],
+        "H-SJ4": [
+          {
+            "event_id": "a5cffec9acf6543b2fb68cfa1306f1e4",
+            "date": "2026-11-03",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-SJ4",
+            "type": "practice",
+            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-SJ4, Holbrook Sean Joyce Field"
+          }
+        ],
+        "H-Su1": [
+          {
+            "event_id": "d2397990df95b905d4b33e55b2f0a83c",
+            "date": "2026-11-03",
+            "start": "17:00",
+            "end": "18:00",
+            "field": "H-Su1",
+            "type": "practice",
+            "title": "3/4 Girls Travel (Lamb-Williams) Practice",
+            "team": "3/4 Girls Travel",
+            "coach": "Lamb-Williams",
+            "grade": "3/4",
+            "source": "ICS",
+            "field_display": "H-Su1, Holbrook Sumner Field"
+          }
+        ]
+      },
+      "blocks": {},
+      "merged": [
+        {
+          "field": "H-SJ4A",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "The Sean Joyce Foundation (Red) Practice",
+          "team": "The Sean Joyce Foundation",
+          "coach": "Red",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su1",
+          "start": "17:00",
+          "end": "18:00",
+          "start_12": "5:00 PM",
+          "end_12": "6:00 PM",
+          "type": "practice",
+          "title": "3/4 Girls Travel (Lamb-Williams) Practice",
+          "team": "3/4 Girls Travel",
+          "coach": "Lamb-Williams",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2A",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "Wm. Perry Trucking (Orange) Practice",
+          "team": "Wm. Perry Trucking",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-SJ4",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
+          "type": "practice",
+          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST1",
+          "start": "19:30",
+          "end": "21:00",
+          "start_12": "7:30 PM",
+          "end_12": "9:00 PM",
+          "type": "practice",
+          "title": "7/8 Boys Travel (Collins) Practice",
+          "team": "7/8 Boys Travel",
+          "coach": "Collins",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-Su2",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-Su2B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3A",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-SJ3B",
+          "start": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 16:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 19:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
+          "start_12": "Sat Dec 30 1899 18:00:00 GMT-0500 (Eastern Standard Time)",
+          "end_12": "Sat Dec 30 1899 21:00:00 GMT-0500 (Eastern Standard Time)",
           "type": "free",
           "title": ""
         }
