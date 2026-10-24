@@ -216,7 +216,10 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+      
+          # Always pull the latest main BEFORE committing
+          git pull --rebase --autostash origin main || true
+      
           git add -A
           git commit -m "Updated availability JSON" || true
-          git pull --rebase origin main || true
           git push origin main
