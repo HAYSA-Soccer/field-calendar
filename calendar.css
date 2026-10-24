@@ -359,3 +359,9 @@
     width: 100%;
   }
 }
+
+.weekly-day.today {
+  border: 2px solid #1976d2;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
+}
+
