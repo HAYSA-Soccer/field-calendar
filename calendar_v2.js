@@ -739,36 +739,45 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const prevBtn = document.getElementById("prev-day");
-  if (prevBtn && dateInput) {
-    prevBtn.addEventListener("click", () => {
-      const d = new Date(dateInput.value);
-      d.setDate(d.getDate() - 1);
-      const newDate = d.toISOString().split("T")[0];
-      dateInput.value = newDate;
-      updateDayLabel(newDate);
-      if (weeklyEl && weeklyEl.style.display !== "none") {
-        loadWeek(newDate);
-      } else {
-        loadDay(newDate);
-      }
-    });
-  }
+if (prevBtn && dateInput) {
+  prevBtn.addEventListener("click", () => {
+    const d = new Date(dateInput.value);
+    const isWeekly = weeklyEl && weeklyEl.style.display !== "none";
 
-  const nextBtn = document.getElementById("next-day");
-  if (nextBtn && dateInput) {
-    nextBtn.addEventListener("click", () => {
-      const d = new Date(dateInput.value);
-      d.setDate(d.getDate() + 1);
-      const newDate = d.toISOString().split("T")[0];
-      dateInput.value = newDate;
-      updateDayLabel(newDate);
-      if (weeklyEl && weeklyEl.style.display !== "none") {
-        loadWeek(newDate);
-      } else {
-        loadDay(newDate);
-      }
-    });
-  }
+    d.setDate(d.getDate() + (isWeekly ? -7 : -1));  // ✅ week vs day
+    const newDate = d.toISOString().split("T")[0];
+
+    dateInput.value = newDate;
+    updateDayLabel(newDate);
+
+    if (isWeekly) {
+      loadWeek(newDate);
+    } else {
+      loadDay(newDate);
+    }
+  });
+}
+
+const nextBtn = document.getElementById("next-day");
+if (nextBtn && dateInput) {
+  nextBtn.addEventListener("click", () => {
+    const d = new Date(dateInput.value);
+    const isWeekly = weeklyEl && weeklyEl.style.display !== "none";
+
+    d.setDate(d.getDate() + (isWeekly ? 7 : 1));    // ✅ week vs day
+    const newDate = d.toISOString().split("T")[0];
+
+    dateInput.value = newDate;
+    updateDayLabel(newDate);
+
+    if (isWeekly) {
+      loadWeek(newDate);
+    } else {
+      loadDay(newDate);
+    }
+  });
+}
+
 
   const todayBtn = document.getElementById("today");
   if (todayBtn && dateInput) {
