@@ -260,3 +260,58 @@
     left: 60px;
   }
 }
+
+/* ---------------------------------------------------------
+   DAY NAVIGATION BUTTONS (Previous / Today / Next)
+--------------------------------------------------------- */
+.day-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.day-nav button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+
+  /* ⭐ Big tap targets */
+  padding: 14px 22px;
+  min-width: 140px;
+
+  /* ⭐ Larger readable text */
+  font-size: 18px;
+  font-weight: 600;
+
+  /* ⭐ Better touch behavior */
+  cursor: pointer;
+  touch-action: manipulation;
+
+  /* ⭐ Prevent shrinking */
+  white-space: nowrap;
+
+  /* ⭐ Smooth hover */
+  transition: background 0.15s ease;
+}
+
+.day-nav button:hover {
+  background: #0f5cad;
+}
+
+.day-nav button:active {
+  background: #0a3f7a;
+}
+
+/* ---------------------------------------------------------
+   MOBILE BOOST
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+  .day-nav button {
+    padding: 18px 26px;
+    font-size: 20px;
+    min-width: 180px;
+  }
+}
