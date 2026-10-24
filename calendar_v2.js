@@ -67,7 +67,7 @@ function overlaps(aStart, aEnd, bStart, bEnd) {
 }
 
 /********************************************************************
- * LOAD DAY (DAILY VIEW)
+ * LOAD SINGLE DAY (DAILY VIEW)
  ********************************************************************/
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
@@ -75,8 +75,10 @@ async function loadDay(dateStr) {
   const weeklyContainer = document.getElementById("weekly-view");
 
   if (weeklyContainer) weeklyContainer.style.display = "none";
-  if (container) container.style.display = "block";
-  if (container) container.innerHTML = "";
+  if (container) {
+    container.style.display = "flex";
+    container.innerHTML = "";
+  }
 
   try {
     const res = await fetch(url);
@@ -86,7 +88,8 @@ async function loadDay(dateStr) {
     renderDayCalendar(day, {
       containerId: "calendar",
       showDayNote: true,
-      selectedComplexes: ["all"]
+      selectedComplexes: ["all"],
+      condensed: false
     });
   } catch (e) {
     if (container) {
@@ -101,7 +104,7 @@ async function loadDay(dateStr) {
  ********************************************************************/
 function buildFieldMap(day) {
   const map = {};
-  day.fields.forEach(f => map[f.id] = f);
+  (day.fields || []).forEach(f => map[f.id] = f);
   return map;
 }
 
@@ -179,13 +182,13 @@ function detectConflicts(blocks) {
 }
 
 /********************************************************************
- * BUILD AVAILABILITY — NOW PRESERVES MODE
+ * BUILD AVAILABILITY — PRESERVES MODE
  ********************************************************************/
 function buildAvailability(day, fieldMap, blocks) {
   const avail = [];
 
   const fieldsByComplex = {};
-  day.fields.forEach(f => {
+  (day.fields || []).forEach(f => {
     if (!fieldsByComplex[f.complex]) fieldsByComplex[f.complex] = [];
     fieldsByComplex[f.complex].push(f.id);
   });
@@ -221,7 +224,7 @@ function buildAvailability(day, fieldMap, blocks) {
       const freeFields = [];
 
       fields.forEach(fid => {
-        const ranges = day.availability[fid] || [];
+        const ranges = (day.availability && day.availability[fid]) || [];
 
         let matchedRange = null;
         ranges.forEach(r => {
@@ -285,13 +288,14 @@ function buildAvailability(day, fieldMap, blocks) {
 }
 
 /********************************************************************
- * RENDER DAY CALENDAR (DAILY + WEEKLY SUPPORT)
+ * RENDER DAY CALENDAR (USED BY DAILY + WEEKLY)
  ********************************************************************/
 function renderDayCalendar(day, options = {}) {
   const {
     containerId = "calendar",
     showDayNote = true,
-    selectedComplexes = ["all"]
+    selectedComplexes = ["all"],
+    condensed = false
   } = options;
 
   const dayNote = document.getElementById("day-note");
@@ -335,7 +339,7 @@ function renderDayCalendar(day, options = {}) {
   const normalize = s => s.toLowerCase().trim();
   const selectedNormalized = selectedComplexes.map(normalize);
 
-  const complexKeys = Object.keys(day.complexes);
+  const complexKeys = Object.keys(day.complexes || {});
 
   complexKeys
     .filter(complex => {
@@ -347,7 +351,8 @@ function renderDayCalendar(day, options = {}) {
         renderComplexTimeline(
           complex,
           eventsByComplex[complex] || [],
-          availability.filter(a => a.complex === complex)
+          availability.filter(a => a.complex === complex),
+          condensed
         )
       );
     });
@@ -356,7 +361,7 @@ function renderDayCalendar(day, options = {}) {
 /********************************************************************
  * UNIFIED LANE SYSTEM — EVENTS + AVAILABILITY
  ********************************************************************/
-function renderComplexTimeline(complex, events, availability) {
+function renderComplexTimeline(complex, events, availability, condensed) {
   const div = document.createElement("div");
   div.className = "complex";
 
@@ -440,11 +445,21 @@ function renderComplexTimeline(complex, events, availability) {
       block.classList.add(b.type);
       if (b.conflict) block.classList.add("conflict");
 
+      const shortTitle = condensed
+        ? b.title.replace(/Travel/gi, "Trvl").replace(/Practice/gi, "Prac")
+        : b.title;
+
       block.innerHTML = `
         <div class="block-main">
-          <div class="block-title">${b.title}</div>
+          <div class="block-title">${shortTitle}</div>
           <div class="block-fields">${b.fieldId}</div>
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
+          <div class="block-tooltip">
+            <div><strong>Team:</strong> ${b.title}</div>
+            <div><strong>Field:</strong> ${b.fieldId}</div>
+            <div><strong>Complex:</strong> ${complex}</div>
+            <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
+          </div>
         </div>
       `;
 
@@ -455,27 +470,34 @@ function renderComplexTimeline(complex, events, availability) {
     } else {
       block.classList.add("avail-block");
 
+      let label = "Available";
       if (b.modes && b.modes.length > 0) {
         if (b.modes.every(m => m === "game_only")) {
           block.classList.add("game-only");
-        }
-        if (b.modes.every(m => m === "practice_only")) {
+          label = "Available (Game Only)";
+        } else if (b.modes.every(m => m === "practice_only")) {
           block.classList.add("practice-only");
+          label = "Available (Practice Only)";
         }
       }
 
-      const label =
-        b.modes && b.modes.every(m => m === "game_only")
-          ? "Available (Game Only)"
-          : b.modes && b.modes.every(m => m === "practice_only")
-          ? "Available (Practice Only)"
-          : "Available";
+      const shortLabel = condensed ? "Avail" : label;
+
+      const fieldsText = condensed
+        ? `${b.fields.length} field(s)`
+        : b.fields.join(", ");
 
       block.innerHTML = `
         <div class="block-main">
-          <div class="block-title">${label}</div>
-          <div class="block-fields">${b.fields.join(", ")}</div>
+          <div class="block-title">${shortLabel}</div>
+          <div class="block-fields">${fieldsText}</div>
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
+          <div class="block-tooltip">
+            <div><strong>Complex:</strong> ${complex}</div>
+            <div><strong>Fields:</strong> ${b.fields.join(", ")}</div>
+            <div><strong>Modes:</strong> ${(b.modes || []).join(", ")}</div>
+            <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
+          </div>
         </div>
       `;
 
@@ -491,8 +513,12 @@ function renderComplexTimeline(complex, events, availability) {
 
       const laneWidth = 100 / totalLaneCount;
 
-      const spanStart = Math.min(...[...Array(totalLaneCount).keys()].filter(i => !overlappingEventLanes.has(i)));
-      const spanEnd = Math.max(...[...Array(totalLaneCount).keys()].filter(i => !overlappingEventLanes.has(i)));
+      const freeLanes = [...Array(totalLaneCount).keys()].filter(
+        i => !overlappingEventLanes.has(i)
+      );
+
+      const spanStart = Math.min(...freeLanes);
+      const spanEnd = Math.max(...freeLanes);
 
       block.style.left = (spanStart * laneWidth) + "%";
       block.style.width = ((spanEnd - spanStart + 1) * laneWidth) + "%";
@@ -511,7 +537,7 @@ function renderComplexTimeline(complex, events, availability) {
 }
 
 /********************************************************************
- * WEEKLY VIEW — HELPERS
+ * WEEKLY VIEW HELPERS
  ********************************************************************/
 function getMonday(dateStr) {
   const d = new Date(dateStr + "T00:00:00");
@@ -522,7 +548,7 @@ function getMonday(dateStr) {
 }
 
 /********************************************************************
- * WEEKLY VIEW — LOAD + RENDER
+ * WEEKLY VIEW — LOAD 7 DAYS SIDE BY SIDE
  ********************************************************************/
 async function loadWeek(dateStr) {
   const weeklyContainer = document.getElementById("weekly-view");
@@ -536,32 +562,8 @@ async function loadWeek(dateStr) {
   if (!weeklyContainer) return;
   weeklyContainer.innerHTML = "";
 
-  const monday = getMonday(dateStr);
-
-  try {
-    const res = await fetch("data/week/weeks.json");
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-    const weeks = await res.json();
-    const weekData = weeks[monday];
-    if (!weekData) {
-      weeklyContainer.innerHTML =
-        `<div class="update-note">No stored weekly data exists for this week.</div>`;
-      return;
-    }
-
-    renderWeek(weekData);
-  } catch (e) {
-    weeklyContainer.innerHTML =
-      `<div class="update-note">Unable to load weekly data.</div>`;
-  }
-}
-
-function renderWeek(weekData) {
-  const container = document.getElementById("weekly-view");
-  if (!container) return;
-
-  container.innerHTML = "";
+  const mondayStr = getMonday(dateStr);
+  const monday = new Date(mondayStr + "T00:00:00");
 
   const select = document.getElementById("complex-filter");
   let selectedComplexes = ["all"];
@@ -572,31 +574,99 @@ function renderWeek(weekData) {
     }
   }
 
-  Object.keys(weekData)
-    .sort()
-    .forEach(date => {
-      const dayObj = weekData[date];
+  const todayStr = new Date().toISOString().split("T")[0];
 
-      const dayDiv = document.createElement("div");
-      dayDiv.className = "weekly-day";
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    const dateKey = d.toISOString().split("T")[0];
 
-      dayDiv.innerHTML = `
-        <div class="weekly-day-header">${date}</div>
-        <div class="timeline" id="week-calendar-${date}"></div>
-      `;
+    const dayDiv = document.createElement("div");
+    dayDiv.className = "weekly-day";
 
-      container.appendChild(dayDiv);
+    const header = document.createElement("div");
+    header.className = "weekly-day-header";
 
-      renderDayCalendar(dayObj, {
-        containerId: `week-calendar-${date}`,
-        showDayNote: false,
-        selectedComplexes
-      });
+    const pretty = d.toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric"
     });
+
+    header.textContent = pretty;
+
+    if (dateKey === todayStr) {
+      dayDiv.classList.add("today");
+      const badge = document.createElement("span");
+      badge.textContent = "Today";
+      badge.style.marginLeft = "8px";
+      badge.style.fontSize = "12px";
+      badge.style.color = "#1976d2";
+      header.appendChild(badge);
+    }
+
+    dayDiv.appendChild(header);
+
+    const complexRow = document.createElement("div");
+    complexRow.className = "weekly-complex-row";
+    complexRow.style.display = "flex";
+    complexRow.style.gap = "12px";
+
+    dayDiv.appendChild(complexRow);
+    weeklyContainer.appendChild(dayDiv);
+
+    try {
+      const res = await fetch(`data/day/${dateKey}.json`);
+      if (!res.ok) {
+        complexRow.innerHTML =
+          `<div class="update-note">No data for this day.</div>`;
+        continue;
+      }
+
+      const dayData = await res.json();
+
+      const fieldMap = buildFieldMap(dayData);
+      const blocks = buildBlocks(dayData, fieldMap);
+      detectConflicts(blocks);
+      const availability = buildAvailability(dayData, fieldMap, blocks);
+
+      const eventsByComplex = {};
+      blocks.forEach(b => {
+        if (b.type === "free") return;
+        if (!eventsByComplex[b.complex]) eventsByComplex[b.complex] = [];
+        eventsByComplex[b.complex].push(b);
+      });
+
+      const showAll = selectedComplexes.includes("all");
+      const normalize = s => s.toLowerCase().trim();
+      const selectedNormalized = selectedComplexes.map(normalize);
+
+      const complexKeys = Object.keys(dayData.complexes || {});
+
+      complexKeys
+        .filter(complex => {
+          if (showAll) return true;
+          return selectedNormalized.includes(normalize(complex));
+        })
+        .forEach(complex => {
+          const complexTimeline = renderComplexTimeline(
+            complex,
+            eventsByComplex[complex] || [],
+            availability.filter(a => a.complex === complex),
+            true // condensed in weekly view
+          );
+          complexRow.appendChild(complexTimeline);
+        });
+
+    } catch (e) {
+      complexRow.innerHTML =
+        `<div class="update-note">Unable to load data for this day.</div>`;
+    }
+  }
 }
 
 /********************************************************************
- * COMPLEX FILTER — DYNAMIC MULTI-SELECT
+ * COMPLEX FILTER — MULTI-SELECT
  ********************************************************************/
 async function initComplexFilter() {
   const select = document.getElementById("complex-filter");
@@ -633,7 +703,7 @@ async function initComplexFilter() {
 }
 
 /********************************************************************
- * INITIALIZE — WEEKLY VIEW AS DEFAULT
+ * INITIALIZE — WEEKLY DEFAULT + TOGGLE
  ********************************************************************/
 document.addEventListener("DOMContentLoaded", async () => {
   await initComplexFilter();
@@ -646,7 +716,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     updateDayLabel(todayStr);
   }
 
-  // ⭐ Default to WEEKLY VIEW
+  // Default to WEEKLY view
+  const calendarEl = document.getElementById("calendar");
+  const weeklyEl = document.getElementById("weekly-view");
+  if (calendarEl) calendarEl.style.display = "none";
+  if (weeklyEl) weeklyEl.style.display = "flex";
   await loadWeek(todayStr);
 
   const loadBtn = document.getElementById("load-date");
@@ -655,7 +729,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       const d = dateInput.value;
       if (d) {
         updateDayLabel(d);
-        loadWeek(d); // Go button drives weekly view
+        if (weeklyEl && weeklyEl.style.display !== "none") {
+          loadWeek(d);
+        } else {
+          loadDay(d);
+        }
       }
     });
   }
@@ -668,7 +746,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
       updateDayLabel(newDate);
-      loadWeek(newDate);
+      if (weeklyEl && weeklyEl.style.display !== "none") {
+        loadWeek(newDate);
+      } else {
+        loadDay(newDate);
+      }
     });
   }
 
@@ -680,7 +762,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
       updateDayLabel(newDate);
-      loadWeek(newDate);
+      if (weeklyEl && weeklyEl.style.display !== "none") {
+        loadWeek(newDate);
+      } else {
+        loadDay(newDate);
+      }
     });
   }
 
@@ -690,14 +776,31 @@ document.addEventListener("DOMContentLoaded", async () => {
       const today = new Date().toISOString().split("T")[0];
       dateInput.value = today;
       updateDayLabel(today);
-      loadWeek(today);
+      if (weeklyEl && weeklyEl.style.display !== "none") {
+        loadWeek(today);
+      } else {
+        loadDay(today);
+      }
     });
   }
 
-  const showWeekBtn = document.getElementById("show-week");
-  if (showWeekBtn && dateInput) {
-    showWeekBtn.addEventListener("click", () => {
-      const d = dateInput.value || new Date().toISOString().split("T")[0];
+  const toggleDaily = document.getElementById("toggle-daily");
+  const toggleWeekly = document.getElementById("toggle-weekly");
+
+  if (toggleDaily && toggleWeekly && dateInput) {
+    toggleDaily.addEventListener("click", () => {
+      if (calendarEl) calendarEl.style.display = "flex";
+      if (weeklyEl) weeklyEl.style.display = "none";
+      const d = dateInput.value || todayStr;
+      updateDayLabel(d);
+      loadDay(d);
+    });
+
+    toggleWeekly.addEventListener("click", () => {
+      if (calendarEl) calendarEl.style.display = "none";
+      if (weeklyEl) weeklyEl.style.display = "flex";
+      const d = dateInput.value || todayStr;
+      updateDayLabel(d);
       loadWeek(d);
     });
   }
@@ -705,8 +808,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const complexSelect = document.getElementById("complex-filter");
   if (complexSelect && dateInput) {
     complexSelect.addEventListener("change", () => {
-      const d = dateInput.value || new Date().toISOString().split("T")[0];
-      loadWeek(d);
+      const d = dateInput.value || todayStr;
+      if (weeklyEl && weeklyEl.style.display !== "none") {
+        loadWeek(d);
+      }
     });
   }
 });
