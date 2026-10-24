@@ -1,7 +1,7 @@
 {
   "date": "2026-10-22",
   "updated": true,
-  "last_successful_update": "October 23, 2026 at 8:03 PM",
+  "last_successful_update": "October 23, 2026 at 11:20 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -188,11 +188,8 @@
     "H-Su2A": [
       {
         "start": "16:00",
-        "end": "16:30"
-      },
-      {
-        "start": "17:30",
-        "end": "19:00"
+        "end": "19:00",
+        "mode": "practice_only"
       }
     ],
     "H-Su2B": [
@@ -429,9 +426,9 @@
     {
       "field": "H-Su2A",
       "start": "16:00",
-      "end": "16:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "4:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
@@ -549,15 +546,6 @@
       "coach": "",
       "grade": "3/4",
       "source": "ICS"
-    },
-    {
-      "field": "H-Su2A",
-      "start": "17:30",
-      "end": "19:00",
-      "start_12": "5:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
     },
     {
       "field": "H-SJ4A",
