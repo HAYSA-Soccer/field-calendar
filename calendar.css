@@ -19,7 +19,7 @@
 }
 
 /* ---------------------------------------------------------
-   COMPLEXES SIDE-BY-SIDE
+   DAILY VIEW CONTAINER
 --------------------------------------------------------- */
 #calendar {
   display: flex;
@@ -30,7 +30,36 @@
 }
 
 /* ---------------------------------------------------------
-   COMPLEX COLUMN
+   WEEKLY VIEW CONTAINER (NEW)
+--------------------------------------------------------- */
+#weekly-view {
+  display: none; /* hidden until toggled on */
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+/* Each day column in weekly mode */
+.weekly-day {
+  flex: 1;
+  min-width: 420px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.weekly-day-header {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------------------------------
+   COMPLEX COLUMN (Daily)
 --------------------------------------------------------- */
 .complex {
   flex: 1;
@@ -72,24 +101,13 @@
 }
 
 /* ---------------------------------------------------------
-   EVENTS TRACK (ONLY TRACK NOW)
+   EVENTS TRACK
 --------------------------------------------------------- */
 .events-track {
   position: absolute;
   left: 80px;
   right: 0;
   top: 0;
-  height: 100%;
-}
-
-/* ---------------------------------------------------------
-   BLOCK CONTAINER (NEW)
-   Ensures blocks share width evenly
---------------------------------------------------------- */
-.block-row {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -103,15 +121,12 @@
   padding: 6px 8px;
   box-sizing: border-box;
 
-  /* ⭐ Adaptive text sizing */
   font-size: clamp(10px, 1.2vw, 14px);
   line-height: 1.25;
 
-  /* ⭐ Allow wrapping, but prevent overflow */
   white-space: normal;
   overflow-wrap: break-word;
 
-  /* ⭐ Multi-line clamp for readability */
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -134,10 +149,8 @@
   border-color: #4caf50;
   padding: 8px 10px;
 
-  /* ⭐ Adaptive text sizing */
   font-size: clamp(10px, 1.2vw, 14px);
 
-  /* ⭐ Multi-line clamp */
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -240,7 +253,78 @@
 }
 
 /* ---------------------------------------------------------
-   MOBILE LAYOUT
+   VIEW TOGGLE BUTTONS (NEW)
+--------------------------------------------------------- */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.view-toggle button {
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.view-toggle button:hover {
+  background: #333;
+}
+
+.view-toggle button:active {
+  background: #222;
+}
+
+/* ---------------------------------------------------------
+   DAY NAVIGATION BUTTONS
+--------------------------------------------------------- */
+.day-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.day-nav button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+
+  padding: 14px 22px;
+  min-width: 140px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  touch-action: manipulation;
+
+  white-space: nowrap;
+
+  transition: background 0.15s ease;
+}
+
+.day-nav button:hover {
+  background: #0f5cad;
+}
+
+.day-nav button:active {
+  background: #0a3f7a;
+}
+
+/* ---------------------------------------------------------
+   MOBILE BOOST
 --------------------------------------------------------- */
 @media (max-width: 768px) {
   #calendar {
@@ -259,59 +343,19 @@
   .events-track {
     left: 60px;
   }
-}
 
-/* ---------------------------------------------------------
-   DAY NAVIGATION BUTTONS (Previous / Today / Next)
---------------------------------------------------------- */
-.day-nav {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.day-nav button {
-  background: #1976d2;
-  color: white;
-  border: none;
-  border-radius: 10px;
-
-  /* ⭐ Big tap targets */
-  padding: 14px 22px;
-  min-width: 140px;
-
-  /* ⭐ Larger readable text */
-  font-size: 18px;
-  font-weight: 600;
-
-  /* ⭐ Better touch behavior */
-  cursor: pointer;
-  touch-action: manipulation;
-
-  /* ⭐ Prevent shrinking */
-  white-space: nowrap;
-
-  /* ⭐ Smooth hover */
-  transition: background 0.15s ease;
-}
-
-.day-nav button:hover {
-  background: #0f5cad;
-}
-
-.day-nav button:active {
-  background: #0a3f7a;
-}
-
-/* ---------------------------------------------------------
-   MOBILE BOOST
---------------------------------------------------------- */
-@media (max-width: 768px) {
   .day-nav button {
     padding: 18px 26px;
     font-size: 20px;
     min-width: 180px;
+  }
+
+  #weekly-view {
+    flex-direction: column;
+  }
+
+  .weekly-day {
+    min-width: auto;
+    width: 100%;
   }
 }
