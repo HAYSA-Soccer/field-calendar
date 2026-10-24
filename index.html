@@ -38,24 +38,19 @@
     <button id="load-date" class="day-nav-btn">Go</button>
   </div>
 
-  <!-- ⭐ BIG NAV BUTTONS -->
-  <div id="nav-buttons" class="day-nav">
-    <button id="prev-day" class="day-nav-btn">← Previous Day</button>
-    <button id="today" class="day-nav-btn">Today</button>
-    <button id="next-day" class="day-nav-btn">Next Day →</button>
+  <!-- VIEW TOGGLE (Daily / Weekly) -->
+  <div id="view-toggle" class="view-toggle">
+    <button id="toggle-daily">Daily View</button>
+    <button id="toggle-weekly">Weekly View</button>
   </div>
 
-  <!-- ⭐ WEEKLY VIEW CONTROLS -->
-  <!-- ⭐ WEEKLY VIEW CONTROLS -->
+  <!-- COMPLEX FILTER (Weekly Only) -->
   <div id="weekly-controls" class="weekly-controls" style="margin-top:20px;">
-    <button id="show-week" class="day-nav-btn">Weekly View</button>
-  
-    <!-- ⭐ Multi-select complex filter -->
+    <label style="font-weight:600;">Filter Complexes:</label>
     <select id="complex-filter" class="complex-filter" multiple size="4">
-      <!-- Options will be inserted dynamically -->
+      <!-- Populated dynamically -->
     </select>
   </div>
-
 
   <!-- DAILY LABEL -->
   <div id="day-label" class="day-label" style="font-size:18px; font-weight:600; margin-bottom:10px;"></div>
@@ -65,65 +60,10 @@
   <div id="calendar"></div>
 
   <!-- WEEKLY VIEW -->
-  <div id="weekly-view" class="weekly-view"></div>
+  <div id="weekly-view"></div>
 
-  <!-- IMPORTANT: bump version to force reload -->
+  <!-- JS -->
   <script src="calendar_v2.js?v=20261024"></script>
-
-  <script>
-    loadGlobalRefreshBanner();
-
-    const dateInput = document.getElementById("calendar-date");
-    const todayStr = new Date().toISOString().split("T")[0];
-    dateInput.value = todayStr;
-
-    updateDayLabel(todayStr);
-    loadDay(todayStr);
-
-    document.getElementById("load-date").addEventListener("click", () => {
-      const d = dateInput.value;
-      if (d) {
-        updateDayLabel(d);
-        loadDay(d);
-      }
-    });
-
-    document.getElementById("prev-day").addEventListener("click", () => {
-      const d = new Date(dateInput.value);
-      d.setDate(d.getDate() - 1);
-      const newDate = d.toISOString().split("T")[0];
-      dateInput.value = newDate;
-      updateDayLabel(newDate);
-      loadDay(newDate);
-    });
-
-    document.getElementById("next-day").addEventListener("click", () => {
-      const d = new Date(dateInput.value);
-      d.setDate(d.getDate() + 1);
-      const newDate = d.toISOString().split("T")[0];
-      dateInput.value = newDate;
-      updateDayLabel(newDate);
-      loadDay(newDate);
-    });
-
-    document.getElementById("today").addEventListener("click", () => {
-      const today = new Date().toISOString().split("T")[0];
-      dateInput.value = today;
-      updateDayLabel(today);
-      loadDay(today);
-    });
-
-    /* ⭐ WEEKLY VIEW HOOKS (JS logic added later) */
-    document.getElementById("show-week").addEventListener("click", () => {
-      const d = dateInput.value;
-      loadWeek(d);
-    });
-
-    document.getElementById("complex-filter").addEventListener("change", () => {
-      const d = dateInput.value;
-      loadWeek(d);
-    });
-  </script>
 
 </body>
 </html>
