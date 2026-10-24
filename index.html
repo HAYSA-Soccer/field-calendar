@@ -46,17 +46,16 @@
   </div>
 
   <!-- ⭐ WEEKLY VIEW CONTROLS -->
+  <!-- ⭐ WEEKLY VIEW CONTROLS -->
   <div id="weekly-controls" class="weekly-controls" style="margin-top:20px;">
     <button id="show-week" class="day-nav-btn">Weekly View</button>
-
-    <select id="complex-filter" class="complex-filter">
-      <option value="all">All Complexes</option>
-      <option value="Butler">Butler</option>
-      <option value="Brookville">Brookville</option>
-      <option value="Sumner/SE">Sumner/SE</option>
-      <option value="Turf">Turf</option>
+  
+    <!-- ⭐ Multi-select complex filter -->
+    <select id="complex-filter" class="complex-filter" multiple size="4">
+      <!-- Options will be inserted dynamically -->
     </select>
   </div>
+
 
   <!-- DAILY LABEL -->
   <div id="day-label" class="day-label" style="font-size:18px; font-weight:600; margin-bottom:10px;"></div>
