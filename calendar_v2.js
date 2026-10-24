@@ -72,7 +72,11 @@ function overlaps(aStart, aEnd, bStart, bEnd) {
 async function loadDay(dateStr) {
   const url = `data/day/${dateStr}.json`;
   const container = document.getElementById("calendar");
-  container.innerHTML = "";
+  const weeklyContainer = document.getElementById("weekly-view");
+
+  if (weeklyContainer) weeklyContainer.style.display = "none";
+  if (container) container.style.display = "block";
+  if (container) container.innerHTML = "";
 
   try {
     const res = await fetch(url);
@@ -85,8 +89,10 @@ async function loadDay(dateStr) {
       selectedComplexes: ["all"]
     });
   } catch (e) {
-    container.innerHTML =
-      `<div class="update-note">No stored data exists for this date.</div>`;
+    if (container) {
+      container.innerHTML =
+        `<div class="update-note">No stored data exists for this date.</div>`;
+    }
   }
 }
 
@@ -290,7 +296,6 @@ function renderDayCalendar(day, options = {}) {
 
   const dayNote = document.getElementById("day-note");
   const container = document.getElementById(containerId);
-
   if (!container) return;
 
   if (showDayNote && dayNote) {
@@ -327,10 +332,16 @@ function renderDayCalendar(day, options = {}) {
   });
 
   const showAll = selectedComplexes.includes("all");
+  const normalize = s => s.toLowerCase().trim();
+  const selectedNormalized = selectedComplexes.map(normalize);
+
   const complexKeys = Object.keys(day.complexes);
 
   complexKeys
-    .filter(complex => showAll || selectedComplexes.includes(complex))
+    .filter(complex => {
+      if (showAll) return true;
+      return selectedNormalized.includes(normalize(complex));
+    })
     .forEach(complex => {
       container.appendChild(
         renderComplexTimeline(
@@ -515,8 +526,14 @@ function getMonday(dateStr) {
  ********************************************************************/
 async function loadWeek(dateStr) {
   const weeklyContainer = document.getElementById("weekly-view");
-  if (!weeklyContainer) return;
+  const dailyContainer = document.getElementById("calendar");
+  const dayNote = document.getElementById("day-note");
 
+  if (dailyContainer) dailyContainer.style.display = "none";
+  if (weeklyContainer) weeklyContainer.style.display = "flex";
+  if (dayNote) dayNote.innerHTML = "";
+
+  if (!weeklyContainer) return;
   weeklyContainer.innerHTML = "";
 
   const monday = getMonday(dateStr);
@@ -590,7 +607,8 @@ async function initComplexFilter() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const data = await res.json();
-    const complexes = data.complexes || [];
+    const complexesObj = data.complexes || {};
+    const complexNames = Object.keys(complexesObj);
 
     select.innerHTML = "";
 
@@ -599,14 +617,13 @@ async function initComplexFilter() {
     allOption.textContent = "All Complexes";
     select.appendChild(allOption);
 
-    complexes.forEach(c => {
+    complexNames.forEach(name => {
       const opt = document.createElement("option");
-      opt.value = c.name;
-      opt.textContent = c.name;
+      opt.value = name;
+      opt.textContent = name;
       select.appendChild(opt);
     });
   } catch (e) {
-    // If fields.json fails, fall back to a simple "All" option
     select.innerHTML = "";
     const allOption = document.createElement("option");
     allOption.value = "all";
@@ -616,20 +633,21 @@ async function initComplexFilter() {
 }
 
 /********************************************************************
- * INITIALIZE
+ * INITIALIZE — WEEKLY VIEW AS DEFAULT
  ********************************************************************/
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  await initComplexFilter();
   loadGlobalRefreshBanner();
-  initComplexFilter();
 
   const dateInput = document.getElementById("calendar-date");
+  const todayStr = new Date().toISOString().split("T")[0];
   if (dateInput) {
-    const todayStr = new Date().toISOString().split("T")[0];
     dateInput.value = todayStr;
-
     updateDayLabel(todayStr);
-    loadDay(todayStr);
   }
+
+  // ⭐ Default to WEEKLY VIEW
+  await loadWeek(todayStr);
 
   const loadBtn = document.getElementById("load-date");
   if (loadBtn && dateInput) {
@@ -637,7 +655,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const d = dateInput.value;
       if (d) {
         updateDayLabel(d);
-        loadDay(d);
+        loadWeek(d); // Go button drives weekly view
       }
     });
   }
@@ -650,7 +668,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
       updateDayLabel(newDate);
-      loadDay(newDate);
+      loadWeek(newDate);
     });
   }
 
@@ -662,7 +680,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const newDate = d.toISOString().split("T")[0];
       dateInput.value = newDate;
       updateDayLabel(newDate);
-      loadDay(newDate);
+      loadWeek(newDate);
     });
   }
 
@@ -672,7 +690,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const today = new Date().toISOString().split("T")[0];
       dateInput.value = today;
       updateDayLabel(today);
-      loadDay(today);
+      loadWeek(today);
     });
   }
 
