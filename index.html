@@ -45,10 +45,28 @@
     <button id="next-day" class="day-nav-btn">Next Day →</button>
   </div>
 
+  <!-- ⭐ WEEKLY VIEW CONTROLS -->
+  <div id="weekly-controls" class="weekly-controls" style="margin-top:20px;">
+    <button id="show-week" class="day-nav-btn">Weekly View</button>
+
+    <select id="complex-filter" class="complex-filter">
+      <option value="all">All Complexes</option>
+      <option value="Butler">Butler</option>
+      <option value="Brookville">Brookville</option>
+      <option value="Sumner/SE">Sumner/SE</option>
+      <option value="Turf">Turf</option>
+    </select>
+  </div>
+
+  <!-- DAILY LABEL -->
   <div id="day-label" class="day-label" style="font-size:18px; font-weight:600; margin-bottom:10px;"></div>
   <div id="day-note"></div>
 
+  <!-- DAILY VIEW -->
   <div id="calendar"></div>
+
+  <!-- WEEKLY VIEW -->
+  <div id="weekly-view" class="weekly-view"></div>
 
   <!-- IMPORTANT: bump version to force reload -->
   <script src="calendar_v2.js?v=20261024"></script>
@@ -94,6 +112,17 @@
       dateInput.value = today;
       updateDayLabel(today);
       loadDay(today);
+    });
+
+    /* ⭐ WEEKLY VIEW HOOKS (JS logic added later) */
+    document.getElementById("show-week").addEventListener("click", () => {
+      const d = dateInput.value;
+      loadWeek(d);
+    });
+
+    document.getElementById("complex-filter").addEventListener("change", () => {
+      const d = dateInput.value;
+      loadWeek(d);
     });
   </script>
 
