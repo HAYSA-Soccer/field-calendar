@@ -1,7 +1,7 @@
 {
   "date": "2026-11-07",
   "updated": true,
-  "last_successful_update": "October 25, 2026 at 6:53 AM",
+  "last_successful_update": "October 25, 2026 at 10:31 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -214,6 +214,10 @@
       },
       {
         "start": "14:00",
+        "end": "15:00"
+      },
+      {
+        "start": "15:00",
         "end": "19:00"
       }
     ],
@@ -418,7 +422,18 @@
       }
     ]
   },
-  "blocks": {},
+  "blocks": {
+    "H-SJ3": [
+      {
+        "date": "2026-11-07",
+        "start": "15:00",
+        "end": "15:00",
+        "field": "H-SJ3",
+        "reason": "Ball Reschedule Hold",
+        "type": "game"
+      }
+    ]
+  },
   "merged": [
     {
       "field": "H-Su1",
@@ -653,9 +668,9 @@
     {
       "field": "H-SJ3",
       "start": "14:00",
-      "end": "19:00",
+      "end": "15:00",
       "start_12": "2:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "3:00 PM",
       "type": "free",
       "title": ""
     },
@@ -680,6 +695,24 @@
       "end_12": "3:30 PM",
       "type": "free",
       "title": ""
+    },
+    {
+      "field": "H-SJ3",
+      "start": "15:00",
+      "end": "19:00",
+      "start_12": "3:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3",
+      "start": "15:00",
+      "end": "15:00",
+      "start_12": "3:00 PM",
+      "end_12": "3:00 PM",
+      "type": "game",
+      "title": "Ball Reschedule Hold"
     },
     {
       "field": "H-HST",
