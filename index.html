@@ -32,18 +32,23 @@
     <button id="load-date" class="day-nav-btn">Go</button>
   </div>
 
-  <!-- VIEW TOGGLE (Daily / Weekly) -->
+  <!-- NAV BUTTONS -->
+  <div id="nav-buttons" class="day-nav">
+    <button id="prev-day" class="day-nav-btn">← Previous</button>
+    <button id="today" class="day-nav-btn">Today</button>
+    <button id="next-day" class="day-nav-btn">Next →</button>
+  </div>
+
+  <!-- VIEW TOGGLE -->
   <div id="view-toggle" class="view-toggle">
     <button id="toggle-daily">Daily View</button>
     <button id="toggle-weekly">Weekly View</button>
   </div>
 
-  <!-- COMPLEX FILTER (Weekly Only) -->
+  <!-- COMPLEX FILTER -->
   <div id="weekly-controls" class="weekly-controls" style="margin-top:20px;">
     <label style="font-weight:600;">Filter Complexes:</label>
-    <select id="complex-filter" class="complex-filter" multiple size="4">
-      <!-- Populated dynamically -->
-    </select>
+    <select id="complex-filter" class="complex-filter" multiple size="4"></select>
   </div>
 
   <!-- DAILY LABEL -->
@@ -52,6 +57,9 @@
 
   <!-- DAILY VIEW -->
   <div id="calendar"></div>
+
+  <!-- WEEK LABEL -->
+  <div id="week-label" class="week-label"></div>
 
   <!-- WEEKLY VIEW -->
   <div id="weekly-view"></div>
