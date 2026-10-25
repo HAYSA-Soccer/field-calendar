@@ -3,7 +3,7 @@
   "2026-11-04": {
     "date": "2026-11-04",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:31 AM",
+    "last_successful_update": "October 25, 2026 at 1:51 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -921,7 +921,7 @@
   "2026-11-10": {
     "date": "2026-11-10",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:33 AM",
+    "last_successful_update": "October 25, 2026 at 1:53 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -1358,7 +1358,7 @@
   "2026-11-03": {
     "date": "2026-11-03",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:30 AM",
+    "last_successful_update": "October 25, 2026 at 1:50 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -2199,7 +2199,7 @@
   "2026-10-15": {
     "date": "2026-10-15",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:24 AM",
+    "last_successful_update": "October 25, 2026 at 1:44 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -3198,7 +3198,7 @@
   "2026-10-17": {
     "date": "2026-10-17",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:25 AM",
+    "last_successful_update": "October 25, 2026 at 1:45 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -4837,7 +4837,7 @@
   "2026-10-05": {
     "date": "2026-10-05",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:20 AM",
+    "last_successful_update": "October 25, 2026 at 1:40 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -5659,7 +5659,7 @@
   "2026-10-23": {
     "date": "2026-10-23",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:27 AM",
+    "last_successful_update": "October 25, 2026 at 1:47 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -6471,7 +6471,7 @@
   "2026-10-28": {
     "date": "2026-10-28",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:28 AM",
+    "last_successful_update": "October 25, 2026 at 1:48 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -7402,7 +7402,7 @@
   "2026-11-11": {
     "date": "2026-11-11",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:33 AM",
+    "last_successful_update": "October 25, 2026 at 1:53 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -7839,7 +7839,7 @@
   "2026-11-08": {
     "date": "2026-11-08",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:32 AM",
+    "last_successful_update": "October 25, 2026 at 1:52 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -8005,7 +8005,7 @@
   "2026-10-14": {
     "date": "2026-10-14",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:24 AM",
+    "last_successful_update": "October 25, 2026 at 1:43 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -8936,7 +8936,7 @@
   "2026-10-26": {
     "date": "2026-10-26",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:28 AM",
+    "last_successful_update": "October 25, 2026 at 1:48 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9758,7 +9758,7 @@
   "2026-10-02": {
     "date": "2026-10-02",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:19 AM",
+    "last_successful_update": "October 25, 2026 at 1:39 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -10570,7 +10570,7 @@
   "2026-10-21": {
     "date": "2026-10-21",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:26 AM",
+    "last_successful_update": "October 25, 2026 at 1:46 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -10757,8 +10757,11 @@
       "H-Su2": [
         {
           "start": "16:00",
-          "end": "19:00",
-          "mode": "both"
+          "end": "17:00"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00"
         }
       ],
       "H-Su2A": [
@@ -10998,9 +11001,9 @@
       {
         "field": "H-Su2",
         "start": "16:00",
-        "end": "19:00",
+        "end": "17:00",
         "start_12": "4:00 PM",
-        "end_12": "7:00 PM",
+        "end_12": "5:00 PM",
         "type": "free",
         "title": ""
       },
@@ -11206,6 +11209,15 @@
       },
       {
         "field": "H-Su1B",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-Su2",
         "start": "18:00",
         "end": "19:00",
         "start_12": "6:00 PM",
@@ -11553,7 +11565,7 @@
   "2026-10-03": {
     "date": "2026-10-03",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:20 AM",
+    "last_successful_update": "October 25, 2026 at 1:39 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -13059,7 +13071,7 @@
   "2026-10-19": {
     "date": "2026-10-19",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:25 AM",
+    "last_successful_update": "October 25, 2026 at 1:45 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -13926,7 +13938,7 @@
   "2026-10-07": {
     "date": "2026-10-07",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:21 AM",
+    "last_successful_update": "October 25, 2026 at 1:41 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -14857,7 +14869,7 @@
   "2026-10-10": {
     "date": "2026-10-10",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:22 AM",
+    "last_successful_update": "October 25, 2026 at 1:42 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -15363,7 +15375,7 @@
   "2026-10-27": {
     "date": "2026-10-27",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:28 AM",
+    "last_successful_update": "October 25, 2026 at 1:48 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -16203,7 +16215,7 @@
   "2026-11-05": {
     "date": "2026-11-05",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:31 AM",
+    "last_successful_update": "October 25, 2026 at 1:51 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -17718,7 +17730,7 @@
   "2026-10-20": {
     "date": "2026-10-20",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:25 AM",
+    "last_successful_update": "October 25, 2026 at 1:46 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -18558,7 +18570,7 @@
   "2026-10-18": {
     "date": "2026-10-18",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:25 AM",
+    "last_successful_update": "October 25, 2026 at 1:45 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -18724,7 +18736,7 @@
   "2026-10-22": {
     "date": "2026-10-22",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:26 AM",
+    "last_successful_update": "October 25, 2026 at 1:46 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -19663,7 +19675,7 @@
   "2026-11-09": {
     "date": "2026-11-09",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:32 AM",
+    "last_successful_update": "October 25, 2026 at 1:52 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -20100,7 +20112,7 @@
   "2026-11-01": {
     "date": "2026-11-01",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:30 AM",
+    "last_successful_update": "October 25, 2026 at 1:50 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -20266,7 +20278,7 @@
   "2026-10-06": {
     "date": "2026-10-06",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:21 AM",
+    "last_successful_update": "October 25, 2026 at 1:40 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21106,7 +21118,7 @@
   "2026-10-12": {
     "date": "2026-10-12",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:23 AM",
+    "last_successful_update": "October 25, 2026 at 1:43 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21588,7 +21600,7 @@
   "2026-11-13": {
     "date": "2026-11-13",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:34 AM",
+    "last_successful_update": "October 25, 2026 at 1:54 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21962,7 +21974,7 @@
   "2026-10-13": {
     "date": "2026-10-13",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:23 AM",
+    "last_successful_update": "October 25, 2026 at 1:43 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -22802,7 +22814,7 @@
   "2026-11-16": {
     "date": "2026-11-16",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:35 AM",
+    "last_successful_update": "October 25, 2026 at 1:55 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -23239,7 +23251,7 @@
   "2026-10-30": {
     "date": "2026-10-30",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:29 AM",
+    "last_successful_update": "October 25, 2026 at 1:49 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -24051,7 +24063,7 @@
   "2026-11-15": {
     "date": "2026-11-15",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:35 AM",
+    "last_successful_update": "October 25, 2026 at 1:54 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -24217,7 +24229,7 @@
   "2026-11-06": {
     "date": "2026-11-06",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:31 AM",
+    "last_successful_update": "October 25, 2026 at 1:52 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -24937,7 +24949,7 @@
   "2026-09-30": {
     "date": "2026-09-30",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:19 AM",
+    "last_successful_update": "October 25, 2026 at 1:38 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -25429,7 +25441,7 @@
   "2026-11-14": {
     "date": "2026-11-14",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:34 AM",
+    "last_successful_update": "October 25, 2026 at 1:54 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -25878,7 +25890,7 @@
   "2026-10-16": {
     "date": "2026-10-16",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:24 AM",
+    "last_successful_update": "October 25, 2026 at 1:44 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -26252,7 +26264,7 @@
   "2026-10-31": {
     "date": "2026-10-31",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:29 AM",
+    "last_successful_update": "October 25, 2026 at 1:50 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -27758,7 +27770,7 @@
   "2026-10-24": {
     "date": "2026-10-24",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:27 AM",
+    "last_successful_update": "October 25, 2026 at 1:47 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -28985,7 +28997,7 @@
   "2026-11-02": {
     "date": "2026-11-02",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:30 AM",
+    "last_successful_update": "October 25, 2026 at 1:50 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -29807,7 +29819,7 @@
   "2026-10-25": {
     "date": "2026-10-25",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:27 AM",
+    "last_successful_update": "October 25, 2026 at 1:47 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -30530,7 +30542,7 @@
   "2026-10-08": {
     "date": "2026-10-08",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:22 AM",
+    "last_successful_update": "October 25, 2026 at 1:41 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -31501,7 +31513,7 @@
   "2026-11-12": {
     "date": "2026-11-12",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:34 AM",
+    "last_successful_update": "October 25, 2026 at 1:54 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -31938,7 +31950,7 @@
   "2026-10-04": {
     "date": "2026-10-04",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:20 AM",
+    "last_successful_update": "October 25, 2026 at 1:40 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -32104,7 +32116,7 @@
   "2026-10-29": {
     "date": "2026-10-29",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:29 AM",
+    "last_successful_update": "October 25, 2026 at 1:49 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -33103,7 +33115,7 @@
   "2026-10-01": {
     "date": "2026-10-01",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:19 AM",
+    "last_successful_update": "October 25, 2026 at 1:39 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34128,7 +34140,7 @@
   "2026-11-07": {
     "date": "2026-11-07",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:32 AM",
+    "last_successful_update": "October 25, 2026 at 1:52 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -35083,7 +35095,7 @@
   "2026-10-09": {
     "date": "2026-10-09",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:22 AM",
+    "last_successful_update": "October 25, 2026 at 1:42 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -35895,7 +35907,7 @@
   "2026-10-11": {
     "date": "2026-10-11",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 1:22 AM",
+    "last_successful_update": "October 25, 2026 at 1:42 AM",
     "complexes": {
       "TURF": [
         "H-HST",

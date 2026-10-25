@@ -1,7 +1,7 @@
 {
   "date": "2026-10-21",
   "updated": true,
-  "last_successful_update": "October 25, 2026 at 1:26 AM",
+  "last_successful_update": "October 25, 2026 at 1:46 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -188,8 +188,11 @@
     "H-Su2": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su2A": [
@@ -429,9 +432,9 @@
     {
       "field": "H-Su2",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:00",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:00 PM",
       "type": "free",
       "title": ""
     },
@@ -637,6 +640,15 @@
     },
     {
       "field": "H-Su1B",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
       "start": "18:00",
       "end": "19:00",
       "start_12": "6:00 PM",
