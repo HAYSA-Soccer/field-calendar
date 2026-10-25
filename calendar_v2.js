@@ -352,7 +352,8 @@ function renderDayCalendar(day, options = {}) {
           complex,
           eventsByComplex[complex] || [],
           availability.filter(a => a.complex === complex),
-          condensed
+          condensed,
+          day
         )
       );
     });
@@ -361,7 +362,7 @@ function renderDayCalendar(day, options = {}) {
 /********************************************************************
  * UNIFIED LANE SYSTEM — EVENTS + AVAILABILITY
  ********************************************************************/
-function renderComplexTimeline(complex, events, availability, condensed) {
+function renderComplexTimeline(complex, events, availability, condensed, day) {
   const div = document.createElement("div");
   div.className = "complex";
 
@@ -387,6 +388,24 @@ function renderComplexTimeline(complex, events, availability, condensed) {
   const track = document.createElement("div");
   track.className = "events-track";
   track.style.height = ((DAY_END - DAY_START) * PX_PER_MIN) + "px";
+
+  // Sunset indicator (daily + weekly)
+  if (day && day.sunset) {
+    const sunsetMin = parseTime(day.sunset);
+    const sunsetTop = (sunsetMin - DAY_START) * PX_PER_MIN;
+
+    const sunsetLine = document.createElement("div");
+    sunsetLine.className = "sunset-line";
+    sunsetLine.style.top = `${sunsetTop}px`;
+
+    const sunsetLabel = document.createElement("div");
+    sunsetLabel.className = "sunset-label";
+    sunsetLabel.textContent = "Sunset";
+    sunsetLabel.style.top = `${sunsetTop - 12}px`;
+
+    track.appendChild(sunsetLine);
+    track.appendChild(sunsetLabel);
+  }
 
   const blocks = [];
 
@@ -470,18 +489,7 @@ function renderComplexTimeline(complex, events, availability, condensed) {
     } else {
       block.classList.add("avail-block");
 
-      let label = "Available";
-      if (b.modes && b.modes.length > 0) {
-        if (b.modes.every(m => m === "game_only")) {
-          block.classList.add("game-only");
-          label = "Available (Game Only)";
-        } else if (b.modes.every(m => m === "practice_only")) {
-          block.classList.add("practice-only");
-          label = "Available (Practice Only)";
-        }
-      }
-
-      const shortLabel = condensed ? "Avail" : label;
+      const label = condensed ? "Avail" : "Available";
 
       const fieldsText = condensed
         ? `${b.fields.length} field(s)`
@@ -489,13 +497,12 @@ function renderComplexTimeline(complex, events, availability, condensed) {
 
       block.innerHTML = `
         <div class="block-main">
-          <div class="block-title">${shortLabel}</div>
+          <div class="block-title">${label}</div>
           <div class="block-fields">${fieldsText}</div>
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
           <div class="block-tooltip">
             <div><strong>Complex:</strong> ${complex}</div>
             <div><strong>Fields:</strong> ${b.fields.join(", ")}</div>
-            <div><strong>Modes:</strong> ${(b.modes || []).join(", ")}</div>
             <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
           </div>
         </div>
@@ -574,7 +581,7 @@ async function loadWeek(dateStr) {
     }
   }
 
-  const todayStr = new Date().toISOString().split("T")[0];
+  const todayStr = dateStr; // highlight week anchored to loaded date
 
   for (let i = 0; i < 7; i++) {
     const d = new Date(monday);
@@ -653,7 +660,8 @@ async function loadWeek(dateStr) {
             complex,
             eventsByComplex[complex] || [],
             availability.filter(a => a.complex === complex),
-            true // condensed in weekly view
+            true, // condensed in weekly view
+            dayData
           );
           complexRow.appendChild(complexTimeline);
         });
@@ -716,9 +724,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     updateDayLabel(todayStr);
   }
 
-  // Default to WEEKLY view
   const calendarEl = document.getElementById("calendar");
   const weeklyEl = document.getElementById("weekly-view");
+
+  // Default to WEEKLY view
   if (calendarEl) calendarEl.style.display = "none";
   if (weeklyEl) weeklyEl.style.display = "flex";
   await loadWeek(todayStr);
@@ -739,53 +748,57 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const prevBtn = document.getElementById("prev-day");
-if (prevBtn && dateInput) {
-  prevBtn.addEventListener("click", () => {
-    const d = new Date(dateInput.value);
-    const isWeekly = weeklyEl && weeklyEl.style.display !== "none";
-
-    d.setDate(d.getDate() + (isWeekly ? -7 : -1));  // ✅ week vs day
-    const newDate = d.toISOString().split("T")[0];
-
-    dateInput.value = newDate;
-    updateDayLabel(newDate);
-
-    if (isWeekly) {
-      loadWeek(newDate);
-    } else {
-      loadDay(newDate);
-    }
-  });
-}
-
-const nextBtn = document.getElementById("next-day");
-if (nextBtn && dateInput) {
-  nextBtn.addEventListener("click", () => {
-    const d = new Date(dateInput.value);
-    const isWeekly = weeklyEl && weeklyEl.style.display !== "none";
-
-    d.setDate(d.getDate() + (isWeekly ? 7 : 1));    // ✅ week vs day
-    const newDate = d.toISOString().split("T")[0];
-
-    dateInput.value = newDate;
-    updateDayLabel(newDate);
-
-    if (isWeekly) {
-      loadWeek(newDate);
-    } else {
-      loadDay(newDate);
-    }
-  });
-}
-
-
+  const nextBtn = document.getElementById("next-day");
   const todayBtn = document.getElementById("today");
+
+  function isWeeklyMode() {
+    return weeklyEl && weeklyEl.style.display !== "none";
+  }
+
+  if (prevBtn && dateInput) {
+    prevBtn.addEventListener("click", () => {
+      const d = new Date(dateInput.value);
+      if (isWeeklyMode()) {
+        d.setDate(d.getDate() - 7);
+      } else {
+        d.setDate(d.getDate() - 1);
+      }
+      const newDate = d.toISOString().split("T")[0];
+      dateInput.value = newDate;
+      updateDayLabel(newDate);
+      if (isWeeklyMode()) {
+        loadWeek(newDate);
+      } else {
+        loadDay(newDate);
+      }
+    });
+  }
+
+  if (nextBtn && dateInput) {
+    nextBtn.addEventListener("click", () => {
+      const d = new Date(dateInput.value);
+      if (isWeeklyMode()) {
+        d.setDate(d.getDate() + 7);
+      } else {
+        d.setDate(d.getDate() + 1);
+      }
+      const newDate = d.toISOString().split("T")[0];
+      dateInput.value = newDate;
+      updateDayLabel(newDate);
+      if (isWeeklyMode()) {
+        loadWeek(newDate);
+      } else {
+        loadDay(newDate);
+      }
+    });
+  }
+
   if (todayBtn && dateInput) {
     todayBtn.addEventListener("click", () => {
       const today = new Date().toISOString().split("T")[0];
       dateInput.value = today;
       updateDayLabel(today);
-      if (weeklyEl && weeklyEl.style.display !== "none") {
+      if (isWeeklyMode()) {
         loadWeek(today);
       } else {
         loadDay(today);
