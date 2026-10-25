@@ -7839,7 +7839,7 @@
   "2026-11-08": {
     "date": "2026-11-08",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 10:32 AM",
+    "last_successful_update": "October 25, 2026 at 10:38 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34140,7 +34140,7 @@
   "2026-11-07": {
     "date": "2026-11-07",
     "updated": true,
-    "last_successful_update": "October 25, 2026 at 10:31 AM",
+    "last_successful_update": "October 25, 2026 at 10:38 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34356,7 +34356,7 @@
           "end": "15:00"
         },
         {
-          "start": "15:00",
+          "start": "16:00",
           "end": "19:00"
         }
       ],
@@ -34566,7 +34566,7 @@
         {
           "date": "2026-11-07",
           "start": "15:00",
-          "end": "15:00",
+          "end": "16:00",
           "field": "H-SJ3",
           "reason": "Ball Reschedule Hold",
           "type": "game"
@@ -34838,18 +34838,9 @@
       {
         "field": "H-SJ3",
         "start": "15:00",
-        "end": "19:00",
+        "end": "16:00",
         "start_12": "3:00 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ3",
-        "start": "15:00",
-        "end": "15:00",
-        "start_12": "3:00 PM",
-        "end_12": "3:00 PM",
+        "end_12": "4:00 PM",
         "type": "game",
         "title": "Ball Reschedule Hold"
       },
@@ -34865,6 +34856,15 @@
         "coach": "Mills",
         "grade": "7/8",
         "source": "ICS"
+      },
+      {
+        "field": "H-SJ3",
+        "start": "16:00",
+        "end": "19:00",
+        "start_12": "4:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
       },
       {
         "field": "H-SJ4",
@@ -35099,8 +35099,74 @@
         {
           "type": "free",
           "start": "14:00",
-          "end": "19:00",
+          "end": "15:00",
           "start_12": "2:00 PM",
+          "end_12": "3:00 PM",
+          "fields": [
+            "H-Su1",
+            "H-Su1A",
+            "H-Su1B",
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B",
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
+          ],
+          "title": null,
+          "team": null,
+          "coach": null,
+          "grade": null,
+          "reason": null
+        },
+        {
+          "type": "free",
+          "start": "15:00",
+          "end": "16:00",
+          "start_12": "3:00 PM",
+          "end_12": "4:00 PM",
+          "fields": [
+            "H-Su1",
+            "H-Su1A",
+            "H-Su1B",
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
+          ],
+          "title": null,
+          "team": null,
+          "coach": null,
+          "grade": null,
+          "reason": null
+        },
+        {
+          "type": "game",
+          "start": "15:00",
+          "end": "16:00",
+          "start_12": "3:00 PM",
+          "end_12": "4:00 PM",
+          "fields": [
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
+          ],
+          "title": null,
+          "team": null,
+          "coach": null,
+          "grade": null,
+          "reason": "Ball Reschedule Hold"
+        },
+        {
+          "type": "free",
+          "start": "16:00",
+          "end": "19:00",
+          "start_12": "4:00 PM",
           "end_12": "7:00 PM",
           "fields": [
             "H-Su1",
