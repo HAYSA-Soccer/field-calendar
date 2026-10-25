@@ -365,13 +365,12 @@
   box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
 }
 
-/* Sunset line */
 .sunset-line {
   position: absolute;
   left: 0;
   right: 0;
   height: 2px;
-  background: #ff7043; /* soft orange */
+  background: #ff7043;
   opacity: 0.85;
   pointer-events: none;
   z-index: 5;
@@ -388,4 +387,3 @@
   pointer-events: none;
   z-index: 6;
 }
-
