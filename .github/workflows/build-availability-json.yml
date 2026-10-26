@@ -54,6 +54,50 @@ jobs:
           echo "fields_file=fields.json" >> "$GITHUB_OUTPUT"
 
       # ---------------------------------------------------------
+      # Build season sunset table
+      # ---------------------------------------------------------
+      - name: Build sunsets.json
+        shell: bash
+        run: |
+          START=$(jq -r '.season_start' season.json)
+          END=$(jq -r '.season_end' season.json)
+
+          mkdir -p data
+          echo "{}" > data/sunsets.json
+
+          CURRENT="$START"
+          END_PLUS_ONE=$(date -d "$END next day" +%Y-%m-%d)
+
+          while [ "$CURRENT" != "$END_PLUS_ONE" ]; do
+
+            RAW=$(curl -sSL \
+              "https://api.sunrise-sunset.org/json?lat=42.1556&lng=-71.0087&date=$CURRENT&formatted=0")
+
+            SUNSET_UTC=$(echo "$RAW" | jq -r '.results.sunset // empty')
+
+            if [ -n "$SUNSET_UTC" ] && [ "$SUNSET_UTC" != "null" ]; then
+
+              SUNSET_LOCAL=$(TZ="America/New_York" \
+                date -d "$SUNSET_UTC" +"%H:%M")
+
+              TMP=$(mktemp)
+
+              jq \
+                --arg d "$CURRENT" \
+                --arg s "$SUNSET_LOCAL" \
+                '. + {($d): $s}' \
+                data/sunsets.json > "$TMP"
+
+              mv "$TMP" data/sunsets.json
+            fi
+
+            CURRENT=$(date -d "$CURRENT next day" +%Y-%m-%d)
+
+          done
+
+          echo "Generated sunsets.json"
+
+      # ---------------------------------------------------------
       # Build day JSON files
       # ---------------------------------------------------------
       - name: Build day JSON files
@@ -80,6 +124,8 @@ jobs:
 
             export TZ="America/New_York"
             TS_HUMAN=$(date +"%B %d, %Y at %-I:%M %p")
+
+            SUNSET=$(jq -r --arg d "$CURRENT" '.[$d] // ""' data/sunsets.json)
 
             if jq -e . <<<"$RAW" >/dev/null 2>&1; then
               echo "$RAW" > day_raw.json
