@@ -134,8 +134,10 @@ jobs:
                 --argjson day "$(cat day_raw.json)" \
                 --argjson fields "$(cat "$FIELDS_FILE")" \
                 --arg ts "$TS_HUMAN" \
+                --arg sunset "$SUNSET" \
                 '{
                   date: $day.date,
+                  sunset: $sunset,
                   updated: true,
                   last_successful_update: $ts,
                   complexes: $fields.complexes,
@@ -153,8 +155,10 @@ jobs:
                 --argjson fields "$(cat "$FIELDS_FILE")" \
                 --argjson fullAvail "$FULL_AVAIL" \
                 --arg ts "$TS_HUMAN" \
+                --arg sunset "$SUNSET" \
                 '{
                   date: $date,
+                  sunset: $sunset,
                   updated: false,
                   last_successful_update: $ts,
                   complexes: $fields.complexes,
