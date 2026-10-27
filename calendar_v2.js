@@ -475,7 +475,7 @@ function renderComplexTimeline(complex, events, availability, condensed, day) {
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
           <div class="block-tooltip">
             <div><strong>Team:</strong> ${b.title}</div>
-            <div><strong>Field:</strong> ${b.fieldId}</div>
+            <div><strong>Field:</strong> ${b.fieldName}</div>
             <div><strong>Complex:</strong> ${complex}</div>
             <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
           </div>
