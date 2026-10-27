@@ -2,7 +2,7 @@
   "date": "2026-10-23",
   "sunset": "17:50",
   "updated": true,
-  "last_successful_update": "October 27, 2026 at 12:12 AM",
+  "last_successful_update": "October 27, 2026 at 12:24 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -30,108 +30,144 @@
   "fields": [
     {
       "id": "H-HST",
+      "parent_field": "",
+      "field_type": "full",
       "name": "Holbrook High School Turf (Full)",
       "complex": "TURF",
       "surface": ""
     },
     {
       "id": "H-HST1",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Holbrook High School Turf 1",
       "complex": "TURF",
       "surface": ""
     },
     {
       "id": "H-HST2",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Holbrook High School Turf 2",
       "complex": "TURF",
       "surface": ""
     },
     {
       "id": "H-Su1",
+      "parent_field": "",
+      "field_type": "full",
       "name": "Sumner Field 1 (Full)",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-Su1A",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 1A",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-Su1B",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 1B",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-Su2",
+      "parent_field": "",
+      "field_type": "full",
       "name": "Sumner Field 2 (Full)",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-Su2A",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 2A",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-Su2B",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 2B",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SJ3",
+      "parent_field": "",
+      "field_type": "full",
       "name": "Sumner Field 3 (Full)",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SJ3A",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 3A",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SJ3B",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 3B",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SJ4",
+      "parent_field": "",
+      "field_type": "full",
       "name": "Sumner Field 4 (Full)",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SJ4A",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 4A",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SJ4B",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Field 4B",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SuSS",
+      "parent_field": "",
+      "field_type": "full",
       "name": "Sumner Snack Shack Area",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SuSS1",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Snack Shack Area 1",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
     },
     {
       "id": "H-SuSS2",
+      "parent_field": "",
+      "field_type": "half",
       "name": "Sumner Snack Shack Area 2",
       "complex": "SUMNER/SEAN JOYCE",
       "surface": ""
