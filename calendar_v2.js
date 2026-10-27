@@ -411,10 +411,12 @@ function renderComplexTimeline(complex, events, availability, condensed, day) {
   const blocks = [];
 
   events.forEach(e => {
+    console.log(e);
     blocks.push({
       kind: "event",
       title: e.title,
       fieldId: e.fieldId,
+      fieldName: e.fieldName || e.fieldId,
       type: e.type,
       conflict: e.conflict,
       start: e.start,
