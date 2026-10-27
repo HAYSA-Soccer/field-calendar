@@ -122,7 +122,7 @@ function buildBlocks(day, fieldMap) {
     blocks.push({
       complex: f.complex,
       fieldId: fieldId,
-      fieldName: fieldId,
+      fieldName: f.name,
       start: parseTime(b.start),
       end: parseTime(b.end),
       type: b.type,
