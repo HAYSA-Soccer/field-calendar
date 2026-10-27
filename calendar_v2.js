@@ -112,6 +112,7 @@ function buildFieldMap(day) {
  * BUILD BLOCKS — USING REAL FIELD IDs
  ********************************************************************/
 function buildBlocks(day, fieldMap) {
+  console.log(fieldMap["H-HST1"]);
   const blocks = [];
 
   (day.merged || []).forEach(b => {
