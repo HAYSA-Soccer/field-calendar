@@ -20877,7 +20877,7 @@
       "date": "2026-10-23",
       "sunset": "17:50",
       "updated": true,
-      "last_successful_update": "October 27, 2026 at 12:24 AM",
+      "last_successful_update": "October 27, 2026 at 12:34 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -20913,7 +20913,7 @@
         },
         {
           "id": "H-HST1",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 1",
           "complex": "TURF",
@@ -20921,7 +20921,7 @@
         },
         {
           "id": "H-HST2",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
           "complex": "TURF",
@@ -20937,7 +20937,7 @@
         },
         {
           "id": "H-Su1A",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -20945,7 +20945,7 @@
         },
         {
           "id": "H-Su1B",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -20961,7 +20961,7 @@
         },
         {
           "id": "H-Su2A",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -20969,7 +20969,7 @@
         },
         {
           "id": "H-Su2B",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -20985,7 +20985,7 @@
         },
         {
           "id": "H-SJ3A",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -20993,7 +20993,7 @@
         },
         {
           "id": "H-SJ3B",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -21009,7 +21009,7 @@
         },
         {
           "id": "H-SJ4A",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -21017,7 +21017,7 @@
         },
         {
           "id": "H-SJ4B",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -21033,7 +21033,7 @@
         },
         {
           "id": "H-SuSS1",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 1",
           "complex": "SUMNER/SEAN JOYCE",
@@ -21041,7 +21041,7 @@
         },
         {
           "id": "H-SuSS2",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 2",
           "complex": "SUMNER/SEAN JOYCE",
@@ -21554,6 +21554,7 @@
             "start_12": "4:30 PM",
             "end_12": "5:00 PM",
             "fields": [
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
@@ -21578,8 +21579,7 @@
               "H-Su1A",
               "H-Su1B",
               "H-Su2",
-              "H-Su2A",
-              "H-Su2B"
+              "H-Su2A"
             ],
             "title": null,
             "team": null,
@@ -21596,7 +21596,8 @@
             "fields": [
               "H-SJ3",
               "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3B",
+              "H-SJ4B"
             ],
             "title": null,
             "team": null,
@@ -21618,7 +21619,22 @@
               "H-Su2A",
               "H-Su2B",
               "H-SJ4",
-              "H-SJ4A",
+              "H-SJ4A"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-SJ3B",
               "H-SJ4B"
             ],
             "title": null,
@@ -21642,10 +21658,8 @@
               "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
-              "H-SJ3B",
               "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
+              "H-SJ4A"
             ],
             "title": null,
             "team": null,
@@ -21663,6 +21677,7 @@
               "H-Su1",
               "H-Su1A",
               "H-Su1B",
+              "H-SJ3B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -21684,8 +21699,7 @@
               "H-Su2A",
               "H-Su2B",
               "H-SJ3",
-              "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3A"
             ],
             "title": null,
             "team": null,
@@ -25368,7 +25382,7 @@
       "date": "2026-10-24",
       "sunset": "17:48",
       "updated": true,
-      "last_successful_update": "October 27, 2026 at 12:24 AM",
+      "last_successful_update": "October 27, 2026 at 12:34 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -25404,7 +25418,7 @@
         },
         {
           "id": "H-HST1",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 1",
           "complex": "TURF",
@@ -25412,7 +25426,7 @@
         },
         {
           "id": "H-HST2",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
           "complex": "TURF",
@@ -25428,7 +25442,7 @@
         },
         {
           "id": "H-Su1A",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25436,7 +25450,7 @@
         },
         {
           "id": "H-Su1B",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25452,7 +25466,7 @@
         },
         {
           "id": "H-Su2A",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25460,7 +25474,7 @@
         },
         {
           "id": "H-Su2B",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25476,7 +25490,7 @@
         },
         {
           "id": "H-SJ3A",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25484,7 +25498,7 @@
         },
         {
           "id": "H-SJ3B",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25500,7 +25514,7 @@
         },
         {
           "id": "H-SJ4A",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25508,7 +25522,7 @@
         },
         {
           "id": "H-SJ4B",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25524,7 +25538,7 @@
         },
         {
           "id": "H-SuSS1",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 1",
           "complex": "SUMNER/SEAN JOYCE",
@@ -25532,7 +25546,7 @@
         },
         {
           "id": "H-SuSS2",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 2",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26366,21 +26380,49 @@
       "merged_availability": {
         "TURF": [
           {
+            "type": "free",
+            "start": "09:00",
+            "end": "12:00",
+            "start_12": "9:00 AM",
+            "end_12": "12:00 PM",
+            "fields": [
+              "H-HST"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
             "type": "admin",
             "start": "12:00",
             "end": "15:00",
             "start_12": "12:00 PM",
             "end_12": "3:00 PM",
             "fields": [
-              "H-HST",
-              "H-HST1",
-              "H-HST2"
+              "H-HST"
             ],
             "title": null,
             "team": null,
             "coach": null,
             "grade": null,
             "reason": "Turf Rented Out"
+          },
+          {
+            "type": "free",
+            "start": "15:00",
+            "end": "21:00",
+            "start_12": "3:00 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
           }
         ],
         "SUMNER/SEAN JOYCE": [
@@ -26400,7 +26442,6 @@
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
-              "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
             ],
@@ -26417,9 +26458,15 @@
             "start_12": "8:30 AM",
             "end_12": "9:30 AM",
             "fields": [
+              "H-Su1A",
+              "H-Su1B",
+              "H-Su2A",
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3B",
+              "H-SJ4A",
+              "H-SJ4B"
             ],
             "title": null,
             "team": null,
@@ -26435,14 +26482,8 @@
             "end_12": "9:30 AM",
             "fields": [
               "H-Su1",
-              "H-Su1A",
-              "H-Su1B",
               "H-Su2",
-              "H-Su2A",
-              "H-Su2B",
-              "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
+              "H-SJ4"
             ],
             "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
             "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
@@ -26466,7 +26507,6 @@
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
-              "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
             ],
@@ -26483,10 +26523,13 @@
             "start_12": "9:45 AM",
             "end_12": "10:45 AM",
             "fields": [
+              "H-Su1A",
+              "H-Su1B",
+              "H-Su2A",
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
-              "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
             ],
@@ -26504,11 +26547,7 @@
             "end_12": "10:45 AM",
             "fields": [
               "H-Su1",
-              "H-Su1A",
-              "H-Su1B",
-              "H-Su2",
-              "H-Su2A",
-              "H-Su2B"
+              "H-Su2"
             ],
             "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
             "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
@@ -26532,7 +26571,6 @@
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
-              "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
             ],
@@ -26602,8 +26640,33 @@
           {
             "type": "free",
             "start": "12:00",
-            "end": "19:00",
+            "end": "16:00",
             "start_12": "12:00 PM",
+            "end_12": "4:00 PM",
+            "fields": [
+              "H-Su1",
+              "H-Su1A",
+              "H-Su1B",
+              "H-Su2",
+              "H-Su2A",
+              "H-Su2B",
+              "H-SJ3",
+              "H-SJ3A",
+              "H-SJ3B",
+              "H-SJ4A",
+              "H-SJ4B"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "16:00",
+            "end": "19:00",
+            "start_12": "4:00 PM",
             "end_12": "7:00 PM",
             "fields": [
               "H-Su1",
@@ -26632,7 +26695,7 @@
       "date": "2026-10-25",
       "sunset": "17:47",
       "updated": true,
-      "last_successful_update": "October 27, 2026 at 12:24 AM",
+      "last_successful_update": "October 27, 2026 at 12:35 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -26668,7 +26731,7 @@
         },
         {
           "id": "H-HST1",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 1",
           "complex": "TURF",
@@ -26676,7 +26739,7 @@
         },
         {
           "id": "H-HST2",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
           "complex": "TURF",
@@ -26692,7 +26755,7 @@
         },
         {
           "id": "H-Su1A",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26700,7 +26763,7 @@
         },
         {
           "id": "H-Su1B",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26716,7 +26779,7 @@
         },
         {
           "id": "H-Su2A",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26724,7 +26787,7 @@
         },
         {
           "id": "H-Su2B",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26740,7 +26803,7 @@
         },
         {
           "id": "H-SJ3A",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26748,7 +26811,7 @@
         },
         {
           "id": "H-SJ3B",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26764,7 +26827,7 @@
         },
         {
           "id": "H-SJ4A",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26772,7 +26835,7 @@
         },
         {
           "id": "H-SJ4B",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26788,7 +26851,7 @@
         },
         {
           "id": "H-SuSS1",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 1",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26796,7 +26859,7 @@
         },
         {
           "id": "H-SuSS2",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 2",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26837,7 +26900,7 @@
       "date": "2026-10-28",
       "sunset": "17:43",
       "updated": true,
-      "last_successful_update": "October 27, 2026 at 12:26 AM",
+      "last_successful_update": "October 27, 2026 at 12:36 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -26873,7 +26936,7 @@
         },
         {
           "id": "H-HST1",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 1",
           "complex": "TURF",
@@ -26881,7 +26944,7 @@
         },
         {
           "id": "H-HST2",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
           "complex": "TURF",
@@ -26897,7 +26960,7 @@
         },
         {
           "id": "H-Su1A",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26905,7 +26968,7 @@
         },
         {
           "id": "H-Su1B",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26921,7 +26984,7 @@
         },
         {
           "id": "H-Su2A",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26929,7 +26992,7 @@
         },
         {
           "id": "H-Su2B",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26945,7 +27008,7 @@
         },
         {
           "id": "H-SJ3A",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26953,7 +27016,7 @@
         },
         {
           "id": "H-SJ3B",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26969,7 +27032,7 @@
         },
         {
           "id": "H-SJ4A",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26977,7 +27040,7 @@
         },
         {
           "id": "H-SJ4B",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -26993,7 +27056,7 @@
         },
         {
           "id": "H-SuSS1",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 1",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27001,7 +27064,7 @@
         },
         {
           "id": "H-SuSS2",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 2",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27568,20 +27631,51 @@
       "merged_availability": {
         "TURF": [
           {
-            "type": "practice",
+            "type": "free",
             "start": "18:00",
-            "end": "21:00",
+            "end": "19:30",
             "start_12": "6:00 PM",
-            "end_12": "9:00 PM",
+            "end_12": "7:30 PM",
             "fields": [
-              "H-HST",
-              "H-HST1",
               "H-HST2"
             ],
             "title": null,
             "team": null,
             "coach": null,
             "grade": null,
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "18:00",
+            "end": "19:30",
+            "start_12": "6:00 PM",
+            "end_12": "7:30 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1"
+            ],
+            "title": "5/6 Boys Travel (Walsh) Practice",
+            "team": "5/6 Boys Travel",
+            "coach": "Walsh",
+            "grade": "5/6",
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "19:30",
+            "end": "21:00",
+            "start_12": "7:30 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1",
+              "H-HST2"
+            ],
+            "title": "5/6 Girls Travel (Casavant) Practice",
+            "team": "5/6 Girls Travel",
+            "coach": "Casavant",
+            "grade": "5/6",
             "reason": null
           }
         ],
@@ -27625,6 +27719,7 @@
               "H-Su2",
               "H-Su2A",
               "H-Su2B",
+              "H-SJ3B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -27643,8 +27738,7 @@
             "end_12": "5:00 PM",
             "fields": [
               "H-SJ3",
-              "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3A"
             ],
             "title": null,
             "team": null,
@@ -27659,6 +27753,8 @@
             "start_12": "5:00 PM",
             "end_12": "5:30 PM",
             "fields": [
+              "H-Su2B",
+              "H-SJ3B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -27681,10 +27777,8 @@
               "H-Su1B",
               "H-Su2",
               "H-Su2A",
-              "H-Su2B",
               "H-SJ3",
-              "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3A"
             ],
             "title": null,
             "team": null,
@@ -27699,9 +27793,11 @@
             "start_12": "5:30 PM",
             "end_12": "6:00 PM",
             "fields": [
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3B",
+              "H-SJ4B"
             ],
             "title": null,
             "team": null,
@@ -27721,10 +27817,8 @@
               "H-Su1B",
               "H-Su2",
               "H-Su2A",
-              "H-Su2B",
               "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
+              "H-SJ4A"
             ],
             "title": null,
             "team": null,
@@ -27747,7 +27841,8 @@
               "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3B",
+              "H-SJ4B"
             ],
             "title": null,
             "team": null,
@@ -27763,8 +27858,7 @@
             "end_12": "6:30 PM",
             "fields": [
               "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
+              "H-SJ4A"
             ],
             "title": null,
             "team": null,
@@ -27805,7 +27899,7 @@
       "date": "2026-10-26",
       "sunset": "17:46",
       "updated": true,
-      "last_successful_update": "October 27, 2026 at 12:25 AM",
+      "last_successful_update": "October 27, 2026 at 12:35 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -27841,7 +27935,7 @@
         },
         {
           "id": "H-HST1",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 1",
           "complex": "TURF",
@@ -27849,7 +27943,7 @@
         },
         {
           "id": "H-HST2",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
           "complex": "TURF",
@@ -27865,7 +27959,7 @@
         },
         {
           "id": "H-Su1A",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27873,7 +27967,7 @@
         },
         {
           "id": "H-Su1B",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27889,7 +27983,7 @@
         },
         {
           "id": "H-Su2A",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27897,7 +27991,7 @@
         },
         {
           "id": "H-Su2B",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27913,7 +28007,7 @@
         },
         {
           "id": "H-SJ3A",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27921,7 +28015,7 @@
         },
         {
           "id": "H-SJ3B",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27937,7 +28031,7 @@
         },
         {
           "id": "H-SJ4A",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27945,7 +28039,7 @@
         },
         {
           "id": "H-SJ4B",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27961,7 +28055,7 @@
         },
         {
           "id": "H-SuSS1",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 1",
           "complex": "SUMNER/SEAN JOYCE",
@@ -27969,7 +28063,7 @@
         },
         {
           "id": "H-SuSS2",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 2",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28552,6 +28646,21 @@
             "reason": null
           },
           {
+            "type": "free",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su2B"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
             "type": "practice",
             "start": "17:30",
             "end": "18:00",
@@ -28563,7 +28672,6 @@
               "H-Su1B",
               "H-Su2",
               "H-Su2A",
-              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
@@ -28584,6 +28692,7 @@
             "start_12": "6:00 PM",
             "end_12": "6:30 PM",
             "fields": [
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
@@ -28608,8 +28717,7 @@
               "H-Su1A",
               "H-Su1B",
               "H-Su2",
-              "H-Su2A",
-              "H-Su2B"
+              "H-Su2A"
             ],
             "title": null,
             "team": null,
@@ -28664,7 +28772,7 @@
       "date": "2026-10-27",
       "sunset": "17:44",
       "updated": true,
-      "last_successful_update": "October 27, 2026 at 12:25 AM",
+      "last_successful_update": "October 27, 2026 at 12:36 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -28700,7 +28808,7 @@
         },
         {
           "id": "H-HST1",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 1",
           "complex": "TURF",
@@ -28708,7 +28816,7 @@
         },
         {
           "id": "H-HST2",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
           "complex": "TURF",
@@ -28724,7 +28832,7 @@
         },
         {
           "id": "H-Su1A",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28732,7 +28840,7 @@
         },
         {
           "id": "H-Su1B",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28748,7 +28856,7 @@
         },
         {
           "id": "H-Su2A",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28756,7 +28864,7 @@
         },
         {
           "id": "H-Su2B",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28772,7 +28880,7 @@
         },
         {
           "id": "H-SJ3A",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28780,7 +28888,7 @@
         },
         {
           "id": "H-SJ3B",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28796,7 +28904,7 @@
         },
         {
           "id": "H-SJ4A",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28804,7 +28912,7 @@
         },
         {
           "id": "H-SJ4B",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28820,7 +28928,7 @@
         },
         {
           "id": "H-SuSS1",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 1",
           "complex": "SUMNER/SEAN JOYCE",
@@ -28828,7 +28936,7 @@
         },
         {
           "id": "H-SuSS2",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 2",
           "complex": "SUMNER/SEAN JOYCE",
@@ -29344,6 +29452,21 @@
             "reason": null
           },
           {
+            "type": "free",
+            "start": "19:30",
+            "end": "21:00",
+            "start_12": "7:30 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST2"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
             "type": "practice",
             "start": "19:30",
             "end": "21:00",
@@ -29351,8 +29474,7 @@
             "end_12": "9:00 PM",
             "fields": [
               "H-HST",
-              "H-HST1",
-              "H-HST2"
+              "H-HST1"
             ],
             "title": "7/8 Boys Travel (Collins) Practice",
             "team": "7/8 Boys Travel",
@@ -29400,7 +29522,8 @@
               "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3B",
+              "H-SJ4B"
             ],
             "title": null,
             "team": null,
@@ -29419,8 +29542,7 @@
               "H-Su1A",
               "H-Su1B",
               "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
+              "H-SJ4A"
             ],
             "title": null,
             "team": null,
@@ -29435,6 +29557,7 @@
             "start_12": "5:30 PM",
             "end_12": "6:00 PM",
             "fields": [
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B"
@@ -29457,7 +29580,6 @@
               "H-Su1B",
               "H-Su2",
               "H-Su2A",
-              "H-Su2B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -29478,6 +29600,7 @@
               "H-Su1",
               "H-Su1A",
               "H-Su1B",
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B"
@@ -29497,7 +29620,6 @@
             "fields": [
               "H-Su2",
               "H-Su2A",
-              "H-Su2B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -32028,7 +32150,7 @@
       "date": "2026-10-29",
       "sunset": "17:41",
       "updated": true,
-      "last_successful_update": "October 27, 2026 at 12:26 AM",
+      "last_successful_update": "October 27, 2026 at 12:36 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -32064,7 +32186,7 @@
         },
         {
           "id": "H-HST1",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 1",
           "complex": "TURF",
@@ -32072,7 +32194,7 @@
         },
         {
           "id": "H-HST2",
-          "parent_field": "",
+          "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
           "complex": "TURF",
@@ -32088,7 +32210,7 @@
         },
         {
           "id": "H-Su1A",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32096,7 +32218,7 @@
         },
         {
           "id": "H-Su1B",
-          "parent_field": "",
+          "parent_field": "H-Su1",
           "field_type": "half",
           "name": "Sumner Field 1B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32112,7 +32234,7 @@
         },
         {
           "id": "H-Su2A",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32120,7 +32242,7 @@
         },
         {
           "id": "H-Su2B",
-          "parent_field": "",
+          "parent_field": "H-Su2",
           "field_type": "half",
           "name": "Sumner Field 2B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32136,7 +32258,7 @@
         },
         {
           "id": "H-SJ3A",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32144,7 +32266,7 @@
         },
         {
           "id": "H-SJ3B",
-          "parent_field": "",
+          "parent_field": "H-SJ3",
           "field_type": "half",
           "name": "Sumner Field 3B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32160,7 +32282,7 @@
         },
         {
           "id": "H-SJ4A",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4A",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32168,7 +32290,7 @@
         },
         {
           "id": "H-SJ4B",
-          "parent_field": "",
+          "parent_field": "H-SJ4",
           "field_type": "half",
           "name": "Sumner Field 4B",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32184,7 +32306,7 @@
         },
         {
           "id": "H-SuSS1",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 1",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32192,7 +32314,7 @@
         },
         {
           "id": "H-SuSS2",
-          "parent_field": "",
+          "parent_field": "H-SuSS",
           "field_type": "half",
           "name": "Sumner Snack Shack Area 2",
           "complex": "SUMNER/SEAN JOYCE",
@@ -32843,18 +32965,49 @@
           {
             "type": "practice",
             "start": "18:00",
-            "end": "21:00",
+            "end": "19:30",
             "start_12": "6:00 PM",
-            "end_12": "9:00 PM",
+            "end_12": "7:30 PM",
             "fields": [
               "H-HST",
               "H-HST1",
+              "H-HST2"
+            ],
+            "title": "5/6 Girls Travel (Baird-Miller) Practice",
+            "team": "5/6 Girls Travel",
+            "coach": "Baird-Miller",
+            "grade": "5/6",
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "19:30",
+            "end": "21:00",
+            "start_12": "7:30 PM",
+            "end_12": "9:00 PM",
+            "fields": [
               "H-HST2"
             ],
             "title": null,
             "team": null,
             "coach": null,
             "grade": null,
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "19:30",
+            "end": "21:00",
+            "start_12": "7:30 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1"
+            ],
+            "title": "7/8 Boys Travel (Mills) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Mills",
+            "grade": "7/8",
             "reason": null
           }
         ],
@@ -32895,6 +33048,7 @@
               "H-Su1",
               "H-Su1A",
               "H-Su1B",
+              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
@@ -32916,8 +33070,7 @@
             "end_12": "5:00 PM",
             "fields": [
               "H-Su2",
-              "H-Su2A",
-              "H-Su2B"
+              "H-Su2A"
             ],
             "title": null,
             "team": null,
@@ -32932,6 +33085,7 @@
             "start_12": "5:00 PM",
             "end_12": "5:30 PM",
             "fields": [
+              "H-Su1B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -32951,13 +33105,28 @@
             "fields": [
               "H-Su1",
               "H-Su1A",
-              "H-Su1B",
               "H-Su2",
               "H-Su2A",
               "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "17:30",
+            "end": "18:00",
+            "start_12": "5:30 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-Su2A",
+              "H-SJ4B"
             ],
             "title": null,
             "team": null,
@@ -32976,14 +33145,12 @@
               "H-Su1A",
               "H-Su1B",
               "H-Su2",
-              "H-Su2A",
               "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B",
               "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
+              "H-SJ4A"
             ],
             "title": null,
             "team": null,
@@ -32998,12 +33165,14 @@
             "start_12": "6:00 PM",
             "end_12": "6:30 PM",
             "fields": [
+              "H-Su1A",
               "H-Su2",
               "H-Su2A",
               "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
-              "H-SJ3B"
+              "H-SJ3B",
+              "H-SJ4B"
             ],
             "title": null,
             "team": null,
@@ -33019,11 +33188,9 @@
             "end_12": "6:30 PM",
             "fields": [
               "H-Su1",
-              "H-Su1A",
               "H-Su1B",
               "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
+              "H-SJ4A"
             ],
             "title": null,
             "team": null,
