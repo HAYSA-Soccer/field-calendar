@@ -2,7 +2,7 @@
   "date": "2026-11-05",
   "sunset": "16:33",
   "updated": true,
-  "last_successful_update": "October 28, 2026 at 1:02 PM",
+  "last_successful_update": "October 28, 2026 at 2:35 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -188,7 +188,7 @@
         "end": "17:00"
       },
       {
-        "start": "18:30",
+        "start": "18:00",
         "end": "19:00"
       }
     ],
@@ -205,11 +205,8 @@
     "H-Su1B": [
       {
         "start": "16:00",
-        "end": "17:30"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
+        "end": "19:00",
+        "mode": "practice_only"
       }
     ],
     "H-Su2": [
@@ -445,22 +442,6 @@
         "source": "ICS",
         "field_display": "H-Su2A, Holbrook Sumner Field"
       }
-    ],
-    "H-Su1B": [
-      {
-        "event_id": "1a2e8aee1062dc89a7bb66be6a981082",
-        "date": "2026-11-05",
-        "start": "17:30",
-        "end": "18:30",
-        "field": "H-Su1B",
-        "type": "practice",
-        "title": "Avon Septic and Pumping (Blue) Practice",
-        "team": "Avon Septic and Pumping",
-        "coach": "Blue",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-Su1B, Holbrook Sumner Field"
-      }
     ]
   },
   "blocks": {},
@@ -486,9 +467,9 @@
     {
       "field": "H-Su1B",
       "start": "16:00",
-      "end": "17:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
@@ -661,17 +642,13 @@
       "source": "ICS"
     },
     {
-      "field": "H-Su1B",
-      "start": "17:30",
-      "end": "18:30",
-      "start_12": "5:30 PM",
-      "end_12": "6:30 PM",
-      "type": "practice",
-      "title": "Avon Septic and Pumping (Blue) Practice",
-      "team": "Avon Septic and Pumping",
-      "coach": "Blue",
-      "grade": "",
-      "source": "ICS"
+      "field": "H-Su1",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-Su1A",
@@ -752,24 +729,6 @@
       "coach": "Baird-Miller",
       "grade": "5/6",
       "source": "ICS"
-    },
-    {
-      "field": "H-Su1",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1B",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
     },
     {
       "field": "H-SJ4",
@@ -977,6 +936,7 @@
         "start_12": "5:30 PM",
         "end_12": "6:00 PM",
         "fields": [
+          "H-Su1B",
           "H-Su2A",
           "H-SJ4B"
         ],
@@ -995,7 +955,6 @@
         "fields": [
           "H-Su1",
           "H-Su1A",
-          "H-Su1B",
           "H-Su2",
           "H-Su2B",
           "H-SJ3",
@@ -1017,7 +976,9 @@
         "start_12": "6:00 PM",
         "end_12": "6:30 PM",
         "fields": [
+          "H-Su1",
           "H-Su1A",
+          "H-Su1B",
           "H-Su2",
           "H-Su2A",
           "H-Su2B",
@@ -1039,8 +1000,6 @@
         "start_12": "6:00 PM",
         "end_12": "6:30 PM",
         "fields": [
-          "H-Su1",
-          "H-Su1B",
           "H-SJ4",
           "H-SJ4A"
         ],
