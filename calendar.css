@@ -134,10 +134,15 @@
 --------------------------------------------------------- */
 .events-track {
   position: absolute;
-  left: 80px;
+  left: 0;
   right: 0;
   top: 0;
   height: 100%;
+}
+
+/* Daily view still needs room for hours */
+.timeline:has(.hours) .events-track {
+  left: 80px;
 }
 
 /* ---------------------------------------------------------
