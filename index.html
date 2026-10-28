@@ -8,71 +8,113 @@
 
 <body>
 
-  <h1>HAYSA Calendar</h1>
+  <div class="page-header">
 
-  <div id="global-refresh-banner" class="global-refresh-banner"></div>
+    <h1>HAYSA Calendar</h1>
 
-  <!-- LEGEND -->
-  <div id="legend">
-    <div class="legend-item">
-      <span class="legend-color practice"></span> Practice
+    <div id="global-refresh-banner"
+         class="global-refresh-banner">
     </div>
-    <div class="legend-item">
-      <span class="legend-color game"></span> Game
+
+    <div id="legend">
+
+      <div class="legend-item">
+        <span class="legend-color practice"></span>
+        <span>Practice</span>
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-color game"></span>
+        <span>Game</span>
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-color available"></span>
+        <span>Available</span>
+      </div>
+
+      <div class="legend-item">
+        <span class="legend-sunset"></span>
+        <span>Sunset</span>
+      </div>
+
     </div>
-    <div class="legend-item">
-      <span class="legend-color available"></span> Available
-    </div>
+
   </div>
 
-  <!-- DATE PICKER -->
   <div class="calendar-toolbar">
-  
-    <div class="toolbar-group">
-      <label>Date</label>
-      <input type="date" id="calendar-date">
+
+    <div class="toolbar-section">
+
+      <div class="toolbar-label">
+        Date
+      </div>
+
+      <input
+        type="date"
+        id="calendar-date"
+        class="calendar-date-input">
+
     </div>
-  
-    <div class="toolbar-group">
-      <span>Complexes</span>
-      <div id="complex-buttons"></div>
+
+    <div class="toolbar-section">
+
+      <div class="toolbar-label">
+        Complexes
+      </div>
+
+      <div id="complex-buttons"
+           class="complex-buttons">
+      </div>
+
     </div>
-  
+
   </div>
 
-  <!-- NAV BUTTONS -->
-  <div id="nav-buttons" class="day-nav">
-    <button id="prev-day" class="day-nav-btn">← Previous</button>
-    <button id="today" class="day-nav-btn">Today</button>
-    <button id="next-day" class="day-nav-btn">Next →</button>
+  <div id="nav-buttons"
+       class="day-nav">
+
+    <button id="prev-day">
+      ← Previous
+    </button>
+
+    <button id="today">
+      Today
+    </button>
+
+    <button id="next-day">
+      Next →
+    </button>
+
   </div>
 
-  <!-- VIEW TOGGLE -->
-  <div id="view-toggle" class="view-toggle">
-    <button id="toggle-daily">Daily View</button>
-    <button id="toggle-weekly">Weekly View</button>
+  <div id="view-toggle"
+       class="view-toggle">
+
+    <button id="toggle-daily">
+      Daily View
+    </button>
+
+    <button id="toggle-weekly">
+      Weekly View
+    </button>
+
   </div>
 
-  <!-- COMPLEX FILTER -->
-  <div id="weekly-controls" class="weekly-controls" style="margin-top:20px;">
-    <label style="font-weight:600;">Filter Complexes:</label>
-    <select id="complex-filter" class="complex-filter" multiple size="4"></select>
+  <div id="day-label"
+       class="day-label">
   </div>
 
-  <!-- DAILY LABEL -->
-  <div id="day-label" class="day-label" style="font-size:18px; font-weight:600; margin-bottom:10px;"></div>
   <div id="day-note"></div>
 
-  <!-- DAILY VIEW -->
   <div id="calendar"></div>
 
-  <!-- WEEK LABEL -->
-  <div id="week-label" class="week-label"></div>
+  <div id="week-label"
+       class="week-label">
+  </div>
 
-  <!-- WEEKLY VIEW -->
   <div id="weekly-view"></div>
 
-  <!-- JS -->
   <script src="calendar_v2.js?v=20261024"></script>
 
 </body>
