@@ -493,3 +493,11 @@
   font-size: 16px;
   padding: 8px 12px;
 }
+
+.legend-sunset {
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  background: #ff7043;
+  margin-top: 7px;
+}
