@@ -2,7 +2,7 @@
   "date": "2026-11-04",
   "sunset": "16:34",
   "updated": true,
-  "last_successful_update": "October 27, 2026 at 7:31 PM",
+  "last_successful_update": "October 27, 2026 at 11:56 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -274,21 +274,15 @@
     "H-SJ4": [
       {
         "start": "16:00",
-        "end": "17:30"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
+        "end": "19:00",
+        "mode": "both"
       }
     ],
     "H-SJ4A": [
       {
         "start": "16:00",
-        "end": "17:30"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
+        "end": "19:00",
+        "mode": "practice_only"
       }
     ],
     "H-SJ4B": [
@@ -333,6 +327,20 @@
         "grade": "5/6",
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
+      },
+      {
+        "event_id": "924c965c1533d8ee16cd90e28cddaf5e",
+        "date": "2026-11-04",
+        "start": "18:00",
+        "end": "19:00",
+        "field": "H-HST1",
+        "type": "practice",
+        "title": "Wm. Perry Auto Repair (Orange) Practice",
+        "team": "Wm. Perry Auto Repair",
+        "coach": "Orange",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST1, Holbrook High School"
       }
     ],
     "H-Su1A": [
@@ -365,22 +373,6 @@
         "grade": "",
         "source": "ICS",
         "field_display": "H-Su1B, Holbrook Sumner Field"
-      }
-    ],
-    "H-SJ4A": [
-      {
-        "event_id": "924c965c1533d8ee16cd90e28cddaf5e",
-        "date": "2026-11-04",
-        "start": "17:30",
-        "end": "18:30",
-        "field": "H-SJ4A",
-        "type": "practice",
-        "title": "Wm. Perry Auto Repair (Orange) Practice",
-        "team": "Wm. Perry Auto Repair",
-        "coach": "Orange",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
       }
     ],
     "H-SJ3A": [
@@ -502,18 +494,18 @@
     {
       "field": "H-SJ4",
       "start": "16:00",
-      "end": "17:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ4A",
       "start": "16:00",
-      "end": "17:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
@@ -597,19 +589,6 @@
       "title": ""
     },
     {
-      "field": "H-SJ4A",
-      "start": "17:30",
-      "end": "18:30",
-      "start_12": "5:30 PM",
-      "end_12": "6:30 PM",
-      "type": "practice",
-      "title": "Wm. Perry Auto Repair (Orange) Practice",
-      "team": "Wm. Perry Auto Repair",
-      "coach": "Orange",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
       "field": "H-HST2",
       "start": "18:00",
       "end": "19:30",
@@ -677,22 +656,17 @@
       "source": "ICS"
     },
     {
-      "field": "H-SJ4",
-      "start": "18:30",
+      "field": "H-HST1",
+      "start": "18:00",
       "end": "19:00",
-      "start_12": "6:30 PM",
+      "start_12": "6:00 PM",
       "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4A",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
+      "type": "practice",
+      "title": "Wm. Perry Auto Repair (Orange) Practice",
+      "team": "Wm. Perry Auto Repair",
+      "coach": "Orange",
+      "grade": "",
+      "source": "ICS"
     },
     {
       "field": "H-HST1",
@@ -900,6 +874,8 @@
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
           "H-SJ4B"
         ],
         "title": null,
@@ -919,9 +895,7 @@
           "H-Su1A",
           "H-Su1B",
           "H-Su2",
-          "H-Su2A",
-          "H-SJ4",
-          "H-SJ4A"
+          "H-Su2A"
         ],
         "title": null,
         "team": null,
@@ -932,48 +906,8 @@
       {
         "type": "free",
         "start": "18:00",
-        "end": "18:30",
-        "start_12": "6:00 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "18:00",
-        "end": "18:30",
-        "start_12": "6:00 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-SJ4",
-          "H-SJ4A"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "18:30",
         "end": "19:00",
-        "start_12": "6:30 PM",
+        "start_12": "6:00 PM",
         "end_12": "7:00 PM",
         "fields": [
           "H-Su1",

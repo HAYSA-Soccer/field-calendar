@@ -2,7 +2,7 @@
   "date": "2026-11-02",
   "sunset": "16:36",
   "updated": true,
-  "last_successful_update": "October 27, 2026 at 7:30 PM",
+  "last_successful_update": "October 27, 2026 at 11:55 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -176,16 +176,14 @@
   "availability": {
     "H-HST": [
       {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "both"
+        "start": "19:30",
+        "end": "21:00"
       }
     ],
     "H-HST1": [
       {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
+        "start": "19:30",
+        "end": "21:00"
       }
     ],
     "H-HST2": [
@@ -198,19 +196,22 @@
     "H-Su1": [
       {
         "start": "16:00",
-        "end": "17:30"
+        "end": "19:00",
+        "mode": "both"
       }
     ],
     "H-Su1A": [
       {
         "start": "16:00",
-        "end": "17:30"
+        "end": "19:00",
+        "mode": "practice_only"
       }
     ],
     "H-Su1B": [
       {
         "start": "16:00",
-        "end": "17:30"
+        "end": "19:00",
+        "mode": "practice_only"
       }
     ],
     "H-Su2": [
@@ -305,20 +306,20 @@
     "H-SuSS2": []
   },
   "events": {
-    "H-Su1": [
+    "H-HST1": [
       {
         "event_id": "59c6ad9f14e19321ed8dfa625b03b54d",
         "date": "2026-11-02",
-        "start": "17:30",
-        "end": "19:00",
-        "field": "H-Su1",
+        "start": "18:00",
+        "end": "19:30",
+        "field": "H-HST1",
         "type": "practice",
         "title": "3/4 Boys Travel (Ball) Practice",
         "team": "3/4 Boys Travel",
         "coach": "Ball",
         "grade": "3/4",
         "source": "ICS",
-        "field_display": "H-Su1, Holbrook Sumner Field"
+        "field_display": "H-HST1, Holbrook High School"
       }
     ],
     "H-SJ3A": [
@@ -391,27 +392,27 @@
     {
       "field": "H-Su1",
       "start": "16:00",
-      "end": "17:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1A",
       "start": "16:00",
-      "end": "17:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1B",
       "start": "16:00",
-      "end": "17:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
@@ -536,19 +537,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-Su1",
-      "start": "17:30",
-      "end": "19:00",
-      "start_12": "5:30 PM",
-      "end_12": "7:00 PM",
-      "type": "practice",
-      "title": "3/4 Boys Travel (Ball) Practice",
-      "team": "3/4 Boys Travel",
-      "coach": "Ball",
-      "grade": "3/4",
-      "source": "ICS"
-    },
-    {
       "field": "H-Su2A",
       "start": "17:30",
       "end": "18:30",
@@ -560,24 +548,6 @@
       "coach": "Orange",
       "grade": "",
       "source": "ICS"
-    },
-    {
-      "field": "H-HST",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST1",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
     },
     {
       "field": "H-HST2",
@@ -643,6 +613,19 @@
       "title": ""
     },
     {
+      "field": "H-HST1",
+      "start": "18:00",
+      "end": "19:30",
+      "start_12": "6:00 PM",
+      "end_12": "7:30 PM",
+      "type": "practice",
+      "title": "3/4 Boys Travel (Ball) Practice",
+      "team": "3/4 Boys Travel",
+      "coach": "Ball",
+      "grade": "3/4",
+      "source": "ICS"
+    },
+    {
       "field": "H-Su2",
       "start": "18:30",
       "end": "19:00",
@@ -659,6 +642,24 @@
       "end_12": "7:00 PM",
       "type": "free",
       "title": ""
+    },
+    {
+      "field": "H-HST",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST1",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
     }
   ],
   "merged_availability": {
@@ -666,8 +667,39 @@
       {
         "type": "free",
         "start": "18:00",
-        "end": "21:00",
+        "end": "19:30",
         "start_12": "6:00 PM",
+        "end_12": "7:30 PM",
+        "fields": [
+          "H-HST2"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "18:00",
+        "end": "19:30",
+        "start_12": "6:00 PM",
+        "end_12": "7:30 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1"
+        ],
+        "title": "3/4 Boys Travel (Ball) Practice",
+        "team": "3/4 Boys Travel",
+        "coach": "Ball",
+        "grade": "3/4",
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "19:30",
+        "end": "21:00",
+        "start_12": "7:30 PM",
         "end_12": "9:00 PM",
         "fields": [
           "H-HST",
@@ -755,6 +787,9 @@
         "start_12": "5:30 PM",
         "end_12": "6:00 PM",
         "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
           "H-Su2B"
         ],
         "title": null,
@@ -770,9 +805,6 @@
         "start_12": "5:30 PM",
         "end_12": "6:00 PM",
         "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
           "H-Su2",
           "H-Su2A",
           "H-SJ3",
@@ -795,6 +827,9 @@
         "start_12": "6:00 PM",
         "end_12": "6:30 PM",
         "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
           "H-Su2B",
           "H-SJ3",
           "H-SJ3A",
@@ -816,9 +851,6 @@
         "start_12": "6:00 PM",
         "end_12": "6:30 PM",
         "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
           "H-Su2",
           "H-Su2A"
         ],
@@ -835,6 +867,9 @@
         "start_12": "6:30 PM",
         "end_12": "7:00 PM",
         "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
           "H-Su2",
           "H-Su2A",
           "H-Su2B",
@@ -844,23 +879,6 @@
           "H-SJ4",
           "H-SJ4A",
           "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "18:30",
-        "end": "19:00",
-        "start_12": "6:30 PM",
-        "end_12": "7:00 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B"
         ],
         "title": null,
         "team": null,

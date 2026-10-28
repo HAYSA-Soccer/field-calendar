@@ -2,7 +2,7 @@
   "date": "2026-11-05",
   "sunset": "16:33",
   "updated": true,
-  "last_successful_update": "October 27, 2026 at 7:32 PM",
+  "last_successful_update": "October 27, 2026 at 11:56 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -175,12 +175,7 @@
   ],
   "availability": {
     "H-HST": [],
-    "H-HST1": [
-      {
-        "start": "18:00",
-        "end": "19:30"
-      }
-    ],
+    "H-HST1": [],
     "H-HST2": [
       {
         "start": "19:30",
@@ -337,6 +332,20 @@
         "team": "7/8 Boys Travel",
         "coach": "Mills",
         "grade": "7/8",
+        "source": "ICS",
+        "field_display": "H-HST1, Holbrook High School"
+      },
+      {
+        "event_id": "74ac0f4598c45a76b0a9e193ea788449",
+        "date": "2026-11-05",
+        "start": "18:00",
+        "end": "19:30",
+        "field": "H-HST1",
+        "type": "practice",
+        "title": "5/6 Girls Travel (Baird-Miller) Practice",
+        "team": "5/6 Girls Travel",
+        "coach": "Baird-Miller",
+        "grade": "5/6",
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
       }
@@ -665,15 +674,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST1",
-      "start": "18:00",
-      "end": "19:30",
-      "start_12": "6:00 PM",
-      "end_12": "7:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-Su1A",
       "start": "18:00",
       "end": "19:00",
@@ -741,6 +741,19 @@
       "source": "ICS"
     },
     {
+      "field": "H-HST1",
+      "start": "18:00",
+      "end": "19:30",
+      "start_12": "6:00 PM",
+      "end_12": "7:30 PM",
+      "type": "practice",
+      "title": "5/6 Girls Travel (Baird-Miller) Practice",
+      "team": "5/6 Girls Travel",
+      "coach": "Baird-Miller",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
       "field": "H-Su1",
       "start": "18:30",
       "end": "19:00",
@@ -802,21 +815,6 @@
   "merged_availability": {
     "TURF": [
       {
-        "type": "free",
-        "start": "18:00",
-        "end": "19:30",
-        "start_12": "6:00 PM",
-        "end_12": "7:30 PM",
-        "fields": [
-          "H-HST1"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
         "type": "practice",
         "start": "18:00",
         "end": "19:30",
@@ -824,11 +822,12 @@
         "end_12": "7:30 PM",
         "fields": [
           "H-HST",
+          "H-HST1",
           "H-HST2"
         ],
-        "title": "5/6 Boys Travel (Ayers) Practice",
-        "team": "5/6 Boys Travel",
-        "coach": "Ayers",
+        "title": "5/6 Girls Travel (Baird-Miller) Practice",
+        "team": "5/6 Girls Travel",
+        "coach": "Baird-Miller",
         "grade": "5/6",
         "reason": null
       },
