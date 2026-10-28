@@ -460,20 +460,9 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
       }
     });
 
-  const eventLaneCount = Math.max(lanes.length, 1);
-  console.log("=== TURF LANES ===");
-  
-  blocks
-    .filter(b => b.kind === "event")
-    .forEach(b => {
-      console.log(
-        b.title,
-        "lane:", b.lane,
-        "start:", fmt(b.start),
-        "end:", fmt(b.end)
-      );
-    });
-  
+  const eventLaneCount = lanes.length;
+  const totalLaneCount = eventLaneCount + 1;
+
   blocks.forEach(b => {
     const block = document.createElement("div");
     block.className = "block";
