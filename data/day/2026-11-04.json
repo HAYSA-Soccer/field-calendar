@@ -2,7 +2,7 @@
   "date": "2026-11-04",
   "sunset": "16:34",
   "updated": true,
-  "last_successful_update": "October 28, 2026 at 2:35 PM",
+  "last_successful_update": "October 28, 2026 at 3:16 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -183,7 +183,7 @@
     ],
     "H-HST2": [
       {
-        "start": "18:00",
+        "start": "19:00",
         "end": "19:30"
       }
     ],
@@ -311,6 +311,20 @@
         "grade": "7/8",
         "source": "ICS",
         "field_display": "H-HST2, Holbrook High School"
+      },
+      {
+        "event_id": "924c965c1533d8ee16cd90e28cddaf5e",
+        "date": "2026-11-04",
+        "start": "18:00",
+        "end": "19:00",
+        "field": "H-HST2",
+        "type": "practice",
+        "title": "Wm. Perry Auto Repair (Orange) Practice",
+        "team": "Wm. Perry Auto Repair",
+        "coach": "Orange",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
       }
     ],
     "H-HST1": [
@@ -325,20 +339,6 @@
         "team": "5/6 Boys Travel",
         "coach": "Walsh",
         "grade": "5/6",
-        "source": "ICS",
-        "field_display": "H-HST1, Holbrook High School"
-      },
-      {
-        "event_id": "924c965c1533d8ee16cd90e28cddaf5e",
-        "date": "2026-11-04",
-        "start": "18:00",
-        "end": "19:00",
-        "field": "H-HST1",
-        "type": "practice",
-        "title": "Wm. Perry Auto Repair (Orange) Practice",
-        "team": "Wm. Perry Auto Repair",
-        "coach": "Orange",
-        "grade": "",
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
       }
@@ -589,15 +589,6 @@
       "title": ""
     },
     {
-      "field": "H-HST2",
-      "start": "18:00",
-      "end": "19:30",
-      "start_12": "6:00 PM",
-      "end_12": "7:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-Su1",
       "start": "18:00",
       "end": "19:00",
@@ -643,6 +634,19 @@
       "title": ""
     },
     {
+      "field": "H-HST2",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "practice",
+      "title": "Wm. Perry Auto Repair (Orange) Practice",
+      "team": "Wm. Perry Auto Repair",
+      "coach": "Orange",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
       "field": "H-HST1",
       "start": "18:00",
       "end": "19:30",
@@ -656,17 +660,13 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST1",
-      "start": "18:00",
-      "end": "19:00",
-      "start_12": "6:00 PM",
-      "end_12": "7:00 PM",
-      "type": "practice",
-      "title": "Wm. Perry Auto Repair (Orange) Practice",
-      "team": "Wm. Perry Auto Repair",
-      "coach": "Orange",
-      "grade": "",
-      "source": "ICS"
+      "field": "H-HST2",
+      "start": "19:00",
+      "end": "19:30",
+      "start_12": "7:00 PM",
+      "end_12": "7:30 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-HST1",
@@ -694,10 +694,27 @@
   "merged_availability": {
     "TURF": [
       {
-        "type": "free",
+        "type": "practice",
         "start": "18:00",
-        "end": "19:30",
+        "end": "19:00",
         "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2"
+        ],
+        "title": "Wm. Perry Auto Repair (Orange) Practice",
+        "team": "Wm. Perry Auto Repair",
+        "coach": "Orange",
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "19:00",
+        "end": "19:30",
+        "start_12": "7:00 PM",
         "end_12": "7:30 PM",
         "fields": [
           "H-HST2"
@@ -710,18 +727,18 @@
       },
       {
         "type": "practice",
-        "start": "18:00",
+        "start": "19:00",
         "end": "19:30",
-        "start_12": "6:00 PM",
+        "start_12": "7:00 PM",
         "end_12": "7:30 PM",
         "fields": [
           "H-HST",
           "H-HST1"
         ],
-        "title": "5/6 Boys Travel (Walsh) Practice",
-        "team": "5/6 Boys Travel",
-        "coach": "Walsh",
-        "grade": "5/6",
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
         "reason": null
       },
       {
