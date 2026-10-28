@@ -55,12 +55,16 @@
 }
 
 .weekly-day-header {
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 8px;
-}
+  background: #f5f8fc;
+  border-bottom: 1px solid #dce5ef;
 
+  margin: -10px -10px 12px -10px;
+  padding: 12px;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
 .weekly-day.today {
   border: 2px solid #1976d2;
   box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
