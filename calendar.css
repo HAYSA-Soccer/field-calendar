@@ -468,3 +468,28 @@
   background: #1976d2;
   color: white;
 }
+
+
+.calendar-toolbar {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#calendar-date {
+  font-size: 16px;
+  padding: 8px 12px;
+}
