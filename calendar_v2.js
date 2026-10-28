@@ -354,7 +354,8 @@ function renderDayCalendar(day, options = {}) {
           eventsByComplex[complex] || [],
           availability.filter(a => a.complex === complex),
           condensed,
-          day
+          day,
+          true
         )
       );
     });
@@ -363,7 +364,7 @@ function renderDayCalendar(day, options = {}) {
 /********************************************************************
  * UNIFIED LANE SYSTEM — EVENTS + AVAILABILITY
  ********************************************************************/
-function renderComplexTimeline(complex, events, availability, condensed, day) {
+function renderComplexTimeline(complex, events, availability, condensed, day, showHours = true) {
   const div = document.createElement("div");
   div.className = "complex";
 
@@ -375,15 +376,19 @@ function renderComplexTimeline(complex, events, availability, condensed, day) {
   const timeline = document.createElement("div");
   timeline.className = "timeline";
 
-  const hours = document.createElement("div");
-  hours.className = "hours";
+  let hours = null;
 
-  for (let t = DAY_START; t <= DAY_END; t += 60) {
-    const h = document.createElement("div");
-    h.className = "hour";
-    h.style.top = ((t - DAY_START) * PX_PER_MIN) + "px";
-    h.textContent = fmt(t);
-    hours.appendChild(h);
+  if (showHours) {
+    hours = document.createElement("div");
+    hours.className = "hours";
+  
+    for (let t = DAY_START; t <= DAY_END; t += 60) {
+      const h = document.createElement("div");
+      h.className = "hour";
+      h.style.top = ((t - DAY_START) * PX_PER_MIN) + "px";
+      h.textContent = fmt(t);
+      hours.appendChild(h);
+    }
   }
 
   const track = document.createElement("div");
@@ -540,11 +545,14 @@ function renderComplexTimeline(complex, events, availability, condensed, day) {
     track.appendChild(block);
   });
 
-  timeline.appendChild(hours);
+  if (hours) {
+    timeline.appendChild(hours);
+  }
+  
   timeline.appendChild(track);
   div.appendChild(timeline);
   return div;
-}
+  }
 
 /********************************************************************
  * WEEKLY VIEW HELPERS
@@ -658,13 +666,14 @@ async function loadWeek(dateStr) {
           if (showAll) return true;
           return selectedNormalized.includes(normalize(complex));
         })
-        .forEach(complex => {
+        .forEach((complex, complexIndex) => {
           const complexTimeline = renderComplexTimeline(
             complex,
             eventsByComplex[complex] || [],
             availability.filter(a => a.complex === complex),
             true, // condensed in weekly view
-            dayData
+            dayData,
+            i === 0 && complexIndex === 0
           );
           complexRow.appendChild(complexTimeline);
         });
