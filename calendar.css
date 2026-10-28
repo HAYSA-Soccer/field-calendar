@@ -445,3 +445,26 @@
   pointer-events: none;
   z-index: 6;
 }
+
+
+.complex-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.complex-btn {
+  padding: 8px 14px;
+  border: 1px solid #1976d2;
+  border-radius: 20px;
+  background: white;
+  color: #1976d2;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.complex-btn.active {
+  background: #1976d2;
+  color: white;
+}
