@@ -2,7 +2,7 @@
   "date": "2026-10-28",
   "sunset": "17:43",
   "updated": true,
-  "last_successful_update": "October 27, 2026 at 11:53 PM",
+  "last_successful_update": "October 28, 2026 at 6:20 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -176,12 +176,7 @@
   "availability": {
     "H-HST": [],
     "H-HST1": [],
-    "H-HST2": [
-      {
-        "start": "18:00",
-        "end": "19:30"
-      }
-    ],
+    "H-HST2": [],
     "H-Su1": [
       {
         "start": "16:00",
@@ -314,20 +309,6 @@
         "field_display": "H-HST1, Holbrook High School"
       },
       {
-        "event_id": "b492ae9251af89f5a0b5abc8a0c0e892",
-        "date": "2026-10-28",
-        "start": "18:00",
-        "end": "19:30",
-        "field": "H-HST1",
-        "type": "practice",
-        "title": "5/6 Girls Travel (Baird-Miller) Practice",
-        "team": "5/6 Girls Travel",
-        "coach": "Baird-Miller",
-        "grade": "5/6",
-        "source": "ICS",
-        "field_display": "H-HST1, Holbrook High School"
-      },
-      {
         "event_id": "320fa869ad609bd24c22735555287d6c",
         "date": "2026-10-28",
         "start": "19:30",
@@ -343,6 +324,20 @@
       }
     ],
     "H-HST2": [
+      {
+        "event_id": "b492ae9251af89f5a0b5abc8a0c0e892",
+        "date": "2026-10-28",
+        "start": "18:00",
+        "end": "19:30",
+        "field": "H-HST2",
+        "type": "practice",
+        "title": "5/6 Girls Travel (Baird-Miller) Practice",
+        "team": "5/6 Girls Travel",
+        "coach": "Baird-Miller",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
+      },
       {
         "event_id": "a220365ce290b96705e7467ba9f5d97e",
         "date": "2026-10-28",
@@ -633,15 +628,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST2",
-      "start": "18:00",
-      "end": "19:30",
-      "start_12": "6:00 PM",
-      "end_12": "7:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-Su1",
       "start": "18:00",
       "end": "19:00",
@@ -700,7 +686,7 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST1",
+      "field": "H-HST2",
       "start": "18:00",
       "end": "19:30",
       "start_12": "6:00 PM",
@@ -760,51 +746,20 @@
   "merged_availability": {
     "TURF": [
       {
-        "type": "free",
-        "start": "18:00",
-        "end": "19:30",
-        "start_12": "6:00 PM",
-        "end_12": "7:30 PM",
-        "fields": [
-          "H-HST2"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
         "type": "practice",
         "start": "18:00",
-        "end": "19:30",
-        "start_12": "6:00 PM",
-        "end_12": "7:30 PM",
-        "fields": [
-          "H-HST",
-          "H-HST1"
-        ],
-        "title": "5/6 Boys Travel (Walsh) Practice",
-        "team": "5/6 Boys Travel",
-        "coach": "Walsh",
-        "grade": "5/6",
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "19:30",
         "end": "21:00",
-        "start_12": "7:30 PM",
+        "start_12": "6:00 PM",
         "end_12": "9:00 PM",
         "fields": [
           "H-HST",
           "H-HST1",
           "H-HST2"
         ],
-        "title": "5/6 Girls Travel (Casavant) Practice",
-        "team": "5/6 Girls Travel",
-        "coach": "Casavant",
-        "grade": "5/6",
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
         "reason": null
       }
     ],

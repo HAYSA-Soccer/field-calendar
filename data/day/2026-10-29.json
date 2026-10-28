@@ -2,7 +2,7 @@
   "date": "2026-10-29",
   "sunset": "17:41",
   "updated": true,
-  "last_successful_update": "October 27, 2026 at 11:53 PM",
+  "last_successful_update": "October 28, 2026 at 6:20 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -318,22 +318,6 @@
         "grade": "7/8",
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
-      }
-    ],
-    "H-HST2": [
-      {
-        "event_id": "a8928f85cfa571b9d2e9173c29d7845f",
-        "date": "2026-10-29",
-        "start": "18:00",
-        "end": "19:30",
-        "field": "H-HST2",
-        "type": "practice",
-        "title": "5/6 Boys Travel (Ayers) Practice",
-        "team": "5/6 Boys Travel",
-        "coach": "Ayers",
-        "grade": "5/6",
-        "source": "ICS",
-        "field_display": "H-HST2, Holbrook High School"
       }
     ],
     "H-SJ3B": [
@@ -725,19 +709,6 @@
       "title": ""
     },
     {
-      "field": "H-HST2",
-      "start": "18:00",
-      "end": "19:30",
-      "start_12": "6:00 PM",
-      "end_12": "7:30 PM",
-      "type": "practice",
-      "title": "5/6 Boys Travel (Ayers) Practice",
-      "team": "5/6 Boys Travel",
-      "coach": "Ayers",
-      "grade": "5/6",
-      "source": "ICS"
-    },
-    {
       "field": "H-HST",
       "start": "18:00",
       "end": "20:00",
@@ -814,7 +785,8 @@
         "start_12": "6:00 PM",
         "end_12": "7:30 PM",
         "fields": [
-          "H-HST1"
+          "H-HST1",
+          "H-HST2"
         ],
         "title": null,
         "team": null,
@@ -823,19 +795,18 @@
         "reason": null
       },
       {
-        "type": "practice",
+        "type": "admin",
         "start": "18:00",
         "end": "19:30",
         "start_12": "6:00 PM",
         "end_12": "7:30 PM",
         "fields": [
-          "H-HST",
-          "H-HST2"
+          "H-HST"
         ],
-        "title": "5/6 Boys Travel (Ayers) Practice",
-        "team": "5/6 Boys Travel",
-        "coach": "Ayers",
-        "grade": "5/6",
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
         "reason": null
       },
       {
