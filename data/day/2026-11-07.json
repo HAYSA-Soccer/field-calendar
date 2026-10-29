@@ -2,7 +2,7 @@
   "date": "2026-11-07",
   "sunset": "16:30",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 10:00 AM",
+  "last_successful_update": "October 29, 2026 at 12:23 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -220,20 +220,8 @@
     ],
     "H-HST1": [],
     "H-HST2": [],
-    "H-HST3": [
-      {
-        "start": "09:00",
-        "end": "21:00",
-        "mode": "game_only"
-      }
-    ],
-    "H-HST4": [
-      {
-        "start": "09:00",
-        "end": "21:00",
-        "mode": "game_only"
-      }
-    ],
+    "H-HST3": [],
+    "H-HST4": [],
     "H-Su1": [
       {
         "start": "08:00",
@@ -631,24 +619,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST3",
-      "start": "09:00",
-      "end": "21:00",
-      "start_12": "9:00 AM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST4",
-      "start": "09:00",
-      "end": "21:00",
-      "start_12": "9:00 AM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-HST",
       "start": "09:00",
       "end": "10:00",
@@ -885,22 +855,6 @@
   "merged_availability": {
     "TURF": [
       {
-        "type": "free",
-        "start": "09:00",
-        "end": "10:00",
-        "start_12": "9:00 AM",
-        "end_12": "10:00 AM",
-        "fields": [
-          "H-HST3",
-          "H-HST4"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
         "type": "game",
         "start": "09:00",
         "end": "10:00",
@@ -922,25 +876,7 @@
         "start_12": "10:00 AM",
         "end_12": "10:30 AM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "10:30",
-        "end": "11:30",
-        "start_12": "10:30 AM",
-        "end_12": "11:30 AM",
-        "fields": [
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,
@@ -970,25 +906,7 @@
         "start_12": "11:30 AM",
         "end_12": "12:30 PM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "12:30",
-        "end": "13:30",
-        "start_12": "12:30 PM",
-        "end_12": "1:30 PM",
-        "fields": [
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,
@@ -1018,25 +936,7 @@
         "start_12": "1:30 PM",
         "end_12": "2:00 PM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "14:00",
-        "end": "15:00",
-        "start_12": "2:00 PM",
-        "end_12": "3:00 PM",
-        "fields": [
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,
@@ -1066,25 +966,7 @@
         "start_12": "3:00 PM",
         "end_12": "3:30 PM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "15:30",
-        "end": "16:30",
-        "start_12": "3:30 PM",
-        "end_12": "4:30 PM",
-        "fields": [
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,
@@ -1114,25 +996,7 @@
         "start_12": "4:30 PM",
         "end_12": "5:00 PM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "17:00",
-        "end": "18:00",
-        "start_12": "5:00 PM",
-        "end_12": "6:00 PM",
-        "fields": [
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,
@@ -1162,9 +1026,7 @@
         "start_12": "6:00 PM",
         "end_12": "9:00 PM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,

@@ -2,16 +2,12 @@
   "date": "2026-11-05",
   "sunset": "16:33",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 11:08 AM",
+  "last_successful_update": "October 29, 2026 at 12:22 PM",
   "complexes": {
     "TURF": [
       "H-HST",
       "H-HST1",
-      "H-HST2A",
-      "H-HST5",
-      "H-HST6"
-    ],
-    "OTHER": [
+      "H-HST2",
       "H-HST3",
       "H-HST4"
     ],
@@ -51,7 +47,7 @@
       "surface": ""
     },
     {
-      "id": "H-HST2A",
+      "id": "H-HST2",
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 2",
@@ -60,22 +56,6 @@
     },
     {
       "id": "H-HST3",
-      "parent_field": "",
-      "field_type": "",
-      "name": "H-HST3",
-      "complex": "OTHER",
-      "surface": ""
-    },
-    {
-      "id": "H-HST4",
-      "parent_field": "",
-      "field_type": "",
-      "name": "H-HST4",
-      "complex": "OTHER",
-      "surface": ""
-    },
-    {
-      "id": "H-HST5",
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 3",
@@ -83,7 +63,7 @@
       "surface": ""
     },
     {
-      "id": "H-HST6",
+      "id": "H-HST4",
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 4",
@@ -214,11 +194,10 @@
   "availability": {
     "H-HST": [],
     "H-HST1": [],
-    "H-HST2A": [
+    "H-HST2": [
       {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "both"
+        "start": "19:30",
+        "end": "21:00"
       }
     ],
     "H-HST3": [
@@ -233,20 +212,6 @@
         "start": "18:00",
         "end": "21:00",
         "mode": "practice_only"
-      }
-    ],
-    "H-HST5": [
-      {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "both"
-      }
-    ],
-    "H-HST6": [
-      {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "both"
       }
     ],
     "H-Su1": [
@@ -362,6 +327,22 @@
     "H-SuSS2": []
   },
   "events": {
+    "H-HST2": [
+      {
+        "event_id": "ddb198b33194ae92a519014a021a4b7b",
+        "date": "2026-11-05",
+        "start": "18:00",
+        "end": "19:30",
+        "field": "H-HST2",
+        "type": "practice",
+        "title": "5/6 Boys Travel (Ayers) Practice",
+        "team": "5/6 Boys Travel",
+        "coach": "Ayers",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
+      }
+    ],
     "H-HST1": [
       {
         "event_id": "5f3910d09f889407072141680e7f2197",
@@ -658,15 +639,6 @@
       "title": ""
     },
     {
-      "field": "H-HST2A",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-HST3",
       "start": "18:00",
       "end": "21:00",
@@ -677,24 +649,6 @@
     },
     {
       "field": "H-HST4",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST5",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST6",
       "start": "18:00",
       "end": "21:00",
       "start_12": "6:00 PM",
@@ -766,6 +720,19 @@
       "title": ""
     },
     {
+      "field": "H-HST2",
+      "start": "18:00",
+      "end": "19:30",
+      "start_12": "6:00 PM",
+      "end_12": "7:30 PM",
+      "type": "practice",
+      "title": "5/6 Boys Travel (Ayers) Practice",
+      "team": "5/6 Boys Travel",
+      "coach": "Ayers",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
       "field": "H-HST1",
       "start": "18:00",
       "end": "19:30",
@@ -777,6 +744,15 @@
       "coach": "Baird-Miller",
       "grade": "5/6",
       "source": "ICS"
+    },
+    {
+      "field": "H-HST2",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-HST1",
@@ -797,13 +773,12 @@
       {
         "type": "free",
         "start": "18:00",
-        "end": "21:00",
+        "end": "19:30",
         "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
+        "end_12": "7:30 PM",
         "fields": [
-          "H-HST2A",
-          "H-HST5",
-          "H-HST6"
+          "H-HST3",
+          "H-HST4"
         ],
         "title": null,
         "team": null,
@@ -814,28 +789,28 @@
       {
         "type": "practice",
         "start": "18:00",
-        "end": "21:00",
+        "end": "19:30",
         "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
+        "end_12": "7:30 PM",
         "fields": [
           "H-HST",
-          "H-HST1"
+          "H-HST1",
+          "H-HST2"
         ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
+        "title": "5/6 Girls Travel (Baird-Miller) Practice",
+        "team": "5/6 Girls Travel",
+        "coach": "Baird-Miller",
+        "grade": "5/6",
         "reason": null
-      }
-    ],
-    "": [
+      },
       {
         "type": "free",
-        "start": "18:00",
+        "start": "19:30",
         "end": "21:00",
-        "start_12": "6:00 PM",
+        "start_12": "7:30 PM",
         "end_12": "9:00 PM",
         "fields": [
+          "H-HST2",
           "H-HST3",
           "H-HST4"
         ],
@@ -843,6 +818,22 @@
         "team": null,
         "coach": null,
         "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "19:30",
+        "end": "21:00",
+        "start_12": "7:30 PM",
+        "end_12": "9:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1"
+        ],
+        "title": "7/8 Boys Travel (Mills) Practice",
+        "team": "7/8 Boys Travel",
+        "coach": "Mills",
+        "grade": "7/8",
         "reason": null
       }
     ],

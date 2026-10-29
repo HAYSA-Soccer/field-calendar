@@ -2,7 +2,7 @@
   "date": "2026-11-14",
   "sunset": "16:23",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 10:03 AM",
+  "last_successful_update": "October 29, 2026 at 12:27 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -204,20 +204,8 @@
     ],
     "H-HST1": [],
     "H-HST2": [],
-    "H-HST3": [
-      {
-        "start": "09:00",
-        "end": "21:00",
-        "mode": "game_only"
-      }
-    ],
-    "H-HST4": [
-      {
-        "start": "09:00",
-        "end": "21:00",
-        "mode": "game_only"
-      }
-    ],
+    "H-HST3": [],
+    "H-HST4": [],
     "H-Su1": [
       {
         "start": "08:00",
@@ -435,24 +423,6 @@
       "title": ""
     },
     {
-      "field": "H-HST3",
-      "start": "09:00",
-      "end": "21:00",
-      "start_12": "9:00 AM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST4",
-      "start": "09:00",
-      "end": "21:00",
-      "start_12": "9:00 AM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-HST",
       "start": "12:00",
       "end": "13:00",
@@ -493,25 +463,7 @@
         "start_12": "9:00 AM",
         "end_12": "12:00 PM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "12:00",
-        "end": "13:00",
-        "start_12": "12:00 PM",
-        "end_12": "1:00 PM",
-        "fields": [
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,
@@ -541,9 +493,7 @@
         "start_12": "1:00 PM",
         "end_12": "9:00 PM",
         "fields": [
-          "H-HST",
-          "H-HST3",
-          "H-HST4"
+          "H-HST"
         ],
         "title": null,
         "team": null,
