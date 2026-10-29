@@ -2,12 +2,16 @@
   "date": "2026-11-02",
   "sunset": "16:36",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 10:10 AM",
+  "last_successful_update": "October 29, 2026 at 11:06 AM",
   "complexes": {
     "TURF": [
       "H-HST",
       "H-HST1",
-      "H-HST2",
+      "H-HST2A",
+      "H-HST5",
+      "H-HST6"
+    ],
+    "OTHER": [
       "H-HST3",
       "H-HST4"
     ],
@@ -47,7 +51,7 @@
       "surface": ""
     },
     {
-      "id": "H-HST2",
+      "id": "H-HST2A",
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 2",
@@ -56,6 +60,22 @@
     },
     {
       "id": "H-HST3",
+      "parent_field": "",
+      "field_type": "",
+      "name": "H-HST3",
+      "complex": "OTHER",
+      "surface": ""
+    },
+    {
+      "id": "H-HST4",
+      "parent_field": "",
+      "field_type": "",
+      "name": "H-HST4",
+      "complex": "OTHER",
+      "surface": ""
+    },
+    {
+      "id": "H-HST5",
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 3",
@@ -63,7 +83,7 @@
       "surface": ""
     },
     {
-      "id": "H-HST4",
+      "id": "H-HST6",
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 4",
@@ -204,11 +224,11 @@
         "end": "21:00"
       }
     ],
-    "H-HST2": [
+    "H-HST2A": [
       {
         "start": "18:00",
         "end": "21:00",
-        "mode": "practice_only"
+        "mode": "both"
       }
     ],
     "H-HST3": [
@@ -223,6 +243,20 @@
         "start": "18:00",
         "end": "21:00",
         "mode": "practice_only"
+      }
+    ],
+    "H-HST5": [
+      {
+        "start": "18:00",
+        "end": "21:00",
+        "mode": "both"
+      }
+    ],
+    "H-HST6": [
+      {
+        "start": "18:00",
+        "end": "21:00",
+        "mode": "both"
       }
     ],
     "H-Su1": [
@@ -544,7 +578,7 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST2",
+      "field": "H-HST2A",
       "start": "18:00",
       "end": "21:00",
       "start_12": "6:00 PM",
@@ -563,6 +597,24 @@
     },
     {
       "field": "H-HST4",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST5",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST6",
       "start": "18:00",
       "end": "21:00",
       "start_12": "6:00 PM",
@@ -656,9 +708,9 @@
         "start_12": "6:00 PM",
         "end_12": "7:30 PM",
         "fields": [
-          "H-HST2",
-          "H-HST3",
-          "H-HST4"
+          "H-HST2A",
+          "H-HST5",
+          "H-HST6"
         ],
         "title": null,
         "team": null,
@@ -691,7 +743,25 @@
         "fields": [
           "H-HST",
           "H-HST1",
-          "H-HST2",
+          "H-HST2A",
+          "H-HST5",
+          "H-HST6"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      }
+    ],
+    "": [
+      {
+        "type": "free",
+        "start": "18:00",
+        "end": "21:00",
+        "start_12": "6:00 PM",
+        "end_12": "9:00 PM",
+        "fields": [
           "H-HST3",
           "H-HST4"
         ],
