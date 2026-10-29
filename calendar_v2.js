@@ -527,16 +527,15 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
         });
 
       const laneWidth = 100 / totalLaneCount;
-
+      
       const freeLanes = [...Array(totalLaneCount).keys()].filter(
         i => !overlappingEventLanes.has(i)
       );
-
-      const spanStart = Math.min(...freeLanes);
-      const spanEnd = Math.max(...freeLanes);
-
-      block.style.left = (spanStart * laneWidth) + "%";
-      block.style.width = ((spanEnd - spanStart + 1) * laneWidth) + "%";
+      
+      const lane = freeLanes[0];
+      
+      block.style.left = (lane * laneWidth) + "%";
+      block.style.width = laneWidth + "%";
     }
 
     block.style.top = ((b.start - DAY_START) * PX_PER_MIN) + "px";
