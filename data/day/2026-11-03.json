@@ -2,12 +2,14 @@
   "date": "2026-11-03",
   "sunset": "16:35",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 4:01 AM",
+  "last_successful_update": "October 29, 2026 at 9:15 AM",
   "complexes": {
     "TURF": [
       "H-HST",
       "H-HST1",
-      "H-HST2"
+      "H-HST2",
+      "H-HST3",
+      "H-HST4"
     ],
     "SUMNER/SEAN JOYCE": [
       "H-Su1",
@@ -49,6 +51,22 @@
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 2",
+      "complex": "TURF",
+      "surface": ""
+    },
+    {
+      "id": "H-HST3",
+      "parent_field": "H-HST",
+      "field_type": "half",
+      "name": "Holbrook High School Turf 3",
+      "complex": "TURF",
+      "surface": ""
+    },
+    {
+      "id": "H-HST4",
+      "parent_field": "H-HST",
+      "field_type": "half",
+      "name": "Holbrook High School Turf 4",
       "complex": "TURF",
       "surface": ""
     },
@@ -174,12 +192,7 @@
     }
   ],
   "availability": {
-    "H-HST": [
-      {
-        "start": "19:00",
-        "end": "19:30"
-      }
-    ],
+    "H-HST": [],
     "H-HST1": [
       {
         "start": "19:00",
@@ -190,6 +203,19 @@
       {
         "start": "19:00",
         "end": "21:00"
+      }
+    ],
+    "H-HST3": [
+      {
+        "start": "20:00",
+        "end": "21:00"
+      }
+    ],
+    "H-HST4": [
+      {
+        "start": "18:00",
+        "end": "21:00",
+        "mode": "both"
       }
     ],
     "H-Su1": [
@@ -315,6 +341,50 @@
         "grade": "3/4",
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
+      }
+    ],
+    "H-HST3": [
+      {
+        "event_id": "b1c0c6f7930582246754c1358c4f26ae",
+        "date": "2026-11-03",
+        "start": "18:00",
+        "end": "19:00",
+        "field": "H-HST3",
+        "type": "practice",
+        "title": "Hornets Nest Solutions LLC (Red) Practice",
+        "team": "Hornets Nest Solutions LLC",
+        "coach": "Red",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST3, Holbrook High School"
+      },
+      {
+        "event_id": "1a2e8aee1062dc89a7bb66be6a981082",
+        "date": "2026-11-03",
+        "start": "18:00",
+        "end": "19:00",
+        "field": "H-HST3",
+        "type": "practice",
+        "title": "Avon Septic and Pumping (Blue) Practice",
+        "team": "Avon Septic and Pumping",
+        "coach": "Blue",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST3, Holbrook High School"
+      },
+      {
+        "event_id": "235652b7d3a15dfc6285d467c44c7612",
+        "date": "2026-11-03",
+        "start": "19:00",
+        "end": "20:00",
+        "field": "H-HST3",
+        "type": "practice",
+        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+        "coach": "",
+        "grade": "5/6",
+        "source": "ICS",
+        "field_display": "H-HST3, Holbrook High School"
       }
     ],
     "H-SJ4A": [
@@ -474,6 +544,15 @@
       "source": "ICS"
     },
     {
+      "field": "H-HST4",
+      "start": "18:00",
+      "end": "21:00",
+      "start_12": "6:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-SJ4",
       "start": "18:00",
       "end": "19:00",
@@ -505,6 +584,32 @@
       "source": "ICS"
     },
     {
+      "field": "H-HST3",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "practice",
+      "title": "Hornets Nest Solutions LLC (Red) Practice",
+      "team": "Hornets Nest Solutions LLC",
+      "coach": "Red",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST3",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "practice",
+      "title": "Avon Septic and Pumping (Blue) Practice",
+      "team": "Avon Septic and Pumping",
+      "coach": "Blue",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
       "field": "H-HST2",
       "start": "18:00",
       "end": "19:00",
@@ -518,15 +623,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST",
-      "start": "19:00",
-      "end": "19:30",
-      "start_12": "7:00 PM",
-      "end_12": "7:30 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-HST1",
       "start": "19:00",
       "end": "19:30",
@@ -545,6 +641,19 @@
       "title": ""
     },
     {
+      "field": "H-HST3",
+      "start": "19:00",
+      "end": "20:00",
+      "start_12": "7:00 PM",
+      "end_12": "8:00 PM",
+      "type": "practice",
+      "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+      "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+      "coach": "",
+      "grade": "5/6",
+      "source": "ICS"
+    },
+    {
       "field": "H-HST1",
       "start": "19:30",
       "end": "21:00",
@@ -556,10 +665,34 @@
       "coach": "Collins",
       "grade": "7/8",
       "source": "ICS"
+    },
+    {
+      "field": "H-HST3",
+      "start": "20:00",
+      "end": "21:00",
+      "start_12": "8:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
     }
   ],
   "merged_availability": {
     "TURF": [
+      {
+        "type": "free",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-HST4"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
       {
         "type": "practice",
         "start": "18:00",
@@ -569,7 +702,8 @@
         "fields": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3"
         ],
         "title": "3/4 Girls Travel (Lamb-Williams) Practice",
         "team": "3/4 Girls Travel",
@@ -584,9 +718,25 @@
         "start_12": "7:00 PM",
         "end_12": "7:30 PM",
         "fields": [
-          "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST4"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "19:00",
+        "end": "19:30",
+        "start_12": "7:00 PM",
+        "end_12": "7:30 PM",
+        "fields": [
+          "H-HST",
+          "H-HST3"
         ],
         "title": null,
         "team": null,
@@ -597,11 +747,12 @@
       {
         "type": "free",
         "start": "19:30",
-        "end": "21:00",
+        "end": "20:00",
         "start_12": "7:30 PM",
-        "end_12": "9:00 PM",
+        "end_12": "8:00 PM",
         "fields": [
-          "H-HST2"
+          "H-HST2",
+          "H-HST4"
         ],
         "title": null,
         "team": null,
@@ -612,17 +763,51 @@
       {
         "type": "practice",
         "start": "19:30",
-        "end": "21:00",
+        "end": "20:00",
         "start_12": "7:30 PM",
+        "end_12": "8:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST3"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "20:00",
+        "end": "21:00",
+        "start_12": "8:00 PM",
+        "end_12": "9:00 PM",
+        "fields": [
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "20:00",
+        "end": "21:00",
+        "start_12": "8:00 PM",
         "end_12": "9:00 PM",
         "fields": [
           "H-HST",
           "H-HST1"
         ],
-        "title": "7/8 Boys Travel (Collins) Practice",
-        "team": "7/8 Boys Travel",
-        "coach": "Collins",
-        "grade": "7/8",
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
         "reason": null
       }
     ],

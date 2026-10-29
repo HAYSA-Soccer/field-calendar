@@ -16510,12 +16510,14 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:03 AM",
+      "last_successful_update": "October 29, 2026 at 9:18 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -16557,6 +16559,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -16701,6 +16719,20 @@
             "start": "18:00",
             "end": "21:00",
             "mode": "practice_only"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -16928,6 +16960,24 @@
           "end_12": "9:00 PM",
           "type": "free",
           "title": ""
+        },
+        {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
         }
       ],
       "merged_availability": {
@@ -16941,7 +16991,9 @@
             "fields": [
               "H-HST",
               "H-HST1",
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -16984,12 +17036,14 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:04 AM",
+      "last_successful_update": "October 29, 2026 at 9:19 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -17031,6 +17085,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -17175,6 +17245,20 @@
             "start": "18:00",
             "end": "21:00",
             "mode": "practice_only"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -17402,6 +17486,24 @@
           "end_12": "9:00 PM",
           "type": "free",
           "title": ""
+        },
+        {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
         }
       ],
       "merged_availability": {
@@ -17415,7 +17517,9 @@
             "fields": [
               "H-HST",
               "H-HST1",
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -17458,12 +17562,14 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:05 AM",
+      "last_successful_update": "October 29, 2026 at 9:21 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -17505,6 +17611,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -17633,6 +17755,8 @@
         "H-HST": [],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [],
+        "H-HST4": [],
         "H-Su1": [
           {
             "start": "16:00",
@@ -18036,12 +18160,14 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:04 AM",
+      "last_successful_update": "October 29, 2026 at 9:20 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -18083,6 +18209,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -18215,6 +18357,20 @@
             "start": "18:00",
             "end": "21:00",
             "mode": "practice_only"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -18457,6 +18613,24 @@
           "title": ""
         },
         {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-HST1",
           "start": "18:00",
           "end": "19:30",
@@ -18492,7 +18666,9 @@
             "start_12": "6:00 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -18551,12 +18727,14 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:05 AM",
+      "last_successful_update": "October 29, 2026 at 9:22 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -18598,6 +18776,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -18735,6 +18929,20 @@
         ],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [
+          {
+            "start": "09:00",
+            "end": "21:00",
+            "mode": "game_only"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "09:00",
+            "end": "21:00",
+            "mode": "game_only"
+          }
+        ],
         "H-Su1": [
           {
             "start": "08:00",
@@ -18952,6 +19160,24 @@
           "title": ""
         },
         {
+          "field": "H-HST3",
+          "start": "09:00",
+          "end": "21:00",
+          "start_12": "9:00 AM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "09:00",
+          "end": "21:00",
+          "start_12": "9:00 AM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-HST",
           "start": "12:00",
           "end": "13:00",
@@ -18992,7 +19218,25 @@
             "start_12": "9:00 AM",
             "end_12": "12:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "12:00",
+            "end": "13:00",
+            "start_12": "12:00 PM",
+            "end_12": "1:00 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -19022,7 +19266,9 @@
             "start_12": "1:00 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -19090,12 +19336,14 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:03 AM",
+      "last_successful_update": "October 29, 2026 at 9:19 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -19137,6 +19385,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -19281,6 +19545,20 @@
             "start": "18:00",
             "end": "21:00",
             "mode": "practice_only"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -19508,6 +19786,24 @@
           "end_12": "9:00 PM",
           "type": "free",
           "title": ""
+        },
+        {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
         }
       ],
       "merged_availability": {
@@ -19521,7 +19817,9 @@
             "fields": [
               "H-HST",
               "H-HST1",
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -26783,12 +27081,14 @@
       "date": "2026-11-06",
       "sunset": "16:31",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:02 AM",
+      "last_successful_update": "October 29, 2026 at 9:17 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -26830,6 +27130,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -26958,6 +27274,8 @@
         "H-HST": [],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [],
+        "H-HST4": [],
         "H-Su1": [
           {
             "start": "16:00",
@@ -27540,12 +27858,14 @@
       "date": "2026-11-05",
       "sunset": "16:33",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:02 AM",
+      "last_successful_update": "October 29, 2026 at 9:16 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -27587,6 +27907,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -27718,6 +28054,20 @@
           {
             "start": "19:30",
             "end": "21:00"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -28145,6 +28495,24 @@
           "title": ""
         },
         {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-Su1",
           "start": "18:00",
           "end": "19:00",
@@ -28259,6 +28627,22 @@
       "merged_availability": {
         "TURF": [
           {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:30",
+            "start_12": "6:00 PM",
+            "end_12": "7:30 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
             "type": "practice",
             "start": "18:00",
             "end": "19:30",
@@ -28282,7 +28666,9 @@
             "start_12": "7:30 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -28487,12 +28873,14 @@
       "date": "2026-11-07",
       "sunset": "16:30",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:02 AM",
+      "last_successful_update": "October 29, 2026 at 9:17 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -28534,6 +28922,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -28687,6 +29091,20 @@
         ],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [
+          {
+            "start": "09:00",
+            "end": "21:00",
+            "mode": "game_only"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "09:00",
+            "end": "21:00",
+            "mode": "game_only"
+          }
+        ],
         "H-Su1": [
           {
             "start": "08:00",
@@ -29084,6 +29502,24 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST3",
+          "start": "09:00",
+          "end": "21:00",
+          "start_12": "9:00 AM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "09:00",
+          "end": "21:00",
+          "start_12": "9:00 AM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-HST",
           "start": "09:00",
           "end": "10:00",
@@ -29320,6 +29756,22 @@
       "merged_availability": {
         "TURF": [
           {
+            "type": "free",
+            "start": "09:00",
+            "end": "10:00",
+            "start_12": "9:00 AM",
+            "end_12": "10:00 AM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
             "type": "game",
             "start": "09:00",
             "end": "10:00",
@@ -29341,7 +29793,25 @@
             "start_12": "10:00 AM",
             "end_12": "10:30 AM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "10:30",
+            "end": "11:30",
+            "start_12": "10:30 AM",
+            "end_12": "11:30 AM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -29371,7 +29841,25 @@
             "start_12": "11:30 AM",
             "end_12": "12:30 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "12:30",
+            "end": "13:30",
+            "start_12": "12:30 PM",
+            "end_12": "1:30 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -29401,7 +29889,25 @@
             "start_12": "1:30 PM",
             "end_12": "2:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "14:00",
+            "end": "15:00",
+            "start_12": "2:00 PM",
+            "end_12": "3:00 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -29431,7 +29937,25 @@
             "start_12": "3:00 PM",
             "end_12": "3:30 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "15:30",
+            "end": "16:30",
+            "start_12": "3:30 PM",
+            "end_12": "4:30 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -29461,7 +29985,25 @@
             "start_12": "4:30 PM",
             "end_12": "5:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "17:00",
+            "end": "18:00",
+            "start_12": "5:00 PM",
+            "end_12": "6:00 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -29491,7 +30033,9 @@
             "start_12": "6:00 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -29679,12 +30223,14 @@
       "date": "2026-11-02",
       "sunset": "16:36",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:00 AM",
+      "last_successful_update": "October 29, 2026 at 9:14 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -29726,6 +30272,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -29868,6 +30430,20 @@
             "start": "18:00",
             "end": "21:00",
             "mode": "practice_only"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -30198,6 +30774,24 @@
           "title": ""
         },
         {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-SJ3",
           "start": "18:00",
           "end": "19:00",
@@ -30283,7 +30877,9 @@
             "start_12": "6:00 PM",
             "end_12": "7:30 PM",
             "fields": [
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -30316,7 +30912,9 @@
             "fields": [
               "H-HST",
               "H-HST1",
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -30505,12 +31103,14 @@
       "date": "2026-11-04",
       "sunset": "16:34",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:01 AM",
+      "last_successful_update": "October 29, 2026 at 9:16 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -30552,6 +31152,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -30688,6 +31304,20 @@
           {
             "start": "19:00",
             "end": "19:30"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -31092,6 +31722,24 @@
           "title": ""
         },
         {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-Su1",
           "start": "18:00",
           "end": "19:00",
@@ -31197,6 +31845,22 @@
       "merged_availability": {
         "TURF": [
           {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
             "type": "practice",
             "start": "18:00",
             "end": "19:00",
@@ -31220,7 +31884,9 @@
             "start_12": "7:00 PM",
             "end_12": "7:30 PM",
             "fields": [
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -31251,7 +31917,9 @@
             "start_12": "7:30 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST1"
+              "H-HST1",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -31456,12 +32124,14 @@
       "date": "2026-11-08",
       "sunset": "16:29",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:03 AM",
+      "last_successful_update": "October 29, 2026 at 9:18 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -31503,6 +32173,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -31631,6 +32317,8 @@
         "H-HST": [],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [],
+        "H-HST4": [],
         "H-Su1": [],
         "H-Su1A": [],
         "H-Su1B": [],
@@ -31659,12 +32347,14 @@
       "date": "2026-11-03",
       "sunset": "16:35",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:01 AM",
+      "last_successful_update": "October 29, 2026 at 9:15 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -31706,6 +32396,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -31831,12 +32537,7 @@
         }
       ],
       "availability": {
-        "H-HST": [
-          {
-            "start": "19:00",
-            "end": "19:30"
-          }
-        ],
+        "H-HST": [],
         "H-HST1": [
           {
             "start": "19:00",
@@ -31847,6 +32548,19 @@
           {
             "start": "19:00",
             "end": "21:00"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "20:00",
+            "end": "21:00"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
           }
         ],
         "H-Su1": [
@@ -31972,6 +32686,50 @@
             "grade": "3/4",
             "source": "ICS",
             "field_display": "H-HST1, Holbrook High School"
+          }
+        ],
+        "H-HST3": [
+          {
+            "event_id": "b1c0c6f7930582246754c1358c4f26ae",
+            "date": "2026-11-03",
+            "start": "18:00",
+            "end": "19:00",
+            "field": "H-HST3",
+            "type": "practice",
+            "title": "Hornets Nest Solutions LLC (Red) Practice",
+            "team": "Hornets Nest Solutions LLC",
+            "coach": "Red",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          },
+          {
+            "event_id": "1a2e8aee1062dc89a7bb66be6a981082",
+            "date": "2026-11-03",
+            "start": "18:00",
+            "end": "19:00",
+            "field": "H-HST3",
+            "type": "practice",
+            "title": "Avon Septic and Pumping (Blue) Practice",
+            "team": "Avon Septic and Pumping",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          },
+          {
+            "event_id": "235652b7d3a15dfc6285d467c44c7612",
+            "date": "2026-11-03",
+            "start": "19:00",
+            "end": "20:00",
+            "field": "H-HST3",
+            "type": "practice",
+            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
           }
         ],
         "H-SJ4A": [
@@ -32131,6 +32889,15 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-SJ4",
           "start": "18:00",
           "end": "19:00",
@@ -32162,6 +32929,32 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "practice",
+          "title": "Hornets Nest Solutions LLC (Red) Practice",
+          "team": "Hornets Nest Solutions LLC",
+          "coach": "Red",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "practice",
+          "title": "Avon Septic and Pumping (Blue) Practice",
+          "team": "Avon Septic and Pumping",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
           "field": "H-HST2",
           "start": "18:00",
           "end": "19:00",
@@ -32175,15 +32968,6 @@
           "source": "ICS"
         },
         {
-          "field": "H-HST",
-          "start": "19:00",
-          "end": "19:30",
-          "start_12": "7:00 PM",
-          "end_12": "7:30 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
           "field": "H-HST1",
           "start": "19:00",
           "end": "19:30",
@@ -32202,6 +32986,19 @@
           "title": ""
         },
         {
+          "field": "H-HST3",
+          "start": "19:00",
+          "end": "20:00",
+          "start_12": "7:00 PM",
+          "end_12": "8:00 PM",
+          "type": "practice",
+          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
+          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
           "field": "H-HST1",
           "start": "19:30",
           "end": "21:00",
@@ -32213,10 +33010,34 @@
           "coach": "Collins",
           "grade": "7/8",
           "source": "ICS"
+        },
+        {
+          "field": "H-HST3",
+          "start": "20:00",
+          "end": "21:00",
+          "start_12": "8:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
         }
       ],
       "merged_availability": {
         "TURF": [
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
           {
             "type": "practice",
             "start": "18:00",
@@ -32226,7 +33047,8 @@
             "fields": [
               "H-HST",
               "H-HST1",
-              "H-HST2"
+              "H-HST2",
+              "H-HST3"
             ],
             "title": "3/4 Girls Travel (Lamb-Williams) Practice",
             "team": "3/4 Girls Travel",
@@ -32241,9 +33063,25 @@
             "start_12": "7:00 PM",
             "end_12": "7:30 PM",
             "fields": [
-              "H-HST",
               "H-HST1",
-              "H-HST2"
+              "H-HST2",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "19:00",
+            "end": "19:30",
+            "start_12": "7:00 PM",
+            "end_12": "7:30 PM",
+            "fields": [
+              "H-HST",
+              "H-HST3"
             ],
             "title": null,
             "team": null,
@@ -32254,11 +33092,12 @@
           {
             "type": "free",
             "start": "19:30",
-            "end": "21:00",
+            "end": "20:00",
             "start_12": "7:30 PM",
-            "end_12": "9:00 PM",
+            "end_12": "8:00 PM",
             "fields": [
-              "H-HST2"
+              "H-HST2",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -32269,17 +33108,51 @@
           {
             "type": "practice",
             "start": "19:30",
-            "end": "21:00",
+            "end": "20:00",
             "start_12": "7:30 PM",
+            "end_12": "8:00 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1",
+              "H-HST3"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "20:00",
+            "end": "21:00",
+            "start_12": "8:00 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "20:00",
+            "end": "21:00",
+            "start_12": "8:00 PM",
             "end_12": "9:00 PM",
             "fields": [
               "H-HST",
               "H-HST1"
             ],
-            "title": "7/8 Boys Travel (Collins) Practice",
-            "team": "7/8 Boys Travel",
-            "coach": "Collins",
-            "grade": "7/8",
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
             "reason": null
           }
         ],
@@ -32385,12 +33258,14 @@
       "date": "2026-10-28",
       "sunset": "17:43",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 3:58 AM",
+      "last_successful_update": "October 29, 2026 at 9:11 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -32432,6 +33307,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -32560,6 +33451,20 @@
         "H-HST": [],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "18:00",
+            "end": "21:00",
+            "mode": "both"
+          }
+        ],
         "H-Su1": [
           {
             "start": "16:00",
@@ -33011,6 +33916,24 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "18:00",
+          "end": "21:00",
+          "start_12": "6:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-Su1",
           "start": "18:00",
           "end": "19:00",
@@ -33128,6 +34051,22 @@
       ],
       "merged_availability": {
         "TURF": [
+          {
+            "type": "free",
+            "start": "18:00",
+            "end": "21:00",
+            "start_12": "6:00 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
           {
             "type": "practice",
             "start": "18:00",
@@ -35130,12 +36069,14 @@
       "date": "2026-10-30",
       "sunset": "17:40",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 3:59 AM",
+      "last_successful_update": "October 29, 2026 at 9:13 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -35177,6 +36118,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -35305,6 +36262,8 @@
         "H-HST": [],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [],
+        "H-HST4": [],
         "H-Su1": [
           {
             "start": "16:00",
@@ -35993,12 +36952,14 @@
       "date": "2026-10-29",
       "sunset": "17:41",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 3:59 AM",
+      "last_successful_update": "October 29, 2026 at 9:12 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -36040,6 +37001,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -36168,6 +37145,18 @@
         "H-HST": [],
         "H-HST1": [],
         "H-HST2": [
+          {
+            "start": "20:00",
+            "end": "21:00"
+          }
+        ],
+        "H-HST3": [
+          {
+            "start": "20:00",
+            "end": "21:00"
+          }
+        ],
+        "H-HST4": [
           {
             "start": "20:00",
             "end": "21:00"
@@ -36765,6 +37754,24 @@
           "end_12": "9:00 PM",
           "type": "free",
           "title": ""
+        },
+        {
+          "field": "H-HST3",
+          "start": "20:00",
+          "end": "21:00",
+          "start_12": "8:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "20:00",
+          "end": "21:00",
+          "start_12": "8:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
         }
       ],
       "merged_availability": {
@@ -36777,7 +37784,9 @@
             "end_12": "7:30 PM",
             "fields": [
               "H-HST1",
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -36807,7 +37816,9 @@
             "start_12": "7:30 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST2"
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -37052,12 +38063,14 @@
       "date": "2026-11-01",
       "sunset": "16:37",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:00 AM",
+      "last_successful_update": "October 29, 2026 at 9:13 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -37099,6 +38112,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -37227,6 +38256,8 @@
         "H-HST": [],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [],
+        "H-HST4": [],
         "H-Su1": [],
         "H-Su1A": [],
         "H-Su1B": [],
@@ -37255,12 +38286,14 @@
       "date": "2026-10-31",
       "sunset": "17:39",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 4:00 AM",
+      "last_successful_update": "October 29, 2026 at 9:13 AM",
       "complexes": {
         "TURF": [
           "H-HST",
           "H-HST1",
-          "H-HST2"
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "SUMNER/SEAN JOYCE": [
           "H-Su1",
@@ -37302,6 +38335,22 @@
           "parent_field": "H-HST",
           "field_type": "half",
           "name": "Holbrook High School Turf 2",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST3",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 3",
+          "complex": "TURF",
+          "surface": ""
+        },
+        {
+          "id": "H-HST4",
+          "parent_field": "H-HST",
+          "field_type": "half",
+          "name": "Holbrook High School Turf 4",
           "complex": "TURF",
           "surface": ""
         },
@@ -37443,6 +38492,20 @@
         ],
         "H-HST1": [],
         "H-HST2": [],
+        "H-HST3": [
+          {
+            "start": "09:00",
+            "end": "21:00",
+            "mode": "game_only"
+          }
+        ],
+        "H-HST4": [
+          {
+            "start": "09:00",
+            "end": "21:00",
+            "mode": "game_only"
+          }
+        ],
         "H-Su1": [
           {
             "start": "08:00",
@@ -38032,6 +39095,24 @@
           "title": ""
         },
         {
+          "field": "H-HST3",
+          "start": "09:00",
+          "end": "21:00",
+          "start_12": "9:00 AM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
+          "field": "H-HST4",
+          "start": "09:00",
+          "end": "21:00",
+          "start_12": "9:00 AM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-Su1",
           "start": "09:30",
           "end": "09:45",
@@ -38389,7 +39470,25 @@
             "start_12": "9:00 AM",
             "end_12": "2:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "14:00",
+            "end": "15:00",
+            "start_12": "2:00 PM",
+            "end_12": "3:00 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -38419,7 +39518,25 @@
             "start_12": "3:00 PM",
             "end_12": "3:30 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "15:30",
+            "end": "16:30",
+            "start_12": "3:30 PM",
+            "end_12": "4:30 PM",
+            "fields": [
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,
@@ -38449,7 +39566,9 @@
             "start_12": "4:30 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST3",
+              "H-HST4"
             ],
             "title": null,
             "team": null,

@@ -2,12 +2,14 @@
   "date": "2026-11-08",
   "sunset": "16:29",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 4:03 AM",
+  "last_successful_update": "October 29, 2026 at 9:18 AM",
   "complexes": {
     "TURF": [
       "H-HST",
       "H-HST1",
-      "H-HST2"
+      "H-HST2",
+      "H-HST3",
+      "H-HST4"
     ],
     "SUMNER/SEAN JOYCE": [
       "H-Su1",
@@ -49,6 +51,22 @@
       "parent_field": "H-HST",
       "field_type": "half",
       "name": "Holbrook High School Turf 2",
+      "complex": "TURF",
+      "surface": ""
+    },
+    {
+      "id": "H-HST3",
+      "parent_field": "H-HST",
+      "field_type": "half",
+      "name": "Holbrook High School Turf 3",
+      "complex": "TURF",
+      "surface": ""
+    },
+    {
+      "id": "H-HST4",
+      "parent_field": "H-HST",
+      "field_type": "half",
+      "name": "Holbrook High School Turf 4",
       "complex": "TURF",
       "surface": ""
     },
@@ -177,6 +195,8 @@
     "H-HST": [],
     "H-HST1": [],
     "H-HST2": [],
+    "H-HST3": [],
+    "H-HST4": [],
     "H-Su1": [],
     "H-Su1A": [],
     "H-Su1B": [],
