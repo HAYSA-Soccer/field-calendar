@@ -2,7 +2,7 @@
   "date": "2026-11-03",
   "sunset": "16:35",
   "updated": true,
-  "last_successful_update": "October 28, 2026 at 5:36 PM",
+  "last_successful_update": "October 28, 2026 at 9:33 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -261,7 +261,7 @@
         "end": "17:00"
       },
       {
-        "start": "18:30",
+        "start": "18:00",
         "end": "19:00"
       }
     ],
@@ -271,18 +271,15 @@
         "end": "17:00"
       },
       {
-        "start": "18:30",
+        "start": "18:00",
         "end": "19:00"
       }
     ],
     "H-SJ4B": [
       {
         "start": "16:00",
-        "end": "17:30"
-      },
-      {
-        "start": "18:30",
-        "end": "19:00"
+        "end": "19:00",
+        "mode": "practice_only"
       }
     ],
     "H-SuSS": [],
@@ -350,22 +347,6 @@
         "grade": "",
         "source": "ICS",
         "field_display": "H-HST2, Holbrook High School"
-      }
-    ],
-    "H-SJ4": [
-      {
-        "event_id": "a5cffec9acf6543b2fb68cfa1306f1e4",
-        "date": "2026-11-03",
-        "start": "17:30",
-        "end": "18:30",
-        "field": "H-SJ4",
-        "type": "practice",
-        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-        "coach": "",
-        "grade": "5/6",
-        "source": "ICS",
-        "field_display": "H-SJ4, Holbrook Sean Joyce Field"
       }
     ]
   },
@@ -473,9 +454,9 @@
     {
       "field": "H-SJ4B",
       "start": "16:00",
-      "end": "17:30",
+      "end": "19:00",
       "start_12": "4:00 PM",
-      "end_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
@@ -494,16 +475,21 @@
     },
     {
       "field": "H-SJ4",
-      "start": "17:30",
-      "end": "18:30",
-      "start_12": "5:30 PM",
-      "end_12": "6:30 PM",
-      "type": "practice",
-      "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-      "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-      "coach": "",
-      "grade": "5/6",
-      "source": "ICS"
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ4A",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-HST1",
@@ -530,33 +516,6 @@
       "coach": "Orange",
       "grade": "",
       "source": "ICS"
-    },
-    {
-      "field": "H-SJ4",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4A",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4B",
-      "start": "18:30",
-      "end": "19:00",
-      "start_12": "6:30 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
     },
     {
       "field": "H-HST",
@@ -697,9 +656,9 @@
       {
         "type": "free",
         "start": "17:00",
-        "end": "17:30",
+        "end": "18:00",
         "start_12": "5:00 PM",
-        "end_12": "5:30 PM",
+        "end_12": "6:00 PM",
         "fields": [
           "H-Su1",
           "H-Su1A",
@@ -721,64 +680,24 @@
       {
         "type": "practice",
         "start": "17:00",
-        "end": "17:30",
+        "end": "18:00",
         "start_12": "5:00 PM",
-        "end_12": "5:30 PM",
+        "end_12": "6:00 PM",
         "fields": [
           "H-SJ4",
           "H-SJ4A"
         ],
-        "title": null,
-        "team": null,
-        "coach": null,
+        "title": "The Sean Joyce Foundation (Red) Practice",
+        "team": "The Sean Joyce Foundation",
+        "coach": "Red",
         "grade": null,
         "reason": null
       },
       {
         "type": "free",
-        "start": "17:30",
-        "end": "18:30",
-        "start_12": "5:30 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "17:30",
-        "end": "18:30",
-        "start_12": "5:30 PM",
-        "end_12": "6:30 PM",
-        "fields": [
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-        "coach": null,
-        "grade": "5/6",
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "18:30",
+        "start": "18:00",
         "end": "19:00",
-        "start_12": "6:30 PM",
+        "start_12": "6:00 PM",
         "end_12": "7:00 PM",
         "fields": [
           "H-Su1",

@@ -5172,7 +5172,7 @@
     "date": "2026-11-09",
     "sunset": "16:28",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:38 PM",
+    "last_successful_update": "October 28, 2026 at 9:35 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9026,7 +9026,7 @@
     "date": "2026-11-06",
     "sunset": "16:31",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:37 PM",
+    "last_successful_update": "October 28, 2026 at 9:35 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9783,7 +9783,7 @@
     "date": "2026-10-28",
     "sunset": "17:43",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:34 PM",
+    "last_successful_update": "October 28, 2026 at 9:31 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -10764,7 +10764,7 @@
     "date": "2026-10-27",
     "sunset": "17:44",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:33 PM",
+    "last_successful_update": "October 28, 2026 at 9:30 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -12313,7 +12313,7 @@
     "date": "2026-11-05",
     "sunset": "16:33",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:37 PM",
+    "last_successful_update": "October 28, 2026 at 9:34 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -12583,21 +12583,15 @@
       "H-SJ4": [
         {
           "start": "16:00",
-          "end": "17:30"
-        },
-        {
-          "start": "18:30",
-          "end": "19:00"
+          "end": "19:00",
+          "mode": "both"
         }
       ],
       "H-SJ4A": [
         {
           "start": "16:00",
-          "end": "17:30"
-        },
-        {
-          "start": "18:30",
-          "end": "19:00"
+          "end": "19:00",
+          "mode": "practice_only"
         }
       ],
       "H-SJ4B": [
@@ -12656,22 +12650,6 @@
           "grade": "5/6",
           "source": "ICS",
           "field_display": "H-HST1, Holbrook High School"
-        }
-      ],
-      "H-SJ4A": [
-        {
-          "event_id": "b1c0c6f7930582246754c1358c4f26ae",
-          "date": "2026-11-05",
-          "start": "17:30",
-          "end": "18:30",
-          "field": "H-SJ4A",
-          "type": "practice",
-          "title": "Hornets Nest Solutions LLC (Red) Practice",
-          "team": "Hornets Nest Solutions LLC",
-          "coach": "Red",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
         }
       ],
       "H-SJ3A": [
@@ -12841,18 +12819,18 @@
       {
         "field": "H-SJ4",
         "start": "16:00",
-        "end": "17:30",
+        "end": "19:00",
         "start_12": "4:00 PM",
-        "end_12": "5:30 PM",
+        "end_12": "7:00 PM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-SJ4A",
         "start": "16:00",
-        "end": "17:30",
+        "end": "19:00",
         "start_12": "4:00 PM",
-        "end_12": "5:30 PM",
+        "end_12": "7:00 PM",
         "type": "free",
         "title": ""
       },
@@ -12938,19 +12916,6 @@
         "end_12": "7:00 PM",
         "type": "free",
         "title": ""
-      },
-      {
-        "field": "H-SJ4A",
-        "start": "17:30",
-        "end": "18:30",
-        "start_12": "5:30 PM",
-        "end_12": "6:30 PM",
-        "type": "practice",
-        "title": "Hornets Nest Solutions LLC (Red) Practice",
-        "team": "Hornets Nest Solutions LLC",
-        "coach": "Red",
-        "grade": "",
-        "source": "ICS"
       },
       {
         "field": "H-Su1",
@@ -13040,24 +13005,6 @@
         "coach": "Baird-Miller",
         "grade": "5/6",
         "source": "ICS"
-      },
-      {
-        "field": "H-SJ4",
-        "start": "18:30",
-        "end": "19:00",
-        "start_12": "6:30 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4A",
-        "start": "18:30",
-        "end": "19:00",
-        "start_12": "6:30 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
       },
       {
         "field": "H-HST2",
@@ -13249,6 +13196,8 @@
           "fields": [
             "H-Su1B",
             "H-Su2A",
+            "H-SJ4",
+            "H-SJ4A",
             "H-SJ4B"
           ],
           "title": null,
@@ -13270,9 +13219,7 @@
             "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4",
-            "H-SJ4A"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -13283,48 +13230,8 @@
         {
           "type": "free",
           "start": "18:00",
-          "end": "18:30",
-          "start_12": "6:00 PM",
-          "end_12": "6:30 PM",
-          "fields": [
-            "H-Su1",
-            "H-Su1A",
-            "H-Su1B",
-            "H-Su2",
-            "H-Su2A",
-            "H-Su2B",
-            "H-SJ3",
-            "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4B"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "18:00",
-          "end": "18:30",
-          "start_12": "6:00 PM",
-          "end_12": "6:30 PM",
-          "fields": [
-            "H-SJ4",
-            "H-SJ4A"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "18:30",
           "end": "19:00",
-          "start_12": "6:30 PM",
+          "start_12": "6:00 PM",
           "end_12": "7:00 PM",
           "fields": [
             "H-Su1",
@@ -14193,7 +14100,7 @@
     "date": "2026-11-11",
     "sunset": "16:26",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:39 PM",
+    "last_successful_update": "October 28, 2026 at 9:36 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -15915,7 +15822,7 @@
     "date": "2026-11-07",
     "sunset": "16:30",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:37 PM",
+    "last_successful_update": "October 28, 2026 at 9:35 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21307,7 +21214,7 @@
     "date": "2026-11-13",
     "sunset": "16:24",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:40 PM",
+    "last_successful_update": "October 28, 2026 at 9:37 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -22910,7 +22817,7 @@
     "date": "2026-11-12",
     "sunset": "16:25",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:39 PM",
+    "last_successful_update": "October 28, 2026 at 9:37 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -24666,7 +24573,7 @@
     "date": "2026-11-02",
     "sunset": "16:36",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:35 PM",
+    "last_successful_update": "October 28, 2026 at 9:33 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -24938,31 +24845,22 @@
       "H-SJ4": [
         {
           "start": "16:00",
-          "end": "17:00"
-        },
-        {
-          "start": "18:00",
-          "end": "19:00"
+          "end": "19:00",
+          "mode": "both"
         }
       ],
       "H-SJ4A": [
         {
           "start": "16:00",
-          "end": "17:00"
-        },
-        {
-          "start": "18:00",
-          "end": "19:00"
+          "end": "19:00",
+          "mode": "practice_only"
         }
       ],
       "H-SJ4B": [
         {
           "start": "16:00",
-          "end": "17:00"
-        },
-        {
-          "start": "18:00",
-          "end": "19:00"
+          "end": "19:00",
+          "mode": "practice_only"
         }
       ],
       "H-SuSS": [],
@@ -25032,22 +24930,6 @@
           "grade": "",
           "source": "ICS",
           "field_display": "H-Su2A, Holbrook Sumner Field"
-        }
-      ],
-      "H-SJ4": [
-        {
-          "event_id": "235652b7d3a15dfc6285d467c44c7612",
-          "date": "2026-11-02",
-          "start": "17:00",
-          "end": "18:00",
-          "field": "H-SJ4",
-          "type": "practice",
-          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS",
-          "field_display": "H-SJ4, Holbrook Sean Joyce Field"
         }
       ]
     },
@@ -25137,27 +25019,27 @@
       {
         "field": "H-SJ4",
         "start": "16:00",
-        "end": "17:00",
+        "end": "19:00",
         "start_12": "4:00 PM",
-        "end_12": "5:00 PM",
+        "end_12": "7:00 PM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-SJ4A",
         "start": "16:00",
-        "end": "17:00",
+        "end": "19:00",
         "start_12": "4:00 PM",
-        "end_12": "5:00 PM",
+        "end_12": "7:00 PM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-SJ4B",
         "start": "16:00",
-        "end": "17:00",
+        "end": "19:00",
         "start_12": "4:00 PM",
-        "end_12": "5:00 PM",
+        "end_12": "7:00 PM",
         "type": "free",
         "title": ""
       },
@@ -25183,19 +25065,6 @@
         "type": "practice",
         "title": "5/6/7 Girls Team 1 - Best Collision Practice",
         "team": "5/6/7 Girls Team 1 - Best Collision",
-        "coach": "",
-        "grade": "5/6",
-        "source": "ICS"
-      },
-      {
-        "field": "H-SJ4",
-        "start": "17:00",
-        "end": "18:00",
-        "start_12": "5:00 PM",
-        "end_12": "6:00 PM",
-        "type": "practice",
-        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
         "coach": "",
         "grade": "5/6",
         "source": "ICS"
@@ -25242,33 +25111,6 @@
       },
       {
         "field": "H-SJ3B",
-        "start": "18:00",
-        "end": "19:00",
-        "start_12": "6:00 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4",
-        "start": "18:00",
-        "end": "19:00",
-        "start_12": "6:00 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4A",
-        "start": "18:00",
-        "end": "19:00",
-        "start_12": "6:00 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4B",
         "start": "18:00",
         "end": "19:00",
         "start_12": "6:00 PM",
@@ -25416,7 +25258,10 @@
             "H-Su1B",
             "H-Su2",
             "H-Su2A",
-            "H-Su2B"
+            "H-Su2B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -25433,10 +25278,7 @@
           "fields": [
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4",
-            "H-SJ4A",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -25454,7 +25296,10 @@
             "H-Su1",
             "H-Su1A",
             "H-Su1B",
-            "H-Su2B"
+            "H-Su2B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": null,
           "team": null,
@@ -25473,10 +25318,7 @@
             "H-Su2A",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4",
-            "H-SJ4A",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -26063,7 +25905,7 @@
     "date": "2026-10-30",
     "sunset": "17:40",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:34 PM",
+    "last_successful_update": "October 28, 2026 at 9:31 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -26926,7 +26768,7 @@
     "date": "2026-11-04",
     "sunset": "16:34",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:36 PM",
+    "last_successful_update": "October 28, 2026 at 9:34 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -27877,7 +27719,7 @@
     "date": "2026-10-29",
     "sunset": "17:41",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:34 PM",
+    "last_successful_update": "October 28, 2026 at 9:31 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -31853,7 +31695,7 @@
     "date": "2026-11-08",
     "sunset": "16:29",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:38 PM",
+    "last_successful_update": "October 28, 2026 at 9:35 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -32056,7 +31898,7 @@
     "date": "2026-11-14",
     "sunset": "16:23",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:40 PM",
+    "last_successful_update": "October 28, 2026 at 9:38 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -32798,7 +32640,7 @@
     "date": "2026-11-01",
     "sunset": "16:37",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:35 PM",
+    "last_successful_update": "October 28, 2026 at 9:32 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34000,7 +33842,7 @@
     "date": "2026-11-10",
     "sunset": "16:27",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:38 PM",
+    "last_successful_update": "October 28, 2026 at 9:36 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34474,7 +34316,7 @@
     "date": "2026-11-03",
     "sunset": "16:35",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:36 PM",
+    "last_successful_update": "October 28, 2026 at 9:33 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34733,7 +34575,7 @@
           "end": "17:00"
         },
         {
-          "start": "18:30",
+          "start": "18:00",
           "end": "19:00"
         }
       ],
@@ -34743,18 +34585,15 @@
           "end": "17:00"
         },
         {
-          "start": "18:30",
+          "start": "18:00",
           "end": "19:00"
         }
       ],
       "H-SJ4B": [
         {
           "start": "16:00",
-          "end": "17:30"
-        },
-        {
-          "start": "18:30",
-          "end": "19:00"
+          "end": "19:00",
+          "mode": "practice_only"
         }
       ],
       "H-SuSS": [],
@@ -34822,22 +34661,6 @@
           "grade": "",
           "source": "ICS",
           "field_display": "H-HST2, Holbrook High School"
-        }
-      ],
-      "H-SJ4": [
-        {
-          "event_id": "a5cffec9acf6543b2fb68cfa1306f1e4",
-          "date": "2026-11-03",
-          "start": "17:30",
-          "end": "18:30",
-          "field": "H-SJ4",
-          "type": "practice",
-          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS",
-          "field_display": "H-SJ4, Holbrook Sean Joyce Field"
         }
       ]
     },
@@ -34945,9 +34768,9 @@
       {
         "field": "H-SJ4B",
         "start": "16:00",
-        "end": "17:30",
+        "end": "19:00",
         "start_12": "4:00 PM",
-        "end_12": "5:30 PM",
+        "end_12": "7:00 PM",
         "type": "free",
         "title": ""
       },
@@ -34966,16 +34789,21 @@
       },
       {
         "field": "H-SJ4",
-        "start": "17:30",
-        "end": "18:30",
-        "start_12": "5:30 PM",
-        "end_12": "6:30 PM",
-        "type": "practice",
-        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-        "coach": "",
-        "grade": "5/6",
-        "source": "ICS"
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-SJ4A",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
       },
       {
         "field": "H-HST1",
@@ -35002,33 +34830,6 @@
         "coach": "Orange",
         "grade": "",
         "source": "ICS"
-      },
-      {
-        "field": "H-SJ4",
-        "start": "18:30",
-        "end": "19:00",
-        "start_12": "6:30 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4A",
-        "start": "18:30",
-        "end": "19:00",
-        "start_12": "6:30 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-SJ4B",
-        "start": "18:30",
-        "end": "19:00",
-        "start_12": "6:30 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
       },
       {
         "field": "H-HST",
@@ -35169,9 +34970,9 @@
         {
           "type": "free",
           "start": "17:00",
-          "end": "17:30",
+          "end": "18:00",
           "start_12": "5:00 PM",
-          "end_12": "5:30 PM",
+          "end_12": "6:00 PM",
           "fields": [
             "H-Su1",
             "H-Su1A",
@@ -35193,64 +34994,24 @@
         {
           "type": "practice",
           "start": "17:00",
-          "end": "17:30",
+          "end": "18:00",
           "start_12": "5:00 PM",
-          "end_12": "5:30 PM",
+          "end_12": "6:00 PM",
           "fields": [
             "H-SJ4",
             "H-SJ4A"
           ],
-          "title": null,
-          "team": null,
-          "coach": null,
+          "title": "The Sean Joyce Foundation (Red) Practice",
+          "team": "The Sean Joyce Foundation",
+          "coach": "Red",
           "grade": null,
           "reason": null
         },
         {
           "type": "free",
-          "start": "17:30",
-          "end": "18:30",
-          "start_12": "5:30 PM",
-          "end_12": "6:30 PM",
-          "fields": [
-            "H-Su1",
-            "H-Su1A",
-            "H-Su1B",
-            "H-Su2",
-            "H-Su2A",
-            "H-Su2B",
-            "H-SJ3",
-            "H-SJ3A",
-            "H-SJ3B"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "17:30",
-          "end": "18:30",
-          "start_12": "5:30 PM",
-          "end_12": "6:30 PM",
-          "fields": [
-            "H-SJ4",
-            "H-SJ4A",
-            "H-SJ4B"
-          ],
-          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. Practice",
-          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc.",
-          "coach": null,
-          "grade": "5/6",
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "18:30",
+          "start": "18:00",
           "end": "19:00",
-          "start_12": "6:30 PM",
+          "start_12": "6:00 PM",
           "end_12": "7:00 PM",
           "fields": [
             "H-Su1",
@@ -36670,7 +36431,7 @@
     "date": "2026-10-31",
     "sunset": "17:39",
     "updated": true,
-    "last_successful_update": "October 28, 2026 at 5:35 PM",
+    "last_successful_update": "October 28, 2026 at 9:32 PM",
     "complexes": {
       "TURF": [
         "H-HST",
