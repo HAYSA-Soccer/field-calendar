@@ -2,7 +2,7 @@
   "date": "2026-11-02",
   "sunset": "16:36",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 9:57 AM",
+  "last_successful_update": "October 29, 2026 at 10:10 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -215,14 +215,14 @@
       {
         "start": "18:00",
         "end": "21:00",
-        "mode": "both"
+        "mode": "practice_only"
       }
     ],
     "H-HST4": [
       {
         "start": "18:00",
         "end": "21:00",
-        "mode": "both"
+        "mode": "practice_only"
       }
     ],
     "H-Su1": [
