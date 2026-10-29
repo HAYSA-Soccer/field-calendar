@@ -112,7 +112,6 @@ function buildFieldMap(day) {
  * BUILD BLOCKS — USING REAL FIELD IDs
  ********************************************************************/
 function buildBlocks(day, fieldMap) {
-  console.log(fieldMap["H-HST1"]);
   const blocks = [];
 
   (day.merged || []).forEach(b => {
@@ -261,12 +260,14 @@ function buildAvailability(day, fieldMap, blocks) {
         curFields = slot.free;
       } else if (!same) {
         if (curFields && curFields.length > 0) {
-          avail.push({
-            complex,
-            start: curStart,
-            end: timeline[idx - 1].minute + 1,
-            fields: curFields.map(f => f.field),
-            modes: curFields.map(f => f.mode)
+          curFields.forEach(f => {
+            avail.push({
+              complex,
+              start: curStart,
+              end: timeline[idx - 1].minute + 1,
+              fields: [f.field],
+              modes: [f.mode]
+            });
           });
         }
         curStart = slot.minute;
@@ -275,12 +276,14 @@ function buildAvailability(day, fieldMap, blocks) {
     });
 
     if (curStart !== null && curFields && curFields.length > 0) {
-      avail.push({
-        complex,
-        start: curStart,
-        end: DAY_END,
-        fields: curFields.map(f => f.field),
-        modes: curFields.map(f => f.mode)
+      curFields.forEach(f => {
+        avail.push({
+          complex,
+          start: curStart,
+          end: DAY_END,
+          fields: [f.field],
+          modes: [f.mode]
+        });
       });
     }
   });
@@ -323,6 +326,14 @@ function renderDayCalendar(day, options = {}) {
   container.innerHTML = "";
 
   const fieldMap = buildFieldMap(day);
+  console.log(
+    day.fields
+      .filter(f => f.id.startsWith("H-HST"))
+      .map(f => ({
+        id: f.id,
+        complex: f.complex
+      }))
+  );
   const blocks = buildBlocks(day, fieldMap);
 
   detectConflicts(blocks);
@@ -466,12 +477,8 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
       }
     });
   
-  const eventLaneCount = lanes.length;
-  const totalLaneCount = eventLaneCount + 1;
-      });
-
-  const eventLaneCount = lanes.length;
-  const totalLaneCount = eventLaneCount + 1;
+const eventLaneCount = lanes.length;
+const totalLaneCount = eventLaneCount + 1;
 
   blocks.forEach(b => {
     const block = document.createElement("div");
