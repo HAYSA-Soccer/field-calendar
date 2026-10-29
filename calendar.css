@@ -505,3 +505,13 @@
   background: #ff7043;
   margin-top: 7px;
 }
+
+
+
+.event-block {
+  z-index: 20;
+}
+
+.avail-block {
+  z-index: 10;
+}
