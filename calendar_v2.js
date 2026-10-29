@@ -440,24 +440,34 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
     });
   });
 
-  const lanes = [];
+const lanes = [];
 
-  blocks
-    .filter(b => b.kind === "event")
-    .sort((a, b) => a.start - b.start)
-    .forEach(b => {
-      let laneIndex = 0;
-      while (true) {
-        const lane = lanes[laneIndex] || [];
-        const conflict = lane.some(x => overlaps(x.start, x.end, b.start, b.end));
-        if (!conflict) {
-          lane.push(b);
-          lanes[laneIndex] = lane;
-          b.lane = laneIndex;
-          break;
-        }
-        laneIndex++;
+blocks
+  .filter(b => b.kind === "event")
+  .sort((a, b) => a.start - b.start)
+  .forEach(b => {
+    let laneIndex = 0;
+
+    while (true) {
+      const lane = lanes[laneIndex] || [];
+
+      const conflict = lane.some(x =>
+        overlaps(x.start, x.end, b.start, b.end)
+      );
+
+      if (!conflict) {
+        lane.push(b);
+        lanes[laneIndex] = lane;
+        b.lane = laneIndex;
+        break;
       }
+
+      laneIndex++;
+    }
+  });
+
+const eventLaneCount = lanes.length;
+const totalLaneCount = eventLaneCount + 1;
     });
 
   const eventLaneCount = lanes.length;
