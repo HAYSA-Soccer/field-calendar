@@ -5172,7 +5172,7 @@
     "date": "2026-11-09",
     "sunset": "16:28",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:18 AM",
+    "last_successful_update": "October 29, 2026 at 10:01 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9078,7 +9078,7 @@
     "date": "2026-11-06",
     "sunset": "16:31",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:17 AM",
+    "last_successful_update": "October 29, 2026 at 9:59 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -12451,7 +12451,7 @@
     "date": "2026-11-05",
     "sunset": "16:33",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:16 AM",
+    "last_successful_update": "October 29, 2026 at 9:59 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -14306,7 +14306,7 @@
     "date": "2026-11-11",
     "sunset": "16:26",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:19 AM",
+    "last_successful_update": "October 29, 2026 at 10:02 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -16080,7 +16080,7 @@
     "date": "2026-11-07",
     "sunset": "16:30",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:17 AM",
+    "last_successful_update": "October 29, 2026 at 10:00 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21630,7 +21630,7 @@
     "date": "2026-11-13",
     "sunset": "16:24",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:21 AM",
+    "last_successful_update": "October 29, 2026 at 10:03 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -23253,7 +23253,7 @@
     "date": "2026-11-12",
     "sunset": "16:25",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:20 AM",
+    "last_successful_update": "October 29, 2026 at 10:03 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -25061,7 +25061,7 @@
     "date": "2026-11-02",
     "sunset": "16:36",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:14 AM",
+    "last_successful_update": "October 29, 2026 at 9:57 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -27330,7 +27330,7 @@
     "date": "2026-11-04",
     "sunset": "16:34",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:16 AM",
+    "last_successful_update": "October 29, 2026 at 9:58 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -32379,7 +32379,7 @@
     "date": "2026-11-08",
     "sunset": "16:29",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:18 AM",
+    "last_successful_update": "October 29, 2026 at 10:00 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -32602,7 +32602,7 @@
     "date": "2026-11-14",
     "sunset": "16:23",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:22 AM",
+    "last_successful_update": "October 29, 2026 at 10:03 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34636,7 +34636,7 @@
     "date": "2026-11-10",
     "sunset": "16:27",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:19 AM",
+    "last_successful_update": "October 29, 2026 at 10:01 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -35162,7 +35162,7 @@
     "date": "2026-11-03",
     "sunset": "16:35",
     "updated": true,
-    "last_successful_update": "October 29, 2026 at 9:15 AM",
+    "last_successful_update": "October 29, 2026 at 9:57 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -35373,9 +35373,8 @@
       ],
       "H-HST4": [
         {
-          "start": "18:00",
-          "end": "21:00",
-          "mode": "both"
+          "start": "19:00",
+          "end": "21:00"
         }
       ],
       "H-Su1": [
@@ -35519,20 +35518,6 @@
           "field_display": "H-HST3, Holbrook High School"
         },
         {
-          "event_id": "1a2e8aee1062dc89a7bb66be6a981082",
-          "date": "2026-11-03",
-          "start": "18:00",
-          "end": "19:00",
-          "field": "H-HST3",
-          "type": "practice",
-          "title": "Avon Septic and Pumping (Blue) Practice",
-          "team": "Avon Septic and Pumping",
-          "coach": "Blue",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-HST3, Holbrook High School"
-        },
-        {
           "event_id": "235652b7d3a15dfc6285d467c44c7612",
           "date": "2026-11-03",
           "start": "19:00",
@@ -35577,6 +35562,22 @@
           "grade": "",
           "source": "ICS",
           "field_display": "H-HST2, Holbrook High School"
+        }
+      ],
+      "H-HST4": [
+        {
+          "event_id": "1a2e8aee1062dc89a7bb66be6a981082",
+          "date": "2026-11-03",
+          "start": "18:00",
+          "end": "19:00",
+          "field": "H-HST4",
+          "type": "practice",
+          "title": "Avon Septic and Pumping (Blue) Practice",
+          "team": "Avon Septic and Pumping",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-HST4, Holbrook High School"
         }
       ]
     },
@@ -35704,15 +35705,6 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST4",
-        "start": "18:00",
-        "end": "21:00",
-        "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
         "field": "H-SJ4",
         "start": "18:00",
         "end": "19:00",
@@ -35757,19 +35749,6 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST3",
-        "start": "18:00",
-        "end": "19:00",
-        "start_12": "6:00 PM",
-        "end_12": "7:00 PM",
-        "type": "practice",
-        "title": "Avon Septic and Pumping (Blue) Practice",
-        "team": "Avon Septic and Pumping",
-        "coach": "Blue",
-        "grade": "",
-        "source": "ICS"
-      },
-      {
         "field": "H-HST2",
         "start": "18:00",
         "end": "19:00",
@@ -35779,6 +35758,19 @@
         "title": "Wm. Perry Trucking (Orange) Practice",
         "team": "Wm. Perry Trucking",
         "coach": "Orange",
+        "grade": "",
+        "source": "ICS"
+      },
+      {
+        "field": "H-HST4",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "type": "practice",
+        "title": "Avon Septic and Pumping (Blue) Practice",
+        "team": "Avon Septic and Pumping",
+        "coach": "Blue",
         "grade": "",
         "source": "ICS"
       },
@@ -35793,6 +35785,15 @@
       },
       {
         "field": "H-HST2",
+        "start": "19:00",
+        "end": "21:00",
+        "start_12": "7:00 PM",
+        "end_12": "9:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-HST4",
         "start": "19:00",
         "end": "21:00",
         "start_12": "7:00 PM",
@@ -35839,21 +35840,6 @@
     "merged_availability": {
       "TURF": [
         {
-          "type": "free",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "fields": [
-            "H-HST4"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
           "type": "practice",
           "start": "18:00",
           "end": "19:00",
@@ -35863,7 +35849,8 @@
             "H-HST",
             "H-HST1",
             "H-HST2",
-            "H-HST3"
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "3/4 Girls Travel (Lamb-Williams) Practice",
           "team": "3/4 Girls Travel",
