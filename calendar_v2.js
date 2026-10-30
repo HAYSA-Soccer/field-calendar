@@ -608,7 +608,7 @@ async function loadWeek(dateStr) {
     }
   }
 
-  const todayStr = dateStr; // highlight week anchored to loaded date
+  const todayStr = new Date().toISOString().split("T")[0]; // highlight "today" anchored to loaded date
 
   for (let i = 0; i < 7; i++) {
     const d = new Date(monday);
