@@ -5172,7 +5172,7 @@
     "date": "2026-11-09",
     "sunset": "16:28",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:04 PM",
+    "last_successful_update": "October 30, 2026 at 5:00 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -9078,7 +9078,7 @@
     "date": "2026-11-06",
     "sunset": "16:31",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:02 PM",
+    "last_successful_update": "October 30, 2026 at 4:59 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -12505,7 +12505,7 @@
     "date": "2026-11-05",
     "sunset": "16:33",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:01 PM",
+    "last_successful_update": "October 30, 2026 at 4:58 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -12705,8 +12705,9 @@
       ],
       "H-HST3": [
         {
-          "start": "19:00",
-          "end": "21:00"
+          "start": "18:00",
+          "end": "21:00",
+          "mode": "practice_only"
         }
       ],
       "H-HST4": [
@@ -12902,22 +12903,6 @@
           "grade": "",
           "source": "ICS",
           "field_display": "H-Su1A, Holbrook Sumner Field"
-        }
-      ],
-      "H-HST3": [
-        {
-          "event_id": "46d0e085e5e0dc13cc6b47e8b6daa49f",
-          "date": "2026-11-05",
-          "start": "18:00",
-          "end": "19:00",
-          "field": "H-HST3",
-          "type": "practice",
-          "title": "Hope and Future Home Care Services (Blue) Practice",
-          "team": "Hope and Future Home Care Services",
-          "coach": "Blue",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-HST3, Holbrook High School"
         }
       ],
       "H-SJ3B": [
@@ -13134,6 +13119,15 @@
         "title": ""
       },
       {
+        "field": "H-HST3",
+        "start": "18:00",
+        "end": "21:00",
+        "start_12": "6:00 PM",
+        "end_12": "9:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
         "field": "H-HST4",
         "start": "18:00",
         "end": "21:00",
@@ -13214,28 +13208,6 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST3",
-        "start": "18:00",
-        "end": "19:00",
-        "start_12": "6:00 PM",
-        "end_12": "7:00 PM",
-        "type": "practice",
-        "title": "Hope and Future Home Care Services (Blue) Practice",
-        "team": "Hope and Future Home Care Services",
-        "coach": "Blue",
-        "grade": "",
-        "source": "ICS"
-      },
-      {
-        "field": "H-HST3",
-        "start": "19:00",
-        "end": "21:00",
-        "start_12": "7:00 PM",
-        "end_12": "9:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
         "field": "H-HST2",
         "start": "19:30",
         "end": "21:00",
@@ -13263,41 +13235,8 @@
         {
           "type": "free",
           "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "fields": [
-            "H-HST4"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "practice",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "fields": [
-            "H-HST",
-            "H-HST1",
-            "H-HST2",
-            "H-HST3"
-          ],
-          "title": "Hope and Future Home Care Services (Blue) Practice",
-          "team": "Hope and Future Home Care Services",
-          "coach": "Blue",
-          "grade": null,
-          "reason": null
-        },
-        {
-          "type": "free",
-          "start": "19:00",
           "end": "19:30",
-          "start_12": "7:00 PM",
+          "start_12": "6:00 PM",
           "end_12": "7:30 PM",
           "fields": [
             "H-HST3",
@@ -13311,19 +13250,19 @@
         },
         {
           "type": "practice",
-          "start": "19:00",
+          "start": "18:00",
           "end": "19:30",
-          "start_12": "7:00 PM",
+          "start_12": "6:00 PM",
           "end_12": "7:30 PM",
           "fields": [
             "H-HST",
             "H-HST1",
             "H-HST2"
           ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
+          "title": "5/6 Girls Travel (Baird-Miller) Practice",
+          "team": "5/6 Girls Travel",
+          "coach": "Baird-Miller",
+          "grade": "5/6",
           "reason": null
         },
         {
@@ -14380,7 +14319,7 @@
     "date": "2026-11-11",
     "sunset": "16:26",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:05 PM",
+    "last_successful_update": "October 30, 2026 at 5:01 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -16154,7 +16093,7 @@
     "date": "2026-11-07",
     "sunset": "16:30",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:03 PM",
+    "last_successful_update": "October 30, 2026 at 4:59 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21577,7 +21516,7 @@
     "date": "2026-11-13",
     "sunset": "16:24",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:07 PM",
+    "last_successful_update": "October 30, 2026 at 5:02 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -23200,7 +23139,7 @@
     "date": "2026-11-12",
     "sunset": "16:25",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:06 PM",
+    "last_successful_update": "October 30, 2026 at 5:01 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -25008,7 +24947,7 @@
     "date": "2026-11-02",
     "sunset": "16:36",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 2:59 PM",
+    "last_successful_update": "October 30, 2026 at 4:57 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -26394,7 +26333,7 @@
     "date": "2026-10-30",
     "sunset": "17:40",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 2:58 PM",
+    "last_successful_update": "October 30, 2026 at 4:55 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -27277,7 +27216,7 @@
     "date": "2026-11-04",
     "sunset": "16:34",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:00 PM",
+    "last_successful_update": "October 30, 2026 at 4:58 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -27477,9 +27416,8 @@
       ],
       "H-HST3": [
         {
-          "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "start": "19:00",
+          "end": "21:00"
         }
       ],
       "H-HST4": [
@@ -27689,6 +27627,22 @@
           "grade": "",
           "source": "ICS",
           "field_display": "H-Su1B, Holbrook Sumner Field"
+        }
+      ],
+      "H-HST3": [
+        {
+          "event_id": "46d0e085e5e0dc13cc6b47e8b6daa49f",
+          "date": "2026-11-04",
+          "start": "18:00",
+          "end": "19:00",
+          "field": "H-HST3",
+          "type": "practice",
+          "title": "Hope and Future Home Care Services (Blue) Practice",
+          "team": "Hope and Future Home Care Services",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-HST3, Holbrook High School"
         }
       ],
       "H-SJ3A": [
@@ -27905,15 +27859,6 @@
         "title": ""
       },
       {
-        "field": "H-HST3",
-        "start": "18:00",
-        "end": "21:00",
-        "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
         "field": "H-HST4",
         "start": "18:00",
         "end": "21:00",
@@ -27994,11 +27939,33 @@
         "source": "ICS"
       },
       {
+        "field": "H-HST3",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "type": "practice",
+        "title": "Hope and Future Home Care Services (Blue) Practice",
+        "team": "Hope and Future Home Care Services",
+        "coach": "Blue",
+        "grade": "",
+        "source": "ICS"
+      },
+      {
         "field": "H-HST2",
         "start": "19:00",
         "end": "19:30",
         "start_12": "7:00 PM",
         "end_12": "7:30 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-HST3",
+        "start": "19:00",
+        "end": "21:00",
+        "start_12": "7:00 PM",
+        "end_12": "9:00 PM",
         "type": "free",
         "title": ""
       },
@@ -28038,7 +28005,6 @@
           "start_12": "6:00 PM",
           "end_12": "7:00 PM",
           "fields": [
-            "H-HST3",
             "H-HST4"
           ],
           "title": null,
@@ -28056,7 +28022,8 @@
           "fields": [
             "H-HST",
             "H-HST1",
-            "H-HST2"
+            "H-HST2",
+            "H-HST3"
           ],
           "title": "Wm. Perry Auto Repair (Orange) Practice",
           "team": "Wm. Perry Auto Repair",
@@ -32339,7 +32306,7 @@
     "date": "2026-11-08",
     "sunset": "16:29",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:03 PM",
+    "last_successful_update": "October 30, 2026 at 4:59 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -32562,7 +32529,7 @@
     "date": "2026-11-14",
     "sunset": "16:23",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:07 PM",
+    "last_successful_update": "October 30, 2026 at 5:02 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -33355,7 +33322,7 @@
     "date": "2026-11-01",
     "sunset": "16:37",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 2:58 PM",
+    "last_successful_update": "October 30, 2026 at 4:56 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -34577,7 +34544,7 @@
     "date": "2026-11-10",
     "sunset": "16:27",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:05 PM",
+    "last_successful_update": "October 30, 2026 at 5:00 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -35103,7 +35070,7 @@
     "date": "2026-11-03",
     "sunset": "16:35",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 3:00 PM",
+    "last_successful_update": "October 30, 2026 at 4:57 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -37390,7 +37357,7 @@
     "date": "2026-10-31",
     "sunset": "17:39",
     "updated": true,
-    "last_successful_update": "October 30, 2026 at 2:58 PM",
+    "last_successful_update": "October 30, 2026 at 4:56 PM",
     "complexes": {
       "TURF": [
         "H-HST",
