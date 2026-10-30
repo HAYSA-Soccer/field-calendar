@@ -4,6 +4,7 @@
 const DAY_START = 8 * 60;
 const DAY_END   = 21 * 60;
 const PX_PER_MIN = 1;
+let selectedComplexes = ["all"];
 
 /********************************************************************
  * GLOBAL REFRESH BANNER
@@ -88,7 +89,7 @@ async function loadDay(dateStr) {
     renderDayCalendar(day, {
       containerId: "calendar",
       showDayNote: true,
-      selectedComplexes: ["all"],
+      selectedComplexes,
       condensed: false
     });
   } catch (e) {
@@ -347,9 +348,9 @@ function renderDayCalendar(day, options = {}) {
     eventsByComplex[b.complex].push(b);
   });
 
-  const showAll = selectedComplexes.includes("all");
+  const showAll = activeComplexes.includes("all");
   const normalize = s => s.toLowerCase().trim();
-  const selectedNormalized = selectedComplexes.map(normalize);
+  const selectedNormalized = activeComplexes.map(normalize);
 
   const complexKeys = Object.keys(day.complexes || {});
 
@@ -478,7 +479,8 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
     });
   
 const eventLaneCount = lanes.length;
-const totalLaneCount = eventLaneCount + 1;
+const totalLaneCount =
+  Math.min(eventLaneCount + 1, 4);
 
   blocks.forEach(b => {
     const block = document.createElement("div");
@@ -599,14 +601,8 @@ async function loadWeek(dateStr) {
   const mondayStr = getMonday(dateStr);
   const monday = new Date(mondayStr + "T00:00:00");
 
-  const select = document.getElementById("complex-filter");
-  let selectedComplexes = ["all"];
-  if (select) {
-    const selected = Array.from(select.selectedOptions).map(o => o.value);
-    if (selected.length > 0) {
-      selectedComplexes = selected;
-    }
-  }
+  const activeComplexes =
+    selectedComplexes;
 
   const todayStr = new Date().toISOString().split("T")[0]; // highlight "today" anchored to loaded date
 
@@ -671,9 +667,9 @@ async function loadWeek(dateStr) {
         eventsByComplex[b.complex].push(b);
       });
 
-      const showAll = selectedComplexes.includes("all");
+      const showAll = activeComplexes.includes("all");
       const normalize = s => s.toLowerCase().trim();
-      const selectedNormalized = selectedComplexes.map(normalize);
+      const selectedNormalized = activeComplexes.map(normalize);
 
       const complexKeys = Object.keys(dayData.complexes || {});
 
@@ -705,39 +701,122 @@ async function loadWeek(dateStr) {
  * COMPLEX FILTER — MULTI-SELECT
  ********************************************************************/
 async function initComplexFilter() {
-  const select = document.getElementById("complex-filter");
-  if (!select) return;
+
+  const container =
+    document.getElementById("complex-buttons");
+
+  if (!container) return;
+
+  container.innerHTML = "";
 
   try {
-    const res = await fetch("fields.json");
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-    const data = await res.json();
-    const complexesObj = data.complexes || {};
-    const complexNames = Object.keys(complexesObj);
+    const res =
+      await fetch("fields.json");
 
-    select.innerHTML = "";
+    const data =
+      await res.json();
 
-    const allOption = document.createElement("option");
-    allOption.value = "all";
-    allOption.textContent = "All Complexes";
-    select.appendChild(allOption);
+    const complexes =
+      Object.keys(data.complexes || {});
 
-    complexNames.forEach(name => {
-      const opt = document.createElement("option");
-      opt.value = name;
-      opt.textContent = name;
-      select.appendChild(opt);
+    const allBtn =
+      document.createElement("button");
+
+    allBtn.className =
+      "complex-btn active";
+
+    allBtn.textContent = "All";
+
+    allBtn.onclick = () => {
+
+      selectedComplexes = ["all"];
+
+      updateComplexButtons();
+
+      reloadCurrentView();
+    };
+
+    container.appendChild(allBtn);
+
+    complexes.forEach(name => {
+
+      const btn =
+        document.createElement("button");
+
+      btn.className =
+        "complex-btn";
+
+      btn.textContent = name;
+
+      btn.dataset.complex = name;
+
+      btn.onclick = () => {
+
+        selectedComplexes = [name];
+
+        updateComplexButtons();
+
+        reloadCurrentView();
+      };
+
+      container.appendChild(btn);
     });
-  } catch (e) {
-    select.innerHTML = "";
-    const allOption = document.createElement("option");
-    allOption.value = "all";
-    allOption.textContent = "All Complexes";
-    select.appendChild(allOption);
+
+  } catch (err) {
+
+    console.error(err);
+
   }
 }
 
+
+function updateComplexButtons() {
+
+  document
+    .querySelectorAll(".complex-btn")
+    .forEach(btn => {
+
+      btn.classList.remove("active");
+
+      if (
+        btn.textContent === "All" &&
+        selectedComplexes.includes("all")
+      ) {
+        btn.classList.add("active");
+      }
+
+      if (
+        btn.dataset.complex &&
+        selectedComplexes.includes(
+          btn.dataset.complex
+        )
+      ) {
+        btn.classList.add("active");
+      }
+    });
+}
+
+
+function reloadCurrentView() {
+
+  const dateInput =
+    document.getElementById("calendar-date");
+
+  const weeklyEl =
+    document.getElementById("weekly-view");
+
+  const d = dateInput.value;
+
+  if (
+    weeklyEl &&
+    weeklyEl.style.display !== "none"
+  ) {
+    loadWeek(d);
+  } else {
+    loadDay(d);
+  }
+}
 /********************************************************************
  * INITIALIZE — WEEKLY DEFAULT + TOGGLE
  ********************************************************************/
