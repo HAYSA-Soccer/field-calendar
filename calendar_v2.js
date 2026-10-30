@@ -510,8 +510,15 @@ const totalLaneCount =
       `;
 
       const laneWidth = 100 / totalLaneCount;
-      block.style.left = (b.lane * laneWidth) + "%";
-      block.style.width = laneWidth + "%";
+
+      const visualLane =
+        Math.min(b.lane, totalLaneCount - 1);
+      
+      block.style.left =
+        (visualLane * laneWidth) + "%";
+      
+      block.style.width =
+        laneWidth + "%";
 
     } else {
       block.classList.add("avail-block");
