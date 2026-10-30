@@ -16510,7 +16510,7 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:39 PM",
+      "last_successful_update": "October 30, 2026 at 12:49 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -17036,7 +17036,7 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:39 PM",
+      "last_successful_update": "October 30, 2026 at 12:50 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -17562,7 +17562,7 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:40 PM",
+      "last_successful_update": "October 30, 2026 at 12:51 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -18160,7 +18160,7 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:40 PM",
+      "last_successful_update": "October 30, 2026 at 12:51 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -18727,7 +18727,7 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:41 PM",
+      "last_successful_update": "October 30, 2026 at 12:51 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -18927,7 +18927,13 @@
             "end": "21:00"
           }
         ],
-        "H-HST1": [],
+        "H-HST1": [
+          {
+            "start": "13:00",
+            "end": "14:00",
+            "mode": "practice_only"
+          }
+        ],
         "H-HST2": [],
         "H-HST3": [],
         "H-HST4": [],
@@ -19170,6 +19176,15 @@
           "title": ""
         },
         {
+          "field": "H-HST1",
+          "start": "13:00",
+          "end": "14:00",
+          "start_12": "1:00 PM",
+          "end_12": "2:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-SJ4",
           "start": "16:00",
           "end": "19:00",
@@ -19214,8 +19229,24 @@
           {
             "type": "free",
             "start": "13:00",
-            "end": "21:00",
+            "end": "14:00",
             "start_12": "1:00 PM",
+            "end_12": "2:00 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "14:00",
+            "end": "21:00",
+            "start_12": "2:00 PM",
             "end_12": "9:00 PM",
             "fields": [
               "H-HST"
@@ -19286,7 +19317,7 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:39 PM",
+      "last_successful_update": "October 30, 2026 at 12:50 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -27031,7 +27062,7 @@
       "date": "2026-11-06",
       "sunset": "16:31",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:38 PM",
+      "last_successful_update": "October 30, 2026 at 12:48 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -27808,7 +27839,7 @@
       "date": "2026-11-05",
       "sunset": "16:33",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:37 PM",
+      "last_successful_update": "October 30, 2026 at 12:48 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -28008,9 +28039,8 @@
         ],
         "H-HST3": [
           {
-            "start": "18:00",
-            "end": "21:00",
-            "mode": "practice_only"
+            "start": "19:00",
+            "end": "21:00"
           }
         ],
         "H-HST4": [
@@ -28053,7 +28083,7 @@
             "end": "16:30"
           },
           {
-            "start": "18:00",
+            "start": "17:30",
             "end": "19:00"
           }
         ],
@@ -28070,11 +28100,8 @@
         "H-Su2B": [
           {
             "start": "16:00",
-            "end": "17:00"
-          },
-          {
-            "start": "18:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "practice_only"
           }
         ],
         "H-SJ3": [
@@ -28211,20 +28238,20 @@
             "field_display": "H-Su1A, Holbrook Sumner Field"
           }
         ],
-        "H-Su2B": [
+        "H-HST3": [
           {
             "event_id": "46d0e085e5e0dc13cc6b47e8b6daa49f",
             "date": "2026-11-05",
-            "start": "17:00",
-            "end": "18:00",
-            "field": "H-Su2B",
+            "start": "18:00",
+            "end": "19:00",
+            "field": "H-HST3",
             "type": "practice",
             "title": "Hope and Future Home Care Services (Blue) Practice",
             "team": "Hope and Future Home Care Services",
             "coach": "Blue",
             "grade": "",
             "source": "ICS",
-            "field_display": "H-Su2B, Holbrook Sumner Field"
+            "field_display": "H-HST3, Holbrook High School"
           }
         ],
         "H-SJ3B": [
@@ -28310,9 +28337,9 @@
         {
           "field": "H-Su2B",
           "start": "16:00",
-          "end": "17:00",
+          "end": "19:00",
           "start_12": "4:00 PM",
-          "end_12": "5:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
@@ -28410,19 +28437,6 @@
           "source": "ICS"
         },
         {
-          "field": "H-Su2B",
-          "start": "17:00",
-          "end": "18:00",
-          "start_12": "5:00 PM",
-          "end_12": "6:00 PM",
-          "type": "practice",
-          "title": "Hope and Future Home Care Services (Blue) Practice",
-          "team": "Hope and Future Home Care Services",
-          "coach": "Blue",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
           "field": "H-SJ3B",
           "start": "17:00",
           "end": "18:00",
@@ -28436,7 +28450,7 @@
           "source": "ICS"
         },
         {
-          "field": "H-Su2A",
+          "field": "H-Su2",
           "start": "17:30",
           "end": "19:00",
           "start_12": "5:30 PM",
@@ -28445,11 +28459,11 @@
           "title": ""
         },
         {
-          "field": "H-HST3",
-          "start": "18:00",
-          "end": "21:00",
-          "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
+          "field": "H-Su2A",
+          "start": "17:30",
+          "end": "19:00",
+          "start_12": "5:30 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
@@ -28473,24 +28487,6 @@
         },
         {
           "field": "H-Su1A",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2",
-          "start": "18:00",
-          "end": "19:00",
-          "start_12": "6:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2B",
           "start": "18:00",
           "end": "19:00",
           "start_12": "6:00 PM",
@@ -28552,6 +28548,28 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST3",
+          "start": "18:00",
+          "end": "19:00",
+          "start_12": "6:00 PM",
+          "end_12": "7:00 PM",
+          "type": "practice",
+          "title": "Hope and Future Home Care Services (Blue) Practice",
+          "team": "Hope and Future Home Care Services",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST3",
+          "start": "19:00",
+          "end": "21:00",
+          "start_12": "7:00 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-HST2",
           "start": "19:30",
           "end": "21:00",
@@ -28579,8 +28597,41 @@
           {
             "type": "free",
             "start": "18:00",
-            "end": "19:30",
+            "end": "19:00",
             "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "18:00",
+            "end": "19:00",
+            "start_12": "6:00 PM",
+            "end_12": "7:00 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1",
+              "H-HST2",
+              "H-HST3"
+            ],
+            "title": "Hope and Future Home Care Services (Blue) Practice",
+            "team": "Hope and Future Home Care Services",
+            "coach": "Blue",
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "19:00",
+            "end": "19:30",
+            "start_12": "7:00 PM",
             "end_12": "7:30 PM",
             "fields": [
               "H-HST3",
@@ -28594,19 +28645,19 @@
           },
           {
             "type": "practice",
-            "start": "18:00",
+            "start": "19:00",
             "end": "19:30",
-            "start_12": "6:00 PM",
+            "start_12": "7:00 PM",
             "end_12": "7:30 PM",
             "fields": [
               "H-HST",
               "H-HST1",
               "H-HST2"
             ],
-            "title": "5/6 Girls Travel (Baird-Miller) Practice",
-            "team": "5/6 Girls Travel",
-            "coach": "Baird-Miller",
-            "grade": "5/6",
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
             "reason": null
           },
           {
@@ -28718,6 +28769,7 @@
             "end_12": "5:30 PM",
             "fields": [
               "H-Su1B",
+              "H-Su2B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -28739,7 +28791,6 @@
               "H-Su1A",
               "H-Su2",
               "H-Su2A",
-              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B"
@@ -28758,7 +28809,9 @@
             "end_12": "6:00 PM",
             "fields": [
               "H-Su1B",
+              "H-Su2",
               "H-Su2A",
+              "H-Su2B",
               "H-SJ4",
               "H-SJ4A",
               "H-SJ4B"
@@ -28778,8 +28831,6 @@
             "fields": [
               "H-Su1",
               "H-Su1A",
-              "H-Su2",
-              "H-Su2B",
               "H-SJ3",
               "H-SJ3A",
               "H-SJ3B"
@@ -28823,7 +28874,7 @@
       "date": "2026-11-07",
       "sunset": "16:30",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:38 PM",
+      "last_successful_update": "October 30, 2026 at 12:49 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -29039,7 +29090,13 @@
             "end": "21:00"
           }
         ],
-        "H-HST1": [],
+        "H-HST1": [
+          {
+            "start": "13:00",
+            "end": "14:00",
+            "mode": "practice_only"
+          }
+        ],
         "H-HST2": [],
         "H-HST3": [],
         "H-HST4": [],
@@ -29525,6 +29582,15 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST1",
+          "start": "13:00",
+          "end": "14:00",
+          "start_12": "1:00 PM",
+          "end_12": "2:00 PM",
+          "type": "free",
+          "title": ""
+        },
+        {
           "field": "H-SJ3",
           "start": "13:00",
           "end": "14:00",
@@ -29716,6 +29782,21 @@
             "reason": null
           },
           {
+            "type": "free",
+            "start": "13:00",
+            "end": "13:30",
+            "start_12": "1:00 PM",
+            "end_12": "1:30 PM",
+            "fields": [
+              "H-HST1"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
             "type": "game",
             "start": "12:30",
             "end": "13:30",
@@ -29737,7 +29818,8 @@
             "start_12": "1:30 PM",
             "end_12": "2:00 PM",
             "fields": [
-              "H-HST"
+              "H-HST",
+              "H-HST1"
             ],
             "title": null,
             "team": null,
@@ -30015,7 +30097,7 @@
       "date": "2026-11-02",
       "sunset": "16:36",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:36 PM",
+      "last_successful_update": "October 30, 2026 at 12:46 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -30895,7 +30977,7 @@
       "date": "2026-11-04",
       "sunset": "16:34",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:37 PM",
+      "last_successful_update": "October 30, 2026 at 12:47 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -31086,12 +31168,7 @@
       ],
       "availability": {
         "H-HST": [],
-        "H-HST1": [
-          {
-            "start": "19:30",
-            "end": "21:00"
-          }
-        ],
+        "H-HST1": [],
         "H-HST2": [
           {
             "start": "19:00",
@@ -31263,6 +31340,20 @@
             "title": "5/6 Boys Travel (Walsh) Practice",
             "team": "5/6 Boys Travel",
             "coach": "Walsh",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
+          },
+          {
+            "event_id": "e649ee4f02c7fbb5c6f7df798669b4c7",
+            "date": "2026-11-04",
+            "start": "19:30",
+            "end": "21:00",
+            "field": "H-HST1",
+            "type": "practice",
+            "title": "5/6 Girls Travel (Casavant) Practice",
+            "team": "5/6 Girls Travel",
+            "coach": "Casavant",
             "grade": "5/6",
             "source": "ICS",
             "field_display": "H-HST1, Holbrook High School"
@@ -31612,15 +31703,6 @@
           "title": ""
         },
         {
-          "field": "H-HST1",
-          "start": "19:30",
-          "end": "21:00",
-          "start_12": "7:30 PM",
-          "end_12": "9:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
           "field": "H-HST2",
           "start": "19:30",
           "end": "21:00",
@@ -31631,6 +31713,19 @@
           "team": "7/8 Girls Travel",
           "coach": "Caldwell",
           "grade": "7/8",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST1",
+          "start": "19:30",
+          "end": "21:00",
+          "start_12": "7:30 PM",
+          "end_12": "9:00 PM",
+          "type": "practice",
+          "title": "5/6 Girls Travel (Casavant) Practice",
+          "team": "5/6 Girls Travel",
+          "coach": "Casavant",
+          "grade": "5/6",
           "source": "ICS"
         }
       ],
@@ -31709,7 +31804,6 @@
             "start_12": "7:30 PM",
             "end_12": "9:00 PM",
             "fields": [
-              "H-HST1",
               "H-HST3",
               "H-HST4"
             ],
@@ -31727,12 +31821,13 @@
             "end_12": "9:00 PM",
             "fields": [
               "H-HST",
+              "H-HST1",
               "H-HST2"
             ],
-            "title": "7/8 Girls Travel (Caldwell) Practice",
-            "team": "7/8 Girls Travel",
-            "coach": "Caldwell",
-            "grade": "7/8",
+            "title": "5/6 Girls Travel (Casavant) Practice",
+            "team": "5/6 Girls Travel",
+            "coach": "Casavant",
+            "grade": "5/6",
             "reason": null
           }
         ],
@@ -31916,7 +32011,7 @@
       "date": "2026-11-08",
       "sunset": "16:29",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:38 PM",
+      "last_successful_update": "October 30, 2026 at 12:49 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -32139,7 +32234,7 @@
       "date": "2026-11-03",
       "sunset": "16:35",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:36 PM",
+      "last_successful_update": "October 30, 2026 at 12:47 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -35902,7 +35997,7 @@
       "date": "2026-10-30",
       "sunset": "17:40",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:35 PM",
+      "last_successful_update": "October 30, 2026 at 12:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -37896,7 +37991,7 @@
       "date": "2026-11-01",
       "sunset": "16:37",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:36 PM",
+      "last_successful_update": "October 30, 2026 at 12:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -38119,7 +38214,7 @@
       "date": "2026-10-31",
       "sunset": "17:39",
       "updated": true,
-      "last_successful_update": "October 29, 2026 at 8:35 PM",
+      "last_successful_update": "October 30, 2026 at 12:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -38312,7 +38407,7 @@
         "H-HST": [
           {
             "start": "09:00",
-            "end": "14:00"
+            "end": "13:00"
           },
           {
             "start": "15:00",
@@ -38462,6 +38557,22 @@
         "H-SuSS2": []
       },
       "events": {
+        "H-HST1": [
+          {
+            "event_id": "51bbc16f8e7a621174fe2255c92ced17",
+            "date": "2026-10-31",
+            "start": "13:00",
+            "end": "14:00",
+            "field": "H-HST1",
+            "type": "practice",
+            "title": "7/8 Boys Travel (Mills) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Mills",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
+          }
+        ],
         "H-SuSS": [
           {
             "event_id": "b6160c2c5b361dea56ecf2679fe2972e",
@@ -38909,9 +39020,9 @@
         {
           "field": "H-HST",
           "start": "09:00",
-          "end": "14:00",
+          "end": "13:00",
           "start_12": "9:00 AM",
-          "end_12": "2:00 PM",
+          "end_12": "1:00 PM",
           "type": "free",
           "title": ""
         },
@@ -39180,6 +39291,19 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST1",
+          "start": "13:00",
+          "end": "14:00",
+          "start_12": "1:00 PM",
+          "end_12": "2:00 PM",
+          "type": "practice",
+          "title": "7/8 Boys Travel (Mills) Practice",
+          "team": "7/8 Boys Travel",
+          "coach": "Mills",
+          "grade": "7/8",
+          "source": "ICS"
+        },
+        {
           "field": "H-SJ3",
           "start": "13:30",
           "end": "13:45",
@@ -39269,9 +39393,9 @@
           {
             "type": "free",
             "start": "09:00",
-            "end": "14:00",
+            "end": "13:00",
             "start_12": "9:00 AM",
-            "end_12": "2:00 PM",
+            "end_12": "1:00 PM",
             "fields": [
               "H-HST"
             ],
@@ -39279,6 +39403,22 @@
             "team": null,
             "coach": null,
             "grade": null,
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "13:00",
+            "end": "14:00",
+            "start_12": "1:00 PM",
+            "end_12": "2:00 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1"
+            ],
+            "title": "7/8 Boys Travel (Mills) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Mills",
+            "grade": "7/8",
             "reason": null
           },
           {

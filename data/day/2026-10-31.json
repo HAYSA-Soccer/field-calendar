@@ -2,7 +2,7 @@
   "date": "2026-10-31",
   "sunset": "17:39",
   "updated": true,
-  "last_successful_update": "October 29, 2026 at 8:35 PM",
+  "last_successful_update": "October 30, 2026 at 12:45 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -195,7 +195,7 @@
     "H-HST": [
       {
         "start": "09:00",
-        "end": "14:00"
+        "end": "13:00"
       },
       {
         "start": "15:00",
@@ -345,6 +345,22 @@
     "H-SuSS2": []
   },
   "events": {
+    "H-HST1": [
+      {
+        "event_id": "51bbc16f8e7a621174fe2255c92ced17",
+        "date": "2026-10-31",
+        "start": "13:00",
+        "end": "14:00",
+        "field": "H-HST1",
+        "type": "practice",
+        "title": "7/8 Boys Travel (Mills) Practice",
+        "team": "7/8 Boys Travel",
+        "coach": "Mills",
+        "grade": "7/8",
+        "source": "ICS",
+        "field_display": "H-HST1, Holbrook High School"
+      }
+    ],
     "H-SuSS": [
       {
         "event_id": "b6160c2c5b361dea56ecf2679fe2972e",
@@ -792,9 +808,9 @@
     {
       "field": "H-HST",
       "start": "09:00",
-      "end": "14:00",
+      "end": "13:00",
       "start_12": "9:00 AM",
-      "end_12": "2:00 PM",
+      "end_12": "1:00 PM",
       "type": "free",
       "title": ""
     },
@@ -1063,6 +1079,19 @@
       "source": "ICS"
     },
     {
+      "field": "H-HST1",
+      "start": "13:00",
+      "end": "14:00",
+      "start_12": "1:00 PM",
+      "end_12": "2:00 PM",
+      "type": "practice",
+      "title": "7/8 Boys Travel (Mills) Practice",
+      "team": "7/8 Boys Travel",
+      "coach": "Mills",
+      "grade": "7/8",
+      "source": "ICS"
+    },
+    {
       "field": "H-SJ3",
       "start": "13:30",
       "end": "13:45",
@@ -1152,9 +1181,9 @@
       {
         "type": "free",
         "start": "09:00",
-        "end": "14:00",
+        "end": "13:00",
         "start_12": "9:00 AM",
-        "end_12": "2:00 PM",
+        "end_12": "1:00 PM",
         "fields": [
           "H-HST"
         ],
@@ -1162,6 +1191,22 @@
         "team": null,
         "coach": null,
         "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "13:00",
+        "end": "14:00",
+        "start_12": "1:00 PM",
+        "end_12": "2:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1"
+        ],
+        "title": "7/8 Boys Travel (Mills) Practice",
+        "team": "7/8 Boys Travel",
+        "coach": "Mills",
+        "grade": "7/8",
         "reason": null
       },
       {
