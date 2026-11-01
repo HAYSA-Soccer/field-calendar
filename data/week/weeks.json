@@ -16510,7 +16510,7 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:41 AM",
+      "last_successful_update": "November 01, 2026 at 11:41 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -17036,7 +17036,7 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:42 AM",
+      "last_successful_update": "November 01, 2026 at 11:42 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -17562,7 +17562,7 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:43 AM",
+      "last_successful_update": "November 01, 2026 at 11:43 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -18160,7 +18160,7 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:43 AM",
+      "last_successful_update": "November 01, 2026 at 11:42 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -18727,7 +18727,7 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:43 AM",
+      "last_successful_update": "November 01, 2026 at 11:43 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -19317,7 +19317,7 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:42 AM",
+      "last_successful_update": "November 01, 2026 at 11:41 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -27062,7 +27062,7 @@
       "date": "2026-11-06",
       "sunset": "16:31",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:40 AM",
+      "last_successful_update": "November 01, 2026 at 11:40 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -27839,7 +27839,7 @@
       "date": "2026-11-05",
       "sunset": "16:33",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:40 AM",
+      "last_successful_update": "November 01, 2026 at 11:39 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -28813,7 +28813,7 @@
       "date": "2026-11-07",
       "sunset": "16:30",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:41 AM",
+      "last_successful_update": "November 01, 2026 at 11:40 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -30036,7 +30036,7 @@
       "date": "2026-11-02",
       "sunset": "16:36",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:39 AM",
+      "last_successful_update": "November 01, 2026 at 11:38 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -30240,9 +30240,8 @@
         ],
         "H-HST2": [
           {
-            "start": "18:00",
-            "end": "21:00",
-            "mode": "practice_only"
+            "start": "19:30",
+            "end": "21:00"
           }
         ],
         "H-HST3": [
@@ -30426,6 +30425,22 @@
             "source": "ICS",
             "field_display": "H-Su2A, Holbrook Sumner Field"
           }
+        ],
+        "H-HST2": [
+          {
+            "event_id": "f175c99c62440d55cc501b93e9a5b1d8",
+            "date": "2026-11-02",
+            "start": "18:00",
+            "end": "19:30",
+            "field": "H-HST2",
+            "type": "practice",
+            "title": "3/4 Boys Travel (Osward) Practice",
+            "team": "3/4 Boys Travel",
+            "coach": "Osward",
+            "grade": "3/4",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          }
         ]
       },
       "blocks": {},
@@ -30578,15 +30593,6 @@
           "source": "ICS"
         },
         {
-          "field": "H-HST2",
-          "start": "18:00",
-          "end": "21:00",
-          "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
           "field": "H-HST3",
           "start": "18:00",
           "end": "21:00",
@@ -30645,6 +30651,19 @@
           "source": "ICS"
         },
         {
+          "field": "H-HST2",
+          "start": "18:00",
+          "end": "19:30",
+          "start_12": "6:00 PM",
+          "end_12": "7:30 PM",
+          "type": "practice",
+          "title": "3/4 Boys Travel (Osward) Practice",
+          "team": "3/4 Boys Travel",
+          "coach": "Osward",
+          "grade": "3/4",
+          "source": "ICS"
+        },
+        {
           "field": "H-Su2",
           "start": "18:30",
           "end": "19:00",
@@ -30679,6 +30698,15 @@
           "end_12": "9:00 PM",
           "type": "free",
           "title": ""
+        },
+        {
+          "field": "H-HST2",
+          "start": "19:30",
+          "end": "21:00",
+          "start_12": "7:30 PM",
+          "end_12": "9:00 PM",
+          "type": "free",
+          "title": ""
         }
       ],
       "merged_availability": {
@@ -30690,7 +30718,6 @@
             "start_12": "6:00 PM",
             "end_12": "7:30 PM",
             "fields": [
-              "H-HST2",
               "H-HST3",
               "H-HST4"
             ],
@@ -30708,7 +30735,8 @@
             "end_12": "7:30 PM",
             "fields": [
               "H-HST",
-              "H-HST1"
+              "H-HST1",
+              "H-HST2"
             ],
             "title": "3/4 Boys Travel (Ball) Practice",
             "team": "3/4 Boys Travel",
@@ -30916,7 +30944,7 @@
       "date": "2026-11-04",
       "sunset": "16:34",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:40 AM",
+      "last_successful_update": "November 01, 2026 at 11:39 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -31978,7 +32006,7 @@
       "date": "2026-11-08",
       "sunset": "16:29",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:41 AM",
+      "last_successful_update": "November 01, 2026 at 11:40 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -32201,7 +32229,7 @@
       "date": "2026-11-03",
       "sunset": "16:35",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:39 AM",
+      "last_successful_update": "November 01, 2026 at 11:38 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -37958,7 +37986,7 @@
       "date": "2026-11-01",
       "sunset": "16:37",
       "updated": true,
-      "last_successful_update": "November 01, 2026 at 6:38 AM",
+      "last_successful_update": "November 01, 2026 at 11:37 AM",
       "complexes": {
         "TURF": [
           "H-HST",
