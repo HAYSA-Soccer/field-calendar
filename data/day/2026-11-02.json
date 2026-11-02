@@ -2,7 +2,7 @@
   "date": "2026-11-02",
   "sunset": "16:36",
   "updated": true,
-  "last_successful_update": "November 01, 2026 at 8:14 PM",
+  "last_successful_update": "November 02, 2026 at 3:50 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -212,9 +212,8 @@
     ],
     "H-HST3": [
       {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
+        "start": "19:00",
+        "end": "21:00"
       }
     ],
     "H-HST4": [
@@ -333,6 +332,22 @@
         "grade": "3/4",
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
+      }
+    ],
+    "H-HST3": [
+      {
+        "event_id": "99e085ea50ed9da88a408e0a60801c80",
+        "date": "2026-11-02",
+        "start": "18:00",
+        "end": "19:00",
+        "field": "H-HST3",
+        "type": "practice",
+        "title": "Nielsen Eye Center (Orange) Practice",
+        "team": "Nielsen Eye Center",
+        "coach": "Orange",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST3, Holbrook High School"
       }
     ],
     "H-Su2A": [
@@ -492,15 +507,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-HST3",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-HST4",
       "start": "18:00",
       "end": "21:00",
@@ -520,6 +526,19 @@
       "team": "3/4 Boys Travel",
       "coach": "Ball",
       "grade": "3/4",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST3",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "practice",
+      "title": "Nielsen Eye Center (Orange) Practice",
+      "team": "Nielsen Eye Center",
+      "coach": "Orange",
+      "grade": "",
       "source": "ICS"
     },
     {
@@ -550,6 +569,15 @@
       "end": "19:00",
       "start_12": "6:30 PM",
       "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST3",
+      "start": "19:00",
+      "end": "21:00",
+      "start_12": "7:00 PM",
+      "end_12": "9:00 PM",
       "type": "free",
       "title": ""
     },
@@ -586,8 +614,41 @@
       {
         "type": "free",
         "start": "18:00",
-        "end": "19:30",
+        "end": "19:00",
         "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-HST4"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2",
+          "H-HST3"
+        ],
+        "title": "Nielsen Eye Center (Orange) Practice",
+        "team": "Nielsen Eye Center",
+        "coach": "Orange",
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "19:00",
+        "end": "19:30",
+        "start_12": "7:00 PM",
         "end_12": "7:30 PM",
         "fields": [
           "H-HST3",
@@ -601,19 +662,19 @@
       },
       {
         "type": "practice",
-        "start": "18:00",
+        "start": "19:00",
         "end": "19:30",
-        "start_12": "6:00 PM",
+        "start_12": "7:00 PM",
         "end_12": "7:30 PM",
         "fields": [
           "H-HST",
           "H-HST1",
           "H-HST2"
         ],
-        "title": "3/4 Boys Travel (Ball) Practice",
-        "team": "3/4 Boys Travel",
-        "coach": "Ball",
-        "grade": "3/4",
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
         "reason": null
       },
       {
