@@ -484,6 +484,16 @@ const eventLaneCount = lanes.length;
 const totalLaneCount =
   eventLaneCount + 1;
 
+console.log(
+  complex,
+  "events:",
+  events.length,
+  "availability:",
+  availability.length,
+  "lanes:",
+  lanes.length
+);
+
   blocks.forEach(b => {
     const block = document.createElement("div");
     block.className = "block";
