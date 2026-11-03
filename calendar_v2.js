@@ -91,11 +91,13 @@ async function loadDay(dateStr) {
       showDayNote: true,
       selectedComplexes,
       condensed: false
-    });
+      });
   } catch (e) {
+    console.error(e);
+  
     if (container) {
       container.innerHTML =
-        `<div class="update-note">No stored data exists for this date.</div>`;
+        `<div class="update-note">${e.message}</div>`;
     }
   }
 }
