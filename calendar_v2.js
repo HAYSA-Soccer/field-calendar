@@ -263,14 +263,12 @@ function buildAvailability(day, fieldMap, blocks) {
         curFields = slot.free;
       } else if (!same) {
         if (curFields && curFields.length > 0) {
-          curFields.forEach(f => {
-            avail.push({
-              complex,
-              start: curStart,
-              end: timeline[idx - 1].minute + 1,
-              fields: [f.field],
-              modes: [f.mode]
-            });
+          avail.push({
+            complex,
+            start: curStart,
+            end: timeline[idx - 1].minute + 1,
+            fields: curFields.map(f => f.field),
+            modes: curFields.map(f => f.mode)
           });
         }
         curStart = slot.minute;
