@@ -461,25 +461,36 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
     });
   });
 
-  blocks.forEach(b => {
-
-    const overlapping = blocks.filter(x =>
-      x !== b &&
-      overlaps(x.start, x.end, b.start, b.end)
-    );
+  const lanes = [];
   
-    const group = [b, ...overlapping]
-      .sort((a, b) => {
-        if (a.start !== b.start) {
-          return a.start - b.start;
+  blocks
+    .filter(b => b.kind === "event")
+    .sort((a, b) => a.start - b.start)
+    .forEach(b => {
+      let laneIndex = 0;
+  
+      while (true) {
+        const lane = lanes[laneIndex] || [];
+  
+        const conflict = lane.some(x =>
+          overlaps(x.start, x.end, b.start, b.end)
+        );
+  
+        if (!conflict) {
+          lane.push(b);
+          lanes[laneIndex] = lane;
+          b.lane = laneIndex;
+          break;
         }
-        return a.kind.localeCompare(b.kind);
-      });
   
-    b.slotCount = group.length;
-    b.slotIndex = group.indexOf(b);
-  });
+        laneIndex++;
+      }
+    });
   
+const eventLaneCount = lanes.length;
+const totalLaneCount =
+  eventLaneCount + 1;
+
 console.log(
   complex,
   "events:",
@@ -517,10 +528,13 @@ console.log(
         </div>
       `;
 
-      const laneWidth = 100 / b.slotCount;
+      const laneWidth = 100 / totalLaneCount;
+
+      const visualLane =
+        Math.min(b.lane, totalLaneCount - 1);
       
       block.style.left =
-        (b.slotIndex * laneWidth) + "%";
+        (visualLane * laneWidth) + "%";
       
       block.style.width =
         laneWidth + "%";
@@ -547,13 +561,26 @@ console.log(
         </div>
       `;
 
-      const laneWidth = 100 / b.slotCount;
+      const overlappingEventLanes = new Set();
+
+      blocks
+        .filter(x => x.kind === "event")
+        .forEach(x => {
+          if (overlaps(x.start, x.end, b.start, b.end)) {
+            overlappingEventLanes.add(x.lane);
+          }
+        });
+
+      const laneWidth = 100 / totalLaneCount;
       
-      block.style.left =
-        (b.slotIndex * laneWidth) + "%";
+      const freeLanes = [...Array(totalLaneCount).keys()].filter(
+        i => !overlappingEventLanes.has(i)
+      );
       
-      block.style.width =
-        laneWidth + "%";
+      const lane = freeLanes[0];
+      
+      block.style.left = (lane * laneWidth) + "%";
+      block.style.width = laneWidth + "%";
     }
 
     block.style.top = ((b.start - DAY_START) * PX_PER_MIN) + "px";
