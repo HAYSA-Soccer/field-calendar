@@ -482,7 +482,7 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
   
 const eventLaneCount = lanes.length;
 const totalLaneCount =
-  Math.min(eventLaneCount + 1, 4);
+  eventLaneCount + 1;
 
   blocks.forEach(b => {
     const block = document.createElement("div");
