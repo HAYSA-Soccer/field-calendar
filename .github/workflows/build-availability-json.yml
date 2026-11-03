@@ -175,7 +175,7 @@ jobs:
           done
 
       # ---------------------------------------------------------
-      # Build week + month JSON (streaming, no glob args)
+      # Build week + month JSON
       # ---------------------------------------------------------
       - name: Build week + month JSON
         shell: bash
@@ -188,7 +188,7 @@ jobs:
               reduce .[] as $d ({}; 
                 ($d.date | strptime("%Y-%m-%d") | mktime) as $ts
                 | ($ts | strftime("%w") | tonumber) as $w
-                | (if $w == 0 then $ts - 6*24*60*60 else $ts - ( $w - 1 )*24*60*60 end) as $mon_ts
+                | (if $w == 0 then $ts - 6*24*60*60 else $ts - ($w - 1)*24*60*60 end) as $mon_ts
                 | ($mon_ts | strftime("%Y-%m-%d")) as $monday
                 | .[$monday] |= (. // {}) | .[$monday][$d.date] = $d
               )
@@ -202,7 +202,7 @@ jobs:
             find data/day -name '*.json' -exec cat {} \; | jq -s '
               map(select(.date | type == "string")) |
               reduce .[] as $d ({}; 
-                .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))] 
+                .[($d.date | strptime("%Y-%m-%d") | mktime | strftime("%Y-%m"))]
                 |= (. // {}) | .[$d.date] = $d
               )
             ' > data/month/months.json || echo "{}" > data/month/months.json
@@ -211,7 +211,7 @@ jobs:
           fi
 
       # ---------------------------------------------------------
-      # Build final availability.json (streaming days)
+      # Build final availability.json
       # ---------------------------------------------------------
       - name: Build final availability.json
         shell: bash
@@ -260,16 +260,37 @@ jobs:
             > data/last_updated.json
 
       # ---------------------------------------------------------
+      # Validate generated JSON
+      # ---------------------------------------------------------
+      - name: Validate generated JSON
+        shell: bash
+        run: |
+          if grep -R "<<<<<<<" data/ >/dev/null; then
+            echo "ERROR: Merge conflict markers detected"
+            grep -R "<<<<<<<" data/
+            exit 1
+          fi
+
+          find data -name '*.json' -print0 | while IFS= read -r -d '' FILE
+          do
+            jq empty "$FILE"
+          done
+
+      # ---------------------------------------------------------
       # Commit updated JSON
       # ---------------------------------------------------------
       - name: Commit updated JSON
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-      
-          # Always pull the latest main BEFORE committing
-          git pull --rebase --autostash origin main || true
-      
+
           git add -A
-          git commit -m "Updated availability JSON" || true
-          git push origin main
+
+          if git diff --cached --quiet; then
+            echo "No changes detected."
+            exit 0
+          fi
+
+          git commit -m "Updated availability JSON"
+
+          git push origin HEAD:main
