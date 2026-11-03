@@ -277,14 +277,12 @@ function buildAvailability(day, fieldMap, blocks) {
     });
 
     if (curStart !== null && curFields && curFields.length > 0) {
-      curFields.forEach(f => {
-        avail.push({
-          complex,
-          start: curStart,
-          end: DAY_END,
-          fields: [f.field],
-          modes: [f.mode]
-        });
+      avail.push({
+        complex,
+        start: curStart,
+        end: DAY_END,
+        fields: curFields.map(f => f.field),
+        modes: curFields.map(f => f.mode)
       });
     }
   });
