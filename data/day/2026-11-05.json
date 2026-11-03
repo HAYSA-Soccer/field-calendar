@@ -2,7 +2,7 @@
   "date": "2026-11-05",
   "sunset": "16:33",
   "updated": true,
-  "last_successful_update": "November 02, 2026 at 9:02 PM",
+  "last_successful_update": "November 03, 2026 at 4:23 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -244,15 +244,21 @@
     "H-Su2": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
+        "end": "16:30"
+      },
+      {
+        "start": "17:30",
+        "end": "19:00"
       }
     ],
     "H-Su2A": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
+        "end": "16:30"
+      },
+      {
+        "start": "17:30",
+        "end": "19:00"
       }
     ],
     "H-Su2B": [
@@ -370,6 +376,22 @@
         "source": "ICS",
         "field_display": "H-Su1A, Holbrook Sumner Field"
       }
+    ],
+    "H-Su2A": [
+      {
+        "event_id": "1200fa422127e5accc5e399d179d63b4",
+        "date": "2026-11-05",
+        "start": "16:30",
+        "end": "17:30",
+        "field": "H-Su2A",
+        "type": "practice",
+        "title": "Abington Bank (Red) Practice",
+        "team": "Abington Bank",
+        "coach": "Red",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-Su2A, Holbrook Sumner Field"
+      }
     ]
   },
   "blocks": {},
@@ -404,18 +426,18 @@
     {
       "field": "H-Su2",
       "start": "16:00",
-      "end": "19:00",
+      "end": "16:30",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "4:30 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2A",
       "start": "16:00",
-      "end": "19:00",
+      "end": "16:30",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "4:30 PM",
       "type": "free",
       "title": ""
     },
@@ -483,6 +505,19 @@
       "title": ""
     },
     {
+      "field": "H-Su2A",
+      "start": "16:30",
+      "end": "17:30",
+      "start_12": "4:30 PM",
+      "end_12": "5:30 PM",
+      "type": "practice",
+      "title": "Abington Bank (Red) Practice",
+      "team": "Abington Bank",
+      "coach": "Red",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
       "field": "H-Su1A",
       "start": "17:00",
       "end": "18:00",
@@ -494,6 +529,24 @@
       "coach": "Red",
       "grade": "",
       "source": "ICS"
+    },
+    {
+      "field": "H-Su2",
+      "start": "17:30",
+      "end": "19:00",
+      "start_12": "5:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "17:30",
+      "end": "19:00",
+      "start_12": "5:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-HST3",
@@ -653,9 +706,9 @@
       {
         "type": "free",
         "start": "16:00",
-        "end": "17:00",
+        "end": "16:30",
         "start_12": "4:00 PM",
-        "end_12": "5:00 PM",
+        "end_12": "4:30 PM",
         "fields": [
           "H-Su1",
           "H-Su1A",
@@ -678,9 +731,89 @@
       },
       {
         "type": "free",
+        "start": "16:30",
+        "end": "17:00",
+        "start_12": "4:30 PM",
+        "end_12": "5:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "16:30",
+        "end": "17:00",
+        "start_12": "4:30 PM",
+        "end_12": "5:00 PM",
+        "fields": [
+          "H-Su2",
+          "H-Su2A"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
         "start": "17:00",
-        "end": "18:00",
+        "end": "17:30",
         "start_12": "5:00 PM",
+        "end_12": "5:30 PM",
+        "fields": [
+          "H-Su1B",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "17:00",
+        "end": "17:30",
+        "start_12": "5:00 PM",
+        "end_12": "5:30 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su2",
+          "H-Su2A"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "17:30",
+        "end": "18:00",
+        "start_12": "5:30 PM",
         "end_12": "6:00 PM",
         "fields": [
           "H-Su1B",
@@ -702,17 +835,17 @@
       },
       {
         "type": "practice",
-        "start": "17:00",
+        "start": "17:30",
         "end": "18:00",
-        "start_12": "5:00 PM",
+        "start_12": "5:30 PM",
         "end_12": "6:00 PM",
         "fields": [
           "H-Su1",
           "H-Su1A"
         ],
-        "title": "The Red House Academy (Red) Practice",
-        "team": "The Red House Academy",
-        "coach": "Red",
+        "title": null,
+        "team": null,
+        "coach": null,
         "grade": null,
         "reason": null
       },

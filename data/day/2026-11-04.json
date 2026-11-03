@@ -2,7 +2,7 @@
   "date": "2026-11-04",
   "sunset": "16:34",
   "updated": true,
-  "last_successful_update": "November 02, 2026 at 9:01 PM",
+  "last_successful_update": "November 03, 2026 at 4:22 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -196,15 +196,14 @@
     "H-HST1": [],
     "H-HST2": [
       {
-        "start": "18:00",
+        "start": "19:00",
         "end": "19:30"
       }
     ],
     "H-HST3": [
       {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
+        "start": "19:00",
+        "end": "21:00"
       }
     ],
     "H-HST4": [
@@ -217,36 +216,51 @@
     "H-Su1": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su1A": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su1B": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su2": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su2A": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
+        "end": "17:00"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00"
       }
     ],
     "H-Su2B": [
@@ -259,15 +273,21 @@
     "H-SJ3": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
+        "end": "16:30"
+      },
+      {
+        "start": "17:30",
+        "end": "19:00"
       }
     ],
     "H-SJ3A": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
+        "end": "16:30"
+      },
+      {
+        "start": "17:30",
+        "end": "19:00"
       }
     ],
     "H-SJ3B": [
@@ -317,6 +337,20 @@
         "grade": "7/8",
         "source": "ICS",
         "field_display": "H-HST2, Holbrook High School"
+      },
+      {
+        "event_id": "924c965c1533d8ee16cd90e28cddaf5e",
+        "date": "2026-11-04",
+        "start": "18:00",
+        "end": "19:00",
+        "field": "H-HST2",
+        "type": "practice",
+        "title": "Wm. Perry Auto Repair (Orange) Practice",
+        "team": "Wm. Perry Auto Repair",
+        "coach": "Orange",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
       }
     ],
     "H-HST1": [
@@ -348,6 +382,86 @@
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
       }
+    ],
+    "H-Su1A": [
+      {
+        "event_id": "deb3279554343a6e0834ae0e47055966",
+        "date": "2026-11-04",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-Su1A",
+        "type": "practice",
+        "title": "Troupe Waste & Recycling (Green) Practice",
+        "team": "Troupe Waste & Recycling",
+        "coach": "Green",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-Su1A, Holbrook Sumner Field"
+      }
+    ],
+    "H-Su1B": [
+      {
+        "event_id": "7210f42493682ccf4ec5de3e98dc754f",
+        "date": "2026-11-04",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-Su1B",
+        "type": "practice",
+        "title": "Edwards Built Pavements (Blue) Practice",
+        "team": "Edwards Built Pavements",
+        "coach": "Blue",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-Su1B, Holbrook Sumner Field"
+      }
+    ],
+    "H-HST3": [
+      {
+        "event_id": "46d0e085e5e0dc13cc6b47e8b6daa49f",
+        "date": "2026-11-04",
+        "start": "18:00",
+        "end": "19:00",
+        "field": "H-HST3",
+        "type": "practice",
+        "title": "Hope and Future Home Care Services (Blue) Practice",
+        "team": "Hope and Future Home Care Services",
+        "coach": "Blue",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST3, Holbrook High School"
+      }
+    ],
+    "H-SJ3A": [
+      {
+        "event_id": "6ac602ef05561fb0206ef786cf416e29",
+        "date": "2026-11-04",
+        "start": "16:30",
+        "end": "17:30",
+        "field": "H-SJ3A",
+        "type": "practice",
+        "title": "Summit's Place (Green) Practice",
+        "team": "Summit's Place",
+        "coach": "Green",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SJ3A, Holbrook Sean Joyce Field"
+      }
+    ],
+    "H-Su2A": [
+      {
+        "event_id": "6cd20ffec73630b5eb7bc47ba16a71aa",
+        "date": "2026-11-04",
+        "start": "17:00",
+        "end": "18:00",
+        "field": "H-Su2A",
+        "type": "practice",
+        "title": "www.slamyourday.com (Green) Practice",
+        "team": "www.slamyourday.com",
+        "coach": "Green",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-Su2A, Holbrook Sumner Field"
+      }
     ]
   },
   "blocks": {},
@@ -355,45 +469,45 @@
     {
       "field": "H-Su1",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:00",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1A",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:00",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1B",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:00",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:00",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2A",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:00",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:00 PM",
       "type": "free",
       "title": ""
     },
@@ -409,18 +523,18 @@
     {
       "field": "H-SJ3",
       "start": "16:00",
-      "end": "19:00",
+      "end": "16:30",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "4:30 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ3A",
       "start": "16:00",
-      "end": "19:00",
+      "end": "16:30",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "4:30 PM",
       "type": "free",
       "title": ""
     },
@@ -461,20 +575,72 @@
       "title": ""
     },
     {
-      "field": "H-HST2",
-      "start": "18:00",
-      "end": "19:30",
-      "start_12": "6:00 PM",
-      "end_12": "7:30 PM",
+      "field": "H-SJ3A",
+      "start": "16:30",
+      "end": "17:30",
+      "start_12": "4:30 PM",
+      "end_12": "5:30 PM",
+      "type": "practice",
+      "title": "Summit's Place (Green) Practice",
+      "team": "Summit's Place",
+      "coach": "Green",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su1A",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "Troupe Waste & Recycling (Green) Practice",
+      "team": "Troupe Waste & Recycling",
+      "coach": "Green",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su1B",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "Edwards Built Pavements (Blue) Practice",
+      "team": "Edwards Built Pavements",
+      "coach": "Blue",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-Su2A",
+      "start": "17:00",
+      "end": "18:00",
+      "start_12": "5:00 PM",
+      "end_12": "6:00 PM",
+      "type": "practice",
+      "title": "www.slamyourday.com (Green) Practice",
+      "team": "www.slamyourday.com",
+      "coach": "Green",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SJ3",
+      "start": "17:30",
+      "end": "19:00",
+      "start_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
     {
-      "field": "H-HST3",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
+      "field": "H-SJ3A",
+      "start": "17:30",
+      "end": "19:00",
+      "start_12": "5:30 PM",
+      "end_12": "7:00 PM",
       "type": "free",
       "title": ""
     },
@@ -488,6 +654,64 @@
       "title": ""
     },
     {
+      "field": "H-Su1",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1A",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su1B",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-Su2A",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST2",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "practice",
+      "title": "Wm. Perry Auto Repair (Orange) Practice",
+      "team": "Wm. Perry Auto Repair",
+      "coach": "Orange",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
       "field": "H-HST1",
       "start": "18:00",
       "end": "19:30",
@@ -499,6 +723,37 @@
       "coach": "Walsh",
       "grade": "5/6",
       "source": "ICS"
+    },
+    {
+      "field": "H-HST3",
+      "start": "18:00",
+      "end": "19:00",
+      "start_12": "6:00 PM",
+      "end_12": "7:00 PM",
+      "type": "practice",
+      "title": "Hope and Future Home Care Services (Blue) Practice",
+      "team": "Hope and Future Home Care Services",
+      "coach": "Blue",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST2",
+      "start": "19:00",
+      "end": "19:30",
+      "start_12": "7:00 PM",
+      "end_12": "7:30 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST3",
+      "start": "19:00",
+      "end": "21:00",
+      "start_12": "7:00 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-HST2",
@@ -532,8 +787,41 @@
       {
         "type": "free",
         "start": "18:00",
-        "end": "19:30",
+        "end": "19:00",
         "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-HST4"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
+        "end_12": "7:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST1",
+          "H-HST2",
+          "H-HST3"
+        ],
+        "title": "Wm. Perry Auto Repair (Orange) Practice",
+        "team": "Wm. Perry Auto Repair",
+        "coach": "Orange",
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "19:00",
+        "end": "19:30",
+        "start_12": "7:00 PM",
         "end_12": "7:30 PM",
         "fields": [
           "H-HST2",
@@ -548,18 +836,18 @@
       },
       {
         "type": "practice",
-        "start": "18:00",
+        "start": "19:00",
         "end": "19:30",
-        "start_12": "6:00 PM",
+        "start_12": "7:00 PM",
         "end_12": "7:30 PM",
         "fields": [
           "H-HST",
           "H-HST1"
         ],
-        "title": "5/6 Boys Travel (Walsh) Practice",
-        "team": "5/6 Boys Travel",
-        "coach": "Walsh",
-        "grade": "5/6",
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
         "reason": null
       },
       {
@@ -600,8 +888,154 @@
       {
         "type": "free",
         "start": "16:00",
-        "end": "19:00",
+        "end": "16:30",
         "start_12": "4:00 PM",
+        "end_12": "4:30 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "16:30",
+        "end": "17:00",
+        "start_12": "4:30 PM",
+        "end_12": "5:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "16:30",
+        "end": "17:00",
+        "start_12": "4:30 PM",
+        "end_12": "5:00 PM",
+        "fields": [
+          "H-SJ3",
+          "H-SJ3A"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "17:00",
+        "end": "17:30",
+        "start_12": "5:00 PM",
+        "end_12": "5:30 PM",
+        "fields": [
+          "H-Su2B",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "17:00",
+        "end": "17:30",
+        "start_12": "5:00 PM",
+        "end_12": "5:30 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-SJ3",
+          "H-SJ3A"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "17:30",
+        "end": "18:00",
+        "start_12": "5:30 PM",
+        "end_12": "6:00 PM",
+        "fields": [
+          "H-Su2B",
+          "H-SJ3",
+          "H-SJ3A",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "17:30",
+        "end": "18:00",
+        "start_12": "5:30 PM",
+        "end_12": "6:00 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "18:00",
+        "end": "19:00",
+        "start_12": "6:00 PM",
         "end_12": "7:00 PM",
         "fields": [
           "H-Su1",

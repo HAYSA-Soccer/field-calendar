@@ -2,7 +2,7 @@
   "date": "2026-11-06",
   "sunset": "16:31",
   "updated": true,
-  "last_successful_update": "November 02, 2026 at 9:02 PM",
+  "last_successful_update": "November 03, 2026 at 4:23 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -248,15 +248,21 @@
     "H-SJ3": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
+        "end": "17:30"
+      },
+      {
+        "start": "18:30",
+        "end": "19:00"
       }
     ],
     "H-SJ3A": [
       {
         "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
+        "end": "17:30"
+      },
+      {
+        "start": "18:30",
+        "end": "19:00"
       }
     ],
     "H-SJ3B": [
@@ -306,6 +312,22 @@
         "grade": "",
         "source": "ICS",
         "field_display": "H-Su2A, Holbrook Sumner Field"
+      }
+    ],
+    "H-SJ3A": [
+      {
+        "event_id": "63ae41aeb9a48393317978623083e5fd",
+        "date": "2026-11-06",
+        "start": "17:30",
+        "end": "18:30",
+        "field": "H-SJ3A",
+        "type": "practice",
+        "title": "Brockton Rox (Blue) Practice",
+        "team": "Brockton Rox",
+        "coach": "Blue",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SJ3A, Holbrook Sean Joyce Field"
       }
     ]
   },
@@ -368,18 +390,18 @@
     {
       "field": "H-SJ3",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:30",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:30 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ3A",
       "start": "16:00",
-      "end": "19:00",
+      "end": "17:30",
       "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
+      "end_12": "5:30 PM",
       "type": "free",
       "title": ""
     },
@@ -446,6 +468,37 @@
       "start": "17:30",
       "end": "19:00",
       "start_12": "5:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "17:30",
+      "end": "18:30",
+      "start_12": "5:30 PM",
+      "end_12": "6:30 PM",
+      "type": "practice",
+      "title": "Brockton Rox (Blue) Practice",
+      "team": "Brockton Rox",
+      "coach": "Blue",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SJ3",
+      "start": "18:30",
+      "end": "19:00",
+      "start_12": "6:30 PM",
+      "end_12": "7:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-SJ3A",
+      "start": "18:30",
+      "end": "19:00",
+      "start_12": "6:30 PM",
       "end_12": "7:00 PM",
       "type": "free",
       "title": ""
@@ -523,8 +576,48 @@
       {
         "type": "free",
         "start": "17:30",
-        "end": "19:00",
+        "end": "18:30",
         "start_12": "5:30 PM",
+        "end_12": "6:30 PM",
+        "fields": [
+          "H-Su1",
+          "H-Su1A",
+          "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
+          "H-SJ3B",
+          "H-SJ4",
+          "H-SJ4A",
+          "H-SJ4B"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "17:30",
+        "end": "18:30",
+        "start_12": "5:30 PM",
+        "end_12": "6:30 PM",
+        "fields": [
+          "H-SJ3",
+          "H-SJ3A"
+        ],
+        "title": "Brockton Rox (Blue) Practice",
+        "team": "Brockton Rox",
+        "coach": "Blue",
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "18:30",
+        "end": "19:00",
+        "start_12": "6:30 PM",
         "end_12": "7:00 PM",
         "fields": [
           "H-Su1",

@@ -2,7 +2,7 @@
   "date": "2026-11-14",
   "sunset": "16:23",
   "updated": true,
-  "last_successful_update": "November 02, 2026 at 9:07 PM",
+  "last_successful_update": "November 03, 2026 at 4:27 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -316,6 +316,64 @@
         "source": "ICS",
         "field_display": "H-HST, Holbrook High School"
       }
+    ],
+    "H-SuSS": [
+      {
+        "event_id": "46c68eb288600ae96a8881231c750238",
+        "date": "2026-11-14",
+        "start": "11:30",
+        "end": "12:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 11:30 AM Session Practice",
+        "team": "Mini Kickers 11:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      },
+      {
+        "event_id": "c3e170b40a1f5948e33d894192110555",
+        "date": "2026-11-14",
+        "start": "10:30",
+        "end": "11:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 10:30 AM Session Practice",
+        "team": "Mini Kickers 10:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      },
+      {
+        "event_id": "141e20e13acaaa550f6bea6f0b95efbb",
+        "date": "2026-11-14",
+        "start": "09:30",
+        "end": "10:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 9:30 AM Session Practice",
+        "team": "Mini Kickers 9:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      },
+      {
+        "event_id": "d887518ddaf00ab24cf02db44151432f",
+        "date": "2026-11-14",
+        "start": "08:30",
+        "end": "09:30",
+        "field": "H-SuSS",
+        "type": "practice",
+        "title": "Mini Kickers 8:30 AM Session Practice",
+        "team": "Mini Kickers 8:30 AM Session",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-SuSS, Holbrook Sumner Field"
+      }
     ]
   },
   "blocks": {},
@@ -420,6 +478,19 @@
       "title": ""
     },
     {
+      "field": "H-SuSS",
+      "start": "08:30",
+      "end": "09:30",
+      "start_12": "8:30 AM",
+      "end_12": "9:30 AM",
+      "type": "practice",
+      "title": "Mini Kickers 8:30 AM Session Practice",
+      "team": "Mini Kickers 8:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
       "field": "H-HST",
       "start": "09:00",
       "end": "12:00",
@@ -427,6 +498,45 @@
       "end_12": "12:00 PM",
       "type": "free",
       "title": ""
+    },
+    {
+      "field": "H-SuSS",
+      "start": "09:30",
+      "end": "10:30",
+      "start_12": "9:30 AM",
+      "end_12": "10:30 AM",
+      "type": "practice",
+      "title": "Mini Kickers 9:30 AM Session Practice",
+      "team": "Mini Kickers 9:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SuSS",
+      "start": "10:30",
+      "end": "11:30",
+      "start_12": "10:30 AM",
+      "end_12": "11:30 AM",
+      "type": "practice",
+      "title": "Mini Kickers 10:30 AM Session Practice",
+      "team": "Mini Kickers 10:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-SuSS",
+      "start": "11:30",
+      "end": "12:30",
+      "start_12": "11:30 AM",
+      "end_12": "12:30 PM",
+      "type": "practice",
+      "title": "Mini Kickers 11:30 AM Session Practice",
+      "team": "Mini Kickers 11:30 AM Session",
+      "coach": "",
+      "grade": "",
+      "source": "ICS"
     },
     {
       "field": "H-HST",
@@ -534,6 +644,23 @@
       }
     ],
     "SUMNER/SEAN JOYCE": [
+      {
+        "type": "practice",
+        "start": "08:30",
+        "end": "12:30",
+        "start_12": "8:30 AM",
+        "end_12": "12:30 PM",
+        "fields": [
+          "H-SuSS",
+          "H-SuSS1",
+          "H-SuSS2"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
       {
         "type": "free",
         "start": "08:00",
