@@ -348,9 +348,9 @@ function renderDayCalendar(day, options = {}) {
     eventsByComplex[b.complex].push(b);
   });
 
-  const showAll = activeComplexes.includes("all");
+  const showAll = selectedComplexes.includes("all");
   const normalize = s => s.toLowerCase().trim();
-  const selectedNormalized = activeComplexes.map(normalize);
+  const selectedNormalized = selectedComplexes.map(normalize);
 
   const complexKeys = Object.keys(day.complexes || {});
 
