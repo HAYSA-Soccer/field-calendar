@@ -5172,7 +5172,11 @@
     "date": "2026-11-09",
     "sunset": "16:28",
     "updated": true,
+<<<<<<< Updated upstream
     "last_successful_update": "November 03, 2026 at 4:24 AM",
+=======
+    "last_successful_update": "November 03, 2026 at 4:25 AM",
+>>>>>>> Stashed changes
     "complexes": {
       "TURF": [
         "H-HST",
