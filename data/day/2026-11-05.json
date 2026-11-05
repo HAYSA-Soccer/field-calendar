@@ -2,7 +2,7 @@
   "date": "2026-11-05",
   "sunset": "16:33",
   "updated": true,
-  "last_successful_update": "November 05, 2026 at 11:04 AM",
+  "last_successful_update": "November 05, 2026 at 4:04 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -192,8 +192,18 @@
     }
   ],
   "availability": {
-    "H-HST": [],
-    "H-HST1": [],
+    "H-HST": [
+      {
+        "start": "20:30",
+        "end": "21:00"
+      }
+    ],
+    "H-HST1": [
+      {
+        "start": "20:30",
+        "end": "21:00"
+      }
+    ],
     "H-HST2": [
       {
         "start": "20:30",
@@ -313,22 +323,6 @@
     "H-SuSS2": []
   },
   "events": {
-    "H-HST1": [
-      {
-        "event_id": "5f3910d09f889407072141680e7f2197",
-        "date": "2026-11-05",
-        "start": "19:30",
-        "end": "21:00",
-        "field": "H-HST1",
-        "type": "practice",
-        "title": "7/8 Boys Travel (Mills) Practice",
-        "team": "7/8 Boys Travel",
-        "coach": "Mills",
-        "grade": "7/8",
-        "source": "ICS",
-        "field_display": "H-HST1, Holbrook High School"
-      }
-    ],
     "H-Su1A": [
       {
         "event_id": "04abb7a8b23d17fe86b01a7fe20494b0",
@@ -555,17 +549,22 @@
       "title": "Football Game"
     },
     {
-      "field": "H-HST1",
-      "start": "19:30",
+      "field": "H-HST",
+      "start": "20:30",
       "end": "21:00",
-      "start_12": "7:30 PM",
+      "start_12": "8:30 PM",
       "end_12": "9:00 PM",
-      "type": "practice",
-      "title": "7/8 Boys Travel (Mills) Practice",
-      "team": "7/8 Boys Travel",
-      "coach": "Mills",
-      "grade": "7/8",
-      "source": "ICS"
+      "type": "free",
+      "title": ""
+    },
+    {
+      "field": "H-HST1",
+      "start": "20:30",
+      "end": "21:00",
+      "start_12": "8:30 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
     },
     {
       "field": "H-HST2",
@@ -600,9 +599,9 @@
       {
         "type": "free",
         "start": "18:00",
-        "end": "19:30",
+        "end": "20:30",
         "start_12": "6:00 PM",
-        "end_12": "7:30 PM",
+        "end_12": "8:30 PM",
         "fields": [
           "H-HST1",
           "H-HST2",
@@ -618,9 +617,9 @@
       {
         "type": "admin",
         "start": "18:00",
-        "end": "19:30",
+        "end": "20:30",
         "start_12": "6:00 PM",
-        "end_12": "7:30 PM",
+        "end_12": "8:30 PM",
         "fields": [
           "H-HST"
         ],
@@ -628,15 +627,17 @@
         "team": null,
         "coach": null,
         "grade": null,
-        "reason": null
+        "reason": "Football Game"
       },
       {
         "type": "free",
-        "start": "19:30",
+        "start": "20:30",
         "end": "21:00",
-        "start_12": "7:30 PM",
+        "start_12": "8:30 PM",
         "end_12": "9:00 PM",
         "fields": [
+          "H-HST",
+          "H-HST1",
           "H-HST2",
           "H-HST3",
           "H-HST4"
@@ -645,22 +646,6 @@
         "team": null,
         "coach": null,
         "grade": null,
-        "reason": null
-      },
-      {
-        "type": "practice",
-        "start": "19:30",
-        "end": "21:00",
-        "start_12": "7:30 PM",
-        "end_12": "9:00 PM",
-        "fields": [
-          "H-HST",
-          "H-HST1"
-        ],
-        "title": "7/8 Boys Travel (Mills) Practice",
-        "team": "7/8 Boys Travel",
-        "coach": "Mills",
-        "grade": "7/8",
         "reason": null
       }
     ],
