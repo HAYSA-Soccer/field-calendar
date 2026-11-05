@@ -2,7 +2,7 @@
   "date": "2026-11-04",
   "sunset": "16:34",
   "updated": true,
-  "last_successful_update": "November 04, 2026 at 1:26 PM",
+  "last_successful_update": "November 04, 2026 at 7:07 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -193,7 +193,12 @@
   ],
   "availability": {
     "H-HST": [],
-    "H-HST1": [],
+    "H-HST1": [
+      {
+        "start": "19:30",
+        "end": "21:00"
+      }
+    ],
     "H-HST2": [
       {
         "start": "19:00",
@@ -364,20 +369,6 @@
         "title": "5/6 Boys Travel (Walsh) Practice",
         "team": "5/6 Boys Travel",
         "coach": "Walsh",
-        "grade": "5/6",
-        "source": "ICS",
-        "field_display": "H-HST1, Holbrook High School"
-      },
-      {
-        "event_id": "e649ee4f02c7fbb5c6f7df798669b4c7",
-        "date": "2026-11-04",
-        "start": "19:30",
-        "end": "21:00",
-        "field": "H-HST1",
-        "type": "practice",
-        "title": "5/6 Girls Travel (Casavant) Practice",
-        "team": "5/6 Girls Travel",
-        "coach": "Casavant",
         "grade": "5/6",
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
@@ -756,6 +747,15 @@
       "title": ""
     },
     {
+      "field": "H-HST1",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "free",
+      "title": ""
+    },
+    {
       "field": "H-HST2",
       "start": "19:30",
       "end": "21:00",
@@ -766,19 +766,6 @@
       "team": "7/8 Girls Travel",
       "coach": "Caldwell",
       "grade": "7/8",
-      "source": "ICS"
-    },
-    {
-      "field": "H-HST1",
-      "start": "19:30",
-      "end": "21:00",
-      "start_12": "7:30 PM",
-      "end_12": "9:00 PM",
-      "type": "practice",
-      "title": "5/6 Girls Travel (Casavant) Practice",
-      "team": "5/6 Girls Travel",
-      "coach": "Casavant",
-      "grade": "5/6",
       "source": "ICS"
     }
   ],
@@ -857,6 +844,7 @@
         "start_12": "7:30 PM",
         "end_12": "9:00 PM",
         "fields": [
+          "H-HST1",
           "H-HST3",
           "H-HST4"
         ],
@@ -874,13 +862,12 @@
         "end_12": "9:00 PM",
         "fields": [
           "H-HST",
-          "H-HST1",
           "H-HST2"
         ],
-        "title": "5/6 Girls Travel (Casavant) Practice",
-        "team": "5/6 Girls Travel",
-        "coach": "Casavant",
-        "grade": "5/6",
+        "title": "7/8 Girls Travel (Caldwell) Practice",
+        "team": "7/8 Girls Travel",
+        "coach": "Caldwell",
+        "grade": "7/8",
         "reason": null
       }
     ],
