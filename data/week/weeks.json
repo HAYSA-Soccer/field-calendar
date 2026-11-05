@@ -5092,7 +5092,7 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:44 AM",
+      "last_successful_update": "November 05, 2026 at 11:09 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5659,7 +5659,7 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:43 AM",
+      "last_successful_update": "November 05, 2026 at 11:09 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6246,7 +6246,7 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:44 AM",
+      "last_successful_update": "November 05, 2026 at 11:11 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6963,7 +6963,7 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:44 AM",
+      "last_successful_update": "November 05, 2026 at 11:10 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -7394,7 +7394,7 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:43 AM",
+      "last_successful_update": "November 05, 2026 at 11:07 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -8087,7 +8087,7 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:42 AM",
+      "last_successful_update": "November 05, 2026 at 11:07 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -9349,7 +9349,7 @@
       "date": "2026-11-06",
       "sunset": "16:31",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:41 AM",
+      "last_successful_update": "November 05, 2026 at 11:05 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -9993,7 +9993,7 @@
       "date": "2026-11-05",
       "sunset": "16:33",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:40 AM",
+      "last_successful_update": "November 05, 2026 at 11:04 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -10318,20 +10318,6 @@
             "grade": "7/8",
             "source": "ICS",
             "field_display": "H-HST1, Holbrook High School"
-          },
-          {
-            "event_id": "74ac0f4598c45a76b0a9e193ea788449",
-            "date": "2026-11-05",
-            "start": "18:00",
-            "end": "19:30",
-            "field": "H-HST1",
-            "type": "practice",
-            "title": "5/6 Girls Travel (Baird-Miller) Practice",
-            "team": "5/6 Girls Travel",
-            "coach": "Baird-Miller",
-            "grade": "5/6",
-            "source": "ICS",
-            "field_display": "H-HST1, Holbrook High School"
           }
         ],
         "H-Su1A": [
@@ -10551,19 +10537,6 @@
           "title": ""
         },
         {
-          "field": "H-HST1",
-          "start": "18:00",
-          "end": "19:30",
-          "start_12": "6:00 PM",
-          "end_12": "7:30 PM",
-          "type": "practice",
-          "title": "5/6 Girls Travel (Baird-Miller) Practice",
-          "team": "5/6 Girls Travel",
-          "coach": "Baird-Miller",
-          "grade": "5/6",
-          "source": "ICS"
-        },
-        {
           "field": "H-HST",
           "start": "18:00",
           "end": "20:30",
@@ -10618,8 +10591,41 @@
           {
             "type": "free",
             "start": "18:00",
-            "end": "21:00",
+            "end": "19:30",
             "start_12": "6:00 PM",
+            "end_12": "7:30 PM",
+            "fields": [
+              "H-HST1",
+              "H-HST2",
+              "H-HST3",
+              "H-HST4"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "admin",
+            "start": "18:00",
+            "end": "19:30",
+            "start_12": "6:00 PM",
+            "end_12": "7:30 PM",
+            "fields": [
+              "H-HST"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "19:30",
+            "end": "21:00",
+            "start_12": "7:30 PM",
             "end_12": "9:00 PM",
             "fields": [
               "H-HST2",
@@ -10634,18 +10640,18 @@
           },
           {
             "type": "practice",
-            "start": "18:00",
+            "start": "19:30",
             "end": "21:00",
-            "start_12": "6:00 PM",
+            "start_12": "7:30 PM",
             "end_12": "9:00 PM",
             "fields": [
               "H-HST",
               "H-HST1"
             ],
-            "title": null,
-            "team": null,
-            "coach": null,
-            "grade": null,
+            "title": "7/8 Boys Travel (Mills) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Mills",
+            "grade": "7/8",
             "reason": null
           }
         ],
@@ -10829,7 +10835,7 @@
       "date": "2026-11-07",
       "sunset": "16:30",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:41 AM",
+      "last_successful_update": "November 05, 2026 at 11:06 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -11492,9 +11498,9 @@
             "end": "12:00",
             "field": "H-Su2B",
             "type": "game",
-            "title": "2nd vs. 3rd",
-            "team": "2nd vs. 3rd",
-            "coach": "",
+            "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
+            "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
+            "coach": "Orange",
             "grade": "",
             "source": "ICS",
             "field_display": "H-Su2B, Holbrook Sumner Field"
@@ -11508,9 +11514,9 @@
             "end": "12:00",
             "field": "H-Su2A",
             "type": "game",
-            "title": "1st vs. 4th",
-            "team": "1st vs. 4th",
-            "coach": "",
+            "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
+            "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
+            "coach": "Blue",
             "grade": "",
             "source": "ICS",
             "field_display": "H-Su2A, Holbrook Sumner Field"
@@ -11856,9 +11862,9 @@
           "start_12": "11:00 AM",
           "end_12": "12:00 PM",
           "type": "game",
-          "title": "2nd vs. 3rd",
-          "team": "2nd vs. 3rd",
-          "coach": "",
+          "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
+          "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
+          "coach": "Orange",
           "grade": "",
           "source": "ICS"
         },
@@ -11869,9 +11875,9 @@
           "start_12": "11:00 AM",
           "end_12": "12:00 PM",
           "type": "game",
-          "title": "1st vs. 4th",
-          "team": "1st vs. 4th",
-          "coach": "",
+          "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
+          "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
+          "coach": "Blue",
           "grade": "",
           "source": "ICS"
         },
@@ -12510,9 +12516,9 @@
               "H-Su2A",
               "H-Su2B"
             ],
-            "title": "1st vs. 4th",
-            "team": "1st vs. 4th",
-            "coach": null,
+            "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
+            "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
+            "coach": "Blue",
             "grade": null,
             "reason": null
           },
@@ -13605,7 +13611,7 @@
       "date": "2026-11-08",
       "sunset": "16:29",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 2:42 AM",
+      "last_successful_update": "November 05, 2026 at 11:06 AM",
       "complexes": {
         "TURF": [
           "H-HST",
