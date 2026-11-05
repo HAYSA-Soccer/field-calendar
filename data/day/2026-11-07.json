@@ -2,7 +2,7 @@
   "date": "2026-11-07",
   "sunset": "16:30",
   "updated": true,
-  "last_successful_update": "November 04, 2026 at 7:09 PM",
+  "last_successful_update": "November 05, 2026 at 2:41 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -489,7 +489,7 @@
         "field_display": "H-HST, Holbrook High School"
       },
       {
-        "event_id": "aefb71a47ba0e4a56d2e37da24accd85",
+        "event_id": "8011bf7aa1c0672afd50e97e19486e5f",
         "date": "2026-11-07",
         "start": "14:00",
         "end": "15:00",

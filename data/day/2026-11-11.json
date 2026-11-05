@@ -2,7 +2,7 @@
   "date": "2026-11-11",
   "sunset": "16:26",
   "updated": true,
-  "last_successful_update": "November 04, 2026 at 7:11 PM",
+  "last_successful_update": "November 05, 2026 at 2:43 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -195,8 +195,7 @@
     "H-HST": [
       {
         "start": "18:00",
-        "end": "21:00",
-        "mode": "both"
+        "end": "19:30"
       }
     ],
     "H-HST1": [
@@ -209,8 +208,7 @@
     "H-HST2": [
       {
         "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
+        "end": "19:30"
       }
     ],
     "H-HST3": [
@@ -315,7 +313,24 @@
     "H-SuSS1": [],
     "H-SuSS2": []
   },
-  "events": {},
+  "events": {
+    "H-HST2": [
+      {
+        "event_id": "110812e005287690d9dca8c49dc727c2",
+        "date": "2026-11-11",
+        "start": "19:30",
+        "end": "21:00",
+        "field": "H-HST2",
+        "type": "practice",
+        "title": "7/8 Girls Travel (Caldwell) Practice",
+        "team": "7/8 Girls Travel",
+        "coach": "Caldwell",
+        "grade": "7/8",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
+      }
+    ]
+  },
   "blocks": {},
   "merged": [
     {
@@ -429,9 +444,9 @@
     {
       "field": "H-HST",
       "start": "18:00",
-      "end": "21:00",
+      "end": "19:30",
       "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
+      "end_12": "7:30 PM",
       "type": "free",
       "title": ""
     },
@@ -447,9 +462,9 @@
     {
       "field": "H-HST2",
       "start": "18:00",
-      "end": "21:00",
+      "end": "19:30",
       "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
+      "end_12": "7:30 PM",
       "type": "free",
       "title": ""
     },
@@ -470,6 +485,19 @@
       "end_12": "9:00 PM",
       "type": "free",
       "title": ""
+    },
+    {
+      "field": "H-HST2",
+      "start": "19:30",
+      "end": "21:00",
+      "start_12": "7:30 PM",
+      "end_12": "9:00 PM",
+      "type": "practice",
+      "title": "7/8 Girls Travel (Caldwell) Practice",
+      "team": "7/8 Girls Travel",
+      "coach": "Caldwell",
+      "grade": "7/8",
+      "source": "ICS"
     }
   ],
   "merged_availability": {
@@ -477,9 +505,9 @@
       {
         "type": "free",
         "start": "18:00",
-        "end": "21:00",
+        "end": "19:30",
         "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
+        "end_12": "7:30 PM",
         "fields": [
           "H-HST",
           "H-HST1",
@@ -491,6 +519,39 @@
         "team": null,
         "coach": null,
         "grade": null,
+        "reason": null
+      },
+      {
+        "type": "free",
+        "start": "19:30",
+        "end": "21:00",
+        "start_12": "7:30 PM",
+        "end_12": "9:00 PM",
+        "fields": [
+          "H-HST1",
+          "H-HST3",
+          "H-HST4"
+        ],
+        "title": null,
+        "team": null,
+        "coach": null,
+        "grade": null,
+        "reason": null
+      },
+      {
+        "type": "practice",
+        "start": "19:30",
+        "end": "21:00",
+        "start_12": "7:30 PM",
+        "end_12": "9:00 PM",
+        "fields": [
+          "H-HST",
+          "H-HST2"
+        ],
+        "title": "7/8 Girls Travel (Caldwell) Practice",
+        "team": "7/8 Girls Travel",
+        "coach": "Caldwell",
+        "grade": "7/8",
         "reason": null
       }
     ],
