@@ -570,7 +570,7 @@ console.log(
         ? `${b.fields.length} field(s)`
         : b.fields
             .map(id => fieldNameMap[id] || id)
-            .join(", ");
+            .join("<br>");
 
       block.innerHTML = `
         <div class="block-main">
@@ -579,7 +579,7 @@ console.log(
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
           <div class="block-tooltip">
             <div><strong>Complex:</strong> ${complex}</div>
-            <div><strong>Fields:</strong> ${b.fields.join(", ")}</div>
+            <div><strong>Fields:</strong> ${b.fields.join("<br>")}</div>
             <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
           </div>
         </div>
@@ -596,15 +596,23 @@ console.log(
         });
 
       const laneWidth = 100 / totalLaneCount;
-      
+
       const freeLanes = [...Array(totalLaneCount).keys()].filter(
         i => !overlappingEventLanes.has(i)
       );
       
-      const lane = freeLanes[0];
+      if (freeLanes.length === 0) {
+        block.style.left = "0%";
+        block.style.width = "100%";
+      } else {
+        const firstLane = Math.min(...freeLanes);
       
-      block.style.left = (lane * laneWidth) + "%";
-      block.style.width = laneWidth + "%";
+        block.style.left =
+          (firstLane * laneWidth) + "%";
+      
+        block.style.width =
+          (freeLanes.length * laneWidth) + "%";
+      }
     }
 
     block.style.top = ((b.start - DAY_START) * PX_PER_MIN) + "px";
