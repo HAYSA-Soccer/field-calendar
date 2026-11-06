@@ -486,19 +486,21 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
     });
   
 const eventLaneCount = lanes.length;
+
 const totalLaneCount =
-  eventLaneCount + 1;
+  availability.length > 0
+    ? eventLaneCount + 1
+    : eventLaneCount;
 
 console.log(
   complex,
-  "events:",
-  events.length,
-  "availability:",
-  availability.length,
-  "lanes:",
-  lanes.length
+  "eventLaneCount",
+  eventLaneCount,
+  "totalLaneCount",
+  totalLaneCount
 );
 
+  
   blocks.forEach(b => {
     const block = document.createElement("div");
     block.className = "block";
