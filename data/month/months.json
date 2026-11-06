@@ -562,7 +562,7 @@
     "date": "2026-11-12",
     "sunset": "16:25",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:35 PM",
+    "last_successful_update": "November 05, 2026 at 10:01 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -1863,7 +1863,7 @@
     "date": "2026-11-06",
     "sunset": "16:31",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:32 PM",
+    "last_successful_update": "November 05, 2026 at 9:58 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -2507,7 +2507,7 @@
     "date": "2026-11-05",
     "sunset": "16:33",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:31 PM",
+    "last_successful_update": "November 05, 2026 at 9:57 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -3334,7 +3334,7 @@
     "date": "2026-11-11",
     "sunset": "16:26",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:35 PM",
+    "last_successful_update": "November 05, 2026 at 10:01 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -14061,7 +14061,7 @@
     "date": "2026-11-14",
     "sunset": "16:23",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:36 PM",
+    "last_successful_update": "November 05, 2026 at 10:02 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -14264,8 +14264,7 @@
       "H-HST1": [
         {
           "start": "13:00",
-          "end": "14:00",
-          "mode": "practice_only"
+          "end": "14:00"
         }
       ],
       "H-HST2": [],
@@ -14662,7 +14661,11 @@
           "start_12": "12:00 PM",
           "end_12": "1:00 PM",
           "fields": [
-            "H-HST"
+            "H-HST",
+            "H-HST1",
+            "H-HST2",
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "7/8 Boys Travel (Mills) vs. Randolph",
           "team": "7/8 Boys Travel  vs. Randolph",
@@ -15590,7 +15593,7 @@
     "date": "2026-11-13",
     "sunset": "16:24",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:36 PM",
+    "last_successful_update": "November 05, 2026 at 10:02 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -17792,7 +17795,7 @@
     "date": "2026-11-10",
     "sunset": "16:27",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:34 PM",
+    "last_successful_update": "November 05, 2026 at 10:00 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -17985,36 +17988,31 @@
       "H-HST": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "both"
+          "end": "21:00"
         }
       ],
       "H-HST1": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-HST2": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-HST3": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-HST4": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-Su1": [
@@ -18106,7 +18104,18 @@
       "H-SuSS2": []
     },
     "events": {},
-    "blocks": {},
+    "blocks": {
+      "H-HST": [
+        {
+          "date": "2026-11-10",
+          "start": "17:00",
+          "end": "18:00",
+          "field": "H-HST",
+          "reason": "Soccer Tournament",
+          "type": "admin"
+        }
+      ]
+    },
     "merged": [
       {
         "field": "H-Su1",
@@ -18215,6 +18224,15 @@
         "end_12": "7:00 PM",
         "type": "free",
         "title": ""
+      },
+      {
+        "field": "H-HST",
+        "start": "17:00",
+        "end": "18:00",
+        "start_12": "5:00 PM",
+        "end_12": "6:00 PM",
+        "type": "admin",
+        "title": "Soccer Tournament"
       },
       {
         "field": "H-HST",
@@ -20809,7 +20827,7 @@
     "date": "2026-11-07",
     "sunset": "16:30",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:33 PM",
+    "last_successful_update": "November 05, 2026 at 9:59 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21027,9 +21045,8 @@
       ],
       "H-HST1": [
         {
-          "start": "13:00",
-          "end": "14:00",
-          "mode": "practice_only"
+          "start": "13:30",
+          "end": "14:00"
         }
       ],
       "H-HST2": [],
@@ -21056,20 +21073,36 @@
       "H-Su1A": [
         {
           "start": "08:00",
+          "end": "08:30"
+        },
+        {
+          "start": "09:30",
           "end": "09:45"
         },
         {
           "start": "10:45",
+          "end": "12:00"
+        },
+        {
+          "start": "13:00",
           "end": "19:00"
         }
       ],
       "H-Su1B": [
         {
           "start": "08:00",
+          "end": "08:30"
+        },
+        {
+          "start": "09:30",
           "end": "09:45"
         },
         {
           "start": "10:45",
+          "end": "12:00"
+        },
+        {
+          "start": "13:00",
           "end": "19:00"
         }
       ],
@@ -21090,20 +21123,28 @@
       "H-Su2A": [
         {
           "start": "08:00",
+          "end": "08:30"
+        },
+        {
+          "start": "09:30",
           "end": "11:00"
         },
         {
-          "start": "12:00",
+          "start": "13:00",
           "end": "19:00"
         }
       ],
       "H-Su2B": [
         {
           "start": "08:00",
+          "end": "08:30"
+        },
+        {
+          "start": "09:30",
           "end": "11:00"
         },
         {
-          "start": "12:00",
+          "start": "13:00",
           "end": "19:00"
         }
       ],
@@ -21124,15 +21165,29 @@
       "H-SJ3A": [
         {
           "start": "08:00",
-          "end": "19:00",
-          "mode": "practice_only"
+          "end": "13:00"
+        },
+        {
+          "start": "14:00",
+          "end": "15:00"
+        },
+        {
+          "start": "16:00",
+          "end": "19:00"
         }
       ],
       "H-SJ3B": [
         {
           "start": "08:00",
-          "end": "19:00",
-          "mode": "practice_only"
+          "end": "13:00"
+        },
+        {
+          "start": "14:00",
+          "end": "15:00"
+        },
+        {
+          "start": "16:00",
+          "end": "19:00"
         }
       ],
       "H-SJ4": [
@@ -21148,6 +21203,10 @@
         },
         {
           "start": "10:45",
+          "end": "12:00"
+        },
+        {
+          "start": "13:00",
           "end": "19:00"
         }
       ],
@@ -21158,6 +21217,10 @@
         },
         {
           "start": "10:45",
+          "end": "12:00"
+        },
+        {
+          "start": "13:00",
           "end": "19:00"
         }
       ],
@@ -21527,18 +21590,18 @@
       {
         "field": "H-Su1A",
         "start": "08:00",
-        "end": "09:45",
+        "end": "08:30",
         "start_12": "8:00 AM",
-        "end_12": "9:45 AM",
+        "end_12": "8:30 AM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-Su1B",
         "start": "08:00",
-        "end": "09:45",
+        "end": "08:30",
         "start_12": "8:00 AM",
-        "end_12": "9:45 AM",
+        "end_12": "8:30 AM",
         "type": "free",
         "title": ""
       },
@@ -21554,18 +21617,18 @@
       {
         "field": "H-Su2A",
         "start": "08:00",
-        "end": "11:00",
+        "end": "08:30",
         "start_12": "8:00 AM",
-        "end_12": "11:00 AM",
+        "end_12": "8:30 AM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-Su2B",
         "start": "08:00",
-        "end": "11:00",
+        "end": "08:30",
         "start_12": "8:00 AM",
-        "end_12": "11:00 AM",
+        "end_12": "8:30 AM",
         "type": "free",
         "title": ""
       },
@@ -21581,18 +21644,18 @@
       {
         "field": "H-SJ3A",
         "start": "08:00",
-        "end": "19:00",
+        "end": "13:00",
         "start_12": "8:00 AM",
-        "end_12": "7:00 PM",
+        "end_12": "1:00 PM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-SJ3B",
         "start": "08:00",
-        "end": "19:00",
+        "end": "13:00",
         "start_12": "8:00 AM",
-        "end_12": "7:00 PM",
+        "end_12": "1:00 PM",
         "type": "free",
         "title": ""
       },
@@ -21676,7 +21739,43 @@
         "title": ""
       },
       {
+        "field": "H-Su1A",
+        "start": "09:30",
+        "end": "09:45",
+        "start_12": "9:30 AM",
+        "end_12": "9:45 AM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-Su1B",
+        "start": "09:30",
+        "end": "09:45",
+        "start_12": "9:30 AM",
+        "end_12": "9:45 AM",
+        "type": "free",
+        "title": ""
+      },
+      {
         "field": "H-Su2",
+        "start": "09:30",
+        "end": "11:00",
+        "start_12": "9:30 AM",
+        "end_12": "11:00 AM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-Su2A",
+        "start": "09:30",
+        "end": "11:00",
+        "start_12": "9:30 AM",
+        "end_12": "11:00 AM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-Su2B",
         "start": "09:30",
         "end": "11:00",
         "start_12": "9:30 AM",
@@ -21796,36 +21895,36 @@
       {
         "field": "H-Su1A",
         "start": "10:45",
-        "end": "19:00",
+        "end": "12:00",
         "start_12": "10:45 AM",
-        "end_12": "7:00 PM",
+        "end_12": "12:00 PM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-Su1B",
         "start": "10:45",
-        "end": "19:00",
+        "end": "12:00",
         "start_12": "10:45 AM",
-        "end_12": "7:00 PM",
+        "end_12": "12:00 PM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-SJ4A",
         "start": "10:45",
-        "end": "19:00",
+        "end": "12:00",
         "start_12": "10:45 AM",
-        "end_12": "7:00 PM",
+        "end_12": "12:00 PM",
         "type": "free",
         "title": ""
       },
       {
         "field": "H-SJ4B",
         "start": "10:45",
-        "end": "19:00",
+        "end": "12:00",
         "start_12": "10:45 AM",
-        "end_12": "7:00 PM",
+        "end_12": "12:00 PM",
         "type": "free",
         "title": ""
       },
@@ -21876,24 +21975,6 @@
         "coach": "",
         "grade": "",
         "source": "ICS"
-      },
-      {
-        "field": "H-Su2A",
-        "start": "12:00",
-        "end": "19:00",
-        "start_12": "12:00 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
-        "field": "H-Su2B",
-        "start": "12:00",
-        "end": "19:00",
-        "start_12": "12:00 PM",
-        "end_12": "7:00 PM",
-        "type": "free",
-        "title": ""
       },
       {
         "field": "H-Su1",
@@ -21948,15 +22029,6 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST1",
-        "start": "13:00",
-        "end": "14:00",
-        "start_12": "1:00 PM",
-        "end_12": "2:00 PM",
-        "type": "free",
-        "title": ""
-      },
-      {
         "field": "H-Su1",
         "start": "13:00",
         "end": "19:00",
@@ -21966,7 +22038,61 @@
         "title": ""
       },
       {
+        "field": "H-Su1A",
+        "start": "13:00",
+        "end": "19:00",
+        "start_12": "1:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-Su1B",
+        "start": "13:00",
+        "end": "19:00",
+        "start_12": "1:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
         "field": "H-Su2",
+        "start": "13:00",
+        "end": "19:00",
+        "start_12": "1:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-Su2A",
+        "start": "13:00",
+        "end": "19:00",
+        "start_12": "1:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-Su2B",
+        "start": "13:00",
+        "end": "19:00",
+        "start_12": "1:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-SJ4A",
+        "start": "13:00",
+        "end": "19:00",
+        "start_12": "1:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-SJ4B",
         "start": "13:00",
         "end": "19:00",
         "start_12": "1:00 PM",
@@ -21997,7 +22123,34 @@
         "title": ""
       },
       {
+        "field": "H-HST1",
+        "start": "13:30",
+        "end": "14:00",
+        "start_12": "1:30 PM",
+        "end_12": "2:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
         "field": "H-SJ3",
+        "start": "14:00",
+        "end": "15:00",
+        "start_12": "2:00 PM",
+        "end_12": "3:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-SJ3A",
+        "start": "14:00",
+        "end": "15:00",
+        "start_12": "2:00 PM",
+        "end_12": "3:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-SJ3B",
         "start": "14:00",
         "end": "15:00",
         "start_12": "2:00 PM",
@@ -22063,6 +22216,24 @@
         "title": ""
       },
       {
+        "field": "H-SJ3A",
+        "start": "16:00",
+        "end": "19:00",
+        "start_12": "4:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
+        "field": "H-SJ3B",
+        "start": "16:00",
+        "end": "19:00",
+        "start_12": "4:00 PM",
+        "end_12": "7:00 PM",
+        "type": "free",
+        "title": ""
+      },
+      {
         "field": "H-SJ4",
         "start": "16:00",
         "end": "19:00",
@@ -22112,7 +22283,11 @@
           "start_12": "9:00 AM",
           "end_12": "10:00 AM",
           "fields": [
-            "H-HST"
+            "H-HST",
+            "H-HST1",
+            "H-HST2",
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "5/6 Girls Travel (Casavant) vs. Quincy",
           "team": "5/6 Girls Travel  vs. Quincy",
@@ -22142,7 +22317,11 @@
           "start_12": "10:30 AM",
           "end_12": "11:30 AM",
           "fields": [
-            "H-HST"
+            "H-HST",
+            "H-HST1",
+            "H-HST2",
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "5/6 Girls Travel (Baird-Miller) vs. Rockland",
           "team": "5/6 Girls Travel  vs. Rockland",
@@ -22166,28 +22345,17 @@
           "reason": null
         },
         {
-          "type": "free",
-          "start": "13:00",
-          "end": "13:30",
-          "start_12": "1:00 PM",
-          "end_12": "1:30 PM",
-          "fields": [
-            "H-HST1"
-          ],
-          "title": null,
-          "team": null,
-          "coach": null,
-          "grade": null,
-          "reason": null
-        },
-        {
           "type": "game",
           "start": "12:30",
           "end": "13:30",
           "start_12": "12:30 PM",
           "end_12": "1:30 PM",
           "fields": [
-            "H-HST"
+            "H-HST",
+            "H-HST1",
+            "H-HST2",
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "7/8 Boys Travel (Collins) vs. Weymouth",
           "team": "7/8 Boys Travel  vs. Weymouth",
@@ -22218,7 +22386,11 @@
           "start_12": "2:00 PM",
           "end_12": "3:00 PM",
           "fields": [
-            "H-HST"
+            "H-HST",
+            "H-HST1",
+            "H-HST2",
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "7/8 Girls Travel (Caldwell) vs. Easton",
           "team": "7/8 Girls Travel  vs. Easton",
@@ -22248,7 +22420,11 @@
           "start_12": "3:30 PM",
           "end_12": "4:30 PM",
           "fields": [
-            "H-HST"
+            "H-HST",
+            "H-HST1",
+            "H-HST2",
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "7/8 Boys Travel (Mills) vs. Easton",
           "team": "7/8 Boys Travel  vs. Easton",
@@ -22278,7 +22454,11 @@
           "start_12": "5:00 PM",
           "end_12": "6:00 PM",
           "fields": [
-            "H-HST"
+            "H-HST",
+            "H-HST1",
+            "H-HST2",
+            "H-HST3",
+            "H-HST4"
           ],
           "title": "5/6 Boys Travel (Ayers) vs. Stoughton",
           "team": "5/6 Boys Travel  vs. Stoughton",
@@ -22335,10 +22515,6 @@
           "start_12": "8:30 AM",
           "end_12": "9:30 AM",
           "fields": [
-            "H-Su1A",
-            "H-Su1B",
-            "H-Su2A",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
             "H-SJ3B",
@@ -22359,7 +22535,11 @@
           "end_12": "9:30 AM",
           "fields": [
             "H-Su1",
-            "H-Su2"
+            "H-Su1A",
+            "H-Su1B",
+            "H-Su2",
+            "H-Su2A",
+            "H-Su2B"
           ],
           "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
           "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
@@ -22520,15 +22700,9 @@
           "start_12": "12:00 PM",
           "end_12": "1:00 PM",
           "fields": [
-            "H-Su1A",
-            "H-Su1B",
-            "H-Su2A",
-            "H-Su2B",
             "H-SJ3",
             "H-SJ3A",
-            "H-SJ3B",
-            "H-SJ4A",
-            "H-SJ4B"
+            "H-SJ3B"
           ],
           "title": null,
           "team": null,
@@ -22544,8 +22718,14 @@
           "end_12": "1:00 PM",
           "fields": [
             "H-Su1",
+            "H-Su1A",
+            "H-Su1B",
             "H-Su2",
-            "H-SJ4"
+            "H-Su2A",
+            "H-Su2B",
+            "H-SJ4",
+            "H-SJ4A",
+            "H-SJ4B"
           ],
           "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
           "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
@@ -22566,8 +22746,6 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ3A",
-            "H-SJ3B",
             "H-SJ4A",
             "H-SJ4B"
           ],
@@ -22584,7 +22762,9 @@
           "start_12": "1:00 PM",
           "end_12": "2:00 PM",
           "fields": [
-            "H-SJ3"
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": "3/4 Girls Travel (Lamb-Williams) vs. Sharon",
           "team": "3/4 Girls Travel  vs. Sharon",
@@ -22630,8 +22810,6 @@
             "H-Su2",
             "H-Su2A",
             "H-Su2B",
-            "H-SJ3A",
-            "H-SJ3B",
             "H-SJ4A",
             "H-SJ4B"
           ],
@@ -22648,7 +22826,9 @@
           "start_12": "3:00 PM",
           "end_12": "4:00 PM",
           "fields": [
-            "H-SJ3"
+            "H-SJ3",
+            "H-SJ3A",
+            "H-SJ3B"
           ],
           "title": "3/4 Boys Travel (Ball) vs. Weymouth",
           "team": "3/4 Boys Travel  vs. Weymouth",
@@ -23585,7 +23765,7 @@
     "date": "2026-11-08",
     "sunset": "16:29",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:33 PM",
+    "last_successful_update": "November 05, 2026 at 9:59 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -36661,7 +36841,7 @@
     "date": "2026-11-09",
     "sunset": "16:28",
     "updated": true,
-    "last_successful_update": "November 05, 2026 at 5:34 PM",
+    "last_successful_update": "November 05, 2026 at 10:00 PM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -36854,36 +37034,31 @@
       "H-HST": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "both"
+          "end": "21:00"
         }
       ],
       "H-HST1": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-HST2": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-HST3": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-HST4": [
         {
           "start": "18:00",
-          "end": "21:00",
-          "mode": "practice_only"
+          "end": "21:00"
         }
       ],
       "H-Su1": [
@@ -36975,7 +37150,18 @@
       "H-SuSS2": []
     },
     "events": {},
-    "blocks": {},
+    "blocks": {
+      "H-HST": [
+        {
+          "date": "2026-11-09",
+          "start": "16:00",
+          "end": "17:00",
+          "field": "H-HST",
+          "reason": "Soccer Tournament",
+          "type": "admin"
+        }
+      ]
+    },
     "merged": [
       {
         "field": "H-Su1",
@@ -37084,6 +37270,15 @@
         "end_12": "7:00 PM",
         "type": "free",
         "title": ""
+      },
+      {
+        "field": "H-HST",
+        "start": "16:00",
+        "end": "17:00",
+        "start_12": "4:00 PM",
+        "end_12": "5:00 PM",
+        "type": "admin",
+        "title": "Soccer Tournament"
       },
       {
         "field": "H-HST",

@@ -2,7 +2,7 @@
   "date": "2026-11-14",
   "sunset": "16:23",
   "updated": true,
-  "last_successful_update": "November 05, 2026 at 5:36 PM",
+  "last_successful_update": "November 05, 2026 at 10:02 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -205,8 +205,7 @@
     "H-HST1": [
       {
         "start": "13:00",
-        "end": "14:00",
-        "mode": "practice_only"
+        "end": "14:00"
       }
     ],
     "H-HST2": [],
@@ -603,7 +602,11 @@
         "start_12": "12:00 PM",
         "end_12": "1:00 PM",
         "fields": [
-          "H-HST"
+          "H-HST",
+          "H-HST1",
+          "H-HST2",
+          "H-HST3",
+          "H-HST4"
         ],
         "title": "7/8 Boys Travel (Mills) vs. Randolph",
         "team": "7/8 Boys Travel  vs. Randolph",
