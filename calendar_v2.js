@@ -487,10 +487,7 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
   
 const eventLaneCount = lanes.length;
 
-const totalLaneCount =
-  availability.length > 0
-    ? eventLaneCount + 1
-    : eventLaneCount;
+const totalLaneCount = Math.max(eventLaneCount, 1);
 
 console.log(
   complex,
