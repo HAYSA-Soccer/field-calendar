@@ -2,7 +2,7 @@
   "date": "2026-11-11",
   "sunset": "16:26",
   "updated": true,
-  "last_successful_update": "November 05, 2026 at 10:01 PM",
+  "last_successful_update": "November 06, 2026 at 3:47 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -211,13 +211,7 @@
         "end": "19:30"
       }
     ],
-    "H-HST3": [
-      {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
-      }
-    ],
+    "H-HST3": [],
     "H-HST4": [
       {
         "start": "18:00",
@@ -469,15 +463,6 @@
       "title": ""
     },
     {
-      "field": "H-HST3",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-HST4",
       "start": "18:00",
       "end": "21:00",
@@ -512,7 +497,6 @@
           "H-HST",
           "H-HST1",
           "H-HST2",
-          "H-HST3",
           "H-HST4"
         ],
         "title": null,
@@ -529,7 +513,6 @@
         "end_12": "9:00 PM",
         "fields": [
           "H-HST1",
-          "H-HST3",
           "H-HST4"
         ],
         "title": null,

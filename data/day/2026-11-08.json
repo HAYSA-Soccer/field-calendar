@@ -2,7 +2,7 @@
   "date": "2026-11-08",
   "sunset": "16:29",
   "updated": true,
-  "last_successful_update": "November 05, 2026 at 9:59 PM",
+  "last_successful_update": "November 06, 2026 at 3:45 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -319,8 +319,28 @@
       }
     ]
   },
-  "blocks": {},
+  "blocks": {
+    "H-HST": [
+      {
+        "date": "2026-11-08",
+        "start": "15:00",
+        "end": "16:00",
+        "field": "H-HST",
+        "reason": "Soccer Tournament",
+        "type": "game"
+      }
+    ]
+  },
   "merged": [
+    {
+      "field": "H-HST",
+      "start": "15:00",
+      "end": "16:00",
+      "start_12": "3:00 PM",
+      "end_12": "4:00 PM",
+      "type": "game",
+      "title": "Soccer Tournament"
+    },
     {
       "field": "H-HST2",
       "start": "16:00",

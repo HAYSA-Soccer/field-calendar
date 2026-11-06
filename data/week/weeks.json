@@ -5092,7 +5092,7 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 10:01 PM",
+      "last_successful_update": "November 06, 2026 at 3:47 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5291,13 +5291,7 @@
             "mode": "practice_only"
           }
         ],
-        "H-HST3": [
-          {
-            "start": "18:00",
-            "end": "21:00",
-            "mode": "practice_only"
-          }
-        ],
+        "H-HST3": [],
         "H-HST4": [
           {
             "start": "18:00",
@@ -5545,15 +5539,6 @@
           "title": ""
         },
         {
-          "field": "H-HST3",
-          "start": "18:00",
-          "end": "21:00",
-          "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
           "field": "H-HST4",
           "start": "18:00",
           "end": "21:00",
@@ -5599,7 +5584,6 @@
             "end_12": "9:00 PM",
             "fields": [
               "H-HST2",
-              "H-HST3",
               "H-HST4"
             ],
             "title": null,
@@ -5659,7 +5643,7 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 10:01 PM",
+      "last_successful_update": "November 06, 2026 at 3:47 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5868,13 +5852,7 @@
             "end": "19:30"
           }
         ],
-        "H-HST3": [
-          {
-            "start": "18:00",
-            "end": "21:00",
-            "mode": "practice_only"
-          }
-        ],
+        "H-HST3": [],
         "H-HST4": [
           {
             "start": "18:00",
@@ -6126,15 +6104,6 @@
           "title": ""
         },
         {
-          "field": "H-HST3",
-          "start": "18:00",
-          "end": "21:00",
-          "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
           "field": "H-HST4",
           "start": "18:00",
           "end": "21:00",
@@ -6169,7 +6138,6 @@
               "H-HST",
               "H-HST1",
               "H-HST2",
-              "H-HST3",
               "H-HST4"
             ],
             "title": null,
@@ -6186,7 +6154,6 @@
             "end_12": "9:00 PM",
             "fields": [
               "H-HST1",
-              "H-HST3",
               "H-HST4"
             ],
             "title": null,
@@ -6246,7 +6213,7 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 10:02 PM",
+      "last_successful_update": "November 06, 2026 at 3:48 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6966,7 +6933,7 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 10:02 PM",
+      "last_successful_update": "November 06, 2026 at 3:47 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -7397,7 +7364,7 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 10:00 PM",
+      "last_successful_update": "November 06, 2026 at 3:46 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -8105,7 +8072,7 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 10:00 PM",
+      "last_successful_update": "November 06, 2026 at 3:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -9382,7 +9349,7 @@
       "date": "2026-11-06",
       "sunset": "16:31",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 9:58 PM",
+      "last_successful_update": "November 06, 2026 at 3:44 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -10853,7 +10820,7 @@
       "date": "2026-11-07",
       "sunset": "16:30",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 9:59 PM",
+      "last_successful_update": "November 06, 2026 at 3:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -13791,7 +13758,7 @@
       "date": "2026-11-08",
       "sunset": "16:29",
       "updated": true,
-      "last_successful_update": "November 05, 2026 at 9:59 PM",
+      "last_successful_update": "November 06, 2026 at 3:45 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -14108,8 +14075,28 @@
           }
         ]
       },
-      "blocks": {},
+      "blocks": {
+        "H-HST": [
+          {
+            "date": "2026-11-08",
+            "start": "15:00",
+            "end": "16:00",
+            "field": "H-HST",
+            "reason": "Soccer Tournament",
+            "type": "game"
+          }
+        ]
+      },
       "merged": [
+        {
+          "field": "H-HST",
+          "start": "15:00",
+          "end": "16:00",
+          "start_12": "3:00 PM",
+          "end_12": "4:00 PM",
+          "type": "game",
+          "title": "Soccer Tournament"
+        },
         {
           "field": "H-HST2",
           "start": "16:00",
