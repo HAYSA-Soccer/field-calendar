@@ -423,7 +423,7 @@ function renderComplexTimeline(complex, events, availability, condensed, day, fi
 
     const sunsetLabel = document.createElement("div");
     sunsetLabel.className = "sunset-label";
-    sunsetLabel.textContent = "";
+    sunsetLabel.textContent = day.sunset;
     sunsetLabel.style.top = `${sunsetTop - 12}px`;
 
     track.appendChild(sunsetLine);
