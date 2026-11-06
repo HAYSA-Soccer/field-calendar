@@ -94,8 +94,17 @@
 }
 
 .complex-header {
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+
+  margin: -10px -10px 10px -10px;
+  padding: 10px 14px;
+
+  background: #f7f9fc;
+  border-bottom: 2px solid #1976d2;
+  color: #1a1a1a;
+
+  border-radius: 8px 8px 0 0;
 }
 
 /* ---------------------------------------------------------
@@ -176,19 +185,21 @@
    EVENT COLORS
 --------------------------------------------------------- */
 .event-block.practice {
-  background: #e0e0e0;
+  background: #eeeeee;
+  border-color: #b5b5b5;
 }
 
 .event-block.game {
-  background: #d0e4ff;
+  background: #dbe8ff;
+  border-color: #7ea7e8;
 }
 
 /* ---------------------------------------------------------
    AVAILABILITY BLOCK
 --------------------------------------------------------- */
 .avail-block {
-  background: #d9ffd9;
-  border-color: #4caf50;
+  background: #d9f4d9;
+  border-color: #6eb96e;
   padding: 8px 10px;
 
   font-size: clamp(10px, 1.2vw, 14px);
@@ -474,16 +485,18 @@
 
 
 .calendar-toolbar {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #d8e0ea;
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
 
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
+  gap: 24px;
+  align-items: flex-end;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
 }
 
 .toolbar-group {
@@ -513,4 +526,12 @@
 
 .avail-block {
   z-index: 10;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
 }
