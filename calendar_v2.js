@@ -325,6 +325,12 @@ function renderDayCalendar(day, options = {}) {
   container.innerHTML = "";
 
   const fieldMap = buildFieldMap(day);
+  const fieldNameMap = {};
+
+(day.fields || []).forEach(f => {
+  fieldNameMap[f.id] = f.name;
+});
+  
   console.log(
     day.fields
       .filter(f => f.id.startsWith("H-HST"))
@@ -365,6 +371,7 @@ function renderDayCalendar(day, options = {}) {
           availability.filter(a => a.complex === complex),
           condensed,
           day,
+          fieldNameMap,
           true
         )
       );
