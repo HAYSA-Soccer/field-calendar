@@ -381,7 +381,7 @@ function renderDayCalendar(day, options = {}) {
 /********************************************************************
  * UNIFIED LANE SYSTEM — EVENTS + AVAILABILITY
  ********************************************************************/
-function renderComplexTimeline(complex, events, availability, condensed, day, showHours = true) {
+function renderComplexTimeline(complex, events, availability, condensed, day, fieldNameMap, showHours = true) {
   const div = document.createElement("div");
   div.className = "complex";
 
