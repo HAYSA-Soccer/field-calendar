@@ -166,7 +166,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 6px 8px;
-  box-sizing: yborder-box;
+  box-sizing: border-box;
 
   font-size: clamp(12px, 1vw, 16px);
   line-height: 1.25;
@@ -214,15 +214,11 @@
 /* ---------------------------------------------------------
    BLOCK CONTENT
 --------------------------------------------------------- */
+
 .block-title {
-  font-weight: 700;
   font-size: 11px;
   line-height: 1.1;
-  margin-bottom: 2px;
-
-  color: #1f2937;
 }
-
 
 .block-fields {
   font-size: 10px;
