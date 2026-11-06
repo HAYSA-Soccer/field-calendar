@@ -570,7 +570,7 @@ console.log(
         ? `${b.fields.length} field(s)`
         : b.fields
             .map(id => fieldNameMap[id] || id)
-            .join("<br>");
+            .join(", ");
 
       block.innerHTML = `
         <div class="block-main">
@@ -579,7 +579,7 @@ console.log(
           <div class="block-time">${fmt(b.start)} – ${fmt(b.end)}</div>
           <div class="block-tooltip">
             <div><strong>Complex:</strong> ${complex}</div>
-            <div><strong>Fields:</strong> ${b.fields.join("<br>")}</div>
+            <div><strong>Fields:</strong> ${b.fields.join(", ")}</div>
             <div><strong>Time:</strong> ${fmt(b.start)} – ${fmt(b.end)}</div>
           </div>
         </div>
