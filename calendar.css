@@ -451,7 +451,7 @@
   background: #ff7043;
   opacity: 0.85;
   pointer-events: none;
-  z-index: 5;
+  z-index: 50;
 }
 
 .sunset-label {
@@ -463,7 +463,7 @@
   padding: 2px 4px;
   border-radius: 4px;
   pointer-events: none;
-  z-index: 6;
+  z-index: 51;
 }
 
 
