@@ -214,14 +214,15 @@
 /* ---------------------------------------------------------
    BLOCK CONTENT
 --------------------------------------------------------- */
+
 .block-title {
-  font-weight: bold;
-  margin-bottom: 3px;
+  font-size: 11px;
+  line-height: 1.1;
 }
 
 .block-fields {
-  font-size: 12px;
-  margin-bottom: 3px;
+  font-size: 10px;
+  line-height: 1.1;
 }
 
 .block-time {
