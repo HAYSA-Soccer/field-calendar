@@ -487,8 +487,26 @@ function renderComplexTimeline(complex, events, availability, condensed, day, sh
   
 const eventLaneCount = lanes.length;
 
-const totalLaneCount = Math.max(eventLaneCount, 1);
+const eventBlocks =
+  blocks.filter(b => b.kind === "event");
 
+const availBlocks =
+  blocks.filter(b => b.kind === "avail");
+
+const overlappingAvailExists =
+  availBlocks.some(a =>
+    eventBlocks.some(e =>
+      overlaps(e.start, e.end, a.start, a.end)
+    )
+  );
+
+const totalLaneCount =
+  overlappingAvailExists
+    ? eventLaneCount + 1
+    : Math.max(eventLaneCount, 1);
+
+
+  
 console.log(
   complex,
   "eventLaneCount",
