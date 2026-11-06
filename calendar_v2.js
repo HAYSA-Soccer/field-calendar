@@ -561,7 +561,9 @@ console.log(
 
       const fieldsText = condensed
         ? `${b.fields.length} field(s)`
-        : b.fields.join(", ");
+        : b.fields
+            .map(id => fieldNameMap[id] || id)
+            .join(", ");
 
       block.innerHTML = `
         <div class="block-main">
