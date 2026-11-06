@@ -565,14 +565,12 @@ console.log(
       block.classList.add("avail-block");
 
       const label = condensed ? "Avail" : "Available";
-      
+
       const fieldsText = condensed
         ? `${b.fields.length} field(s)`
-        : (b.fields.length <= 3
-            ? b.fields
-                .map(id => fieldNameMap[id] || id)
-                .join(", ")
-            : `${b.fields.length} Fields Available`);
+        : b.fields
+            .map(id => fieldNameMap[id] || id)
+            .join(", ");
 
       block.innerHTML = `
         <div class="block-main">
@@ -598,23 +596,15 @@ console.log(
         });
 
       const laneWidth = 100 / totalLaneCount;
-
+      
       const freeLanes = [...Array(totalLaneCount).keys()].filter(
         i => !overlappingEventLanes.has(i)
       );
       
-      if (freeLanes.length === 0) {
-        block.style.left = "0%";
-        block.style.width = "100%";
-      } else {
-        const firstLane = Math.min(...freeLanes);
+      const lane = freeLanes[0];
       
-        block.style.left =
-          (firstLane * laneWidth) + "%";
-      
-        block.style.width =
-          (freeLanes.length * laneWidth) + "%";
-      }
+      block.style.left = (lane * laneWidth) + "%";
+      block.style.width = laneWidth + "%";
     }
 
     block.style.top = ((b.start - DAY_START) * PX_PER_MIN) + "px";
