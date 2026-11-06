@@ -565,12 +565,14 @@ console.log(
       block.classList.add("avail-block");
 
       const label = condensed ? "Avail" : "Available";
-
+      
       const fieldsText = condensed
         ? `${b.fields.length} field(s)`
-        : b.fields
-            .map(id => fieldNameMap[id] || id)
-            .join(", ");
+        : (b.fields.length <= 3
+            ? b.fields
+                .map(id => fieldNameMap[id] || id)
+                .join(", ")
+            : `${b.fields.length} Fields Available`);
 
       block.innerHTML = `
         <div class="block-main">
