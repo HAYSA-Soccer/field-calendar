@@ -94,17 +94,18 @@
 }
 
 .complex-header {
-  font-size: 18px;
-  font-weight: 700;
+  background:#f5f8fc;
 
-  margin: -10px -10px 10px -10px;
-  padding: 10px 14px;
+  color:#154c8a;
 
-  background: #f7f9fc;
-  border-bottom: 2px solid #1976d2;
-  color: #1a1a1a;
+  font-size:18px;
+  font-weight:700;
 
-  border-radius: 8px 8px 0 0;
+  padding:10px 14px;
+
+  border-bottom:2px solid #1976d2;
+
+  margin:-10px -10px 10px -10px;
 }
 
 /* ---------------------------------------------------------
@@ -267,10 +268,15 @@
    LEGEND
 --------------------------------------------------------- */
 #legend {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 15px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:20px;
+
+  background:#f8fafc;
+
+  border:1px solid #dce5ef;
+  border-radius:10px;
+
+  padding:10px 15px;
 }
 
 .legend-item {
