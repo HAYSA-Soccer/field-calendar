@@ -448,7 +448,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
+  opacity: .6;
+  height: 1px;
 
   background: #ff7043;
 
