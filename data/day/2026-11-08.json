@@ -2,7 +2,7 @@
   "date": "2026-11-08",
   "sunset": "16:29",
   "updated": true,
-  "last_successful_update": "November 07, 2026 at 8:39 AM",
+  "last_successful_update": "November 07, 2026 at 8:55 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -216,34 +216,6 @@
   "events": {
     "H-HST3": [
       {
-        "event_id": "c7e3619b822010750e7a846f5219bac8",
-        "date": "2026-11-08",
-        "start": "15:00",
-        "end": "16:00",
-        "field": "H-HST3",
-        "type": "game",
-        "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
-        "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
-        "coach": "Orange",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-HST3, Holbrook High School"
-      },
-      {
-        "event_id": "f2384c5ed0ff9381ae51d575d4cdbb1c",
-        "date": "2026-11-08",
-        "start": "16:30",
-        "end": "17:30",
-        "field": "H-HST3",
-        "type": "game",
-        "title": "R1-G1 Winner vs. R1-G2 Winner",
-        "team": "R1-G1 Winner vs. R1-G2 Winner",
-        "coach": "",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-HST3, Holbrook High School"
-      },
-      {
         "event_id": "a6db824054bfbcc389236ef807b4aa4c",
         "date": "2026-11-08",
         "start": "18:30",
@@ -254,20 +226,6 @@
         "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
         "coach": "",
         "grade": "5/6",
-        "source": "ICS",
-        "field_display": "H-HST3, Holbrook High School"
-      },
-      {
-        "event_id": "c8275567812d4413360a06cf27a3a5db",
-        "date": "2026-11-08",
-        "start": "15:45",
-        "end": "16:45",
-        "field": "H-HST3",
-        "type": "game",
-        "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-        "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
-        "coach": "Blue",
-        "grade": "",
         "source": "ICS",
         "field_display": "H-HST3, Holbrook High School"
       },
@@ -284,53 +242,51 @@
         "grade": "3/4",
         "source": "ICS",
         "field_display": "H-HST3, Holbrook High School"
-      }
-    ],
-    "H-HST4": [
+      },
       {
-        "event_id": "b0031c0a8b1340aec4699ea686eed3cc",
+        "event_id": "99677f77f4d19ad736515017138dfe64",
         "date": "2026-11-08",
         "start": "15:00",
-        "end": "16:00",
-        "field": "H-HST4",
+        "end": "15:30",
+        "field": "H-HST3",
         "type": "game",
         "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
         "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
         "coach": "Blue",
         "grade": "",
         "source": "ICS",
-        "field_display": "H-HST4, Holbrook High School"
+        "field_display": "H-HST3, Holbrook High School"
       },
       {
-        "event_id": "a9330a5e6dbf723e48f0fab62b963a75",
+        "event_id": "96acd2d570434c6dae1927075dd8a8c8",
         "date": "2026-11-08",
         "start": "15:45",
-        "end": "16:45",
-        "field": "H-HST4",
+        "end": "16:15",
+        "field": "H-HST3",
         "type": "game",
-        "title": "Troupe Waste & Recycling (Green) vs. Wm. Perry Trucking (Orange)",
-        "team": "Troupe Waste & Recycling  vs. Wm. Perry Trucking (Orange)",
-        "coach": "Green",
+        "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
+        "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
+        "coach": "Blue",
         "grade": "",
         "source": "ICS",
-        "field_display": "H-HST4, Holbrook High School"
-      }
-    ],
-    "H-HST2": [
+        "field_display": "H-HST3, Holbrook High School"
+      },
       {
-        "event_id": "39f8d31694b4adcdf11ad0703eb5b612",
+        "event_id": "6f4e7d410ce483ec22d9a4a60265fce6",
         "date": "2026-11-08",
         "start": "16:30",
-        "end": "17:30",
-        "field": "H-HST2",
+        "end": "17:00",
+        "field": "H-HST3",
         "type": "game",
         "title": "R1-G1 Winner vs. R1-G2 Winner",
         "team": "R1-G1 Winner vs. R1-G2 Winner",
         "coach": "",
         "grade": "",
         "source": "ICS",
-        "field_display": "H-HST2, Holbrook High School"
-      },
+        "field_display": "H-HST3, Holbrook High School"
+      }
+    ],
+    "H-HST2": [
       {
         "event_id": "0efe5fb425467cb3f47f046b9a24a357",
         "date": "2026-11-08",
@@ -372,6 +328,20 @@
         "grade": "5/6",
         "source": "ICS",
         "field_display": "H-HST2, Holbrook High School"
+      },
+      {
+        "event_id": "e7f4a0d810c4b463d0f83ee3ae47ca11",
+        "date": "2026-11-08",
+        "start": "16:30",
+        "end": "17:00",
+        "field": "H-HST2",
+        "type": "game",
+        "title": "R1-G1 Winner vs. R1-G2 Winner",
+        "team": "R1-G1 Winner vs. R1-G2 Winner",
+        "coach": "",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
       }
     ],
     "H-HST1": [
@@ -403,6 +373,36 @@
         "source": "ICS",
         "field_display": "H-HST1, Holbrook High School"
       }
+    ],
+    "H-HST4": [
+      {
+        "event_id": "a19976d30917a3b83293e164d6d759b6",
+        "date": "2026-11-08",
+        "start": "15:00",
+        "end": "15:30",
+        "field": "H-HST4",
+        "type": "game",
+        "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
+        "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
+        "coach": "Orange",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST4, Holbrook High School"
+      },
+      {
+        "event_id": "28a589291c097a2efd70fa736584874b",
+        "date": "2026-11-08",
+        "start": "15:45",
+        "end": "16:15",
+        "field": "H-HST4",
+        "type": "game",
+        "title": "Troupe Waste & Recycling (Green) vs. Wm. Perry Trucking (Orange)",
+        "team": "Troupe Waste & Recycling  vs. Wm. Perry Trucking (Orange)",
+        "coach": "Green",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST4, Holbrook High School"
+      }
     ]
   },
   "blocks": {},
@@ -410,22 +410,9 @@
     {
       "field": "H-HST3",
       "start": "15:00",
-      "end": "16:00",
+      "end": "15:30",
       "start_12": "3:00 PM",
-      "end_12": "4:00 PM",
-      "type": "game",
-      "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
-      "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
-      "coach": "Orange",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
-      "field": "H-HST4",
-      "start": "15:00",
-      "end": "16:00",
-      "start_12": "3:00 PM",
-      "end_12": "4:00 PM",
+      "end_12": "3:30 PM",
       "type": "game",
       "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
       "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
@@ -460,11 +447,24 @@
       "source": "ICS"
     },
     {
+      "field": "H-HST4",
+      "start": "15:00",
+      "end": "15:30",
+      "start_12": "3:00 PM",
+      "end_12": "3:30 PM",
+      "type": "game",
+      "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
+      "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
+      "coach": "Orange",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
       "field": "H-HST3",
       "start": "15:45",
-      "end": "16:45",
+      "end": "16:15",
       "start_12": "3:45 PM",
-      "end_12": "4:45 PM",
+      "end_12": "4:15 PM",
       "type": "game",
       "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
       "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
@@ -475,9 +475,9 @@
     {
       "field": "H-HST4",
       "start": "15:45",
-      "end": "16:45",
+      "end": "16:15",
       "start_12": "3:45 PM",
-      "end_12": "4:45 PM",
+      "end_12": "4:15 PM",
       "type": "game",
       "title": "Troupe Waste & Recycling (Green) vs. Wm. Perry Trucking (Orange)",
       "team": "Troupe Waste & Recycling  vs. Wm. Perry Trucking (Orange)",
@@ -488,9 +488,9 @@
     {
       "field": "H-HST3",
       "start": "16:30",
-      "end": "17:30",
+      "end": "17:00",
       "start_12": "4:30 PM",
-      "end_12": "5:30 PM",
+      "end_12": "5:00 PM",
       "type": "game",
       "title": "R1-G1 Winner vs. R1-G2 Winner",
       "team": "R1-G1 Winner vs. R1-G2 Winner",
@@ -501,9 +501,9 @@
     {
       "field": "H-HST2",
       "start": "16:30",
-      "end": "17:30",
+      "end": "17:00",
       "start_12": "4:30 PM",
-      "end_12": "5:30 PM",
+      "end_12": "5:00 PM",
       "type": "game",
       "title": "R1-G1 Winner vs. R1-G2 Winner",
       "team": "R1-G1 Winner vs. R1-G2 Winner",
