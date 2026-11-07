@@ -5092,7 +5092,7 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:08 AM",
+      "last_successful_update": "November 07, 2026 at 8:42 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5643,7 +5643,7 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:07 AM",
+      "last_successful_update": "November 07, 2026 at 8:41 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6213,7 +6213,7 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:09 AM",
+      "last_successful_update": "November 07, 2026 at 8:44 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6933,7 +6933,7 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:09 AM",
+      "last_successful_update": "November 07, 2026 at 8:43 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -7364,7 +7364,7 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:06 AM",
+      "last_successful_update": "November 07, 2026 at 8:41 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -8072,7 +8072,7 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:06 AM",
+      "last_successful_update": "November 07, 2026 at 8:40 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -10820,7 +10820,7 @@
       "date": "2026-11-07",
       "sunset": "16:30",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:04 AM",
+      "last_successful_update": "November 07, 2026 at 8:39 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -11048,61 +11048,43 @@
         "H-Su1": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "both"
           }
         ],
         "H-Su1A": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "practice_only"
           }
         ],
         "H-Su1B": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "practice_only"
           }
         ],
         "H-Su2": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "both"
           }
         ],
         "H-Su2A": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "practice_only"
           }
         ],
         "H-Su2B": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "practice_only"
           }
         ],
         "H-SJ3": [
@@ -11150,27 +11132,22 @@
         "H-SJ4": [
           {
             "start": "16:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "both"
           }
         ],
         "H-SJ4A": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "practice_only"
           }
         ],
         "H-SJ4B": [
           {
             "start": "08:00",
-            "end": "12:00"
-          },
-          {
-            "start": "13:00",
-            "end": "19:00"
+            "end": "19:00",
+            "mode": "practice_only"
           }
         ],
         "H-SuSS": [],
@@ -11293,112 +11270,6 @@
             "source": "ICS",
             "field_display": "H-SJ3, Holbrook Sean Joyce Field"
           }
-        ],
-        "H-SuSS": [
-          {
-            "event_id": "b0b93d57fa31460833cb1dcd63969f4e",
-            "date": "2026-11-07",
-            "start": "09:30",
-            "end": "10:30",
-            "field": "H-SuSS",
-            "type": "practice",
-            "title": "Mini Kickers 9:30 AM Session Practice",
-            "team": "Mini Kickers 9:30 AM Session",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-SuSS, Holbrook Sumner Field"
-          },
-          {
-            "event_id": "cbdf06b419872fa481398049cf9738a9",
-            "date": "2026-11-07",
-            "start": "08:30",
-            "end": "09:30",
-            "field": "H-SuSS",
-            "type": "practice",
-            "title": "Mini Kickers 8:30 AM Session Practice",
-            "team": "Mini Kickers 8:30 AM Session",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-SuSS, Holbrook Sumner Field"
-          },
-          {
-            "event_id": "daed38e43d62ce76a89055581cab6b5e",
-            "date": "2026-11-07",
-            "start": "11:30",
-            "end": "12:30",
-            "field": "H-SuSS",
-            "type": "practice",
-            "title": "Mini Kickers 11:30 AM Session Practice",
-            "team": "Mini Kickers 11:30 AM Session",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-SuSS, Holbrook Sumner Field"
-          },
-          {
-            "event_id": "f7aa4e48170b546ea17ecaf5c5aae71a",
-            "date": "2026-11-07",
-            "start": "10:30",
-            "end": "11:30",
-            "field": "H-SuSS",
-            "type": "practice",
-            "title": "Mini Kickers 10:30 AM Session Practice",
-            "team": "Mini Kickers 10:30 AM Session",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-SuSS, Holbrook Sumner Field"
-          }
-        ],
-        "H-Su1": [
-          {
-            "event_id": "2b87800a39b7ba113667a16ec33ccbeb",
-            "date": "2026-11-07",
-            "start": "12:00",
-            "end": "13:00",
-            "field": "H-Su1",
-            "type": "game",
-            "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS",
-            "field_display": "H-Su1, Holbrook Sumner Field"
-          }
-        ],
-        "H-Su2": [
-          {
-            "event_id": "b38569d5159e95c6f9dca6c83a023a7a",
-            "date": "2026-11-07",
-            "start": "12:00",
-            "end": "13:00",
-            "field": "H-Su2",
-            "type": "game",
-            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS",
-            "field_display": "H-Su2, Holbrook Sumner Field"
-          }
-        ],
-        "H-SJ4": [
-          {
-            "event_id": "ef84cebb58ccd59a2fa3252f4d04c547",
-            "date": "2026-11-07",
-            "start": "12:00",
-            "end": "13:00",
-            "field": "H-SJ4",
-            "type": "game",
-            "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-            "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-            "coach": "",
-            "grade": "3/4",
-            "source": "ICS",
-            "field_display": "H-SJ4, Holbrook Sean Joyce Field"
-          }
         ]
       },
       "blocks": {},
@@ -11406,54 +11277,54 @@
         {
           "field": "H-Su1",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-Su1A",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-Su1B",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-Su2",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-Su2A",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-Su2B",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
@@ -11487,33 +11358,20 @@
         {
           "field": "H-SJ4A",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-SJ4B",
           "start": "08:00",
-          "end": "12:00",
+          "end": "19:00",
           "start_12": "8:00 AM",
-          "end_12": "12:00 PM",
+          "end_12": "7:00 PM",
           "type": "free",
           "title": ""
-        },
-        {
-          "field": "H-SuSS",
-          "start": "08:30",
-          "end": "09:30",
-          "start_12": "8:30 AM",
-          "end_12": "9:30 AM",
-          "type": "practice",
-          "title": "Mini Kickers 8:30 AM Session Practice",
-          "team": "Mini Kickers 8:30 AM Session",
-          "coach": "",
-          "grade": "",
-          "source": "ICS"
         },
         {
           "field": "H-HST",
@@ -11526,19 +11384,6 @@
           "team": "5/6 Girls Travel  vs. Quincy",
           "coach": "Casavant",
           "grade": "5/6",
-          "source": "ICS"
-        },
-        {
-          "field": "H-SuSS",
-          "start": "09:30",
-          "end": "10:30",
-          "start_12": "9:30 AM",
-          "end_12": "10:30 AM",
-          "type": "practice",
-          "title": "Mini Kickers 9:30 AM Session Practice",
-          "team": "Mini Kickers 9:30 AM Session",
-          "coach": "",
-          "grade": "",
           "source": "ICS"
         },
         {
@@ -11564,19 +11409,6 @@
           "source": "ICS"
         },
         {
-          "field": "H-SuSS",
-          "start": "10:30",
-          "end": "11:30",
-          "start_12": "10:30 AM",
-          "end_12": "11:30 AM",
-          "type": "practice",
-          "title": "Mini Kickers 10:30 AM Session Practice",
-          "team": "Mini Kickers 10:30 AM Session",
-          "coach": "",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
           "field": "H-HST",
           "start": "11:30",
           "end": "12:30",
@@ -11584,58 +11416,6 @@
           "end_12": "12:30 PM",
           "type": "free",
           "title": ""
-        },
-        {
-          "field": "H-SuSS",
-          "start": "11:30",
-          "end": "12:30",
-          "start_12": "11:30 AM",
-          "end_12": "12:30 PM",
-          "type": "practice",
-          "title": "Mini Kickers 11:30 AM Session Practice",
-          "team": "Mini Kickers 11:30 AM Session",
-          "coach": "",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su1",
-          "start": "12:00",
-          "end": "13:00",
-          "start_12": "12:00 PM",
-          "end_12": "1:00 PM",
-          "type": "game",
-          "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-          "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS"
-        },
-        {
-          "field": "H-Su2",
-          "start": "12:00",
-          "end": "13:00",
-          "start_12": "12:00 PM",
-          "end_12": "1:00 PM",
-          "type": "game",
-          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS"
-        },
-        {
-          "field": "H-SJ4",
-          "start": "12:00",
-          "end": "13:00",
-          "start_12": "12:00 PM",
-          "end_12": "1:00 PM",
-          "type": "game",
-          "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-          "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-          "coach": "",
-          "grade": "3/4",
-          "source": "ICS"
         },
         {
           "field": "H-HST",
@@ -11649,78 +11429,6 @@
           "coach": "Collins",
           "grade": "7/8",
           "source": "ICS"
-        },
-        {
-          "field": "H-Su1",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su1A",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su1B",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2A",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-Su2B",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4A",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
-        },
-        {
-          "field": "H-SJ4B",
-          "start": "13:00",
-          "end": "19:00",
-          "start_12": "1:00 PM",
-          "end_12": "7:00 PM",
-          "type": "free",
-          "title": ""
         },
         {
           "field": "H-SJ3",
@@ -12108,9 +11816,9 @@
           {
             "type": "free",
             "start": "08:00",
-            "end": "12:00",
+            "end": "13:00",
             "start_12": "8:00 AM",
-            "end_12": "12:00 PM",
+            "end_12": "1:00 PM",
             "fields": [
               "H-Su1",
               "H-Su1A",
@@ -12128,63 +11836,6 @@
             "team": null,
             "coach": null,
             "grade": null,
-            "reason": null
-          },
-          {
-            "type": "practice",
-            "start": "08:30",
-            "end": "12:30",
-            "start_12": "8:30 AM",
-            "end_12": "12:30 PM",
-            "fields": [
-              "H-SuSS",
-              "H-SuSS1",
-              "H-SuSS2"
-            ],
-            "title": null,
-            "team": null,
-            "coach": null,
-            "grade": null,
-            "reason": null
-          },
-          {
-            "type": "free",
-            "start": "12:00",
-            "end": "13:00",
-            "start_12": "12:00 PM",
-            "end_12": "1:00 PM",
-            "fields": [
-              "H-SJ3",
-              "H-SJ3A",
-              "H-SJ3B"
-            ],
-            "title": null,
-            "team": null,
-            "coach": null,
-            "grade": null,
-            "reason": null
-          },
-          {
-            "type": "game",
-            "start": "12:00",
-            "end": "13:00",
-            "start_12": "12:00 PM",
-            "end_12": "1:00 PM",
-            "fields": [
-              "H-Su1",
-              "H-Su1A",
-              "H-Su1B",
-              "H-Su2",
-              "H-Su2A",
-              "H-Su2B",
-              "H-SJ4",
-              "H-SJ4A",
-              "H-SJ4B"
-            ],
-            "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "coach": null,
-            "grade": "5/6",
             "reason": null
           },
           {
@@ -13219,7 +12870,7 @@
       "date": "2026-11-08",
       "sunset": "16:29",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:05 AM",
+      "last_successful_update": "November 07, 2026 at 8:39 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -13461,7 +13112,21 @@
             "field_display": "H-HST3, Holbrook High School"
           },
           {
-            "event_id": "c0862194f4828167b914bea608c26479",
+            "event_id": "a6db824054bfbcc389236ef807b4aa4c",
+            "date": "2026-11-08",
+            "start": "18:30",
+            "end": "19:30",
+            "field": "H-HST3",
+            "type": "game",
+            "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+            "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          },
+          {
+            "event_id": "c8275567812d4413360a06cf27a3a5db",
             "date": "2026-11-08",
             "start": "15:45",
             "end": "16:45",
@@ -13473,150 +13138,20 @@
             "grade": "",
             "source": "ICS",
             "field_display": "H-HST3, Holbrook High School"
-          }
-        ],
-        "H-HST1": [
-          {
-            "event_id": "7fe950ada17966e853e4f2670d6f8efb",
-            "date": "2026-11-08",
-            "start": "16:30",
-            "end": "17:30",
-            "field": "H-HST1",
-            "type": "game",
-            "title": "R1-G1 Winner vs. R1-G2 Winner",
-            "team": "R1-G1 Winner vs. R1-G2 Winner",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST1, Holbrook High School"
           },
           {
-            "event_id": "c2ce77936cf450e3318e15008bdf8440",
+            "event_id": "78cbb55f0ba05e7a2db82f4dcefc80c3",
             "date": "2026-11-08",
-            "start": "15:45",
-            "end": "16:45",
-            "field": "H-HST1",
-            "type": "game",
-            "title": "Brockton Rox (Blue) vs. www.slamyourday.com (Green)",
-            "team": "Brockton Rox  vs. www.slamyourday.com (Green)",
-            "coach": "Blue",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST1, Holbrook High School"
-          },
-          {
-            "event_id": "99bc6df9353081fedbd52d386b9b7618",
-            "date": "2026-11-08",
-            "start": "15:00",
-            "end": "15:15",
-            "field": "H-HST1",
-            "type": "game",
-            "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
-            "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
-            "coach": "Red",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST1, Holbrook High School"
-          },
-          {
-            "event_id": "ddd3cb2ddcddae8698027bf20e540ddf",
-            "date": "2026-11-08",
-            "start": "17:15",
-            "end": "18:15",
-            "field": "H-HST1",
+            "start": "17:30",
+            "end": "18:30",
+            "field": "H-HST3",
             "type": "game",
             "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
             "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
             "coach": "",
             "grade": "3/4",
             "source": "ICS",
-            "field_display": "H-HST1, Holbrook High School"
-          },
-          {
-            "event_id": "18b0feb41ae75c1450325dfa598ad5e5",
-            "date": "2026-11-08",
-            "start": "18:30",
-            "end": "19:30",
-            "field": "H-HST1",
-            "type": "game",
-            "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS",
-            "field_display": "H-HST1, Holbrook High School"
-          }
-        ],
-        "H-HST2": [
-          {
-            "event_id": "0e3119f9a2fb12c060ff992e8674662c",
-            "date": "2026-11-08",
-            "start": "15:45",
-            "end": "16:45",
-            "field": "H-HST2",
-            "type": "game",
-            "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
-            "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
-            "coach": "Red",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST2, Holbrook High School"
-          },
-          {
-            "event_id": "5053c3354397a2319bd4e2bd54f8a6c2",
-            "date": "2026-11-08",
-            "start": "17:30",
-            "end": "17:45",
-            "field": "H-HST2",
-            "type": "game",
-            "title": "R1-G1 Winner vs. R1-G2 Winner",
-            "team": "R1-G1 Winner vs. R1-G2 Winner",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST2, Holbrook High School"
-          },
-          {
-            "event_id": "311ca20e83f0de8fc390e36ff3da27c1",
-            "date": "2026-11-08",
-            "start": "15:00",
-            "end": "15:15",
-            "field": "H-HST2",
-            "type": "game",
-            "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
-            "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
-            "coach": "Orange",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST2, Holbrook High School"
-          },
-          {
-            "event_id": "10275f26d36201483ba4af9283130a27",
-            "date": "2026-11-08",
-            "start": "18:30",
-            "end": "19:30",
-            "field": "H-HST2",
-            "type": "game",
-            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS",
-            "field_display": "H-HST2, Holbrook High School"
-          },
-          {
-            "event_id": "c53482ff1d269077deabbf83dacdcbf0",
-            "date": "2026-11-08",
-            "start": "16:30",
-            "end": "17:30",
-            "field": "H-HST2",
-            "type": "game",
-            "title": "R1-G1 Winner vs. R1-G2 Winner",
-            "team": "R1-G1 Winner vs. R1-G2 Winner",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST2, Holbrook High School"
+            "field_display": "H-HST3, Holbrook High School"
           }
         ],
         "H-HST4": [
@@ -13633,21 +13168,112 @@
             "grade": "",
             "source": "ICS",
             "field_display": "H-HST4, Holbrook High School"
-          }
-        ]
-      },
-      "blocks": {
-        "H-HST": [
+          },
           {
+            "event_id": "a9330a5e6dbf723e48f0fab62b963a75",
+            "date": "2026-11-08",
+            "start": "15:45",
+            "end": "16:45",
+            "field": "H-HST4",
+            "type": "game",
+            "title": "Troupe Waste & Recycling (Green) vs. Wm. Perry Trucking (Orange)",
+            "team": "Troupe Waste & Recycling  vs. Wm. Perry Trucking (Orange)",
+            "coach": "Green",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST4, Holbrook High School"
+          }
+        ],
+        "H-HST2": [
+          {
+            "event_id": "39f8d31694b4adcdf11ad0703eb5b612",
+            "date": "2026-11-08",
+            "start": "16:30",
+            "end": "17:30",
+            "field": "H-HST2",
+            "type": "game",
+            "title": "R1-G1 Winner vs. R1-G2 Winner",
+            "team": "R1-G1 Winner vs. R1-G2 Winner",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          },
+          {
+            "event_id": "0efe5fb425467cb3f47f046b9a24a357",
+            "date": "2026-11-08",
+            "start": "17:30",
+            "end": "18:00",
+            "field": "H-HST2",
+            "type": "game",
+            "title": "R1-G1 Winner vs. R1-G2 Winner",
+            "team": "R1-G1 Winner vs. R1-G2 Winner",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          },
+          {
+            "event_id": "8023ff7fb7f99728fb9e96283460eef1",
             "date": "2026-11-08",
             "start": "15:00",
-            "end": "16:00",
-            "field": "H-HST",
-            "reason": "Parent/Coach/Ref Game",
-            "type": "game"
+            "end": "15:30",
+            "field": "H-HST2",
+            "type": "game",
+            "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
+            "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
+            "coach": "Orange",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          },
+          {
+            "event_id": "776b3cd279728a45321c79f28e721908",
+            "date": "2026-11-08",
+            "start": "18:30",
+            "end": "19:30",
+            "field": "H-HST2",
+            "type": "game",
+            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          }
+        ],
+        "H-HST1": [
+          {
+            "event_id": "bf4785b9142091fb24a3f61d1921a257",
+            "date": "2026-11-08",
+            "start": "15:00",
+            "end": "15:30",
+            "field": "H-HST1",
+            "type": "game",
+            "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
+            "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
+            "coach": "Red",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
+          },
+          {
+            "event_id": "a3fb25fbfa6b5695f3a98675e943fbee",
+            "date": "2026-11-08",
+            "start": "16:30",
+            "end": "17:00",
+            "field": "H-HST1",
+            "type": "game",
+            "title": "R1-G1 Winner vs. R1-G2 Winner",
+            "team": "R1-G1 Winner vs. R1-G2 Winner",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
           }
         ]
       },
+      "blocks": {},
       "merged": [
         {
           "field": "H-HST3",
@@ -13658,32 +13284,6 @@
           "type": "game",
           "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
           "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
-          "coach": "Orange",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-HST1",
-          "start": "15:00",
-          "end": "15:15",
-          "start_12": "3:00 PM",
-          "end_12": "3:15 PM",
-          "type": "game",
-          "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
-          "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
-          "coach": "Red",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-HST2",
-          "start": "15:00",
-          "end": "15:15",
-          "start_12": "3:00 PM",
-          "end_12": "3:15 PM",
-          "type": "game",
-          "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
-          "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
           "coach": "Orange",
           "grade": "",
           "source": "ICS"
@@ -13702,13 +13302,30 @@
           "source": "ICS"
         },
         {
-          "field": "H-HST",
+          "field": "H-HST2",
           "start": "15:00",
-          "end": "16:00",
+          "end": "15:30",
           "start_12": "3:00 PM",
-          "end_12": "4:00 PM",
+          "end_12": "3:30 PM",
           "type": "game",
-          "title": "Parent/Coach/Ref Game"
+          "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
+          "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST1",
+          "start": "15:00",
+          "end": "15:30",
+          "start_12": "3:00 PM",
+          "end_12": "3:30 PM",
+          "type": "game",
+          "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
+          "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
+          "coach": "Red",
+          "grade": "",
+          "source": "ICS"
         },
         {
           "field": "H-HST3",
@@ -13724,28 +13341,15 @@
           "source": "ICS"
         },
         {
-          "field": "H-HST1",
+          "field": "H-HST4",
           "start": "15:45",
           "end": "16:45",
           "start_12": "3:45 PM",
           "end_12": "4:45 PM",
           "type": "game",
-          "title": "Brockton Rox (Blue) vs. www.slamyourday.com (Green)",
-          "team": "Brockton Rox  vs. www.slamyourday.com (Green)",
-          "coach": "Blue",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
-          "field": "H-HST2",
-          "start": "15:45",
-          "end": "16:45",
-          "start_12": "3:45 PM",
-          "end_12": "4:45 PM",
-          "type": "game",
-          "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
-          "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
-          "coach": "Red",
+          "title": "Troupe Waste & Recycling (Green) vs. Wm. Perry Trucking (Orange)",
+          "team": "Troupe Waste & Recycling  vs. Wm. Perry Trucking (Orange)",
+          "coach": "Green",
           "grade": "",
           "source": "ICS"
         },
@@ -13763,19 +13367,6 @@
           "source": "ICS"
         },
         {
-          "field": "H-HST1",
-          "start": "16:30",
-          "end": "17:30",
-          "start_12": "4:30 PM",
-          "end_12": "5:30 PM",
-          "type": "game",
-          "title": "R1-G1 Winner vs. R1-G2 Winner",
-          "team": "R1-G1 Winner vs. R1-G2 Winner",
-          "coach": "",
-          "grade": "",
-          "source": "ICS"
-        },
-        {
           "field": "H-HST2",
           "start": "16:30",
           "end": "17:30",
@@ -13790,10 +13381,23 @@
         },
         {
           "field": "H-HST1",
-          "start": "17:15",
-          "end": "18:15",
-          "start_12": "5:15 PM",
-          "end_12": "6:15 PM",
+          "start": "16:30",
+          "end": "17:00",
+          "start_12": "4:30 PM",
+          "end_12": "5:00 PM",
+          "type": "game",
+          "title": "R1-G1 Winner vs. R1-G2 Winner",
+          "team": "R1-G1 Winner vs. R1-G2 Winner",
+          "coach": "",
+          "grade": "",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST3",
+          "start": "17:30",
+          "end": "18:30",
+          "start_12": "5:30 PM",
+          "end_12": "6:30 PM",
           "type": "game",
           "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
           "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
@@ -13804,9 +13408,9 @@
         {
           "field": "H-HST2",
           "start": "17:30",
-          "end": "17:45",
+          "end": "18:00",
           "start_12": "5:30 PM",
-          "end_12": "5:45 PM",
+          "end_12": "6:00 PM",
           "type": "game",
           "title": "R1-G1 Winner vs. R1-G2 Winner",
           "team": "R1-G1 Winner vs. R1-G2 Winner",
@@ -13815,7 +13419,7 @@
           "source": "ICS"
         },
         {
-          "field": "H-HST1",
+          "field": "H-HST3",
           "start": "18:30",
           "end": "19:30",
           "start_12": "6:30 PM",
