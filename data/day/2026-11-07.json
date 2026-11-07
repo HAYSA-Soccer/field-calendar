@@ -2,7 +2,7 @@
   "date": "2026-11-07",
   "sunset": "16:30",
   "updated": true,
-  "last_successful_update": "November 07, 2026 at 6:29 AM",
+  "last_successful_update": "November 07, 2026 at 7:26 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -230,14 +230,6 @@
     "H-Su1": [
       {
         "start": "08:00",
-        "end": "08:30"
-      },
-      {
-        "start": "09:30",
-        "end": "09:45"
-      },
-      {
-        "start": "10:45",
         "end": "12:00"
       },
       {
@@ -248,14 +240,6 @@
     "H-Su1A": [
       {
         "start": "08:00",
-        "end": "08:30"
-      },
-      {
-        "start": "09:30",
-        "end": "09:45"
-      },
-      {
-        "start": "10:45",
         "end": "12:00"
       },
       {
@@ -266,14 +250,6 @@
     "H-Su1B": [
       {
         "start": "08:00",
-        "end": "08:30"
-      },
-      {
-        "start": "09:30",
-        "end": "09:45"
-      },
-      {
-        "start": "10:45",
         "end": "12:00"
       },
       {
@@ -284,11 +260,7 @@
     "H-Su2": [
       {
         "start": "08:00",
-        "end": "08:30"
-      },
-      {
-        "start": "09:30",
-        "end": "11:00"
+        "end": "12:00"
       },
       {
         "start": "13:00",
@@ -298,11 +270,7 @@
     "H-Su2A": [
       {
         "start": "08:00",
-        "end": "08:30"
-      },
-      {
-        "start": "09:30",
-        "end": "11:00"
+        "end": "12:00"
       },
       {
         "start": "13:00",
@@ -312,11 +280,7 @@
     "H-Su2B": [
       {
         "start": "08:00",
-        "end": "08:30"
-      },
-      {
-        "start": "09:30",
-        "end": "11:00"
+        "end": "12:00"
       },
       {
         "start": "13:00",
@@ -374,10 +338,6 @@
     "H-SJ4A": [
       {
         "start": "08:00",
-        "end": "09:45"
-      },
-      {
-        "start": "10:45",
         "end": "12:00"
       },
       {
@@ -388,10 +348,6 @@
     "H-SJ4B": [
       {
         "start": "08:00",
-        "end": "09:45"
-      },
-      {
-        "start": "10:45",
         "end": "12:00"
       },
       {
@@ -592,20 +548,6 @@
         "grade": "5/6",
         "source": "ICS",
         "field_display": "H-Su1, Holbrook Sumner Field"
-      },
-      {
-        "event_id": "8b1148ed6aff4ab598e4a6dbb6a5f894",
-        "date": "2026-11-07",
-        "start": "08:30",
-        "end": "09:30",
-        "field": "H-Su1",
-        "type": "game",
-        "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
-        "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
-        "coach": "Red",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-Su1, Holbrook Sumner Field"
       }
     ],
     "H-Su2": [
@@ -622,116 +564,6 @@
         "grade": "5/6",
         "source": "ICS",
         "field_display": "H-Su2, Holbrook Sumner Field"
-      },
-      {
-        "event_id": "eb1894ec6a7bd6083a926bfd4622d28e",
-        "date": "2026-11-07",
-        "start": "08:30",
-        "end": "09:30",
-        "field": "H-Su2",
-        "type": "game",
-        "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
-        "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
-        "coach": "Orange",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-Su2, Holbrook Sumner Field"
-      }
-    ],
-    "H-Su1B": [
-      {
-        "event_id": "18603fad255c40a9ebb85051cc32b065",
-        "date": "2026-11-07",
-        "start": "09:45",
-        "end": "10:45",
-        "field": "H-Su1B",
-        "type": "game",
-        "title": "Troupe Waste & Recycling (Green) vs. Wm. Perry Trucking (Orange)",
-        "team": "Troupe Waste & Recycling  vs. Wm. Perry Trucking (Orange)",
-        "coach": "Green",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-Su1B, Holbrook Sumner Field"
-      }
-    ],
-    "H-SJ4B": [
-      {
-        "event_id": "2157faabe46ac821d67a9f6b613dfece",
-        "date": "2026-11-07",
-        "start": "09:45",
-        "end": "10:45",
-        "field": "H-SJ4B",
-        "type": "game",
-        "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
-        "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
-        "coach": "Red",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-SJ4B, Holbrook Sean Joyce Field"
-      }
-    ],
-    "H-Su1A": [
-      {
-        "event_id": "71902021c1dcac1514c4f619df22651d",
-        "date": "2026-11-07",
-        "start": "09:45",
-        "end": "10:45",
-        "field": "H-Su1A",
-        "type": "game",
-        "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-        "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
-        "coach": "Blue",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-Su1A, Holbrook Sumner Field"
-      }
-    ],
-    "H-SJ4A": [
-      {
-        "event_id": "9e9bd614d4b9f77c9a39b4889294757d",
-        "date": "2026-11-07",
-        "start": "09:45",
-        "end": "10:45",
-        "field": "H-SJ4A",
-        "type": "game",
-        "title": "Brockton Rox (Blue) vs. www.slamyourday.com (Green)",
-        "team": "Brockton Rox  vs. www.slamyourday.com (Green)",
-        "coach": "Blue",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-SJ4A, Holbrook Sean Joyce Field"
-      }
-    ],
-    "H-Su2B": [
-      {
-        "event_id": "5adf0044fedbb35745790c51845b8b74",
-        "date": "2026-11-07",
-        "start": "11:00",
-        "end": "12:00",
-        "field": "H-Su2B",
-        "type": "game",
-        "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
-        "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
-        "coach": "Orange",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-Su2B, Holbrook Sumner Field"
-      }
-    ],
-    "H-Su2A": [
-      {
-        "event_id": "dc30a58df285d224f3b1531851401477",
-        "date": "2026-11-07",
-        "start": "11:00",
-        "end": "12:00",
-        "field": "H-Su2A",
-        "type": "game",
-        "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
-        "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
-        "coach": "Blue",
-        "grade": "",
-        "source": "ICS",
-        "field_display": "H-Su2A, Holbrook Sumner Field"
       }
     ],
     "H-SJ4": [
@@ -756,54 +588,54 @@
     {
       "field": "H-Su1",
       "start": "08:00",
-      "end": "08:30",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "8:30 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1A",
       "start": "08:00",
-      "end": "08:30",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "8:30 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su1B",
       "start": "08:00",
-      "end": "08:30",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "8:30 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2",
       "start": "08:00",
-      "end": "08:30",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "8:30 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2A",
       "start": "08:00",
-      "end": "08:30",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "8:30 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-Su2B",
       "start": "08:00",
-      "end": "08:30",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "8:30 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
@@ -837,18 +669,18 @@
     {
       "field": "H-SJ4A",
       "start": "08:00",
-      "end": "09:45",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "9:45 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
     {
       "field": "H-SJ4B",
       "start": "08:00",
-      "end": "09:45",
+      "end": "12:00",
       "start_12": "8:00 AM",
-      "end_12": "9:45 AM",
+      "end_12": "12:00 PM",
       "type": "free",
       "title": ""
     },
@@ -866,32 +698,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-Su1",
-      "start": "08:30",
-      "end": "09:30",
-      "start_12": "8:30 AM",
-      "end_12": "9:30 AM",
-      "type": "game",
-      "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
-      "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
-      "coach": "Red",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
-      "field": "H-Su2",
-      "start": "08:30",
-      "end": "09:30",
-      "start_12": "8:30 AM",
-      "end_12": "9:30 AM",
-      "type": "game",
-      "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
-      "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
-      "coach": "Orange",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
       "field": "H-HST",
       "start": "09:00",
       "end": "10:00",
@@ -905,60 +711,6 @@
       "source": "ICS"
     },
     {
-      "field": "H-Su1",
-      "start": "09:30",
-      "end": "09:45",
-      "start_12": "9:30 AM",
-      "end_12": "9:45 AM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1A",
-      "start": "09:30",
-      "end": "09:45",
-      "start_12": "9:30 AM",
-      "end_12": "9:45 AM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1B",
-      "start": "09:30",
-      "end": "09:45",
-      "start_12": "9:30 AM",
-      "end_12": "9:45 AM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2",
-      "start": "09:30",
-      "end": "11:00",
-      "start_12": "9:30 AM",
-      "end_12": "11:00 AM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2A",
-      "start": "09:30",
-      "end": "11:00",
-      "start_12": "9:30 AM",
-      "end_12": "11:00 AM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2B",
-      "start": "09:30",
-      "end": "11:00",
-      "start_12": "9:30 AM",
-      "end_12": "11:00 AM",
-      "type": "free",
-      "title": ""
-    },
-    {
       "field": "H-SuSS",
       "start": "09:30",
       "end": "10:30",
@@ -968,58 +720,6 @@
       "title": "Mini Kickers 9:30 AM Session Practice",
       "team": "Mini Kickers 9:30 AM Session",
       "coach": "",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
-      "field": "H-Su1B",
-      "start": "09:45",
-      "end": "10:45",
-      "start_12": "9:45 AM",
-      "end_12": "10:45 AM",
-      "type": "game",
-      "title": "Troupe Waste & Recycling (Green) vs. Wm. Perry Trucking (Orange)",
-      "team": "Troupe Waste & Recycling  vs. Wm. Perry Trucking (Orange)",
-      "coach": "Green",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
-      "field": "H-SJ4B",
-      "start": "09:45",
-      "end": "10:45",
-      "start_12": "9:45 AM",
-      "end_12": "10:45 AM",
-      "type": "game",
-      "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
-      "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
-      "coach": "Red",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
-      "field": "H-Su1A",
-      "start": "09:45",
-      "end": "10:45",
-      "start_12": "9:45 AM",
-      "end_12": "10:45 AM",
-      "type": "game",
-      "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-      "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
-      "coach": "Blue",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
-      "field": "H-SJ4A",
-      "start": "09:45",
-      "end": "10:45",
-      "start_12": "9:45 AM",
-      "end_12": "10:45 AM",
-      "type": "game",
-      "title": "Brockton Rox (Blue) vs. www.slamyourday.com (Green)",
-      "team": "Brockton Rox  vs. www.slamyourday.com (Green)",
-      "coach": "Blue",
       "grade": "",
       "source": "ICS"
     },
@@ -1056,77 +756,6 @@
       "team": "5/6 Girls Travel  vs. Rockland",
       "coach": "Baird-Miller",
       "grade": "5/6",
-      "source": "ICS"
-    },
-    {
-      "field": "H-Su1",
-      "start": "10:45",
-      "end": "12:00",
-      "start_12": "10:45 AM",
-      "end_12": "12:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1A",
-      "start": "10:45",
-      "end": "12:00",
-      "start_12": "10:45 AM",
-      "end_12": "12:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1B",
-      "start": "10:45",
-      "end": "12:00",
-      "start_12": "10:45 AM",
-      "end_12": "12:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4A",
-      "start": "10:45",
-      "end": "12:00",
-      "start_12": "10:45 AM",
-      "end_12": "12:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4B",
-      "start": "10:45",
-      "end": "12:00",
-      "start_12": "10:45 AM",
-      "end_12": "12:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2B",
-      "start": "11:00",
-      "end": "12:00",
-      "start_12": "11:00 AM",
-      "end_12": "12:00 PM",
-      "type": "game",
-      "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
-      "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
-      "coach": "Orange",
-      "grade": "",
-      "source": "ICS"
-    },
-    {
-      "field": "H-Su2A",
-      "start": "11:00",
-      "end": "12:00",
-      "start_12": "11:00 AM",
-      "end_12": "12:00 PM",
-      "type": "game",
-      "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
-      "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
-      "coach": "Blue",
-      "grade": "",
       "source": "ICS"
     },
     {
@@ -1661,167 +1290,16 @@
       {
         "type": "free",
         "start": "08:00",
-        "end": "08:30",
+        "end": "12:00",
         "start_12": "8:00 AM",
-        "end_12": "8:30 AM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "08:30",
-        "end": "09:30",
-        "start_12": "8:30 AM",
-        "end_12": "9:30 AM",
-        "fields": [
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "game",
-        "start": "08:30",
-        "end": "09:30",
-        "start_12": "8:30 AM",
-        "end_12": "9:30 AM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B"
-        ],
-        "title": "Hornets Nest Solutions LLC (Red) vs. Hope and Future Home Care Services (Blue)",
-        "team": "Hornets Nest Solutions LLC  vs. Hope and Future Home Care Services (Blue)",
-        "coach": "Red",
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "09:30",
-        "end": "09:45",
-        "start_12": "9:30 AM",
-        "end_12": "9:45 AM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "09:45",
-        "end": "10:45",
-        "start_12": "9:45 AM",
-        "end_12": "10:45 AM",
-        "fields": [
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "game",
-        "start": "09:45",
-        "end": "10:45",
-        "start_12": "9:45 AM",
-        "end_12": "10:45 AM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-        "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
-        "coach": "Blue",
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "10:45",
-        "end": "11:00",
-        "start_12": "10:45 AM",
-        "end_12": "11:00 AM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "free",
-        "start": "11:00",
-        "end": "12:00",
-        "start_12": "11:00 AM",
         "end_12": "12:00 PM",
         "fields": [
           "H-Su1",
           "H-Su1A",
           "H-Su1B",
+          "H-Su2",
+          "H-Su2A",
+          "H-Su2B",
           "H-SJ3",
           "H-SJ3A",
           "H-SJ3B",
@@ -1831,23 +1309,6 @@
         "title": null,
         "team": null,
         "coach": null,
-        "grade": null,
-        "reason": null
-      },
-      {
-        "type": "game",
-        "start": "11:00",
-        "end": "12:00",
-        "start_12": "11:00 AM",
-        "end_12": "12:00 PM",
-        "fields": [
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B"
-        ],
-        "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
-        "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
-        "coach": "Blue",
         "grade": null,
         "reason": null
       },
