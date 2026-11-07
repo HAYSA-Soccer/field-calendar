@@ -562,7 +562,7 @@
     "date": "2026-11-12",
     "sunset": "16:25",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:40 AM",
+    "last_successful_update": "November 07, 2026 at 8:08 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -3318,7 +3318,7 @@
     "date": "2026-11-11",
     "sunset": "16:26",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:39 AM",
+    "last_successful_update": "November 07, 2026 at 8:07 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -14028,7 +14028,7 @@
     "date": "2026-11-14",
     "sunset": "16:23",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:40 AM",
+    "last_successful_update": "November 07, 2026 at 8:09 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -15560,7 +15560,7 @@
     "date": "2026-11-13",
     "sunset": "16:24",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:40 AM",
+    "last_successful_update": "November 07, 2026 at 8:09 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -17762,7 +17762,7 @@
     "date": "2026-11-10",
     "sunset": "16:27",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:38 AM",
+    "last_successful_update": "November 07, 2026 at 8:06 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -20794,7 +20794,7 @@
     "date": "2026-11-07",
     "sunset": "16:30",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:37 AM",
+    "last_successful_update": "November 07, 2026 at 8:04 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -21152,64 +21152,6 @@
       "H-SuSS2": []
     },
     "events": {
-      "H-SuSS": [
-        {
-          "event_id": "b0b93d57fa31460833cb1dcd63969f4e",
-          "date": "2026-11-07",
-          "start": "09:30",
-          "end": "10:30",
-          "field": "H-SuSS",
-          "type": "practice",
-          "title": "Mini Kickers 9:30 AM Session Practice",
-          "team": "Mini Kickers 9:30 AM Session",
-          "coach": "",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-SuSS, Holbrook Sumner Field"
-        },
-        {
-          "event_id": "cbdf06b419872fa481398049cf9738a9",
-          "date": "2026-11-07",
-          "start": "08:30",
-          "end": "09:30",
-          "field": "H-SuSS",
-          "type": "practice",
-          "title": "Mini Kickers 8:30 AM Session Practice",
-          "team": "Mini Kickers 8:30 AM Session",
-          "coach": "",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-SuSS, Holbrook Sumner Field"
-        },
-        {
-          "event_id": "daed38e43d62ce76a89055581cab6b5e",
-          "date": "2026-11-07",
-          "start": "11:30",
-          "end": "12:30",
-          "field": "H-SuSS",
-          "type": "practice",
-          "title": "Mini Kickers 11:30 AM Session Practice",
-          "team": "Mini Kickers 11:30 AM Session",
-          "coach": "",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-SuSS, Holbrook Sumner Field"
-        },
-        {
-          "event_id": "f7aa4e48170b546ea17ecaf5c5aae71a",
-          "date": "2026-11-07",
-          "start": "10:30",
-          "end": "11:30",
-          "field": "H-SuSS",
-          "type": "practice",
-          "title": "Mini Kickers 10:30 AM Session Practice",
-          "team": "Mini Kickers 10:30 AM Session",
-          "coach": "",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-SuSS, Holbrook Sumner Field"
-        }
-      ],
       "H-HST": [
         {
           "event_id": "17de999a85d5605b6c0c80f2c9b321b2",
@@ -21324,6 +21266,64 @@
           "grade": "3/4",
           "source": "ICS",
           "field_display": "H-SJ3, Holbrook Sean Joyce Field"
+        }
+      ],
+      "H-SuSS": [
+        {
+          "event_id": "b0b93d57fa31460833cb1dcd63969f4e",
+          "date": "2026-11-07",
+          "start": "09:30",
+          "end": "10:30",
+          "field": "H-SuSS",
+          "type": "practice",
+          "title": "Mini Kickers 9:30 AM Session Practice",
+          "team": "Mini Kickers 9:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-SuSS, Holbrook Sumner Field"
+        },
+        {
+          "event_id": "cbdf06b419872fa481398049cf9738a9",
+          "date": "2026-11-07",
+          "start": "08:30",
+          "end": "09:30",
+          "field": "H-SuSS",
+          "type": "practice",
+          "title": "Mini Kickers 8:30 AM Session Practice",
+          "team": "Mini Kickers 8:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-SuSS, Holbrook Sumner Field"
+        },
+        {
+          "event_id": "daed38e43d62ce76a89055581cab6b5e",
+          "date": "2026-11-07",
+          "start": "11:30",
+          "end": "12:30",
+          "field": "H-SuSS",
+          "type": "practice",
+          "title": "Mini Kickers 11:30 AM Session Practice",
+          "team": "Mini Kickers 11:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-SuSS, Holbrook Sumner Field"
+        },
+        {
+          "event_id": "f7aa4e48170b546ea17ecaf5c5aae71a",
+          "date": "2026-11-07",
+          "start": "10:30",
+          "end": "11:30",
+          "field": "H-SuSS",
+          "type": "practice",
+          "title": "Mini Kickers 10:30 AM Session Practice",
+          "team": "Mini Kickers 10:30 AM Session",
+          "coach": "",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-SuSS, Holbrook Sumner Field"
         }
       ],
       "H-Su1": [
@@ -21525,19 +21525,6 @@
         "title": ""
       },
       {
-        "field": "H-SuSS",
-        "start": "10:30",
-        "end": "11:30",
-        "start_12": "10:30 AM",
-        "end_12": "11:30 AM",
-        "type": "practice",
-        "title": "Mini Kickers 10:30 AM Session Practice",
-        "team": "Mini Kickers 10:30 AM Session",
-        "coach": "",
-        "grade": "",
-        "source": "ICS"
-      },
-      {
         "field": "H-HST",
         "start": "10:30",
         "end": "11:30",
@@ -21548,6 +21535,19 @@
         "team": "5/6 Girls Travel  vs. Rockland",
         "coach": "Baird-Miller",
         "grade": "5/6",
+        "source": "ICS"
+      },
+      {
+        "field": "H-SuSS",
+        "start": "10:30",
+        "end": "11:30",
+        "start_12": "10:30 AM",
+        "end_12": "11:30 AM",
+        "type": "practice",
+        "title": "Mini Kickers 10:30 AM Session Practice",
+        "team": "Mini Kickers 10:30 AM Session",
+        "coach": "",
+        "grade": "",
         "source": "ICS"
       },
       {
@@ -23193,7 +23193,7 @@
     "date": "2026-11-08",
     "sunset": "16:29",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:37 AM",
+    "last_successful_update": "November 07, 2026 at 8:05 AM",
     "complexes": {
       "TURF": [
         "H-HST",
@@ -23405,107 +23405,51 @@
       "H-SuSS2": []
     },
     "events": {
-      "H-HST2": [
+      "H-HST3": [
         {
-          "event_id": "10275f26d36201483ba4af9283130a27",
-          "date": "2026-11-08",
-          "start": "18:30",
-          "end": "19:30",
-          "field": "H-HST2",
-          "type": "game",
-          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS",
-          "field_display": "H-HST2, Holbrook High School"
-        },
-        {
-          "event_id": "0e3119f9a2fb12c060ff992e8674662c",
-          "date": "2026-11-08",
-          "start": "15:45",
-          "end": "16:45",
-          "field": "H-HST2",
-          "type": "game",
-          "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
-          "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
-          "coach": "Red",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-HST2, Holbrook High School"
-        },
-        {
-          "event_id": "c53482ff1d269077deabbf83dacdcbf0",
-          "date": "2026-11-08",
-          "start": "16:30",
-          "end": "17:30",
-          "field": "H-HST2",
-          "type": "game",
-          "title": "R1-G1 Winner vs. R1-G2 Winner",
-          "team": "R1-G1 Winner vs. R1-G2 Winner",
-          "coach": "",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-HST2, Holbrook High School"
-        },
-        {
-          "event_id": "5053c3354397a2319bd4e2bd54f8a6c2",
-          "date": "2026-11-08",
-          "start": "17:30",
-          "end": "17:45",
-          "field": "H-HST2",
-          "type": "game",
-          "title": "R1-G1 Winner vs. R1-G2 Winner",
-          "team": "R1-G1 Winner vs. R1-G2 Winner",
-          "coach": "",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-HST2, Holbrook High School"
-        },
-        {
-          "event_id": "311ca20e83f0de8fc390e36ff3da27c1",
+          "event_id": "c7e3619b822010750e7a846f5219bac8",
           "date": "2026-11-08",
           "start": "15:00",
-          "end": "15:15",
-          "field": "H-HST2",
+          "end": "16:00",
+          "field": "H-HST3",
           "type": "game",
-          "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
-          "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
+          "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
+          "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
           "coach": "Orange",
           "grade": "",
           "source": "ICS",
-          "field_display": "H-HST2, Holbrook High School"
+          "field_display": "H-HST3, Holbrook High School"
+        },
+        {
+          "event_id": "f2384c5ed0ff9381ae51d575d4cdbb1c",
+          "date": "2026-11-08",
+          "start": "16:30",
+          "end": "17:30",
+          "field": "H-HST3",
+          "type": "game",
+          "title": "R1-G1 Winner vs. R1-G2 Winner",
+          "team": "R1-G1 Winner vs. R1-G2 Winner",
+          "coach": "",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-HST3, Holbrook High School"
+        },
+        {
+          "event_id": "c0862194f4828167b914bea608c26479",
+          "date": "2026-11-08",
+          "start": "15:45",
+          "end": "16:45",
+          "field": "H-HST3",
+          "type": "game",
+          "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
+          "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
+          "coach": "Blue",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-HST3, Holbrook High School"
         }
       ],
       "H-HST1": [
-        {
-          "event_id": "18b0feb41ae75c1450325dfa598ad5e5",
-          "date": "2026-11-08",
-          "start": "18:30",
-          "end": "19:30",
-          "field": "H-HST1",
-          "type": "game",
-          "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-          "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-          "coach": "",
-          "grade": "5/6",
-          "source": "ICS",
-          "field_display": "H-HST1, Holbrook High School"
-        },
-        {
-          "event_id": "ddd3cb2ddcddae8698027bf20e540ddf",
-          "date": "2026-11-08",
-          "start": "17:15",
-          "end": "18:15",
-          "field": "H-HST1",
-          "type": "game",
-          "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-          "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-          "coach": "",
-          "grade": "3/4",
-          "source": "ICS",
-          "field_display": "H-HST1, Holbrook High School"
-        },
         {
           "event_id": "7fe950ada17966e853e4f2670d6f8efb",
           "date": "2026-11-08",
@@ -23547,50 +23491,106 @@
           "grade": "",
           "source": "ICS",
           "field_display": "H-HST1, Holbrook High School"
-        }
-      ],
-      "H-HST3": [
-        {
-          "event_id": "c7e3619b822010750e7a846f5219bac8",
-          "date": "2026-11-08",
-          "start": "15:00",
-          "end": "16:00",
-          "field": "H-HST3",
-          "type": "game",
-          "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
-          "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
-          "coach": "Orange",
-          "grade": "",
-          "source": "ICS",
-          "field_display": "H-HST3, Holbrook High School"
         },
         {
-          "event_id": "c0862194f4828167b914bea608c26479",
+          "event_id": "ddd3cb2ddcddae8698027bf20e540ddf",
+          "date": "2026-11-08",
+          "start": "17:15",
+          "end": "18:15",
+          "field": "H-HST1",
+          "type": "game",
+          "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
+          "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
+          "coach": "",
+          "grade": "3/4",
+          "source": "ICS",
+          "field_display": "H-HST1, Holbrook High School"
+        },
+        {
+          "event_id": "18b0feb41ae75c1450325dfa598ad5e5",
+          "date": "2026-11-08",
+          "start": "18:30",
+          "end": "19:30",
+          "field": "H-HST1",
+          "type": "game",
+          "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+          "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS",
+          "field_display": "H-HST1, Holbrook High School"
+        }
+      ],
+      "H-HST2": [
+        {
+          "event_id": "0e3119f9a2fb12c060ff992e8674662c",
           "date": "2026-11-08",
           "start": "15:45",
           "end": "16:45",
-          "field": "H-HST3",
+          "field": "H-HST2",
           "type": "game",
-          "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-          "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
-          "coach": "Blue",
+          "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
+          "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
+          "coach": "Red",
           "grade": "",
           "source": "ICS",
-          "field_display": "H-HST3, Holbrook High School"
+          "field_display": "H-HST2, Holbrook High School"
         },
         {
-          "event_id": "f2384c5ed0ff9381ae51d575d4cdbb1c",
+          "event_id": "5053c3354397a2319bd4e2bd54f8a6c2",
           "date": "2026-11-08",
-          "start": "16:30",
-          "end": "17:30",
-          "field": "H-HST3",
+          "start": "17:30",
+          "end": "17:45",
+          "field": "H-HST2",
           "type": "game",
           "title": "R1-G1 Winner vs. R1-G2 Winner",
           "team": "R1-G1 Winner vs. R1-G2 Winner",
           "coach": "",
           "grade": "",
           "source": "ICS",
-          "field_display": "H-HST3, Holbrook High School"
+          "field_display": "H-HST2, Holbrook High School"
+        },
+        {
+          "event_id": "311ca20e83f0de8fc390e36ff3da27c1",
+          "date": "2026-11-08",
+          "start": "15:00",
+          "end": "15:15",
+          "field": "H-HST2",
+          "type": "game",
+          "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
+          "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
+          "coach": "Orange",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-HST2, Holbrook High School"
+        },
+        {
+          "event_id": "10275f26d36201483ba4af9283130a27",
+          "date": "2026-11-08",
+          "start": "18:30",
+          "end": "19:30",
+          "field": "H-HST2",
+          "type": "game",
+          "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+          "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS",
+          "field_display": "H-HST2, Holbrook High School"
+        },
+        {
+          "event_id": "c53482ff1d269077deabbf83dacdcbf0",
+          "date": "2026-11-08",
+          "start": "16:30",
+          "end": "17:30",
+          "field": "H-HST2",
+          "type": "game",
+          "title": "R1-G1 Winner vs. R1-G2 Winner",
+          "team": "R1-G1 Winner vs. R1-G2 Winner",
+          "coach": "",
+          "grade": "",
+          "source": "ICS",
+          "field_display": "H-HST2, Holbrook High School"
         }
       ],
       "H-HST4": [
@@ -23624,14 +23624,14 @@
     },
     "merged": [
       {
-        "field": "H-HST2",
+        "field": "H-HST3",
         "start": "15:00",
-        "end": "15:15",
+        "end": "16:00",
         "start_12": "3:00 PM",
-        "end_12": "3:15 PM",
+        "end_12": "4:00 PM",
         "type": "game",
-        "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
-        "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
+        "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
+        "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
         "coach": "Orange",
         "grade": "",
         "source": "ICS"
@@ -23650,14 +23650,14 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST3",
+        "field": "H-HST2",
         "start": "15:00",
-        "end": "16:00",
+        "end": "15:15",
         "start_12": "3:00 PM",
-        "end_12": "4:00 PM",
+        "end_12": "3:15 PM",
         "type": "game",
-        "title": "Undercover Undercoaters Bridgewater (Orange) vs. Holbrook Community Center (Green)",
-        "team": "Undercover Undercoaters Bridgewater  vs. Holbrook Community Center (Green)",
+        "title": "Wm. Perry Auto Repair (Orange) vs. Summit's Place (Green)",
+        "team": "Wm. Perry Auto Repair  vs. Summit's Place (Green)",
         "coach": "Orange",
         "grade": "",
         "source": "ICS"
@@ -23685,15 +23685,15 @@
         "title": "Parent/Coach/Ref Game"
       },
       {
-        "field": "H-HST2",
+        "field": "H-HST3",
         "start": "15:45",
         "end": "16:45",
         "start_12": "3:45 PM",
         "end_12": "4:45 PM",
         "type": "game",
-        "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
-        "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
-        "coach": "Red",
+        "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
+        "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
+        "coach": "Blue",
         "grade": "",
         "source": "ICS"
       },
@@ -23711,20 +23711,20 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST3",
+        "field": "H-HST2",
         "start": "15:45",
         "end": "16:45",
         "start_12": "3:45 PM",
         "end_12": "4:45 PM",
         "type": "game",
-        "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-        "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
-        "coach": "Blue",
+        "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
+        "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
+        "coach": "Red",
         "grade": "",
         "source": "ICS"
       },
       {
-        "field": "H-HST2",
+        "field": "H-HST3",
         "start": "16:30",
         "end": "17:30",
         "start_12": "4:30 PM",
@@ -23750,7 +23750,7 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST3",
+        "field": "H-HST2",
         "start": "16:30",
         "end": "17:30",
         "start_12": "4:30 PM",
@@ -23789,19 +23789,6 @@
         "source": "ICS"
       },
       {
-        "field": "H-HST2",
-        "start": "18:30",
-        "end": "19:30",
-        "start_12": "6:30 PM",
-        "end_12": "7:30 PM",
-        "type": "game",
-        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-        "coach": "",
-        "grade": "5/6",
-        "source": "ICS"
-      },
-      {
         "field": "H-HST1",
         "start": "18:30",
         "end": "19:30",
@@ -23810,6 +23797,19 @@
         "type": "game",
         "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
         "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+        "coach": "",
+        "grade": "5/6",
+        "source": "ICS"
+      },
+      {
+        "field": "H-HST2",
+        "start": "18:30",
+        "end": "19:30",
+        "start_12": "6:30 PM",
+        "end_12": "7:30 PM",
+        "type": "game",
+        "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+        "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
         "coach": "",
         "grade": "5/6",
         "source": "ICS"
@@ -36480,7 +36480,7 @@
     "date": "2026-11-09",
     "sunset": "16:28",
     "updated": true,
-    "last_successful_update": "November 07, 2026 at 7:38 AM",
+    "last_successful_update": "November 07, 2026 at 8:06 AM",
     "complexes": {
       "TURF": [
         "H-HST",
