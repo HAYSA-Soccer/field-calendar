@@ -2,7 +2,7 @@
   "date": "2026-11-08",
   "sunset": "16:29",
   "updated": true,
-  "last_successful_update": "November 07, 2026 at 12:34 PM",
+  "last_successful_update": "November 07, 2026 at 2:43 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -270,6 +270,20 @@
         "grade": "5/6",
         "source": "ICS",
         "field_display": "H-HST2, Holbrook High School"
+      },
+      {
+        "event_id": "0594271f065212cb148931398a3c060b",
+        "date": "2026-11-08",
+        "start": "15:45",
+        "end": "16:15",
+        "field": "H-HST2",
+        "type": "game",
+        "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
+        "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
+        "coach": "Red",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST2, Holbrook High School"
       }
     ],
     "H-HST1": [
@@ -288,7 +302,21 @@
         "field_display": "H-HST1, Holbrook High School"
       },
       {
-        "event_id": "a3fb25fbfa6b5695f3a98675e943fbee",
+        "event_id": "194e7439842327f578ba6a4d836ee840",
+        "date": "2026-11-08",
+        "start": "15:45",
+        "end": "16:15",
+        "field": "H-HST1",
+        "type": "game",
+        "title": "Brockton Rox (Blue) vs. www.slamyourday.com (Green)",
+        "team": "Brockton Rox  vs. www.slamyourday.com (Green)",
+        "coach": "Blue",
+        "grade": "",
+        "source": "ICS",
+        "field_display": "H-HST1, Holbrook High School"
+      },
+      {
+        "event_id": "2cc6083bf912b558e4c72ef4f5f517c1",
         "date": "2026-11-08",
         "start": "16:30",
         "end": "17:00",
@@ -455,6 +483,32 @@
       "type": "game",
       "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
       "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
+      "coach": "Blue",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST2",
+      "start": "15:45",
+      "end": "16:15",
+      "start_12": "3:45 PM",
+      "end_12": "4:15 PM",
+      "type": "game",
+      "title": "The Sean Joyce Foundation (Red) vs. Nielsen Eye Center (Orange)",
+      "team": "The Sean Joyce Foundation  vs. Nielsen Eye Center (Orange)",
+      "coach": "Red",
+      "grade": "",
+      "source": "ICS"
+    },
+    {
+      "field": "H-HST1",
+      "start": "15:45",
+      "end": "16:15",
+      "start_12": "3:45 PM",
+      "end_12": "4:15 PM",
+      "type": "game",
+      "title": "Brockton Rox (Blue) vs. www.slamyourday.com (Green)",
+      "team": "Brockton Rox  vs. www.slamyourday.com (Green)",
       "coach": "Blue",
       "grade": "",
       "source": "ICS"
