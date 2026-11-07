@@ -2,7 +2,7 @@
   "date": "2026-11-08",
   "sunset": "16:29",
   "updated": true,
-  "last_successful_update": "November 06, 2026 at 6:38 PM",
+  "last_successful_update": "November 06, 2026 at 11:30 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -326,7 +326,7 @@
         "start": "15:00",
         "end": "16:00",
         "field": "H-HST",
-        "reason": "Parents/Coach/Ref Game",
+        "reason": "Parent/Coach/Ref Game",
         "type": "game"
       }
     ]
@@ -339,7 +339,7 @@
       "start_12": "3:00 PM",
       "end_12": "4:00 PM",
       "type": "game",
-      "title": "Parents/Coach/Ref Game"
+      "title": "Parent/Coach/Ref Game"
     },
     {
       "field": "H-HST2",
