@@ -5092,7 +5092,7 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:58 AM",
+      "last_successful_update": "November 07, 2026 at 9:12 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5643,7 +5643,7 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:58 AM",
+      "last_successful_update": "November 07, 2026 at 9:11 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6213,7 +6213,7 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 9:00 AM",
+      "last_successful_update": "November 07, 2026 at 9:14 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6933,7 +6933,7 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:59 AM",
+      "last_successful_update": "November 07, 2026 at 9:13 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -7364,7 +7364,7 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:57 AM",
+      "last_successful_update": "November 07, 2026 at 9:11 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -8072,7 +8072,7 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:56 AM",
+      "last_successful_update": "November 07, 2026 at 9:10 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -10820,7 +10820,7 @@
       "date": "2026-11-07",
       "sunset": "16:30",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:55 AM",
+      "last_successful_update": "November 07, 2026 at 9:08 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -12870,7 +12870,7 @@
       "date": "2026-11-08",
       "sunset": "16:29",
       "updated": true,
-      "last_successful_update": "November 07, 2026 at 8:55 AM",
+      "last_successful_update": "November 07, 2026 at 9:09 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -13082,78 +13082,6 @@
         "H-SuSS2": []
       },
       "events": {
-        "H-HST3": [
-          {
-            "event_id": "a6db824054bfbcc389236ef807b4aa4c",
-            "date": "2026-11-08",
-            "start": "18:30",
-            "end": "19:30",
-            "field": "H-HST3",
-            "type": "game",
-            "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS",
-            "field_display": "H-HST3, Holbrook High School"
-          },
-          {
-            "event_id": "78cbb55f0ba05e7a2db82f4dcefc80c3",
-            "date": "2026-11-08",
-            "start": "17:30",
-            "end": "18:30",
-            "field": "H-HST3",
-            "type": "game",
-            "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-            "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-            "coach": "",
-            "grade": "3/4",
-            "source": "ICS",
-            "field_display": "H-HST3, Holbrook High School"
-          },
-          {
-            "event_id": "99677f77f4d19ad736515017138dfe64",
-            "date": "2026-11-08",
-            "start": "15:00",
-            "end": "15:30",
-            "field": "H-HST3",
-            "type": "game",
-            "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
-            "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
-            "coach": "Blue",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST3, Holbrook High School"
-          },
-          {
-            "event_id": "96acd2d570434c6dae1927075dd8a8c8",
-            "date": "2026-11-08",
-            "start": "15:45",
-            "end": "16:15",
-            "field": "H-HST3",
-            "type": "game",
-            "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-            "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
-            "coach": "Blue",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST3, Holbrook High School"
-          },
-          {
-            "event_id": "6f4e7d410ce483ec22d9a4a60265fce6",
-            "date": "2026-11-08",
-            "start": "16:30",
-            "end": "17:00",
-            "field": "H-HST3",
-            "type": "game",
-            "title": "R1-G1 Winner vs. R1-G2 Winner",
-            "team": "R1-G1 Winner vs. R1-G2 Winner",
-            "coach": "",
-            "grade": "",
-            "source": "ICS",
-            "field_display": "H-HST3, Holbrook High School"
-          }
-        ],
         "H-HST2": [
           {
             "event_id": "0efe5fb425467cb3f47f046b9a24a357",
@@ -13184,20 +13112,6 @@
             "field_display": "H-HST2, Holbrook High School"
           },
           {
-            "event_id": "776b3cd279728a45321c79f28e721908",
-            "date": "2026-11-08",
-            "start": "18:30",
-            "end": "19:30",
-            "field": "H-HST2",
-            "type": "game",
-            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
-            "coach": "",
-            "grade": "5/6",
-            "source": "ICS",
-            "field_display": "H-HST2, Holbrook High School"
-          },
-          {
             "event_id": "e7f4a0d810c4b463d0f83ee3ae47ca11",
             "date": "2026-11-08",
             "start": "16:30",
@@ -13208,6 +13122,20 @@
             "team": "R1-G1 Winner vs. R1-G2 Winner",
             "coach": "",
             "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST2, Holbrook High School"
+          },
+          {
+            "event_id": "2f274f5851c58a579004f033dbaa6451",
+            "date": "2026-11-08",
+            "start": "18:30",
+            "end": "19:45",
+            "field": "H-HST2",
+            "type": "game",
+            "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+            "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+            "coach": "",
+            "grade": "5/6",
             "source": "ICS",
             "field_display": "H-HST2, Holbrook High School"
           }
@@ -13271,23 +13199,82 @@
             "source": "ICS",
             "field_display": "H-HST4, Holbrook High School"
           }
+        ],
+        "H-HST3": [
+          {
+            "event_id": "99677f77f4d19ad736515017138dfe64",
+            "date": "2026-11-08",
+            "start": "15:00",
+            "end": "15:30",
+            "field": "H-HST3",
+            "type": "game",
+            "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
+            "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          },
+          {
+            "event_id": "96acd2d570434c6dae1927075dd8a8c8",
+            "date": "2026-11-08",
+            "start": "15:45",
+            "end": "16:15",
+            "field": "H-HST3",
+            "type": "game",
+            "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
+            "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
+            "coach": "Blue",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          },
+          {
+            "event_id": "6f4e7d410ce483ec22d9a4a60265fce6",
+            "date": "2026-11-08",
+            "start": "16:30",
+            "end": "17:00",
+            "field": "H-HST3",
+            "type": "game",
+            "title": "R1-G1 Winner vs. R1-G2 Winner",
+            "team": "R1-G1 Winner vs. R1-G2 Winner",
+            "coach": "",
+            "grade": "",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          },
+          {
+            "event_id": "067896476a8d55f1847dd63986bc368e",
+            "date": "2026-11-08",
+            "start": "17:30",
+            "end": "18:45",
+            "field": "H-HST3",
+            "type": "game",
+            "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
+            "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
+            "coach": "",
+            "grade": "3/4",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          },
+          {
+            "event_id": "7c3a6432874dad4b587b54b79430ecaf",
+            "date": "2026-11-08",
+            "start": "18:30",
+            "end": "19:45",
+            "field": "H-HST3",
+            "type": "game",
+            "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+            "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+            "coach": "",
+            "grade": "5/6",
+            "source": "ICS",
+            "field_display": "H-HST3, Holbrook High School"
+          }
         ]
       },
       "blocks": {},
       "merged": [
-        {
-          "field": "H-HST3",
-          "start": "15:00",
-          "end": "15:30",
-          "start_12": "3:00 PM",
-          "end_12": "3:30 PM",
-          "type": "game",
-          "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
-          "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
-          "coach": "Blue",
-          "grade": "",
-          "source": "ICS"
-        },
         {
           "field": "H-HST2",
           "start": "15:00",
@@ -13329,13 +13316,13 @@
         },
         {
           "field": "H-HST3",
-          "start": "15:45",
-          "end": "16:15",
-          "start_12": "3:45 PM",
-          "end_12": "4:15 PM",
+          "start": "15:00",
+          "end": "15:30",
+          "start_12": "3:00 PM",
+          "end_12": "3:30 PM",
           "type": "game",
-          "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
-          "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
+          "title": "Avon Septic and Pumping (Blue) vs. The Red House Academy (Red)",
+          "team": "Avon Septic and Pumping  vs. The Red House Academy (Red)",
           "coach": "Blue",
           "grade": "",
           "source": "ICS"
@@ -13355,14 +13342,14 @@
         },
         {
           "field": "H-HST3",
-          "start": "16:30",
-          "end": "17:00",
-          "start_12": "4:30 PM",
-          "end_12": "5:00 PM",
+          "start": "15:45",
+          "end": "16:15",
+          "start_12": "3:45 PM",
+          "end_12": "4:15 PM",
           "type": "game",
-          "title": "R1-G1 Winner vs. R1-G2 Winner",
-          "team": "R1-G1 Winner vs. R1-G2 Winner",
-          "coach": "",
+          "title": "Edwards Built Pavements (Blue) vs. Abington Bank (Red)",
+          "team": "Edwards Built Pavements  vs. Abington Bank (Red)",
+          "coach": "Blue",
           "grade": "",
           "source": "ICS"
         },
@@ -13394,15 +13381,15 @@
         },
         {
           "field": "H-HST3",
-          "start": "17:30",
-          "end": "18:30",
-          "start_12": "5:30 PM",
-          "end_12": "6:30 PM",
+          "start": "16:30",
+          "end": "17:00",
+          "start_12": "4:30 PM",
+          "end_12": "5:00 PM",
           "type": "game",
-          "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
-          "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
+          "title": "R1-G1 Winner vs. R1-G2 Winner",
+          "team": "R1-G1 Winner vs. R1-G2 Winner",
           "coach": "",
-          "grade": "3/4",
+          "grade": "",
           "source": "ICS"
         },
         {
@@ -13420,26 +13407,39 @@
         },
         {
           "field": "H-HST3",
-          "start": "18:30",
-          "end": "19:30",
-          "start_12": "6:30 PM",
-          "end_12": "7:30 PM",
+          "start": "17:30",
+          "end": "18:45",
+          "start_12": "5:30 PM",
+          "end_12": "6:45 PM",
           "type": "game",
-          "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
-          "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+          "title": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
+          "team": "3/4 Girls Team 1 - Edwards Built Pavements vs. 3/4 Girls Team 2",
           "coach": "",
-          "grade": "5/6",
+          "grade": "3/4",
           "source": "ICS"
         },
         {
           "field": "H-HST2",
           "start": "18:30",
-          "end": "19:30",
+          "end": "19:45",
           "start_12": "6:30 PM",
-          "end_12": "7:30 PM",
+          "end_12": "7:45 PM",
           "type": "game",
           "title": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
           "team": "5/6/7 Boys Rec Team 1 - StormCare Roofing Inc. vs. 5/6/7 Boys RecTeam 2",
+          "coach": "",
+          "grade": "5/6",
+          "source": "ICS"
+        },
+        {
+          "field": "H-HST3",
+          "start": "18:30",
+          "end": "19:45",
+          "start_12": "6:30 PM",
+          "end_12": "7:45 PM",
+          "type": "game",
+          "title": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
+          "team": "5/6/7 Girls Team 1 - Best Collision vs. 5/6/7 Girls Team 2",
           "coach": "",
           "grade": "5/6",
           "source": "ICS"
