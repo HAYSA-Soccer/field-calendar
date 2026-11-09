@@ -2,7 +2,7 @@
   "date": "2026-11-09",
   "sunset": "16:28",
   "updated": true,
-  "last_successful_update": "November 09, 2026 at 11:49 AM",
+  "last_successful_update": "November 09, 2026 at 12:44 PM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -306,7 +306,7 @@
       {
         "date": "2026-11-09",
         "start": "16:00",
-        "end": "17:00",
+        "end": "18:00",
         "field": "H-HST",
         "reason": "Soccer Tournament",
         "type": "admin"
@@ -425,9 +425,9 @@
     {
       "field": "H-HST",
       "start": "16:00",
-      "end": "17:00",
+      "end": "18:00",
       "start_12": "4:00 PM",
-      "end_12": "5:00 PM",
+      "end_12": "6:00 PM",
       "type": "admin",
       "title": "Soccer Tournament"
     },
