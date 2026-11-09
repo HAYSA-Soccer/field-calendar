@@ -5092,7 +5092,7 @@
       "date": "2026-11-12",
       "sunset": "16:25",
       "updated": true,
-      "last_successful_update": "November 09, 2026 at 11:03 AM",
+      "last_successful_update": "November 09, 2026 at 11:19 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -5627,7 +5627,7 @@
       "date": "2026-11-11",
       "sunset": "16:26",
       "updated": true,
-      "last_successful_update": "November 09, 2026 at 11:03 AM",
+      "last_successful_update": "November 09, 2026 at 11:18 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6180,7 +6180,7 @@
       "date": "2026-11-14",
       "sunset": "16:23",
       "updated": true,
-      "last_successful_update": "November 09, 2026 at 11:04 AM",
+      "last_successful_update": "November 09, 2026 at 11:20 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -6870,7 +6870,7 @@
       "date": "2026-11-13",
       "sunset": "16:24",
       "updated": true,
-      "last_successful_update": "November 09, 2026 at 11:04 AM",
+      "last_successful_update": "November 09, 2026 at 11:19 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -7301,7 +7301,7 @@
       "date": "2026-11-10",
       "sunset": "16:27",
       "updated": true,
-      "last_successful_update": "November 09, 2026 at 11:02 AM",
+      "last_successful_update": "November 09, 2026 at 11:18 AM",
       "complexes": {
         "TURF": [
           "H-HST",
@@ -7494,13 +7494,13 @@
         "H-HST": [
           {
             "start": "18:00",
-            "end": "21:00"
+            "end": "19:30"
           }
         ],
         "H-HST1": [
           {
             "start": "18:00",
-            "end": "21:00"
+            "end": "19:30"
           }
         ],
         "H-HST2": [
@@ -7599,7 +7599,24 @@
         "H-SuSS1": [],
         "H-SuSS2": []
       },
-      "events": {},
+      "events": {
+        "H-HST1": [
+          {
+            "event_id": "5ba4001a733cc3e3b04332ada8d30263",
+            "date": "2026-11-10",
+            "start": "19:30",
+            "end": "21:00",
+            "field": "H-HST1",
+            "type": "practice",
+            "title": "7/8 Boys Travel (Collins) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Collins",
+            "grade": "7/8",
+            "source": "ICS",
+            "field_display": "H-HST1, Holbrook High School"
+          }
+        ]
+      },
       "blocks": {
         "H-HST": [
           {
@@ -7733,18 +7750,18 @@
         {
           "field": "H-HST",
           "start": "18:00",
-          "end": "21:00",
+          "end": "19:30",
           "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
+          "end_12": "7:30 PM",
           "type": "free",
           "title": ""
         },
         {
           "field": "H-HST1",
           "start": "18:00",
-          "end": "21:00",
+          "end": "19:30",
           "start_12": "6:00 PM",
-          "end_12": "9:00 PM",
+          "end_12": "7:30 PM",
           "type": "free",
           "title": ""
         },
@@ -7756,6 +7773,19 @@
           "end_12": "9:00 PM",
           "type": "free",
           "title": ""
+        },
+        {
+          "field": "H-HST1",
+          "start": "19:30",
+          "end": "21:00",
+          "start_12": "7:30 PM",
+          "end_12": "9:00 PM",
+          "type": "practice",
+          "title": "7/8 Boys Travel (Collins) Practice",
+          "team": "7/8 Boys Travel",
+          "coach": "Collins",
+          "grade": "7/8",
+          "source": "ICS"
         }
       ],
       "merged_availability": {
@@ -7763,9 +7793,9 @@
           {
             "type": "free",
             "start": "18:00",
-            "end": "21:00",
+            "end": "19:30",
             "start_12": "6:00 PM",
-            "end_12": "9:00 PM",
+            "end_12": "7:30 PM",
             "fields": [
               "H-HST",
               "H-HST1",
@@ -7775,6 +7805,37 @@
             "team": null,
             "coach": null,
             "grade": null,
+            "reason": null
+          },
+          {
+            "type": "free",
+            "start": "19:30",
+            "end": "21:00",
+            "start_12": "7:30 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST2"
+            ],
+            "title": null,
+            "team": null,
+            "coach": null,
+            "grade": null,
+            "reason": null
+          },
+          {
+            "type": "practice",
+            "start": "19:30",
+            "end": "21:00",
+            "start_12": "7:30 PM",
+            "end_12": "9:00 PM",
+            "fields": [
+              "H-HST",
+              "H-HST1"
+            ],
+            "title": "7/8 Boys Travel (Collins) Practice",
+            "team": "7/8 Boys Travel",
+            "coach": "Collins",
+            "grade": "7/8",
             "reason": null
           }
         ],
@@ -7979,7 +8040,7 @@
       "date": "2026-11-09",
       "sunset": "16:28",
       "updated": true,
-      "last_successful_update": "November 09, 2026 at 11:02 AM",
+      "last_successful_update": "November 09, 2026 at 11:17 AM",
       "complexes": {
         "TURF": [
           "H-HST",
