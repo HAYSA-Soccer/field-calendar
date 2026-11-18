@@ -2,7 +2,7 @@
   "date": "2026-11-23",
   "sunset": "16:16",
   "updated": true,
-  "last_successful_update": "November 17, 2026 at 9:06 PM",
+  "last_successful_update": "November 18, 2026 at 12:15 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -192,303 +192,32 @@
     }
   ],
   "availability": {
-    "H-HST": [
-      {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "both"
-      }
-    ],
-    "H-HST1": [
-      {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-HST2": [
-      {
-        "start": "18:00",
-        "end": "21:00",
-        "mode": "practice_only"
-      }
-    ],
+    "H-HST": [],
+    "H-HST1": [],
+    "H-HST2": [],
     "H-HST3": [],
     "H-HST4": [],
-    "H-Su1": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
-      }
-    ],
-    "H-Su1A": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-Su1B": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-Su2": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
-      }
-    ],
-    "H-Su2A": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-Su2B": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-SJ3": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
-      }
-    ],
-    "H-SJ3A": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-SJ3B": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-SJ4": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "both"
-      }
-    ],
-    "H-SJ4A": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
-    "H-SJ4B": [
-      {
-        "start": "16:00",
-        "end": "19:00",
-        "mode": "practice_only"
-      }
-    ],
+    "H-Su1": [],
+    "H-Su1A": [],
+    "H-Su1B": [],
+    "H-Su2": [],
+    "H-Su2A": [],
+    "H-Su2B": [],
+    "H-SJ3": [],
+    "H-SJ3A": [],
+    "H-SJ3B": [],
+    "H-SJ4": [],
+    "H-SJ4A": [],
+    "H-SJ4B": [],
     "H-SuSS": [],
     "H-SuSS1": [],
     "H-SuSS2": []
   },
   "events": {},
   "blocks": {},
-  "merged": [
-    {
-      "field": "H-Su1",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1A",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su1B",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2A",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-Su2B",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3A",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ3B",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4A",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-SJ4B",
-      "start": "16:00",
-      "end": "19:00",
-      "start_12": "4:00 PM",
-      "end_12": "7:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST1",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    },
-    {
-      "field": "H-HST2",
-      "start": "18:00",
-      "end": "21:00",
-      "start_12": "6:00 PM",
-      "end_12": "9:00 PM",
-      "type": "free",
-      "title": ""
-    }
-  ],
+  "merged": [],
   "merged_availability": {
-    "TURF": [
-      {
-        "type": "free",
-        "start": "18:00",
-        "end": "21:00",
-        "start_12": "6:00 PM",
-        "end_12": "9:00 PM",
-        "fields": [
-          "H-HST",
-          "H-HST1",
-          "H-HST2"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      }
-    ],
-    "SUMNER/SEAN JOYCE": [
-      {
-        "type": "free",
-        "start": "16:00",
-        "end": "19:00",
-        "start_12": "4:00 PM",
-        "end_12": "7:00 PM",
-        "fields": [
-          "H-Su1",
-          "H-Su1A",
-          "H-Su1B",
-          "H-Su2",
-          "H-Su2A",
-          "H-Su2B",
-          "H-SJ3",
-          "H-SJ3A",
-          "H-SJ3B",
-          "H-SJ4",
-          "H-SJ4A",
-          "H-SJ4B"
-        ],
-        "title": null,
-        "team": null,
-        "coach": null,
-        "grade": null,
-        "reason": null
-      }
-    ]
+    "TURF": [],
+    "SUMNER/SEAN JOYCE": []
   }
 }
