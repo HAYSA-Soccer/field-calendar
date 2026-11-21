@@ -2,7 +2,7 @@
   "date": "2026-11-25",
   "sunset": "16:15",
   "updated": true,
-  "last_successful_update": "November 21, 2026 at 2:58 AM",
+  "last_successful_update": "November 21, 2026 at 4:53 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -194,7 +194,7 @@
   "availability": {
     "H-HST": [
       {
-        "start": "17:00",
+        "start": "16:00",
         "end": "18:00"
       }
     ],
@@ -223,8 +223,8 @@
     "H-HST": [
       {
         "date": "2026-11-25",
-        "start": "15:00",
-        "end": "17:00",
+        "start": "14:00",
+        "end": "16:00",
         "field": "H-HST",
         "reason": "9/10 Tryouts?",
         "type": "practice"
@@ -234,18 +234,18 @@
   "merged": [
     {
       "field": "H-HST",
-      "start": "15:00",
-      "end": "17:00",
-      "start_12": "3:00 PM",
-      "end_12": "5:00 PM",
+      "start": "14:00",
+      "end": "16:00",
+      "start_12": "2:00 PM",
+      "end_12": "4:00 PM",
       "type": "practice",
       "title": "9/10 Tryouts?"
     },
     {
       "field": "H-HST",
-      "start": "17:00",
+      "start": "16:00",
       "end": "18:00",
-      "start_12": "5:00 PM",
+      "start_12": "4:00 PM",
       "end_12": "6:00 PM",
       "type": "free",
       "title": ""
@@ -256,9 +256,9 @@
       {
         "type": "practice",
         "start": "15:00",
-        "end": "17:00",
+        "end": "16:00",
         "start_12": "3:00 PM",
-        "end_12": "5:00 PM",
+        "end_12": "4:00 PM",
         "fields": [
           "H-HST",
           "H-HST1",
@@ -270,13 +270,13 @@
         "team": null,
         "coach": null,
         "grade": null,
-        "reason": "9/10 Tryouts?"
+        "reason": null
       },
       {
         "type": "free",
-        "start": "17:00",
+        "start": "16:00",
         "end": "18:00",
-        "start_12": "5:00 PM",
+        "start_12": "4:00 PM",
         "end_12": "6:00 PM",
         "fields": [
           "H-HST"
