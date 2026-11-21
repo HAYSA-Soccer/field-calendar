@@ -2,7 +2,7 @@
   "date": "2026-11-25",
   "sunset": "16:15",
   "updated": true,
-  "last_successful_update": "November 21, 2026 at 4:53 AM",
+  "last_successful_update": "November 21, 2026 at 4:57 AM",
   "complexes": {
     "TURF": [
       "H-HST",
@@ -226,7 +226,7 @@
         "start": "14:00",
         "end": "16:00",
         "field": "H-HST",
-        "reason": "9/10 Tryouts?",
+        "reason": "9/10 Tryouts",
         "type": "practice"
       }
     ]
@@ -239,7 +239,7 @@
       "start_12": "2:00 PM",
       "end_12": "4:00 PM",
       "type": "practice",
-      "title": "9/10 Tryouts?"
+      "title": "9/10 Tryouts"
     },
     {
       "field": "H-HST",
